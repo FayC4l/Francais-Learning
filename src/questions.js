@@ -1,8 +1,9 @@
 // Question kinds: generation from content items, rendering, answer checking, and test assembly.
 import { h, esc, icon, shuffle, sample, pick, plain, $ } from "./ui.js";
-import { matches, tiles, tileKey, diffWords, clean } from "./answer.js";
+import { matches, tiles, tileKey, clean, compareDictation } from "./answer.js";
 import { gapWords, joinBoxes } from "./fill.js";
 import { regen, generate, generatorsOf, generatorsUpTo, conjQuestion, GENERATORS } from "./engine/generators.js";
+import { misspell } from "./engine/french.js";
 import { floorSpec } from "./tower.js";
 import { pickFresh, recordSeen } from "./engine/pool.js";
 import { rng } from "./engine/rng.js";
@@ -11,16 +12,16 @@ import { speak, stopSpeaking, ttsReady, sfx } from "./audio.js";
 import { diff, state, save } from "./store.js";
 
 // Base time in seconds for each kind (multiplied by the difficulty's time factor).
-const BASE_TIME = { type_en: 25, choose_fr: 15, listen_type: 30, listen_choose: 18, build: 45, dictation: 55, mcq: 25, fill: 35, error: 40, reading: 100, listening: 120 };
+const BASE_TIME = { type_mot: 25, choose_def: 18, listen_type: 30, spell_choose: 18, build: 45, dictation: 60, mcq: 25, fill: 35, error: 40, reading: 100, listening: 120 };
 // Rough difficulty weight, used to ramp tests from recognition to production.
-const WEIGHT = { choose_fr: 1, listen_choose: 2, mcq: 2, type_en: 3, build: 3, fill: 3, reading: 3, listen_type: 4, error: 4, dictation: 5, listening: 5 };
-export const AUDIO_KINDS = new Set(["listen_type", "listen_choose", "dictation", "listening"]);
+const WEIGHT = { choose_def: 1, spell_choose: 2, mcq: 2, type_mot: 3, build: 3, fill: 3, reading: 3, listen_type: 4, error: 4, dictation: 5, listening: 5 };
+export const AUDIO_KINDS = new Set(["listen_type", "dictation", "listening"]);
 
 export const KIND_LABEL = {
-  type_en: "Traduction",
-  choose_fr: "Sens",
-  listen_type: "Écoute",
-  listen_choose: "Écoute",
+  type_mot: "Vocabulaire",
+  choose_def: "Sens",
+  listen_type: "Orthographe",
+  spell_choose: "Orthographe",
   build: "Construction",
   dictation: "Dictée",
   mcq: "Grammaire",
@@ -35,7 +36,7 @@ function timeFor(kind, extra = 0) {
 }
 
 /** Skill measured by each kind (for the dashboard). Generators may override it (e.g. "conjugaison"). */
-export const KIND_SKILL = { type_en: "vocabulaire", choose_fr: "vocabulaire", listen_type: "ecoute", listen_choose: "ecoute", build: "grammaire", dictation: "ecoute", mcq: "grammaire", fill: "grammaire", error: "grammaire", reading: "lecture", listening: "ecoute" };
+export const KIND_SKILL = { type_mot: "vocabulaire", choose_def: "vocabulaire", listen_type: "orthographe", spell_choose: "orthographe", build: "grammaire", dictation: "orthographe", mcq: "grammaire", fill: "grammaire", error: "grammaire", reading: "lecture", listening: "ecoute" };
 
 /** Which kinds can be made from a reference. */
 export function kindsForRef(ref) {
@@ -46,7 +47,7 @@ export function kindsForRef(ref) {
   const r = resolveRef(ref);
   if (!r) return [];
   if (r.kind) return [r.kind];
-  if (r.type === "vocab") return ["type_en", "choose_fr", "listen_type", "listen_choose"];
+  if (r.type === "vocab") return ["type_mot", "choose_def", "listen_type", "spell_choose"];
   if (r.type === "sentence") return ["build", "dictation"];
   if (r.type === "grammar") return [r.item.type];
   if (r.type === "reading") return ["reading", "listening"];
@@ -65,30 +66,30 @@ export function makeQuestion(kind, ref) {
   const L = Number(unit.id.split(".")[0]);
   const base = { kind, ref, unitId: unit.id, level: L, skill: KIND_SKILL[kind], explain: plain(item.explain || "") };
   switch (kind) {
-    case "type_en":
-      return { ...base, accept: [item.en, ...(item.alt || [])], expected: item.en, time: timeFor(kind, item.en.length > 12 ? 8 : 0), fr: item.fr, say: item.en };
+    case "type_mot":
+      return { ...base, accept: [item.mot, ...(item.alt || [])], expected: item.mot, def: item.def, time: timeFor(kind, item.mot.length > 12 ? 8 : 0), say: item.mot, explain: item.ex ? `Exemple : ${item.ex}` : "" };
     case "listen_type":
-      return { ...base, accept: [item.en], expected: item.en, time: timeFor(kind), say: item.en, fr: item.fr };
-    case "choose_fr": {
-      const pool = distractorPool(L, unit, item, "fr");
-      const choices = shuffle([item.fr, ...sample(pool, 3)]);
-      return { ...base, choices, answer: choices.indexOf(item.fr), expected: item.fr, time: timeFor(kind), en: item.en, say: item.en };
+      return { ...base, accept: [item.mot, ...(item.alt || [])], expected: item.mot, time: timeFor(kind), say: item.mot, def: item.def, explain: item.ex ? `Exemple : ${item.ex}` : "" };
+    case "choose_def": {
+      const pool = distractorPool(L, unit, item, "def");
+      const choices = shuffle([item.def, ...sample(pool, 3)]);
+      return { ...base, choices, answer: choices.indexOf(item.def), expected: item.def, time: timeFor(kind, 4), mot: item.mot, say: item.mot };
     }
-    case "listen_choose": {
-      const pool = distractorPool(L, unit, item, "en");
-      const close = pool.slice().sort((a, b) => similarity(b, item.en) - similarity(a, item.en));
-      const choices = shuffle([item.en, ...close.slice(0, 3)]);
-      return { ...base, choices, answer: choices.indexOf(item.en), expected: item.en, time: timeFor(kind), say: item.en, fr: item.fr };
+    case "spell_choose": {
+      const wrong = misspell(item.mot, rng, 3);
+      if (wrong.length < 2) return null;
+      const choices = shuffle([item.mot, ...wrong]);
+      return { ...base, choices, answer: choices.indexOf(item.mot), expected: item.mot, time: timeFor(kind), say: item.mot, def: item.def };
     }
     case "build": {
-      const words = tiles(item.en);
+      const words = tiles(item.phrase);
       const decoys = (item.trap || []).filter((t) => !words.some((w) => clean(w) === clean(t)));
-      const accepted = [item.en, ...(item.alt || [])].map((s) => tileKey(tiles(s)));
-      return { ...base, fr: item.fr, words, bank: shuffle([...words, ...decoys]), accepted, expected: item.en, time: timeFor(kind, Math.max(0, words.length - 6) * 4), say: item.en };
+      const accepted = [item.phrase, ...(item.alt || [])].map((s) => tileKey(tiles(s)));
+      return { ...base, indice: item.indice, words, bank: shuffle([...words, ...decoys]), accepted, expected: item.phrase, time: timeFor(kind, Math.max(0, words.length - 6) * 4), say: item.phrase };
     }
     case "dictation": {
-      const n = tiles(item.en).length;
-      return { ...base, accept: [item.en], expected: item.en, say: item.en, fr: item.fr, time: timeFor(kind, Math.max(0, n - 8) * 5) };
+      const n = tiles(item.phrase).length;
+      return { ...base, accept: [item.phrase], expected: item.phrase, say: item.phrase, indice: item.indice, time: timeFor(kind, Math.max(0, n - 8) * 5) };
     }
     case "mcq": {
       const order = shuffle(item.choices.map((_, i) => i));
@@ -96,11 +97,11 @@ export function makeQuestion(kind, ref) {
     }
     case "fill": {
       const n = gapWords(item.answer[0]).length;
-      return { ...base, q: item.q, hint: item.hint, lead: item.lead, key: item.key, accept: item.answer, expected: item.answer[0], time: timeFor(kind, (n - 1) * 6 + (item.lead ? 15 : 0)) };
+      return { ...base, q: item.q, hint: item.hint, lead: item.lead, key: item.key, accept: item.answer, expected: item.answer[0], caseSensitive: !!item.case, time: timeFor(kind, (n - 1) * 6 + (item.lead ? 15 : 0)) };
     }
     case "error": {
       const tokens = item.q.split(" ");
-      return { ...base, tokens, wrong: item.wrong, accept: item.fix, expected: `${tokens[item.wrong].replace(/[.,!?;:]+$/, "")} → ${item.fix[0]}`, time: timeFor(kind) };
+      return { ...base, tokens, wrong: item.wrong, accept: item.fix, expected: `${tokens[item.wrong].replace(/[.,!?;:…»]+$/, "")} → ${item.fix[0]}`, time: timeFor(kind) };
     }
     case "reading":
     case "listening": {
@@ -114,17 +115,6 @@ export function makeQuestion(kind, ref) {
   }
 }
 
-function similarity(a, b) {
-  a = a.toLowerCase();
-  b = b.toLowerCase();
-  let s = 0;
-  if (a[0] === b[0]) s += 2;
-  if (a.slice(0, 3) === b.slice(0, 3)) s += 2;
-  s -= Math.abs(a.length - b.length) * 0.3;
-  if (a.slice(-2) === b.slice(-2)) s += 1;
-  return s + Math.random() * 1.5;
-}
-
 function distractorPool(L, unit, item, field) {
   const fromUnit = unit.vocab.filter((v) => v !== item).map((v) => v[field]);
   if (fromUnit.length >= 6) return [...new Set(fromUnit)].filter((x) => clean(x) !== clean(item[field]));
@@ -135,21 +125,21 @@ function distractorPool(L, unit, item, field) {
 // ---------- Test assembly ----------
 
 const PLAN = {
-  low: { type_en: 3, choose_fr: 1, listen_choose: 1, listen_type: 1, build: 3, dictation: 1, mcq: 2, fill: 2, error: 1 },
-  a2: { type_en: 2, listen_choose: 1, listen_type: 1, build: 3, dictation: 1, mcq: 2, fill: 3, error: 2 },
-  b1: { type_en: 2, listen_type: 1, build: 2, dictation: 2, mcq: 2, fill: 3, error: 2, reading: 1 },
-  c1: { type_en: 2, build: 2, dictation: 2, mcq: 2, fill: 3, error: 2, reading: 1, listening: 1 },
+  low: { type_mot: 2, choose_def: 1, spell_choose: 1, listen_type: 1, build: 2, dictation: 2, mcq: 2, fill: 3, error: 1 },
+  a2: { type_mot: 2, spell_choose: 1, listen_type: 1, build: 2, dictation: 2, mcq: 2, fill: 3, error: 2 },
+  b1: { type_mot: 2, listen_type: 1, build: 2, dictation: 2, mcq: 2, fill: 3, error: 2, reading: 1 },
+  c1: { type_mot: 2, choose_def: 1, build: 1, dictation: 2, mcq: 2, fill: 3, error: 2, reading: 1, listening: 1 },
 };
 const planFor = (L) => (L <= 2 ? PLAN.low : L <= 4 ? PLAN.a2 : L <= 8 ? PLAN.b1 : PLAN.c1);
 
 /** Swaps audio kinds for silent ones when the device cannot speak. */
 function silentKind(kind) {
   if (ttsReady()) return kind;
-  return { listen_type: "type_en", listen_choose: "choose_fr", dictation: "build", listening: "reading" }[kind] || kind;
+  return { listen_type: "spell_choose", dictation: "build", listening: "reading" }[kind] || kind;
 }
 
 function refsFor(unit, kind) {
-  if (["type_en", "choose_fr", "listen_type", "listen_choose"].includes(kind)) return vocabRefs(unit);
+  if (["type_mot", "choose_def", "listen_type", "spell_choose"].includes(kind)) return vocabRefs(unit);
   if (["build", "dictation"].includes(kind)) return sentenceRefs(unit);
   if (["mcq", "fill", "error"].includes(kind)) return grammarRefs(unit, kind);
   if (["reading", "listening"].includes(kind)) return readingRefs(unit);
@@ -157,7 +147,7 @@ function refsFor(unit, kind) {
 }
 
 // Boss phases: 1 recognition, 2 production, 3 "rage" (hunting errors, dictations, texts).
-export const PHASE = { choose_fr: 1, listen_choose: 1, mcq: 1, type_en: 2, listen_type: 2, build: 2, fill: 2, error: 3, dictation: 3, reading: 3, listening: 3 };
+export const PHASE = { choose_def: 1, spell_choose: 1, mcq: 1, type_mot: 2, listen_type: 2, build: 2, fill: 2, error: 3, dictation: 3, reading: 3, listening: 3 };
 
 const byWeight = (list, spread = 2.2) => list.sort((a, b) => WEIGHT[a.kind] + Math.random() * spread - (WEIGHT[b.kind] + Math.random() * spread));
 
@@ -178,7 +168,9 @@ export function assemble(units, plan, { used = new Set(), history = {} } = {}) {
       }
       if (!ref) continue;
       used.add(ref);
-      const q = makeQuestion(kind, ref);
+      let q = makeQuestion(kind, ref);
+      // A word too short to be misspelled three ways: ask for it instead.
+      if (!q && kind === "spell_choose") q = makeQuestion("type_mot", ref);
       if (q) out.push(q);
     }
   }
@@ -212,7 +204,7 @@ function generated(gens, n, L) {
 /** Takes n questions off a plan, from the most represented production kinds. */
 function shrink(plan, n) {
   const p = { ...plan };
-  const order = ["fill", "type_en", "mcq", "error", "build", "fill", "type_en"];
+  const order = ["fill", "type_mot", "mcq", "error", "build", "fill", "type_mot", "dictation"];
   for (let i = 0; n > 0 && i < 40; i++) {
     const k = order[i % order.length];
     if ((p[k] || 0) > 1) {
@@ -251,9 +243,9 @@ export function bossExam(L) {
   const bankOf = (type) => bank.filter((r) => resolveRef(r)?.item.type === type);
   const hasBank = bank.length > 0;
   const plan = {
-    choose_fr: 1, listen_choose: 1, mcq: hasBank ? 1 : 3,
-    type_en: 2, listen_type: 1, build: 2, fill: hasBank ? 1 : 3,
-    error: hasBank ? 1 : 2, dictation: 1, reading: L >= 3 ? 1 : 0, listening: L >= 9 ? 1 : 0,
+    choose_def: 1, spell_choose: 1, mcq: hasBank ? 1 : 3,
+    type_mot: 2, listen_type: 1, build: 1, fill: hasBank ? 1 : 3,
+    error: hasBank ? 1 : 2, dictation: 2, reading: L >= 3 ? 1 : 0, listening: L >= 9 ? 1 : 0,
   };
   const main = assemble(lvl.units, plan, { used, history });
   const fromBank = hasBank ? [...fromRefs(bankOf("mcq"), "mcq", 3, history, used), ...fromRefs(bankOf("fill"), "fill", 3, history, used), ...fromRefs(bankOf("error"), "error", 2, history, used)] : [];
@@ -264,7 +256,7 @@ export function bossExam(L) {
   if (L > 1) {
     const prevUnits = [];
     for (let k = Math.max(1, L - 2); k < L; k++) prevUnits.push(...(levelById(k)?.units || []));
-    review = assemble(prevUnits, { type_en: 1, fill: 1 }, { used, history });
+    review = assemble(prevUnits, { type_mot: 1, fill: 1 }, { used, history });
   }
   const all = [...main, ...fromBank, ...gen, ...review];
   state.seen[key] = recordSeen(history, all.map((q) => q.ref));
@@ -272,9 +264,10 @@ export function bossExam(L) {
   // Phase order, shuffled inside each phase.
   return all.map((q) => ({ ...q, phase: PHASE[q.kind] || 2 })).sort((a, b) => a.phase - b.phase || Math.random() - 0.5);
 }
+
 /**
  * The boss of a Tower floor (level 12): conjugation in the floor's tenses, review of earlier tenses, the block's
- * generators, grammar items of the matching stations and boss banks, and C2 key word transformations at the top.
+ * generators, grammar items of the matching stations and boss banks, and DALF transformations at the top.
  */
 export function towerExam(n) {
   const spec = floorSpec(n);
@@ -292,7 +285,7 @@ export function towerExam(n) {
   for (let i = 0; i < nRev; i++) push(makeQuestion("fill", conjQuestion(rng, { tenses: spec.review, negQ: spec.negQ })?.ref));
   const gens = GENERATORS.filter((g) => spec.gens.includes(g.id));
   generated(gens, nGen, 12).forEach(push);
-  shuffle(EXTRA.c2uoe?.part4 || [])
+  shuffle(EXTRA.dalfLangue?.part4 || [])
     .slice(0, nPart4)
     .forEach((t) => push({ kind: "fill", ref: null, skill: "grammaire", unitId: "12.0", level: 12, q: t.q, lead: t.lead, key: t.key, accept: t.answer, expected: t.answer[0], explain: t.explain, time: 150 }));
   // Grammar of the matching stations and of their boss banks, freshest first.
@@ -317,15 +310,19 @@ export function towerExam(n) {
 /** A question for a reference, choosing a kind suited to reviewing it. */
 export function reviewQuestion(ref) {
   const kinds = kindsForRef(ref).map(silentKind);
-  const prefer = kinds.filter((k) => !["choose_fr", "listen_choose"].includes(k));
-  return makeQuestion(pick(prefer.length ? prefer : kinds), ref);
+  const prefer = kinds.filter((k) => !["choose_def", "spell_choose"].includes(k));
+  const k = pick(prefer.length ? prefer : kinds);
+  return makeQuestion(k, ref) || makeQuestion("type_mot", ref);
 }
 
 // ---------- Rendering ----------
 
+/** The check of a typed answer: dictations count the capitals, the rest only when the question asks. */
+const check = (q, v) => matches(v, q.accept, { caseSensitive: q.kind === "dictation" || !!q.caseSensitive });
+
 /**
  * Renders a question into `mount`. Calls `onAnswer({ok, given})` exactly once.
- * Returns { destroy(), replay() }.
+ * Returns { destroy(), timeout() }.
  */
 export function renderQuestion(q, mount, { onAnswer, replays = diff().replays, autoplay = true }) {
   let answered = false;
@@ -358,17 +355,17 @@ export function renderQuestion(q, mount, { onAnswer, replays = diff().replays, a
       big.classList.remove("playing");
     };
     const big = h("button", { type: "button", class: "audio-big", "aria-label": "Écouter", onClick: () => play(1) }, h("span", { class: "audio-rings" }), h("span", { html: icon("speaker") }));
-    const slowBtn = slow ? h("button", { type: "button", class: "audio-slow", "aria-label": "Écouter lentement", onClick: () => play(0.6), html: icon("turtle") }) : null;
+    const slowBtn = slow ? h("button", { type: "button", class: "audio-slow", "aria-label": "Écouter lentement", onClick: () => play(0.65), html: icon("turtle") }) : null;
     updateCount();
     if (autoplay) setTimeout(() => play(1), 350);
     return { el: h("div", { class: "audio-row" }, big, slowBtn, counter), play };
   };
 
   const head = (label, title) => h("div", { class: "q-head" }, h("span", { class: "q-kind" }, label), title ? h("h2", { class: "q-title" }, title) : null);
-  const choiceList = (choices, onPick, { en = false } = {}) => {
+  const choiceList = (choices, onPick, { word = false } = {}) => {
     const list = h("div", { class: `choices ${choices.some((c) => c.length > 28) ? "long" : ""}` });
     choices.forEach((c, i) => {
-      const b = h("button", { type: "button", class: `choice ${en ? "en" : ""}`, "data-i": i, onClick: () => onPick(i, b) }, h("span", { class: "choice-key" }, String(i + 1)), h("span", { class: "choice-text" }, c));
+      const b = h("button", { type: "button", class: `choice ${word ? "word" : ""}`, "data-i": i, onClick: () => onPick(i, b) }, h("span", { class: "choice-key" }, String(i + 1)), h("span", { class: "choice-text" }, c));
       list.append(b);
     });
     const onKey = (e) => {
@@ -388,11 +385,11 @@ export function renderQuestion(q, mount, { onAnswer, replays = diff().replays, a
     });
   };
   const textInput = (placeholder, { multiline = false } = {}) => {
-    const input = h(multiline ? "textarea" : "input", { class: "answer-input", type: "text", rows: multiline ? 2 : null, placeholder, autocomplete: "off", autocapitalize: "off", autocorrect: "off", spellcheck: "false", enterkeyhint: "done", "aria-label": placeholder, id: "answer-input" });
+    const input = h(multiline ? "textarea" : "input", { class: "answer-input", type: "text", rows: multiline ? 3 : null, placeholder, autocomplete: "off", autocapitalize: multiline ? "sentences" : "off", autocorrect: "off", spellcheck: "false", enterkeyhint: "done", "aria-label": placeholder, id: "answer-input", lang: "fr" });
     input.addEventListener("input", () => sfx.type());
     return input;
   };
-  const submitRow = (input, check) => {
+  const submitRow = (input, checkFn) => {
     const btn = h("button", { type: "button", class: "btn btn-primary btn-validate" }, "Valider");
     const go = () => {
       if (answered) return;
@@ -402,12 +399,12 @@ export function renderQuestion(q, mount, { onAnswer, replays = diff().replays, a
         input.focus();
         return;
       }
-      check(input.value);
+      checkFn(input.value);
     };
     btn.addEventListener("click", go);
     sendTyped = () => {
       if (!input.value.trim()) return false;
-      check(input.value, true);
+      checkFn(input.value, true);
       return true;
     };
     input.addEventListener("keydown", (e) => {
@@ -425,39 +422,39 @@ export function renderQuestion(q, mount, { onAnswer, replays = diff().replays, a
   card.append = (...xs) => Element.prototype.append.apply(card, xs.flat().filter((x) => x != null && x !== false));
 
   switch (q.kind) {
-    case "type_en": {
-      const input = textInput("Écris en anglais…");
-      card.append(head("Écris en anglais", null), h("div", { class: "q-prompt fr" }, q.fr), input, submitRow(input, (v, auto) => finish(!(q.noDigits && /\d/.test(v)) && matches(v, q.accept), v, auto)));
+    case "type_mot": {
+      const input = textInput("Écris le mot…");
+      card.append(head(q.label || "Trouve le mot", null), h("div", { class: "q-prompt def" }, q.def), input, submitRow(input, (v, auto) => finish(check(q, v), v, auto)));
       setTimeout(() => input.focus(), 60);
       break;
     }
     case "listen_type": {
       audio = audioBtn(q.say);
-      const input = textInput("Écris ce que tu entends…");
-      card.append(head("Écoute et écris le mot"), audio.el, h("div", { class: "q-hint" }, "Sens : ", h("strong", null, q.fr)), input, submitRow(input, (v, auto) => finish(matches(v, q.accept), v, auto)));
+      const input = textInput("Écris le mot que tu entends…");
+      card.append(head("Écoute et écris le mot"), audio.el, h("div", { class: "q-hint" }, "Sens : ", h("strong", null, q.def)), input, submitRow(input, (v, auto) => finish(check(q, v), v, auto)));
       setTimeout(() => input.focus(), 60);
       break;
     }
-    case "choose_fr": {
-      audio = audioBtn(q.say, { slow: false });
+    case "choose_def": {
+      audio = ttsReady() ? audioBtn(q.say, { slow: false }) : null;
       const list = choiceList(q.choices, (i) => {
         markChoices(list, i);
         finish(i === q.answer, q.choices[i]);
       });
-      card.append(head("Que veut dire…"), h("div", { class: "q-prompt en" }, q.en, audio.el), list);
+      card.append(head("Que signifie…"), h("div", { class: "q-prompt word" }, q.mot, audio?.el), list);
       break;
     }
-    case "listen_choose": {
-      audio = audioBtn(q.say);
+    case "spell_choose": {
+      audio = ttsReady() ? audioBtn(q.say) : null;
       const list = choiceList(
         q.choices,
         (i) => {
           markChoices(list, i);
           finish(i === q.answer, q.choices[i]);
         },
-        { en: true },
+        { word: true },
       );
-      card.append(head("Écoute et choisis le bon mot"), audio.el, list);
+      card.append(head("Choisis la bonne orthographe"), audio?.el, h("div", { class: "q-hint" }, "Le mot qui veut dire : ", h("strong", null, q.def)), list);
       break;
     }
     case "build": {
@@ -513,13 +510,13 @@ export function renderQuestion(q, mount, { onAnswer, replays = diff().replays, a
       document.addEventListener("keydown", onKey);
       cleanups.push(() => document.removeEventListener("keydown", onKey));
       render();
-      card.append(head("Traduis en construisant la phrase"), h("div", { class: "q-prompt fr sm" }, q.fr), line, bank, btn);
+      card.append(head("Remets la phrase dans l'ordre (attention aux pièges !)"), q.indice ? h("div", { class: "q-prompt sm" }, q.indice) : null, line, bank, btn);
       break;
     }
     case "dictation": {
       audio = audioBtn(q.say);
-      const input = textInput("Écris toute la phrase…", { multiline: true });
-      card.append(head("Dictée : écris la phrase entière"), audio.el, input, submitRow(input, (v, auto) => finish(matches(v, q.accept), v, auto)));
+      const input = textInput("Écris toute la phrase, avec les majuscules…", { multiline: true });
+      card.append(head("Dictée : écris la phrase entière"), audio.el, q.indice ? h("div", { class: "q-hint" }, q.indice) : null, input, submitRow(input, (v, auto) => finish(check(q, v), v, auto)));
       setTimeout(() => input.focus(), 60);
       break;
     }
@@ -537,7 +534,7 @@ export function renderQuestion(q, mount, { onAnswer, replays = diff().replays, a
       const n = Math.max(1, words.length);
       // One box per expected word: the learner sees how many words the gap needs.
       const boxes = words.map((w, i) =>
-        h("input", { class: "gap-box", type: "text", autocomplete: "off", autocapitalize: "off", autocorrect: "off", spellcheck: "false", enterkeyhint: i === n - 1 ? "done" : "next", "aria-label": n > 1 ? `Mot ${i + 1} sur ${n}` : "Mot manquant", id: i === 0 ? "answer-input" : null, size: Math.max(4, Math.min(14, w.length + 1)) }),
+        h("input", { class: "gap-box", type: "text", autocomplete: "off", autocapitalize: "off", autocorrect: "off", spellcheck: "false", lang: "fr", enterkeyhint: i === n - 1 ? "done" : "next", "aria-label": n > 1 ? `Mot ${i + 1} sur ${n}` : "Mot manquant", id: i === 0 ? "answer-input" : null, size: Math.max(4, Math.min(14, w.length + 1)) }),
       );
       const value = () => joinBoxes(boxes.map((b) => b.value));
       boxes.forEach((b, i) => {
@@ -565,8 +562,8 @@ export function renderQuestion(q, mount, { onAnswer, replays = diff().replays, a
         q.lead ? h("div", { class: "q-lead" }, q.lead) : null,
         q.key ? h("div", { class: "q-key" }, "Mot imposé : ", h("strong", null, q.key)) : null,
         sentence,
-        h("div", { class: "q-hint" }, h("span", { class: "gap-count" }, `${n} mot${n > 1 ? "s" : ""}`), q.hint ? [" · Indice : ", h("strong", null, q.hint)] : null),
-        submitRow(proxy, (v, auto) => finish(matches(v, q.accept), v, auto)),
+        h("div", { class: "q-hint" }, h("span", { class: "gap-count" }, `${n} mot${n > 1 ? "s" : ""}`), q.hint ? [" · Indice : ", h("strong", null, q.hint)] : null, q.caseSensitive ? " · Les majuscules comptent." : null),
+        submitRow(proxy, (v, auto) => finish(check(q, v), v, auto)),
       );
       setTimeout(() => boxes[0].focus(), 60);
       break;
@@ -588,7 +585,7 @@ export function renderQuestion(q, mount, { onAnswer, replays = diff().replays, a
           b.classList.add("picked");
           fixZone.hidden = false;
           const input = textInput("Écris la correction…");
-          fixZone.append(h("label", { class: "fix-label", for: "answer-input" }, "Bien vu ! Corrige ce mot :"), input, submitRow(input, (v, auto) => finish(matches(v, q.accept), v, auto)));
+          fixZone.append(h("label", { class: "fix-label", for: "answer-input" }, "Bien vu ! Corrige ce mot :"), input, submitRow(input, (v, auto) => finish(check(q, v), v, auto)));
           setTimeout(() => input.focus(), 60);
         });
         words.append(b);
@@ -639,14 +636,15 @@ export function blankHtml(text, n = 1) {
   return esc(text).replace(/___/g, Array.from({ length: Math.max(1, n) }, () => '<span class="gap"></span>').join(" "));
 }
 
-/** Feedback details for a wrong answer: expected answer, diff for dictation, explanation. */
+/** Feedback details for a wrong answer: expected answer, word-by-word correction for dictations, explanation. */
 export function feedbackDetails(q, given) {
   const parts = [];
   if (q.kind === "dictation" && given) {
-    const d = diffWords(given, q.expected);
-    parts.push(h("div", { class: "fb-diff" }, d.map((x) => h("span", { class: x.ok ? "ok" : "ko" }, x.w)), " "));
+    const d = compareDictation(given, q.expected);
+    parts.push(h("div", { class: "fb-diff" }, d.words.map((x) => h("span", { class: x.status === "ok" ? "ok" : x.status === "accent" || x.status === "case" ? "half" : "ko", title: x.typed ? `Tu as écrit : ${x.typed}` : "Mot oublié" }, x.w)), " "));
+    parts.push(h("div", { class: "fb-expected" }, h("span", { class: "fb-label" }, "La phrase"), h("span", { class: "fb-answer" }, q.expected)));
   } else {
-    parts.push(h("div", { class: "fb-expected" }, h("span", { class: "fb-label" }, "Bonne réponse"), h("span", { class: "fb-answer" }, q.kind === "error" ? q.expected : q.expected)));
+    parts.push(h("div", { class: "fb-expected" }, h("span", { class: "fb-label" }, "Bonne réponse"), h("span", { class: "fb-answer" }, q.expected)));
   }
   if (given && q.kind !== "dictation") parts.push(h("div", { class: "fb-given" }, h("span", { class: "fb-label" }, "Ta réponse"), h("span", null, given)));
   if (q.explain) parts.push(h("p", { class: "fb-explain" }, q.explain));

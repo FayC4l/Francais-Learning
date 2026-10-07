@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { FLOORS, TOWER_LIVES, VISIBLE, EXTRA_TIME, floorSpec, freshTower, recordFloor, copiedShare, visibleTop, surprise, topUpLives, heartBar, newestTower, BLOCKS } from "../src/tower.js";
 import { GENERATORS } from "../src/engine/generators.js";
-import { TENSES } from "../src/engine/verbs.js";
+import { TENSES } from "../src/engine/conjugue.js";
 
 test("50 floors: writing bosses every 5 floors, the C2 exam at the top", () => {
   assert.equal(FLOORS, 50);

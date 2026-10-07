@@ -34,15 +34,15 @@ const SCHEMA = {
     corrected_text: { type: "string" },
     strengths_fr: { type: "array", items: { type: "string" } },
     improvements_fr: { type: "array", items: { type: "string" } },
-    comment_fr: { type: "string", description: "Un commentaire bienveillant et un brin humoristique de Chikh Fayçal, le prof d'anglais de l'application" },
+    comment_fr: { type: "string", description: "Un commentaire bienveillant et un brin humoristique de Chikh Fayçal, le prof de français de l'application" },
   },
 };
 
-const SYSTEM = `Tu es un examinateur d'anglais expérimenté (Cambridge English, CECR) qui corrige les rédactions d'apprenants francophones de tous âges.
-Tu notes chaque texte sur 20 avec quatre critères notés sur 5 : contenu et respect de la consigne (content), efficacité du message et registre (communicative), organisation et cohésion (organisation), langue : grammaire, vocabulaire, orthographe (language).
-Tu notes par rapport au niveau visé indiqué : un texte simple mais juste à un niveau A2 peut avoir une excellente note.
-Tu relèves chaque erreur avec un extrait exact du texte, sa correction et une explication courte en français. Le texte corrigé garde les idées et le style de l'élève, en ne corrigeant que ce qui est faux ou maladroit.
-Tes explications et tes commentaires sont en français, clairs, encourageants, adaptés à l'âge de l'élève. L'anglais suit l'usage canadien (colour, centre, -ize), mais les orthographes britannique et américaine sont acceptées.`;
+const SYSTEM = `Tu es un correcteur de français expérimenté (examinateur DALF, professeur de lettres) qui corrige les textes de locuteurs natifs francophones de tous âges, de l'enfant à l'adulte, qui veulent perfectionner leur français.
+Tu notes chaque texte sur 20 avec quatre critères notés sur 5 : respect de la consigne (content), efficacité du message et adéquation du registre (communicative), cohérence et organisation, connecteurs, paragraphes (organisation), langue : orthographe d'usage et grammaticale, accords, conjugaison, syntaxe, précision et richesse du lexique (language).
+Tu notes par rapport au niveau visé indiqué (CECRL, de A1 = orthographe de l'école primaire à C2 = style du DALF C2) : un texte simple mais sans faute à un niveau A2 peut avoir une excellente note ; au niveau C2, on attend une langue précise, nuancée et un registre soutenu.
+Tu relèves chaque erreur avec un extrait exact du texte, sa correction et une explication courte en français (la règle en une phrase : accord du participe, homophone, mode, registre…). Le texte corrigé garde les idées et le style de l'élève, en ne corrigeant que ce qui est faux ou maladroit.
+Le français de référence est celui de France ; les rectifications orthographiques de 1990 sont acceptées (paraitre, évènement, je cèderai…). Tes explications et tes commentaires sont en français, clairs, encourageants, adaptés à l'âge de l'élève.`;
 
 /** Turns SDK errors into a French message for the learner. */
 function frenchError(e) {

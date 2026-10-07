@@ -1,193 +1,120 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync, readdirSync } from "node:fs";
-import { buildDictionary } from "../tools/dictionary.mjs";
+import { readFileSync } from "node:fs";
+import { loadDictionary, tierOf, suggest, maskOf, TAGS } from "../src/writing/spell.js";
+import { tokenize, countWords } from "../src/writing/tokenize.js";
+import { checkRules } from "../src/writing/rules.js";
+import { analyze } from "../src/writing/analyze.js";
+import { score } from "../src/writing/score.js";
 
-const levels = readdirSync("content").filter((f) => /^level-\d\d\.json$/.test(f)).sort().map((f) => JSON.parse(readFileSync(`content/${f}`, "utf8")));
-const { loadDictionary, isKnown, suggest } = await import("../src/writing/spell.js");
-loadDictionary(buildDictionary(process.cwd(), levels));
-const { tokenize } = await import("../src/writing/tokenize.js");
-const { checkRules } = await import("../src/writing/rules.js");
-const { analyze, detectTenses } = await import("../src/writing/analyze.js");
-const { score } = await import("../src/writing/score.js");
+loadDictionary(readFileSync(new URL("../data/dict-fr.txt", import.meta.url), "utf8"));
+const issues = (text) => checkRules(tokenize(text)).map((x) => ({ ...x, text: text.slice(x.start, x.end) }));
+const finds = (text, rule, fix) => {
+  const found = issues(text).find((x) => x.rule === rule);
+  assert.ok(found, `${rule} attendu dans « ${text} » : ${JSON.stringify(issues(text).map((x) => x.rule))}`);
+  if (fix) assert.ok(found.fix.includes(fix), `${rule} : ${fix} attendu, reçu ${found.fix}`);
+};
 
-const rulesOf = (text) => checkRules(tokenize(text)).map((x) => x.rule);
-
-// [sentence, expected rule, expected fix (first suggestion, optional)]
-const MISTAKES = [
-  ["He go to school every day.", "third-s", "goes"],
-  ["My sister like pizza.", "third-s", "likes"],
-  ["My brother play hockey and he go to school by bus.", "third-s", "plays"],
-  ["I came home and he go to bed.", "third-s", "goes"],
-  ["She always forget her keys.", "third-s", "forgets"],
-  ["They goes to the park on Sundays.", "plural-s", "go"],
-  ["She doesn't likes carrots.", "do-base", "like"],
-  ["Did you saw the game last night?", "do-base", "see"],
-  ["I didn't went to school yesterday.", "do-base", "go"],
-  ["We can to swim very well.", "modal-to", "can swim"],
-  ["You must goes now.", "modal-base", "go"],
-  ["I have twelve years.", "have-age", "am twelve years old"],
-  ["I am agree with you.", "be-agree", "agree"],
-  ["I live here since two years.", "since-duration", "for two years"],
-  ["It depends of the weather.", "depend-of", "depends on"],
-  ["She is married with a doctor.", "married-with", "married to"],
-  ["I listen music every evening.", "listen-to", "listen to music"],
-  ["We discussed about the problem.", "discuss-about", "discussed"],
-  ["Can you explain me the rule?", "explain-me", "explain to me"],
-  ["My bike is more big than yours.", "more-short", "bigger"],
-  ["This is more better.", "more-comp", "better"],
-  ["She gave me many advices.", "uncountable-plural", "advice"],
-  ["I need an information.", "uncountable-article", null],
-  ["There are three childs in the garden.", "irregular-plural", "children"],
-  ["They are differents people.", "adjective-plural", "different people"],
-  ["I should of called you.", "modal-of", "should have"],
-  ["Its very cold today.", "its-is", "It's very"],
-  ["Their is a cat on the roof.", "their-is", "There is"],
-  ["My brother is taller then me.", "then-than", "taller than"],
-  ["Yesterday we goed to the beach.", "overreg", "went"],
-  ["I buyed a new phone.", "overreg", "bought"],
-  ["I have went to Toronto twice.", "past-participle", "gone"],
-  ["She is a honest person.", "a-an", "an"],
-  ["He is an university student.", "a-an", "a"],
-  ["I eat an apple and a orange.", "a-an", "an"],
-  ["i like hockey.", "capital-i", null],
-  ["We start school in september.", "capital-proper", "September"],
-  ["I don't know nothing about it.", "double-negative", "anything"],
-  ["We made a party for her birthday.", "make-do", "had a party"],
-  ["I always do mistakes in English.", "do-make", "make mistakes"],
-  ["According to me, it is a good idea.", "according-me", "In my opinion"],
-  ["In the other hand, it is expensive.", "other-hand", "On the other hand"],
-  ["I am interesting in science.", "interesting-in", "am interested in"],
-  ["I was born in Ottawa and I am born in winter.", "be-born", null],
-  ["Despite of the rain, we played outside.", "despite-of", "Despite"],
-  ["Everyday I walk to school.", "everyday-start", null],
-  ["How many money do you have?", "how-many-much", "how much money"],
-  ["There is too much people here.", "much-countable", "too many people"],
-  ["The people is very friendly.", "people-is", "people are"],
-  ["Everybody are happy today.", "everybody-are", "Everybody is"],
-  ["I like very much pizza.", "very-much-order", null],
-  ["I have a car who is very fast.", "thing-who", null],
-  ["I look forward to see you.", "forward-ing", "look forward to seeing"],
-  ["I enjoy to read comics.", "ing-after", "enjoy reading"],
-  ["I want going home.", "to-after", "want to go"],
-  ["Let me to help you.", "let-to", "Let me help"],
-  ["When I will be older, I will travel.", "will-after-if", "When I am"],
-  ["I have hungry.", "have-hungry", "I am hungry"],
-  ["Although it was late, but we stayed.", "although-but", null],
-  ["He said me the truth.", "say-me", "told me"],
-  ["I go to school everyday.", "everyday", "every day"],
-  ["the dog is sleeping.", "capital-start", "The"],
-  ["We visited the the museum.", "repeat", null],
-  ["I will loose the game.", "loose-lose", "lose the"],
-  ["I can't go out with you, I'm boring.", "boring-bored", null],
-  ["I would like to assist to the conference.", "assist-attend", "attend the"],
-  ["There are two years, I visited Paris.", "there-ago", "two years ago"],
-];
-
-test("each typical mistake is caught by the right rule", () => {
-  const misses = [];
-  for (const [s, rule, fix] of MISTAKES) {
-    if (!rule) continue;
-    const issues = checkRules(tokenize(s));
-    const hit = issues.find((x) => x.rule === rule);
-    if (!hit) misses.push(`${s} → expected ${rule}, got ${issues.map((x) => x.rule).join(",") || "nothing"}`);
-    else if (fix && !hit.fix.some((f) => f.toLowerCase() === fix.toLowerCase())) misses.push(`${s} → ${rule} fix ${JSON.stringify(hit.fix)} (expected ${fix})`);
-  }
-  assert.deepEqual(misses, []);
+test("dictionnaire : formes, rectifications, ligatures, composés", () => {
+  for (const w of ["école", "élève", "sœur", "soeur", "cœur", "connaît", "connait", "paraître", "paraitre", "évènement", "aujourd'hui", "peut-être", "dit-il", "mange-t-il", "acquerrai", "cèderai", "vînmes", "fussions"]) assert.ok(tierOf(w) > 0, w);
+  for (const w of ["dilemne", "parmis", "acceuil", "apeler", "rénumération"]) assert.equal(tierOf(w), 0, w);
+  assert.ok(maskOf("robe") & TAGS.NS && maskOf("robe") & TAGS.F);
+  assert.ok(maskOf("manger") & TAGS.INF);
+  assert.equal(suggest("acceuil")[0], "accueil");
+  assert.equal(suggest("parmis")[0], "parmi");
+  assert.equal(suggest("eleve")[0], "élève");
 });
 
-test("correct sentences of the course raise almost no grammar alarms", () => {
-  const sentences = [];
-  for (const l of levels)
-    for (const u of l.units) {
-      for (const s of u.sentences) sentences.push(s.en);
-      for (const b of u.lesson) if (b.type === "dialogue") for (const ln of b.lines) sentences.push(ln.en);
-      for (const b of u.lesson) if (b.type === "examples") for (const it of b.items) sentences.push(it.en);
-    }
-  const flagged = [];
-  for (const s of sentences) {
-    const issues = checkRules(tokenize(s)).filter((x) => x.cat === "grammar" || x.cat === "vocab");
-    if (issues.length) flagged.push(`${s}  ⟶ ${issues.map((x) => `${x.rule}:${s.slice(x.start, x.end)}`).join(" | ")}`);
-  }
-  const rate = flagged.length / sentences.length;
-  if (rate > 0.01) console.log(flagged.slice(0, 40).join("\n"));
-  assert.ok(sentences.length > 1200, `${sentences.length} sentences`);
-  assert.ok(rate <= 0.01, `false-positive rate ${(rate * 100).toFixed(2)} % (${flagged.length}/${sentences.length})`);
+test("découpage : élisions séparées, mots composés gardés, comptage DALF", () => {
+  const tk = tokenize("L'enfant qu'il a vu aujourd'hui, c'est-à-dire hier.");
+  assert.deepEqual(tk.tokens.filter((t) => t.word).map((t) => t.text), ["L'", "enfant", "qu'", "il", "a", "vu", "aujourd'hui", "c'est-à-dire", "hier"]);
+  assert.equal(countWords("Je ne l'ai pas vu depuis 2010, c'est-à-dire longtemps."), 9);
 });
 
-test("spelling: known words, typos and suggestions", () => {
-  for (const w of ["children", "went", "colour", "color", "doesn't", "Emma's", "well-known", "realize", "realise"]) assert.ok(isKnown(w), w);
-  for (const w of ["beautifull", "freind", "becuase", "wich"]) assert.ok(!isKnown(w), w);
-  assert.ok(suggest("beautifull").includes("beautiful"));
-  assert.ok(suggest("freind").includes("friend"));
-  assert.ok(suggest("becuase").includes("because"));
-  const issues = checkRules(tokenize("My freind is beautifull. Emma and Noah live in Gatineau."), { suggest }).filter((x) => x.cat === "spelling");
-  assert.equal(issues.length, 2);
+test("homophones et confusions", () => {
+  finds("Il à faim.", "a-subject", "Il a");
+  finds("Il y à du monde.", "il-y-a", "Il y a");
+  finds("Je pars a cause de la pluie.", "a-expression", "à cause");
+  finds("Elle et fatiguée.", "et-est", "est");
+  finds("Ils on raison.", "on-ont", "ont");
+  finds("Ont va au cinéma.", "on-ont", "On");
+  finds("Ils son partis.", "son-sont", "sont");
+  finds("La ville ou je suis né.", "ou-lieu", "ville où je");
+  finds("Ou est mon sac ?", "ou-question", "Où est");
+  finds("Il ce lave les mains.", "ce-se", "se");
+  finds("Il c'est trompé.", "ces-sest", "Il s'est trompé");
+  finds("Sa va bien.", "sa-ca", "Ça va");
+  finds("Je leurs ai dit la vérité.", "leur-verb", "leur");
+  finds("Ils ont pris leur enfants.", "leur-plural", "leurs");
+  finds("Tout les jours, il court.", "tout-les", "Tous les");
+  finds("Il a du partir.", "du-du", "a dû partir");
+  finds("Je suis sur qu'il viendra.", "sur-sur");
+  finds("Quand à moi, je reste.", "quand-a", "Quant à");
 });
 
-test("the estimated CEFR band of model texts is close to their level", () => {
-  const BANDS = ["A1", "A2", "B1", "B2", "C1", "C2"];
-  const bandOf = (L) => (L <= 2 ? "A1" : L <= 4 ? "A2" : L <= 6 ? "B1" : L <= 9 ? "B2" : L <= 11 ? "C1" : "C2");
-  const prompts = JSON.parse(readFileSync("content/writing.json", "utf8")).prompts;
-  let close = 0;
-  const off = [];
-  for (const p of prompts) {
-    const s = score(analyze(p.model, p), p);
-    const d = Math.abs(BANDS.indexOf(s.textBand) - BANDS.indexOf(bandOf(p.level)));
-    if (d <= 1) close++;
-    else off.push(`${p.id} L${p.level} → ${s.textBand}`);
-  }
-  if (off.length) console.log(off.join(" | "));
-  assert.ok(close / prompts.length >= 0.7, `${close}/${prompts.length} within one band`);
-  // A short A1 message with mistakes is not a B1 text.
-  const t = "My name is Lina and i have twelve years. I live in Ottawa since two years. My brother play hockey every day.";
-  assert.ok(["A1", "A2"].includes(score(analyze(t, { level: 1 }), { level: 1, words: [25, 60] }).textBand));
+test("accords", () => {
+  finds("Les enfant jouent.", "plural", "enfants");
+  finds("Des fleurs blanche.", "adj-agreement", "blanches");
+  finds("Une robe bleu.", "adj-agreement", "bleue");
+  finds("Un autoroute dangereux.", "gender", "Une");
+  finds("Elle est parti tôt.", "etre-agreement", "partie");
+  finds("Ils sont arrivé hier.", "etre-agreement", "arrivés");
+  finds("Elles ont mangées une glace.", "avoir-agreement", "mangé");
+  finds("Ma amie arrive.", "mon-amie", "Mon");
 });
 
-test("names in greetings and signatures are not spelling mistakes", () => {
-  const issues = checkRules(tokenize("Hi Emma!\nMy name is Lina. See you soon!\nLina"), { suggest }).filter((x) => x.cat === "spelling");
-  assert.deepEqual(issues, []);
+test("conjugaison, -é / -er, modes", () => {
+  finds("Ils mange des pommes.", "subject-verb", "mangent");
+  finds("Je peut venir.", "subject-verb", "peux");
+  finds("Tu mange trop.", "subject-verb", "manges");
+  finds("Il fini son travail.", "subject-verb-form", "finit");
+  finds("Je vais mangé une pomme.", "e-er", "manger");
+  finds("Hier, j'ai manger une tarte.", "er-e", "mangé");
+  finds("Il faut que tu fais tes devoirs.", "subjunctive", "fasses");
+  finds("Si j'aurais su, je serais venu.", "si-conditionnel", "avais");
+  finds("Ils croivent tout.", "croivent", "croient");
+  finds("Vous faisez du bruit.", "faisez", "Vous faites");
+  finds("On a pas fini.", "ne-missing", "n'a");
+  finds("Je sais pas.", "ne-missing", "ne sais");
 });
 
-test("tense detection", () => {
-  const t = detectTenses(tokenize("I play hockey. Yesterday I went to the park and I was running when it started to rain. I have never seen a moose. I'll call you. The cake was eaten.").tokens);
-  assert.ok(t.present_simple >= 1, JSON.stringify(t));
-  assert.ok(t.past_simple >= 1);
-  assert.ok(t.past_continuous >= 1);
-  assert.ok(t.present_perfect >= 1);
-  assert.ok(t.future >= 1);
-  assert.ok(t.passive >= 1);
+test("élisions, majuscules, ponctuation, usage", () => {
+  finds("Le arbre est grand.", "elision", "L'arbre");
+  finds("Je ai faim.", "elision", "J'ai");
+  finds("Si il pleut, on reste.", "elision-si", "S'il");
+  finds("le chat dort.", "capital-start", "Le");
+  finds("Nous partirons Lundi.", "capital-day", "lundi");
+  finds("Il faut pallier à ce problème.", "pallier-a", "pallier");
+  finds("Je me rappelle de cette histoire.", "rappeler-de");
+  finds("Il monte en haut de la tour.", "pleonasme-monter", "monte");
+  finds("Malgré qu'il pleuve, nous sortons.", "malgre-que", "Bien qu'");
+  finds("Il sétait trompé.", "spelling", "s'était");
 });
 
-test("perfect tenses with any verb: been, forms equal to the base, regular verbs outside the course list", () => {
-  const pp = (s) => detectTenses(tokenize(s).tokens).past_perfect;
-  for (const s of ["I had set my alarm.", "My phone had died.", "He had been a teacher.", "I wish I had thanked him.", "We had been waiting for hours.", "If I hadn't missed the bus, I would have arrived."]) assert.equal(pp(s), 1, s);
-  assert.equal(detectTenses(tokenize("I have been to Paris twice.").tokens).present_perfect, 1);
-  assert.equal(pp("I had a dog and I had lunch at noon."), 0);
+test("aucune fausse alerte sur des textes corrects", () => {
+  const ok = [
+    "Ce matin-là, Léa se leva avant l'aube. Elle prit son vélo et partit vers la mer, où son grand-père l'attendait depuis la veille. Quand elle arriva, il avait déjà préparé le café.",
+    "Bien qu'il fasse froid, nous sortirons ce soir. Il faut que tu prennes ton manteau et que vous soyez prêts à huit heures. Si nous avions su, nous serions partis plus tôt.",
+    "Les lettres que j'ai reçues hier m'ont beaucoup ému. Mes sœurs les ont lues avant moi, puis elles se sont téléphoné. Elles se sont rendu compte que leur oncle avait raison.",
+    "Certes, ces outils offrent des avantages indéniables : on peut accéder à une quantité d'informations considérable. Toutefois, il convient de s'interroger sur leurs effets.",
+    "Il était une fois une princesse qui vivait dans un château entouré de forêts. Lui et elle sont partis ensemble ; avec elle et lui, on rit beaucoup.",
+    "Elle est allée au marché avec sa mère. Elles y ont acheté des fraises. Ensuite, elles sont rentrées à la maison pour préparer une tarte.",
+    "Je ne pense pas que ce projet soit réaliste. Néanmoins, j'admets que ses auteurs ont fourni un travail remarquable. Je ne sais pas s'il viendra demain.",
+  ];
+  for (const t of ok) assert.deepEqual(issues(t).filter((x) => x.cat !== "typo").map((x) => `${x.rule}:${x.text}`), [], t);
 });
 
-test("model answers score well, and mistakes lower the mark", () => {
-  const prompts = JSON.parse(readFileSync("content/writing.json", "utf8")).prompts;
-  const low = [];
-  let sum = 0;
-  for (const p of prompts) {
-    const s = score(analyze(p.model, p), p);
-    sum += s.total;
-    if (s.total < 14) low.push(`${p.id} ${s.total} ${JSON.stringify(s.criteria)} ${s.priorities.join(" / ")}`);
-  }
-  const avg = sum / prompts.length;
-  if (low.length) console.log(low.slice(0, 15).join("\n"));
-  assert.ok(avg >= 16, `average model mark ${avg.toFixed(1)}`);
-  assert.ok(low.length <= prompts.length * 0.1, `${low.length} models under 14/20`);
-  // Same text with typical mistakes.
-  const p = prompts.find((x) => x.level === 3);
-  // Damage the text: swap two letters in every 6th long word, drop full stops, lowercase "I".
-  let k = 0;
-  const bad = p.model
-    .replace(/\b[a-z]{5,}\b/g, (w) => (++k % 6 === 0 ? w[0] + w[2] + w[1] + w.slice(3) : w))
-    .replace(/\.\s+(?=[A-Z])/g, " ")
-    .replace(/\bI\b/g, "i");
-  const good = score(analyze(p.model, p), p).total;
-  const worse = score(analyze(bad, p), p).total;
-  assert.ok(worse < good - 2, `bad ${worse} vs good ${good}`);
+test("analyse : temps, connecteurs, registre ; note sur 20", () => {
+  const good = "Les nouvelles technologies transforment profondément notre manière de travailler. Certes, elles offrent des avantages indéniables : on peut communiquer plus vite. Toutefois, il convient de s'interroger sur leurs effets à long terme.\n\nEn effet, la dépendance aux écrans inquiète de nombreux spécialistes. Si nous ne faisons rien, nous le regretterons. Il faudrait que les écoles enseignent un usage raisonné du numérique, comme on l'a fait autrefois pour la lecture.\n\nEn définitive, ces outils ne sont ni bons ni mauvais en eux-mêmes : tout dépend de l'usage que nous en faisons. C'est pourquoi chacun devrait apprendre à s'en servir avec discernement.";
+  const bad = "Les nouvelle technologie transforme notre facon de travailler. Ont peut communiquer plus vite, mais sa pose des probleme. Les jeune passe trop de temps sur leurs écran et ils sont crevé. Si on aurait su, on aurait agis avant. Du coup, c'est pas simple.";
+  const p = { level: 10, type: "essai", words: [100, 200], require: [{ kind: "paragraphs", min: 3, label: "3 paragraphes" }, { kind: "tense", value: "conditionnel", min: 1, label: "conditionnel" }] };
+  const a = analyze(good, p);
+  assert.ok(a.tenses.present > 3 && a.tenses.conditionnel >= 1 && a.tenses.futur >= 1 && a.tenses.subjonctif >= 1, JSON.stringify(a.tenses));
+  assert.ok(a.connectors.certes && a.connectors.toutefois && a.advancedConnectors.includes("en définitive"));
+  assert.ok(a.checks.every((c) => c.ok));
+  const sg = score(a, p);
+  const sb = score(analyze(bad, p), p);
+  assert.ok(sg.total >= 16, `bon texte : ${sg.total}`);
+  assert.ok(sb.total <= 9, `texte fautif : ${sb.total}`);
+  assert.ok(analyze(bad, p).familiar >= 2);
 });
