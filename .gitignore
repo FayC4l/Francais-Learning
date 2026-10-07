@@ -1,0 +1,11 @@
+node_modules/
+dist/
+shots/
+# Lexique 3.83 source table (25 MB, downloaded by tools/fetch-lexique.mjs); the derived dictionary is in data/
+vendor/
+
+# Family photos and private videos: never published
+assets/bilal/
+assets/hamza/
+assets/lynda/
+video/

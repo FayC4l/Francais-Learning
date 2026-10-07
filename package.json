@@ -1,0 +1,17 @@
+{
+  "name": "mission-francais",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test \"tests/*.test.mjs\"",
+    "validate": "node tools/validate.mjs && node tools/validate-extra.mjs && node tools/validate-v2.mjs",
+    "smoke": "node tools/smoke.mjs index.html && node tools/smoke-v2.mjs index.html && node tools/smoke-tower.mjs index.html && node tools/smoke-timeout.mjs",
+    "dict": "node tools/fetch-lexique.mjs && node tools/make-dict.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.131.0",
+    "esbuild": "0.28.2",
+    "playwright-core": "1.63.0"
+  }
+}
