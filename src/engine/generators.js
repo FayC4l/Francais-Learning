@@ -1,56 +1,86 @@
-// Procedural question generators. Each question has a stable ref "gen:<id>|<params>" and can be rebuilt
+// Procedural question generators for French. Each question has a stable ref "gen:<id>|<params>" and can be rebuilt
 // from it (mistakes notebook, spaced repetition). Pure: no DOM.
 import { makeRng } from "./rng.js";
-import { VERBS, verb, forms, conjugate, contract, pastForms, ppForms, personOf, regularPast, TENSES } from "./verbs.js";
-import { ADJECTIVES, COMPARATIVE, SUPERLATIVE } from "./adjectives.js";
+import { VERBS, verbInfo, conjugations, participle, TENSES, tenseById, isPronominalInf, stripPron, elides, simpleForms } from "./conjugue.js";
+import { HOMOPHONES, PLURALS, FEMININES, ADJECTIVES, GN_SUBJECTS, ADVERBS, ADVERB_FRAMES, COD_BEFORE, PRONOMINAUX, PP_SPECIAL, PPR_ADJ, MODES, RELATIFS, PARONYMES, CONNECTEURS, FIGURES, REGISTRES, COMPOSES, USAGE } from "./banks.js";
+import { LETTRES, GENRES, PONCTUATION, PRONOMS, PLEONASMES, SI, CONCESSION, NOMINALISATIONS, TOUT, COULEURS, MAJUSCULES, DISCOURS_TENSES, PASSIFS, SANS_NE } from "./banks2.js";
+import { numberToFrench } from "./french.js";
 
-// ---------- Data ----------
+// ---------- Subjects and frames ----------
 
-const S = (text, p) => ({ text, p });
+const S = (t, p, g, who = t) => ({ t, p, g, who });
+/** Pronouns first (0-7), then nouns. g = null: the gender is unknown (both agreements accepted). */
 const SUBJECTS = [
-  S("I", "1s"), S("you", "2"), S("he", "3s"), S("she", "3s"), S("we", "1p"), S("they", "3p"),
-  S("my sister", "3s"), S("my parents", "3p"), S("Emma", "3s"), S("Noah", "3s"), S("our neighbours", "3p"),
-  S("Chikh Fayçal", "3s"), S("my best friend", "3s"), S("the kids", "3p"), S("Grandpa", "3s"), S("my cousins", "3p"),
+  S("je", 0, null), S("tu", 1, null), S("il", 2, "m"), S("elle", 2, "f"), S("nous", 3, null), S("vous", 4, null), S("ils", 5, "m"), S("elles", 5, "f"),
+  S("Léa", 2, "f", "elle"), S("Hugo", 2, "m", "il"), S("mon frère", 2, "m", "il"), S("ma sœur", 2, "f", "elle"), S("les enfants", 5, "m", "ils"), S("mes cousines", 5, "f", "elles"),
+  S("Chikh Fayçal", 2, "m", "il"), S("nos voisins", 5, "m", "ils"), S("la directrice", 2, "f", "elle"), S("Inès et Sarah", 5, "f", "elles"),
 ];
-const THIRD = SUBJECTS.map((s, i) => (s.p === "3s" ? i : -1)).filter((i) => i >= 0);
+const PRONOUN_SUBJECTS = SUBJECTS.slice(0, 8);
 
 // Verb + complement that make sense with any subject.
 const FRAMES = [
-  ["play", "video games"], ["play", "hockey"], ["watch", "a movie"], ["watch", "the news"], ["eat", "pancakes"],
-  ["eat", "a sandwich"], ["drink", "orange juice"], ["read", "a comic book"], ["read", "the newspaper"], ["write", "an email"],
-  ["clean", "the kitchen"], ["cook", "spaghetti"], ["wash", "the dishes"], ["walk", "the dog"], ["visit", "the museum"],
-  ["buy", "fresh bread"], ["make", "a cake"], ["take", "the bus"], ["call", "Grandma"], ["help", "the neighbours"],
-  ["learn", "new words"], ["sing", "in the shower"], ["swim", "in the lake"], ["ride", "a bike"], ["listen", "to music"],
-  ["fix", "the old bike"], ["paint", "the fence"], ["brush", "the cat"], ["send", "a message"], ["speak", "English"],
-  ["wear", "a toque"], ["catch", "the bus"], ["draw", "a map"], ["build", "a snowman"], ["grow", "tomatoes"],
-  ["order", "pizza"], ["drive", "to work"], ["visit", "the farm"], ["study", "in the library"], ["bring", "a lunch"],
+  ["chanter", "une chanson"], ["regarder", "un film"], ["manger", "une pomme"], ["finir", "le puzzle"], ["choisir", "un dessert"], ["prendre", "le train"],
+  ["apprendre", "la leçon"], ["faire", "les courses"], ["lire", "le journal"], ["écrire", "une lettre"], ["boire", "un jus d'orange"], ["voir", "la mer"],
+  ["recevoir", "un colis"], ["ouvrir", "la fenêtre"], ["mettre", "la table"], ["attendre", "le bus"], ["répondre", "au téléphone"], ["vendre", "des légumes"],
+  ["perdre", "les clés"], ["conduire", "la voiture"], ["construire", "une cabane"], ["peindre", "la clôture"], ["dire", "la vérité"], ["envoyer", "un message"],
+  ["acheter", "du pain"], ["appeler", "le médecin"], ["jeter", "les vieux papiers"], ["essayer", "la robe rouge"], ["nettoyer", "la cuisine"], ["payer", "l'addition"],
+  ["commencer", "le repas"], ["ranger", "la chambre"], ["nager", "dans le lac"], ["tenir", "la porte"], ["courir", "dans le parc"], ["dormir", "dans le train"],
+  ["partir", "en vacances"], ["arriver", "à l'heure"], ["venir", "à la fête"], ["sortir", "avec des amis"], ["rester", "à la maison"], ["tomber", "dans l'escalier"],
+  ["aller", "au marché"], ["descendre", "à la cave"], ["monter", "au grenier"], ["entrer", "dans la cuisine"], ["revenir", "de l'école"],
+  ["se lever", "tôt"], ["se promener", "au bord de la mer"], ["se coucher", "tard"], ["se dépêcher", "pour le bus"], ["s'asseoir", "au premier rang"], ["se tromper", "de chemin"],
+  ["se souvenir", "de ce voyage"], ["se taire", "pendant le film"], ["s'amuser", "dans le jardin"], ["s'ennuyer", "à la réunion"], ["se réveiller", "en sursaut"], ["s'habiller", "en vitesse"],
+  ["vouloir", "un chien"], ["pouvoir", "nager longtemps"], ["devoir", "partir tôt"], ["savoir", "la réponse"], ["connaître", "le chemin"], ["croire", "cette histoire"],
+  ["vivre", "à la campagne"], ["suivre", "le guide"], ["résoudre", "l'énigme"], ["acquérir", "de l'expérience"], ["craindre", "l'orage"], ["rire", "aux éclats"],
+  ["offrir", "des fleurs"], ["cueillir", "des cerises"], ["accueillir", "les invités"], ["battre", "le record"], ["vaincre", "la peur"], ["obtenir", "le diplôme"],
+  ["coudre", "un bouton"], ["fuir", "le danger"], ["servir", "le dessert"], ["réussir", "l'examen"], ["grandir", "vite"], ["réfléchir", "longtemps"],
+  ["obéir", "aux règles"], ["remplir", "le formulaire"], ["haïr", "les injustices"], ["être", "en retard"], ["avoir", "de la chance"], ["jouer", "aux cartes"],
+  ["étudier", "le piano"], ["créer", "un jeu"], ["céder", "sa place"], ["placer", "les invités"], ["lancer", "la balle"], ["employer", "un mot rare"],
 ];
+const frameVerb = (f) => stripPron(f[0]);
+const frameIs = (pred) => FRAMES.map((f, i) => (pred(f) ? i : -1)).filter((i) => i >= 0);
+const group = (f) => verbInfo(frameVerb(f))?.group;
+// "devoir partir tôt" makes no sense with a duration or a passive: modal verbs are kept for simple tenses.
+const MODAL = new Set(["vouloir", "pouvoir", "devoir", "savoir"]);
 
-const MARK = {
-  present: ["every morning", "every weekend", "on Saturdays", "after school", "twice a week", "every evening"],
-  presentNeg: ["on Mondays", "in the morning", "during the week", "on weekdays"],
-  now: ["right now", "at the moment"],
-  past: ["yesterday", "last weekend", "two days ago", "last night", "last summer"],
+// Time markers that make each tense natural.
+const TAIL = {
+  present: ["tous les matins", "chaque samedi", "souvent"],
+  imparfait: ["autrefois", "à cette époque", "chaque été, autrefois"],
+  passe_simple: ["ce jour-là", "soudain", "le lendemain"],
+  futur: ["demain", "la semaine prochaine", "l'an prochain"],
+  passe_compose: ["hier", "ce matin", "la semaine dernière"],
+  plus_que_parfait: ["la veille", "deux jours plus tôt", "avant notre arrivée"],
+  futur_anterieur: ["avant ce soir", "d'ici demain", "avant la fin du mois"],
+  cond_present: ["avec un peu de chance", "volontiers", "si nous avions le temps"],
+  cond_passe: ["sans cet orage", "avec un peu plus de temps", "si on l'avait prévenu"],
+};
+// Tenses that need a main clause or a subordinate clause around the gap.
+const AROUND = {
+  subj_present: [["Il faut que", ""], ["Il est important que", ""], ["Il est temps que", ""]],
+  subj_passe: [["Il est possible que", " hier"], ["Il se peut que", " avant nous"], ["Je ne crois pas que", " la semaine dernière"]],
+  subj_imparfait: [["Il fallait que", ""], ["Il était essentiel que", ""], ["On exigeait que", ""]],
+  subj_plus_que_parfait: [["Il était regrettable que", ""], ["On craignait que", ""], ["Bien que", ", rien ne changea"]],
+  passe_anterieur: [["Dès que", ", tout le monde applaudit"], ["Quand", ", la nuit tomba"], ["Après que", ", on ferma les portes"]],
 };
 
 const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
-const subj = (i, start) => (start ? cap(SUBJECTS[i].text) : SUBJECTS[i].text);
-const sentence = (s) => cap(s.replace(/\s+/g, " ").trim());
+const sentence = (s) => cap(String(s).replace(/\s+/g, " ").replace(/\s+([,.])/g, "$1").trim());
 const quote = (s) => `« ${s} »`;
+const infLabel = (f) => f[0];
 
 // ---------- Helpers to build question objects ----------
 
-function fill(base, { q, hint, answer, explain }) {
-  const accept = Array.isArray(answer) ? answer : [answer];
-  return { ...base, kind: "fill", q: sentence(q), hint, accept, expected: accept[0], explain };
+function fill(base, { q, hint, answer, explain, lead, caseSensitive = false }) {
+  const accept = [...new Set(Array.isArray(answer) ? answer : [answer])];
+  return { ...base, kind: "fill", q: sentence(q), hint, lead, accept, expected: accept[0], explain, caseSensitive };
 }
 function mcq(base, rng, { q, right, wrong, explain }) {
-  const choices = rng.shuffle([right, ...wrong]);
+  const choices = rng.shuffle([right, ...wrong.filter((w) => w !== right)]);
   return { ...base, kind: "mcq", q: sentence(q), choices, answer: choices.indexOf(right), expected: right, explain };
 }
-function typeEn(base, { fr, answer, explain, say, noDigits = false }) {
+function typeIt(base, { prompt, answer, explain, label }) {
   const accept = Array.isArray(answer) ? answer : [answer];
-  return { ...base, kind: "type_en", fr, accept, expected: accept[0], say: say || accept[0], explain, noDigits };
+  return { ...base, kind: "type_mot", def: prompt, label, accept, expected: accept[0], say: accept[0], explain };
 }
 function errorQ(base, { tokens, wrong, fix, explain }) {
   const t = tokens.slice();
@@ -59,375 +89,454 @@ function errorQ(base, { tokens, wrong, fix, explain }) {
   return { ...base, kind: "error", tokens: t, wrong, accept, expected: `${t[wrong].replace(/[.,!?;:]+$/, "")} → ${accept[0]}`, explain };
 }
 
-const NUM = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"];
-const TENS = { 20: "twenty", 30: "thirty", 40: "forty", 50: "fifty", 60: "sixty", 70: "seventy", 80: "eighty", 90: "ninety" };
-export function numberWords(n) {
-  if (n <= 20) return NUM[n];
-  if (n === 100) return "one hundred";
-  const t = Math.floor(n / 10) * 10;
-  return n % 10 ? `${TENS[t]}-${NUM[n % 10]}` : TENS[t];
+/**
+ * A conjugation gap: subject + ___ + complement. Returns { q, answers } or null when the form does not exist.
+ * mode: 0 affirmative, 1 negative, 2 question (inversion, pronoun subjects only).
+ */
+function conjGap(frame, tense, subj, mode, tail = "", around = null) {
+  const inf = frame[0];
+  const t = tenseById(tense);
+  const imperative = tense.startsWith("imp_");
+  const neg = mode === 1;
+  const question = mode === 2 && !imperative && subj.p !== 0 && !around;
+  const opts = { g: subj.g, neg, question, who: subj.who };
+  let answers = conjugations(inf, tense, subj.p, opts);
+  if (!answers.length) return null;
+  const comp = frame[1] ? ` ${frame[1]}` : "";
+  const end = tail ? ` ${tail}` : "";
+  if (imperative) return { q: `___${comp}${end} !`, answers: answers.map(cap) };
+  if (question) return { q: `___${comp}${end} ?`, answers: answers.map(cap) };
+  const [before, after] = around || ["", ""];
+  // « je » elides into the gap: « ___ une pomme » → « J'aime ».
+  let subjText = subj.t;
+  if (subj.p === 0 && !neg && elides(answers[0], stripPron(inf))) {
+    answers = answers.map((a) => `j'${a}`);
+    subjText = "";
+  }
+  let lead = before ? `${before} ${subjText}`.trim() : subjText;
+  lead = lead.replace(/\bque ([aeiouéèêhAEIOUÉÈÊH])/g, "qu'$1");
+  if (!before && subjText) lead = cap(lead);
+  if (!lead) answers = answers.map(cap);
+  return { q: `${lead ? `${lead} ` : ""}___${comp}${after || end}.`, answers };
 }
 
-// Nouns for plurals: [singular, plural, rule explained in French].
-const NOUNS = [
-  ["cat", "cats", "+s"], ["dog", "dogs", "+s"], ["book", "books", "+s"], ["apple", "apples", "+s"], ["chair", "chairs", "+s"],
-  ["bus", "buses", "-s → -es"], ["box", "boxes", "-x → -es"], ["watch", "watches", "-ch → -es"], ["dish", "dishes", "-sh → -es"], ["glass", "glasses", "-ss → -es"],
-  ["fox", "foxes", "-x → -es"], ["tomato", "tomatoes", "-o → -es"], ["potato", "potatoes", "-o → -es"], ["baby", "babies", "consonne + y → -ies"], ["city", "cities", "consonne + y → -ies"],
-  ["party", "parties", "consonne + y → -ies"], ["boy", "boys", "voyelle + y → +s"], ["key", "keys", "voyelle + y → +s"], ["knife", "knives", "-fe → -ves"], ["wolf", "wolves", "-f → -ves"],
-  ["leaf", "leaves", "-f → -ves"], ["shelf", "shelves", "-f → -ves"], ["mouse", "mice", "irrégulier"], ["child", "children", "irrégulier"], ["man", "men", "irrégulier"],
-  ["woman", "women", "irrégulier"], ["foot", "feet", "irrégulier"], ["tooth", "teeth", "irrégulier"], ["sheep", "sheep", "invariable"], ["fish", "fish", "invariable"],
-  ["moose", "moose", "invariable"], ["person", "people", "irrégulier"], ["goose", "geese", "irrégulier"], ["toy", "toys", "voyelle + y → +s"], ["strawberry", "strawberries", "consonne + y → -ies"],
-];
+const modeLabel = (mode, t) => (mode === 1 ? ", forme négative" : mode === 2 && !t.startsWith("imp_") ? ", question avec inversion" : "");
 
-const STATES = ["tired", "hungry", "happy", "late", "ready", "cold", "bored", "at school", "at home", "in the garden"];
-const FEATURES = ["blue eyes", "curly hair", "long hair", "a big smile", "freckles", "short hair", "brown eyes", "a beard"];
-
-const DURATIONS = ["ten years", "three months", "two weeks", "a long time", "five minutes", "ages", "two hours"];
-const POINTS = ["Monday", "last summer", "January", "the spring", "the beginning of the year", "Christmas", "I was a kid"];
-const FOR_SINCE = [
-  ["I have known Léa ___ {X}.", "known"], ["We have lived in this apartment ___ {X}.", "lived"], ["She has worked at the hospital ___ {X}.", "worked"],
-  ["They have been friends ___ {X}.", "been"], ["Chikh Fayçal has waited for the bus ___ {X}.", "waited"], ["My dad has played the guitar ___ {X}.", "played"],
-];
-
-// Passive voice: subject, person, verb, tense, end of the sentence.
-const PASSIVE = [
-  ["The windows", "3p", "clean", "present_simple", "every Friday."], ["English", "3s", "speak", "present_simple", "in many countries."],
-  ["This cheese", "3s", "make", "present_simple", "on a small farm near Montreal."], ["The letters", "3p", "deliver", "present_simple", "every morning."],
-  ["Dinner", "3s", "cook", "present_simple", "by Dad every Sunday."], ["The new bridge", "3s", "build", "past_simple", "last year."],
-  ["My bike", "3s", "steal", "past_simple", "last night."], ["The cookies", "3p", "eat", "past_simple", "before the party started."],
-  ["These photos", "3p", "take", "past_simple", "by my grandfather."], ["The winners", "3p", "choose", "past_simple", "yesterday."],
-  ["The concert", "3s", "cancel", "present_perfect", "because of the storm."], ["All the tickets", "3p", "sell", "present_perfect", "already."],
-  ["The car", "3s", "repair", "present_perfect", "so we can leave now."], ["The results", "3p", "publish", "will", "next week."],
-  ["A new school", "3s", "build", "will", "near the park next year."], ["The road", "3s", "repair", "present_continuous", "right now, so take another route."],
-  ["The house", "3s", "paint", "present_continuous", "this week."], ["The pizza", "3s", "deliver", "past_simple", "in twenty minutes."],
-];
-
-// Conditionals: [sentence with ___, hint, answers, French explanation].
-const COND2 = [
-  ["If I ___ more time, I would learn the guitar.", "have", ["had"], "Conditionnel 2 : if + prétérit (had), puis would + verbe."],
-  ["If we lived by the sea, we ___ every day.", "swim", ["would swim"], "Après if + prétérit, la conséquence imaginaire prend would + verbe de base."],
-  ["If she ___ the answer, she would tell you.", "know", ["knew"], "if + prétérit : know → knew (irrégulier)."],
-  ["If my parents won the lottery, they ___ a bigger house.", "buy", ["would buy"], "Conséquence imaginaire : would + buy."],
-  ["If I ___ you, I would apologize.", "be", ["were", "was"], "If I were you : avec if, on emploie were (was est accepté à l'oral)."],
-  ["If Chikh Fayçal ___ a car, he would drive to Montreal every weekend.", "have", ["had"], "Situation imaginaire : if + had."],
-  ["If you practised every day, you ___ much faster.", "improve", ["would improve"], "would + verbe de base dans la proposition principale."],
-  ["If they ___ closer, we would visit them more often.", "live", ["lived"], "if + prétérit : lived."],
-  ["If I could fly, I ___ to Japan for lunch.", "go", ["would go"], "Rêve impossible : would + go."],
-  ["If our dog ___ English, it would complain all day.", "speak", ["spoke"], "if + prétérit irrégulier : speak → spoke."],
-  ["If he went to bed earlier, he ___ so tired.", "not be", ["wouldn't be"], "Conséquence négative : wouldn't + be."],
-  ["If it ___ warmer, we would eat outside.", "be", ["were", "was"], "if + were : on imagine une autre situation."],
-];
-const COND3 = [
-  ["If we ___ earlier, we wouldn't have missed the train.", "leave", ["had left"], "Conditionnel 3 : if + had + participe passé (had left)."],
-  ["If you had asked me, I ___ you.", "help", ["would have helped"], "Conséquence dans le passé : would have + participe passé."],
-  ["If she ___ harder, she would have passed the exam.", "study", ["had studied"], "if + past perfect : had studied."],
-  ["If I had known about the party, I ___.", "come", ["would have come"], "would have + participe passé : come → come."],
-  ["If it ___, we would have gone to the beach.", "not rain", ["hadn't rained"], "Condition négative dans le passé : hadn't + participe passé."],
-  ["If they had taken the bus, they ___ on time.", "arrive", ["would have arrived"], "would have + arrived."],
-  ["If Chikh Fayçal ___ the map, he wouldn't have ended up in Toronto.", "read", ["had read"], "if + had + participe passé : read → read."],
-  ["If you had told me the truth, I ___ angry.", "not be", ["wouldn't have been"], "Conséquence négative passée : wouldn't have been."],
-  ["If we ___ a ticket, we would have won a million dollars.", "buy", ["had bought"], "if + had bought (buy → bought)."],
-  ["If he had set an alarm, he ___ the meeting.", "not miss", ["wouldn't have missed"], "wouldn't have + participe passé."],
-  ["If I ___ my phone, I would have taken a picture.", "bring", ["had brought"], "if + had brought (bring → brought → brought)."],
-  ["If the team had played better, they ___ the game.", "win", ["would have won"], "would have + won (win → won → won)."],
-];
-
-const EXTRA = () => globalThis.window?.__EXTRA__ || {};
+const STRUCT = {
+  present: "radical + terminaisons du présent (-e, -es, -e, -ons, -ez, -ent pour le 1er groupe)",
+  imparfait: "radical de « nous » au présent + -ais, -ais, -ait, -ions, -iez, -aient",
+  passe_simple: "-ai, -as, -a, -âmes, -âtes, -èrent (1er groupe) ; -is / -us / -ins pour les autres",
+  futur: "infinitif (ou radical irrégulier) + -ai, -as, -a, -ons, -ez, -ont",
+  passe_compose: "être ou avoir au présent + participe passé (accordé avec le sujet après être)",
+  plus_que_parfait: "être ou avoir à l'imparfait + participe passé",
+  passe_anterieur: "être ou avoir au passé simple + participe passé",
+  futur_anterieur: "être ou avoir au futur + participe passé",
+  cond_present: "radical du futur + terminaisons de l'imparfait (-ais, -ais, -ait, -ions, -iez, -aient)",
+  cond_passe: "être ou avoir au conditionnel présent + participe passé",
+  subj_present: "radical de « ils » au présent + -e, -es, -e, -ions, -iez, -ent (irréguliers : sois, aie, fasse, puisse…)",
+  subj_passe: "être ou avoir au subjonctif présent + participe passé",
+  subj_imparfait: "passé simple (2e personne) sans le s + -sse, -sses, -^t, -ssions, -ssiez, -ssent",
+  subj_plus_que_parfait: "être ou avoir au subjonctif imparfait (fût, eût) + participe passé",
+  imp_present: "présent sans le pronom sujet (tu chantes → chante) ; irréguliers : sois, aie, sache, veuille",
+  imp_passe: "aie / sois au présent de l'impératif + participe passé",
+};
+const conjExplain = (inf, tense, answers) => `${cap(tenseById(tense).fr)} de ${quote(inf)} : ${STRUCT[tense]} → ${answers[0]}.`;
 
 // ---------- Generators ----------
-// pick(rng, L) → params (integers), build(params, rng) → question fields, or null.
+// pick(rng, L) → params (integers), build(params, rng, base) → question, or null.
 
 const G = [];
 const def = (id, unit, skill, pick, build) => G.push({ id, unit, skill, pick, build });
 const rnd = (rng, n) => rng.int(n);
+const EXTRA = () => globalThis.window?.__EXTRA__ || {};
 
-// 1.2 Numbers 0-20 / 4.4 21-100
-def("num20", "1.2", "vocabulaire", (rng) => [rnd(rng, 21)], ([n], rng, b) =>
-  typeEn(b, { fr: `${n} — écris le nombre en lettres`, answer: numberWords(n), noDigits: true, explain: `${n} s'écrit ${numberWords(n)}.` }));
-def("num100", "4.4", "vocabulaire", (rng) => [21 + rnd(rng, 80)], ([n], rng, b) =>
-  typeEn(b, { fr: `${n} — écris le nombre en lettres`, answer: numberWords(n), noDigits: true, explain: `${n} = ${numberWords(n)} (dizaine + trait d'union + unité).` }));
-
-// 2.4 Telling the time
-def("time", "2.4", "vocabulaire", (rng) => [1 + rnd(rng, 12), rnd(rng, 4)], ([hr, k], rng, b) => {
-  const next = (hr % 12) + 1;
-  const mins = [0, 15, 30, 45][k];
-  const core = [`${NUM[hr]} o'clock`, `quarter past ${NUM[hr]}`, `half past ${NUM[hr]}`, `quarter to ${NUM[next]}`][k];
-  const digital = [`${NUM[hr]} o'clock`, `${NUM[hr]} fifteen`, `${NUM[hr]} thirty`, `${NUM[hr]} forty-five`][k];
-  const accept = [`It's ${core}`, core, `It's ${digital}`, digital];
-  if (k === 1 || k === 3) accept.push(`It's a ${core}`, `a ${core}`);
-  return typeEn(b, { fr: `Quelle heure est-il ? ${hr} h ${String(mins).padStart(2, "0")}`, answer: accept, noDigits: true, explain: k === 3 ? `Pour « moins le quart », on dit quarter to + l'heure suivante : ${core}.` : `On dit : ${core}.` });
-});
-
-// 2.1 be
-def("be", "2.1", "grammaire", (rng) => [rnd(rng, SUBJECTS.length), rnd(rng, STATES.length), rnd(rng, 2)], ([si, st, neg], rng, b) => {
-  const s = SUBJECTS[si];
-  const full = conjugate("be", "present_simple", s, { neg: !!neg });
-  const ans = s.p === "1s" && neg ? "am not" : contract(full);
-  return fill(b, { q: `${subj(si, true)} ___ ${STATES[st]}.`, hint: neg ? "not / be" : "be", answer: [ans], explain: `Avec ${quote(s.text)}, to be se conjugue ${full.split(" ")[0]}${neg ? " + not" : ""}.` });
-});
-
-// 2.2 Plurals
-def("plural", "2.2", "grammaire", (rng) => [rnd(rng, NOUNS.length), rnd(rng, 4)], ([ni, k], rng, b) => {
-  const [sg, pl, rule] = NOUNS[ni];
-  const n = ["three", "five", "two", "four"][k];
-  return fill(b, { q: `I can see ${n} ___ in this picture.`, hint: sg, answer: [pl], explain: `${sg} → ${pl} (${rule}).` });
-});
-
-// 2.3 have / has
-def("have", "2.3", "grammaire", (rng) => [rnd(rng, SUBJECTS.length), rnd(rng, FEATURES.length)], ([si, fi], rng, b) => {
-  const s = SUBJECTS[si];
-  const ans = s.p === "3s" ? "has" : "have";
-  return fill(b, { q: `${subj(si, true)} ___ ${FEATURES[fi]}.`, hint: "have", answer: [ans], explain: s.p === "3s" ? `Avec ${quote(s.text)} (= he / she), have devient has.` : `Avec ${quote(s.text)}, on garde have.` });
-});
-
-// 3.1 Present simple, he/she/it -s
-def("ps3", "3.1", "conjugaison", (rng) => [rng.pick(THIRD), rnd(rng, FRAMES.length), rnd(rng, MARK.present.length)], ([si, fi, mi], rng, b) => {
-  const [v, o] = FRAMES[fi];
-  const ans = forms(v).s;
-  return fill(b, { q: `${subj(si, true)} ___ ${o} ${MARK.present[mi]}.`, hint: v, answer: [ans], explain: `Habitude (${MARK.present[mi]}) avec ${quote(SUBJECTS[si].text)} = he / she : le verbe prend -s → ${ans}.` });
-});
-def("err_s", "3.1", "grammaire", (rng) => [rng.pick(THIRD), rnd(rng, FRAMES.length), rnd(rng, MARK.present.length)], ([si, fi, mi], rng, b) => {
-  const [v, o] = FRAMES[fi];
-  const st = SUBJECTS[si].text.split(" ");
-  return errorQ(b, { tokens: [...st, v, ...`${o} ${MARK.present[mi]}.`.split(" ")], wrong: st.length, fix: [forms(v).s], explain: `${cap(SUBJECTS[si].text)} = he / she : au présent simple, il faut le -s → ${forms(v).s}.` });
-});
-
-// 3.2 do / does
-def("psneg", "3.2", "conjugaison", (rng) => [rnd(rng, SUBJECTS.length), rnd(rng, FRAMES.length), rnd(rng, MARK.presentNeg.length)], ([si, fi, mi], rng, b) => {
-  const [v, o] = FRAMES[fi];
-  const ans = contract(conjugate(v, "present_simple", SUBJECTS[si], { neg: true }));
-  return fill(b, { q: `${subj(si, true)} ___ ${o} ${MARK.presentNeg[mi]}.`, hint: `not / ${v}`, answer: [ans], explain: `Négation au présent simple : ${ans.split(" ")[0]} + verbe de base (${v}), sans -s.` });
-});
-def("doq", "3.2", "grammaire", (rng) => [rnd(rng, SUBJECTS.length), rnd(rng, FRAMES.length), rnd(rng, MARK.present.length)], ([si, fi, mi], rng, b) => {
-  const [v, o] = FRAMES[fi];
-  const s = SUBJECTS[si];
-  const right = s.p === "3s" ? "Does" : "Do";
-  return mcq(b, rng, { q: `___ ${s.text} ${v} ${o} ${MARK.present[mi]}?`, right, wrong: [right === "Do" ? "Does" : "Do", s.p === "3s" ? "Is" : "Are", "Did"], explain: `Question au présent simple avec ${quote(s.text)} : ${right} + sujet + verbe de base.` });
-});
-def("err_doesnt", "3.2", "grammaire", (rng) => [rng.pick(THIRD), rnd(rng, FRAMES.length), rnd(rng, MARK.presentNeg.length)], ([si, fi, mi], rng, b) => {
-  const [v, o] = FRAMES[fi];
-  const st = SUBJECTS[si].text.split(" ");
-  return errorQ(b, { tokens: [...st, "doesn't", forms(v).s, ...`${o} ${MARK.presentNeg[mi]}.`.split(" ")], wrong: st.length + 1, fix: [v], explain: `Après doesn't, le verbe reste à la base : doesn't ${v} (le -s est déjà dans does).` });
-});
-
-// 4.1 Present continuous
-def("pc", "4.1", "conjugaison", (rng) => [rnd(rng, SUBJECTS.length), rnd(rng, FRAMES.length), rnd(rng, 2), rnd(rng, 2)], ([si, fi, mi, neg], rng, b) => {
-  const [v, o] = FRAMES[fi];
-  const s = SUBJECTS[si];
-  const full = conjugate(v, "present_continuous", s, { neg: !!neg });
-  const ans = s.p === "1s" && neg ? "am not " + forms(v).ing : contract(full);
-  const q = neg ? `${subj(si, true)} ___ ${o} ${MARK.now[mi]}.` : `Look! ${subj(si, false) === "I" ? "I" : subj(si, false)} ___ ${o} ${MARK.now[mi]}.`;
-  return fill(b, { q, hint: neg ? `not / ${v}` : v, answer: [ans], explain: `Action en cours (${MARK.now[mi]}) : be + verbe en -ing → ${ans}.` });
-});
-
-// 5.1 / 5.2 Past simple affirmative
-const pastFill = (irregular) => (rng, L) => {
-  const pool = FRAMES.map((f, i) => [f, i]).filter(([[v]]) => verb(v)?.irregular === irregular && (verb(v)?.level || 5) <= Math.max(5, L)).map(([, i]) => i);
-  return [rnd(rng, SUBJECTS.length), pool.length ? rng.pick(pool) : 0, rnd(rng, MARK.past.length)];
-};
-const pastBuild = ([si, fi, mi], rng, b) => {
-  const [v, o] = FRAMES[fi];
-  const x = verb(v);
-  return fill(b, { q: `${subj(si, true)} ___ ${o} ${MARK.past[mi]}.`, hint: v, answer: pastForms(v), explain: `${cap(MARK.past[mi])} → prétérit. ${v} → ${x.past}${x.irregular ? " (verbe irrégulier)" : ""}.` });
-};
-def("past_reg", "5.1", "conjugaison", pastFill(false), pastBuild);
-def("past_irr", "5.2", "conjugaison", pastFill(true), pastBuild);
-
-// 5.2 Irregular forms (and over-regularization errors)
-const irregularPick = (rng, L) => {
-  const pool = VERBS.map((v, i) => [v, i]).filter(([v]) => v.irregular && v.base !== "be" && v.level <= Math.max(5, L)).map(([, i]) => i);
-  return [rng.pick(pool)];
-};
-def("irr_past", "5.2", "conjugaison", irregularPick, ([vi], rng, b) => {
-  const v = VERBS[vi];
-  return typeEn(b, { fr: `Prétérit de « ${v.base} » (${v.fr})`, answer: pastForms(v), explain: `${v.base} → ${v.past} → ${v.pp}.` });
-});
-def("irr_pp", "6.3", "conjugaison", irregularPick, ([vi], rng, b) => {
-  const v = VERBS[vi];
-  return typeEn(b, { fr: `Participe passé de « ${v.base} » (${v.fr})`, answer: ppForms(v), explain: `${v.base} → ${v.past} → ${v.pp}.` });
-});
-def("err_overreg", "5.2", "conjugaison", (rng, L) => {
-  const pool = FRAMES.map(([v], i) => i).filter((i) => {
-    const v = verb(FRAMES[i][0]);
-    return v?.irregular && v.level <= Math.max(5, L) && regularPast(v.base) !== v.past;
+/** A conjugation generator for one or several tenses, on frames chosen by a predicate. */
+function conjGen(id, unit, tenses, framePred, { pronounsOnly = false, modes = [0], around = false, label } = {}) {
+  const frames = frameIs(framePred);
+  const subjects = tenses.every((t) => t.startsWith("imp_")) ? [1, 4, 5] : SUBJECTS.map((_, i) => i).slice(0, pronounsOnly ? 8 : SUBJECTS.length);
+  def(id, unit, "conjugaison", (rng) => [rnd(rng, tenses.length), rng.pick(frames), rng.pick(subjects), rng.pick(modes), rnd(rng, 3)], ([ti, fi, si, mode, mi], rng, b) => {
+    const tense = tenses[ti];
+    const frame = FRAMES[fi];
+    const subj = SUBJECTS[si];
+    if (!frame || !subj) return null;
+    if (tense.startsWith("imp_") && ![1, 3, 4].includes(subj.p)) return null;
+    const ar = AROUND[tense] ? AROUND[tense][mi % AROUND[tense].length] : null;
+    const tail = AROUND[tense] ? "" : (TAIL[tense] || [""])[mi % (TAIL[tense] || [""]).length];
+    const g = conjGap(frame, tense, subj, mode, tail, ar);
+    if (!g) return null;
+    const person = tense.startsWith("imp_") || mode === 2 ? `${subj.t} / ` : "";
+    return fill(b, { q: g.q, hint: `${person}${infLabel(frame)} — ${label || tenseById(tense).short}${modeLabel(mode, tense)}`, answer: g.answers, explain: conjExplain(frame[0], tense, g.answers) });
   });
-  return [rnd(rng, SUBJECTS.length), rng.pick(pool), rnd(rng, MARK.past.length)];
-}, ([si, fi, mi], rng, b) => {
-  const [v, o] = FRAMES[fi];
-  const st = SUBJECTS[si].text.split(" ");
-  return errorQ(b, { tokens: [...st, regularPast(v), ...`${o} ${MARK.past[mi]}.`.split(" ")], wrong: st.length, fix: pastForms(v), explain: `${v} est irrégulier : son prétérit est ${verb(v).past}, pas ${regularPast(v)}.` });
+}
+
+// 1.1 Letters and sounds (ç, ge, gu, m before b / p)
+def("lettres", "1.1", "orthographe", (rng) => [rnd(rng, LETTRES.length)], ([i], rng, b) => {
+  const [w, wrong, rule] = LETTRES[i];
+  return mcq(b, rng, { q: "Quelle est la bonne orthographe ?", right: w, wrong, explain: rule });
 });
 
-// 5.3 Past negative / question / did + base
-def("pastneg", "5.3", "conjugaison", (rng) => [rnd(rng, SUBJECTS.length), rnd(rng, FRAMES.length), rnd(rng, MARK.past.length)], ([si, fi, mi], rng, b) => {
-  const [v, o] = FRAMES[fi];
-  return fill(b, { q: `${subj(si, true)} ___ ${o} ${MARK.past[mi]}.`, hint: `not / ${v}`, answer: [`didn't ${v}`], explain: `Négation au prétérit : didn't + verbe de base (didn't ${v}, jamais « didn't ${verb(v).past} »).` });
-});
-def("pastq", "5.3", "grammaire", (rng) => [rnd(rng, SUBJECTS.length), rnd(rng, FRAMES.length), rnd(rng, MARK.past.length)], ([si, fi, mi], rng, b) => {
-  const [v, o] = FRAMES[fi];
-  const s = SUBJECTS[si];
-  return mcq(b, rng, { q: `___ ${s.text} ${v} ${o} ${MARK.past[mi]}?`, right: "Did", wrong: [s.p === "3s" ? "Does" : "Do", s.p === "1s" || s.p === "3s" ? "Was" : "Were", "Have"], explain: `${cap(MARK.past[mi])} → question au prétérit : Did + sujet + verbe de base.` });
-});
-def("err_did", "5.3", "grammaire", (rng) => {
-  const pool = FRAMES.map((f, i) => i).filter((i) => verb(FRAMES[i][0]).past !== FRAMES[i][0]);
-  return [rnd(rng, SUBJECTS.length), rng.pick(pool), rnd(rng, MARK.past.length)];
-}, ([si, fi, mi], rng, b) => {
-  const [v, o] = FRAMES[fi];
-  const st = SUBJECTS[si].text.split(" ");
-  return errorQ(b, { tokens: ["Did", ...st, verb(v).past, ...`${o} ${MARK.past[mi]}?`.split(" ")], wrong: st.length + 1, fix: [v], explain: `Après did, le verbe reste à la base : Did … ${v} ? (did porte déjà le passé).` });
+// 1.2 Gender of nouns
+def("genre", "1.2", "grammaire", (rng, L = 12) => {
+  const pool = GENRES.map((g, i) => (g[2] <= Math.max(2, L) ? i : -1)).filter((i) => i >= 0);
+  return [rng.pick(pool)];
+}, ([i], rng, b) => {
+  const [n, g] = GENRES[i];
+  return mcq(b, rng, { q: `Quel déterminant va avec ${quote(n)} ?`, right: g === "m" ? `un ${n}` : `une ${n}`, wrong: [g === "m" ? `une ${n}` : `un ${n}`], explain: `${cap(n)} est un nom ${g === "m" ? "masculin" : "féminin"} : ${g === "m" ? "un" : "une"} ${n}.` });
 });
 
-// 5.4 Past continuous
-def("pastcont", "5.4", "conjugaison", (rng) => [rnd(rng, SUBJECTS.length), rnd(rng, FRAMES.length), rnd(rng, 2)], ([si, fi, k], rng, b) => {
-  const [v, o] = FRAMES[fi];
-  const ans = conjugate(v, "past_continuous", SUBJECTS[si]);
-  const q = k ? `${subj(si, true)} ___ ${o} when the phone rang.` : `At eight o'clock last night, ${subj(si, false)} ___ ${o}.`;
-  return fill(b, { q, hint: v, answer: [ans], explain: `Action en cours à un moment du passé : was / were + -ing → ${ans}.` });
+// 1.3 Present: first group, être, avoir
+conjGen("pres_er", "1.3", ["present"], (f) => group(f) === 1 && !isPronominalInf(f[0]) || ["être", "avoir"].includes(f[0]));
+
+// 1.4, 2.5, 3.5, 4.5 Homophones
+for (const [key, fam] of Object.entries(HOMOPHONES)) {
+  def(`h_${key}`, fam.unit, "orthographe", (rng) => [rnd(rng, fam.items.length), rnd(rng, 3)], ([i, k], rng, b) => {
+    const [q, a] = fam.items[i] || [];
+    if (!q) return null;
+    const explain = fam.explain[a.toLowerCase()] || "";
+    // Mostly typed answers (production), sometimes a choice.
+    if (k === 0) return mcq(b, rng, { q, right: a, wrong: fam.choices.filter((c) => c.toLowerCase() !== a.toLowerCase()).slice(0, 3).map((c) => (a[0] === a[0].toUpperCase() ? cap(c) : c)), explain });
+    return fill(b, { q, hint: fam.hint, answer: [a], explain });
+  });
+}
+
+// 1.5 End punctuation
+def("ponct", "1.5", "grammaire", (rng) => [rnd(rng, PONCTUATION.length)], ([i], rng, b) => {
+  const [s, sign, explain] = PONCTUATION[i];
+  return mcq(b, rng, { q: `Quel signe termine la phrase : ${quote(`${s} …`)} ?`, right: sign === "." ? "un point ( . )" : sign === "?" ? "un point d'interrogation ( ? )" : "un point d'exclamation ( ! )", wrong: ["un point ( . )", "un point d'interrogation ( ? )", "un point d'exclamation ( ! )"], explain });
 });
 
-// 6.1 Future
-def("future", "6.1", "conjugaison", (rng) => [rnd(rng, SUBJECTS.length), rnd(rng, FRAMES.length), rnd(rng, 2)], ([si, fi, k], rng, b) => {
-  const [v, o] = FRAMES[fi];
-  const s = SUBJECTS[si];
-  if (k) {
-    const ans = conjugate(v, "going_to", s);
-    return fill(b, { q: `${subj(si, true)} ___ ${o} next weekend.`, hint: `${v} — be going to`, answer: [ans], explain: `be going to + verbe : ${ans} (be s'accorde avec le sujet).` });
-  }
-  return fill(b, { q: `I'm sure ${subj(si, false)} ___ ${o} tomorrow.`, hint: `${v} — will`, answer: [`will ${v}`], explain: `will + verbe de base, à toutes les personnes : will ${v}.` });
+// 2.1 Plurals
+def("pluriel", "2.1", "orthographe", (rng) => [rnd(rng, PLURALS.length), rnd(rng, 3)], ([i, k], rng, b) => {
+  const [sg, pl, rule] = PLURALS[i];
+  const accept = pl.split("|");
+  const q = /^(madame|monsieur)$/.test(sg) ? `Bonjour, ${sg} ! Bonjour, ___ !` : [`Un ${sg}, puis trois ___.`, `Un ${sg}, des ___.`, `Il y a plusieurs ___ dans cette histoire.`][k];
+  return fill(b, { q, hint: sg, answer: accept, explain: `${sg} → ${accept[0]} (${rule}).` });
 });
 
-// 6.2 Comparatives / superlatives
-def("comp", "6.2", "grammaire", (rng) => [rnd(rng, ADJECTIVES.length)], ([ai], rng, b) => {
+// 2.2 Feminine
+def("feminin", "2.2", "orthographe", (rng) => [rnd(rng, FEMININES.length)], ([i], rng, b) => {
+  const [m, f, kind, rule] = FEMININES[i];
+  const q = kind === "adj" ? `Il est ${m}. Elle est ___.` : `un ${m}, une ___`;
+  return fill(b, { q, hint: m, answer: [f], explain: `${m} → ${f} (${rule}).` });
+});
+
+// 2.3 Agreement of the adjective
+def("accord_adj", "2.3", "grammaire", (rng) => [rnd(rng, GN_SUBJECTS.length), rnd(rng, ADJECTIVES.length)], ([si, ai], rng, b) => {
+  const [s, g, pl] = GN_SUBJECTS[si];
   const a = ADJECTIVES[ai];
-  return fill(b, { q: a.comp, hint: a.base, answer: COMPARATIVE(a), explain: a.rule ? `${a.base} → ${COMPARATIVE(a)[0]} (${a.rule}).` : `${a.base} → ${COMPARATIVE(a)[0]}.` });
-});
-def("sup", "6.2", "grammaire", (rng) => [rnd(rng, ADJECTIVES.length)], ([ai], rng, b) => {
-  const a = ADJECTIVES[ai];
-  return a.sup ? fill(b, { q: a.sup, hint: a.base, answer: SUPERLATIVE(a), explain: `Superlatif : the + ${SUPERLATIVE(a)[0]}.` }) : null;
+  const form = a[(g === "f" ? 1 : 0) + (pl ? 2 : 0)];
+  const verb = pl ? "sont" : "est";
+  return fill(b, { q: `${s} ${verb} ___.`, hint: a[0], answer: [form], explain: `${s} : ${g === "f" ? "féminin" : "masculin"} ${pl ? "pluriel" : "singulier"} → ${form}.` });
 });
 
-// 6.3 Present perfect
-def("pp", "6.3", "conjugaison", (rng) => [rnd(rng, SUBJECTS.length), rnd(rng, FRAMES.length), rnd(rng, 3)], ([si, fi, k], rng, b) => {
-  const [v, o] = FRAMES[fi];
-  const s = SUBJECTS[si];
-  const aux = s.p === "3s" ? "has" : "have";
-  const pp = verb(v).pp;
-  if (k === 0) return fill(b, { q: `${subj(si, true)} ___ ${o} before.`, hint: `never / ${v}`, answer: [`${aux} never ${pp}`], explain: `Expérience : ${aux} + never + participe passé (${pp}).` });
-  if (k === 1) return fill(b, { q: `${subj(si, true)} ___ ${o}, so we can relax now.`, hint: `already / ${v}`, answer: [`${aux} already ${pp}`], explain: `Résultat présent : ${aux} + already + participe passé (${pp}).` });
-  return fill(b, { q: `${subj(si, true)} ___ ${o} yet.`, hint: `not / ${v}`, answer: [`${aux}n't ${pp}`], explain: `Négation au present perfect : ${aux}n't + participe passé ; yet se met à la fin.` });
+// 2.4 Present of the 2nd and 3rd groups
+conjGen("pres_irr", "2.4", ["present"], (f) => [2, 3].includes(group(f)) && !isPronominalInf(f[0]) && f[0] !== "être" && f[0] !== "avoir", { modes: [0, 0, 1] });
+
+// 3.1 Imperfect
+conjGen("imparfait", "3.1", ["imparfait"], (f) => !MODAL.has(frameVerb(f)), { modes: [0, 0, 1] });
+
+// 3.2 Passé composé with avoir, and past participles
+conjGen("pc_avoir", "3.2", ["passe_compose"], (f) => !isPronominalInf(f[0]) && verbInfo(frameVerb(f))?.aux === "avoir" && !MODAL.has(frameVerb(f)), { modes: [0, 0, 1] });
+const PP_VERBS = VERBS.filter((v) => v.group === 3 && v.band <= 2 && simpleForms(v.inf)?.pp && !["être", "avoir"].includes(v.inf)).map((v) => v.inf);
+def("pp_form", "3.2", "conjugaison", (rng) => [rnd(rng, PP_VERBS.length)], ([i], rng, b) => {
+  const v = PP_VERBS[i];
+  const pp = participle(v);
+  if (!v || !pp.length) return null;
+  return typeIt(b, { prompt: `Participe passé de ${quote(v)} (masculin singulier)`, label: "Participe passé", answer: pp, explain: `${v} → ${pp[0]} (féminin : ${participle(v, "f")[0]}).` });
 });
 
-// 6.4 for / since, present perfect continuous
-def("forsince", "6.4", "grammaire", (rng) => [rnd(rng, FOR_SINCE.length), rnd(rng, 2), rnd(rng, 7)], ([ti, isPoint, xi], rng, b) => {
-  const X = isPoint ? POINTS[xi % POINTS.length] : DURATIONS[xi % DURATIONS.length];
-  const right = isPoint ? "since" : "for";
-  return mcq(b, rng, { q: FOR_SINCE[ti][0].replace("{X}", X), right, wrong: [isPoint ? "for" : "since", "during", "ago"], explain: isPoint ? `${quote(X)} est un point de départ → since.` : `${quote(X)} est une durée → for.` });
-});
-def("ppc", "6.4", "conjugaison", (rng) => [rnd(rng, SUBJECTS.length), rnd(rng, FRAMES.length)], ([si, fi], rng, b) => {
-  const [v, o] = FRAMES[fi];
-  const ans = conjugate(v, "present_perfect_continuous", SUBJECTS[si]);
-  return fill(b, { q: `${subj(si, true)} ___ ${o} for two hours.`, hint: `${v} — present perfect continu`, answer: [ans], explain: `Action commencée dans le passé et toujours en cours : have / has been + -ing → ${ans}.` });
+// 3.3 Passé composé with être (agreement with the subject)
+conjGen("pc_etre", "3.3", ["passe_compose"], (f) => verbInfo(frameVerb(f))?.aux === "être" && !isPronominalInf(f[0]) && f[0] !== "être");
+
+// 3.4 -é, -er, -ez, -ait
+const ER_FRAMES = frameIs((f) => group(f) === 1 && !isPronominalInf(f[0]) && verbInfo(frameVerb(f))?.aux === "avoir");
+def("e_er", "3.4", "orthographe", (rng) => [rng.pick(ER_FRAMES), rnd(rng, 7)], ([fi, k], rng, b) => {
+  const [inf, comp] = FRAMES[fi];
+  const st = inf.slice(0, -2);
+  const forms = { inf, pp: participle(inf)[0], ez: conjugations(inf, "present", 4)[0], ait: conjugations(inf, "imparfait", 2)[0] };
+  const T = [
+    [`Je vais ___ ${comp}.`, "inf", "Après un verbe conjugué (je vais), on met l'infinitif : on peut dire « je vais vendre » → -er."],
+    [`Il faut ___ ${comp}.`, "inf", "Après « il faut », l'infinitif : on peut dire « il faut vendre » → -er."],
+    [`Elle est partie sans ___ ${comp}.`, "inf", "Après une préposition (sans, pour, de, à), l'infinitif : « sans vendre » → -er."],
+    [`Hier, nous avons ___ ${comp}.`, "pp", "Après avoir, le participe passé : on peut dire « nous avons vendu » → -é."],
+    [`Il a ___ ${comp} ce matin.`, "pp", "Après avoir, le participe passé : « il a vendu » → -é."],
+    [`Vous ___ ${comp} tous les jours.`, "ez", "Avec vous, le présent se termine en -ez."],
+    [`Autrefois, il ___ ${comp} chaque semaine.`, "ait", "Une habitude passée avec il : imparfait en -ait."],
+  ][k];
+  const answer = forms[T[1]];
+  return fill(b, { q: T[0], hint: `${st}… (é, er, ez ou ait ?)`, answer: [answer], explain: T[2] });
 });
 
-// 7.5 Future continuous / perfect
-def("futcont", "7.5", "conjugaison", (rng) => [rnd(rng, SUBJECTS.length), rnd(rng, FRAMES.length)], ([si, fi], rng, b) => {
-  const [v, o] = FRAMES[fi];
-  return fill(b, { q: `This time tomorrow, ${subj(si, false)} ___ ${o}.`, hint: `${v} — futur continu`, answer: [`will be ${forms(v).ing}`], explain: `Action en cours à un moment du futur : will be + -ing.` });
-});
-def("futperf", "7.5", "conjugaison", (rng) => [rnd(rng, SUBJECTS.length), rnd(rng, FRAMES.length)], ([si, fi], rng, b) => {
-  const [v, o] = FRAMES[fi];
-  return fill(b, { q: `By next Friday, ${subj(si, false)} ___ ${o}.`, hint: `${v} — future perfect`, answer: [`will have ${verb(v).pp}`], explain: `Action terminée avant un moment du futur : will have + participe passé (${verb(v).pp}).` });
-});
-
-// 8.1 Second conditional / 10.1 third conditional
-def("cond2", "8.1", "conjugaison", (rng) => [rnd(rng, COND2.length)], ([i], rng, b) => {
-  const [q, hint, answer, explain] = COND2[i];
-  return fill(b, { q, hint, answer, explain });
-});
-def("cond3", "10.1", "conjugaison", (rng) => [rnd(rng, COND3.length)], ([i], rng, b) => {
-  const [q, hint, answer, explain] = COND3[i];
-  return fill(b, { q, hint, answer, explain });
-});
-
-// 8.2 Passive voice
-def("passive", "8.2", "conjugaison", (rng) => [rnd(rng, PASSIVE.length)], ([i], rng, b) => {
-  const [s, p, v, tense, tail] = PASSIVE[i];
-  const ans = conjugate(v, tense, { text: s, p }, { passive: true });
-  const tn = { present_simple: "présent", past_simple: "prétérit", present_perfect: "present perfect", will: "futur avec will", present_continuous: "présent continu" }[tense];
-  return fill(b, { q: `${s} ___ ${tail}`, hint: `${v} — passif, ${tn}`, answer: [ans], explain: `Passif = be conjugué (${tn}) + participe passé : ${ans}.` });
+// 4.1 Future, 4.2 conditional
+conjGen("futur", "4.1", ["futur"], () => true, { modes: [0, 0, 1] });
+conjGen("cond", "4.2", ["cond_present"], () => true, { modes: [0, 0, 1] });
+const RAI_FRAMES = frameIs((f) => !isPronominalInf(f[0]) && f[0] !== "être");
+def("rai_rais", "4.2", "conjugaison", (rng) => [rng.pick(RAI_FRAMES), rnd(rng, 4)], ([fi, k], rng, b) => {
+  const [inf, comp] = FRAMES[fi];
+  const futur = conjugations(inf, "futur", 0)[0];
+  const cond = conjugations(inf, "cond_present", 0)[0];
+  const el = elides(futur, inf);
+  const je = el ? "j'" : "je ";
+  const T = [
+    [`Demain, ${je}___ ${comp}.`, futur, "Demain, c'est sûr : futur → -rai (on peut dire « nous -rons »)."],
+    [`Si j'avais le temps, ${je}___ ${comp}.`, cond, "Si + imparfait → conditionnel : -rais (on peut dire « nous -rions »)."],
+    [`Je te promets que ${je}___ ${comp} la semaine prochaine.`, futur, "Une promesse pour l'avenir : futur → -rai."],
+    [`À ta place, ${je}___ ${comp}.`, cond, "Une situation imaginaire (à ta place) : conditionnel → -rais."],
+  ][k];
+  return fill(b, { q: T[0], hint: `${inf} — futur ou conditionnel ?`, answer: [T[1]], explain: T[2] });
 });
 
-// 9.1 Past perfect
-def("pastperf", "9.1", "conjugaison", (rng) => [rnd(rng, SUBJECTS.length), rnd(rng, FRAMES.length)], ([si, fi], rng, b) => {
-  const [v, o] = FRAMES[fi];
-  return fill(b, { q: `When we arrived, ${subj(si, false)} ___ ${o}.`, hint: `already / ${v}`, answer: [`had already ${verb(v).pp}`], explain: `Action antérieure à une autre action passée : had + already + participe passé.` });
+// 4.3 Object pronouns
+def("pronoms", "4.3", "grammaire", (rng) => [rnd(rng, PRONOMS.length)], ([i], rng, b) => {
+  const [q, a, explain] = PRONOMS[i];
+  return fill(b, { q, hint: "le, la, l', les, lui, leur, en ou y ?", answer: a, explain });
 });
 
-// 10.4 Word formation (content/wordform.json)
-def("wordform", "10.4", "vocabulaire", (rng, L) => {
+// 4.4 Adverbs in -ment
+def("adverbe", "4.4", "orthographe", (rng) => [rnd(rng, ADVERBS.length), rnd(rng, ADVERB_FRAMES.length)], ([i, k], rng, b) => {
+  const [adj, adv, rule] = ADVERBS[i];
+  return fill(b, { q: ADVERB_FRAMES[k], hint: `adverbe formé sur ${quote(adj)}`, answer: [adv], explain: `${adj} → ${adv} (${rule}).` });
+});
+
+// 5.1, 5.2 Passé simple
+conjGen("ps_12", "5.1", ["passe_simple"], (f) => [1, 2].includes(group(f)), { modes: [0, 0, 0, 1] });
+conjGen("ps_3", "5.2", ["passe_simple"], (f) => group(f) === 3 && simpleForms(frameVerb(f))?.passe_simple?.[2], { modes: [0, 0, 0, 1] });
+
+// 5.3 Passé simple or imperfect (je mangeai / je mangeais)
+const AI_FRAMES = frameIs((f) => group(f) === 1 && !isPronominalInf(f[0]) && verbInfo(frameVerb(f))?.aux === "avoir");
+def("ps_imp", "5.3", "conjugaison", (rng) => [rng.pick(AI_FRAMES), rnd(rng, 4)], ([fi, k], rng, b) => {
+  const [inf, comp] = FRAMES[fi];
+  const ps = conjugations(inf, "passe_simple", 0)[0];
+  const imp = conjugations(inf, "imparfait", 0)[0];
+  const je = elides(ps, inf) ? "j'" : "je ";
+  const T = [
+    [`Ce jour-là, ${je}___ ${comp} pour la première fois.`, ps, "Action ponctuelle, de premier plan (ce jour-là) : passé simple → -ai (on peut dire « il -a »)."],
+    [`Autrefois, ${je}___ ${comp} tous les dimanches.`, imp, "Habitude dans le passé : imparfait → -ais (on peut dire « il -ait »)."],
+    [`Soudain, ${je}___ ${comp}.`, ps, "Action soudaine : passé simple → -ai."],
+    [`Pendant que ${je}___ ${comp}, l'orage éclata.`, imp, "Action en cours, en arrière-plan : imparfait → -ais."],
+  ][k];
+  return fill(b, { q: T[0], hint: `${inf} — passé simple ou imparfait ?`, answer: [T[1]], explain: T[2] });
+});
+
+// 5.4 Plus-que-parfait and passé antérieur
+conjGen("pqp", "5.4", ["plus_que_parfait", "passe_anterieur"], (f) => !MODAL.has(frameVerb(f)));
+
+// 5.5 Inversion in the speech tags (dit-il, demanda-t-elle)
+const INCISES = ["dire", "répondre", "demander", "crier", "murmurer", "ajouter", "répliquer", "soupirer", "expliquer", "conclure", "s'écrier", "s'exclamer"];
+const QUOTES = ["Viens ici", "Je ne sais pas", "Quelle surprise", "Nous sommes en retard", "C'est fini", "Écoute-moi bien"];
+def("incise", "5.5", "grammaire", (rng) => [rnd(rng, INCISES.length), rnd(rng, 4), rnd(rng, QUOTES.length), rnd(rng, 2)], ([vi, si, qi, ti], rng, b) => {
+  const v = INCISES[vi];
+  const subj = [SUBJECTS[2], SUBJECTS[3], SUBJECTS[6], SUBJECTS[7]][si];
+  const tense = ti ? "passe_simple" : "present";
+  const ans = conjugations(v, tense, subj.p, { question: true, who: subj.who, g: subj.g });
+  if (!ans.length) return null;
+  return fill(b, { q: `« ${QUOTES[qi]} ! » ___ avant de partir.`, hint: `${subj.t} / ${v} — ${tenseById(tense).short}, incise`, answer: ans, explain: `Dans une incise, le sujet est inversé et relié par un trait d'union ; on ajoute -t- entre deux voyelles : ${ans[0]}.` });
+});
+
+// 6.1 Participle with être or avoir
+def("pp_basic", "6.1", "grammaire", (rng) => [rng.pick(frameIs((f) => !isPronominalInf(f[0]) && !MODAL.has(frameVerb(f)) && f[0] !== "être")), rnd(rng, SUBJECTS.length)], ([fi, si], rng, b) => {
+  const frame = FRAMES[fi];
+  const subj = SUBJECTS[si];
+  const aux = verbInfo(frameVerb(frame))?.aux;
+  const g = conjGap(frame, "passe_compose", subj, 0, "hier");
+  if (!g) return null;
+  const explain = aux === "être" ? `Avec être, le participe passé s'accorde avec le sujet (${subj.t}) → ${g.answers[0]}.` : `Avec avoir, le participe passé ne s'accorde pas avec le sujet → ${g.answers[0]}.`;
+  return fill(b, { q: g.q, hint: `${frame[0]} — passé composé`, answer: g.answers, explain });
+});
+
+// 6.2 Direct object placed before avoir
+def("pp_cod", "6.2", "grammaire", (rng) => [rnd(rng, COD_BEFORE.length), rnd(rng, 4), rnd(rng, 8), rnd(rng, 3)], ([oi, vi, si, k], rng, b) => {
+  const [obj, g, pl, verbs, end] = COD_BEFORE[oi];
+  const v = verbs[vi % verbs.length];
+  const subj = SUBJECTS[si];
+  const aux = conjugations("avoir", "present", subj.p)[0];
+  const subjAux = subj.p === 0 ? "j'ai" : `${subj.t} ${aux}`;
+  const agreed = participle(v, g, pl)[0];
+  const plain = participle(v)[0];
+  const objLow = obj.charAt(0).toLowerCase() + obj.slice(1);
+  const T = [
+    [`${obj} que ${subjAux} ___ ${end}`.replace(/\bque ([aeiouéèêhAEIOUÉÈÊH])/, "qu'$1"), agreed, `Le COD « que » (= ${objLow}) est placé avant avoir : accord → ${agreed}.`],
+    [`${obj}, ${subj.p === 0 ? "je" : subj.t} ${pl ? "les " : "l'"}${aux} ___ hier.`, agreed, `Le COD « ${pl ? "les" : "l'"} » (= ${objLow}) est placé avant avoir : accord → ${agreed}.`],
+    [`${subjAux} ___ ${objLow} hier.`, plain, `Le COD (${objLow}) est placé après le verbe : pas d'accord → ${plain}.`],
+  ][k];
+  return fill(b, { q: T[0], hint: v, answer: [T[1]], explain: T[2] });
+});
+
+// 6.3 Pronominal verbs
+def("pp_pron", "6.3", "grammaire", (rng) => [rnd(rng, PRONOMINAUX.length)], ([i], rng, b) => {
+  const [q, hint, a, explain] = PRONOMINAUX[i];
+  return fill(b, { q, hint, answer: a, explain });
+});
+// 6.4 Special cases
+def("pp_special", "6.4", "grammaire", (rng) => [rnd(rng, PP_SPECIAL.length)], ([i], rng, b) => {
+  const [q, hint, a, explain] = PP_SPECIAL[i];
+  return fill(b, { q, hint, answer: a, explain });
+});
+// 6.5 Present participle or verbal adjective
+def("ppr_adj", "6.5", "orthographe", (rng) => [rnd(rng, PPR_ADJ.length)], ([i], rng, b) => {
+  const [q, a, explain] = PPR_ADJ[i];
+  return fill(b, { q, hint: "participe présent ou adjectif ?", answer: a, explain });
+});
+
+// 7.1 Subjunctive, 7.3 past subjunctive
+conjGen("subj", "7.1", ["subj_present"], () => true, { pronounsOnly: false });
+conjGen("subj_passe", "7.3", ["subj_passe"], (f) => !MODAL.has(frameVerb(f)) && f[0] !== "être");
+// 7.2 Indicative or subjunctive
+def("mode", "7.2", "conjugaison", (rng) => [rnd(rng, MODES.length)], ([i], rng, b) => {
+  const [q, right, wrong, explain] = MODES[i];
+  return mcq(b, rng, { q, right, wrong: [wrong], explain });
+});
+// 7.4 Imperative
+conjGen("imperatif", "7.4", ["imp_present"], (f) => !MODAL.has(frameVerb(f)) && f[0] !== "pouvoir", { modes: [0, 0, 1] });
+// 7.5 Past conditional and hypotheses
+conjGen("cond_passe", "7.5", ["cond_passe"], (f) => !MODAL.has(frameVerb(f)));
+def("si", "7.5", "conjugaison", (rng) => [rnd(rng, SI.length)], ([i], rng, b) => {
+  const [q, hint, a, explain] = SI[i];
+  return fill(b, { q, hint, answer: a, explain });
+});
+
+// 8.1 Relative pronouns
+def("relatif", "8.1", "grammaire", (rng) => [rnd(rng, RELATIFS.length)], ([i], rng, b) => {
+  const [q, a, explain] = RELATIFS[i];
+  return fill(b, { q, hint: "qui, que, dont, où, lequel…", answer: a, explain });
+});
+
+// 8.3 Reported speech: Léa a dit : « Je chante… » → Léa a dit qu'elle chantait…
+const SPEAKERS = SUBJECTS.filter((s) => s.p === 2 || s.p === 5).filter((s) => s.who !== s.t);
+def("discours", "8.3", "conjugaison", (rng) => [rng.pick(frameIs((f) => !isPronominalInf(f[0]) && !MODAL.has(frameVerb(f)))), rnd(rng, SPEAKERS.length), rnd(rng, DISCOURS_TENSES.length)], ([fi, si, ti], rng, b) => {
+  const frame = FRAMES[fi];
+  const sp = SPEAKERS[si];
+  const [from, to, explain] = DISCOURS_TENSES[ti];
+  const firstPerson = sp.p === 5 ? 3 : 0;
+  const direct = conjugations(frame[0], from, firstPerson, { g: sp.g })[0];
+  const answers = conjugations(frame[0], to, sp.p, { g: sp.g, who: sp.who });
+  if (!direct || !answers.length) return null;
+  const quoted = firstPerson === 3 ? `Nous ${direct}` : elides(direct, stripPron(frame[0])) ? `J'${direct}` : `Je ${direct}`;
+  const said = sp.p === 5 ? "ont dit" : "a dit";
+  const lead = `${cap(sp.t)} ${said} : « ${quoted} ${frame[1]}. »`;
+  const qu = /^[aeiouéè]/.test(sp.who) ? "qu'" : "que ";
+  return fill(b, { lead, q: `${cap(sp.t)} ${said} ${qu}${sp.who} ___ ${frame[1]}.`, hint: `${frame[0]} — discours indirect`, answer: answers, explain });
+});
+
+// 8.4 Passive voice
+const PASSIVE_TENSES = ["present", "passe_compose", "futur", "imparfait", "plus_que_parfait"];
+def("passif", "8.4", "conjugaison", (rng) => [rnd(rng, PASSIFS.length), rnd(rng, PASSIVE_TENSES.length)], ([i, ti], rng, b) => {
+  const [s, g, pl, v, end] = PASSIFS[i];
+  const tense = PASSIVE_TENSES[ti];
+  const p = pl ? 5 : 2;
+  const etre = conjugations("être", tense, p)[0];
+  const pp = participle(v, g, pl)[0];
+  if (!etre || !pp) return null;
+  const ans = `${etre} ${pp}`;
+  return fill(b, { q: `${s} ___ ${end}`, hint: `${v} — voix passive, ${tenseById(tense).short}`, answer: [ans], explain: `Passif = être au ${tenseById(tense).short} + participe passé accordé avec le sujet (${s.toLowerCase()}) → ${ans}.` });
+});
+
+// 8.5 Negation in writing (the missing « ne ») and inversion
+def("ne", "8.5", "grammaire", (rng) => [rnd(rng, SANS_NE.length)], ([i], rng, b) => {
+  const [s, wrong, fix, explain] = SANS_NE[i];
+  return errorQ(b, { tokens: s.split(" "), wrong, fix, explain });
+});
+conjGen("inversion", "8.5", ["present", "passe_compose", "futur"], () => true, { pronounsOnly: true, modes: [2] });
+
+// 9.1 Paronyms, 9.2 pleonasms
+def("paronyme", "9.1", "vocabulaire", (rng) => [rnd(rng, PARONYMES.length)], ([i], rng, b) => {
+  const [q, right, wrong, explain] = PARONYMES[i];
+  return mcq(b, rng, { q, right, wrong: [wrong], explain });
+});
+def("pleonasme", "9.2", "vocabulaire", (rng) => [rnd(rng, PLEONASMES.length), rnd(rng, PLEONASMES.length)], ([i, j], rng, b) => {
+  const [wrongS, right, explain] = PLEONASMES[i];
+  const other = PLEONASMES[(j === i ? j + 1 : j) % PLEONASMES.length][0];
+  return mcq(b, rng, { q: "Quelle phrase est correcte dans une langue soignée ?", right, wrong: [wrongS, other], explain });
+});
+
+// 9.5 Word formation (content/wordform.json)
+def("wordform", "9.5", "vocabulaire", (rng, L = 12) => {
   const items = EXTRA().wordform?.items || [];
-  const pool = items.map((it, i) => (it.level <= Math.max(7, L) ? i : -1)).filter((i) => i >= 0);
+  const pool = items.map((it, i) => (it.level <= Math.max(9, L) ? i : -1)).filter((i) => i >= 0);
   return pool.length ? [rng.pick(pool)] : null;
 }, ([i], rng, b) => {
   const it = EXTRA().wordform?.items?.[i];
   return it ? fill(b, { q: it.q, hint: it.stem, answer: it.answer, explain: it.explain }) : null;
 });
 
-// ---------- Any verb, any tense (the Tower of level 12) ----------
-// A time marker that makes each tense natural, and the structure explained in French.
-const TENSE_TAIL = {
-  present_simple: ["every day", "on Saturdays", "every morning"],
-  present_continuous: ["right now", "at the moment", "this week"],
-  past_simple: ["yesterday", "last week", "two days ago"],
-  past_continuous: ["when you called", "at eight o'clock last night", "when the lights went out"],
-  present_perfect: ["this week", "this year", "recently"],
-  present_perfect_continuous: ["for two hours", "since this morning", "all afternoon"],
-  past_perfect: ["before the party started", "by the time we arrived", "before lunch"],
-  past_perfect_continuous: ["for an hour when we arrived", "all morning before the storm", "for weeks before the holidays"],
-  will: ["tomorrow", "next week", "one day"],
-  going_to: ["next weekend", "tonight", "after school"],
-  future_continuous: ["this time tomorrow", "at noon tomorrow", "all day Sunday"],
-  future_perfect: ["by next Friday", "by the end of the month", "before the summer"],
-  would: ["with a bit more free time", "if it were sunny", "if the teacher asked"],
-  would_have: ["with a bit more time", "if it hadn't rained", "if someone had asked"],
-};
-const STRUCT = {
-  present_simple: "sujet + verbe (+ -s avec he / she / it) ; négation et question avec do / does",
-  present_continuous: "am / is / are + verbe en -ing",
-  past_simple: "prétérit du verbe ; négation et question avec did + verbe de base",
-  past_continuous: "was / were + verbe en -ing",
-  present_perfect: "have / has + participe passé",
-  present_perfect_continuous: "have / has been + verbe en -ing",
-  past_perfect: "had + participe passé",
-  past_perfect_continuous: "had been + verbe en -ing",
-  will: "will + verbe de base",
-  going_to: "am / is / are going to + verbe de base",
-  future_continuous: "will be + verbe en -ing",
-  future_perfect: "will have + participe passé",
-  would: "would + verbe de base",
-  would_have: "would have + participe passé",
-};
+// 10.1 Connectors, 10.3 concession, 10.4 figures, 10.5 nominalisation
+def("connecteur", "10.1", "vocabulaire", (rng) => [rnd(rng, CONNECTEURS.length)], ([i], rng, b) => {
+  const [q, right, wrong, explain] = CONNECTEURS[i];
+  return mcq(b, rng, { q, right, wrong, explain });
+});
+def("concession", "10.3", "grammaire", (rng) => [rnd(rng, CONCESSION.length)], ([i], rng, b) => {
+  const [q, hint, a, explain] = CONCESSION[i];
+  return fill(b, { q, hint, answer: a, explain });
+});
+def("figure", "10.4", "vocabulaire", (rng) => [rnd(rng, FIGURES.length)], ([i], rng, b) => {
+  const [ex, right, wrong, explain] = FIGURES[i];
+  return mcq(b, rng, { q: `Quelle figure de style ? ${quote(ex)}`, right, wrong, explain });
+});
+def("nominalisation", "10.5", "vocabulaire", (rng) => [rnd(rng, NOMINALISATIONS.length)], ([i], rng, b) => {
+  const [v, n] = NOMINALISATIONS[i];
+  const [det, ...rest] = n.split(" ");
+  const noun = n.startsWith("l'") ? n.slice(2) : rest.join(" ");
+  const article = n.startsWith("l'") ? "l'" : `${det} `;
+  return fill(b, { q: `Le verbe ${quote(v)} donne le nom : ${article}___.`, hint: "nom de la même famille", answer: [noun], explain: `${v} → ${n}. La nominalisation permet de condenser une phrase (utile dans le résumé et la synthèse).` });
+});
 
-// One-off actions ("catch the bus") make no sense with a duration ("for two hours"): those tenses take an activity.
-const ONE_OFF = new Set(["send", "take", "call", "buy", "bring", "catch", "order", "make"]);
-const LASTING = FRAMES.map((f, i) => (ONE_OFF.has(f[0]) ? -1 : i)).filter((i) => i >= 0);
-const DURATION = new Set(["present_perfect_continuous", "past_perfect_continuous", "future_continuous"]);
+// 11.1 Registers, 11.2 tricky agreements, 11.3 numbers and compound nouns, 11.4 rare tenses, 11.5 capitals
+def("registre", "11.1", "vocabulaire", (rng) => [rnd(rng, REGISTRES.length)], ([i], rng, b) => {
+  const [fam, std, q] = REGISTRES[i];
+  return fill(b, { q, hint: `${fam} (familier) → registre courant`, answer: [std], explain: `${quote(fam)} est familier ; à l'écrit, on dit ${quote(std)}.` });
+});
+def("tout", "11.2", "orthographe", (rng) => [rnd(rng, TOUT.length)], ([i], rng, b) => {
+  const [q, a, explain] = TOUT[i];
+  return fill(b, { q, hint: "tout, toute, tous ou toutes ?", answer: a, explain });
+});
+def("couleur", "11.2", "orthographe", (rng) => [rnd(rng, COULEURS.length)], ([i], rng, b) => {
+  const [q, hint, a, explain] = COULEURS[i];
+  return fill(b, { q, hint, answer: a, explain });
+});
+def("nombre", "11.3", "orthographe", (rng) => {
+  const kinds = [() => 21 + rnd(rng, 79), () => 100 + rnd(rng, 900), () => [80, 200, 300, 280, 1000, 2000, 80000, 200000, 380][rnd(rng, 9)], () => 1001 + rnd(rng, 98998)];
+  return [kinds[rnd(rng, kinds.length)]()];
+}, ([n], rng, b) => {
+  const w = numberToFrench(n);
+  return typeIt(b, { prompt: `${n.toLocaleString("fr-FR")} — écris le nombre en lettres`, label: "Nombres en lettres", answer: [w], explain: `${n} s'écrit ${w}. Vingt et cent prennent un s quand ils sont multipliés et ne sont suivis de rien ; mille est invariable. Depuis 1990, on peut relier tous les mots par des traits d'union.` });
+});
+def("compose", "11.3", "orthographe", (rng) => [rnd(rng, COMPOSES.length)], ([i], rng, b) => {
+  const [sg, pl, explain] = COMPOSES[i];
+  const noun = sg.replace(/^un\s+/, "");
+  return fill(b, { q: `${cap(sg)}, des ___.`, hint: noun, answer: pl.map((x) => x.replace(/^des\s+/, "")), explain });
+});
+conjGen("temps_rares", "11.4", ["subj_imparfait", "subj_plus_que_parfait", "passe_anterieur"], (f) => !MODAL.has(frameVerb(f)) && !isPronominalInf(f[0]));
+def("majuscule", "11.5", "orthographe", (rng) => [rnd(rng, MAJUSCULES.length)], ([i], rng, b) => {
+  const [q, a, explain] = MAJUSCULES[i];
+  return fill(b, { q, hint: "majuscule ou minuscule ?", answer: a, explain, caseSensitive: true });
+});
 
-// params: [tense index, frame, subject, mode (0 affirmative, 1 negative, 2 question), marker]
-def("conj", "12.1", "conjugaison", (rng) => [rnd(rng, TENSES.length), rnd(rng, FRAMES.length), rnd(rng, SUBJECTS.length), rnd(rng, 3), rnd(rng, 3)], ([ti, fi, si, mode, mi], rng, b) => {
-  const t = TENSES[ti];
-  if (!t) return null;
-  const [v, o] = FRAMES[DURATION.has(t.id) && ONE_OFF.has(FRAMES[fi]?.[0]) ? LASTING[fi % LASTING.length] : fi];
-  const s = SUBJECTS[si];
-  const tail = TENSE_TAIL[t.id][mi % 3];
-  const explain = `${cap(t.fr)} : ${STRUCT[t.id]}.`;
-  if (mode === 2) {
-    const ans = cap(conjugate(v, t.id, s, { question: true }));
-    return fill(b, { q: `___ ${o} ${tail}?`, hint: `${s.text} / ${v} — ${t.fr}, question`, answer: [ans], explain });
-  }
-  const full = conjugate(v, t.id, s, { neg: mode === 1 });
-  const ans = /^am not\b/.test(full) ? full : contract(full);
-  return fill(b, { q: `${subj(si, true)} ___ ${o} ${tail}.`, hint: `${mode === 1 ? "not / " : ""}${v} — ${t.fr}`, answer: [ans], explain });
+// 12.1 Every tense (the Tower), 12.2 everyday spelling, 12.3 expert agreements
+def("usage", "12.2", "orthographe", (rng) => [rnd(rng, USAGE.length)], ([i], rng, b) => {
+  const [w, wrong, explain] = USAGE[i];
+  return mcq(b, rng, { q: "Quelle est la bonne orthographe ?", right: w, wrong, explain });
+});
+def("pp_expert", "12.3", "grammaire", (rng) => [rnd(rng, PP_SPECIAL.length + PRONOMINAUX.length)], ([i], rng, b) => {
+  const [q, hint, a, explain] = i < PP_SPECIAL.length ? PP_SPECIAL[i] : PRONOMINAUX[i - PP_SPECIAL.length] || [];
+  return q ? fill(b, { q, hint, answer: a, explain }) : null;
+});
+
+// Any verb, any tense: params [tense index, frame, subject, mode, marker].
+const ALL_TENSES = TENSES.map((t) => t.id);
+def("conj", "12.1", "conjugaison", (rng) => [rnd(rng, ALL_TENSES.length), rnd(rng, FRAMES.length), rnd(rng, SUBJECTS.length), rnd(rng, 3), rnd(rng, 3)], ([ti, fi, si, mode, mi], rng, b) => {
+  const tense = ALL_TENSES[ti];
+  const frame = FRAMES[fi];
+  const subj = SUBJECTS[si];
+  if (!tense || !frame || !subj) return null;
+  if (tense.startsWith("imp_") && ![1, 3, 4].includes(subj.p)) return null;
+  if (MODAL.has(frameVerb(frame)) && !["present", "imparfait", "futur", "cond_present", "passe_simple", "subj_present"].includes(tense)) return null;
+  if (mode === 2 && (subj.p === 0 || si >= 8 || AROUND[tense] || tense.startsWith("imp_"))) mode = 0;
+  const ar = AROUND[tense] ? AROUND[tense][mi % AROUND[tense].length] : null;
+  const tail = AROUND[tense] ? "" : (TAIL[tense] || [""])[mi % (TAIL[tense] || [""]).length];
+  const g = conjGap(frame, tense, subj, mode, tail, ar);
+  if (!g) return null;
+  const person = tense.startsWith("imp_") || mode === 2 ? `${subj.t} / ` : "";
+  return fill(b, { q: g.q, hint: `${person}${infLabel(frame)} — ${tenseById(tense).fr}${modeLabel(mode, tense)}`, answer: g.answers, explain: conjExplain(frame[0], tense, g.answers) });
 });
 
 export const GENERATORS = G;
@@ -438,10 +547,14 @@ const BY_ID = new Map(G.map((g) => [g.id, g]));
  * interrogative forms. Rebuildable from its ref like every generated question.
  */
 export function conjQuestion(rng, { tenses = null, negQ = 0.3 } = {}) {
-  const allowed = TENSES.map((t, i) => (!tenses || tenses.includes(t.id) ? i : -1)).filter((i) => i >= 0);
+  const allowed = ALL_TENSES.map((t, i) => (!tenses || tenses.includes(t) ? i : -1)).filter((i) => i >= 0);
   if (!allowed.length) return null;
-  const mode = rng() < negQ ? 1 + rng.int(2) : 0;
-  return assemble(BY_ID.get("conj"), [rng.pick(allowed), rng.int(FRAMES.length), rng.int(SUBJECTS.length), mode, rng.int(3)]);
+  for (let k = 0; k < 12; k++) {
+    const mode = rng() < negQ ? 1 + rng.int(2) : 0;
+    const q = assemble(BY_ID.get("conj"), [rng.pick(allowed), rng.int(FRAMES.length), rng.int(SUBJECTS.length), mode, rng.int(3)]);
+    if (q) return q;
+  }
+  return null;
 }
 
 const unitKey = (uid) => {
@@ -469,11 +582,11 @@ function assemble(g, params) {
   }
 }
 
-/** A new question from generator `id` (L = level of the context, for verb lists). */
+/** A new question from generator `id` (L = level of the context, for word lists). */
 export function generate(id, rng, L = 12) {
   const g = BY_ID.get(id);
   if (!g) return null;
-  for (let k = 0; k < 6; k++) {
+  for (let k = 0; k < 8; k++) {
     const params = g.pick(rng, L);
     if (!params) return null;
     const q = assemble(g, params);
@@ -493,4 +606,4 @@ export function regen(ref) {
   return assemble(g, params);
 }
 
-export { personOf };
+export { FRAMES, SUBJECTS };

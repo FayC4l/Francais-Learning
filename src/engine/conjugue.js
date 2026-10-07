@@ -291,7 +291,18 @@ const USUALLY_PRON = new Set("asseoir taire souvenir enfuir abstenir repentir m�
 
 /** All verbs: { inf, group, aux, both, pron, inv, ha, band }. */
 export const VERBS = [...ENTRIES.values()];
-export const verbInfo = (inf) => ENTRIES.get(stripPron(inf)) || null;
+/** A verb of the list, or a regular verb of the 1st group when the infinitive ends in -er (aller excepted). */
+export function verbInfo(inf) {
+  const v = stripPron(inf);
+  const e = ENTRIES.get(v);
+  if (e) return e;
+  if (/^[a-zàâäçéèêëîïôöùûüœ]+er$/.test(v) && v !== "aller") {
+    const x = { inf: v, aux: "avoir", both: false, pron: false, inv: false, ha: false, group: 1, band: 3, guessed: true };
+    ENTRIES.set(v, x);
+    return x;
+  }
+  return null;
+}
 /** "se lever" / "s'asseoir" → "lever" / "asseoir". */
 export function stripPron(inf) {
   return String(inf).trim().replace(/^(se\s+|s')/, "");
