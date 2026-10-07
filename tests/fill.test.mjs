@@ -2,22 +2,18 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { gapWords, joinBoxes, wordCountMismatches } from "../src/fill.js";
 
-test("gapWords counts the words of the canonical answer", () => {
-  assert.deepEqual(gapWords("has been"), ["has", "been"]);
-  assert.deepEqual(gapWords("didn't go"), ["didn't", "go"]);
-  assert.deepEqual(gapWords("goes"), ["goes"]);
-  assert.deepEqual(gapWords("  Little did I know that "), ["Little", "did", "I", "know", "that"]);
+test("une case par mot attendu", () => {
+  assert.deepEqual(gapWords("ne mange pas"), ["ne", "mange", "pas"]);
+  assert.deepEqual(gapWords("s'est-il levé"), ["s'est-il", "levé"]);
+  assert.deepEqual(gapWords(" à "), ["à"]);
 });
 
-test("joinBoxes trims and skips empty boxes", () => {
-  assert.equal(joinBoxes([" has", "been "]), "has been");
-  assert.equal(joinBoxes(["did not", "go"]), "did not go");
-  assert.equal(joinBoxes(["", "go"]), "go");
+test("les cases sont réunies en une réponse", () => {
+  assert.equal(joinBoxes(["ne ", " mange", "", "pas"]), "ne mange pas");
 });
 
-test("wordCountMismatches tolerates contractions only", () => {
-  assert.deepEqual(wordCountMismatches(["isn't", "is not"]), []);
-  assert.deepEqual(wordCountMismatches(["has been", "'s been"]), []);
-  assert.deepEqual(wordCountMismatches(["went", "has gone"]), ["has gone"]);
-  assert.deepEqual(wordCountMismatches(["Little did I know that", "Little did I realize that"]), []);
+test("toutes les réponses acceptées ont le même nombre de mots", () => {
+  assert.deepEqual(wordCountMismatches(["me suis levé", "me suis levée"]), []);
+  assert.deepEqual(wordCountMismatches(["a", "à la"]), ["à la"]);
+  assert.deepEqual(wordCountMismatches(["peut-être", "peut être"]), ["peut être"]);
 });

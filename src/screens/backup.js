@@ -36,8 +36,8 @@ export function pickBackupFile() {
   });
 }
 
-/** File name like mission-bilingue-famille-2026-10-02.json */
-export const backupName = (who) => `mission-bilingue-${who}-${new Date().toISOString().slice(0, 10)}.json`;
+/** File name like mission-francais-famille-2026-10-02.json */
+export const backupName = (who) => `mission-francais-${who}-${new Date().toISOString().slice(0, 10)}.json`;
 
 // ---------- Daily backup card (map) ----------
 

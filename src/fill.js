@@ -1,7 +1,7 @@
 // Gap helpers for fill-in questions: one box per expected word. Pure (shared with the validators).
-import { forms } from "./answer.js";
+import { clean } from "./answer.js";
 
-/** Words of the canonical answer, as shown by the boxes ("has been" → ["has", "been"]). */
+/** Words of the canonical answer, as shown by the boxes ("ne mange pas" → ["ne", "mange", "pas"]). */
 export function gapWords(expected) {
   return String(expected ?? "")
     .trim()
@@ -17,11 +17,11 @@ export function joinBoxes(values) {
     .join(" ");
 }
 
-const counts = (s) => new Set([...forms(s)].map((f) => (f ? f.split(" ").length : 0)));
+const count = (s) => clean(s).split(" ").filter(Boolean).length;
 
-/** Accepted answers whose word count cannot match the boxes of answer[0] (contractions tolerated). */
+/** Accepted answers whose word count differs from the boxes of answer[0]. */
 export function wordCountMismatches(answers) {
   if (!Array.isArray(answers) || !answers.length) return [];
-  const ref = counts(answers[0]);
-  return answers.slice(1).filter((a) => ![...counts(a)].some((n) => ref.has(n)));
+  const ref = count(answers[0]);
+  return answers.slice(1).filter((a) => count(a) !== ref);
 }

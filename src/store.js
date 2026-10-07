@@ -1,6 +1,6 @@
 // Progress of the active profile: persistence, unlocking rules, XP, streaks, badges, save codes.
 import { LEVELS } from "./content.js";
-import { readJSON, writeJSON, profileKey } from "./storage.js";
+import { readJSON, writeJSON, profileKey, NS } from "./storage.js";
 import { freshTower, recordFloor, newestTower, topUpLives, TOWER_LEVEL } from "./tower.js";
 
 /** One difficulty for the whole site (the management zone is gone): "moyenne +++". */
@@ -12,7 +12,7 @@ export const DIFFICULTY = {
   brutal: { label: "Impitoyable", pass: 0.9, time: 0.75, hearts: 2, replays: 1, desc: "90 % pour réussir, chrono très court, 2 cœurs contre les boss." },
 };
 
-export const RANKS = ["Touriste", "Débutant", "Explorateur", "Voyageur", "Aventurier", "Conteur", "Navigateur", "Stratège", "Orateur", "Débatteur", "Virtuose", "Maestro", "Bilingue"];
+export const RANKS = ["Apprenti", "Écolier", "Copiste", "Scribe", "Conteur", "Chroniqueur", "Grammairien", "Rhétoricien", "Lexicographe", "Orateur", "Styliste", "Académicien", "Immortel"];
 
 export function fresh() {
   return {
@@ -29,7 +29,8 @@ export function fresh() {
     stats: { answers: 0, correct: 0, ms: 0, tests: 0, bosses: 0, games: 0 },
     words: {}, // vocab refs answered correctly at least once
     lessons: {}, // unit ids whose lesson was opened
-    path: {}, // "3.2": { lesson, pron, words, practice } — the guided steps of a station
+    path: {}, // "3.2": { lesson, dictee, words, practice } — the guided steps of a station
+    dictees: {}, // "3.2": best mark out of 20 at the dictation step
     badges: {},
     unlockAll: false,
     seen: {}, // "boss3" / "unit3.2": { last: [ids], count: { id: n } } — anti-repeat memory
@@ -150,7 +151,7 @@ export const rank = () => RANKS[Math.min(highestLevelDone(), RANKS.length - 1)];
 
 export const STEPS = [
   { id: "lesson", label: "Leçon", short: "Leçon" },
-  { id: "pron", label: "Prononciation", short: "Son" },
+  { id: "dictee", label: "Dictée", short: "Dictée" },
   { id: "words", label: "Mots", short: "Mots" },
   { id: "practice", label: "Pratique", short: "Pratique" },
   { id: "test", label: "Test", short: "Test" },
@@ -357,12 +358,13 @@ export const BADGES = [
   { id: "fixer", name: "Rien ne m'échappe", desc: "Corriger 25 erreurs dans ton carnet.", test: (s) => s.fixed >= 25 },
   { id: "gamer", name: "Touche-à-tout", desc: "Jouer aux 9 mini-jeux.", test: (s) => new Set(Object.keys(s.games).map((k) => k.split(":")[1])).size >= 9 },
   { id: "halfway", name: "Mi-parcours", desc: "Terminer le niveau 6.", test: (s) => !!s.bosses[6]?.defeated && !s.bosses[6]?.placed },
-  { id: "bilingual", name: "Bilingue", desc: "Battre le boss final du niveau 12.", test: (s) => !!s.bosses[12]?.defeated },
+  { id: "immortal", name: "Immortel", desc: "Vaincre la Tour de Chikh Fayçal (niveau 12).", test: (s) => !!s.bosses[12]?.defeated },
+  { id: "dictee-20", name: "Zéro faute", desc: "Obtenir 20/20 à une dictée.", test: (s) => Object.values(s.dictees || {}).some((n) => n >= 20) },
   { id: "placed", name: "Radiographié", desc: "Passer le test de placement.", test: (s) => !!s.placement },
   { id: "writer", name: "Plume en herbe", desc: "Faire corriger ta première rédaction.", test: (s) => s.writing.length >= 1 },
   { id: "writer-15", name: "Plume d'or", desc: "Obtenir 15/20 ou plus à une rédaction.", test: (s) => s.writing.some((w) => w.score >= 15) },
   { id: "srs-100", name: "Mémoire d'éléphant", desc: "Réviser 100 cartes dans l'entraînement du jour.", test: (s) => (s.stats.srs || 0) >= 100 },
-  { id: "c2-mock", name: "Candidat C2", desc: "Terminer un examen blanc C2.", test: (s) => !!s.c2?.mock },
+  { id: "dalf-mock", name: "Candidat DALF", desc: "Terminer un DALF blanc.", test: (s) => !!s.c2?.mock },
 ];
 
 /** Grants newly earned badges; returns them. */
@@ -399,13 +401,15 @@ function sum(str) {
 
 export function exportCode() {
   const json = JSON.stringify(state);
-  return `MB2.${sum(json)}.${toB64(json)}`;
+  return `MF1.${sum(json)}.${toB64(json)}`;
 }
 
-/** Decodes a save code (MB1 or MB2) into a state object; throws a French message on failure. */
+/** Decodes a save code (MF1) into a state object; throws a French message on failure. */
 export function decodeCode(code) {
-  const m = String(code || "").replace(/\s+/g, "").match(/^MB[12]\.([a-z0-9]+)\.([A-Za-z0-9+/=]+)$/);
-  if (!m) throw new Error("Ce code ne ressemble pas à un code de sauvegarde Mission Bilingue.");
+  const raw = String(code || "").replace(/\s+/g, "");
+  if (/^MB[12]\./.test(raw)) throw new Error("C'est un code de Mission Bilingue (l'appli d'anglais) : il ne marche pas ici.");
+  const m = raw.match(/^MF1\.([a-z0-9]+)\.([A-Za-z0-9+/=]+)$/);
+  if (!m) throw new Error("Ce code ne ressemble pas à un code de sauvegarde Mission Français.");
   let json;
   try {
     json = fromB64(m[2]);
@@ -439,7 +443,7 @@ export function resetAll() {
 
 // Every change of a Tower is also written to a register shared by the whole device (outside the profiles):
 // restoring an old save code or backup, or saving from a forgotten tab, cannot bring hearts back.
-const TOWER_REGISTER = "mission-bilingue:towers";
+const TOWER_REGISTER = `${NS}:towers`;
 const register = () => readJSON(TOWER_REGISTER) || {};
 
 /** The Tower of the active profile (created on first use); a more advanced copy in the register wins. */

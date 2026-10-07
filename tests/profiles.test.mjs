@@ -68,7 +68,7 @@ test("family export / import round trip", () => {
   addXp(42);
   save();
   const backup = JSON.parse(JSON.stringify(P.exportFamily()));
-  assert.equal(backup.kind, "mission-bilingue-family");
+  assert.equal(backup.kind, "mission-francais-family");
   assert.equal(JSON.stringify(backup).includes("pin"), false);
   mem.clear();
   P.family.profiles = [];

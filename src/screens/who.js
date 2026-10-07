@@ -163,7 +163,7 @@ export function onboarding(view, { adding = false } = {}) {
   restore.addEventListener("click", async () => {
     const v = await dialog({
       title: "Restaurer une sauvegarde",
-      body: "<p>Tu as un <strong>fichier</strong> de sauvegarde (.json) ou un <strong>code</strong> (il commence par MB1 ou MB2) ?</p>",
+      body: "<p>Tu as un <strong>fichier</strong> de sauvegarde (.json) ou un <strong>code</strong> (il commence par MF1) ?</p>",
       actions: [
         { label: "Annuler", value: null },
         { label: "Un code", value: "code" },

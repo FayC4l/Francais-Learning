@@ -132,7 +132,7 @@ export function profileState(id) {
 export function exportFamily() {
   flushSave();
   return {
-    kind: "mission-bilingue-family",
+    kind: "mission-francais-family",
     v: 2,
     exportedAt: new Date().toISOString(),
     profiles: family.profiles.map((p) => ({ meta: { ...p }, state: profileState(p.id) })),
@@ -143,7 +143,7 @@ export function exportFamily() {
 export function exportProfile(id) {
   flushSave();
   const p = profileById(id);
-  return { kind: "mission-bilingue-profile", v: 2, exportedAt: new Date().toISOString(), meta: { ...p }, state: profileState(id) };
+  return { kind: "mission-francais-profile", v: 2, exportedAt: new Date().toISOString(), meta: { ...p }, state: profileState(id) };
 }
 
 /**
@@ -151,8 +151,9 @@ export function exportProfile(id) {
  * Returns the number of imported profiles; throws a French message when the file is not a backup.
  */
 export function importBackup(obj) {
-  const items = obj?.kind === "mission-bilingue-family" ? obj.profiles : obj?.kind === "mission-bilingue-profile" ? [{ meta: obj.meta, state: obj.state }] : null;
-  if (!Array.isArray(items) || !items.length) throw new Error("Ce fichier n'est pas une sauvegarde Mission Bilingue.");
+  if (/^mission-bilingue-/.test(obj?.kind || "")) throw new Error("C'est une sauvegarde de Mission Bilingue (l'appli d'anglais) : importe-la dans Mission Bilingue.");
+  const items = obj?.kind === "mission-francais-family" ? obj.profiles : obj?.kind === "mission-francais-profile" ? [{ meta: obj.meta, state: obj.state }] : null;
+  if (!Array.isArray(items) || !items.length) throw new Error("Ce fichier n'est pas une sauvegarde Mission Français.");
   let n = 0;
   for (const it of items) {
     if (!it?.meta?.id || !it.state) continue;

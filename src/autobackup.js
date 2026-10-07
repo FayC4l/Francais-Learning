@@ -42,7 +42,7 @@ export const autoSupported = () => typeof window !== "undefined" && typeof windo
 
 function idb(mode, fn) {
   return new Promise((resolve, reject) => {
-    const open = indexedDB.open("mission-bilingue-files", 1);
+    const open = indexedDB.open("mission-francais-files", 1);
     open.onupgradeneeded = () => open.result.createObjectStore("handles");
     open.onerror = () => reject(open.error);
     open.onsuccess = () => {
@@ -79,7 +79,7 @@ async function write(handle) {
 /** Lets the user choose the backup file (must run from a click), then writes it once. */
 export async function chooseAutoFile() {
   const handle = await window.showSaveFilePicker({
-    suggestedName: "mission-bilingue-famille.json",
+    suggestedName: "mission-francais-famille.json",
     types: [{ description: "Sauvegarde Mission Bilingue", accept: { "application/json": [".json"] } }],
   });
   await setHandle(handle);
