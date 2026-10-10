@@ -650,6 +650,343 @@
         { "kind": "paragraphs", "min": 3, "label": "Organise ton message en au moins 3 paragraphes" }
       ],
       "model": "Salut Lucas,\n\nMerci encore de garder Biscotte pendant mes vacances ! Voici tout ce qu'il faut savoir pour qu'elle soit heureuse chez toi.\n\nChaque soir, quand elle se réveille, donne-lui une cuillère de graines et un petit morceau de carotte. Change son eau tous les jours, parce qu'elle renverse souvent sa coupelle. Si elle grimpe aux barreaux en couinant, c'est qu'elle veut sortir : tu peux la laisser courir dans sa boule, mais surveille-la afin qu'elle ne se cache pas sous un meuble. Le samedi, nettoie sa cage dès que tu as un moment.\n\nSurtout, ne la réveille pas pendant la journée, car les hamsters dorment le jour. Et si tu as le moindre problème, appelle ma mère : son numéro est sur le frigo.\n\nMerci, tu es un vrai ami !\nJade"
+    },
+
+    {
+      "id": "w09-1", "level": 9, "type": "recit", "title": "Le dernier gardien",
+      "prompt": "Écris une courte nouvelle : le dernier jour d'un gardien de phare avant que son métier ne disparaisse. Raconte au passé simple, décris à l'imparfait, et choisis des mots précis.",
+      "words": [160, 240],
+      "require": [
+        { "kind": "tense", "value": "passe_simple", "min": 4, "label": "Au moins 4 verbes au passé simple" },
+        { "kind": "tense", "value": "imparfait", "min": 2, "label": "Au moins 2 verbes à l'imparfait" },
+        { "kind": "paragraphs", "min": 4, "label": "Organise ta nouvelle en au moins 4 paragraphes" }
+      ],
+      "model": "Le dernier gardien\n\nLorsque Joseph monta pour la dernière fois l'escalier du phare, le soleil se levait à peine sur la mer d'Iroise. Il connaissait chacune des marches, et pourtant, ce matin-là, il les compta une à une, comme pour les graver dans sa mémoire.\n\nDepuis trente ans, il veillait seul sur la lanterne. D'abord, il y avait eu les tempêtes, les naufrages évités de justesse, les nuits sans sommeil. Puis la technique avait progressé : désormais, un ordinateur allumerait le feu à sa place, tandis qu'un technicien viendrait de Brest une fois par mois.\n\nArrivé au sommet, il nettoya soigneusement les lentilles, alors que personne ne le lui demandait plus. Ensuite, il s'assit face à l'horizon et ouvrit le vieux registre où il avait noté, jour après jour, la force du vent et le passage des navires. Il y inscrivit une dernière ligne : « Mer calme. Gardien relevé. »\n\nEnfin, il redescendit lentement, ferma la porte à double tour et confia la clé au jeune technicien qui l'attendait sur le quai. Ainsi s'acheva, sans témoin ni discours, l'histoire du dernier gardien de l'île."
+    },
+    {
+      "id": "w09-2", "level": 9, "type": "article", "title": "Les mots aussi prennent leur retraite",
+      "prompt": "Rédige un article sur les mots qui disparaissent et ceux qui apparaissent. Emploie un vocabulaire précis : désuet, néologisme, emprunt, archaïsme…",
+      "words": [160, 240],
+      "require": [
+        { "kind": "words", "value": ["désuet", "désuète", "désuets", "désuétude", "néologisme", "néologismes", "emprunt", "emprunts", "archaïsme", "archaïsmes"], "min": 2, "label": "Au moins 2 termes précis (désuet, néologisme, emprunt, archaïsme…)" },
+        { "kind": "connectors", "min": 6, "label": "Au moins 6 mots de liaison différents" },
+        { "kind": "paragraphs", "min": 4, "label": "Organise ton article en au moins 4 paragraphes" }
+      ],
+      "model": "Les mots aussi prennent leur retraite\n\nQui dit encore « bésicles » pour lunettes ou « réclame » pour publicité ? Ces termes, autrefois courants, sont aujourd'hui désuets. Pourtant, ils n'ont pas disparu par hasard : une langue vivante ne cesse de se transformer.\n\nD'abord, certains mots vieillissent parce que les objets qu'ils désignaient ont disparu. Qui a encore besoin d'un « haut-de-chausses » ? D'autres tombent en désuétude parce qu'un synonyme plus moderne les a supplantés. Ainsi, la « réclame » a cédé la place à la « publicité ».\n\nEn revanche, de nouveaux mots naissent chaque année. Les néologismes accompagnent les inventions et les changements de société : « courriel », « covoiturage » ou « télétravail » sont entrés dans le dictionnaire en quelques décennies. Par ailleurs, le français accueille de nombreux emprunts, notamment à l'anglais, ce qui inquiète parfois les puristes.\n\nFaut-il s'en alarmer ? Sans doute pas. En effet, une langue qui n'évolue plus est une langue morte. Néanmoins, il serait dommage d'oublier les mots anciens, car ils constituent la mémoire de notre culture. C'est pourquoi les écrivains continuent de les faire vivre, parfois avec malice."
+    },
+    {
+      "id": "w09-3", "level": 9, "type": "essai", "title": "Faut-il simplifier l'orthographe ?", "ages": ["ado", "adulte"],
+      "prompt": "Faut-il simplifier l'orthographe française ? Rédige un essai argumenté : arguments pour, arguments contre, position nuancée.",
+      "words": [160, 240],
+      "require": [
+        { "kind": "connectors", "min": 6, "label": "Au moins 6 mots de liaison différents" },
+        { "kind": "paragraphs", "min": 4, "label": "Organise ton essai en au moins 4 paragraphes" }
+      ],
+      "model": "Simplifier l'orthographe : une fausse bonne idée ?\n\nL'orthographe française a la réputation d'être l'une des plus difficiles au monde. Accents capricieux, consonnes doubles, lettres muettes : nombreux sont ceux qui réclament une simplification. Faut-il pour autant réformer en profondeur notre manière d'écrire ?\n\nCertes, les arguments des réformateurs ne manquent pas de poids. D'abord, une orthographe plus régulière faciliterait l'apprentissage de la lecture et réduirait les inégalités entre élèves. Ensuite, elle libérerait du temps scolaire pour d'autres apprentissages, comme l'expression écrite ou l'argumentation. Enfin, l'histoire montre que l'orthographe a déjà évolué à plusieurs reprises.\n\nToutefois, une réforme radicale présenterait de sérieux inconvénients. En effet, l'orthographe actuelle conserve la trace de l'étymologie : elle aide à distinguer les homophones et à saisir le sens des mots. De plus, des millions de livres deviendraient soudain difficiles à lire pour les nouvelles générations.\n\nEn définitive, plutôt qu'une révolution, il semble préférable de poursuivre des ajustements mesurés, comme les rectifications de la fin du XXe siècle. Ainsi, la langue gagnerait en cohérence sans perdre sa mémoire."
+    },
+    {
+      "id": "w09-4", "level": 9, "type": "lettre", "title": "Un vol annulé", "ages": ["adulte"],
+      "prompt": "Votre vol a été annulé au dernier moment et la compagnie ne vous a pas aidé. Écrivez une lettre de réclamation précise et ferme pour obtenir réparation.",
+      "words": [160, 240],
+      "require": [
+        { "kind": "connectors", "min": 5, "label": "Au moins 5 mots de liaison différents" },
+        { "kind": "tense", "value": "conditionnel", "min": 2, "label": "Au moins 2 verbes au conditionnel" },
+        { "kind": "paragraphs", "min": 4, "label": "Organisez votre lettre en au moins 4 paragraphes" }
+      ],
+      "model": "Madame, Monsieur,\n\nLe quatorze juillet dernier, je devais embarquer avec ma famille sur votre vol reliant Paris à Lisbonne. Or, ce vol a été annulé moins de deux heures avant le départ, sans la moindre explication. Nous avons dû patienter toute la nuit dans l'aérogare, car aucun hôtel ne nous a été proposé.\n\nPar ailleurs, le personnel présent au comptoir s'est montré peu disponible. Nous n'avons obtenu un nouveau vol que le lendemain soir, ce qui nous a fait perdre une journée de vacances ainsi que la première nuit de notre location, déjà réglée. De plus, nos deux enfants, épuisés, ont dû dormir sur des sièges métalliques.\n\nConformément à la réglementation européenne, je vous serais donc reconnaissant de bien vouloir me verser l'indemnisation prévue en cas d'annulation tardive. Je souhaiterais également être remboursé des frais de repas que nous avons engagés, dont vous trouverez les justificatifs ci-joints. En effet, ces dépenses découlent directement de votre défaillance.\n\nDans l'attente d'une réponse rapide, je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.\nJulien Mercier"
+    },
+    {
+      "id": "w09-5", "level": 9, "type": "courriel", "title": "Dissiper un malentendu",
+      "prompt": "Une remarque que tu as faite a été mal comprise par une amie ou un collègue. Écris-lui pour dissiper le malentendu : explique ce que tu voulais dire, reconnais ta maladresse, propose de te rattraper.",
+      "words": [160, 240],
+      "require": [
+        { "kind": "connectors", "min": 4, "label": "Au moins 4 mots de liaison différents" },
+        { "kind": "questions", "min": 1, "label": "Au moins une question" },
+        { "kind": "paragraphs", "min": 4, "label": "Organise ton courriel en au moins 4 paragraphes" }
+      ],
+      "model": "Chère Inès,\n\nTon message d'hier m'a beaucoup peinée, car j'ai l'impression qu'un malentendu s'est glissé entre nous. Je préfère t'écrire sans attendre pour dissiper le doute.\n\nLorsque j'ai affirmé, à la réunion, que le projet manquait de rigueur, je ne visais pas ton travail, mais l'organisation générale du groupe. En effet, nous n'avions fixé ni calendrier ni répartition des tâches. Ton diaporama, au contraire, était le document le plus clair et le plus abouti que nous ayons présenté.\n\nJe reconnais toutefois que ma remarque était maladroite. J'aurais dû préciser ma pensée au lieu de laisser chacun l'interpréter à sa façon. D'ailleurs, plusieurs collègues m'ont fait la même observation après la séance, ce qui prouve que la confusion était compréhensible.\n\nAccepterais-tu que nous en parlions autour d'un café cette semaine ? Je tiens à notre collaboration, et plus encore à notre amitié. Ainsi, nous pourrions repartir sur de bonnes bases avant la présentation finale, qui approche à grands pas.\n\nJe t'embrasse,\nClaire"
+    },
+    {
+      "id": "w09-6", "level": 9, "type": "critique", "title": "Une exposition",
+      "prompt": "Rédige la critique d'une exposition (réelle ou imaginaire) pour un magazine culturel : le sujet, le parcours, les points forts, les réserves, ton verdict.",
+      "words": [160, 240],
+      "require": [
+        { "kind": "connectors", "min": 5, "label": "Au moins 5 mots de liaison différents" },
+        { "kind": "paragraphs", "min": 4, "label": "Organise ta critique en au moins 4 paragraphes" }
+      ],
+      "model": "Une exposition lumineuse\n\nJusqu'à la fin du mois, le musée des Beaux-Arts de Lille consacre une exposition aux peintres de la côte d'Opale. Une centaine de tableaux, de dessins et de photographies y retracent un siècle de paysages marins, des falaises du cap Gris-Nez aux plages de Wimereux.\n\nLe parcours, chronologique, est d'une grande clarté. D'abord, les toiles du XIXe siècle montrent une mer sombre et menaçante, peuplée de pêcheurs en lutte contre les éléments. Ensuite, la lumière envahit peu à peu les tableaux : les ciels s'éclaircissent, les couleurs s'avivent, et les baigneurs remplacent les naufragés.\n\nPar ailleurs, la scénographie mérite des éloges. Les salles, peintes en gris perle, mettent en valeur les nuances des ciels, tandis que des extraits de journaux de bord accompagnent les œuvres. En revanche, on regrette que certains cartels soient trop petits pour être lus sans effort.\n\nEn définitive, cette exposition réussit à faire dialoguer l'art et l'histoire d'une région. Elle séduira les amateurs de peinture comme les simples curieux. Un conseil : allez-y un matin de semaine, afin d'éviter la foule."
+    },
+    {
+      "id": "w09-7", "level": 9, "type": "recit", "title": "Le jour où j'ai osé", "ages": ["enfant", "ado"],
+      "prompt": "Raconte un jour où tu as surmonté une peur (parler en public, plonger, monter sur scène…). Emploie le passé composé et l'imparfait, et des mots précis pour dire tes émotions.",
+      "words": [160, 240],
+      "require": [
+        { "kind": "tense", "value": "passe_compose", "min": 4, "label": "Au moins 4 verbes au passé composé" },
+        { "kind": "tense", "value": "imparfait", "min": 2, "label": "Au moins 2 verbes à l'imparfait" },
+        { "kind": "paragraphs", "min": 4, "label": "Organise ton récit en au moins 4 paragraphes" }
+      ],
+      "model": "Le jour où j'ai osé\n\nPendant des années, j'ai eu peur de parler en public. Dès que je devais lire un texte devant la classe, mes mains tremblaient et ma voix devenait minuscule. Je préférais alors me faire oublier au fond de la salle.\n\nUn jour, pourtant, notre professeure de français a annoncé un concours d'éloquence. Chaque élève devait défendre une idée pendant trois minutes. J'ai d'abord pensé feindre une maladie. Cependant, mon meilleur ami m'a convaincu de m'inscrire, en me rappelant que j'adorais débattre… à condition qu'on ne me regarde pas.\n\nJ'ai donc répété mon discours tous les soirs devant le miroir. Le jour venu, j'ai respiré profondément et je suis monté sur l'estrade. Au début, ma voix tremblait encore ; puis, peu à peu, les mots sont venus tout seuls. Lorsque j'ai prononcé ma dernière phrase, toute la salle a applaudi.\n\nFinalement, je n'ai pas gagné le concours, mais j'ai remporté quelque chose de plus précieux : la certitude que la peur ne décide pas à ma place."
+    },
+    {
+      "id": "w09-8", "level": 9, "type": "compte-rendu", "title": "Une conférence sur le sommeil", "ages": ["adulte"],
+      "prompt": "Rédigez le compte rendu d'une conférence (réelle ou imaginaire) pour le bulletin de votre ville : le thème, les idées principales, la conclusion. Rapportez les propos avec des verbes précis.",
+      "words": [160, 240],
+      "require": [
+        { "kind": "words", "value": ["selon", "d'après", "a souligné", "a rappelé", "a expliqué", "a conclu", "a précisé", "a insisté"], "min": 3, "label": "Au moins 3 façons de rapporter les propos (selon, a souligné, a rappelé…)" },
+        { "kind": "paragraphs", "min": 4, "label": "Organisez votre compte rendu en au moins 4 paragraphes" }
+      ],
+      "model": "Dormir mieux pour vivre mieux\n\nLe mardi douze mars, la médiathèque municipale accueillait le docteur Aline Perrin, spécialiste du sommeil, pour une conférence destinée au grand public. Une centaine de personnes avaient fait le déplacement.\n\nEn introduction, la conférencière a rappelé que les Français dorment en moyenne une heure de moins qu'il y a cinquante ans. Selon elle, ce déficit s'explique notamment par l'usage tardif des écrans et par l'allongement des trajets. Elle a souligné que le manque de sommeil favorise la fatigue, mais aussi les troubles de l'humeur et certaines maladies.\n\nEnsuite, le docteur Perrin a présenté plusieurs conseils pratiques. D'après les études qu'elle a citées, il est préférable de se coucher à heure fixe, de limiter la caféine après seize heures et d'éteindre les écrans une heure avant de dormir. Elle a également expliqué que la sieste, si elle reste courte, améliore la concentration.\n\nEnfin, la soirée s'est achevée par un échange avec le public, qui a posé de nombreuses questions sur l'insomnie. La conférencière a conclu en invitant chacun à considérer le sommeil non comme du temps perdu, mais comme un investissement pour la santé."
+    },
+
+    {
+      "id": "w10-1", "level": 10, "type": "essai", "title": "Les réseaux sociaux nous rapprochent-ils ?",
+      "prompt": "Les réseaux sociaux nous rapprochent-ils ou nous isolent-ils ? Rédige un essai argumenté avec une introduction, deux parties et une conclusion, en variant les connecteurs.",
+      "words": [160, 240],
+      "require": [
+        { "kind": "connectors", "min": 7, "label": "Au moins 7 mots de liaison différents" },
+        { "kind": "paragraphs", "min": 4, "label": "Organise ton essai en au moins 4 paragraphes" }
+      ],
+      "model": "Connectés, mais seuls ?\n\nJamais nous n'avons été aussi reliés les uns aux autres : en quelques secondes, un message traverse la planète. Pourtant, de nombreux observateurs s'inquiètent d'une solitude croissante. Les réseaux sociaux nous rapprochent-ils vraiment, ou nous isolent-ils derrière nos écrans ?\n\nD'un côté, ces plateformes ont incontestablement multiplié les liens. Elles permettent de garder le contact avec des proches éloignés, de retrouver des amis perdus de vue ou de rejoindre des communautés passionnées. De plus, elles offrent une voix à ceux qui en manquaient, notamment aux personnes isolées par la maladie ou la distance.\n\nD'un autre côté, ces liens restent souvent superficiels. En effet, accumuler des abonnés ne remplace pas une conversation sincère. Par ailleurs, la comparaison permanente avec des vies soigneusement mises en scène nourrit le sentiment d'être à l'écart. Ainsi, certains adolescents passent des heures en ligne tout en se sentant profondément seuls.\n\nEn définitive, les réseaux sociaux ne sont ni un remède ni un poison : tout dépend de l'usage qu'on en fait. C'est pourquoi il importe d'apprendre à s'en servir pour prolonger les relations réelles, non pour les remplacer."
+    },
+    {
+      "id": "w10-2", "level": 10, "type": "article", "title": "Des jeux vidéo en classe ?", "ages": ["enfant", "ado"],
+      "prompt": "Rédige un article pour le journal du collège : faut-il utiliser des jeux vidéo en classe pour apprendre ? Présente les deux points de vue, puis donne le tien.",
+      "words": [160, 240],
+      "require": [
+        { "kind": "connectors", "min": 5, "label": "Au moins 5 mots de liaison différents" },
+        { "kind": "paragraphs", "min": 4, "label": "Organise ton article en au moins 4 paragraphes" }
+      ],
+      "model": "Apprendre en jouant : bonne ou mauvaise idée ?\n\nDepuis la rentrée, notre professeur d'histoire utilise un jeu vidéo pour faire découvrir l'Égypte antique. Cette initiative divise les élèves comme les parents. Faut-il vraiment jouer pour apprendre ?\n\nPour ses défenseurs, le jeu est un formidable outil. D'abord, il rend les élèves actifs : au lieu d'écouter, ils explorent, cherchent et résolvent des énigmes. Ensuite, il permet à chacun d'avancer à son rythme. Enfin, les élèves qui s'ennuient en cours retrouvent souvent la motivation grâce aux défis proposés.\n\nCependant, d'autres restent sceptiques. Selon eux, les écrans occupent déjà trop de place dans notre vie. Par ailleurs, un jeu ne remplace pas les explications d'un professeur, ni le plaisir de lire un livre. Certains craignent même que les élèves retiennent les combats plutôt que les leçons.\n\nPour ma part, je pense que le jeu vidéo peut être utile, à condition qu'il reste ponctuel et encadré. En effet, il donne envie d'apprendre, mais c'est en classe, avec le professeur, que les connaissances se construisent vraiment."
+    },
+    {
+      "id": "w10-3", "level": 10, "type": "lettre", "title": "Lettre ouverte pour une piste cyclable", "ages": ["adulte"],
+      "prompt": "Rédigez une lettre ouverte au maire de votre ville pour réclamer une piste cyclable sur un axe dangereux. Argumentez avec précision et proposez des solutions.",
+      "words": [160, 240],
+      "require": [
+        { "kind": "connectors", "min": 6, "label": "Au moins 6 mots de liaison différents" },
+        { "kind": "tense", "value": "conditionnel", "min": 2, "label": "Au moins 2 verbes au conditionnel" },
+        { "kind": "paragraphs", "min": 4, "label": "Organisez votre lettre en au moins 4 paragraphes" }
+      ],
+      "model": "Monsieur le Maire,\n\nChaque matin, des dizaines d'enfants et de salariés empruntent à vélo l'avenue Jean-Jaurès pour rejoindre le collège et la zone d'activités. Or, cet axe ne comporte aucun aménagement cyclable, alors que les voitures et les camions y circulent rapidement. Plusieurs accidents ont déjà eu lieu depuis le début de l'année.\n\nNous vous demandons donc de créer une piste cyclable protégée sur cette avenue. En effet, une telle infrastructure garantirait la sécurité des plus jeunes et encouragerait de nombreux habitants à laisser leur voiture au garage. Par ailleurs, la ville réduirait ainsi la pollution et les embouteillages, conformément aux engagements de votre programme.\n\nCertes, l'avenue est étroite, et la suppression de places de stationnement pourrait mécontenter certains commerçants. Néanmoins, des solutions existent : un parking relais à l'entrée de la ville compenserait largement les places perdues, tandis qu'un sens unique libérerait l'espace nécessaire.\n\nAu nom du collectif Vélo pour tous, nous serions heureux d'en discuter avec vos services lors d'une réunion publique. Dans cette attente, nous vous prions d'agréer, Monsieur le Maire, l'expression de notre haute considération.\nMarc Aubert"
+    },
+    {
+      "id": "w10-4", "level": 10, "type": "essai", "title": "Le sport doit-il rester obligatoire ?", "ages": ["ado", "adulte"],
+      "prompt": "Le sport doit-il rester obligatoire à l'école ? Rédige un essai nuancé, avec au moins deux tournures de concession (certes, bien que, avoir beau, même si…).",
+      "words": [160, 240],
+      "require": [
+        { "kind": "connectors", "min": 7, "label": "Au moins 7 mots de liaison différents" },
+        { "kind": "words", "value": ["certes", "bien que", "quoique", "même si", "malgré", "a beau", "ont beau", "avoir beau"], "min": 2, "label": "Au moins 2 tournures de concession" },
+        { "kind": "paragraphs", "min": 4, "label": "Organise ton essai en au moins 4 paragraphes" }
+      ],
+      "model": "Le sport à l'école : une contrainte nécessaire ?\n\nPour certains élèves, le cours d'éducation physique est le meilleur moment de la semaine ; pour d'autres, c'est une épreuve redoutée. Faut-il, dès lors, maintenir son caractère obligatoire ?\n\nCertes, imposer le sport peut sembler injuste. Les élèves peu sportifs ont beau faire des efforts, ils subissent parfois les moqueries de leurs camarades. De plus, les notes récompensent souvent les performances plutôt que les progrès, ce qui décourage les plus fragiles.\n\nToutefois, supprimer cette obligation serait une erreur. En effet, pour beaucoup d'enfants, l'école offre la seule occasion de pratiquer une activité physique régulière. Or, la sédentarité progresse de façon inquiétante chez les jeunes. Par ailleurs, le sport enseigne des valeurs essentielles : la coopération, le respect des règles et la persévérance.\n\nEn définitive, bien que la pratique sportive reste parfois difficile pour certains, elle doit demeurer obligatoire. Il conviendrait néanmoins de la repenser : diversifier les activités, valoriser les progrès et bannir les humiliations. Ainsi, chacun pourrait y trouver du plaisir plutôt qu'une contrainte."
+    },
+    {
+      "id": "w10-5", "level": 10, "type": "discours", "title": "Une remise de diplômes", "ages": ["adulte"],
+      "prompt": "Vous prononcez un discours lors d'une remise de diplômes (brevet, baccalauréat, fin de formation). Félicitez, encouragez et transmettez un message qui vous tient à cœur.",
+      "words": [160, 240],
+      "require": [
+        { "kind": "connectors", "min": 5, "label": "Au moins 5 mots de liaison différents" },
+        { "kind": "paragraphs", "min": 4, "label": "Organisez votre discours en au moins 4 paragraphes" }
+      ],
+      "model": "Chers diplômés, chers parents, chers collègues,\n\nC'est avec une grande fierté que je vous accueille ce soir. Ce diplôme, vous l'avez obtenu au prix de nombreux efforts : des soirées de révision, des doutes, parfois des échecs surmontés. Permettez-moi donc, avant tout, de vous féliciter chaleureusement.\n\nCependant, ce diplôme n'est pas une fin en soi. Il ouvre une porte, mais c'est à vous de franchir le seuil. En effet, le monde qui vous attend change vite : les métiers évoluent, les savoirs se renouvellent sans cesse. Par conséquent, votre plus grande force ne sera pas ce que vous savez aujourd'hui, mais votre capacité à apprendre demain.\n\nPar ailleurs, n'oubliez jamais ceux qui vous ont accompagnés. Vos parents, vos professeurs, vos amis ont cru en vous, même lorsque vous en doutiez. Ainsi, votre réussite est aussi la leur.\n\nEnfin, je vous souhaite de garder intacte votre curiosité. Posez des questions, osez vous tromper, restez exigeants avec vous-mêmes et bienveillants avec les autres. Bravo à toutes et à tous, et bonne route !"
+    },
+    {
+      "id": "w10-6", "level": 10, "type": "message", "title": "Choisir la sortie de fin d'année", "ages": ["enfant", "ado"],
+      "prompt": "La classe doit choisir sa sortie de fin d'année. Écris un message à tes camarades pour les convaincre de voter pour ton idée, en répondant à leurs objections.",
+      "words": [160, 240],
+      "require": [
+        { "kind": "connectors", "min": 5, "label": "Au moins 5 mots de liaison différents" },
+        { "kind": "questions", "min": 1, "label": "Au moins une question" },
+        { "kind": "paragraphs", "min": 4, "label": "Organise ton message en au moins 4 paragraphes" }
+      ],
+      "model": "Chers camarades,\n\nVendredi, nous voterons pour la sortie de fin d'année. Je vous propose une journée d'accrobranche dans la forêt de Compiègne, et je voudrais vous convaincre que c'est la meilleure idée.\n\nD'abord, c'est une activité que tout le monde peut pratiquer. En effet, il existe des parcours de toutes les difficultés, des plus faciles aux plus impressionnants. Ensuite, nous passerons la journée en plein air, ce qui nous changera des salles de classe. De plus, le site propose un grand espace de pique-nique au bord d'un étang.\n\nCertains d'entre vous préfèrent le parc d'attractions. Pourtant, il coûte deux fois plus cher et nous y passerions la moitié du temps dans les files d'attente. D'autres ont peur du vide ? Rassurez-vous : les moniteurs sont très attentifs, et personne n'est obligé de monter haut.\n\nEnfin, cette sortie nous permettra de nous entraider et de finir l'année ensemble, dans la bonne humeur. Les professeurs ont déjà donné leur accord, à condition que nous votions avant lundi. Alors, qui vote pour l'accrobranche vendredi ?\n\nTom"
+    },
+    {
+      "id": "w10-7", "level": 10, "type": "compte-rendu", "title": "Le compte rendu d'un débat", "ages": ["adulte"],
+      "prompt": "Rédigez le compte rendu objectif d'un débat (réunion publique, émission, conseil) sur la semaine de quatre jours à l'école : présentez les positions de chacun sans donner votre avis.",
+      "words": [160, 240],
+      "require": [
+        { "kind": "words", "value": ["selon", "d'après", "pour sa part", "quant à", "en revanche", "de son côté"], "min": 3, "label": "Au moins 3 expressions pour présenter les positions (selon, quant à, pour sa part…)" },
+        { "kind": "paragraphs", "min": 4, "label": "Organisez votre compte rendu en au moins 4 paragraphes" }
+      ],
+      "model": "La semaine de quatre jours en débat\n\nJeudi soir, la salle des fêtes accueillait un débat public sur l'organisation de la semaine scolaire. Parents, enseignants et élus devaient se prononcer sur un éventuel retour à la semaine de quatre jours.\n\nSelon l'association des parents d'élèves, ce rythme permettrait aux enfants de se reposer le mercredi et de pratiquer des activités culturelles ou sportives. Les parents ont par ailleurs souligné que de nombreuses familles organisent déjà leur emploi du temps autour de cette journée libre.\n\nLes enseignants, pour leur part, se sont montrés plus partagés. D'après plusieurs d'entre eux, les journées de classe deviendraient trop longues et trop chargées, notamment pour les plus jeunes élèves. En revanche, certains ont reconnu que la fatigue de fin de semaine était réelle.\n\nQuant au maire, il a rappelé que la décision devait aussi tenir compte du coût des transports et de la cantine. Il a proposé de consulter l'ensemble des familles par un questionnaire avant de trancher. Le résultat sera présenté lors du prochain conseil municipal."
+    },
+    {
+      "id": "w10-8", "level": 10, "type": "critique", "title": "Défendre une œuvre méconnue",
+      "prompt": "Défends une œuvre que tu juges injustement méconnue (livre, film, album, jeu) : présente-la, analyse ses qualités, réponds aux critiques et convaincs le lecteur.",
+      "words": [160, 240],
+      "require": [
+        { "kind": "connectors", "min": 6, "label": "Au moins 6 mots de liaison différents" },
+        { "kind": "paragraphs", "min": 4, "label": "Organise ta critique en au moins 4 paragraphes" }
+      ],
+      "model": "Un roman qui mérite mieux que l'oubli\n\nParu il y a une dizaine d'années dans l'indifférence générale, ce premier roman raconte l'été d'une adolescente qui aide son grand-père à tenir une librairie ambulante dans les villages des Cévennes. Le livre n'a reçu aucun prix ; pourtant, il compte parmi les plus beaux que j'aie lus.\n\nD'abord, l'écriture est d'une justesse remarquable. Chaque phrase semble pesée, sans jamais devenir précieuse. Ensuite, les personnages échappent aux clichés : le grand-père, bourru en apparence, se révèle d'une tendresse discrète, tandis que l'héroïne apprend peu à peu à écouter les autres.\n\nCertes, certains lecteurs reprocheront au récit sa lenteur, puisqu'il ne s'y passe presque rien d'extraordinaire. Néanmoins, cette lenteur constitue précisément sa force. En effet, le roman nous invite à prendre le temps, à regarder les paysages et les visages, ce que notre époque pressée nous apprend à oublier.\n\nEn définitive, ce livre discret mériterait d'être réédité et lu largement. Si vous le trouvez chez un bouquiniste, ne le laissez pas sur l'étagère : il vous accompagnera longtemps."
+    },
+
+    {
+      "id": "w11-1", "level": 11, "type": "lettre", "title": "Une lettre de motivation", "ages": ["adulte"],
+      "prompt": "Vous postulez à un poste dans une médiathèque (ou un musée, une association culturelle). Rédigez une lettre de motivation en registre soutenu : votre parcours, vos motivations, ce que vous apporterez.",
+      "words": [220, 320],
+      "require": [
+        { "kind": "connectors", "min": 6, "label": "Au moins 6 mots de liaison différents" },
+        { "kind": "paragraphs", "min": 5, "label": "Organisez votre lettre en au moins 5 paragraphes" }
+      ],
+      "model": "Madame la Directrice,\n\nAyant appris par le site de la ville que la médiathèque Émile-Zola recrutait un assistant pour son pôle jeunesse, je me permets de vous adresser ma candidature, qui s'inscrit dans la continuité naturelle de mon parcours.\n\nTitulaire d'une licence de lettres modernes, j'ai d'abord travaillé trois ans dans une librairie indépendante de Lyon. J'y ai appris à conseiller des lecteurs de tous âges, mais aussi à organiser des rencontres avec des auteurs et des ateliers d'écriture destinés aux enfants. Par la suite, j'ai rejoint une association d'aide à la lecture, où j'accompagne chaque semaine des élèves en difficulté.\n\nCes expériences m'ont convaincu qu'une bibliothèque n'est pas seulement un lieu de prêt, mais un espace de rencontre et de transmission. C'est pourquoi votre projet de « bibliothèque hors les murs », qui consiste à apporter des livres dans les parcs et les centres sociaux, a retenu toute mon attention. En effet, je suis persuadé que le goût de lire naît souvent d'une rencontre inattendue.\n\nPar ailleurs, je maîtrise les logiciels de gestion documentaire et je dispose d'une solide expérience de l'animation. Je serais donc en mesure de participer rapidement à la vie de votre équipe.\n\nJe me tiens à votre disposition pour un entretien, au cours duquel je pourrais vous exposer plus précisément mes motivations. Dans cette attente, je vous prie d'agréer, Madame la Directrice, l'expression de mes salutations respectueuses.\nAlexandre Morel"
+    },
+    {
+      "id": "w11-2", "level": 11, "type": "article", "title": "Un vêtement pour chaque occasion", "ages": ["enfant", "ado"],
+      "prompt": "Rédige un article pour le journal du collège : parle-t-on « mal » quand on parle comme ses copains ? Explique les registres de langue (familier, courant, soutenu) avec des exemples.",
+      "words": [220, 320],
+      "require": [
+        { "kind": "words", "value": ["familier", "courant", "soutenu", "registre", "registres"], "min": 3, "label": "Au moins 3 termes : registre, familier, courant, soutenu" },
+        { "kind": "connectors", "min": 5, "label": "Au moins 5 mots de liaison différents" },
+        { "kind": "paragraphs", "min": 4, "label": "Organise ton article en au moins 4 paragraphes" }
+      ],
+      "model": "Les registres de langue : un vêtement pour chaque occasion\n\n« Ce film est génial ! » « Ce film est remarquable. » Ces deux phrases disent à peu près la même chose ; pourtant, on ne les prononce pas dans les mêmes circonstances. C'est toute la question des registres de langue.\n\nOn distingue généralement trois registres. Le registre familier est celui des conversations entre amis : on y supprime volontiers le « ne » de la négation et on y emploie des mots comme « godasses » ou « piquer » pour voler. Le registre courant, quant à lui, convient à la plupart des situations, à l'école comme dans la vie quotidienne. Enfin, le registre soutenu, plus recherché, se rencontre surtout dans les livres, les discours ou les lettres officielles.\n\nFaut-il pour autant considérer le langage familier comme une faute ? Pas nécessairement. En effet, parler comme ses copains n'a rien de honteux : c'est même une façon de montrer que l'on fait partie d'un groupe. Le problème apparaît seulement lorsqu'on se trompe de situation. Ainsi, écrire « salut » au début d'une lettre de candidature risque de faire mauvaise impression.\n\nAu fond, les registres ressemblent à des vêtements : on ne va pas à un mariage en pyjama, ni au gymnase en costume. Savoir changer de registre, c'est donc savoir s'adapter à son interlocuteur. Et c'est précisément ce que l'école cherche à nous apprendre, à travers les rédactions, les exposés et les lettres que nous écrivons."
+    },
+    {
+      "id": "w11-3", "level": 11, "type": "essai", "title": "La politesse est-elle démodée ?", "ages": ["adulte"],
+      "prompt": "La politesse est-elle démodée ? Rédigez un essai argumenté en registre soutenu, avec une introduction, un développement nuancé et une conclusion.",
+      "words": [220, 320],
+      "require": [
+        { "kind": "connectors", "min": 7, "label": "Au moins 7 mots de liaison différents" },
+        { "kind": "paragraphs", "min": 5, "label": "Organisez votre essai en au moins 5 paragraphes" }
+      ],
+      "model": "La politesse, une vertu démodée ?\n\nIl suffit de prendre les transports en commun aux heures de pointe pour entendre déplorer la disparition des bonnes manières. On ne cède plus sa place, on ne salue plus ses voisins, on répond à peine aux messages. Faut-il en conclure que la politesse appartient désormais au passé ?\n\nCertes, certaines formes de courtoisie semblent tombées en désuétude. Les formules cérémonieuses d'autrefois, le baisemain ou le vouvoiement systématique des parents paraissent aujourd'hui surannés. De plus, la rapidité des échanges numériques favorise les messages brefs, parfois abrupts, où le « bonjour » et le « merci » disparaissent.\n\nNéanmoins, il serait hâtif d'y voir la fin de la politesse. En effet, celle-ci ne se réduit pas à un code figé : elle évolue avec la société. Ainsi, de nouvelles règles sont apparues, comme le fait de ne pas téléphoner bruyamment dans un train ou de demander l'accord d'une personne avant de publier sa photo. Ces usages témoignent d'un souci d'autrui tout aussi réel.\n\nPar ailleurs, la politesse conserve une fonction essentielle : elle permet de vivre ensemble sans se blesser. Loin d'être une hypocrisie, elle constitue une forme de respect élémentaire, qui reconnaît en l'autre une personne digne d'attention.\n\nEn définitive, la politesse n'est pas démodée ; elle change simplement de visage. Plutôt que de regretter les manières d'antan, il importe donc de transmettre aux plus jeunes l'esprit qui les animait : l'attention portée aux autres."
+    },
+    {
+      "id": "w11-4", "level": 11, "type": "courriel", "title": "Du familier au soutenu",
+      "prompt": "Un employé voulait envoyer ce message à sa directrice : « Salut, j'peux pas venir à la réunion de lundi, j'ai un rendez-vous chez le médecin. Du coup, vous pourriez décaler ? Merci ! » Rédige à sa place un courriel complet, en registre soutenu, qui explique l'absence et propose des solutions.",
+      "words": [220, 320],
+      "require": [
+        { "kind": "words", "value": ["veuillez", "je vous prie", "je me permets", "je vous remercie", "je vous serais", "salutations", "au regret"], "min": 3, "label": "Au moins 3 formules du registre soutenu (je me permets, je vous prie, veuillez agréer…)" },
+        { "kind": "paragraphs", "min": 4, "label": "Organise ton courriel en au moins 4 paragraphes" }
+      ],
+      "model": "Madame la Directrice,\n\nJe me permets de vous écrire au sujet de la réunion d'équipe prévue lundi prochain, à dix heures. Je suis au regret de vous informer que je ne pourrai y assister, en raison d'un rendez-vous médical fixé de longue date et qu'il m'est malheureusement impossible de reporter.\n\nConscient de l'importance de cette réunion, notamment pour la préparation du salon de juin, je ne souhaite pas pour autant ralentir le travail de l'équipe. C'est pourquoi je me permets de vous proposer deux solutions. D'une part, la réunion pourrait être décalée à l'après-midi, puisque je serai de retour au bureau dès quatorze heures. D'autre part, si ce changement devait perturber l'agenda de mes collègues, je vous transmettrais dès vendredi une note détaillée sur l'avancement de mon dossier, afin que chacun dispose des informations nécessaires.\n\nPar ailleurs, je resterai joignable par téléphone pendant toute la matinée de lundi, à l'exception de l'heure du rendez-vous. Je vous serais reconnaissant de bien vouloir m'indiquer la solution qui vous paraît la plus appropriée.\n\nEnfin, si vous le jugez utile, je pourrai faire le point avec vous mardi matin, avant la réunion de service, afin de prendre connaissance des décisions arrêtées en mon absence.\n\nJe vous prie de bien vouloir excuser ce contretemps et vous remercie par avance de votre compréhension.\n\nVeuillez agréer, Madame la Directrice, l'expression de mes salutations distinguées.\nPierre Lefort"
+    },
+    {
+      "id": "w11-5", "level": 11, "type": "discours", "title": "Le centenaire de la bibliothèque", "ages": ["adulte"],
+      "prompt": "Vous prononcez le discours officiel du centenaire de la bibliothèque de votre ville. Rendez hommage à son histoire, à ceux qui l'ont fait vivre, et dites ce qu'elle représente aujourd'hui.",
+      "words": [220, 320],
+      "require": [
+        { "kind": "connectors", "min": 6, "label": "Au moins 6 mots de liaison différents" },
+        { "kind": "paragraphs", "min": 5, "label": "Organisez votre discours en au moins 5 paragraphes" }
+      ],
+      "model": "Mesdames et Messieurs,\n\nIl y a cent ans, jour pour jour, une poignée d'habitants de notre ville ouvrait, dans une ancienne école, une modeste salle de lecture. Elle comptait alors trois cents ouvrages, deux tables et un poêle à bois. Aujourd'hui, la bibliothèque municipale prête chaque année plus de cent mille documents. C'est dire le chemin parcouru !\n\nCe succès, nous le devons d'abord à ses fondateurs, qui croyaient qu'un livre peut changer une vie. Nous le devons ensuite aux générations de bibliothécaires qui se sont succédé derrière ce comptoir, avec une patience et une générosité inépuisables. Nous le devons enfin à vous, lecteurs fidèles, qui avez fait de ce lieu le cœur battant de notre quartier.\n\nCar une bibliothèque n'est pas un simple entrepôt de livres. C'est un refuge pour l'élève qui cherche le calme, pour le retraité qui lit le journal, pour la famille qui découvre un conte le mercredi. C'est aussi un lieu où chacun, quels que soient ses moyens, accède gratuitement au savoir.\n\nCertes, le monde a changé : les écrans ont envahi nos vies, et l'on prédit régulièrement la fin du livre. Pourtant, nos salles ne désemplissent pas. Bien au contraire, de nouveaux publics les découvrent, attirés par les ateliers, les concerts et les expositions.\n\nSouhaitons donc à notre bibliothèque cent nouvelles années de lectures, de rencontres et de découvertes. Longue vie à elle !"
+    },
+    {
+      "id": "w11-6", "level": 11, "type": "recit", "title": "Le secret de la marquise", "ages": ["enfant", "ado"],
+      "prompt": "Écris un récit à la manière d'un conte d'autrefois : une jeune servante découvre le secret d'une marquise. Emploie le passé simple et, si tu l'oses, un subjonctif imparfait.",
+      "words": [220, 320],
+      "require": [
+        { "kind": "tense", "value": "passe_simple", "min": 6, "label": "Au moins 6 verbes au passé simple" },
+        { "kind": "paragraphs", "min": 4, "label": "Organise ton récit en au moins 4 paragraphes" }
+      ],
+      "model": "Le secret de la marquise\n\nIl y avait autrefois, dans un château de Touraine, une marquise que tout le village craignait. Elle ne sortait jamais avant la tombée de la nuit, et nul ne savait ce qu'elle faisait dans la tour nord, dont elle seule possédait la clé.\n\nUn soir d'hiver, la jeune Margot, qui travaillait aux cuisines, aperçut une lueur bleutée sous la porte de la tour. Poussée par la curiosité, elle gravit l'escalier sur la pointe des pieds. La porte, par chance, n'était pas verrouillée. Elle l'entrouvrit et retint un cri.\n\nLa pièce était remplie de livres, de cartes du ciel et d'instruments de cuivre. Penchée sur une lunette immense, la marquise observait les étoiles. Elle se retourna, surprise, mais ne parut point fâchée. Au contraire, elle posa son crayon, considéra longuement la jeune fille, puis sourit. « Approche, dit-elle. Il fallait bien qu'un jour quelqu'un vînt troubler ma solitude. » Elle expliqua qu'on interdisait jadis aux femmes d'étudier l'astronomie, et qu'elle avait choisi de le faire en secret plutôt que d'y renoncer.\n\nDès lors, Margot monta chaque soir dans la tour. La marquise lui apprit à lire, à calculer, à reconnaître les constellations. Des années plus tard, lorsque la vieille dame mourut, elle légua tous ses livres à son élève. Et l'on raconte que Margot devint la première femme du pays à publier un traité d'astronomie."
+    },
+    {
+      "id": "w11-7", "level": 11, "type": "compte-rendu", "title": "Le bilan d'un chantier", "ages": ["adulte"],
+      "prompt": "Rédigez un rapport sur les travaux de rénovation d'une école (ou d'un équipement public) : ce qui a été fait, les difficultés, l'avis des usagers, vos recommandations. Employez la voix passive.",
+      "words": [220, 320],
+      "require": [
+        { "kind": "tense", "value": "passif", "min": 3, "label": "Au moins 3 verbes à la voix passive" },
+        { "kind": "connectors", "min": 6, "label": "Au moins 6 mots de liaison différents" },
+        { "kind": "paragraphs", "min": 5, "label": "Organisez votre rapport en au moins 5 paragraphes" }
+      ],
+      "model": "Bilan de la rénovation du groupe scolaire Jean-Moulin\n\nLe présent rapport dresse le bilan des travaux de rénovation menés pendant l'année au groupe scolaire Jean-Moulin. Il a été rédigé à la demande du conseil municipal, afin d'évaluer les résultats obtenus et les difficultés rencontrées.\n\nLes travaux ont porté sur trois points principaux. D'abord, l'isolation des bâtiments a été entièrement refaite, ce qui devrait réduire de moitié la consommation de chauffage. Ensuite, les sanitaires, jugés vétustes par les parents, ont été remplacés. Enfin, la cour a été réaménagée : des arbres y ont été plantés et un préau supplémentaire a été construit.\n\nDans l'ensemble, le calendrier a été respecté. Toutefois, la livraison du préau a pris trois semaines de retard, en raison d'une pénurie de matériaux. Par ailleurs, le budget initial a été dépassé de six pour cent, principalement à cause de la hausse du prix de l'acier.\n\nLes premiers retours des usagers sont positifs. En effet, les enseignants soulignent le confort des classes, tandis que les élèves apprécient la nouvelle cour, plus ombragée. En revanche, plusieurs parents regrettent que le parking n'ait pas été agrandi, ce qui provoque encore des embouteillages aux heures d'entrée et de sortie des classes.\n\nEn conclusion, ce chantier peut être considéré comme une réussite. Il est néanmoins recommandé de prévoir, pour les prochains projets, une marge budgétaire plus importante et une concertation plus étroite avec les familles."
+    },
+    {
+      "id": "w11-8", "level": 11, "type": "lettre", "title": "Lettre à une romancière", "ages": ["ado", "adulte"],
+      "prompt": "Écris à un écrivain dont un livre t'a marqué : dis-lui ce que ce livre t'a apporté, analyse ce qui t'a touché et pose-lui une question. Soigne le registre.",
+      "words": [220, 320],
+      "require": [
+        { "kind": "connectors", "min": 5, "label": "Au moins 5 mots de liaison différents" },
+        { "kind": "questions", "min": 1, "label": "Au moins une question" },
+        { "kind": "paragraphs", "min": 5, "label": "Organise ta lettre en au moins 5 paragraphes" }
+      ],
+      "model": "Chère Madame,\n\nJe n'ai pas l'habitude d'écrire aux auteurs dont j'admire les livres, mais votre dernier roman m'a tant ému que je ne pouvais garder le silence. Permettez-moi donc de vous dire ce qu'il a représenté pour moi.\n\nJ'ai découvert « La Maison des marées » par hasard, dans une bibliothèque de gare, un soir où mon train avait du retard. Dès les premières pages, j'ai été saisi par la justesse de votre écriture. Vous parvenez à décrire la mer, le vent et le silence avec une précision presque musicale, sans jamais tomber dans l'emphase.\n\nSurtout, le personnage de Louise m'a profondément touché. Comme elle, j'ai grandi auprès d'une grand-mère qui parlait peu mais observait tout. Ainsi, en lisant leurs conversations sur le quai, j'ai eu l'impression de retrouver des souvenirs que je croyais perdus. C'est pourquoi j'ai offert votre livre à ma mère, qui l'a lu d'une traite et m'en parle encore. Depuis, nous le prêtons à tous nos amis, comme on partage un secret.\n\nJe me permets toutefois une question, qui me hante depuis la dernière page : Louise a-t-elle finalement ouvert la lettre de son père ? Votre fin laisse le lecteur libre d'imaginer, et je comprends ce choix. Néanmoins, j'avoue être curieux de connaître votre propre réponse.\n\nEn vous remerciant pour ces heures de lecture, je vous prie d'agréer, chère Madame, l'expression de ma sincère admiration.\nGabriel Fontaine"
+    },
+
+    {
+      "id": "w12-1", "level": 12, "type": "essai", "title": "Bannir la voiture des centres-villes ?", "ages": ["adulte"],
+      "prompt": "Faut-il bannir la voiture des centres-villes ? Rédigez un essai de niveau C2 : problématique, arguments pesés avec finesse, connecteurs variés, conclusion qui répond à la question.",
+      "words": [220, 320],
+      "require": [
+        { "kind": "connectors", "min": 8, "label": "Au moins 8 mots de liaison différents" },
+        { "kind": "paragraphs", "min": 5, "label": "Organisez votre essai en au moins 5 paragraphes" }
+      ],
+      "model": "Bannir la voiture des centres-villes : utopie ou nécessité ?\n\nEmbouteillages, pollution, bruit : la voiture est devenue, aux yeux de beaucoup, l'ennemie des villes. Plusieurs municipalités ont d'ailleurs choisi de la chasser de leur centre historique. Faut-il pour autant généraliser cette interdiction ?\n\nLes partisans d'une telle mesure avancent des arguments solides. D'abord, la qualité de l'air s'améliore nettement dans les quartiers piétonniers, ce qui réduit les maladies respiratoires. Ensuite, l'espace libéré peut accueillir des arbres, des terrasses ou des pistes cyclables, rendant la ville plus agréable. De surcroît, les commerces de proximité profitent souvent de l'afflux de piétons, contrairement à ce que craignaient leurs propriétaires.\n\nNéanmoins, une interdiction brutale ne serait pas sans conséquences. En effet, tous les citadins ne peuvent pas renoncer à leur véhicule : les personnes âgées, les artisans ou les habitants des zones rurales qui travaillent en ville en dépendent souvent. Par ailleurs, si les transports en commun restent insuffisants, la mesure risque de creuser les inégalités entre ceux qui habitent le centre et ceux qui en sont exclus.\n\nDès lors, la question n'est pas tant de bannir la voiture que d'organiser sa place. Il conviendrait ainsi de développer des parkings relais, des navettes gratuites et des zones à circulation limitée, tout en garantissant l'accès des véhicules indispensables.\n\nEn définitive, chasser la voiture du centre-ville n'a de sens que si l'on offre à chacun une solution de remplacement crédible. C'est à cette condition que la ville pourra respirer sans exclure."
+    },
+    {
+      "id": "w12-2", "level": 12, "type": "article", "title": "Quand les machines prennent la plume",
+      "prompt": "Rédige un article d'opinion : les programmes d'intelligence artificielle capables d'écrire des textes sont-ils une chance ou une menace pour notre façon de penser et d'écrire ?",
+      "words": [220, 320],
+      "require": [
+        { "kind": "connectors", "min": 6, "label": "Au moins 6 mots de liaison différents" },
+        { "kind": "paragraphs", "min": 4, "label": "Organise ton article en au moins 4 paragraphes" }
+      ],
+      "model": "Quand les machines prennent la plume\n\nIl y a quelques années encore, l'idée qu'un logiciel puisse rédiger une lettre, un poème ou une dissertation relevait de la science-fiction. Aujourd'hui, des programmes produisent en quelques secondes des textes d'une fluidité étonnante. Faut-il s'en réjouir ou s'en inquiéter ?\n\nD'un côté, ces outils rendent des services indéniables. Ils aident à reformuler une phrase maladroite, à résumer un long document ou à traduire un message. Pour les personnes qui éprouvent des difficultés à écrire, ils représentent même une aide précieuse, comparable à un correcteur patient et toujours disponible. De même, les chercheurs les emploient pour trier des milliers de documents en un temps record.\n\nD'un autre côté, leur succès soulève de sérieuses questions. En effet, si les élèves confient leurs devoirs à une machine, apprendront-ils encore à organiser leur pensée ? Par ailleurs, ces programmes peuvent commettre des erreurs avec un aplomb déconcertant, ou reproduire des préjugés présents dans les textes dont ils se sont nourris. Enfin, l'uniformisation guette : à force de lire des textes générés, ne finirons-nous pas tous par écrire de la même manière ?\n\nDès lors, l'enjeu n'est pas d'interdire ces outils, mais d'apprendre à s'en servir avec discernement. Car écrire ne consiste pas seulement à aligner des phrases correctes : c'est chercher ses mots, hésiter, choisir. Autrement dit, c'est penser. Et cela, aucune machine ne peut le faire à notre place."
+    },
+    {
+      "id": "w12-3", "level": 12, "type": "lettre", "title": "Sauvons la librairie !", "ages": ["adulte"],
+      "prompt": "La librairie de votre quartier risque de fermer. Rédigez une lettre ouverte aux habitants pour les mobiliser : enjeux, arguments, solutions, appel à l'action.",
+      "words": [220, 320],
+      "require": [
+        { "kind": "connectors", "min": 6, "label": "Au moins 6 mots de liaison différents" },
+        { "kind": "paragraphs", "min": 5, "label": "Organisez votre lettre en au moins 5 paragraphes" }
+      ],
+      "model": "Chers voisins,\n\nVous l'avez sans doute appris : la librairie Les Mots Passants, installée depuis quarante ans rue de la République, risque de fermer ses portes à la fin de l'année. Son propriétaire, épuisé par la hausse des loyers et la concurrence des ventes en ligne, envisage de céder son bail à une enseigne de téléphonie. Nous refusons de nous y résigner.\n\nCar cette librairie n'est pas un commerce comme les autres. C'est là que nos enfants ont acheté leurs premiers romans, que nous avons rencontré des auteurs, que nous avons trouvé, grâce aux conseils avisés du libraire, des livres que nous n'aurions jamais découverts seuls. En outre, elle anime la vie du quartier : lectures publiques, ateliers d'écriture, expositions de jeunes illustrateurs.\n\nPourtant, rien n'est perdu. En effet, plusieurs solutions existent. D'une part, une association de lecteurs pourrait racheter une partie des parts et assurer ainsi l'avenir de la boutique. D'autre part, la mairie dispose d'un droit de préemption sur les commerces, qui lui permettrait de garantir un loyer modéré.\n\nC'est pourquoi nous vous invitons à signer la pétition disponible en ligne et à participer à la réunion publique du jeudi douze octobre, à vingt heures, à la salle des fêtes. Plus nous serons nombreux, plus notre voix portera.\n\nUne librairie qui ferme, c'est une fenêtre qui se ferme sur le monde. Ensemble, gardons-la ouverte.\n\nPour le comité de soutien,\nHélène Vidal"
+    },
+    {
+      "id": "w12-4", "level": 12, "type": "recit", "title": "Le gardien du sommet", "ages": ["enfant", "ado"],
+      "prompt": "Écris le récit d'un héros qui gravit une tour immense, étage après étage, jusqu'au maître qui l'attend au sommet. Raconte au passé simple, décris à l'imparfait, et ose un subjonctif imparfait.",
+      "words": [220, 320],
+      "require": [
+        { "kind": "tense", "value": "passe_simple", "min": 5, "label": "Au moins 5 verbes au passé simple" },
+        { "kind": "tense", "value": "imparfait", "min": 3, "label": "Au moins 3 verbes à l'imparfait" },
+        { "kind": "paragraphs", "min": 4, "label": "Organise ton récit en au moins 4 paragraphes" }
+      ],
+      "model": "Le gardien du sommet\n\nLa Tour se dressait au milieu de la plaine, si haute que son sommet disparaissait dans les nuages. On racontait qu'un vieux maître y attendait ceux qui osaient la gravir, et qu'il ne laissait passer que les plus persévérants.\n\nUn matin d'automne, Yanis décida de tenter l'ascension. Les premiers étages lui parurent faciles : il fallait conjuguer quelques verbes, accorder quelques adjectifs. Mais plus il montait, plus les épreuves devenaient redoutables. Au vingtième étage, un gardien lui demanda d'écrire une lettre sans une seule faute ; au trentième, un autre exigea qu'il distinguât « il eut » de « il eût ». Plusieurs fois, Yanis échoua et dut redescendre, le cœur lourd.\n\nPourtant, il ne renonça jamais. Chaque soir, il relisait ses erreurs, les recopiait dans un carnet et les apprenait par cœur. Lorsqu'il doutait, il se répétait que chaque échec lui apprenait quelque chose. Peu à peu, les gardiens qui l'avaient fait trembler le saluèrent avec respect, et certains lui confièrent même leurs propres astuces.\n\nEnfin, après des mois d'efforts, il atteignit le dernier étage. Un homme à la barbe grise l'y attendait, assis derrière un bureau couvert de copies. Il leva les yeux, sourit et dit simplement : « Je me demandais quand tu arriverais. » Puis il lui tendit une dernière feuille, sur laquelle était écrit un seul mot : « Bravo. »"
+    },
+    {
+      "id": "w12-5", "level": 12, "type": "essai", "title": "La lecture a-t-elle un avenir ?", "ages": ["ado", "adulte"],
+      "prompt": "La lecture a-t-elle encore un avenir à l'heure des écrans ? Rédige un essai nuancé, avec au moins deux tournures de concession (certes, bien que, même si, avoir beau…).",
+      "words": [220, 320],
+      "require": [
+        { "kind": "connectors", "min": 7, "label": "Au moins 7 mots de liaison différents" },
+        { "kind": "words", "value": ["certes", "bien que", "quoique", "même si", "malgré", "a beau", "ont beau", "avoir beau", "il est vrai que"], "min": 2, "label": "Au moins 2 tournures de concession" },
+        { "kind": "paragraphs", "min": 5, "label": "Organise ton essai en au moins 5 paragraphes" }
+      ],
+      "model": "Lire à l'heure des écrans\n\nLes études se succèdent et se ressemblent : les jeunes liraient de moins en moins, happés par les vidéos et les réseaux sociaux. Certains annoncent déjà la mort du livre. La lecture a-t-elle encore un avenir ?\n\nCertes, le constat n'est pas infondé. Le temps consacré aux écrans a considérablement augmenté, et la lecture suivie d'un roman exige une concentration que nos notifications incessantes rendent difficile. De plus, beaucoup d'adolescents associent la lecture aux obligations scolaires plutôt qu'au plaisir.\n\nPourtant, il serait hâtif de conclure à un déclin irrémédiable. En effet, jamais on n'a autant lu qu'aujourd'hui, si l'on compte les messages, les articles et les forums. Par ailleurs, certains genres connaissent un succès éclatant : les mangas, les romans fantastiques et les bandes dessinées attirent des millions de jeunes lecteurs.\n\nBien que les formes de lecture évoluent, le besoin d'histoires demeure intact. Ce qui change, c'est la manière d'y accéder : livres numériques, livres audio, clubs de lecture en ligne. Dès lors, l'enjeu n'est pas de défendre un support, mais de préserver la capacité à lire longuement et attentivement.\n\nEn définitive, la lecture n'est pas condamnée ; elle se transforme. À l'école et dans les familles, il importe donc de transmettre non seulement le savoir-lire, mais surtout le goût de lire, car c'est lui qui fera vivre les livres de demain."
+    },
+    {
+      "id": "w12-6", "level": 12, "type": "critique", "title": "Un Molière qui n'a pas pris une ride",
+      "prompt": "Rédige la critique d'une pièce de théâtre (classique ou moderne) que tu as vue ou que tu imagines : la mise en scène, le jeu des acteurs, tes réserves, ton verdict.",
+      "words": [220, 320],
+      "require": [
+        { "kind": "connectors", "min": 6, "label": "Au moins 6 mots de liaison différents" },
+        { "kind": "paragraphs", "min": 4, "label": "Organise ta critique en au moins 4 paragraphes" }
+      ],
+      "model": "Un Molière qui n'a pas pris une ride\n\nJusqu'à la fin du mois, le théâtre municipal accueille une nouvelle mise en scène de L'Avare. Le pari était risqué : comment surprendre avec une pièce que des générations d'élèves ont étudiée ? Pourtant, la troupe y parvient avec un talent réjouissant.\n\nD'abord, le metteur en scène a choisi de transposer l'action dans un appartement d'aujourd'hui, encombré de coffres-forts et de caméras de surveillance. Loin de trahir le texte, cette modernisation en souligne la cruelle actualité. En effet, l'obsession d'Harpagon pour son argent fait écho à notre propre rapport à la possession.\n\nEnsuite, l'interprétation est remarquable. Le comédien qui incarne Harpagon évite la caricature : son personnage est à la fois ridicule et pathétique, odieux et étrangement touchant. Par ailleurs, les scènes de quiproquo, réglées avec une précision d'horloger, déclenchent des rires francs dans toute la salle.\n\nOn regrettera seulement quelques effets sonores superflus, qui couvrent parfois la voix des acteurs et détournent l'attention du texte, pourtant si savoureux. De même, la scène finale, un peu précipitée, ne laisse pas au public le temps de savourer le dénouement.\n\nEn définitive, ce spectacle constitue une excellente porte d'entrée vers le théâtre classique, pour les adolescents comme pour leurs parents. Il prouve, s'il en était besoin, que les grands textes ne vieillissent pas : ce sont nos regards qui changent."
+    },
+    {
+      "id": "w12-7", "level": 12, "type": "essai", "title": "Le progrès technique nous rend-il libres ?", "ages": ["adulte"],
+      "prompt": "Le progrès technique nous rend-il plus libres ? Rédigez un essai de niveau C2, avec une problématique claire, une argumentation dialectique et une conclusion personnelle.",
+      "words": [220, 320],
+      "require": [
+        { "kind": "connectors", "min": 8, "label": "Au moins 8 mots de liaison différents" },
+        { "kind": "paragraphs", "min": 5, "label": "Organisez votre essai en au moins 5 paragraphes" }
+      ],
+      "model": "Le progrès technique, promesse ou piège pour la liberté ?\n\nDes machines à vapeur aux téléphones intelligents, chaque innovation a été accueillie comme une libération. Le progrès technique devait affranchir l'homme des travaux pénibles, des distances et de l'ignorance. Pourtant, nombreux sont ceux qui se sentent aujourd'hui prisonniers de leurs outils. Le progrès nous rend-il réellement plus libres ?\n\nIndéniablement, la technique a élargi le champ de nos possibles. Grâce aux machines, la durée du travail a considérablement diminué, laissant davantage de temps aux loisirs. De même, la médecine a allongé l'espérance de vie, tandis qu'Internet donne accès, en un instant, à une somme de connaissances inimaginable il y a un siècle.\n\nNéanmoins, cette liberté nouvelle s'accompagne de dépendances inédites. En effet, nos appareils exigent une attention constante : notifications, mises à jour, connexions permanentes. Par ailleurs, les données que nous produisons alimentent une surveillance discrète, qui menace notre vie privée. Ainsi, l'outil censé nous servir finit parfois par nous gouverner.\n\nDès lors, la liberté ne réside pas dans la technique elle-même, mais dans l'usage que nous en faisons. Encore faut-il que chacun dispose des connaissances nécessaires pour comprendre ces outils et, le cas échéant, s'en passer. C'est pourquoi l'éducation joue ici un rôle décisif.\n\nEn définitive, le progrès technique n'est ni libérateur ni aliénant par nature. Il nous offre des moyens nouveaux ; à nous de décider des fins qu'ils serviront. Autrement dit, la liberté ne se télécharge pas : elle se conquiert."
+    },
+    {
+      "id": "w12-8", "level": 12, "type": "article", "title": "Éloge de la lenteur",
+      "prompt": "Rédige un article qui fait l'éloge de la lenteur dans un monde pressé : arguments, exemples, nuances, et une chute soignée.",
+      "words": [220, 320],
+      "require": [
+        { "kind": "connectors", "min": 6, "label": "Au moins 6 mots de liaison différents" },
+        { "kind": "paragraphs", "min": 4, "label": "Organise ton article en au moins 4 paragraphes" }
+      ],
+      "model": "Éloge de la lenteur\n\nNous vivons pressés. Nous mangeons debout, lisons en diagonale, écoutons les messages vocaux en vitesse accélérée. Gagner du temps est devenu une obsession, au point que l'attente nous semble insupportable. Et si la lenteur était, au contraire, un luxe à reconquérir ?\n\nD'abord, la lenteur favorise l'attention. En effet, celui qui marche découvre des détails que l'automobiliste ne verra jamais : la façade d'une maison, le chant d'un oiseau, le visage d'un passant. De même, le lecteur qui prend son temps comprend mieux, retient davantage et savoure les phrases au lieu de les consommer.\n\nEnsuite, ralentir protège notre santé. Les médecins constatent que le stress chronique, nourri par l'urgence permanente, épuise l'organisme. À l'inverse, les moments de calme, de silence ou de rêverie permettent au corps et à l'esprit de se régénérer. Par ailleurs, la cuisine mijotée, le jardinage ou l'artisanat procurent une satisfaction que nulle livraison express ne saurait offrir.\n\nCertes, il ne s'agit pas de refuser toute rapidité : un train à l'heure ou une ambulance pressée rendent d'immenses services. Néanmoins, il importe de choisir nos lenteurs, comme on choisit ses amis. Ainsi, chacun peut s'accorder chaque jour un moment sans écran ni horloge.\n\nEn définitive, la lenteur n'est pas une perte de temps, mais une manière de l'habiter. Comme le savaient déjà les fabulistes, rien ne sert de courir…"
     }
   ]
 }

@@ -46,7 +46,16 @@ const NO_ELISION = /^(un|une|onze|onzième|huit|huitième|oui|ouistiti|yaourt|yo
 
 // ---------- Helpers ----------
 
-const isVowelStart = (w) => /^[aeiouyàâäéèêëîïôöùûüœæ]/i.test(w) || (/^h/i.test(w) && !H_ASPIRE.has(w.toLowerCase().replace(/[^a-zâêîôûàéèëïüç-]/g, "")));
+// Families with an aspirated h (honteux, hanter, harceler…), beyond the words listed above.
+const H_ASPIRE_STEM = /^(hont|hant|harc[eè]l|hargn|hasard|hauss|hach|haï|hais|hait|hurl|hiss|hoch|houl|houss|hâte|hardi|harpon|hamac|hangar|hareng|hibou|hiérarch|homard|hublot|hutt|halte|hamst|hanch|handicap)/;
+const isVowelStart = (w) => {
+  if (/^[aeiouyàâäéèêëîïôöùûüœæ]/i.test(w)) return true;
+  if (!/^h/i.test(w)) return false;
+  const low = w.toLowerCase().replace(/[^a-zâêîôûàéèëïüç-]/g, "");
+  return !H_ASPIRE.has(low) && !H_ASPIRE_STEM.test(low);
+};
+// Adjectives that never agree (une livraison express, des chaussures marron).
+const INVARIABLE_ADJ = new Set(["express", "standard", "chic", "marron", "orange", "kaki", "cerise", "olive", "turquoise", "extra", "super", "sympa", "snob", "bio", "pop", "rock"]);
 /** Feminine of an adjective or participle, when it exists in the dictionary. */
 function feminine(w) {
   const c = [];
@@ -264,7 +273,7 @@ function tokenRules(tk) {
       if (adjacent && next.word && (m(lw) & (T.NS | T.NP)) && !(m(lw) & (T.V | T.X | T.AS | T.AP)) && lw !== "fois" && !(prev && /^(de|d'|du)$/.test(prev.lower)) && !/^\p{Lu}/u.test(next.text) && !/^\p{Lu}/u.test(t.text)) {
         const nm = m(lw);
         const am = m(next.lower);
-        const adjOnly = am & (T.AS | T.AP) && !(am & T.X) && !(am & T.V && !(am & T.PP)) && !readings(next.lower).length;
+        const adjOnly = am & (T.AS | T.AP) && !(am & T.X) && !(am & T.V && !(am & T.PP)) && !readings(next.lower).length && !INVARIABLE_ADJ.has(next.lower);
         if (adjOnly) {
           const nounFem = nm & T.F && !(nm & T.M);
           const nounPl = nm & T.NP && !(nm & T.NS);
@@ -312,7 +321,9 @@ function tokenRules(tk) {
       // avoir + participle agreed with the subject (elles ont mangées une pomme → mangé).
       if (AUX_AVOIR.has(lw)) {
         const before = W.slice(Math.max(0, k - 3), k).map(low);
-        const codBefore = before.some((x) => /^(que|qu'|l'|la|les|le|me|m'|te|t'|nous|vous|combien|quel|quels|quelle|quelles|lesquels|lesquelles|laquelle)$/.test(x));
+        // A relative « que » further back also brings a COD (la pièce que des générations d'élèves ont étudiée).
+        const relQue = W.slice(Math.max(0, k - 8), k).some((j, n, arr) => /^(que|qu')$/.test(low(j)) && n > 0 && Tk[j].s === t.s && m(low(arr[n - 1])) & (T.NS | T.NP) && !readings(low(arr[n - 1])).length);
+        const codBefore = relQue || before.some((x) => /^(que|qu'|l'|la|les|le|me|m'|te|t'|nous|vous|combien|quel|quels|quelle|quelles|lesquels|lesquelles|laquelle)$/.test(x));
         let a = k + 1;
         while (a < W.length && ADVERBS.has(low(W[a])) && a < k + 3) a++;
         const w = W[a] != null ? Tk[W[a]] : null;
@@ -330,7 +341,9 @@ function tokenRules(tk) {
         let a = k + 1;
         while (a < W.length && ADVERBS.has(low(W[a])) && a < k + 3) a++;
         const w = W[a] != null ? Tk[W[a]] : null;
-        if (w && W[a] - i === a - k && /er$/.test(w.lower) && verbInfo(w.lower)?.group === 1 && !(m(w.lower) & T.AS) && !(lw === "a" && prev && A_TRIGGERS.test(prev.lower))) {
+        // (« Écrire, c'est chercher ses mots » : after « , c'est » the infinitive is the attribute.)
+        const definition = lw === "est" && prev?.lower === "c'" && /^[,:;]$/.test(Tk[prev.i - 1]?.text || "");
+        if (w && !definition && W[a] - i === a - k && /er$/.test(w.lower) && verbInfo(w.lower)?.group === 1 && !(m(w.lower) & T.AS) && !(lw === "a" && prev && A_TRIGGERS.test(prev.lower))) {
           const pp = `${w.lower.slice(0, -2)}é`;
           if (tierOf(pp) > 0) add(w.i, w.i, "grammar", "er-e", `Après **${lw}**, il faut le participe passé : **${pp}** (on peut dire « vendu », pas « vendre »).`, keepCase(w.text, pp));
         }

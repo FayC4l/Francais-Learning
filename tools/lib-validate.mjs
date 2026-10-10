@@ -6,6 +6,7 @@ import { clean, matches } from "../src/answer.js";
 import { wordCountMismatches } from "../src/fill.js";
 import { frTypo } from "../src/typo.js";
 import { loadDictionary, tierOf, distance } from "../src/writing/spell.js";
+import { readings, ppReadings } from "../src/writing/verbindex.js";
 
 export const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 export const loadDict = () => loadDictionary(readFileSync(join(root, "data", "dict-fr.txt"), "utf8"));
@@ -39,6 +40,7 @@ export function unknownWords(text) {
     const core = parts.length > 1 && /^(c|d|j|l|m|n|s|t|qu|jusqu|lorsqu|puisqu|quoiqu|presqu|quelqu)$/i.test(parts[0]) ? parts.slice(1).join("'") : w;
     if (parts.length > 1 && /^\p{Lu}/u.test(core)) continue; // d'Afrique, l'Élysée
     if (KNOWN.has(core.toLowerCase()) || KNOWN.has(w.toLowerCase())) continue;
+    if (readings(core.toLowerCase()).length || ppReadings(core.toLowerCase()).length) continue; // a rarer form of a known verb (cultiveront)
     if (core.length > 1 && tierOf(core) === 0 && tierOf(w) === 0) out.push(w);
   }
   return out;
