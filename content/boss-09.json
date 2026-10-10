@@ -1,0 +1,86 @@
+{
+  "level": 9,
+  "taunts": {
+    "phase2": [
+      "Je vais te faire monter en haut de ma liste de victimes, au jour d'aujourd'hui même !",
+      "Tu crois pouvoir pallier mes pièges ? Sans à, oui. Je surveille aussi mes fautes, moi.",
+      "Écris, maintenant ! Et que chaque mot imprécis te fasse trébucher !"
+    ],
+    "phase3": [
+      "Dernière manche : éminent ou imminent ? Ta défaite, en tout cas, est imminente.",
+      "Je suis masqué, dissimulé et caché : un triple pléonasme ambulant !",
+      "Ton offensive va faire long feu… et ce n'est pas un compliment."
+    ],
+    "lose": [
+      "Ha ! Tu es descendu en bas du classement. Remonte en haut… pardon : remonte !",
+      "Ta copie est un véritable galimatias. Reviens avec un dictionnaire.",
+      "Je me rappelle ta défaite, et toi, tu t'en souviendras. Sans faute de construction."
+    ]
+  },
+  "questions": [
+    { "unit": "9.1", "type": "mcq", "q": "Un ___ savant a reçu le prix Nobel.", "choices": ["éminent", "imminent"], "answer": 0, "explain": "Un savant remarquable : éminent." },
+    { "unit": "9.1", "type": "mcq", "q": "Une ___ entre deux bateaux a eu lieu dans le port.", "choices": ["collision", "collusion"], "answer": 0, "explain": "Un choc : collision." },
+    { "unit": "9.1", "type": "mcq", "q": "Les ___ du volcan inquiètent les habitants.", "choices": ["éruptions", "irruptions"], "answer": 0, "explain": "Un volcan entre en éruption." },
+    { "unit": "9.1", "type": "mcq", "q": "Ce mot a une ___ particulière en droit.", "choices": ["acception", "acceptation"], "answer": 0, "explain": "Le sens d'un mot : acception." },
+    { "unit": "9.1", "type": "fill", "q": "Le juge a ___ une peine de prison avec sursis.", "hint": "affligé ou infligé ?", "answer": ["infligé"], "explain": "On inflige une peine." },
+    { "unit": "9.1", "type": "fill", "q": "La ___ économique est difficile cette année.", "hint": "conjecture ou conjoncture ?", "answer": ["conjoncture"], "explain": "La situation d'ensemble : conjoncture." },
+    { "unit": "9.1", "type": "fill", "q": "Ce n'est qu'une ___ : rien n'est prouvé.", "hint": "conjecture ou conjoncture ?", "answer": ["conjecture"], "explain": "Une supposition : conjecture." },
+    { "unit": "9.1", "type": "fill", "q": "Les voleurs ont pénétré dans la maison par ___.", "hint": "effraction ou infraction ?", "answer": ["effraction"], "explain": "En forçant l'entrée : effraction." },
+    { "unit": "9.1", "type": "fill", "q": "Le ___ de la rue jusqu'à la gare est prévu.", "hint": "prolongation ou prolongement ?", "answer": ["prolongement"], "explain": "Un allongement dans l'espace : prolongement." },
+    { "unit": "9.1", "type": "error", "q": "L'arrivée du train est éminente.", "wrong": 4, "fix": ["imminente"], "explain": "Sur le point d'arriver : imminente." },
+    { "unit": "9.1", "type": "error", "q": "Un chien a fait éruption dans le salon.", "wrong": 4, "fix": ["irruption"], "explain": "Une entrée brusque : irruption." },
+    { "unit": "9.1", "type": "error", "q": "Il a recouvert la santé après sa maladie.", "wrong": 2, "fix": ["recouvré"], "explain": "Retrouver la santé : recouvrer, participe recouvré." },
+
+    { "unit": "9.2", "type": "mcq", "q": "Quelle phrase est correcte ?", "choices": ["Nous devons prévoir les dépenses.", "Nous devons prévoir à l'avance les dépenses.", "Nous devons prévoir d'avance les dépenses."], "answer": 0, "explain": "Prévoir, c'est déjà voir à l'avance." },
+    { "unit": "9.2", "type": "mcq", "q": "Je me souviens ___ cette promenade.", "choices": ["de", "à", "en"], "answer": 0, "explain": "Se souvenir de quelque chose." },
+    { "unit": "9.2", "type": "mcq", "q": "Il faut ___ cette erreur.", "choices": ["réparer", "pallier à", "remédier"], "answer": 0, "explain": "Réparer une erreur ; pallier n'a pas de à ; remédier en demande un." },
+    { "unit": "9.2", "type": "mcq", "q": "Quelle phrase contient un pléonasme ?", "choices": ["Il est descendu en bas de l'escalier.", "Il est descendu à la cave.", "Il est sorti dans le jardin."], "answer": 0, "explain": "Descendre contient déjà l'idée d'aller en bas." },
+    { "unit": "9.2", "type": "fill", "q": "Ne dis pas « reculer en arrière », dis simplement « ___ ».", "hint": "un verbe", "answer": ["reculer"], "explain": "Reculer, c'est déjà aller en arrière." },
+    { "unit": "9.2", "type": "fill", "q": "Je me ___ très bien ce voyage.", "hint": "rappelle ou souviens ?", "answer": ["rappelle"], "explain": "Se rappeler quelque chose, sans de." },
+    { "unit": "9.2", "type": "fill", "q": "« Opportunité » au sens de chance : préfère « ___ ».", "hint": "un nom", "answer": ["occasion"], "explain": "Une occasion : le mot juste en français." },
+    { "unit": "9.2", "type": "fill", "q": "Il faut ___ le manque de bénévoles.", "hint": "pallier, à l'infinitif", "answer": ["pallier"], "explain": "Pallier un manque, sans à, avec deux l." },
+    { "unit": "9.2", "type": "fill", "q": "Plutôt que « faire un meeting », on dira « organiser une ___ ».", "hint": "un nom", "answer": ["réunion"], "explain": "Meeting : une réunion." },
+    { "unit": "9.2", "type": "error", "q": "Je me rappelle de mon enfance.", "wrong": 2, "fix": ["souviens"], "explain": "Se souvenir de, ou se rappeler sans de." },
+    { "unit": "9.2", "type": "error", "q": "Il faut palier ce manque.", "wrong": 2, "fix": ["pallier"], "explain": "Pallier prend deux l ; un palier est le plat d'un escalier." },
+    { "unit": "9.2", "type": "error", "q": "Malgré qu'elle soit fatiguée, elle travaille.", "wrong": 0, "fix": ["Bien"], "explain": "Dans la langue soignée : bien que." },
+
+    { "unit": "9.3", "type": "mcq", "q": "Un discours très long et bavard est ___.", "choices": ["prolixe", "laconique", "idoine"], "answer": 0, "explain": "Prolixe : trop long." },
+    { "unit": "9.3", "type": "mcq", "q": "Une réponse obscure et énigmatique est ___.", "choices": ["sibylline", "dithyrambique", "obsolète"], "answer": 0, "explain": "Sibyllin : obscur, comme les oracles de la Sibylle." },
+    { "unit": "9.3", "type": "mcq", "q": "Le cambrioleur a ___ son méfait la nuit.", "choices": ["commis", "fourni", "prononcé"], "answer": 0, "explain": "On commet un méfait, une faute, un crime." },
+    { "unit": "9.3", "type": "mcq", "q": "Ce poste demande la personne ___.", "choices": ["idoine", "absconse", "prolixe"], "answer": 0, "explain": "Idoine : qui convient parfaitement." },
+    { "unit": "9.3", "type": "fill", "q": "Cette mode est désormais ___.", "hint": "dépassée", "answer": ["obsolète"], "explain": "Obsolète : dépassé." },
+    { "unit": "9.3", "type": "fill", "q": "Le ministre a ___ un discours remarquable.", "hint": "prononcer, au participe passé", "answer": ["prononcé"], "explain": "On prononce un discours." },
+    { "unit": "9.3", "type": "fill", "q": "Ne te disperse pas pour des ___.", "hint": "choses sans importance", "answer": ["vétilles"], "explain": "Vétille : chose insignifiante, avec deux l." },
+    { "unit": "9.3", "type": "fill", "q": "Il y avait une ___ de candidats.", "hint": "quantité excessive", "answer": ["pléthore"], "explain": "Pléthore : quantité excessive, avec th." },
+    { "unit": "9.3", "type": "fill", "q": "Il est sorti ___, sans que personne le remarque.", "hint": "en cachette (adverbe)", "answer": ["subrepticement"], "explain": "Subrepticement : furtivement." },
+    { "unit": "9.3", "type": "error", "q": "Cette règle obsolette a été supprimée.", "wrong": 2, "fix": ["obsolète"], "explain": "Obsolète : un seul t et un accent grave." },
+    { "unit": "9.3", "type": "error", "q": "Sa critique était dytirambique.", "wrong": 3, "fix": ["dithyrambique"], "explain": "Dithyrambique : th, puis y." },
+    { "unit": "9.3", "type": "error", "q": "Il y a une pléthorre de livres.", "wrong": 4, "fix": ["pléthore"], "explain": "Pléthore : un seul r." },
+
+    { "unit": "9.4", "type": "mcq", "q": "« Défrayer la chronique », c'est…", "choices": ["faire beaucoup parler de soi", "payer les frais d'un journal", "écrire un article", "éviter la presse"], "answer": 0, "explain": "Défrayer la chronique : alimenter les conversations." },
+    { "unit": "9.4", "type": "mcq", "q": "« Être sur la sellette », c'est…", "choices": ["être mis en cause", "monter à cheval", "être assis confortablement", "être félicité"], "answer": 0, "explain": "La sellette était le siège de l'accusé." },
+    { "unit": "9.4", "type": "mcq", "q": "Quelle phrase emploie correctement « faire long feu » ?", "choices": ["Leur projet a fait long feu : il a été abandonné.", "Leur amitié a fait long feu : elle dure depuis vingt ans.", "Le feu de camp a fait long feu toute la nuit."], "answer": 0, "explain": "Faire long feu : échouer." },
+    { "unit": "9.4", "type": "mcq", "q": "« De but en blanc » signifie…", "choices": ["directement, sans préambule", "en visant une cible", "en noir et blanc", "lentement"], "answer": 0, "explain": "De but en blanc : sans précaution, directement." },
+    { "unit": "9.4", "type": "fill", "q": "Avec son trophée, il est ___ comme Artaban.", "hint": "un adjectif", "answer": ["fier"], "explain": "Fier comme Artaban : très orgueilleux." },
+    { "unit": "9.4", "type": "fill", "q": "Elle a remplacé son collègue au ___ levé.", "hint": "un nom", "answer": ["pied"], "explain": "Au pied levé : sans préparation." },
+    { "unit": "9.4", "type": "fill", "q": "Ne prends pas des vessies pour des ___ !", "hint": "un nom au pluriel", "answer": ["lanternes"], "explain": "Prendre des vessies pour des lanternes : se tromper grossièrement." },
+    { "unit": "9.4", "type": "fill", "q": "Ce dictionnaire est un travail de ___.", "hint": "un moine érudit", "answer": ["bénédictin"], "explain": "Un travail de bénédictin : long et minutieux." },
+    { "unit": "9.4", "type": "fill", "q": "Il a maille à ___ avec son voisin.", "hint": "un verbe", "answer": ["partir"], "explain": "Avoir maille à partir : avoir un différend." },
+    { "unit": "9.4", "type": "error", "q": "Il m'a parlé de bout en blanc.", "wrong": 4, "fix": ["but"], "explain": "De but en blanc, avec but." },
+    { "unit": "9.4", "type": "error", "q": "Leur tentative a fait longue feu.", "wrong": 4, "fix": ["long"], "explain": "L'expression est figée : faire long feu." },
+    { "unit": "9.4", "type": "error", "q": "Elle a tiré son aiguille du jeu.", "wrong": 4, "fix": ["épingle"], "explain": "Tirer son épingle du jeu." },
+
+    { "unit": "9.5", "type": "mcq", "q": "Le contraire de « lisible » est…", "choices": ["illisible", "inlisible", "délisible"], "answer": 0, "explain": "Devant l, in- devient il- : illisible." },
+    { "unit": "9.5", "type": "mcq", "q": "Quel préfixe signifie « contre » ?", "choices": ["anti-", "pré-", "re-"], "answer": 0, "explain": "Anti- : contre (antivol, antidote)." },
+    { "unit": "9.5", "type": "mcq", "q": "Que signifie « philanthrope » ?", "choices": ["qui aime l'humanité", "qui fuit les hommes", "qui aime les chevaux"], "answer": 0, "explain": "Phil- (qui aime) + anthrope (l'être humain)." },
+    { "unit": "9.5", "type": "mcq", "q": "Le nom formé sur « poli » est…", "choices": ["la politesse", "la polissure", "la politité"], "answer": 0, "explain": "Poli + -esse : la politesse." },
+    { "unit": "9.5", "type": "fill", "q": "Ce qui ne bouge pas est ___.", "hint": "préfixe in- devant m", "answer": ["immobile"], "explain": "Im + mobile : deux m." },
+    { "unit": "9.5", "type": "fill", "q": "Le contraire de « responsable » est « ___ ».", "hint": "préfixe in- devant r", "answer": ["irresponsable"], "explain": "Ir + responsable : deux r." },
+    { "unit": "9.5", "type": "fill", "q": "La qualité de ce qui est fragile, c'est la ___.", "hint": "suffixe -ité", "answer": ["fragilité"], "explain": "Fragile + -ité." },
+    { "unit": "9.5", "type": "fill", "q": "Un spécialiste qui étudie les sociétés est un ___.", "hint": "suffixe -logue", "answer": ["sociologue"], "explain": "Socio + -logue : qui étudie les sociétés." },
+    { "unit": "9.5", "type": "fill", "q": "Ce qu'on peut boire est ___.", "hint": "suffixe -able", "answer": ["buvable"], "explain": "Buv(ons) + -able." },
+    { "unit": "9.5", "type": "error", "q": "Cet enfant est imature.", "wrong": 3, "fix": ["immature"], "explain": "Im + mature : deux m." },
+    { "unit": "9.5", "type": "error", "q": "Ce raisonnement est ilogique.", "wrong": 3, "fix": ["illogique"], "explain": "Il + logique : deux l." },
+    { "unit": "9.5", "type": "error", "q": "C'est un projet iréalisable.", "wrong": 3, "fix": ["irréalisable"], "explain": "Ir + réalisable : deux r." }
+  ]
+}

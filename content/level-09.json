@@ -1,0 +1,446 @@
+{
+  "id": 9,
+  "cefr": "C1",
+  "title": "Le mot juste",
+  "sub": "Paronymes, pléonasmes, vocabulaire et expressions",
+  "intro": "Les paronymes qui piègent (éminent ou imminent ?), les pléonasmes et impropriétés, le vocabulaire soutenu, les expressions figées et leur origine, la formation des mots. Ici, chaque mot compte.",
+  "boss": {
+    "name": "Le Pléonasme Masqué",
+    "taunt": "Je vais monter en haut de ma tour, puis redescendre en bas pour t'écraser, au jour d'aujourd'hui même !",
+    "defeat": "Je… je capitule. Je me rends. Je m'avoue vaincu. Pardon : je capitule, tout simplement."
+  },
+  "units": [
+    {
+      "id": "9.1",
+      "name": "Les faux jumeaux",
+      "title": "Les paronymes : éminent / imminent, effraction / infraction, conjecture / conjoncture…",
+      "goal": "Distinguer les paronymes et employer chacun dans son sens exact.",
+      "lesson": [
+        { "type": "p", "text": "Les **paronymes** sont des mots qui se ressemblent par la forme et par le son, mais qui n'ont pas le même sens. Les confondre produit des contresens… parfois très drôles." },
+        { "type": "table", "head": ["Paire", "Sens"], "rows": [["éminent / imminent", "remarquable / tout proche, sur le point d'arriver"], ["effraction / infraction", "fait de forcer une entrée / violation d'une loi"], ["conjecture / conjoncture", "supposition / situation d'ensemble à un moment donné"], ["collision / collusion", "choc / entente secrète pour tromper"], ["prolongation / prolongement", "allongement dans le temps / dans l'espace"], ["affliger / infliger", "attrister / imposer une peine"], ["acception / acceptation", "sens d'un mot / fait d'accepter"], ["éruption / irruption", "sortie brusque (volcan, boutons) / entrée brusque"], ["inclinaison / inclination", "pente / penchant, goût"]] },
+        { "type": "rule", "title": "Rattacher à la famille", "text": "Chaque paronyme a sa famille : **infraction** vient d'enfreindre (une règle), **effraction** de fracturer (une porte) ; **conjoncture** de joindre (des circonstances jointes) ; **prolongation** d'un temps, **prolongement** d'un objet." },
+        { "type": "rule", "title": "Recouvrer ou recouvrir ?", "text": "**Recouvrer**, c'est retrouver (la santé, la vue) ; **recouvrir**, c'est couvrir de nouveau. Au présent, les deux s'écrivent parfois pareil (il recouvre), mais au passé la différence réapparaît : [[il a recouvré la vue]] / [[il a recouvert son livre]]." },
+        { "type": "examples", "items": [
+          { "ex": "Un **éminent** chirurgien a opéré ma grand-mère.", "note": "remarquable" },
+          { "ex": "Le départ du train est **imminent**.", "note": "tout proche" },
+          { "ex": "Les cambrioleurs sont entrés par **effraction**.", "note": "en forçant la porte" },
+          { "ex": "Le juge lui a **infligé** une amende.", "note": "imposé une peine" },
+          { "ex": "Les policiers ont fait **irruption** dans la salle.", "note": "entrée brusque" }
+        ] },
+        { "type": "compare", "title": "Les confusions les plus fréquentes", "items": [
+          { "ko": "un médecin ~~imminent~~", "ok": "un médecin **éminent**", "why": "Éminent : remarquable. Imminent : sur le point d'arriver." },
+          { "ko": "une ~~effraction~~ au code de la route", "ok": "une **infraction** au code de la route", "why": "On enfreint une règle : infraction." },
+          { "ko": "Le match s'est joué en ~~prolongement~~.", "ok": "Le match s'est joué en **prolongation**.", "why": "Un allongement dans le temps : prolongation." },
+          { "ko": "Le juge lui a ~~affligé~~ une amende.", "ok": "Le juge lui a **infligé** une amende.", "why": "On inflige une peine ; on afflige quelqu'un en le rendant triste." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "En cas de doute, cherche un mot de la même famille : infraction → enfreindre ; effraction → fracturer ; inclination → incliner à (avoir un penchant) ; inclinaison → incliné (en pente)." },
+        { "type": "fun", "text": "Le sais-tu ? « Éruption » et « irruption » viennent du même verbe latin, rumpere, « briser ». Le préfixe e- (vers le dehors) et le préfixe in- (vers le dedans) font toute la différence !" }
+      ],
+      "vocab": [
+        { "mot": "éminent", "def": "Qui se distingue par sa valeur, remarquable.", "ex": "Un éminent historien donne une conférence.", "alt": [] },
+        { "mot": "imminent", "def": "Qui va se produire très prochainement.", "ex": "L'orage est imminent.", "alt": [] },
+        { "mot": "effraction", "def": "Fait de forcer une porte ou une serrure pour entrer.", "ex": "Le vol a été commis avec effraction.", "alt": [] },
+        { "mot": "infraction", "def": "Violation d'une loi ou d'un règlement.", "ex": "Stationner ici est une infraction.", "alt": [] },
+        { "mot": "conjoncture", "def": "Situation qui résulte d'un ensemble de circonstances à un moment donné.", "ex": "La conjoncture économique est favorable.", "alt": [] },
+        { "mot": "collision", "def": "Choc entre deux corps en mouvement.", "ex": "La collision entre les deux trains a fait des blessés.", "alt": [] },
+        { "mot": "collusion", "def": "Entente secrète pour tromper ou nuire.", "ex": "La collusion entre ces entreprises a faussé l'appel d'offres.", "alt": [] },
+        { "mot": "prolongation", "def": "Allongement de la durée de quelque chose.", "ex": "Le joueur a marqué pendant la prolongation.", "alt": [] },
+        { "mot": "prolongement", "def": "Ce qui allonge quelque chose dans l'espace ; suite.", "ex": "Cette rue est le prolongement de l'avenue.", "alt": [] },
+        { "mot": "affliger", "def": "Causer une profonde tristesse.", "ex": "Cette nouvelle va affliger toute la famille.", "alt": [] },
+        { "mot": "infliger", "def": "Imposer une peine, une punition ou une épreuve.", "ex": "L'arbitre a dû infliger un carton rouge.", "alt": [] },
+        { "mot": "acception", "def": "Chacun des sens d'un mot.", "ex": "Ce mot a plusieurs acceptions.", "alt": [] },
+        { "mot": "acceptation", "def": "Fait d'accepter.", "ex": "Son acceptation de l'offre nous a surpris.", "alt": [] },
+        { "mot": "éruption", "def": "Jaillissement brusque, par exemple de lave ou de boutons.", "ex": "L'éruption du volcan a duré trois jours.", "alt": [] },
+        { "mot": "irruption", "def": "Entrée brusque et inattendue dans un lieu.", "ex": "Un chien a fait irruption dans la classe.", "alt": [] },
+        { "mot": "inclinaison", "def": "État de ce qui est en pente ; angle d'une pente.", "ex": "L'inclinaison de la tour de Pise est célèbre.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Un éminent chirurgien a opéré ma grand-mère.", "indice": "Un grand médecin", "trap": ["imminent"], "alt": [] },
+        { "phrase": "Le départ du train est imminent.", "indice": "Il faut se dépêcher", "trap": ["éminent"], "alt": [] },
+        { "phrase": "Les cambrioleurs sont entrés par effraction.", "indice": "Une porte forcée", "trap": ["infraction"], "alt": [] },
+        { "phrase": "Rouler trop vite est une infraction.", "indice": "Une règle du code de la route", "trap": ["effraction"], "alt": [] },
+        { "phrase": "Le match s'est joué en prolongation.", "indice": "Un match à rallonge", "trap": ["prolongement"], "alt": [] },
+        { "phrase": "Le juge lui a infligé une lourde amende.", "indice": "Une sanction", "trap": ["affligé"], "alt": [] },
+        { "phrase": "Le volcan est entré en éruption.", "indice": "Une montagne qui crache du feu", "trap": ["irruption"], "alt": [] },
+        { "phrase": "Les policiers ont fait irruption dans la salle.", "indice": "Une arrivée soudaine", "trap": ["éruption"], "alt": [] },
+        { "phrase": "Après l'opération, il a recouvré la vue.", "indice": "Une guérison", "trap": ["recouvert"], "alt": ["Il a recouvré la vue après l'opération."] },
+        { "phrase": "Ce mot a plusieurs acceptions différentes.", "indice": "Une question de dictionnaire", "trap": ["acceptations"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Le danger est ___ : il faut évacuer.", "choices": ["imminent", "éminent"], "answer": 0, "explain": "Le danger est sur le point d'arriver : imminent." },
+        { "type": "mcq", "q": "Le voleur est entré par ___.", "choices": ["effraction", "infraction"], "answer": 0, "explain": "Il a forcé l'entrée : effraction." },
+        { "type": "mcq", "q": "Dans la ___ actuelle, les prix augmentent.", "choices": ["conjoncture", "conjecture"], "answer": 0, "explain": "La situation d'ensemble : conjoncture." },
+        { "type": "mcq", "q": "Les deux voitures sont entrées en ___.", "choices": ["collision", "collusion"], "answer": 0, "explain": "Un choc : collision." },
+        { "type": "mcq", "q": "Cette route est le ___ de l'autoroute.", "choices": ["prolongement", "prolongation"], "answer": 0, "explain": "Un allongement dans l'espace : prolongement." },
+        { "type": "fill", "q": "Le professeur a ___ une punition à toute la classe.", "hint": "affligé ou infligé ?", "answer": ["infligé"], "explain": "On inflige une punition." },
+        { "type": "fill", "q": "Cette triste nouvelle nous a profondément ___.", "hint": "affligés ou infligés ?", "answer": ["affligés"], "explain": "Affliger : rendre triste." },
+        { "type": "fill", "q": "L'___ de la route rend la montée difficile.", "hint": "inclinaison ou inclination ?", "answer": ["inclinaison"], "explain": "Une pente : inclinaison." },
+        { "type": "fill", "q": "Il a une ___ naturelle pour la musique.", "hint": "inclinaison ou inclination ?", "answer": ["inclination"], "explain": "Un penchant : inclination." },
+        { "type": "fill", "q": "L'___ de notre offre par le client nous réjouit.", "hint": "acception ou acceptation ?", "answer": ["acceptation"], "explain": "Le fait d'accepter : acceptation." },
+        { "type": "fill", "q": "Après sa maladie, elle a ___ ses forces.", "hint": "recouvré ou recouvert ?", "answer": ["recouvré"], "explain": "Retrouver ses forces : recouvrer." },
+        { "type": "fill", "q": "Le juge soupçonne une ___ entre les deux entreprises.", "hint": "collision ou collusion ?", "answer": ["collusion"], "explain": "Une entente secrète : collusion." },
+        { "type": "error", "q": "Un imminent professeur donnera la conférence.", "wrong": 1, "fix": ["éminent"], "explain": "Un professeur remarquable : éminent." },
+        { "type": "error", "q": "Il a été arrêté pour effraction au code de la route.", "wrong": 5, "fix": ["infraction"], "explain": "Une violation de la loi : infraction." },
+        { "type": "error", "q": "Le volcan est entré en irruption.", "wrong": 5, "fix": ["éruption"], "explain": "Un volcan entre en éruption ; on fait irruption dans un lieu." },
+        { "type": "error", "q": "La finale a fini en prolongement.", "wrong": 5, "fix": ["prolongation"], "explain": "Un allongement dans le temps : prolongation." }
+      ],
+      "reading": {
+        "title": "Le discours du maire",
+        "text": "Chaque année, le maire de Saint-Fargeol prononce une allocution lors de la fête du village. Cette année, il avait préparé un texte ambitieux, truffé de mots savants qu'il croyait maîtriser. Dès la première phrase, les habitants dressèrent l'oreille : « Je salue notre imminent docteur Lemoine, dont le départ en retraite est éminent. » Le docteur, assis au premier rang, eut un sourire indulgent. Le maire poursuivit : « Grâce à la conjecture économique favorable, nous avons pu financer le prolongement du festival jusqu'à minuit. » Quelques rires étouffés parcoururent la foule. Mais le clou du spectacle arriva lorsqu'il évoqua le cambriolage de la mairie : « Les malfaiteurs sont entrés par infraction, ce qui constitue une grave effraction à la loi. » Cette fois, l'hilarité fut générale. Le maire, désarçonné, chercha du regard son adjointe, qui lui fit signe de continuer. Il conclut, imperturbable, en souhaitant que cette fête « perpètre les traditions du village ». On applaudit à tout rompre. Personne n'osa lui faire remarquer ses erreurs sur le moment. Même le docteur Lemoine, d'ordinaire si réservé, dut sortir son mouchoir pour cacher son fou rire. Le lendemain, le journal local publia le discours intégral, accompagné d'un petit encadré intitulé « Les paronymes de monsieur le maire », où chaque erreur était corrigée. On raconte que le maire l'a fait encadrer et l'a accroché dans son bureau : il prétend que c'est le meilleur cours de français qu'il ait jamais reçu.",
+        "questions": [
+          { "q": "Quelle erreur le maire commet-il à propos du docteur Lemoine ?", "choices": ["Il inverse éminent et imminent", "Il oublie son nom", "Il annonce sa mort", "Il le confond avec le pharmacien"], "answer": 0, "explain": "Le docteur est éminent (remarquable) ; c'est son départ qui est imminent." },
+          { "q": "Que voulait dire le maire avec « la conjecture économique » ?", "choices": ["La conjoncture, la situation économique", "Une supposition", "Une crise grave", "Un nouvel impôt"], "answer": 0, "explain": "Il confond conjecture (supposition) et conjoncture (situation)." },
+          { "q": "Pourquoi l'hilarité devient-elle générale ?", "choices": ["Il inverse effraction et infraction en parlant d'un cambriolage", "Il tombe de l'estrade", "Le docteur se lève", "Le micro tombe en panne"], "answer": 0, "explain": "Les voleurs entrent par effraction et commettent une infraction : il dit l'inverse." },
+          { "q": "Pourquoi « perpètre les traditions » est-il fautif ?", "choices": ["Perpétrer s'emploie pour un crime ; il fallait « perpétue »", "C'est correct", "Il fallait « perfore »", "Il fallait « perçoive »"], "answer": 0, "explain": "On perpètre un crime ; on perpétue une tradition." },
+          { "q": "Comment le maire réagit-il finalement à l'article du journal ?", "choices": ["Avec humour : il l'a fait encadrer", "Il porte plainte", "Il démissionne", "Il fait interdire le journal"], "answer": 0, "explain": "Il l'a accroché dans son bureau, comme un cours de français." },
+          { "q": "Quel ton domine ce texte ?", "choices": ["Humoristique et bienveillant", "Tragique", "Polémique et agressif", "Technique et sec"], "answer": 0, "explain": "Le texte s'amuse des erreurs du maire sans méchanceté." }
+        ]
+      }
+    },
+    {
+      "id": "9.2",
+      "name": "Monter en haut ?",
+      "title": "Pléonasmes et impropriétés : monter en haut, pallier à, se rappeler de, malgré que, anglicismes",
+      "goal": "Repérer et corriger les pléonasmes, les impropriétés et les anglicismes évitables.",
+      "lesson": [
+        { "type": "p", "text": "Un **pléonasme** répète inutilement une idée déjà exprimée : [[monter en haut]]. Une **impropriété** emploie un mot ou une construction qui ne convient pas : [[pallier à]]. Les deux alourdissent le style et font tiquer les correcteurs." },
+        { "type": "table", "head": ["Pléonasme", "Forme correcte"], "rows": [["monter en haut", "monter"], ["descendre en bas", "descendre"], ["sortir dehors", "sortir"], ["prévoir à l'avance", "prévoir"], ["collaborer ensemble", "collaborer"], ["un faux prétexte", "un prétexte"], ["au jour d'aujourd'hui", "aujourd'hui"], ["une panacée universelle", "une panacée"], ["un cadeau gratuit", "un cadeau"]] },
+        { "type": "rule", "title": "Les impropriétés courantes", "text": "**Pallier** se construit sans à : [[pallier un manque]]. **Se rappeler** quelque chose, sans de : [[je me rappelle cette histoire]] ; mais [[je me souviens de cette histoire]]. **Malgré que** est critiqué : [[bien que]]. **Au niveau de** est souvent inutile : [[en orthographe]] plutôt que « au niveau de l'orthographe »." },
+        { "type": "rule", "title": "Les anglicismes", "text": "Beaucoup ont un équivalent français précis : [[une réunion]] (meeting), [[un courriel]] (mail), [[une date limite]] (deadline), [[un retour]] (feedback). D'autres sont des faux amis : réaliser au sens de « se rendre compte », opportunité au sens d'« occasion » sont critiqués : [[se rendre compte]], [[une occasion]]." },
+        { "type": "examples", "items": [
+          { "ex": "Il faut **pallier** ce manque de personnel.", "note": "pallier quelque chose, sans à" },
+          { "ex": "Je **me rappelle** cette soirée.", "note": "se rappeler quelque chose, sans de" },
+          { "ex": "Je **me souviens de** ses conseils.", "note": "se souvenir de quelque chose" },
+          { "ex": "Il **s'est rendu compte** de son erreur.", "note": "et non « il a réalisé »" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "Il faut ~~pallier à~~ ce problème.", "ok": "Il faut **pallier** ce problème.", "why": "Pallier se construit sans préposition." },
+          { "ko": "Je ~~me rappelle de~~ toi.", "ok": "Je **me souviens de** toi.", "why": "Se rappeler quelqu'un, ou se souvenir de quelqu'un." },
+          { "ko": "~~Au jour d'aujourd'hui~~, …", "ok": "**Aujourd'hui**, …", "why": "Aujourd'hui contient déjà l'idée de « ce jour »." },
+          { "ko": "Ils ont ~~collaboré ensemble~~.", "ok": "Ils ont **collaboré**.", "why": "Collaborer, c'est déjà travailler ensemble." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Pour repérer un pléonasme, supprime un mot : si le sens ne change pas, il était de trop. « Monter en haut » → « monter » : rien n'est perdu." },
+        { "type": "fun", "text": "Le sais-tu ? « Aujourd'hui » est lui-même un ancien pléonasme : « hui » voulait déjà dire « ce jour » en ancien français. « Au jour d'aujourd'hui » répète donc trois fois la même idée !" }
+      ],
+      "vocab": [
+        { "mot": "panacée", "def": "Remède prétendu universel, solution à tous les problèmes.", "ex": "Le télétravail n'est pas une panacée.", "alt": [] },
+        { "mot": "redondance", "def": "Répétition inutile d'une même idée.", "ex": "Évite les redondances dans ta copie.", "alt": [] },
+        { "mot": "tautologie", "def": "Phrase qui répète la même idée en d'autres termes, sans rien apprendre.", "ex": "« Les enfants sont des enfants » est une tautologie.", "alt": [] },
+        { "mot": "impropriété", "def": "Emploi d'un mot dans un sens qui n'est pas le sien.", "ex": "Le correcteur a souligné une impropriété.", "alt": [] },
+        { "mot": "pléonasme", "def": "Répétition de mots qui disent la même chose, comme « monter en haut ».", "ex": "« Sortir dehors » est un pléonasme.", "alt": [] },
+        { "mot": "barbarisme", "def": "Mot qui n'existe pas ou forme fautive d'un mot.", "ex": "« Vous disez » est un barbarisme.", "alt": [] },
+        { "mot": "solécisme", "def": "Faute de construction de la phrase.", "ex": "« Je me rappelle de toi » est un solécisme.", "alt": [] },
+        { "mot": "néologisme", "def": "Mot nouveau, ou sens nouveau donné à un mot.", "ex": "« Courriel » était un néologisme dans les années quatre-vingt-dix.", "alt": [] },
+        { "mot": "archaïsme", "def": "Mot ou tournure qui n'est plus en usage.", "ex": "« Occire » est un archaïsme pour « tuer ».", "alt": [] },
+        { "mot": "anglicisme", "def": "Mot ou tournure empruntés à l'anglais.", "ex": "« Faire du shopping » est un anglicisme.", "alt": [] },
+        { "mot": "jargon", "def": "Langage technique propre à un métier, difficile à comprendre pour les autres.", "ex": "Le jargon des informaticiens m'échappe.", "alt": [] },
+        { "mot": "charabia", "def": "Langage incompréhensible, embrouillé.", "ex": "Ce mode d'emploi est un vrai charabia.", "alt": [] },
+        { "mot": "galimatias", "def": "Discours confus et incompréhensible (mot littéraire).", "ex": "Son exposé fut un galimatias prétentieux.", "alt": [] },
+        { "mot": "lapalissade", "def": "Vérité si évidente qu'il est ridicule de l'énoncer.", "ex": "« Un quart d'heure avant sa mort, il était encore en vie » : quelle lapalissade !", "alt": [] },
+        { "mot": "truisme", "def": "Vérité banale, évidente.", "ex": "Dire que l'eau mouille est un truisme.", "alt": [] },
+        { "mot": "faux ami", "def": "Mot étranger qui ressemble à un mot français mais n'a pas le même sens.", "ex": "« Actually » est un faux ami : il ne veut pas dire « actuellement ».", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Il faut pallier ce manque de personnel.", "indice": "Une équipe trop réduite", "trap": ["à"], "alt": [] },
+        { "phrase": "Je me rappelle très bien cette soirée.", "indice": "Un souvenir précis", "trap": ["de"], "alt": [] },
+        { "phrase": "Nous sommes sortis malgré la pluie.", "indice": "Une promenade mouillée", "trap": ["dehors"], "alt": [] },
+        { "phrase": "Aujourd'hui, tout le monde a un téléphone.", "indice": "Un constat sur notre époque", "trap": ["jour"], "alt": [] },
+        { "phrase": "Bien qu'il soit tard, ils continuent.", "indice": "Un travail de nuit", "trap": ["Malgré"], "alt": [] },
+        { "phrase": "Il s'est rendu compte de son erreur.", "indice": "Une prise de conscience", "trap": ["réalisé"], "alt": [] },
+        { "phrase": "Ils ont collaboré pendant des années.", "indice": "Un long partenariat", "trap": ["ensemble"], "alt": [] },
+        { "phrase": "Nous devons prévoir le budget de l'année.", "indice": "Une organisation financière", "trap": ["avance"], "alt": [] },
+        { "phrase": "Je me souviens de ses conseils.", "indice": "Des paroles qui restent", "trap": ["rappelle"], "alt": [] },
+        { "phrase": "Cette occasion ne se représentera pas.", "indice": "Une chance unique", "trap": ["opportunité"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Quelle phrase ne contient pas de pléonasme ?", "choices": ["Il est monté au grenier.", "Il est monté en haut du grenier.", "Il est remonté en haut."], "answer": 0, "explain": "Monter contient déjà l'idée d'aller vers le haut." },
+        { "type": "mcq", "q": "Il faut ___ le manque d'eau.", "choices": ["pallier", "pallier à", "palier à"], "answer": 0, "explain": "Pallier se construit sans préposition." },
+        { "type": "mcq", "q": "Je ___ notre premier voyage.", "choices": ["me rappelle", "me rappelle de", "me souviens"], "answer": 0, "explain": "Se rappeler quelque chose, sans de ; se souvenir demanderait de." },
+        { "type": "mcq", "q": "___ il fasse froid, il sort en short.", "choices": ["Bien qu'", "Malgré qu'", "Même qu'"], "answer": 0, "explain": "Bien que + subjonctif ; malgré que est critiqué." },
+        { "type": "mcq", "q": "Quel mot français remplace l'anglicisme « deadline » ?", "choices": ["une date limite", "un délai de grâce", "une ligne morte"], "answer": 0, "explain": "Deadline : date limite, échéance." },
+        { "type": "fill", "q": "Ne dis pas « sortir dehors », dis simplement « ___ ».", "hint": "un verbe", "answer": ["sortir"], "explain": "Sortir, c'est déjà aller dehors." },
+        { "type": "fill", "q": "Je me ___ de ton anniversaire.", "hint": "souviens ou rappelle ?", "answer": ["souviens"], "explain": "Se souvenir de quelque chose." },
+        { "type": "fill", "q": "Il faut ___ à ces difficultés.", "hint": "remédier, à l'infinitif", "answer": ["remédier"], "explain": "Remédier à quelque chose ; pallier quelque chose." },
+        { "type": "fill", "q": "Il a fini par se rendre ___ de son erreur.", "hint": "un mot", "answer": ["compte"], "explain": "Se rendre compte, plutôt que « réaliser »." },
+        { "type": "fill", "q": "Une solution qui prétend guérir tous les maux est une ___.", "hint": "un nom", "answer": ["panacée"], "explain": "Une panacée est déjà universelle." },
+        { "type": "fill", "q": "« Au jour d'aujourd'hui » : on écrit simplement « ___ ».", "hint": "un mot", "answer": ["aujourd'hui"], "explain": "Aujourd'hui suffit." },
+        { "type": "fill", "q": "Ils ont ___ pour monter ce projet.", "hint": "collaborer, au participe passé", "answer": ["collaboré"], "explain": "Collaborer, sans « ensemble »." },
+        { "type": "error", "q": "Il faut pallier à ce problème.", "wrong": 2, "fix": ["remédier"], "explain": "On remédie à un problème, ou on pallie un problème." },
+        { "type": "error", "q": "Je me rappelle de cette histoire.", "wrong": 2, "fix": ["souviens"], "explain": "Se souvenir de cette histoire, ou se rappeler cette histoire." },
+        { "type": "error", "q": "Malgré qu'il pleuve, nous sortons.", "wrong": 0, "fix": ["Bien"], "explain": "Dans la langue soignée : bien que." },
+        { "type": "error", "q": "Il a réalisé qu'il s'était trompé.", "wrong": 2, "fix": ["compris"], "explain": "« Réaliser » au sens de comprendre est un anglicisme critiqué." }
+      ],
+      "reading": {
+        "title": "La lettre de Monsieur Pléonasme",
+        "text": "Cher ami, je t'écris ce message écrit pour te faire part d'une nouvelle surprenante et inattendue. Au jour d'aujourd'hui, après avoir longuement hésité un long moment, j'ai pris la décision définitive de déménager. J'ai prévu à l'avance de partir le mois prochain, et je monterai en haut de mon nouvel immeuble dès que l'ascenseur sera réparé à nouveau. Mon nouveau voisin, que je n'ai encore jamais rencontré auparavant, semble charmant. Nous avons collaboré ensemble pendant des années, et je garde un souvenir mémorable de nos réunions. Je te demande donc de bien vouloir m'aider à descendre en bas les cartons qui s'entassent dans mon grenier. Il s'agit d'une urgence pressante, car le camion arrive à neuf heures du matin. Je compte sur ta présence personnelle, car je ne peux pas soulever seul ces lourds cartons, qui pèsent un poids considérable. Bien entendu, je t'offre un cadeau gratuit en remerciement : un vieux dictionnaire, dans lequel tu trouveras, je l'espère, la définition du mot « pléonasme ». Je te prie de croire, cher ami, à l'expression de ma sincère et franche amitié. Monsieur Pléonasme. Post-scriptum : mon voisin, qui est professeur de français, a lu cette lettre par-dessus mon épaule. Il est tombé de sa chaise, puis il a sorti un stylo rouge en marmonnant quelque chose à propos d'un « record absolu » et d'une « collection complète ». Je ne comprends pas pourquoi.",
+        "questions": [
+          { "q": "Quelle nouvelle Monsieur Pléonasme annonce-t-il ?", "choices": ["Il déménage", "Il se marie", "Il change de travail", "Il part en voyage"], "answer": 0, "explain": "Il a pris la décision de déménager." },
+          { "q": "Que demande-t-il à son ami ?", "choices": ["De l'aider à descendre des cartons", "De lui prêter un camion", "De garder son chat", "De lui écrire plus souvent"], "answer": 0, "explain": "M'aider à descendre les cartons du grenier." },
+          { "q": "Laquelle de ces expressions n'est PAS un pléonasme ?", "choices": ["un souvenir de nos réunions", "monter en haut", "prévoir à l'avance", "un cadeau gratuit"], "answer": 0, "explain": "Les trois autres répètent une idée déjà contenue dans le mot." },
+          { "q": "Pourquoi le voisin est-il « tombé de sa chaise » ?", "choices": ["La lettre accumule les pléonasmes", "Il était fatigué", "Il a eu peur du camion", "Il a appris le déménagement"], "answer": 0, "explain": "Un professeur de français découvre une avalanche de pléonasmes." },
+          { "q": "Que révèle la dernière phrase ?", "choices": ["Monsieur Pléonasme ne se rend pas compte de ses fautes", "Il se moque de son voisin", "Il a compris la leçon", "Il est en colère"], "answer": 0, "explain": "« Je ne comprends pas pourquoi » : il ignore tout de ses pléonasmes." },
+          { "q": "Même « record absolu » et « collection complète » sont des pléonasmes. Pourquoi est-ce drôle ?", "choices": ["Le voisin, pour critiquer les pléonasmes, en fait lui-même", "Le voisin collectionne les lettres", "Le voisin a battu un record", "Ce n'est pas drôle"], "answer": 0, "explain": "Un record est déjà absolu, une collection déjà complète : l'arroseur arrosé." }
+        ]
+      }
+    },
+    {
+      "id": "9.3",
+      "name": "Le mot précis",
+      "title": "Le vocabulaire soutenu : remplacer faire, avoir, mettre, dire ; mots rares et précis",
+      "goal": "Remplacer les mots vagues par des termes précis et employer quelques mots rares à bon escient.",
+      "lesson": [
+        { "type": "p", "text": "La langue soutenue dispose de mots précis qui remplacent avantageusement des tournures vagues. Les employer à bon escient enrichit l'écriture, à condition de ne pas en abuser." },
+        { "type": "table", "head": ["Mot courant", "Équivalents plus précis"], "rows": [["commencer", "entamer, amorcer, engager"], ["finir", "achever, parachever, conclure"], ["montrer", "manifester, témoigner de, révéler"], ["dire", "affirmer, déclarer, souligner, préciser"], ["faire", "réaliser, accomplir, effectuer"], ["avoir", "posséder, disposer de, jouir de"], ["mettre", "placer, disposer, instaurer"], ["voir", "apercevoir, discerner, constater"], ["beaucoup de", "nombre de, une foule de, une pléthore de"]] },
+        { "type": "rule", "title": "Chasser les verbes passe-partout", "text": "Les copies les plus faibles abusent de **faire**, **avoir**, **mettre**, **dire** et **il y a**. Remplace-les par un verbe précis : [[faire un effort → fournir un effort]], [[faire une erreur → commettre une erreur]], [[faire un discours → prononcer un discours]], [[il y a des problèmes → des problèmes se posent]]." },
+        { "type": "rule", "title": "Quelques mots rares et précis", "text": "[[un parangon]] (un modèle parfait), [[une gageure]] (une entreprise presque impossible), [[sibyllin]] (obscur, énigmatique), [[un thuriféraire]] (un flatteur zélé), [[procrastiner]] (remettre au lendemain), [[abscons]] (difficile à comprendre), [[idoine]] (approprié)." },
+        { "type": "examples", "items": [
+          { "ex": "Les deux pays ont **entamé** des négociations.", "note": "plutôt que « commencé »" },
+          { "ex": "Il a **commis** une erreur de jugement.", "note": "plutôt que « fait »" },
+          { "ex": "Le ministre a **prononcé** un discours remarqué.", "note": "plutôt que « fait »" },
+          { "ex": "Réussir en trois jours relevait de la **gageure**.", "note": "une entreprise presque impossible" }
+        ] },
+        { "type": "compare", "title": "Du vague au précis", "items": [
+          { "ko": "Il a ~~fait~~ une erreur.", "ok": "Il a **commis** une erreur.", "why": "On commet une erreur, une faute, un crime." },
+          { "ko": "Elle a ~~dit~~ que ce projet était utile.", "ok": "Elle a **souligné** que ce projet était utile.", "why": "Le verbe précis indique aussi l'intention." },
+          { "ko": "On a ~~mis~~ en place un nouveau règlement.", "ok": "On a **instauré** un nouveau règlement.", "why": "Instaurer : établir pour la première fois." },
+          { "ko": "C'est ~~très très~~ difficile.", "ok": "C'est **extrêmement** difficile.", "why": "Un adverbe fort plutôt qu'une répétition." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Le registre soutenu n'est pas le registre précieux : une phrase claire vaut mieux qu'une phrase obscure. Choisis le mot le plus **précis**, pas le plus **rare**." },
+        { "type": "fun", "text": "Le sais-tu ? « Gageure » se prononce comme « gajure » : le e ne sert qu'à adoucir le g. Les rectifications de 1990 proposent d'ailleurs d'écrire « gageüre », avec un tréma, pour guider la prononciation." }
+      ],
+      "vocab": [
+        { "mot": "parangon", "def": "Modèle parfait d'une qualité ou d'un défaut.", "ex": "Il passe pour un parangon de vertu.", "alt": [] },
+        { "mot": "gageure", "def": "Entreprise si difficile qu'elle semble presque impossible.", "ex": "Finir ce chantier en un mois relève de la gageure.", "alt": ["gageüre"] },
+        { "mot": "sibyllin", "def": "Obscur, énigmatique, difficile à interpréter.", "ex": "Il m'a laissé un message sibyllin.", "alt": [] },
+        { "mot": "thuriféraire", "def": "Flatteur zélé, admirateur sans recul.", "ex": "Le ministre était entouré de thuriféraires.", "alt": [] },
+        { "mot": "procrastiner", "def": "Remettre sans cesse au lendemain ce que l'on doit faire.", "ex": "Arrête de procrastiner et commence tes révisions.", "alt": [] },
+        { "mot": "abscons", "def": "Difficile à comprendre.", "ex": "Ce texte de loi est franchement abscons.", "alt": [] },
+        { "mot": "pléthore", "def": "Quantité excessive.", "ex": "Il y a une pléthore d'applications inutiles.", "alt": [] },
+        { "mot": "prolixe", "def": "Qui parle ou écrit trop longuement.", "ex": "Un orateur prolixe lasse son auditoire.", "alt": [] },
+        { "mot": "laconique", "def": "Qui s'exprime en très peu de mots.", "ex": "Sa réponse laconique tenait en un mot : « non ».", "alt": [] },
+        { "mot": "dithyrambique", "def": "Extrêmement élogieux.", "ex": "La critique est dithyrambique.", "alt": [] },
+        { "mot": "idoine", "def": "Qui convient parfaitement à quelque chose.", "ex": "Il a trouvé la personne idoine pour ce poste.", "alt": [] },
+        { "mot": "subrepticement", "def": "En cachette, de façon furtive.", "ex": "Il a glissé subrepticement un mot dans ma poche.", "alt": [] },
+        { "mot": "obsolète", "def": "Dépassé, qui n'est plus en usage.", "ex": "Ce logiciel est devenu obsolète.", "alt": [] },
+        { "mot": "vétille", "def": "Chose insignifiante, sans importance.", "ex": "Ils se disputent pour des vétilles.", "alt": [] },
+        { "mot": "apanage", "def": "Ce qui appartient en propre à quelqu'un, privilège exclusif.", "ex": "L'humour n'est pas l'apanage des comiques.", "alt": [] },
+        { "mot": "inextricable", "def": "Si embrouillé qu'on ne peut s'en sortir.", "ex": "Il s'est mis dans une situation inextricable.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Les deux pays ont entamé des négociations.", "indice": "Le début d'un dialogue diplomatique", "trap": ["entamés"], "alt": [] },
+        { "phrase": "Il a commis une erreur de jugement.", "indice": "Une mauvaise décision", "trap": ["commise"], "alt": [] },
+        { "phrase": "Réussir en trois jours relevait de la gageure.", "indice": "Un défi presque impossible", "trap": ["gajure"], "alt": [] },
+        { "phrase": "Sa réponse sibylline a intrigué tout le monde.", "indice": "Une réponse énigmatique", "trap": ["sybilline"], "alt": [] },
+        { "phrase": "Il y a une pléthore de candidats pour ce poste.", "indice": "Trop de postulants", "trap": ["plétore"], "alt": [] },
+        { "phrase": "Le ministre a prononcé un discours remarqué.", "indice": "Une prise de parole officielle", "trap": ["prononcer"], "alt": [] },
+        { "phrase": "Cette méthode de calcul est désormais obsolète.", "indice": "Une technique dépassée", "trap": ["obsolette"], "alt": [] },
+        { "phrase": "Elle a quitté la pièce subrepticement.", "indice": "Une sortie discrète", "trap": ["subreptissement"], "alt": [] },
+        { "phrase": "Ce critique a écrit un article dithyrambique.", "indice": "Une critique enthousiaste", "trap": ["dithyrambic"], "alt": [] },
+        { "phrase": "Ne t'attarde pas sur ces vétilles.", "indice": "Des détails sans importance", "trap": ["vétils"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Il a ___ un effort considérable.", "choices": ["fourni", "commis", "prononcé"], "answer": 0, "explain": "On fournit un effort." },
+        { "type": "mcq", "q": "Le suspect a ___ un vol.", "choices": ["commis", "fourni", "prononcé"], "answer": 0, "explain": "On commet une faute, un vol, un crime." },
+        { "type": "mcq", "q": "Le président a ___ une allocution.", "choices": ["prononcé", "commis", "effectué"], "answer": 0, "explain": "On prononce un discours, une allocution." },
+        { "type": "mcq", "q": "Un texte ___ est difficile à comprendre.", "choices": ["abscons", "prolixe", "laconique"], "answer": 0, "explain": "Abscons : obscur, difficile à comprendre." },
+        { "type": "mcq", "q": "Une réponse ___ tient en très peu de mots.", "choices": ["laconique", "prolixe", "dithyrambique"], "answer": 0, "explain": "Laconique : bref, concis." },
+        { "type": "fill", "q": "Le contraire de « laconique », c'est « ___ ».", "hint": "qui parle ou écrit trop longuement", "answer": ["prolixe"], "explain": "Prolixe : trop long, bavard." },
+        { "type": "fill", "q": "Remettre sans cesse au lendemain, c'est ___.", "hint": "un verbe", "answer": ["procrastiner"], "explain": "Procrastiner, du latin cras, « demain »." },
+        { "type": "fill", "q": "Cet outil est ___ : on ne l'utilise plus.", "hint": "dépassé", "answer": ["obsolète"], "explain": "Obsolète : dépassé, avec un accent grave et un seul t." },
+        { "type": "fill", "q": "Il a ___ ses études avec succès.", "hint": "achever, au participe passé", "answer": ["achevé"], "explain": "Achever : finir complètement." },
+        { "type": "fill", "q": "Ce privilège est l'___ des plus riches.", "hint": "ce qui appartient en propre à quelqu'un", "answer": ["apanage"], "explain": "L'apanage : un privilège exclusif." },
+        { "type": "fill", "q": "Il a ___ un rapport très complet.", "hint": "rédiger, au participe passé", "answer": ["rédigé"], "explain": "On rédige un rapport, plutôt qu'on le « fait »." },
+        { "type": "fill", "q": "Une critique extrêmement élogieuse est une critique ___.", "hint": "un adjectif", "answer": ["dithyrambique"], "explain": "Dithyrambique : très élogieux." },
+        { "type": "error", "q": "Ce n'est qu'une vétile.", "wrong": 3, "fix": ["vétille"], "explain": "Vétille s'écrit avec deux l." },
+        { "type": "error", "q": "Son discours sybillin a intrigué la foule.", "wrong": 2, "fix": ["sibyllin"], "explain": "Sibyllin : i puis y, et deux l (comme la Sibylle)." },
+        { "type": "error", "q": "Ce logiciel est obsolette.", "wrong": 3, "fix": ["obsolète"], "explain": "Obsolète : un seul t et un accent grave." },
+        { "type": "error", "q": "Ce pari tenait de la gajure.", "wrong": 5, "fix": ["gageure"], "explain": "Gageure s'écrit avec un e après le g (on prononce « gajure »)." }
+      ],
+      "reading": {
+        "title": "Éloge de la lenteur",
+        "text": "Notre époque voue un culte à la vitesse. Il faut répondre sur-le-champ aux messages, consommer les nouvelles en quelques secondes, enchaîner les activités sans jamais s'accorder de répit. Celui qui prend son temps passe pour un paresseux, voire pour un procrastinateur invétéré. Pourtant, une pléthore d'études suggère que la lenteur n'est pas une faiblesse, mais une ressource. Le cerveau, sollicité sans relâche, finit par s'épuiser ; il a besoin de moments de vacance pour assimiler, relier, créer. Les grandes idées naissent rarement dans la précipitation. Combien de découvertes sont nées d'une promenade, d'une rêverie, d'un après-midi apparemment perdu ? Les philosophes de l'Antiquité le savaient déjà : ils valorisaient le loisir studieux, ce temps soustrait aux affaires et consacré à la réflexion. Faut-il pour autant faire l'apologie de l'inaction ? Assurément pas. Il ne s'agit pas de renoncer à l'efficacité, mais de distinguer l'urgence véritable de l'agitation stérile. Le temps gagné à courir est souvent perdu à réparer. Prendre le temps de lire un livre plutôt que de survoler des titres, écrire une lettre plutôt qu'un message laconique, écouter vraiment son interlocuteur : autant de gestes modestes qui relèvent aujourd'hui de la gageure. Certains y verront un éloge désuet, digne d'un thuriféraire du passé. Ce serait un contresens. La lenteur n'est pas l'apanage des nostalgiques ; elle est la condition d'une pensée libre. Ralentir, c'est reprendre la maîtrise de son temps, et peut-être de sa vie.",
+        "questions": [
+          { "q": "Quelle est la thèse de l'auteur ?", "choices": ["La lenteur est une ressource nécessaire à la pensée", "La vitesse rend plus intelligent", "Il faut renoncer à toute efficacité", "Le passé était meilleur"], "answer": 0, "explain": "La lenteur « n'est pas une faiblesse, mais une ressource »." },
+          { "q": "Pourquoi le cerveau a-t-il besoin de « moments de vacance » ?", "choices": ["Pour assimiler, relier et créer", "Pour dormir davantage", "Pour oublier les mauvaises nouvelles", "Pour répondre plus vite"], "answer": 0, "explain": "Il a besoin de temps « pour assimiler, relier, créer »." },
+          { "q": "Comment l'auteur répond-il à l'objection de l'« apologie de l'inaction » ?", "choices": ["Il distingue l'urgence véritable de l'agitation stérile", "Il l'accepte entièrement", "Il l'ignore", "Il change de sujet"], "answer": 0, "explain": "Il ne renonce pas à l'efficacité : il distingue l'urgence de l'agitation." },
+          { "q": "Que signifie ici « relèvent de la gageure » ?", "choices": ["Sont devenus très difficiles à réaliser", "Sont interdits", "Sont démodés", "Sont faciles"], "answer": 0, "explain": "Une gageure est une entreprise presque impossible." },
+          { "q": "Pourquoi l'auteur parle-t-il d'un « contresens » ?", "choices": ["Son texte n'est pas un éloge nostalgique du passé", "Il s'est trompé de mot", "Les lecteurs ne comprennent pas", "Il défend en réalité la vitesse"], "answer": 0, "explain": "Il anticipe l'objection : la lenteur n'est pas l'apanage des nostalgiques." },
+          { "q": "Quel est le registre dominant du texte ?", "choices": ["Soutenu", "Familier", "Courant et oral", "Argotique"], "answer": 0, "explain": "Vocabulaire choisi (pléthore, gageure, apanage, thuriféraire) : registre soutenu." }
+        ]
+      }
+    },
+    {
+      "id": "9.4",
+      "name": "Faire long feu",
+      "title": "Expressions et locutions : sens, origine, emplois fautifs",
+      "goal": "Comprendre le sens et l'origine d'expressions figées et les employer sans contresens.",
+      "lesson": [
+        { "type": "p", "text": "Les expressions figées ont un sens qui ne se déduit pas toujours de leurs mots. Les connaître, c'est comprendre les nuances d'un texte ; les employer à bon escient, c'est donner du relief à son style." },
+        { "type": "table", "head": ["Expression", "Sens", "Origine"], "rows": [["faire long feu", "échouer (et non durer)", "une charge de poudre qui brûle trop lentement rate son coup"], ["avoir maille à partir", "avoir un différend", "la maille, minuscule monnaie impossible à partager"], ["être sur la sellette", "être mis en cause", "le petit siège bas de l'accusé"], ["défrayer la chronique", "faire beaucoup parler de soi", "défrayer : fournir de quoi alimenter"], ["tirer son épingle du jeu", "se sortir habilement d'une situation", "un ancien jeu d'enfants avec des épingles"], ["prendre des vessies pour des lanternes", "se tromper grossièrement", "des vessies gonflées confondues avec des lanternes"]] },
+        { "type": "rule", "title": "Les contresens fréquents", "text": "**Faire long feu** signifie échouer : [[le projet a fait long feu]] veut dire qu'il a raté, pas qu'il a duré ! **À brûle-pourpoint** signifie « brusquement, sans préparation » ; **au pied levé**, « sans préparation, à l'improviste » ; **de but en blanc**, « directement, sans précaution »." },
+        { "type": "rule", "title": "Ne pas croiser les expressions", "text": "Mélanger deux expressions donne des monstres : on écrit [[il pleut des cordes]] ou [[il pleut à verse]], pas « il pleut à cordes » ; [[fier comme Artaban]], pas « fier comme un paon d'Artaban »." },
+        { "type": "examples", "items": [
+          { "ex": "Sa tentative de fuite **a fait long feu**.", "note": "elle a échoué" },
+          { "ex": "Le ministre est **sur la sellette**.", "note": "mis en cause" },
+          { "ex": "Elle a remplacé la chanteuse **au pied levé**.", "note": "sans préparation" },
+          { "ex": "Il m'a demandé **à brûle-pourpoint** si j'étais heureux.", "note": "brusquement" }
+        ] },
+        { "type": "compare", "title": "Les emplois fautifs", "items": [
+          { "ko": "Ce succès a ~~fait long feu~~ : il dure depuis dix ans.", "ok": "Ce succès **ne s'est jamais démenti** : il dure depuis dix ans.", "why": "Faire long feu signifie échouer." },
+          { "ko": "Il pleut ~~à cordes~~.", "ok": "Il pleut **des cordes**.", "why": "Deux expressions mélangées : il pleut des cordes, il pleut à verse." },
+          { "ko": "Il est fier comme ~~un Artaban~~.", "ok": "Il est fier comme **Artaban**.", "why": "Artaban est un nom propre, sans article." },
+          { "ko": "Il est sur la ~~selle~~.", "ok": "Il est sur la **sellette**.", "why": "La sellette est le siège de l'accusé, pas la selle d'un cheval." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Si tu n'es pas sûr du sens d'une expression, ne l'emploie pas dans une copie : une expression mal comprise coûte plus cher qu'une expression absente." },
+        { "type": "fun", "text": "Le sais-tu ? « Fier comme Artaban » vient d'un personnage de roman du XVIIe siècle, guerrier d'une arrogance légendaire. Le roman est oublié… mais son héros vit encore dans notre langue !" }
+      ],
+      "vocab": [
+        { "mot": "avoir maille à partir", "def": "Avoir un différend, une dispute avec quelqu'un.", "ex": "Il a souvent maille à partir avec ses voisins.", "alt": [] },
+        { "mot": "battre la campagne", "def": "Divaguer, déraisonner ; ou parcourir un pays en tous sens.", "ex": "La fièvre le faisait battre la campagne.", "alt": [] },
+        { "mot": "être sur la sellette", "def": "Être mis en cause, sur le point d'être jugé ou renvoyé.", "ex": "L'entraîneur est sur la sellette après cette défaite.", "alt": [] },
+        { "mot": "faire long feu", "def": "Échouer, ne pas atteindre son but.", "ex": "Leur projet a fait long feu.", "alt": [] },
+        { "mot": "tirer son épingle du jeu", "def": "Se sortir habilement d'une situation difficile.", "ex": "Malgré la crise, elle a su tirer son épingle du jeu.", "alt": [] },
+        { "mot": "un travail de bénédictin", "def": "Un travail long, minutieux et patient.", "ex": "Ce dictionnaire est un travail de bénédictin.", "alt": [] },
+        { "mot": "prendre des vessies pour des lanternes", "def": "Se tromper grossièrement, croire n'importe quoi.", "ex": "Il ne faut pas prendre des vessies pour des lanternes.", "alt": [] },
+        { "mot": "tenir le haut du pavé", "def": "Occuper le premier rang, une position dominante.", "ex": "Cette entreprise tient le haut du pavé dans son secteur.", "alt": [] },
+        { "mot": "avoir voix au chapitre", "def": "Avoir le droit de donner son avis dans une décision.", "ex": "Les élèves ont enfin voix au chapitre.", "alt": [] },
+        { "mot": "fier comme Artaban", "def": "Très orgueilleux.", "ex": "Avec son nouveau vélo, il est fier comme Artaban.", "alt": [] },
+        { "mot": "rompre des lances", "def": "Discuter vivement, polémiquer.", "ex": "Les deux savants ont rompu des lances pendant des années.", "alt": [] },
+        { "mot": "défrayer la chronique", "def": "Faire beaucoup parler de soi.", "ex": "Ce procès a défrayé la chronique.", "alt": [] },
+        { "mot": "à brûle-pourpoint", "def": "Brusquement, sans préparation.", "ex": "Elle m'a posé la question à brûle-pourpoint.", "alt": [] },
+        { "mot": "au pied levé", "def": "Sans préparation, à l'improviste.", "ex": "Il a remplacé le professeur au pied levé.", "alt": [] },
+        { "mot": "de but en blanc", "def": "Directement, sans précaution ni préambule.", "ex": "Il m'a annoncé la nouvelle de but en blanc.", "alt": [] },
+        { "mot": "s'en moquer comme de l'an quarante", "def": "S'en désintéresser complètement.", "ex": "Les critiques, il s'en moque comme de l'an quarante.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Le projet a fait long feu faute d'argent.", "indice": "Un projet abandonné", "trap": ["longtemps"], "alt": [] },
+        { "phrase": "Le directeur est sur la sellette depuis le scandale.", "indice": "Un dirigeant menacé", "trap": ["selle"], "alt": [] },
+        { "phrase": "Elle a remplacé la chanteuse au pied levé.", "indice": "Un remplacement imprévu", "trap": ["levée"], "alt": [] },
+        { "phrase": "Il m'a demandé à brûle-pourpoint si j'étais heureux.", "indice": "Une question inattendue", "trap": ["brûlant"], "alt": [] },
+        { "phrase": "Ce fait divers a défrayé la chronique.", "indice": "Une affaire très médiatisée", "trap": ["défriché"], "alt": [] },
+        { "phrase": "Il a su tirer son épingle du jeu.", "indice": "Une sortie habile", "trap": ["aiguille"], "alt": [] },
+        { "phrase": "Ne prends pas des vessies pour des lanternes !", "indice": "Une mise en garde contre la naïveté", "trap": ["lampions"], "alt": [] },
+        { "phrase": "Elle n'a pas voix au chapitre dans cette affaire.", "indice": "Un avis qui ne compte pas", "trap": ["chapître"], "alt": [] },
+        { "phrase": "Ce catalogue est un travail de bénédictin.", "indice": "Un travail minutieux", "trap": ["moine"], "alt": [] },
+        { "phrase": "Il s'est présenté de but en blanc chez nous.", "indice": "Une visite sans prévenir", "trap": ["bout"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "« Le projet a fait long feu » signifie que…", "choices": ["le projet a échoué", "le projet a duré longtemps", "le projet a brûlé", "le projet a été un grand succès"], "answer": 0, "explain": "Faire long feu : échouer, comme un coup de feu qui ne part pas." },
+        { "type": "mcq", "q": "« Avoir maille à partir avec quelqu'un », c'est…", "choices": ["avoir un différend avec lui", "partir en voyage avec lui", "lui tricoter un pull", "lui devoir de l'argent"], "answer": 0, "explain": "La maille était une petite monnaie impossible à partager : de là, le différend." },
+        { "type": "mcq", "q": "Quelle expression signifie « se tromper grossièrement » ?", "choices": ["prendre des vessies pour des lanternes", "tenir le haut du pavé", "défrayer la chronique", "rompre des lances"], "answer": 0, "explain": "Confondre une vessie gonflée et une lanterne : une erreur grossière." },
+        { "type": "mcq", "q": "« Tenir le haut du pavé », c'est…", "choices": ["occuper une position dominante", "marcher au milieu de la rue", "refaire une route", "avoir peur"], "answer": 0, "explain": "Autrefois, le haut du pavé, le plus propre, était réservé aux gens importants." },
+        { "type": "mcq", "q": "Quelle phrase emploie correctement l'expression ?", "choices": ["Il a été remplacé au pied levé par son adjoint.", "Il marche au pied levé.", "Elle danse au pied levé toute la nuit."], "answer": 0, "explain": "Au pied levé : sans préparation." },
+        { "type": "fill", "q": "Il s'en moque comme de l'an ___.", "hint": "un nombre, en lettres", "answer": ["quarante"], "explain": "S'en moquer comme de l'an quarante : s'en désintéresser complètement." },
+        { "type": "fill", "q": "Avec sa médaille, il est fier comme ___.", "hint": "un personnage de roman", "answer": ["Artaban"], "explain": "Fier comme Artaban, sans article." },
+        { "type": "fill", "q": "Ce scandale a ___ la chronique.", "hint": "faire beaucoup parler : participe passé", "answer": ["défrayé"], "explain": "Défrayer la chronique." },
+        { "type": "fill", "q": "Les deux savants ont rompu des ___ sur cette question.", "hint": "un nom au pluriel", "answer": ["lances"], "explain": "Rompre des lances : polémiquer." },
+        { "type": "fill", "q": "Il a réussi à tirer son ___ du jeu.", "hint": "un nom", "answer": ["épingle"], "explain": "Tirer son épingle du jeu." },
+        { "type": "fill", "q": "Les employés n'ont pas ___ au chapitre.", "hint": "un nom", "answer": ["voix"], "explain": "Avoir voix au chapitre : avoir le droit de donner son avis." },
+        { "type": "fill", "q": "Il m'a annoncé la nouvelle de but en ___.", "hint": "un adjectif de couleur", "answer": ["blanc"], "explain": "De but en blanc : directement." },
+        { "type": "error", "q": "Il est fier comme Arthaban.", "wrong": 4, "fix": ["Artaban"], "explain": "Artaban, sans h." },
+        { "type": "error", "q": "Le ministre est sur la scellette.", "wrong": 5, "fix": ["sellette"], "explain": "Sellette, de selle : un petit siège." },
+        { "type": "error", "q": "Il a été remplacé au pied levée.", "wrong": 6, "fix": ["levé"], "explain": "Le pied levé : levé s'accorde avec pied, masculin." },
+        { "type": "error", "q": "Ce scandale a défrayé la chronic.", "wrong": 5, "fix": ["chronique"], "explain": "Chronique, avec -que." }
+      ],
+      "reading": {
+        "title": "D'où viennent nos expressions ?",
+        "text": "Nous employons chaque jour des expressions dont nous ignorons l'origine. Certaines nous viennent du Moyen Âge ou de l'Ancien Régime, et leur histoire éclaire leur sens. Ainsi, « payer en monnaie de singe » remonterait à un règlement attribué à Saint Louis : pour franchir le Petit-Pont, à Paris, les marchands devaient payer un péage, mais les montreurs de singes en étaient dispensés s'ils faisaient faire quelques tours à leur animal devant le péager. Une grimace remplaçait donc la pièce. De là vient l'idée de payer avec une monnaie qui n'en est pas une, c'est-à-dire de ne pas payer du tout. « Être sur la sellette » évoque le petit siège bas sur lequel on faisait asseoir l'accusé pendant son interrogatoire. Y être assis, c'était se trouver au centre de toutes les attentions, et rarement pour de bonnes raisons. Quant à « faire long feu », l'expression vient des armes à feu d'autrefois : quand la poudre brûlait trop lentement, le coup ne partait pas, ou trop tard pour atteindre sa cible. Elle signifie donc « échouer », et non « durer longtemps », contrairement à ce que l'on entend souvent. D'autres expressions gardent leur mystère. Pourquoi « tombe-t-on dans les pommes » quand on s'évanouit ? Les explications abondent, mais aucune ne fait l'unanimité : on cite parfois une lettre de George Sand évoquant un état d'épuisement qu'elle appelait « être dans les pommes cuites ». Connaître ces origines n'est pas une simple curiosité d'érudit : c'est aussi le meilleur moyen d'employer ces expressions à bon escient, sans contresens.",
+        "questions": [
+          { "q": "D'où viendrait « payer en monnaie de singe » ?", "choices": ["D'un péage où les montreurs de singes payaient par un tour de leur animal", "D'une monnaie à l'effigie d'un singe", "D'un zoo royal", "D'un conte de fées"], "answer": 0, "explain": "Une grimace ou un tour remplaçait la pièce au péage du Petit-Pont." },
+          { "q": "Qu'était la « sellette » ?", "choices": ["Un petit siège bas pour l'accusé", "Une selle de cheval", "Un tabouret de cuisine", "Le fauteuil du juge"], "answer": 0, "explain": "Le petit siège sur lequel on faisait asseoir l'accusé." },
+          { "q": "Pourquoi « faire long feu » signifie-t-il « échouer » ?", "choices": ["Une charge qui brûlait trop lentement faisait rater le tir", "Un feu trop long détruisait tout", "Les soldats se fatiguaient", "La poudre coûtait trop cher"], "answer": 0, "explain": "Le coup partait trop tard ou pas du tout." },
+          { "q": "Que dit le texte de l'origine de « tomber dans les pommes » ?", "choices": ["Elle est discutée : aucune explication ne fait l'unanimité", "Elle est connue avec certitude", "Elle vient d'une chute dans un verger", "Elle date du Moyen Âge"], "answer": 0, "explain": "« Les explications abondent, mais aucune ne fait l'unanimité. »" },
+          { "q": "Selon l'auteur, à quoi sert la connaissance de ces origines ?", "choices": ["À employer les expressions à bon escient", "À briller en société", "À inventer de nouvelles expressions", "À rien de pratique"], "answer": 0, "explain": "C'est « le meilleur moyen d'employer ces expressions à bon escient »." },
+          { "q": "Pourquoi l'auteur emploie-t-il le conditionnel « remonterait » ?", "choices": ["Pour signaler que cette origine n'est pas absolument certaine", "Par politesse", "Parce que c'est une hypothèse avec si", "C'est une faute"], "answer": 0, "explain": "Le conditionnel exprime une information rapportée, non vérifiée." }
+        ]
+      }
+    },
+    {
+      "id": "9.5",
+      "name": "Les briques des mots",
+      "title": "La formation des mots : préfixes, suffixes, familles, racines grecques et latines",
+      "goal": "Décomposer et construire les mots pour en deviner le sens et l'orthographe.",
+      "lesson": [
+        { "type": "p", "text": "La plupart des mots français sont **construits** : un radical, auquel on ajoute des **préfixes** (devant) et des **suffixes** (derrière). Connaître ces briques permet de deviner le sens des mots inconnus… et leur orthographe." },
+        { "type": "table", "head": ["Préfixe", "Sens", "Exemples"], "rows": [["in-, im-, il-, ir-", "le contraire", "inutile, impossible, illisible, irréel"], ["dé-, dés-", "séparation, contraire", "défaire, désordre"], ["re-, ré-", "répétition", "refaire, réécrire"], ["pré-", "avant", "prévoir, préhistoire"], ["anti-", "contre", "antivol, antidote"], ["mal-, mé-", "mal, mauvais", "malheureux, mécontent"], ["sur-", "au-dessus, excès", "surpeuplé, surenchère"], ["sous-", "en dessous, insuffisance", "sous-sol, sous-estimer"]] },
+        { "type": "rule", "title": "D'où viennent les doubles consonnes", "text": "Devant un radical qui commence par l, m ou r, le préfixe in- s'assimile : [[illégal]], [[immature]], [[irréaliste]]. De même, ad- devient ac-, af-, ap-, ar-… : [[accourir]], [[affaiblir]], [[apporter]], [[arranger]]. Voilà l'origine de beaucoup de doubles consonnes !" },
+        { "type": "rule", "title": "Les suffixes", "text": "**-tion, -ment, -age, -ure** forment des noms d'action ([[construction]], [[changement]], [[lavage]], [[ouverture]]) ; **-eur, -ier, -iste, -ien** des noms de personnes ([[nageur]], [[pompier]], [[pianiste]], [[musicien]]) ; **-able, -ible** des adjectifs de possibilité ([[lavable]], [[lisible]]) ; **-ité, -esse, -isme** des noms abstraits ([[rapidité]], [[politesse]], [[optimisme]])." },
+        { "type": "rule", "title": "Les racines grecques et latines", "text": "Le vocabulaire savant puise dans le grec et le latin : **chrono** (temps), **graph** (écrire), **phone** (son), **bio** (vie), **géo** (terre), **logie** (étude), **poly** (plusieurs), **phile** (qui aime), **omni** (tout), **-vore** (qui mange). [[chronologie]], [[polyglotte]], [[omnivore]], [[philanthrope]]." },
+        { "type": "examples", "items": [
+          { "ex": "Un texte qu'on ne peut pas lire est **illisible**.", "note": "il + lisible : deux l" },
+          { "ex": "Ce gâteau brûlé est **immangeable**.", "note": "im + mangeable : deux m" },
+          { "ex": "Ma tante, **polyglotte**, parle six langues.", "note": "poly (plusieurs) + glotte (langue)" },
+          { "ex": "Cet **autodidacte** a tout appris seul.", "note": "auto (soi-même) + didacte (qui enseigne)" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "~~inlégal~~", "ok": "**illégal**", "why": "Devant l, in- devient il-." },
+          { "ko": "~~imangeable~~", "ok": "**immangeable**", "why": "Im + mangeable : on garde les deux m." },
+          { "ko": "~~iréel~~", "ok": "**irréel**", "why": "Devant r, in- devient ir- : deux r." },
+          { "ko": "~~raporter~~", "ok": "**rapporter**", "why": "Re + apporter, et apporter vient de ad + porter : deux p." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Pour vérifier une double consonne, cherche le préfixe : [[il + lisible]] → illisible ; [[ir + respirable]] → irrespirable ; [[ap + porter]] → apporter. Mais attention : [[inutile]], [[inégal]] n'ont qu'un n, car le radical commence par une voyelle." },
+        { "type": "fun", "text": "Le sais-tu ? « Hippopotame » signifie « cheval du fleuve » en grec (hippos, le cheval ; potamos, le fleuve). Et « hippodrome » ? La piste de course (dromos) des chevaux !" }
+      ],
+      "vocab": [
+        { "mot": "illisible", "def": "Qu'on ne peut pas lire.", "ex": "Le médecin a une écriture illisible.", "alt": [] },
+        { "mot": "irréfutable", "def": "Qu'on ne peut pas contester par des arguments.", "ex": "La preuve est irréfutable.", "alt": [] },
+        { "mot": "immangeable", "def": "Si mauvais qu'on ne peut pas le manger.", "ex": "Ce rôti trop cuit est immangeable.", "alt": [] },
+        { "mot": "imprévisible", "def": "Qu'on ne peut pas prévoir.", "ex": "Le climat de cette île est imprévisible.", "alt": [] },
+        { "mot": "désobéissance", "def": "Refus d'obéir.", "ex": "Sa désobéissance lui a valu une punition.", "alt": [] },
+        { "mot": "prédécesseur", "def": "Personne qui a occupé une fonction avant une autre.", "ex": "Le nouveau maire a salué son prédécesseur.", "alt": [] },
+        { "mot": "antidote", "def": "Remède contre un poison.", "ex": "Il existe un antidote à ce venin.", "alt": [] },
+        { "mot": "méconnaissable", "def": "Si changé qu'on ne peut plus le reconnaître.", "ex": "Avec sa barbe, il est méconnaissable.", "alt": [] },
+        { "mot": "surenchère", "def": "Fait de proposer toujours plus que les autres.", "ex": "Les candidats se livrent à une surenchère de promesses.", "alt": [] },
+        { "mot": "sous-estimer", "def": "Juger une chose ou une personne inférieure à ce qu'elle est.", "ex": "Il ne faut jamais sous-estimer son adversaire.", "alt": [] },
+        { "mot": "chronomètre", "def": "Montre très précise qui mesure des durées.", "ex": "L'entraîneur déclenche son chronomètre.", "alt": [] },
+        { "mot": "omnivore", "def": "Qui se nourrit d'aliments de toutes sortes, végétaux et animaux.", "ex": "L'ours est un animal omnivore.", "alt": [] },
+        { "mot": "philanthrope", "def": "Personne qui aide généreusement les autres.", "ex": "Un riche philanthrope a financé l'hôpital.", "alt": [] },
+        { "mot": "misanthrope", "def": "Personne qui fuit la compagnie des hommes, qui ne les aime pas.", "ex": "Le vieux misanthrope vivait seul au fond des bois.", "alt": [] },
+        { "mot": "polyglotte", "def": "Qui parle plusieurs langues.", "ex": "Ce guide polyglotte parle cinq langues.", "alt": [] },
+        { "mot": "autodidacte", "def": "Personne qui s'est instruite seule, sans maître.", "ex": "Ce peintre est un autodidacte.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Ton écriture sur cette copie est illisible.", "indice": "Une copie difficile à lire", "trap": ["ilisible", "inlisible"], "alt": [] },
+        { "phrase": "Cet argument de l'avocat est absolument irréfutable.", "indice": "Une preuve définitive", "trap": ["iréfutable"], "alt": [] },
+        { "phrase": "Ce gâteau brûlé est vraiment immangeable.", "indice": "Une pâtisserie ratée", "trap": ["imangeable"], "alt": [] },
+        { "phrase": "La météo de la montagne est imprévisible.", "indice": "Un temps changeant", "trap": ["inprévisible"], "alt": [] },
+        { "phrase": "Mon prédécesseur a laissé des notes précieuses.", "indice": "Un passage de témoin", "trap": ["prédécésseur"], "alt": [] },
+        { "phrase": "Il faut recycler le papier et le verre.", "indice": "Un geste pour la planète", "trap": ["recycller"], "alt": [] },
+        { "phrase": "Le chimpanzé est un animal omnivore.", "indice": "Un régime varié", "trap": ["omnivor"], "alt": [] },
+        { "phrase": "Ma tante, polyglotte, parle six langues.", "indice": "Une tante très douée", "trap": ["poliglotte"], "alt": [] },
+        { "phrase": "Cet autodidacte a tout appris seul.", "indice": "Un savoir sans école", "trap": ["autodidate"], "alt": [] },
+        { "phrase": "Il ne faut pas sous-estimer cet adversaire.", "indice": "Un conseil avant un match", "trap": ["sousestimer"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Quel est le contraire de « légal » ?", "choices": ["illégal", "inlégal", "délégal"], "answer": 0, "explain": "Devant l, in- devient il- : illégal." },
+        { "type": "mcq", "q": "Ce qu'on ne peut pas réparer est ___.", "choices": ["irréparable", "iréparable", "inréparable"], "answer": 0, "explain": "Devant r, in- devient ir- : deux r." },
+        { "type": "mcq", "q": "Que signifie le préfixe « pré- » dans « préhistoire » ?", "choices": ["avant", "après", "contre"], "answer": 0, "explain": "La préhistoire est la période d'avant l'histoire écrite." },
+        { "type": "mcq", "q": "Que signifie la racine grecque « chrono » ?", "choices": ["le temps", "la couleur", "la vie"], "answer": 0, "explain": "Chronologie, chronomètre : le temps." },
+        { "type": "mcq", "q": "Un animal qui se nourrit de viande est…", "choices": ["carnivore", "herbivore", "omnivore"], "answer": 0, "explain": "Carni (chair) + -vore (qui mange)." },
+        { "type": "fill", "q": "Ce qu'on ne peut pas croire est ___.", "hint": "croire → adjectif avec in-", "answer": ["incroyable"], "explain": "In + croyable." },
+        { "type": "fill", "q": "Le contraire de « mature » est « ___ ».", "hint": "le préfixe in- devant m", "answer": ["immature"], "explain": "Devant m, in- devient im- : immature." },
+        { "type": "fill", "q": "Le nom formé sur « rapide » est la ___.", "hint": "suffixe -ité", "answer": ["rapidité"], "explain": "Rapide + -ité." },
+        { "type": "fill", "q": "Celui qui joue du violon est un ___.", "hint": "suffixe -iste", "answer": ["violoniste"], "explain": "Violon + -iste." },
+        { "type": "fill", "q": "Ce qu'on peut laver est ___.", "hint": "suffixe -able", "answer": ["lavable"], "explain": "Lav(er) + -able." },
+        { "type": "fill", "q": "Le contraire de « réaliste » est « ___ ».", "hint": "le préfixe in- devant r", "answer": ["irréaliste"], "explain": "Devant r, in- devient ir- : irréaliste." },
+        { "type": "fill", "q": "Écrire de nouveau, c'est ___.", "hint": "préfixe ré-", "answer": ["réécrire"], "explain": "Ré + écrire." },
+        { "type": "error", "q": "Cette situation est inréversible.", "wrong": 3, "fix": ["irréversible"], "explain": "Devant r, in- devient ir- : irréversible." },
+        { "type": "error", "q": "Ce texte est ilisible.", "wrong": 3, "fix": ["illisible"], "explain": "Il + lisible : deux l." },
+        { "type": "error", "q": "Ce plat est imangeable.", "wrong": 3, "fix": ["immangeable"], "explain": "Im + mangeable : deux m." },
+        { "type": "error", "q": "Il faut aporter des preuves.", "wrong": 2, "fix": ["apporter"], "explain": "Ap + porter : deux p." }
+      ],
+      "reading": {
+        "title": "Comment naissent les mots",
+        "text": "Chaque année, des centaines de mots nouveaux entrent dans nos dictionnaires. Comment naissent-ils ? Le plus souvent, ils ne sont pas inventés de toutes pièces : ils sont fabriqués avec des briques existantes. Les préfixes et les suffixes permettent de créer à volonté : de « mondial » on a tiré « mondialisation », puis « démondialisation » ; de « courriel » est né « pourriel », pour désigner les messages indésirables. D'autres mots sont des mots-valises, qui fusionnent deux termes : « franglais » mêle français et anglais, « adulescent » désigne un adulte qui se comporte en adolescent. Certains mots viennent aussi d'un nom propre : « poubelle » rend hommage au préfet Eugène Poubelle, qui imposa les boîtes à ordures aux Parisiens. Les sciences, quant à elles, puisent dans le grec et le latin : « télévision » associe le grec « télé » (loin) et le latin « visio » (la vue). Certains puristes s'inquiètent de cette prolifération : ils redoutent une langue envahie de termes mal formés. Pourtant, la création lexicale est le signe d'une langue vivante. Le français a toujours emprunté, transformé, inventé : au XVIe siècle déjà, les poètes de la Pléiade recommandaient d'enrichir la langue en forgeant des mots nouveaux à partir du grec et du latin. Le véritable danger n'est pas le néologisme, mais l'appauvrissement : employer toujours les mêmes mots vagues, faute de connaître les mots précis qui existent déjà. Avant d'inventer un terme, il est donc sage de vérifier qu'il ne dort pas, oublié, dans un dictionnaire.",
+        "questions": [
+          { "q": "Comment naissent le plus souvent les mots nouveaux ?", "choices": ["À partir de briques existantes : préfixes, suffixes, racines", "Par pur hasard", "Par décision de l'Académie seule", "Par emprunt à l'anglais uniquement"], "answer": 0, "explain": "« Ils sont fabriqués avec des briques existantes. »" },
+          { "q": "Qu'est-ce qu'un mot-valise ?", "choices": ["Un mot qui fusionne deux mots", "Un mot très long", "Un mot étranger", "Un mot ancien oublié"], "answer": 0, "explain": "Franglais, adulescent : deux mots fondus en un." },
+          { "q": "Que signifie « télé » en grec ?", "choices": ["Loin", "Image", "Son", "Écran"], "answer": 0, "explain": "Télé : loin ; la télévision, c'est la vue à distance." },
+          { "q": "Que recommandaient les poètes de la Pléiade ?", "choices": ["D'enrichir la langue avec des mots forgés sur le grec et le latin", "D'interdire les mots nouveaux", "D'écrire en latin", "D'emprunter seulement à l'italien"], "answer": 0, "explain": "Ils voulaient enrichir le français en forgeant des mots nouveaux." },
+          { "q": "Selon l'auteur, quel est le véritable danger pour la langue ?", "choices": ["L'appauvrissement du vocabulaire", "Les néologismes", "Les mots-valises", "Les dictionnaires"], "answer": 0, "explain": "« Le véritable danger n'est pas le néologisme, mais l'appauvrissement. »" },
+          { "q": "Quel conseil final l'auteur donne-t-il ?", "choices": ["Vérifier qu'un mot précis n'existe pas déjà avant d'en inventer un", "Inventer un mot chaque jour", "Éviter tous les mots savants", "Ne jamais ouvrir un dictionnaire"], "answer": 0, "explain": "Vérifier qu'il « ne dort pas, oublié, dans un dictionnaire »." }
+        ]
+      }
+    }
+  ]
+}

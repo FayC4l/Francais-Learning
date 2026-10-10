@@ -1,0 +1,120 @@
+{
+  "level": 9,
+  "units": [
+    {
+      "unit": "9.1",
+      "dictee": {
+        "titre": "La dernière conférence",
+        "texte": "L'éminent professeur Duval, dont le départ à la retraite est imminent, a donné hier sa dernière conférence. Dans la conjoncture actuelle, nous a-t-il dit, il faut se garder des conjectures hâtives. Son exposé, prévu pour une heure, a bénéficié d'une prolongation d'une demi-heure, tant les questions affluaient. Un retardataire a même fait irruption dans l'amphithéâtre en pleine séance, ce qui a provoqué une éruption de rires. Le professeur, imperturbable, a poursuivi. Avant de partir, il nous a confié qu'il avait recouvré, au contact des étudiants, une énergie qu'il croyait perdue. Nous étions tous profondément affligés de le voir s'en aller.",
+        "points": [
+          "**éminent** (remarquable) et **imminent** (tout proche).",
+          "**conjoncture** (la situation) et **conjectures** (les suppositions).",
+          "**prolongation** : un allongement dans le temps.",
+          "**irruption** (entrée brusque) et **éruption** (jaillissement) ; **recouvré** : retrouvé ; **affligés** : attristés."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Écris cinq phrases qui emploient correctement cinq paronymes de la station (éminent, imminent, effraction, infraction, conjoncture, collision, irruption…).",
+        "model": "Un éminent chercheur viendra au lycée demain. Son arrivée est imminente : la salle est prête. Hier, un cambrioleur est entré par effraction dans la pharmacie. Brûler un feu rouge est une infraction grave. Quand le chat a fait irruption dans la classe, tout le monde a ri.",
+        "checklist": [
+          "Chaque paronyme est employé dans son sens exact.",
+          "J'ai vérifié la famille du mot (enfreindre → infraction).",
+          "Je n'ai pas confondu éruption et irruption."
+        ]
+      }
+    },
+    {
+      "unit": "9.2",
+      "dictee": {
+        "titre": "La réunion des copropriétaires",
+        "texte": "La réunion des copropriétaires a commencé à vingt heures précises. Le président a d'abord rappelé les problèmes de l'immeuble : l'ascenseur tombe en panne chaque semaine, et le chauffage ne suffit pas à pallier le froid de l'hiver. Une voisine a pris la parole pour proposer qu'on remédie à ces difficultés sans attendre. Bien que la discussion ait été animée, chacun a fini par se rendre compte que l'entretien coûterait moins cher que l'inaction. Je me rappelle encore la conclusion du président : « Nous sommes tous dans le même bateau. » Personne n'a osé lui faire remarquer que le bateau prenait l'eau par le toit.",
+        "points": [
+          "**pallier le froid** : pallier se construit sans à. **remédie à** : remédier, lui, se construit avec à.",
+          "**se rendre compte** : et non « réaliser ».",
+          "**Je me rappelle la conclusion** : se rappeler quelque chose, sans de.",
+          "**Bien que la discussion ait été** : bien que + subjonctif (et non malgré que)."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Lis à voix haute ces phrases et corrige-les à l'oral, puis écris la version corrigée : « Au jour d'aujourd'hui, il faut pallier à ce problème. Je me rappelle de cette réunion où nous avons collaboré ensemble. Malgré qu'il pleuve, nous sommes sortis dehors. »",
+        "model": "Aujourd'hui, il faut pallier ce problème. Je me rappelle cette réunion où nous avons collaboré. Bien qu'il pleuve, nous sommes sortis.",
+        "checklist": [
+          "J'ai supprimé les pléonasmes (au jour d'aujourd'hui, collaborer ensemble, sortir dehors).",
+          "Pallier sans à ; se rappeler sans de.",
+          "Bien que à la place de malgré que."
+        ]
+      }
+    },
+    {
+      "unit": "9.3",
+      "dictee": {
+        "titre": "L'écrivain prolixe",
+        "texte": "Victor était un écrivain prolixe : chacun de ses romans dépassait mille pages. Son éditeur, homme laconique, se contentait de lui renvoyer ses manuscrits avec un seul mot dans la marge : « Trop. » Un jour, Victor décida de relever la gageure : écrire une nouvelle de dix lignes. Il procrastina pendant de longues semaines, puis se mit au travail, polit chaque phrase, traqua la moindre vétille. Le texte qu'il remit enfin était si dense, si sibyllin, que l'éditeur dut le relire trois fois. Sa réponse, cette fois, fut dithyrambique : « Parfait. » Victor en conçut une telle fierté qu'il entreprit aussitôt d'en écrire une suite… de mille pages.",
+        "points": [
+          "**prolixe** (trop long) et **laconique** (bref) : deux contraires.",
+          "**gageure** : un e après le g, que l'on prononce « gajure ».",
+          "**vétille** : deux l. **sibyllin** : i, puis y, puis deux l.",
+          "**dithyrambique** : th, puis y. **conçut** : passé simple de concevoir, avec une cédille."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Réécris ce paragraphe en remplaçant les verbes faire, avoir, mettre et dire par des verbes précis : « Le directeur a fait un discours. Il a dit que l'école avait des problèmes. On a mis en place un plan et on a fait des efforts. »",
+        "model": "Le directeur a prononcé un discours. Il a souligné que l'école rencontrait des difficultés. Un plan a été instauré et chacun a fourni des efforts.",
+        "checklist": [
+          "J'ai remplacé chaque verbe passe-partout par un verbe précis.",
+          "Mes phrases restent claires et naturelles.",
+          "J'ai vérifié les accords des participes."
+        ]
+      }
+    },
+    {
+      "unit": "9.4",
+      "dictee": {
+        "titre": "Le maire sur la sellette",
+        "texte": "Depuis le début de l'affaire, le maire est sur la sellette. Ses adversaires, qui ont maille à partir avec lui depuis des années, ont rompu des lances lors du dernier conseil municipal. Le scandale a défrayé la chronique jusque dans la presse nationale. Pourtant, l'élu a su tirer son épingle du jeu : remplacé au pied levé par son adjointe pour présenter le budget, il a ensuite répondu de but en blanc à toutes les questions. Ceux qui espéraient sa démission en ont été pour leurs frais : leur offensive a fait long feu. Le soir même, il paradait sur la place du marché, fier comme Artaban.",
+        "points": [
+          "**sellette** : le petit siège de l'accusé, avec deux l et deux t.",
+          "**défrayé la chronique** : fait beaucoup parler.",
+          "**au pied levé** (sans préparation), **de but en blanc** (directement).",
+          "**a fait long feu** : a échoué. **Artaban** : un nom propre, sans article."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Raconte à voix haute une petite histoire, vraie ou inventée, avec au moins quatre expressions de la station (au pied levé, faire long feu, tirer son épingle du jeu, de but en blanc…). Puis écris-la.",
+        "model": "Le jour du spectacle, notre chanteuse est tombée malade. Lina l'a remplacée au pied levé. Au début, la salle était sceptique, mais Lina a su tirer son épingle du jeu. Le directeur, qui voulait annuler la soirée, a vu son projet faire long feu. Après le spectacle, il lui a demandé de but en blanc si elle voulait rejoindre la troupe.",
+        "checklist": [
+          "J'ai employé au moins quatre expressions.",
+          "Chaque expression a son sens exact (faire long feu = échouer).",
+          "Je n'ai pas modifié la forme figée des expressions."
+        ]
+      }
+    },
+    {
+      "unit": "9.5",
+      "dictee": {
+        "titre": "Le grand-père qui aimait les mots",
+        "texte": "Mon grand-père, autodidacte et polyglotte, adorait décortiquer les mots. Il m'expliquait qu'un texte illisible ne peut pas être lu, qu'un argument irréfutable ne peut pas être réfuté, et qu'un plat immangeable ne doit surtout pas être servi aux invités. Il me montrait comment le préfixe in- se transforme devant l, m ou r, d'où les doubles consonnes qui piègent tant d'élèves. Grâce à lui, je sais que le philanthrope aime l'humanité, que le misanthrope la fuit, et que l'hippopotame est un cheval du fleuve. Je lui dois mon goût des dictionnaires, que je feuillette encore avec une curiosité toujours insatiable.",
+        "points": [
+          "**illisible**, **irréfutable**, **immangeable** : le préfixe in- devient il-, ir-, im- et double la consonne.",
+          "**autodidacte**, **polyglotte**, **philanthrope**, **misanthrope** : des mots formés sur des racines grecques.",
+          "**hippopotame** : hippos (cheval) + potamos (fleuve).",
+          "**insatiable** : in + satiable, qu'on ne peut rassasier."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Invente trois mots nouveaux à partir de préfixes, de suffixes ou de racines grecques et latines, et donne leur définition et un exemple, comme dans un dictionnaire.",
+        "model": "Bibliovore (nom) : personne qui dévore les livres, de biblio (livre) et -vore (qui mange). Ma sœur est une bibliovore insatiable. Anti-lundi (adjectif) : qui combat la tristesse du lundi matin. Voici ma chanson anti-lundi. Paperassophobe (adjectif) : qui fuit la paperasse, de paperasse et -phobe (qui craint). Mon père est paperassophobe.",
+        "checklist": [
+          "Chaque mot nouveau est formé de briques existantes.",
+          "J'ai expliqué l'origine de chaque brique.",
+          "J'ai donné un exemple d'emploi."
+        ]
+      }
+    }
+  ]
+}
