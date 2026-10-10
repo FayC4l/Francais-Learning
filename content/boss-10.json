@@ -1,0 +1,86 @@
+{
+  "level": 10,
+  "taunts": {
+    "phase2": [
+      "Tout ce qui est rare est cher. Or un cheval bon marché est rare. Donc un cheval bon marché est cher. Contredis-moi, si tu peux !",
+      "Certes, tu as répondu juste… néanmoins, tu as eu de la chance. Donc tu n'as aucun mérite. Imparable.",
+      "Écris, maintenant ! Et que chaque connecteur te trahisse !"
+    ],
+    "phase3": [
+      "Dernier round : quoique ou quoi que ? Quoi que tu choisisses, tu auras tort.",
+      "Ta copie est une métaphore de l'échec. Et ça, au moins, c'est une figure de style.",
+      "Résumons : tu vas perdre. Synthèse : tu vas perdre. Conclusion : devine."
+    ],
+    "lose": [
+      "J'avais raison, puisque j'ai gagné. Et j'ai gagné, puisque j'avais raison. Imparable !",
+      "Ton argumentation manque d'arguments. C'est fâcheux, pour une argumentation.",
+      "Reviens quand tes connecteurs relieront vraiment quelque chose."
+    ]
+  },
+  "questions": [
+    { "unit": "10.1", "type": "mcq", "q": "Il est riche ; ___, il est malheureux.", "choices": ["pourtant", "donc", "ainsi"], "answer": 0, "explain": "Le malheur contredit la richesse attendue : une concession." },
+    { "unit": "10.1", "type": "mcq", "q": "La route était glissante ; ___, il a roulé lentement.", "choices": ["c'est pourquoi", "néanmoins", "en revanche"], "answer": 0, "explain": "Rouler lentement est la conséquence : c'est pourquoi." },
+    { "unit": "10.1", "type": "mcq", "q": "J'aime le café ; ___, je déteste le thé.", "choices": ["en revanche", "par conséquent", "en effet"], "answer": 0, "explain": "Deux goûts opposés : en revanche." },
+    { "unit": "10.1", "type": "mcq", "q": "Il a réussi. ___, il avait beaucoup travaillé.", "choices": ["En effet", "Pourtant", "En revanche"], "answer": 0, "explain": "La seconde phrase justifie la première : en effet." },
+    { "unit": "10.1", "type": "fill", "q": "Ce restaurant est cher ; de ___, le service est lent.", "hint": "addition, mot soutenu", "answer": ["surcroît"], "explain": "De surcroît : en plus." },
+    { "unit": "10.1", "type": "fill", "q": "Il est tard ; ___, nous allons rentrer.", "hint": "conséquence, un mot", "answer": ["donc", "ainsi"], "explain": "Un connecteur de conséquence." },
+    { "unit": "10.1", "type": "fill", "q": "Les élèves sont épuisés ; ___ dit, ils ont besoin de repos.", "hint": "reformulation", "answer": ["autrement"], "explain": "Autrement dit : en d'autres termes." },
+    { "unit": "10.1", "type": "fill", "q": "Il dit qu'il était malade ; ___ on l'a vu à la plage.", "hint": "élément nouveau du raisonnement", "answer": ["or"], "explain": "Or introduit le fait qui ruine son excuse." },
+    { "unit": "10.1", "type": "fill", "q": "Quoi qu'il en ___, nous partirons demain.", "hint": "être, au subjonctif présent", "answer": ["soit"], "explain": "Quoi qu'il en soit : expression figée au subjonctif." },
+    { "unit": "10.1", "type": "error", "q": "Il a beaucoup révisé ; pourtant, il a obtenu une excellente note.", "wrong": 4, "fix": ["ainsi", "donc"], "explain": "La bonne note découle des révisions : une conséquence, pas une concession." },
+    { "unit": "10.1", "type": "error", "q": "Hors, la loi interdit cette pratique.", "wrong": 0, "fix": ["Or"], "explain": "Le connecteur s'écrit or." },
+    { "unit": "10.1", "type": "error", "q": "Elle est douée ; néanmoins, elle a gagné.", "wrong": 3, "fix": ["ainsi", "d'ailleurs"], "explain": "La victoire confirme le talent : pas de concession." },
+
+    { "unit": "10.2", "type": "mcq", "q": "Dans un texte qui défend la limitation des écrans, « les écrans nuisent au sommeil » est…", "choices": ["un argument", "une accroche", "une ouverture"], "answer": 0, "explain": "C'est une raison qui soutient la thèse." },
+    { "unit": "10.2", "type": "mcq", "q": "Que contient l'introduction ?", "choices": ["accroche, problématique, annonce du plan", "arguments et exemples", "bilan et ouverture"], "answer": 0, "explain": "Les trois temps de l'introduction." },
+    { "unit": "10.2", "type": "mcq", "q": "Quel est le rôle d'un exemple ?", "choices": ["illustrer concrètement un argument", "annoncer le plan", "conclure le devoir"], "answer": 0, "explain": "L'exemple rend l'argument concret." },
+    { "unit": "10.2", "type": "mcq", "q": "Quel plan convient au sujet « Les causes et les conséquences de la pollution » ?", "choices": ["un plan analytique", "un plan dialectique", "un plan chronologique"], "answer": 0, "explain": "Expliquer un problème : plan analytique." },
+    { "unit": "10.2", "type": "fill", "q": "La ___ est la question à laquelle répond le devoir.", "hint": "un nom", "answer": ["problématique"], "explain": "La problématique." },
+    { "unit": "10.2", "type": "fill", "q": "Le plan dialectique oppose une thèse et une ___.", "hint": "un nom", "answer": ["antithèse"], "explain": "Thèse, antithèse, synthèse." },
+    { "unit": "10.2", "type": "fill", "q": "Un argument sans exemple n'est pas ___.", "hint": "étayer, au participe passé", "answer": ["étayé"], "explain": "Étayer : soutenir par des preuves." },
+    { "unit": "10.2", "type": "fill", "q": "Une dissertation comprend l'introduction, le ___ et la conclusion.", "hint": "un nom", "answer": ["développement"], "explain": "Le développement est la partie centrale." },
+    { "unit": "10.2", "type": "fill", "q": "Faire appel à la raison, c'est jouer sur le ___.", "hint": "un mot grec", "answer": ["logos"], "explain": "Logos : la raison." },
+    { "unit": "10.2", "type": "error", "q": "La conclusion doit annoncer le plan.", "wrong": 1, "fix": ["introduction"], "explain": "C'est l'introduction qui annonce le plan." },
+    { "unit": "10.2", "type": "error", "q": "Chaque argument doit être illustrer par un exemple.", "wrong": 4, "fix": ["illustré"], "explain": "Après être, le participe passé : illustré." },
+    { "unit": "10.2", "type": "error", "q": "L'accroche se place à la fin du devoir.", "wrong": 0, "fix": ["L'ouverture"], "explain": "L'accroche ouvre l'introduction ; l'ouverture termine la conclusion." },
+
+    { "unit": "10.3", "type": "mcq", "q": "Bien qu'il ___ tard, je reste.", "choices": ["soit", "est", "sera"], "answer": 0, "explain": "Bien que + subjonctif." },
+    { "unit": "10.3", "type": "mcq", "q": "___ que tu fasses, fais-le avec cœur.", "choices": ["Quoi", "Quoique", "Quel"], "answer": 0, "explain": "Quoi que, en deux mots : quelle que soit la chose que." },
+    { "unit": "10.3", "type": "mcq", "q": "Il a ___ protester, rien n'y fait.", "choices": ["beau", "beaux", "belle"], "answer": 0, "explain": "Avoir beau : beau invariable." },
+    { "unit": "10.3", "type": "mcq", "q": "___ soit le prix, je l'achète.", "choices": ["Quel que", "Quelque", "Quelle que"], "answer": 0, "explain": "Devant être, quel que s'accorde avec prix (masculin)." },
+    { "unit": "10.3", "type": "fill", "q": "Même s'il ___ froid, nous sortirons.", "hint": "faire : indicatif ou subjonctif ?", "answer": ["fait"], "explain": "Même si + indicatif." },
+    { "unit": "10.3", "type": "fill", "q": "Quoiqu'il ___ raison, il s'est excusé.", "hint": "avoir : indicatif ou subjonctif ?", "answer": ["ait"], "explain": "Quoique + subjonctif." },
+    { "unit": "10.3", "type": "fill", "q": "___ que soient tes doutes, essaie.", "hint": "quel que, accordé", "answer": ["Quels"], "explain": "Accord avec doutes : masculin pluriel." },
+    { "unit": "10.3", "type": "fill", "q": "Si courageux qu'il ___, il a eu peur.", "hint": "être, au subjonctif présent", "answer": ["soit"], "explain": "Si… que + subjonctif." },
+    { "unit": "10.3", "type": "fill", "q": "Elles ont ___ insister, je ne céderai pas.", "hint": "avoir beau", "answer": ["beau"], "explain": "Beau reste invariable." },
+    { "unit": "10.3", "type": "error", "q": "Quoique tu penses, j'irai.", "wrong": 0, "fix": ["Quoi que"], "explain": "Quelle que soit la chose que tu penses : en deux mots." },
+    { "unit": "10.3", "type": "error", "q": "Bien qu'il est fatigué, il travaille.", "wrong": 2, "fix": ["soit"], "explain": "Bien que + subjonctif." },
+    { "unit": "10.3", "type": "error", "q": "Quelque soit ton avis, je partirai.", "wrong": 0, "fix": ["Quel que"], "explain": "Devant être : quel que, accordé avec avis." },
+
+    { "unit": "10.4", "type": "mcq", "q": "« Il pleut des cordes » est…", "choices": ["une hyperbole", "une litote", "un oxymore"], "answer": 0, "explain": "Une exagération imagée : hyperbole." },
+    { "unit": "10.4", "type": "mcq", "q": "« Va, je ne te hais point » (Corneille) est…", "choices": ["une litote", "une hyperbole", "une anaphore"], "answer": 0, "explain": "Chimène dit moins pour faire entendre « je t'aime »." },
+    { "unit": "10.4", "type": "mcq", "q": "« Un merveilleux malheur » est…", "choices": ["un oxymore", "une comparaison", "un chiasme"], "answer": 0, "explain": "Deux termes contraires réunis." },
+    { "unit": "10.4", "type": "mcq", "q": "« Elle est belle comme le jour » est…", "choices": ["une comparaison", "une métaphore", "une métonymie"], "answer": 0, "explain": "Outil de comparaison : comme." },
+    { "unit": "10.4", "type": "fill", "q": "« Les flots grondent de colère » est une ___.", "hint": "des traits humains prêtés à une chose", "answer": ["personnification"], "explain": "La mer reçoit un sentiment humain." },
+    { "unit": "10.4", "type": "fill", "q": "« Le roi des animaux » pour « le lion » est une ___.", "hint": "plusieurs mots pour un seul", "answer": ["périphrase"], "explain": "La périphrase." },
+    { "unit": "10.4", "type": "fill", "q": "« Toute la salle applaudit » pour « tous les spectateurs » est une ___.", "hint": "le lieu pour les personnes", "answer": ["métonymie"], "explain": "Le contenant pour le contenu : métonymie." },
+    { "unit": "10.4", "type": "fill", "q": "Une métaphore prolongée sur plusieurs phrases est une métaphore ___.", "hint": "un adjectif", "answer": ["filée"], "explain": "Une métaphore filée." },
+    { "unit": "10.4", "type": "fill", "q": "La répétition d'un même son consonne s'appelle une ___.", "hint": "un nom", "answer": ["allitération"], "explain": "L'allitération." },
+    { "unit": "10.4", "type": "error", "q": "Cette comparaizon est originale.", "wrong": 1, "fix": ["comparaison"], "explain": "Comparaison, avec un s." },
+    { "unit": "10.4", "type": "error", "q": "L'euphémismme adoucit la réalité.", "wrong": 0, "fix": ["L'euphémisme"], "explain": "Euphémisme, avec un seul m final." },
+    { "unit": "10.4", "type": "error", "q": "Ce poème contient une allitérasion en r.", "wrong": 4, "fix": ["allitération"], "explain": "Allitération, avec -tion." },
+
+    { "unit": "10.5", "type": "mcq", "q": "Le nom formé sur « organiser » est…", "choices": ["l'organisation", "l'organisement", "l'organisance"], "answer": 0, "explain": "Organiser → l'organisation." },
+    { "unit": "10.5", "type": "mcq", "q": "Dans une synthèse, peut-on donner son avis ?", "choices": ["Non, elle reste objective", "Oui, dans chaque paragraphe", "Oui, dès l'introduction"], "answer": 0, "explain": "La synthèse confronte les documents sans opinion personnelle." },
+    { "unit": "10.5", "type": "mcq", "q": "Quelle formule sert à citer une source dans une synthèse ?", "choices": ["Selon le document 3, …", "Je pense que…", "À mon avis, …"], "answer": 0, "explain": "On cite les documents, pas son avis." },
+    { "unit": "10.5", "type": "mcq", "q": "Que fait-on des exemples dans un résumé ?", "choices": ["On les supprime ou on les regroupe", "On les recopie", "On en ajoute"], "answer": 0, "explain": "Le résumé garde les idées, pas les illustrations." },
+    { "unit": "10.5", "type": "fill", "q": "Construire → la ___.", "hint": "nominalisation", "answer": ["construction"], "explain": "Construire → la construction." },
+    { "unit": "10.5", "type": "fill", "q": "Partir → le ___.", "hint": "nominalisation", "answer": ["départ"], "explain": "Partir → le départ." },
+    { "unit": "10.5", "type": "fill", "q": "Croître → la ___.", "hint": "nominalisation", "answer": ["croissance"], "explain": "Croître → la croissance." },
+    { "unit": "10.5", "type": "fill", "q": "Rapide → la ___.", "hint": "nominalisation d'un adjectif", "answer": ["rapidité"], "explain": "Rapide → la rapidité." },
+    { "unit": "10.5", "type": "fill", "q": "Un résumé respecte l'___ des idées du texte.", "hint": "un nom", "answer": ["ordre"], "explain": "On garde l'ordre du raisonnement." },
+    { "unit": "10.5", "type": "error", "q": "La constructon du pont a pris deux ans.", "wrong": 1, "fix": ["construction"], "explain": "Construction, avec -tion." },
+    { "unit": "10.5", "type": "error", "q": "La réduxion des déchets est urgente.", "wrong": 1, "fix": ["réduction"], "explain": "Réduction, avec -ction." },
+    { "unit": "10.5", "type": "error", "q": "Le chois de ce sujet est judicieux.", "wrong": 1, "fix": ["choix"], "explain": "Le choix, avec un x." }
+  ]
+}

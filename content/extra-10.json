@@ -1,0 +1,120 @@
+{
+  "level": 10,
+  "units": [
+    {
+      "unit": "10.1",
+      "dictee": {
+        "titre": "Le débat sur l'uniforme",
+        "texte": "Le lycée a organisé un débat sur l'uniforme scolaire. Les partisans ont d'abord souligné qu'il efface les différences sociales ; en outre, il éviterait les moqueries liées aux marques. Néanmoins, leurs adversaires ont fait valoir que l'uniforme coûte cher aux familles. Par ailleurs, ont-ils ajouté, il empêche les élèves d'exprimer leur personnalité. Le proviseur a écouté chaque argument avec la plus grande attention, car c'est à lui qu'il revenait de trancher. Or, quelques jours plus tard, une solution inattendue a vu le jour : un simple pull aux couleurs du lycée, facultatif. En définitive, chacun y a trouvé son compte, et le débat s'est apaisé.",
+        "points": [
+          "**en outre**, **par ailleurs** : des connecteurs d'addition.",
+          "**Néanmoins** : une concession, avec deux n au début et un seul ensuite.",
+          "**car** : une cause, sans « en effet ».",
+          "**Or** : un élément nouveau ; **En définitive** : la conclusion."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Défends à voix haute ton avis sur une question (faut-il autoriser les téléphones au lycée ?) pendant une minute, avec au moins six connecteurs différents. Puis écris ton argumentation.",
+        "model": "Je pense qu'il faut autoriser les téléphones au lycée, mais avec des règles. D'abord, ils sont utiles pour s'organiser. En outre, ils permettent de faire des recherches en classe. Certes, ils peuvent distraire ; néanmoins, des casiers pendant les cours suffiraient à régler le problème. C'est pourquoi je propose un usage encadré plutôt qu'une interdiction. En définitive, il vaut mieux apprendre à bien s'en servir.",
+        "checklist": [
+          "J'ai utilisé au moins six connecteurs différents.",
+          "Chaque connecteur correspond à un vrai lien logique.",
+          "Je n'ai pas écrit « car en effet »."
+        ]
+      }
+    },
+    {
+      "unit": "10.2",
+      "dictee": {
+        "titre": "La copie idéale",
+        "texte": "Pour réussir une dissertation, il faut d'abord comprendre le sujet et formuler une problématique claire. L'introduction commence par une accroche, présente la question et annonce le plan. Le développement s'organise en deux ou trois parties, chacune défendant un argument étayé par des exemples précis. On présente les arguments du moins convaincant au plus convaincant, afin que le lecteur garde en mémoire le plus solide. Enfin, la conclusion dresse le bilan sans apporter d'idée nouvelle, puis s'achève sur une ouverture. Tout au long du devoir, les connecteurs guident le lecteur d'une idée à l'autre. Les correcteurs le répètent volontiers : une copie bien construite vaut mieux qu'une copie brillante mais désordonnée.",
+        "points": [
+          "**problématique**, **accroche**, **ouverture** : le vocabulaire de la méthode.",
+          "**étayé** : accordé avec argument, masculin singulier.",
+          "**afin que le lecteur garde** : afin que + subjonctif.",
+          "**s'achève** : accent grave devant la syllabe muette."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Rédige l'introduction complète d'une dissertation sur le sujet : « Faut-il avoir peur des robots ? » (accroche, problématique, annonce du plan).",
+        "model": "Des aspirateurs qui se déplacent seuls aux voitures sans conducteur, les robots s'installent dans notre quotidien. Cette présence suscite à la fois de l'enthousiasme et de l'inquiétude. Les robots représentent-ils une menace pour l'être humain, ou un outil à son service ? Nous verrons d'abord les craintes légitimes qu'ils inspirent, avant de montrer qu'ils peuvent, s'ils sont bien encadrés, améliorer nos vies.",
+        "checklist": [
+          "Mon introduction commence par une accroche.",
+          "Elle pose clairement la problématique.",
+          "Elle annonce le plan sans formules répétitives."
+        ]
+      }
+    },
+    {
+      "unit": "10.3",
+      "dictee": {
+        "titre": "Le marathon de mon oncle",
+        "texte": "Bien qu'il ne se soit jamais entraîné sérieusement, mon oncle a décidé de courir le marathon de Paris. Nous avons eu beau lui conseiller la prudence, il n'a rien voulu entendre. Quoi que nous disions, il répondait que la volonté suffisait. Si têtu qu'il soit, il a pourtant dû reconnaître, au trentième kilomètre, que ses jambes n'étaient pas d'accord avec lui. Quelles que soient ses douleurs, il a néanmoins franchi la ligne d'arrivée, en marchant. Certes, il est arrivé parmi les derniers, mais il était si fier qu'il a encadré sa médaille. Quoique épuisé, il parlait déjà de l'année suivante.",
+        "points": [
+          "**Bien qu'il ne se soit jamais entraîné** : bien que + subjonctif passé.",
+          "**Nous avons eu beau** : beau reste invariable.",
+          "**Quoi que nous disions** (en deux mots) et **Quoique épuisé** (en un mot = bien que).",
+          "**Quelles que soient ses douleurs** : accord avec douleurs ; **Si têtu qu'il soit** : si… que + subjonctif."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Exprime à voix haute trois concessions sur un sujet qui te tient à cœur (le sport, la musique, les jeux vidéo…), avec bien que, avoir beau et quoi que. Puis écris-les.",
+        "model": "Bien que les jeux vidéo soient parfois violents, ils développent le sens de la stratégie. Mes parents ont beau me le répéter, je ne crois pas qu'ils rendent paresseux. Quoi que l'on en dise, ils rassemblent aussi les familles autour d'un écran.",
+        "checklist": [
+          "Bien que + subjonctif.",
+          "Avoir beau + infinitif, beau invariable.",
+          "Quoi que en deux mots quand on ne peut pas dire « bien que »."
+        ]
+      }
+    },
+    {
+      "unit": "10.4",
+      "dictee": {
+        "titre": "Le soir sur le port",
+        "texte": "Le soleil, ce vieux peintre fatigué, posait ses dernières touches d'or sur la mer. Les bateaux dansaient doucement au bout de leurs amarres, et le vent chuchotait des secrets aux voiles repliées. Sur le quai, un vieux pêcheur raccommodait ses filets avec une patience d'horloger, sans jamais lever les yeux. Il n'était pas pressé : ce n'était pas le genre de la maison. Peu à peu, la lumière pâlit, rougit, puis s'éteignit. Une obscure clarté descendit alors lentement sur le port endormi. Puis les étoiles, une à une, puis par milliers, s'allumèrent au-dessus des mâts, comme les lampions d'une fête que personne n'avait annoncée.",
+        "points": [
+          "**ce vieux peintre fatigué** : une métaphore ; **le vent chuchotait** : une personnification.",
+          "**pâlit, rougit, puis s'éteignit** : une gradation, au passé simple.",
+          "**Une obscure clarté** : un oxymore emprunté à Corneille.",
+          "**mâts** : accent circonflexe ; **amarres** : deux r."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Décris en cinq ou six phrases un lieu que tu aimes (une plage, une forêt, une ville…), avec au moins quatre figures de style différentes. Nomme-les entre parenthèses.",
+        "model": "La forêt respire doucement sous la pluie (personnification). Les grands chênes sont des géants endormis (métaphore). Le silence y est si profond qu'on l'entendrait presque (hyperbole). La mousse est douce comme un tapis de velours (comparaison). Ce n'est pas l'endroit le plus désagréable du monde (litote).",
+        "checklist": [
+          "J'ai utilisé au moins quatre figures différentes.",
+          "J'ai nommé chaque figure correctement.",
+          "Mes figures servent la description et ne sont pas plaquées."
+        ]
+      }
+    },
+    {
+      "unit": "10.5",
+      "dictee": {
+        "titre": "Le résumé de Chloé",
+        "texte": "Le professeur avait demandé un résumé de deux cents mots. Chloé relut d'abord le texte en soulignant les mots-clés et les connecteurs, qui révélaient la structure du raisonnement. Elle supprima ensuite les exemples, regroupa les idées voisines et remplaça les longues énumérations par des termes génériques. Pour condenser davantage, elle nominalisa plusieurs phrases : « les prix augmentent fortement » devint « la forte hausse des prix ». Elle veilla surtout à ne donner aucun avis personnel et à respecter l'ordre des idées. Quand elle compta ses mots, elle en trouva cent quatre-vingt-dix-huit. Le compte était bon, et le professeur, pour une fois, n'eut rien à redire.",
+        "points": [
+          "**deux cents** : cent prend un s quand il est multiplié et termine le nombre.",
+          "**cent quatre-vingt-dix-huit** : quatre-vingt sans s, car suivi d'un autre nombre.",
+          "**relut, supprima, regroupa, nominalisa, veilla, compta** : passé simple.",
+          "**mots-clés** : les deux mots prennent la marque du pluriel."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Lis le texte « Le sommeil des adolescents » de la station, puis résume-le à voix haute en trois phrases. Écris ensuite ton résumé, sans avis personnel.",
+        "model": "Les adolescents dorment moins que ce dont ils ont besoin. Ce déficit, dû à leur horloge biologique, aux écrans et aux horaires scolaires, nuit à leur scolarité, à leur santé et à leur humeur. Les spécialistes préconisent de limiter les écrans le soir et de commencer les cours plus tard.",
+        "checklist": [
+          "J'ai gardé l'ordre des idées du texte.",
+          "Je n'ai donné aucun avis personnel.",
+          "J'ai reformulé et condensé, sans recopier."
+        ]
+      }
+    }
+  ]
+}

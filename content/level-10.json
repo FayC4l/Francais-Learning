@@ -1,0 +1,447 @@
+{
+  "id": 10,
+  "cefr": "C1",
+  "title": "Argumenter",
+  "sub": "Connecteurs, argumentation, figures, synthèse",
+  "intro": "Les connecteurs logiques, la construction d'une argumentation (thèse, arguments, plan), la concession, les figures de style et l'art de résumer et de synthétiser : tout ce qu'il faut pour convaincre… et pour réussir l'épreuve écrite du DALF.",
+  "boss": {
+    "name": "Le Sophiste",
+    "taunt": "Tous les candidats échouent. Or tu es un candidat. Donc tu vas échouer. Imparable, non ?",
+    "defeat": "Certes, j'ai perdu… néanmoins, avoue que mon raisonnement était élégant. Faux, mais élégant."
+  },
+  "units": [
+    {
+      "id": "10.1",
+      "name": "Les articulations",
+      "title": "Les connecteurs logiques : addition, opposition, concession, cause, conséquence, but, reformulation",
+      "goal": "Choisir le connecteur qui correspond exactement au lien logique entre deux idées.",
+      "lesson": [
+        { "type": "p", "text": "Les **connecteurs logiques** (ou articulateurs) indiquent le lien entre deux idées. Bien choisis, ils rendent un raisonnement limpide ; mal choisis, ils le rendent incohérent." },
+        { "type": "table", "head": ["Relation", "Connecteurs"], "rows": [["addition", "et, de plus, en outre, par ailleurs, de surcroît"], ["opposition", "mais, en revanche, au contraire, alors que, tandis que"], ["concession", "pourtant, cependant, néanmoins, toutefois, certes… mais"], ["cause", "car, en effet, parce que, puisque, étant donné que"], ["conséquence", "donc, ainsi, par conséquent, c'est pourquoi, dès lors"], ["but", "pour que, afin que, afin de, dans le but de"], ["illustration", "par exemple, notamment, à savoir"], ["reformulation", "autrement dit, c'est-à-dire, en d'autres termes"], ["conclusion", "en définitive, finalement, en somme"]] },
+        { "type": "rule", "title": "Opposition ou concession ?", "text": "L'**opposition** met deux faits face à face : [[Paul aime la mer ; en revanche, sa sœur préfère la montagne.]] La **concession** reconnaît un fait mais maintient l'autre malgré lui : [[Il pleuvait ; néanmoins, le match a eu lieu.]]" },
+        { "type": "rule", "title": "Car et en effet", "text": "**Car** relie deux propositions dans une même phrase : [[Il est resté chez lui, car il était malade.]] **En effet** ouvre une nouvelle phrase qui justifie la précédente : [[Il est resté chez lui. En effet, il était malade.]] On n'écrit jamais « car en effet » : c'est un pléonasme." },
+        { "type": "rule", "title": "Or", "text": "**Or** introduit un fait nouveau qui fait progresser le raisonnement : [[Tous les hommes sont mortels. Or Socrate est un homme. Donc Socrate est mortel.]] À ne pas confondre avec hors (en dehors de)." },
+        { "type": "examples", "items": [
+          { "ex": "Le projet coûte cher ; **de surcroît**, il est risqué.", "note": "addition" },
+          { "ex": "Il n'a pas révisé ; **par conséquent**, il a échoué.", "note": "conséquence" },
+          { "ex": "Elle est sérieuse ; **d'ailleurs**, ses notes le prouvent.", "note": "addition qui renforce" },
+          { "ex": "**En définitive**, le projet a été accepté.", "note": "conclusion" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "Il était fatigué, ~~car en effet~~ il avait couru.", "ok": "Il était fatigué, **car** il avait couru.", "why": "Car et en effet disent la même chose." },
+          { "ko": "Il a travaillé dur ; ~~donc~~ il a échoué.", "ok": "Il a travaillé dur ; **pourtant**, il a échoué.", "why": "L'échec n'est pas la conséquence du travail : c'est une concession." },
+          { "ko": "~~Mais cependant~~, il est venu.", "ok": "**Cependant**, il est venu.", "why": "Deux connecteurs d'opposition à la suite : un seul suffit." },
+          { "ko": "~~Hors~~ cet homme a menti.", "ok": "**Or** cet homme a menti.", "why": "Le connecteur s'écrit or." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Varie tes connecteurs : un texte qui enchaîne « et puis… et puis… donc… donc… » paraît pauvre. Mais n'en abuse pas : chaque connecteur doit correspondre à un vrai lien logique." },
+        { "type": "fun", "text": "Le sais-tu ? « Par contre » a longtemps été critiqué par les puristes, Voltaire en tête, qui le trouvait digne d'un livre de comptes. Il est aujourd'hui admis, mais « en revanche » reste plus élégant dans une copie soignée." }
+      ],
+      "vocab": [
+        { "mot": "néanmoins", "def": "Connecteur de concession : malgré cela.", "ex": "Il était fatigué ; néanmoins, il a terminé la course.", "alt": [] },
+        { "mot": "toutefois", "def": "Connecteur qui apporte une réserve, une restriction.", "ex": "Le projet est bon ; toutefois, il coûte cher.", "alt": [] },
+        { "mot": "en revanche", "def": "Connecteur d'opposition : à l'inverse, au contraire.", "ex": "Il déteste le froid ; en revanche, il adore la neige.", "alt": [] },
+        { "mot": "par conséquent", "def": "Connecteur de conséquence, plus soutenu que donc.", "ex": "Le train est annulé ; par conséquent, la réunion est reportée.", "alt": [] },
+        { "mot": "en outre", "def": "Connecteur d'addition : de plus.", "ex": "Ce quartier est calme ; en outre, il est bien desservi.", "alt": [] },
+        { "mot": "d'ailleurs", "def": "Connecteur qui ajoute une précision renforçant ce qui précède.", "ex": "Elle est douée ; d'ailleurs, elle a gagné le concours.", "alt": [] },
+        { "mot": "autrement dit", "def": "Connecteur de reformulation : en d'autres termes.", "ex": "Il est arrivé en retard, autrement dit, il a raté le début.", "alt": [] },
+        { "mot": "en définitive", "def": "Connecteur de conclusion : tout bien considéré.", "ex": "En définitive, cette solution est la meilleure.", "alt": [] },
+        { "mot": "quoi qu'il en soit", "def": "Connecteur qui écarte ce qui précède pour revenir à l'essentiel.", "ex": "Quoi qu'il en soit, nous partirons demain.", "alt": [] },
+        { "mot": "de surcroît", "def": "Connecteur d'addition, soutenu : en plus.", "ex": "Il est compétent et, de surcroît, très aimable.", "alt": [] },
+        { "mot": "par ailleurs", "def": "Connecteur qui introduit une idée nouvelle, sous un autre angle.", "ex": "Par ailleurs, le budget a été voté.", "alt": [] },
+        { "mot": "dès lors", "def": "Connecteur de conséquence : à partir de là.", "ex": "Les preuves manquaient ; dès lors, il fut relâché.", "alt": [] },
+        { "mot": "c'est pourquoi", "def": "Connecteur de conséquence qui annonce la raison d'une décision.", "ex": "Il pleuvait, c'est pourquoi nous sommes restés.", "alt": [] },
+        { "mot": "en effet", "def": "Connecteur qui justifie ou confirme la phrase précédente.", "ex": "Il est absent. En effet, il est malade.", "alt": [] },
+        { "mot": "or", "def": "Connecteur qui introduit un élément nouveau dans un raisonnement.", "ex": "Il dit être chez lui ; or on l'a vu au cinéma.", "alt": [] },
+        { "mot": "à savoir", "def": "Connecteur qui annonce une énumération ou une précision.", "ex": "Trois pays l'ont visité, à savoir la France, l'Italie et l'Espagne.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Il pleuvait ; néanmoins, le match a eu lieu.", "indice": "Un match malgré la météo", "trap": ["donc"], "alt": [] },
+        { "phrase": "Elle aime le théâtre ; en revanche, son frère préfère le cinéma.", "indice": "Deux goûts opposés", "trap": ["ainsi"], "alt": [] },
+        { "phrase": "Il est resté chez lui, car il était malade.", "indice": "Une absence justifiée", "trap": ["donc"], "alt": [] },
+        { "phrase": "Le projet coûte cher ; de surcroît, il est risqué.", "indice": "Deux défauts", "trap": ["pourtant"], "alt": [] },
+        { "phrase": "Il n'a pas révisé ; par conséquent, il a échoué.", "indice": "Un échec prévisible", "trap": ["néanmoins"], "alt": [] },
+        { "phrase": "Tous les hommes sont mortels. Or Socrate est un homme.", "indice": "Un raisonnement célèbre", "trap": ["Hors"], "alt": [] },
+        { "phrase": "Il a trop mangé, c'est pourquoi il a mal au ventre.", "indice": "Une indigestion", "trap": ["pourtant"], "alt": [] },
+        { "phrase": "Elle est sérieuse ; d'ailleurs, ses notes le prouvent.", "indice": "Une élève appliquée", "trap": ["toutefois"], "alt": [] },
+        { "phrase": "Il faut dormir. En effet, le sommeil aide la mémoire.", "indice": "Un conseil justifié", "trap": ["Pourtant"], "alt": [] },
+        { "phrase": "En définitive, le projet a été accepté par tous.", "indice": "Une décision finale", "trap": ["Cependant"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Il a beaucoup travaillé ; ___, il a réussi.", "choices": ["ainsi", "néanmoins", "en revanche"], "answer": 0, "explain": "La réussite est la conséquence du travail : ainsi." },
+        { "type": "mcq", "q": "Il fait beau ; ___, il fait froid.", "choices": ["toutefois", "donc", "c'est pourquoi"], "answer": 0, "explain": "Une réserve : toutefois." },
+        { "type": "mcq", "q": "Le film était long ; ___, il était passionnant.", "choices": ["cependant", "par conséquent", "en effet"], "answer": 0, "explain": "Une concession : cependant." },
+        { "type": "mcq", "q": "Je reste à la maison ___ il pleut.", "choices": ["car", "donc", "or"], "answer": 0, "explain": "Une cause, dans la même phrase : car." },
+        { "type": "mcq", "q": "Paul est blond ; ___, son frère est brun.", "choices": ["en revanche", "de surcroît", "en effet"], "answer": 0, "explain": "Deux faits opposés : en revanche." },
+        { "type": "fill", "q": "Il était malade. En ___, il avait de la fièvre.", "hint": "connecteur de justification", "answer": ["effet"], "explain": "En effet justifie la phrase précédente." },
+        { "type": "fill", "q": "Cette voiture est économique ; de ___, elle est confortable.", "hint": "addition, mot soutenu", "answer": ["surcroît"], "explain": "De surcroît : en plus (surcroit en orthographe rectifiée)." },
+        { "type": "fill", "q": "Il n'a pas pris son parapluie ; par ___, il est trempé.", "hint": "conséquence", "answer": ["conséquent"], "explain": "Par conséquent : la conséquence." },
+        { "type": "fill", "q": "Elle parle trois langues, ___ l'anglais, l'arabe et l'espagnol.", "hint": "c'est-à-dire, en deux mots", "answer": ["à savoir"], "explain": "À savoir annonce une énumération." },
+        { "type": "fill", "q": "Tous les oiseaux ont des plumes. ___ le manchot est un oiseau.", "hint": "connecteur de raisonnement", "answer": ["Or"], "explain": "Or introduit l'élément nouveau du raisonnement." },
+        { "type": "fill", "q": "Il est timide, ___ il est très drôle avec ses amis.", "hint": "opposition, un mot", "answer": ["mais"], "explain": "Mais marque l'opposition." },
+        { "type": "fill", "q": "Autrement ___, tu refuses ?", "hint": "reformulation", "answer": ["dit"], "explain": "Autrement dit : en d'autres termes." },
+        { "type": "error", "q": "Il a révisé ; néanmoins, il a réussi.", "wrong": 3, "fix": ["donc", "ainsi"], "explain": "La réussite découle des révisions : c'est une conséquence, pas une concession." },
+        { "type": "error", "q": "Il pleut, donc nous sortons quand même.", "wrong": 2, "fix": ["mais"], "explain": "« Quand même » marque une opposition : mais." },
+        { "type": "error", "q": "Il faut se méfier. Hors il a menti.", "wrong": 4, "fix": ["Or"], "explain": "Le connecteur s'écrit or." },
+        { "type": "error", "q": "Elle a gagné ; ainsi, elle est déçue.", "wrong": 3, "fix": ["pourtant", "néanmoins", "toutefois", "cependant"], "explain": "La déception contredit la victoire : il faut une concession." }
+      ],
+      "reading": {
+        "title": "Faut-il supprimer les notes ?",
+        "text": "Faut-il supprimer les notes à l'école ? La question divise depuis des années. Les partisans de la suppression avancent un premier argument : la note stresse les élèves. En effet, un enfant qui reçoit régulièrement de mauvaises notes finit souvent par se décourager, voire par se croire incapable. De surcroît, la note résume en un chiffre un travail complexe ; elle ne dit rien des progrès accomplis ni des erreurs à corriger. C'est pourquoi certains établissements l'ont remplacée par des appréciations détaillées. D'autres utilisent des couleurs ou des grilles de compétences, plus précises qu'une simple moyenne. Toutefois, les défenseurs de la note ne manquent pas d'arguments. D'une part, elle est simple à comprendre, pour les élèves comme pour les parents. D'autre part, elle prépare aux examens, qui, eux, restent notés. Supprimer les notes au collège, ce serait donc retarder un choc inévitable. Par ailleurs, de nombreux élèves aiment être notés : la note les motive et leur permet de mesurer leurs progrès. Que conclure ? Le problème ne réside peut-être pas dans la note elle-même, mais dans l'usage qu'on en fait. Une note accompagnée d'un commentaire précis et bienveillant peut encourager ; une note sèche, en revanche, risque de blesser. Autrement dit, ce n'est pas l'outil qu'il faut supprimer, mais la manière de s'en servir qu'il faut repenser. En définitive, plutôt que d'opposer notes et appréciations, pourquoi ne pas les associer ?",
+        "questions": [
+          { "q": "Quel est le premier argument contre les notes ?", "choices": ["Elles stressent et découragent les élèves", "Elles coûtent cher", "Elles sont trop compliquées", "Elles favorisent la triche"], "answer": 0, "explain": "« La note stresse les élèves » et peut les décourager." },
+          { "q": "Quel connecteur introduit les arguments des défenseurs de la note ?", "choices": ["Toutefois", "En effet", "De surcroît", "C'est pourquoi"], "answer": 0, "explain": "Toutefois marque le passage aux arguments opposés." },
+          { "q": "Pourquoi supprimer les notes « retarderait un choc inévitable » ?", "choices": ["Les examens, eux, restent notés", "Les parents réclament des notes", "Les professeurs refusent", "Les élèves trichent"], "answer": 0, "explain": "Tôt ou tard, l'élève devra affronter des examens notés." },
+          { "q": "Où se situe le vrai problème selon l'auteur ?", "choices": ["Dans l'usage qu'on fait de la note", "Dans la note elle-même", "Dans les examens", "Chez les parents"], "answer": 0, "explain": "« Le problème ne réside peut-être pas dans la note elle-même, mais dans l'usage qu'on en fait. »" },
+          { "q": "Quelle est la fonction de « Autrement dit » ?", "choices": ["Reformuler une idée", "Introduire une cause", "Marquer une opposition", "Donner un exemple"], "answer": 0, "explain": "Autrement dit reformule l'idée précédente." },
+          { "q": "Quelle solution l'auteur suggère-t-il ?", "choices": ["Associer notes et appréciations", "Supprimer toutes les notes", "Noter plus sévèrement", "Supprimer les examens"], "answer": 0, "explain": "« Pourquoi ne pas les associer ? »" }
+        ]
+      }
+    },
+    {
+      "id": "10.2",
+      "name": "L'art de convaincre",
+      "title": "Construire une argumentation : thèse, arguments, exemples ; plans ; introduction et conclusion",
+      "goal": "Organiser une argumentation solide, de l'introduction à la conclusion.",
+      "lesson": [
+        { "type": "p", "text": "Argumenter, c'est défendre une position avec des raisons et des exemples pour convaincre un lecteur. Un texte argumentatif solide repose sur une **thèse** claire, des **arguments** hiérarchisés et des **exemples** précis." },
+        { "type": "rule", "title": "Thèse, argument, exemple", "text": "La **thèse** est l'opinion défendue ; l'**argument** est la raison qui la soutient ; l'**exemple** est le fait concret qui illustre l'argument. [[Thèse : il faut apprendre une deuxième langue.]] [[Argument : cela ouvre l'esprit.]] [[Exemple : lire un roman en espagnol fait découvrir une autre façon de raconter.]]" },
+        { "type": "table", "head": ["Plan", "Quand l'utiliser", "Structure"], "rows": [["dialectique", "une question qui appelle le débat (faut-il… ?)", "thèse, antithèse, synthèse ou dépassement"], ["thématique", "un sujet à plusieurs aspects", "aspect 1, aspect 2, aspect 3"], ["analytique", "un problème à expliquer", "constat, causes, conséquences ou solutions"], ["comparatif", "deux réalités à comparer", "points communs, différences, bilan"]] },
+        { "type": "rule", "title": "L'introduction", "text": "Elle comporte trois temps : une **accroche** (un fait, une citation, une question), la **problématique** (la question à laquelle on va répondre), puis l'**annonce du plan**." },
+        { "type": "rule", "title": "La conclusion", "text": "Elle fait le **bilan** (une réponse claire à la problématique) puis propose une **ouverture** (une question voisine, une perspective). Elle n'apporte jamais d'argument nouveau." },
+        { "type": "examples", "items": [
+          { "ex": "**Thèse** : le sport devrait occuper plus de place à l'école.", "note": "l'opinion défendue" },
+          { "ex": "**Argument** : il améliore la concentration.", "note": "la raison" },
+          { "ex": "**Exemple** : après une heure de sport, les élèves suivent mieux le cours suivant.", "note": "le fait concret" },
+          { "ex": "**Ouverture** : et si l'on repensait aussi la durée des cours ?", "note": "une perspective, en conclusion" }
+        ] },
+        { "type": "compare", "title": "Les maladresses fréquentes", "items": [
+          { "ko": "Les écrans, c'est mal, parce que c'est mauvais.", "ok": "Les écrans nuisent au sommeil : leur lumière retarde l'endormissement.", "why": "Un argument doit être une raison, pas une répétition de la thèse." },
+          { "ko": "Par exemple, tout le monde sait que c'est vrai.", "ok": "Par exemple, mon frère dort mieux depuis qu'il laisse son téléphone hors de sa chambre.", "why": "Un exemple doit être précis et concret." },
+          { "ko": "En conclusion, voici un dernier argument : …", "ok": "En conclusion, … (bilan) ; reste à savoir si … (ouverture).", "why": "La conclusion n'apporte pas d'argument nouveau." },
+          { "ko": "Dans une première partie nous verrons…, dans une deuxième partie nous verrons…", "ok": "Nous verrons d'abord…, puis…, avant de nous demander enfin…", "why": "Une annonce de plan fluide et variée." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Un bon argument répond à la question « pourquoi ? » ; un bon exemple répond à la question « par exemple ? ». Si ton exemple pourrait illustrer n'importe quel sujet, il est trop vague." },
+        { "type": "fun", "text": "Le sais-tu ? Aristote distinguait trois leviers pour convaincre : le logos (la raison), l'ethos (la crédibilité de l'orateur) et le pathos (l'émotion du public). Les publicitaires s'en servent toujours !" }
+      ],
+      "vocab": [
+        { "mot": "accroche", "def": "Phrase d'ouverture d'un texte, destinée à capter l'attention.", "ex": "Une bonne accroche donne envie de lire la suite.", "alt": [] },
+        { "mot": "ouverture", "def": "Fin d'une conclusion qui élargit la réflexion vers une question voisine.", "ex": "Il termine sa dissertation par une ouverture sur l'avenir.", "alt": [] },
+        { "mot": "dialectique", "def": "Méthode de raisonnement qui confronte des idées opposées pour les dépasser.", "ex": "Le plan dialectique convient aux sujets qui appellent un débat.", "alt": [] },
+        { "mot": "argumentation", "def": "Ensemble organisé des raisons qui défendent une opinion.", "ex": "Son argumentation est solide et bien construite.", "alt": [] },
+        { "mot": "illustration", "def": "Exemple qui rend une idée concrète ; ou image.", "ex": "Cette anecdote est une bonne illustration de son argument.", "alt": [] },
+        { "mot": "démonstration", "def": "Raisonnement qui établit la vérité d'une affirmation.", "ex": "Sa démonstration a convaincu le jury.", "alt": [] },
+        { "mot": "persuasion", "def": "Action d'amener quelqu'un à croire ou à faire quelque chose, souvent par les sentiments.", "ex": "La publicité est un art de la persuasion.", "alt": [] },
+        { "mot": "conviction", "def": "Certitude intime ; ou fait de convaincre par la raison.", "ex": "Il défend ses idées avec conviction.", "alt": [] },
+        { "mot": "contre-argument", "def": "Argument qui s'oppose à un autre.", "ex": "Prévois un contre-argument pour chaque objection.", "alt": [] },
+        { "mot": "étayer", "def": "Appuyer une idée par des preuves ou des exemples.", "ex": "Il faut étayer chaque argument par un exemple.", "alt": [] },
+        { "mot": "illustrer", "def": "Rendre une idée plus claire par un exemple.", "ex": "Illustre ton propos par une expérience personnelle.", "alt": [] },
+        { "mot": "hiérarchiser", "def": "Classer des éléments par ordre d'importance.", "ex": "Il faut hiérarchiser ses arguments.", "alt": [] },
+        { "mot": "développement", "def": "Partie centrale d'un devoir, entre l'introduction et la conclusion ; ou croissance.", "ex": "Le développement compte deux ou trois parties.", "alt": [] },
+        { "mot": "pathos", "def": "Dans l'art oratoire, appel aux émotions du public ; ou émotion excessive.", "ex": "Ce discours abuse du pathos.", "alt": [] },
+        { "mot": "ethos", "def": "Dans l'art oratoire, image de crédibilité que donne l'orateur.", "ex": "Le calme du témoin renforce son ethos.", "alt": [] },
+        { "mot": "logos", "def": "Dans l'art oratoire, appel à la raison et à la logique.", "ex": "Un raisonnement chiffré relève du logos.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Le sport devrait occuper plus de place à l'école.", "indice": "Une thèse", "trap": ["devrais"], "alt": [] },
+        { "phrase": "Cet argument est étayé par un exemple précis.", "indice": "Un argument solide", "trap": ["étayer"], "alt": [] },
+        { "phrase": "La conclusion ne doit pas apporter d'argument nouveau.", "indice": "Une règle de la conclusion", "trap": ["apportée"], "alt": [] },
+        { "phrase": "Une bonne introduction commence par une accroche.", "indice": "Le début d'une copie", "trap": ["accroches"], "alt": [] },
+        { "phrase": "Il faut annoncer le plan à la fin de l'introduction.", "indice": "Une étape de l'introduction", "trap": ["annoncé"], "alt": [] },
+        { "phrase": "Chaque argument doit être illustré par un exemple.", "indice": "Une méthode", "trap": ["illustrer"], "alt": [] },
+        { "phrase": "Le plan dialectique confronte deux points de vue.", "indice": "Un type de plan", "trap": ["confrontent"], "alt": [] },
+        { "phrase": "Les publicitaires jouent souvent sur nos émotions.", "indice": "Une technique de persuasion", "trap": ["jouant"], "alt": [] },
+        { "phrase": "Une ouverture élargit la réflexion en fin de copie.", "indice": "La dernière phrase d'un devoir", "trap": ["élargie"], "alt": [] },
+        { "phrase": "Hiérarchise tes arguments du plus faible au plus fort.", "indice": "Un conseil de méthode", "trap": ["Hiérarchises"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "« Il faut apprendre une deuxième langue » est…", "choices": ["une thèse", "un exemple", "une ouverture"], "answer": 0, "explain": "C'est l'opinion défendue : la thèse." },
+        { "type": "mcq", "q": "« Lire un roman en espagnol m'a fait découvrir l'humour de ce pays » est…", "choices": ["un exemple", "une thèse", "une problématique"], "answer": 0, "explain": "Un fait concret qui illustre un argument." },
+        { "type": "mcq", "q": "Quel plan convient au sujet « Faut-il interdire les voitures en ville ? » ?", "choices": ["un plan dialectique", "un plan chronologique", "un plan descriptif"], "answer": 0, "explain": "Une question « faut-il » appelle un débat : plan dialectique." },
+        { "type": "mcq", "q": "Que ne doit-on PAS mettre dans une conclusion ?", "choices": ["un argument nouveau", "un bilan", "une ouverture"], "answer": 0, "explain": "La conclusion fait le bilan et ouvre, sans nouvel argument." },
+        { "type": "mcq", "q": "Dans quel ordre présenter ses arguments ?", "choices": ["du moins convaincant au plus convaincant", "au hasard", "du plus long au plus court"], "answer": 0, "explain": "On finit par l'argument le plus fort, qui reste en mémoire." },
+        { "type": "fill", "q": "L'introduction commence par une ___ qui capte l'attention.", "hint": "un nom", "answer": ["accroche"], "explain": "L'accroche : fait, citation ou question." },
+        { "type": "fill", "q": "La conclusion se termine souvent par une ___.", "hint": "une perspective", "answer": ["ouverture"], "explain": "L'ouverture élargit la réflexion." },
+        { "type": "fill", "q": "Un argument doit être ___ par un exemple.", "hint": "étayer, au participe passé", "answer": ["étayé"], "explain": "Étayer : appuyer, soutenir." },
+        { "type": "fill", "q": "Le plan ___ confronte une thèse et une antithèse.", "hint": "un adjectif", "answer": ["dialectique"], "explain": "Le plan dialectique : thèse, antithèse, synthèse." },
+        { "type": "fill", "q": "Faire appel aux émotions du public, c'est jouer sur le ___.", "hint": "un mot grec", "answer": ["pathos"], "explain": "Pathos : l'émotion." },
+        { "type": "fill", "q": "L'opinion que l'on défend s'appelle la ___.", "hint": "un nom", "answer": ["thèse"], "explain": "La thèse." },
+        { "type": "fill", "q": "Dans un plan ___, on étudie un problème, ses causes et ses conséquences.", "hint": "un adjectif", "answer": ["analytique"], "explain": "Le plan analytique : constat, causes, conséquences." },
+        { "type": "error", "q": "Une conclusion ne doit pas apporter d'arguments nouveau.", "wrong": 7, "fix": ["nouveaux"], "explain": "L'adjectif s'accorde avec arguments, au pluriel." },
+        { "type": "error", "q": "Cet exemple n'est pas assez précit.", "wrong": 5, "fix": ["précis"], "explain": "Précis, avec un s (au féminin : précise)." },
+        { "type": "error", "q": "Il faut étayé chaque argument.", "wrong": 2, "fix": ["étayer"], "explain": "Après il faut, l'infinitif : étayer." },
+        { "type": "error", "q": "L'accroche doit captiver le lecteur dès les premières lignes, ce que réussit parfaitement cette introductions.", "wrong": 14, "fix": ["introduction"], "explain": "Après cette, un nom au singulier : introduction." }
+      ],
+      "reading": {
+        "title": "Une langue étrangère dès la maternelle ?",
+        "text": "Dans un monde où les échanges se multiplient, parler plusieurs langues est devenu un atout majeur. Certains pays enseignent même une langue étrangère dès l'âge de trois ans. Faut-il généraliser cette pratique en France ? Nous verrons d'abord les bénéfices d'un apprentissage précoce, avant d'en examiner les limites. Premièrement, l'enfant jeune apprend avec une facilité étonnante. Son oreille, encore souple, distingue des sons que l'adulte peine à percevoir. Ainsi, un enfant qui entend régulièrement l'anglais avant six ans en reproduit l'accent sans effort. Les chercheurs parlent d'une période favorable, qui se refermerait progressivement à l'adolescence. Deuxièmement, l'apprentissage précoce ouvre l'esprit : découvrir qu'on peut dire bonjour de dix manières différentes, c'est comprendre que sa propre langue n'est pas la seule façon de voir le monde. Néanmoins, cet enthousiasme mérite d'être nuancé. D'une part, un apprentissage efficace exige des enseignants formés, que beaucoup d'écoles n'ont pas. D'autre part, quelques heures par semaine ne suffisent pas : sans exposition régulière, l'enfant oublie aussi vite qu'il a appris. Une langue qui n'est jamais pratiquée hors de la classe reste une langue morte. En définitive, apprendre une langue tôt est une chance, à condition de s'en donner les moyens. Plus qu'un âge idéal, ce sont la régularité et la qualité de l'enseignement qui comptent. Reste une question : pourquoi ne pas commencer par valoriser les langues que les enfants parlent déjà à la maison ?",
+        "questions": [
+          { "q": "Quelle est la problématique de ce texte ?", "choices": ["Faut-il généraliser l'apprentissage d'une langue dès la maternelle ?", "Quelle langue faut-il apprendre ?", "Pourquoi les adultes apprennent-ils mal ?", "Combien de langues existe-t-il ?"], "answer": 0, "explain": "« Faut-il généraliser cette pratique en France ? »" },
+          { "q": "Quel type de plan l'auteur suit-il ?", "choices": ["Un plan dialectique : bénéfices, puis limites", "Un plan chronologique", "Un plan descriptif", "Un plan comparatif entre deux pays"], "answer": 0, "explain": "Il pèse le pour et le contre avant de conclure." },
+          { "q": "Quel exemple illustre l'argument de la facilité ?", "choices": ["L'enfant qui reproduit l'accent anglais sans effort", "Les enseignants mal formés", "Les dix manières de dire bonjour", "Les langues parlées à la maison"], "answer": 0, "explain": "« Ainsi, un enfant qui entend régulièrement l'anglais… »" },
+          { "q": "Quel connecteur marque le passage à la deuxième partie ?", "choices": ["Néanmoins", "Premièrement", "Ainsi", "En définitive"], "answer": 0, "explain": "Néanmoins introduit les limites." },
+          { "q": "Quel est le rôle de la dernière phrase ?", "choices": ["C'est une ouverture", "C'est la thèse", "C'est un argument", "C'est l'accroche"], "answer": 0, "explain": "Une question voisine qui élargit la réflexion." },
+          { "q": "Que retient l'auteur dans son bilan ?", "choices": ["La régularité et la qualité comptent plus que l'âge", "Il faut tout apprendre avant trois ans", "Les langues étrangères sont inutiles", "Seul l'anglais compte"], "answer": 0, "explain": "« Plus qu'un âge idéal, ce sont la régularité et la qualité… »" }
+        ]
+      }
+    },
+    {
+      "id": "10.3",
+      "name": "Certes… mais",
+      "title": "Concession et opposition : bien que, quoique / quoi que, avoir beau, si… que, quel que",
+      "goal": "Exprimer la concession avec la bonne construction et le bon mode.",
+      "lesson": [
+        { "type": "p", "text": "Concéder, c'est reconnaître un fait ou un argument tout en maintenant sa position. C'est l'outil des esprits nuancés… et des débatteurs habiles." },
+        { "type": "table", "head": ["Outil", "Construction", "Exemple"], "rows": [["bien que, quoique", "+ subjonctif", "Bien qu'il soit tard, je continue."], ["même si", "+ indicatif", "Même s'il est tard, je continue."], ["avoir beau", "+ infinitif", "J'ai beau crier, personne ne m'entend."], ["si… que, aussi… que", "+ subjonctif", "Si fort qu'il soit, il ne gagnera pas."], ["malgré, en dépit de", "+ nom", "Malgré la pluie, nous sortons."], ["certes… mais", "deux propositions", "Certes, ce projet est coûteux, mais il est nécessaire."], ["quand bien même", "+ conditionnel", "Quand bien même il s'excuserait, je ne le croirais pas."]] },
+        { "type": "rule", "title": "Quoique ou quoi que ?", "text": "**quoique**, en un mot, signifie bien que : [[Quoiqu'il soit riche, il vit simplement.]] **quoi que**, en deux mots, signifie « quelle que soit la chose que » : [[Quoi que tu dises, je partirai.]] Astuce : si tu peux remplacer par « bien que », écris-le en un mot." },
+        { "type": "rule", "title": "Quel que ou quelque ?", "text": "**quel que** + être au subjonctif, accordé avec le sujet : [[Quelles que soient tes raisons…]]. **quelque** devant un adjectif (= si) reste invariable : [[Quelque habiles qu'ils soient…]]. **quelque** devant un nom s'accorde : [[Quelques efforts que tu fasses…]]" },
+        { "type": "examples", "items": [
+          { "ex": "**J'ai beau** répéter, il n'écoute pas.", "note": "avoir beau + infinitif" },
+          { "ex": "**Quoi que** tu fasses, fais-le bien.", "note": "quelle que soit la chose que" },
+          { "ex": "**Si** riche **qu'il soit**, il reste modeste.", "note": "si… que + subjonctif" },
+          { "ex": "**Quelles que soient** les difficultés, nous continuerons.", "note": "accord avec difficultés" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "~~Quoique~~ tu dises, je reste.", "ok": "**Quoi que** tu dises, je reste.", "why": "On ne peut pas dire « bien que tu dises » : en deux mots." },
+          { "ko": "~~Quelque~~ soient tes raisons…", "ok": "**Quelles que** soient tes raisons…", "why": "Devant être : quel que, accordé avec le sujet." },
+          { "ko": "Même s'il ~~soit~~ tard…", "ok": "Même s'il **est** tard…", "why": "Même si + indicatif." },
+          { "ko": "Bien qu'il ~~a~~ raison…", "ok": "Bien qu'il **ait** raison…", "why": "Bien que + subjonctif." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "**Avoir beau** se conjugue (j'ai beau, tu as beau, ils ont beau), mais **beau** reste invariable : [[Elles ont beau courir, elles arrivent en retard.]]" },
+        { "type": "fun", "text": "Le sais-tu ? « Quoique » et « quoi que » sont si souvent confondus que même des écrivains célèbres s'y sont trompés. Le remplacement par « bien que » règle pourtant la question en une seconde !" }
+      ],
+      "vocab": [
+        { "mot": "réserve", "def": "Restriction apportée à un jugement ; ou discrétion.", "ex": "Il approuve le projet, avec quelques réserves.", "alt": [] },
+        { "mot": "restriction", "def": "Limite apportée à quelque chose.", "ex": "Il a accepté sans restriction.", "alt": [] },
+        { "mot": "bémol", "def": "Au figuré, réserve qui atténue un éloge ; signe musical.", "ex": "Seul bémol : le prix est élevé.", "alt": [] },
+        { "mot": "contrepartie", "def": "Ce que l'on donne ou reçoit en échange ; aspect opposé.", "ex": "En contrepartie de son aide, il demande un service.", "alt": [] },
+        { "mot": "contradiction", "def": "Fait de dire le contraire de ce qui a été dit ; incompatibilité.", "ex": "Son témoignage contient une contradiction.", "alt": [] },
+        { "mot": "contre-pied", "def": "Ce qui est exactement à l'opposé ; prendre le … : faire l'inverse.", "ex": "Il a pris le contre-pied de l'opinion générale.", "alt": [] },
+        { "mot": "désaccord", "def": "Fait de ne pas être d'accord.", "ex": "Un désaccord persiste entre les deux partis.", "alt": [] },
+        { "mot": "divergence", "def": "Différence d'opinions ou de directions.", "ex": "Leurs divergences de vues sont profondes.", "alt": [] },
+        { "mot": "compromis", "def": "Accord obtenu par des concessions mutuelles.", "ex": "Ils ont fini par trouver un compromis.", "alt": [] },
+        { "mot": "consensus", "def": "Accord général d'un groupe.", "ex": "La décision a fait consensus.", "alt": [] },
+        { "mot": "dissension", "def": "Désaccord violent qui divise un groupe.", "ex": "Des dissensions apparaissent au sein de l'équipe.", "alt": [] },
+        { "mot": "antagonisme", "def": "Opposition profonde entre des personnes ou des forces.", "ex": "L'antagonisme entre les deux rivaux est ancien.", "alt": [] },
+        { "mot": "contraste", "def": "Opposition marquée entre deux choses qu'on rapproche.", "ex": "Le contraste entre l'ombre et la lumière est saisissant.", "alt": [] },
+        { "mot": "revers", "def": "Côté opposé d'une chose ; ou échec. Le … de la médaille : l'inconvénient.", "ex": "La célébrité a son revers.", "alt": [] },
+        { "mot": "atténuation", "def": "Fait de rendre moins fort, moins grave.", "ex": "Le tribunal a admis des circonstances d'atténuation.", "alt": [] },
+        { "mot": "mitigé", "def": "Partagé entre l'approbation et la réserve.", "ex": "Le film a reçu un accueil mitigé.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Bien qu'il soit tard, je continue mon travail.", "indice": "Un travail de nuit", "trap": ["est"], "alt": ["Je continue mon travail, bien qu'il soit tard."] },
+        { "phrase": "Quoi que tu dises, je partirai demain.", "indice": "Une décision ferme", "trap": ["Quoique"], "alt": [] },
+        { "phrase": "J'ai beau crier, personne ne m'entend.", "indice": "Des appels sans réponse", "trap": ["beaux"], "alt": [] },
+        { "phrase": "Si fort qu'il soit, il ne gagnera pas.", "indice": "Un adversaire coriace", "trap": ["est"], "alt": [] },
+        { "phrase": "Quelles que soient tes raisons, tu dois t'excuser.", "indice": "Une excuse obligatoire", "trap": ["Quelque"], "alt": [] },
+        { "phrase": "Même s'il pleut, nous irons au marché.", "indice": "Une sortie maintenue", "trap": ["pleuve"], "alt": [] },
+        { "phrase": "Quoiqu'il soit riche, il vit simplement.", "indice": "Un riche modeste", "trap": ["Quoi"], "alt": [] },
+        { "phrase": "Elles ont beau courir, elles arrivent en retard.", "indice": "Un effort inutile", "trap": ["belles"], "alt": [] },
+        { "phrase": "Malgré la pluie, le concert a eu lieu.", "indice": "Un concert sous l'averse", "trap": ["que"], "alt": [] },
+        { "phrase": "Certes, ce projet est coûteux, mais il est nécessaire.", "indice": "Une concession", "trap": ["Certe"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "___ tu fasses, fais-le bien.", "choices": ["Quoi que", "Quoique", "Quoiqu'"], "answer": 0, "explain": "Quelle que soit la chose que tu fasses : en deux mots." },
+        { "type": "mcq", "q": "___ il soit fatigué, il continue.", "choices": ["Quoiqu'", "Quoi qu'", "Malgré qu'"], "answer": 0, "explain": "Bien qu'il soit fatigué : quoique en un mot, élidé devant il." },
+        { "type": "mcq", "q": "J'ai ___ chercher, je ne trouve pas mes clés.", "choices": ["beau", "beaux", "bel"], "answer": 0, "explain": "Avoir beau : beau reste invariable." },
+        { "type": "mcq", "q": "___ soient les obstacles, nous réussirons.", "choices": ["Quels que", "Quelque", "Quelques"], "answer": 0, "explain": "Devant être : quel que, accordé avec obstacles." },
+        { "type": "mcq", "q": "Même si tu ___ raison, reste calme.", "choices": ["as", "aies", "aurais"], "answer": 0, "explain": "Même si + indicatif." },
+        { "type": "fill", "q": "Bien qu'elle ___ timide, elle a pris la parole.", "hint": "être : indicatif ou subjonctif ?", "answer": ["soit"], "explain": "Bien que + subjonctif." },
+        { "type": "fill", "q": "Ils ont ___ protester, la décision est prise.", "hint": "avoir beau", "answer": ["beau"], "explain": "Beau reste invariable." },
+        { "type": "fill", "q": "___ que soit ton choix, je te soutiendrai.", "hint": "quel que, accordé", "answer": ["Quel"], "explain": "Quel que soit ton choix : accord avec choix (masculin singulier)." },
+        { "type": "fill", "q": "Si habile ___ soit, il a raté son tir.", "hint": "que + il, élidé", "answer": ["qu'il"], "explain": "Si… que + subjonctif : si habile qu'il soit." },
+        { "type": "fill", "q": "___ la tempête, le bateau est sorti.", "hint": "devant un nom", "answer": ["Malgré"], "explain": "Malgré + nom." },
+        { "type": "fill", "q": "Quand bien même tu ___ des preuves, je douterais.", "hint": "apporter, au conditionnel présent", "answer": ["apporterais"], "explain": "Quand bien même + conditionnel." },
+        { "type": "fill", "q": "Il est intelligent ; ___, il manque de méthode.", "hint": "un connecteur de concession", "answer": ["néanmoins", "toutefois", "cependant", "pourtant"], "explain": "Une concession : néanmoins, toutefois, cependant ou pourtant." },
+        { "type": "error", "q": "Quoique tu dises, je ne changerai pas d'avis.", "wrong": 0, "fix": ["Quoi que"], "explain": "Quelle que soit la chose que tu dises : quoi que, en deux mots." },
+        { "type": "error", "q": "Quelque soient tes efforts, ce sera difficile.", "wrong": 0, "fix": ["Quels que"], "explain": "Devant être : quel que, accordé avec efforts." },
+        { "type": "error", "q": "Même s'il fasse beau, je reste ici.", "wrong": 2, "fix": ["fait"], "explain": "Même si + indicatif." },
+        { "type": "error", "q": "Ils ont beaux essayer, ils n'y arrivent pas.", "wrong": 2, "fix": ["beau"], "explain": "Avoir beau : beau reste invariable." }
+      ],
+      "reading": {
+        "title": "Raccourcir les vacances d'été ?",
+        "text": "Chaque année, le débat revient : faut-il raccourcir les grandes vacances ? Certes, deux mois sans école, c'est long. Les enseignants constatent qu'à la rentrée, beaucoup d'élèves ont oublié une partie de ce qu'ils avaient appris. Les plus fragiles, qui ne partent pas en vacances et ne lisent guère, en souffrent davantage. Quoi qu'en disent les défenseurs de l'été, cet écart se creuse d'année en année. Pourtant, bien que ces arguments soient sérieux, la proposition se heurte à de fortes résistances. Les familles ont beau reconnaître l'intérêt d'une réforme, elles tiennent à ces semaines de liberté. Les professionnels du tourisme, eux, redoutent une saison raccourcie, dont dépendent de nombreux emplois. Les collectivités, enfin, devraient réorganiser les centres de loisirs et les transports, ce qui a un coût. Quelles que soient les bonnes intentions du ministère, toucher au calendrier revient à bousculer l'organisation de tout le pays. Faut-il pour autant renoncer ? Pas nécessairement. D'autres pays y sont parvenus sans drame. Si attachés qu'ils soient à l'été, les Français pourraient accepter un compromis : quelques jours de vacances en moins en juillet, compensés par une semaine de plus à l'automne. Quand bien même cette solution ne satisferait pas tout le monde, elle aurait le mérite de répartir l'effort. Encore faudrait-il que chacun accepte de renoncer à une partie de ses habitudes. Et cela, quoique raisonnable, n'est jamais simple.",
+        "questions": [
+          { "q": "Quel argument justifie de raccourcir les vacances ?", "choices": ["Les élèves oublient une partie de leurs apprentissages", "Les enseignants veulent travailler plus", "Les familles le demandent", "Le tourisme le réclame"], "answer": 0, "explain": "À la rentrée, beaucoup d'élèves ont oublié une partie de ce qu'ils avaient appris." },
+          { "q": "Qui souffre le plus des longues vacances selon le texte ?", "choices": ["Les élèves les plus fragiles", "Les enseignants", "Les professionnels du tourisme", "Les parents"], "answer": 0, "explain": "Ceux qui ne partent pas et ne lisent guère." },
+          { "q": "Pourquoi les professionnels du tourisme s'opposent-ils à la réforme ?", "choices": ["Ils redoutent une saison raccourcie", "Ils veulent plus de vacances", "Ils n'aiment pas l'école", "Ils manquent de personnel"], "answer": 0, "explain": "De nombreux emplois dépendent de la saison d'été." },
+          { "q": "Quel compromis l'auteur propose-t-il ?", "choices": ["Quelques jours de moins en juillet, une semaine de plus à l'automne", "Supprimer les vacances d'été", "Allonger les vacances de Noël", "Ne rien changer"], "answer": 0, "explain": "Une répartition différente de l'année." },
+          { "q": "Dans « Les familles ont beau reconnaître… », que marque « avoir beau » ?", "choices": ["Une concession", "Une cause", "Une conséquence", "Un but"], "answer": 0, "explain": "Avoir beau + infinitif exprime la concession." },
+          { "q": "Quelle est la position finale de l'auteur ?", "choices": ["Un compromis est possible, mais difficile à faire accepter", "Il faut supprimer l'été", "Le débat est inutile", "Les vacances sont trop courtes"], "answer": 0, "explain": "La solution est raisonnable, mais « n'est jamais simple »." }
+        ]
+      }
+    },
+    {
+      "id": "10.4",
+      "name": "Les couleurs du style",
+      "title": "Les figures de style : comparaison, métaphore, personnification, hyperbole, litote, euphémisme, oxymore, chiasme, anaphore, gradation",
+      "goal": "Reconnaître les principales figures de style et expliquer leur effet.",
+      "lesson": [
+        { "type": "p", "text": "Les figures de style rendent l'expression plus frappante, plus imagée ou plus nuancée. Savoir les reconnaître aide à analyser un texte ; savoir les employer donne du relief à son écriture." },
+        { "type": "table", "head": ["Figure", "Définition", "Exemple"], "rows": [["comparaison", "rapproche deux éléments avec un outil (comme, tel, pareil à…)", "Il est rusé comme un renard."], ["métaphore", "rapproche deux éléments sans outil", "Cet homme est un renard."], ["personnification", "prête des traits humains à une chose", "La ville s'éveille."], ["hyperbole", "exagère pour frapper", "Je meurs de faim."], ["litote", "dit moins pour suggérer plus", "Ce n'est pas mauvais. (= c'est très bon)"], ["euphémisme", "adoucit une réalité pénible", "Il nous a quittés. (= il est mort)"], ["oxymore", "unit deux mots contraires", "Cette obscure clarté (Corneille)"], ["anaphore", "répète un mot en tête de phrase ou de vers", "Rome, l'unique objet… Rome… (Corneille)"], ["chiasme", "croise les termes selon le schéma ABBA", "Il faut manger pour vivre et non vivre pour manger. (Molière)"], ["gradation", "énumère en intensité croissante", "Va, cours, vole (Corneille)"]] },
+        { "type": "rule", "title": "Litote ou euphémisme ?", "text": "La **litote** dit moins pour faire entendre plus, souvent avec une négation : [[Va, je ne te hais point]] (Corneille) signifie « je t'aime ». L'**euphémisme** adoucit une réalité désagréable : [[les personnes âgées]] plutôt que « les vieux », [[il nous a quittés]] plutôt que « il est mort »." },
+        { "type": "rule", "title": "La métaphore filée", "text": "Une métaphore prolongée sur plusieurs phrases s'appelle une **métaphore filée** : [[La vie est un long fleuve : on y navigue, on y chavire, on y trouve parfois des îles de repos.]]" },
+        { "type": "examples", "items": [
+          { "ex": "Un **silence assourdissant** régnait dans la salle.", "note": "oxymore" },
+          { "ex": "**Ce n'est pas mauvais** du tout, ce gâteau.", "note": "litote" },
+          { "ex": "**Le vent hurlait** dans la cheminée.", "note": "personnification" },
+          { "ex": "Notre grand-père **nous a quittés** l'hiver dernier.", "note": "euphémisme" }
+        ] },
+        { "type": "compare", "title": "Les confusions fréquentes", "items": [
+          { "ko": "« Il est malin comme un singe » est une ~~métaphore~~.", "ok": "C'est une **comparaison** : il y a un outil, comme.", "why": "Comparaison avec outil, métaphore sans outil." },
+          { "ko": "« Je meurs de faim » est une ~~litote~~.", "ok": "C'est une **hyperbole** : on exagère.", "why": "La litote dit moins ; l'hyperbole dit plus." },
+          { "ko": "« Un silence assourdissant » est une ~~antithèse~~.", "ok": "C'est un **oxymore** : deux mots contraires réunis.", "why": "L'antithèse oppose deux idées dans la phrase ; l'oxymore fond deux contraires en une expression." },
+          { "ko": "« Ce n'est pas bête » est un ~~euphémisme~~.", "ok": "C'est une **litote** : on dit moins pour dire plus (c'est intelligent).", "why": "La litote suggère davantage ; l'euphémisme adoucit." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Dans un commentaire, nommer la figure ne suffit pas : explique son **effet** (insister, émouvoir, faire sourire, frapper l'esprit, rendre une scène vivante)." },
+        { "type": "fun", "text": "Le sais-tu ? Le chiasme tire son nom de la lettre grecque chi, en forme de croix : les termes s'y croisent, comme dans la devise « Un pour tous, tous pour un »." }
+      ],
+      "vocab": [
+        { "mot": "comparaison", "def": "Figure qui rapproche deux éléments à l'aide d'un outil comme « comme » ou « tel ».", "ex": "« Rapide comme l'éclair » est une comparaison.", "alt": [] },
+        { "mot": "métaphore", "def": "Figure qui rapproche deux éléments sans outil de comparaison.", "ex": "« Une mer de nuages » est une métaphore.", "alt": [] },
+        { "mot": "personnification", "def": "Figure qui attribue des traits humains à un objet, un animal ou une idée.", "ex": "« La forêt murmure » est une personnification.", "alt": [] },
+        { "mot": "hyperbole", "def": "Figure d'exagération.", "ex": "« Je te l'ai dit cent fois » est une hyperbole.", "alt": [] },
+        { "mot": "litote", "def": "Figure qui dit moins pour suggérer davantage.", "ex": "« Il n'est pas maladroit » est une litote.", "alt": [] },
+        { "mot": "euphémisme", "def": "Figure qui adoucit l'expression d'une réalité pénible.", "ex": "« Disparaître » pour « mourir » est un euphémisme.", "alt": [] },
+        { "mot": "oxymore", "def": "Figure qui associe deux mots de sens contraires.", "ex": "« Une douce violence » est un oxymore.", "alt": [] },
+        { "mot": "anaphore", "def": "Répétition d'un mot ou d'un groupe en tête de plusieurs phrases ou vers.", "ex": "L'anaphore donne du rythme à ce discours.", "alt": [] },
+        { "mot": "chiasme", "def": "Figure qui croise des termes selon le schéma ABBA.", "ex": "« Un pour tous, tous pour un » est un chiasme.", "alt": [] },
+        { "mot": "gradation", "def": "Énumération de termes d'intensité croissante ou décroissante.", "ex": "« Je marche, je cours, je vole » forme une gradation.", "alt": [] },
+        { "mot": "allégorie", "def": "Représentation concrète d'une idée abstraite.", "ex": "La statue de la Liberté est une allégorie.", "alt": [] },
+        { "mot": "périphrase", "def": "Expression de plusieurs mots qui en remplace un seul.", "ex": "« La capitale de la gastronomie » est une périphrase pour Lyon.", "alt": [] },
+        { "mot": "allitération", "def": "Répétition d'un même son consonne.", "ex": "« Pour qui sont ces serpents qui sifflent sur vos têtes ? » contient une allitération en s.", "alt": [] },
+        { "mot": "assonance", "def": "Répétition d'un même son voyelle.", "ex": "Le poète joue sur une assonance en ou.", "alt": [] },
+        { "mot": "métonymie", "def": "Figure qui désigne une chose par un mot qui lui est lié (le contenant pour le contenu…).", "ex": "« Boire un verre » est une métonymie.", "alt": [] },
+        { "mot": "ironie", "def": "Fait de dire le contraire de ce que l'on pense pour se moquer.", "ex": "« Quel beau temps ! » dit-il avec ironie sous l'averse.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Cet homme rusé est un vrai renard.", "indice": "Une métaphore animale", "trap": ["comme"], "alt": [] },
+        { "phrase": "Je meurs de faim depuis ce matin.", "indice": "Une exagération", "trap": ["meure"], "alt": [] },
+        { "phrase": "La ville s'éveille sous un soleil timide.", "indice": "Une personnification", "trap": ["s'éveillent"], "alt": [] },
+        { "phrase": "Ce n'est pas mauvais du tout, ce gâteau.", "indice": "Une litote gourmande", "trap": ["mauvaise"], "alt": [] },
+        { "phrase": "Un silence assourdissant régnait dans la salle.", "indice": "Un oxymore", "trap": ["assourdissante"], "alt": [] },
+        { "phrase": "Il faut manger pour vivre et non vivre pour manger.", "indice": "Un chiasme célèbre", "trap": ["mangé"], "alt": [] },
+        { "phrase": "Va, cours, vole et reviens vite.", "indice": "Une gradation", "trap": ["court"], "alt": [] },
+        { "phrase": "Le vent hurlait dans la cheminée.", "indice": "Une tempête personnifiée", "trap": ["hurlé"], "alt": [] },
+        { "phrase": "Elle est rusée comme un renard.", "indice": "Une comparaison", "trap": ["rusé"], "alt": [] },
+        { "phrase": "Notre grand-père nous a quittés l'hiver dernier.", "indice": "Un euphémisme", "trap": ["quitté"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "« Cet enfant est un ange. » C'est…", "choices": ["une métaphore", "une comparaison", "une litote"], "answer": 0, "explain": "Rapprochement sans outil : métaphore." },
+        { "type": "mcq", "q": "« Je te l'ai dit mille fois ! » C'est…", "choices": ["une hyperbole", "un euphémisme", "un oxymore"], "answer": 0, "explain": "Une exagération : hyperbole." },
+        { "type": "mcq", "q": "« Il n'est pas très malin. » C'est…", "choices": ["une litote", "une hyperbole", "une anaphore"], "answer": 0, "explain": "On dit moins pour suggérer plus (il est plutôt sot) : litote." },
+        { "type": "mcq", "q": "« Une douce violence » est…", "choices": ["un oxymore", "une comparaison", "une gradation"], "answer": 0, "explain": "Deux mots contraires réunis : oxymore." },
+        { "type": "mcq", "q": "« Le soleil nous sourit. » C'est…", "choices": ["une personnification", "une hyperbole", "un chiasme"], "answer": 0, "explain": "Le soleil reçoit un geste humain : personnification." },
+        { "type": "fill", "q": "« Il est fort comme un bœuf » est une ___.", "hint": "figure avec un outil", "answer": ["comparaison"], "explain": "Outil de comparaison : comme." },
+        { "type": "fill", "q": "Répéter un mot en tête de plusieurs phrases, c'est faire une ___.", "hint": "une figure", "answer": ["anaphore"], "explain": "L'anaphore." },
+        { "type": "fill", "q": "« Les non-voyants » pour « les aveugles » : c'est un ___.", "hint": "une figure qui adoucit", "answer": ["euphémisme"], "explain": "L'euphémisme adoucit." },
+        { "type": "fill", "q": "« Un pour tous, tous pour un » est un ___.", "hint": "une structure croisée", "answer": ["chiasme"], "explain": "ABBA : chiasme." },
+        { "type": "fill", "q": "« Je marche, je cours, je vole » est une ___.", "hint": "une énumération croissante", "answer": ["gradation"], "explain": "Gradation croissante." },
+        { "type": "fill", "q": "« Une fine plume » pour « un écrivain talentueux » est une ___.", "hint": "un mot pour un autre qui lui est lié", "answer": ["métonymie"], "explain": "L'instrument pour celui qui s'en sert : métonymie." },
+        { "type": "fill", "q": "« L'astre du jour » pour « le soleil » est une ___.", "hint": "une expression qui remplace un mot", "answer": ["périphrase"], "explain": "Plusieurs mots pour un seul : périphrase." },
+        { "type": "error", "q": "Cette métafore est très réussie.", "wrong": 1, "fix": ["métaphore"], "explain": "Métaphore, avec ph." },
+        { "type": "error", "q": "Une litotte dit moins pour suggérer plus.", "wrong": 1, "fix": ["litote"], "explain": "Litote, avec un seul t final." },
+        { "type": "error", "q": "L'oximore unit deux mots contraires.", "wrong": 0, "fix": ["L'oxymore"], "explain": "Oxymore, avec un y." },
+        { "type": "error", "q": "Cette hyperbolle exagère la réalité.", "wrong": 1, "fix": ["hyperbole"], "explain": "Hyperbole, avec un seul l." }
+      ],
+      "reading": {
+        "title": "Le réveil de la ville",
+        "text": "La ville dormait encore quand le premier tramway, ce long serpent de lumière, se mit à glisser le long des quais. Les réverbères, sentinelles fatiguées, clignaient des yeux dans le brouillard. Il faisait un froid de loup. Au coin de la rue, la boulangerie ouvrait déjà ses paupières dorées, et l'odeur du pain chaud, douce caresse, réveillait tout le quartier. Le boulanger, un colosse au cœur tendre, saluait chaque client comme un vieil ami. Ses mains, deux battoirs couverts de farine, façonnaient les baguettes avec une délicatesse de dentellière. Ce n'était pas le plus bavard des hommes ; mais son sourire valait mille discours. Peu à peu, la rumeur de la ville enfla : un klaxon, puis dix, puis cent ; des pas, des voix, des rires. Le silence de la nuit, ce silence assourdissant que connaissent les insomniaques, avait cédé la place au vacarme du jour. Les passants pressés couraient vers leur travail, les flâneurs flânaient vers nulle part. Dans cette marée humaine, une petite fille s'arrêta devant la vitrine, le nez collé contre la vitre, les yeux grands comme des soucoupes. Elle regardait les croissants comme on contemple un trésor. Le temps semblait suspendu. Sa mère, qui n'était pas d'humeur à traîner, la tira par la main. Mais l'enfant, en se retournant une dernière fois, emporta avec elle tout le parfum du matin.",
+        "questions": [
+          { "q": "« Ce long serpent de lumière » désigne le tramway. Quelle figure est employée ?", "choices": ["Une métaphore", "Une comparaison", "Une litote", "Un chiasme"], "answer": 0, "explain": "Le tramway est assimilé à un serpent, sans outil de comparaison." },
+          { "q": "« Il faisait un froid de loup » est…", "choices": ["une hyperbole", "un euphémisme", "un oxymore", "une anaphore"], "answer": 0, "explain": "Une expression imagée qui exagère l'intensité du froid." },
+          { "q": "« Ce n'était pas le plus bavard des hommes » : quelle figure ?", "choices": ["Une litote", "Une hyperbole", "Une métaphore", "Une gradation"], "answer": 0, "explain": "On suggère qu'il parlait très peu, en disant moins." },
+          { "q": "Quel effet produit « un klaxon, puis dix, puis cent » ?", "choices": ["Il traduit la montée progressive du bruit", "Il ralentit le récit", "Il exprime la tristesse", "Il décrit la boulangerie"], "answer": 0, "explain": "La gradation fait entendre la ville qui s'éveille." },
+          { "q": "« Ce silence assourdissant » est…", "choices": ["un oxymore", "une comparaison", "une personnification", "un euphémisme"], "answer": 0, "explain": "Silence et assourdissant sont contraires." },
+          { "q": "« Les yeux grands comme des soucoupes » : quelle figure ?", "choices": ["Une comparaison", "Une métaphore", "Une litote", "Une métonymie"], "answer": 0, "explain": "L'outil comme signale une comparaison." }
+        ]
+      }
+    },
+    {
+      "id": "10.5",
+      "name": "Faire court",
+      "title": "Résumer et synthétiser : reformuler, condenser, nominaliser ; les règles de la synthèse",
+      "goal": "Résumer un texte et confronter plusieurs documents dans une synthèse objective.",
+      "lesson": [
+        { "type": "p", "text": "**Résumer**, c'est réduire un texte en gardant ses idées essentielles et l'ordre de son raisonnement. **Synthétiser**, c'est confronter plusieurs documents pour en dégager une vue d'ensemble. Deux exercices clés du DALF." },
+        { "type": "rule", "title": "Les règles du résumé", "text": "On respecte l'ordre des idées et le point de vue de l'auteur ; on n'ajoute **aucun avis personnel** ; on ne recopie pas de phrases (seulement quelques mots-clés) ; on respecte le nombre de mots imposé, souvent le quart du texte." },
+        { "type": "rule", "title": "Condenser", "text": "Supprime les exemples et les répétitions ; regroupe les idées ; remplace une énumération par un mot générique ([[pommes, poires, cerises → des fruits]]) ; **nominalise** : [[Il est important que les élèves dorment assez]] → [[Un sommeil suffisant est essentiel aux élèves]]." },
+        { "type": "table", "head": ["Verbe", "Nom", "Verbe", "Nom"], "rows": [["augmenter", "l'augmentation", "diminuer", "la diminution"], ["réussir", "la réussite", "choisir", "le choix"], ["refuser", "le refus", "développer", "le développement"], ["protéger", "la protection", "consommer", "la consommation"]] },
+        { "type": "rule", "title": "La synthèse de documents", "text": "Elle confronte les documents **idée par idée** (et non document par document), avec un titre, une introduction qui présente les documents et la problématique, un développement organisé et une conclusion. Elle reste **objective** : ni « je » ni opinion. On cite les sources : [[selon le document 2]], [[l'auteur du premier texte souligne que…]]." },
+        { "type": "examples", "items": [
+          { "ex": "**Texte** : « Les enfants passent trop de temps devant les écrans, ce qui nuit à leur sommeil, à leur concentration et à leur santé. »", "note": "le texte de départ" },
+          { "ex": "**Résumé** : « L'excès d'écrans nuit à la santé des enfants. »", "note": "condensé, reformulé, sans avis" },
+          { "ex": "« La protection des forêts est une priorité. »", "note": "nominalisation de « il faut protéger les forêts »" },
+          { "ex": "« Les deux auteurs s'accordent sur ce point ; en revanche, le second… »", "note": "une synthèse confronte les documents" }
+        ] },
+        { "type": "compare", "title": "Les erreurs de méthode", "items": [
+          { "ko": "Résumé : Je trouve que l'auteur a raison de dire que…", "ok": "Résumé : L'auteur montre que…", "why": "Aucun avis personnel dans un résumé." },
+          { "ko": "Synthèse : Le document 1 dit… Le document 2 dit… Le document 3 dit…", "ok": "Synthèse : Les trois documents s'accordent sur… En revanche, le deuxième nuance…", "why": "Une synthèse confronte les documents idée par idée." },
+          { "ko": "Il est nécessaire que l'on protège les forêts.", "ok": "La protection des forêts est nécessaire.", "why": "La nominalisation condense." },
+          { "ko": "Recopier une phrase entière du texte.", "ok": "Reformuler l'idée avec ses propres mots.", "why": "Le résumé est une réécriture, pas un collage." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Pour réussir un résumé, repère d'abord la thèse et les articulations du texte (les connecteurs) : elles forment le squelette de ton résumé." },
+        { "type": "fun", "text": "Le sais-tu ? Pascal s'excusait ainsi à la fin d'une lettre : « Je n'ai fait celle-ci plus longue que parce que je n'ai pas eu le loisir de la faire plus courte. » Faire court demande plus de travail que faire long !" }
+      ],
+      "vocab": [
+        { "mot": "synthèse", "def": "Exposé qui réunit et confronte plusieurs documents en une vue d'ensemble.", "ex": "Rédige une synthèse des trois documents.", "alt": [] },
+        { "mot": "nominalisation", "def": "Transformation d'un verbe ou d'un adjectif en nom.", "ex": "« La réussite » est la nominalisation de « réussir ».", "alt": [] },
+        { "mot": "reformuler", "def": "Exprimer la même idée avec d'autres mots.", "ex": "Il faut reformuler les idées du texte.", "alt": [] },
+        { "mot": "condenser", "def": "Réduire un texte en gardant l'essentiel.", "ex": "Apprends à condenser tes idées.", "alt": [] },
+        { "mot": "paraphrase", "def": "Reformulation qui développe un texte sans rien apporter de nouveau.", "ex": "Ton commentaire n'est qu'une paraphrase du poème.", "alt": [] },
+        { "mot": "abrégé", "def": "Version courte d'un texte ou d'un ouvrage.", "ex": "Il a lu un abrégé d'histoire de France.", "alt": [] },
+        { "mot": "quintessence", "def": "Ce qu'il y a de plus essentiel, de plus pur.", "ex": "Ce poème est la quintessence du romantisme.", "alt": [] },
+        { "mot": "substance", "def": "Contenu essentiel d'un texte ou d'un discours.", "ex": "Voici la substance de son discours.", "alt": [] },
+        { "mot": "teneur", "def": "Contenu exact d'un texte ; ou proportion d'un élément.", "ex": "La teneur de la lettre reste secrète.", "alt": [] },
+        { "mot": "aperçu", "def": "Idée rapide et générale de quelque chose.", "ex": "Ce chapitre donne un aperçu de la question.", "alt": [] },
+        { "mot": "récapitulatif", "def": "Document qui reprend brièvement les points essentiels.", "ex": "Un récapitulatif figure à la fin du chapitre.", "alt": [] },
+        { "mot": "schématiser", "def": "Représenter de façon simplifiée ; ou simplifier à l'excès.", "ex": "Il ne faut pas trop schématiser ce débat.", "alt": [] },
+        { "mot": "synthétiser", "def": "Réunir des éléments en un tout cohérent et bref.", "ex": "Il faut synthétiser les informations des documents.", "alt": [] },
+        { "mot": "mot-clé", "def": "Mot qui résume une idée essentielle d'un texte.", "ex": "Souligne chaque mot-clé du texte.", "alt": ["mot clé"] },
+        { "mot": "concision", "def": "Qualité de ce qui dit beaucoup en peu de mots.", "ex": "Le résumé exige de la concision.", "alt": [] },
+        { "mot": "exhaustivité", "def": "Caractère de ce qui traite un sujet complètement.", "ex": "La synthèse ne vise pas l'exhaustivité.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Un résumé ne contient aucun avis personnel.", "indice": "Une règle du résumé", "trap": ["personnelle"], "alt": [] },
+        { "phrase": "La synthèse confronte les documents idée par idée.", "indice": "Une méthode de synthèse", "trap": ["confrontent"], "alt": [] },
+        { "phrase": "La protection des forêts est une priorité.", "indice": "Une phrase nominalisée", "trap": ["protections"], "alt": [] },
+        { "phrase": "Il faut condenser le texte au quart de sa longueur.", "indice": "Une consigne de résumé", "trap": ["condensé"], "alt": [] },
+        { "phrase": "Supprime les exemples et les répétitions.", "indice": "Un conseil pour condenser", "trap": ["Supprimes"], "alt": [] },
+        { "phrase": "Selon le premier document, la pollution augmente.", "indice": "Une source citée", "trap": ["augmentent"], "alt": [] },
+        { "phrase": "Reformule les idées avec tes propres mots.", "indice": "Une consigne", "trap": ["Reformules"], "alt": [] },
+        { "phrase": "La réussite des élèves dépend de leur sommeil.", "indice": "Une idée condensée", "trap": ["dépendent"], "alt": [] },
+        { "phrase": "Un bon résumé respecte l'ordre des idées.", "indice": "Une règle", "trap": ["respectent"], "alt": [] },
+        { "phrase": "Les deux auteurs s'accordent sur l'essentiel.", "indice": "Un point commun", "trap": ["s'accorde"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Le nom formé sur « consommer » est…", "choices": ["la consommation", "la consommance", "le consommement"], "answer": 0, "explain": "Consommer → la consommation." },
+        { "type": "mcq", "q": "Que doit-on éviter dans un résumé ?", "choices": ["donner son avis", "respecter l'ordre des idées", "reformuler"], "answer": 0, "explain": "Le résumé reste fidèle à l'auteur, sans avis personnel." },
+        { "type": "mcq", "q": "Comment organiser une synthèse ?", "choices": ["idée par idée, en confrontant les documents", "document par document", "par ordre alphabétique"], "answer": 0, "explain": "Une synthèse confronte les documents sur chaque idée." },
+        { "type": "mcq", "q": "« Pommes, poires et cerises » peuvent être remplacées par…", "choices": ["des fruits", "des légumes", "des desserts"], "answer": 0, "explain": "Un mot générique condense l'énumération." },
+        { "type": "mcq", "q": "Quelle phrase est la plus condensée ?", "choices": ["La hausse des prix inquiète les ménages.", "Le fait que les prix augmentent beaucoup inquiète les familles qui font leurs achats.", "Les familles s'inquiètent parce que les prix, eux, augmentent."], "answer": 0, "explain": "La nominalisation (la hausse) condense l'idée." },
+        { "type": "fill", "q": "Réduire → la ___.", "hint": "nominalisation", "answer": ["réduction"], "explain": "Réduire → la réduction." },
+        { "type": "fill", "q": "Protéger → la ___.", "hint": "nominalisation", "answer": ["protection"], "explain": "Protéger → la protection." },
+        { "type": "fill", "q": "Refuser → le ___.", "hint": "nominalisation", "answer": ["refus"], "explain": "Refuser → le refus." },
+        { "type": "fill", "q": "Développer → le ___.", "hint": "nominalisation", "answer": ["développement"], "explain": "Développer → le développement." },
+        { "type": "fill", "q": "Choisir → le ___.", "hint": "nominalisation", "answer": ["choix"], "explain": "Choisir → le choix." },
+        { "type": "fill", "q": "Dans une synthèse, on écrit « selon le ___ 2 » pour citer une source.", "hint": "un nom", "answer": ["document"], "explain": "On cite les documents par leur numéro." },
+        { "type": "fill", "q": "Un résumé fait souvent le ___ de la longueur du texte.", "hint": "une fraction", "answer": ["quart"], "explain": "Le quart, avec une petite marge de tolérance." },
+        { "type": "error", "q": "La diminuation des prix réjouit les clients.", "wrong": 1, "fix": ["diminution"], "explain": "Diminuer → la diminution." },
+        { "type": "error", "q": "L'augmentaion du chômage inquiète.", "wrong": 0, "fix": ["L'augmentation"], "explain": "Augmenter → l'augmentation." },
+        { "type": "error", "q": "Le developpement durable est essentiel.", "wrong": 1, "fix": ["développement"], "explain": "Développement : accent aigu, deux p." },
+        { "type": "error", "q": "La protèction de la nature nous concerne tous.", "wrong": 1, "fix": ["protection"], "explain": "Protection, sans accent." }
+      ],
+      "reading": {
+        "title": "Le sommeil des adolescents",
+        "text": "Les adolescents dorment de moins en moins. Selon de nombreux médecins, il leur faudrait entre huit et dix heures de sommeil par nuit ; beaucoup n'en ont que six ou sept en semaine. Plusieurs causes expliquent ce déficit. D'abord, l'horloge biologique change à l'adolescence : l'envie de dormir arrive plus tard le soir, si bien que se coucher tôt devient difficile. Ensuite, les écrans retardent encore l'endormissement : leur lumière trompe le cerveau, qui croit qu'il fait encore jour, et les notifications incessantes empêchent de décrocher. Enfin, les cours commencent souvent tôt, ce qui oblige à se lever avant que le corps soit reposé. Les conséquences de ce manque de sommeil sont multiples. Sur le plan scolaire, il nuit à la concentration et à la mémoire : un élève fatigué retient moins bien ce qu'il apprend. Sur le plan physique, il fragilise les défenses de l'organisme : un adolescent qui dort mal tombe plus souvent malade et récupère moins bien après l'effort. Sur le plan moral enfin, il rend plus irritable et peut accentuer l'anxiété. Que faire ? Les spécialistes recommandent d'éteindre les écrans au moins une heure avant le coucher et de garder des horaires réguliers, même le week-end. Une chambre calme et sombre aide aussi à trouver le sommeil. Certains établissements expérimentent par ailleurs des cours qui commencent plus tard. Les premiers résultats sont encourageants : les élèves y seraient plus attentifs et de meilleure humeur.",
+        "questions": [
+          { "q": "Quelle est l'idée principale du texte ?", "choices": ["Les adolescents manquent de sommeil, avec des conséquences variées", "Les écrans sont dangereux", "Les cours commencent trop tard", "Les médecins dorment peu"], "answer": 0, "explain": "Le texte expose le constat, les causes, les conséquences et des solutions." },
+          { "q": "Combien de causes le texte donne-t-il ?", "choices": ["Trois", "Une", "Deux", "Cinq"], "answer": 0, "explain": "D'abord, ensuite, enfin : trois causes." },
+          { "q": "Quelle phrase résume le mieux les conséquences ?", "choices": ["Le manque de sommeil nuit à la scolarité, à la santé et à l'humeur", "Les élèves fatigués ont de mauvaises notes", "Les écrans retardent l'endormissement", "Il faut éteindre les écrans"], "answer": 0, "explain": "Elle regroupe les trois plans (scolaire, physique, moral)." },
+          { "q": "Quels connecteurs organisent l'énumération des causes ?", "choices": ["D'abord, ensuite, enfin", "Certes, mais", "Donc, ainsi", "Or, donc"], "answer": 0, "explain": "Ce sont des connecteurs d'énumération." },
+          { "q": "Pourquoi l'auteur emploie-t-il le conditionnel « seraient » à la fin ?", "choices": ["Les résultats sont encore à confirmer", "C'est une hypothèse avec si", "C'est une marque de politesse", "C'est une faute"], "answer": 0, "explain": "Le conditionnel signale une information non encore vérifiée." },
+          { "q": "Quel détail faudrait-il supprimer en priorité dans un résumé ?", "choices": ["L'explication de la lumière qui trompe le cerveau", "L'idée que les adolescents dorment peu", "L'idée que ce manque a des conséquences", "Les solutions proposées"], "answer": 0, "explain": "Un détail explicatif s'efface avant les idées essentielles." }
+        ]
+      }
+    }
+  ]
+}
