@@ -80,7 +80,7 @@ async function write(handle) {
 export async function chooseAutoFile() {
   const handle = await window.showSaveFilePicker({
     suggestedName: "mission-francais-famille.json",
-    types: [{ description: "Sauvegarde Mission Bilingue", accept: { "application/json": [".json"] } }],
+    types: [{ description: "Sauvegarde Mission Français", accept: { "application/json": [".json"] } }],
   });
   await setHandle(handle);
   await write(handle);

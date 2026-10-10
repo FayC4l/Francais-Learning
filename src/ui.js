@@ -32,16 +32,17 @@ export function h(tag, attrs, ...children) {
 export const esc = (s) =>
   String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 
-/** Lesson markup: **bold** and [[spoken English]] chips. */
+/** Lesson markup: **bold**, ~~wrong form~~ (struck through) and [[spoken example]] chips. */
 export function rich(text) {
   let s = esc(text);
   s = s.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+  s = s.replace(/~~(.+?)~~/g, '<del class="wrong-form">$1</del>');
   s = s.replace(/\[\[(.+?)\]\]/g, (_, x) => `<button type="button" class="say-chip" data-say="${x}">${x}${icon("speaker", "say-ic")}</button>`);
   return s;
 }
 
 /** Plain text of lesson markup (for speech). */
-export const plain = (text) => String(text ?? "").replace(/\*\*|\[\[|\]\]/g, "");
+export const plain = (text) => String(text ?? "").replace(/\*\*|\[\[|\]\]|~~/g, "");
 
 const PATHS = {
   back: '<path d="M15 5l-7 7 7 7"/>',

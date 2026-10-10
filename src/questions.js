@@ -101,7 +101,7 @@ export function makeQuestion(kind, ref) {
     }
     case "error": {
       const tokens = item.q.split(" ");
-      return { ...base, tokens, wrong: item.wrong, accept: item.fix, expected: `${tokens[item.wrong].replace(/[.,!?;:…»]+$/, "")} → ${item.fix[0]}`, time: timeFor(kind) };
+      return { ...base, tokens, wrong: item.wrong, accept: item.fix, caseSensitive: !!item.case, expected: `${tokens[item.wrong].replace(/[.,!?;:…»]+$/, "")} → ${item.fix[0]}`, time: timeFor(kind) };
     }
     case "reading":
     case "listening": {

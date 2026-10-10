@@ -481,7 +481,7 @@ function fight(view, L, lvl) {
     if (won) {
       confetti({ count: 200 });
       await sleep(400);
-      if (res.firstWin) await stamp(nextLvl ? `Ligne ${L + 1} ouverte` : "Bilingue !", { sub: nextLvl ? nextLvl.title : "Mission accomplie", color: `var(--l${Math.min(12, L + 1)})`, ms: 1800 });
+      if (res.firstWin) await stamp(nextLvl ? `Ligne ${L + 1} ouverte` : "Immortel !", { sub: nextLvl ? nextLvl.title : "Mission accomplie", color: `var(--l${Math.min(12, L + 1)})`, ms: 1800 });
       if (res.firstWin) sfx.level();
     }
   }

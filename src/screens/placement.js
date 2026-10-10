@@ -10,12 +10,12 @@ import { confetti, burstAt, shake } from "../fx.js";
 import { quip, mentorSays } from "../humor.js";
 
 export const BAND_INFO = {
-  A1: { name: "Découverte", desc: "Tu comprends des mots et des phrases très simples." },
-  A2: { name: "Survie", desc: "Tu te débrouilles dans les situations du quotidien." },
-  B1: { name: "Seuil", desc: "Tu racontes, tu expliques, tu voyages sans paniquer." },
-  B2: { name: "Avancé", desc: "Tu argumentes et tu comprends l'essentiel de textes complexes." },
-  C1: { name: "Autonome", desc: "Tu t'exprimes avec aisance et précision, même sur des sujets pointus." },
-  C2: { name: "Maîtrise", desc: "Tu joues avec la langue comme un natif cultivé. Objectif : C2 Proficiency !" },
+  A1: { name: "Premiers pas", desc: "Tu écris des phrases simples ; les accents, les homophones et les accords te jouent encore des tours." },
+  A2: { name: "Bases solides", desc: "Tu maîtrises les règles de l'école primaire : présent, imparfait, passé composé, accords simples." },
+  B1: { name: "Collège", desc: "Tu racontes au passé simple et tu accordes la plupart des participes." },
+  B2: { name: "Brevet et au-delà", desc: "Tu maîtrises le subjonctif, la phrase complexe et le discours rapporté." },
+  C1: { name: "Lycée et supérieur", desc: "Ton vocabulaire est précis, tu argumentes avec nuance et tu évites les pièges du mot juste." },
+  C2: { name: "Plume d'expert", desc: "Tu joues avec la langue, les registres et le style. Objectif : DALF C2 !" },
 };
 
 /** First screen of a new profile: Chikh Fayçal says hello and proposes the placement test. */
@@ -27,11 +27,11 @@ export function welcomeScreen(view) {
       { class: "welcome" },
       h("p", { class: "eyebrow" }, `Bienvenue, ${state.player.name} !`),
       h("h1", { class: "page-title" }, "D'où pars-tu ?"),
-      mentorSays(`Salut ${state.player.name} ! Moi c'est Chikh Fayçal, ton prof d'anglais. Avant de grimper, je dois savoir où tu en es. Promis, je ne regarde pas tes réponses… enfin, un peu.`),
+      mentorSays(`Salut ${state.player.name} ! Moi c'est Chikh Fayçal, ton prof de français. Avant de grimper, je dois savoir où tu en es. Promis, je ne regarde pas tes fautes… enfin, un peu.`),
       h(
         "div",
         { class: "welcome-opts" },
-        opt("Je débute de zéro", "On commence au tout premier « hello ». Ligne 1.", () => go("map")),
+        opt("Je commence au début", "On reprend les bases : accents, accords, homophones. Ligne 1.", () => go("map")),
         opt("Je connais quelques bases", "Test de placement adaptatif, 10 à 15 minutes.", () => go("placement", { start: "A2" }), true),
         opt("Je me débrouille déjà bien", "Test de placement qui commence plus haut.", () => go("placement", { start: "B1" })),
       ),
@@ -133,7 +133,7 @@ export function placementScreen(view, { start = "A2" } = {}) {
         h("p", { class: "results-line" }, info.desc),
         h("p", { class: "results-line" }, h("strong", null, pct), ` % de bonnes réponses sur ${r.asked} questions.`),
         h("div", { class: "band-scale" }, BANDS.map((b) => h("span", { class: `${b === r.band ? "on" : ""} ${BANDS.indexOf(b) < BANDS.indexOf(r.band) ? "past" : ""}` }, b))),
-        mentorSays(r.band === "A1" ? "Tout le monde commence quelque part. Moi, à ton âge, je croyais que « teacher » se prononçait « tichère ». On va bien s'amuser." : r.band === "C2" ? "C2 ?! Ma moustache en tremble. Tu vas pouvoir t'attaquer directement à la prépa Cambridge." : `Niveau ${r.band}, pas mal du tout ! Je t'ai réservé une place sur la ligne ${r.line}.`),
+        mentorSays(r.band === "A1" ? "Tout le monde commence quelque part. Moi, à ton âge, j'écrivais « ognion » et j'en étais fier. On va bien s'amuser." : r.band === "C2" ? "C2 ?! Ma barbe en tremble. Tu vas pouvoir t'attaquer directement à la prépa DALF." : `Niveau ${r.band}, pas mal du tout ! Je t'ai réservé une place sur la ligne ${r.line}.`),
         // Once the course has started, a new test only updates the estimated level: it never skips lines.
         started ? h("p", { class: "set-help" }, "Ton niveau estimé est mis à jour. Comme tu as déjà commencé le parcours, le test ne fait pas sauter de ligne : continue là où tu en es.") : null,
         started ? null : h("label", { class: "field-label", for: "start-line" }, "Par où veux-tu commencer ?"),

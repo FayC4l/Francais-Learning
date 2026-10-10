@@ -1,4 +1,4 @@
-// Chikh Fayçal, the English teacher: situational one-liners, his face for each mood, and the joke of the day
+// Chikh Fayçal, the French teacher: situational one-liners, his face for each mood, and the joke of the day
 // (content/humor.json, content/mentor.json).
 import { EXTRA } from "./content.js";
 import { state } from "./store.js";

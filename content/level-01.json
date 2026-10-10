@@ -1,0 +1,381 @@
+{
+  "id": 1,
+  "cefr": "A1",
+  "title": "Les bases de l'écrit",
+  "sub": "Orthographe du primaire",
+  "intro": "Les accents, la cédille, les petits mots jumeaux (a / à, et / est…) et le présent : les fondations de l'orthographe. Même les adultes y trébuchent !",
+  "boss": {
+    "name": "Monsieur Sans-Accent",
+    "taunt": "Les accents ? De petits chapeaux inutiles. Moi, j'écris « foret » pour « forêt » et je m'en porte très bien… enfin, presque.",
+    "defeat": "Ma forêt est redevenue une forêt… Bon. Je vais m'acheter des accents."
+  },
+  "units": [
+    {
+      "id": "1.1",
+      "name": "Sons et lettres",
+      "title": "La cédille, g / ge / gu, s / ss, m devant m, b, p, les accents",
+      "goal": "Écrire juste les sons [s], [ʒ], [g] et [ɑ̃], et choisir le bon accent sur le e.",
+      "lesson": [
+        { "type": "p", "text": "En français, un même son peut s'écrire de plusieurs façons, et une même lettre peut faire plusieurs sons. Quelques règles simples évitent la plupart des fautes." },
+        { "type": "rule", "title": "La cédille", "text": "Devant **a**, **o**, **u**, la lettre c fait le son [k] : [[un car]], [[un col]], [[un cube]]. Pour entendre [s] devant a, o, u, on ajoute une **cédille** : [[un garçon]], [[une leçon]], [[il a reçu]]. Devant **e**, **i**, **y**, le c fait déjà [s] : pas de cédille dans [[le citron]] ou [[ici]]." },
+        { "type": "rule", "title": "g, ge, gu", "text": "Devant a, o, u, le g fait [g] : [[la gare]], [[une gomme]]. Devant e, i, y, il fait [ʒ] : [[la girafe]], [[le genou]]. Pour garder [ʒ] devant a ou o, on ajoute un **e** : [[un pigeon]], [[nous mangeons]]. Pour garder [g] devant e ou i, on ajoute un **u** : [[une guitare]], [[une bague]]." },
+        { "type": "rule", "title": "s ou ss", "text": "Entre deux voyelles, un seul s fait [z] : [[une rose]], [[une maison]]. Pour entendre [s] entre deux voyelles, on double le s : [[un poisson]], [[une tasse]]. Attention aux paires : [[un poison]] / [[un poisson]], [[le désert]] / [[le dessert]]." },
+        { "type": "table", "head": ["Devant", "On écrit", "Exemples"], "rows": [["m, b, p", "**m**", "[[une jambe]], [[emmener]], [[une tempête]], [[un champ]]"], ["les autres lettres", "**n**", "[[une tante]], [[un genou]], [[chanter]]"]] },
+        { "type": "rule", "title": "é, è, ê", "text": "L'accent **aigu** (é) fait un son fermé : [[l'été]], [[un bébé]]. L'accent **grave** (è) fait un son ouvert : [[ma mère]], [[une flèche]]. L'accent **circonflexe** (ê) remplace souvent un ancien s : [[une forêt]] (forestier), [[une fête]] (festin), [[une fenêtre]] (défenestrer)." },
+        { "type": "examples", "items": [
+          { "ex": "Le **garçon** boit un jus de citron avec un **glaçon**.", "note": "cédille devant o ; pas de cédille devant i" },
+          { "ex": "Nous **mangeons** près du **pigeon**.", "note": "ge devant o pour garder le son [ʒ]" },
+          { "ex": "Elle joue de la **guitare** avec une **bague** au doigt.", "note": "gu devant a et e pour garder le son [g]" },
+          { "ex": "Au **dessert**, un **poisson** en chocolat !", "note": "ss entre deux voyelles pour le son [s]" },
+          { "ex": "La **tempête** secoue la **forêt**.", "note": "m devant p ; ê comme dans « forestier »" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "un ~~garcon~~", "ok": "un **garçon**", "why": "Sans cédille, on lirait « garkon »." },
+          { "ko": "une ~~gitare~~", "ok": "une **guitare**", "why": "Sans u, on lirait « jitare »." },
+          { "ko": "une ~~janbe~~", "ok": "une **jambe**", "why": "Devant b, on écrit m." },
+          { "ko": "un ~~poison~~ rouge dans le bocal", "ok": "un **poisson** rouge dans le bocal", "why": "Le poison rend malade ; le poisson nage." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "La cédille ne se met **jamais** devant e ou i : on écrit [[il commence]], [[nous commencions]], mais [[nous commençons]]." },
+        { "type": "fun", "text": "Le sais-tu ? L'accent circonflexe garde souvent la trace d'un s disparu au Moyen Âge : hôpital et hospitalier, forêt et forestier, fête et festival viennent de la même famille." }
+      ],
+      "vocab": [
+        { "mot": "garçon", "def": "Enfant ou jeune homme.", "ex": "Le garçon court dans la cour.", "alt": [] },
+        { "mot": "leçon", "def": "Ce que l'on apprend en une séance de cours.", "ex": "Cette leçon est facile.", "alt": [] },
+        { "mot": "glaçon", "def": "Petit morceau de glace qui rafraîchit une boisson.", "ex": "Je mets un glaçon dans mon jus.", "alt": [] },
+        { "mot": "maçon", "def": "Ouvrier qui construit des murs en briques ou en pierres.", "ex": "Le maçon monte un mur.", "alt": [] },
+        { "mot": "pigeon", "def": "Oiseau gris très commun dans les villes.", "ex": "Un pigeon picore des miettes.", "alt": [] },
+        { "mot": "guitare", "def": "Instrument de musique à six cordes que l'on gratte.", "ex": "Ma sœur joue de la guitare.", "alt": [] },
+        { "mot": "bague", "def": "Anneau que l'on porte au doigt.", "ex": "Elle a perdu sa bague.", "alt": [] },
+        { "mot": "poisson", "def": "Animal qui vit dans l'eau et respire avec des branchies.", "ex": "Le poisson rouge tourne dans son bocal.", "alt": [] },
+        { "mot": "poison", "def": "Produit dangereux qui peut rendre malade ou tuer.", "ex": "Ce champignon contient un poison.", "alt": [] },
+        { "mot": "dessert", "def": "Plat sucré que l'on mange à la fin du repas.", "ex": "Au dessert, nous avons une tarte.", "alt": [] },
+        { "mot": "désert", "def": "Région très sèche où il pleut rarement.", "ex": "Le désert est couvert de sable.", "alt": [] },
+        { "mot": "jambe", "def": "Partie du corps entre la hanche et le pied.", "ex": "Il s'est fait mal à la jambe.", "alt": [] },
+        { "mot": "tempête", "def": "Vent très violent, souvent accompagné de pluie.", "ex": "La tempête a arraché les tuiles.", "alt": [] },
+        { "mot": "champignon", "def": "Être vivant sans feuilles ni fleurs qui pousse dans les bois.", "ex": "Nous ramassons des champignons.", "alt": [] },
+        { "mot": "forêt", "def": "Grand terrain couvert d'arbres.", "ex": "La forêt est pleine d'oiseaux.", "alt": [] },
+        { "mot": "fenêtre", "def": "Ouverture dans un mur, fermée par une vitre.", "ex": "Ouvre la fenêtre, il fait chaud.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Le garçon mange une glace au citron.", "indice": "Un goûter rafraîchissant", "trap": ["garcon", "glasse"], "alt": [] },
+        { "phrase": "Nous mangeons des champignons dans la forêt.", "indice": "Un repas en plein air", "trap": ["mangons", "foret"], "alt": [] },
+        { "phrase": "Ma sœur joue de la guitare à la fête.", "indice": "Un concert en famille", "trap": ["gitare", "fete"], "alt": [] },
+        { "phrase": "Un pigeon dort sur le bord de la fenêtre.", "indice": "Un oiseau fatigué", "trap": ["pijon", "fenetre"], "alt": [] },
+        { "phrase": "Il y a un poisson rouge dans le bocal.", "indice": "Un animal de compagnie silencieux", "trap": ["poison", "rouje"], "alt": [] },
+        { "phrase": "Le maçon a reçu une bague en cadeau.", "indice": "Un cadeau pour un ouvrier", "trap": ["recu", "bage"], "alt": [] },
+        { "phrase": "Après le dessert, nous rangeons la cuisine.", "indice": "La fin du repas", "trap": ["désert", "rangons"], "alt": [] },
+        { "phrase": "La tempête a cassé la branche du grand arbre.", "indice": "Les dégâts du vent", "trap": ["tenpête", "branshe"], "alt": [] },
+        { "phrase": "Mets un glaçon dans mon verre, s'il te plaît.", "indice": "Une demande polie pour avoir frais", "trap": ["glacon", "met"], "alt": [] },
+        { "phrase": "Mon frère a mal à la jambe.", "indice": "Une douleur après le sport", "trap": ["janbe", "frere"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Quel mot est bien écrit ?", "choices": ["un garçon", "un garcon", "un garsson"], "answer": 0, "explain": "Devant o, il faut une cédille pour entendre [s] : garçon." },
+        { "type": "mcq", "q": "Le ___ construit un mur.", "choices": ["macon", "maçon", "masson"], "answer": 1, "explain": "Devant o, la cédille fait le son [s] : maçon." },
+        { "type": "mcq", "q": "Nous ___ du pain.", "choices": ["mangons", "manjons", "mangeons"], "answer": 2, "explain": "Devant o, on ajoute un e après le g pour garder le son [ʒ] : mangeons." },
+        { "type": "mcq", "q": "Il joue de la ___.", "choices": ["guitare", "gitare", "ghitare"], "answer": 0, "explain": "Devant i, on écrit gu pour entendre [g] : guitare." },
+        { "type": "mcq", "q": "Le chat dort dans la ___.", "choices": ["maisson", "maison", "mèson"], "answer": 1, "explain": "Entre deux voyelles, un seul s fait [z] : maison." },
+        { "type": "fill", "q": "Nous ___ nos affaires.", "hint": "ranger, au présent", "answer": ["rangeons"], "explain": "Devant o, on garde le son [ʒ] en ajoutant un e : rangeons." },
+        { "type": "fill", "q": "Il a ___ une lettre.", "hint": "recevoir (participe passé)", "answer": ["reçu"], "explain": "Devant u, la cédille fait [s] : reçu." },
+        { "type": "fill", "q": "Le ___ vole au-dessus de la place.", "hint": "pi…on (g ou ge ?)", "answer": ["pigeon"], "explain": "Pour garder [ʒ] devant o, on écrit ge : pigeon." },
+        { "type": "fill", "q": "Ce bijou est une ___ en or.", "hint": "ba…e (g ou gu ?)", "answer": ["bague"], "explain": "Devant e, on écrit gu pour entendre [g] : bague." },
+        { "type": "fill", "q": "Il fait très chaud dans le ___ du Sahara.", "hint": "dé…ert (s ou ss ?)", "answer": ["désert"], "explain": "Entre deux voyelles, un seul s fait [z] : désert." },
+        { "type": "fill", "q": "Pour le ___, nous avons une tarte aux pommes.", "hint": "de…ert (s ou ss ?)", "answer": ["dessert"], "explain": "Pour entendre [s] entre deux voyelles, on double le s : dessert." },
+        { "type": "fill", "q": "J'ai mal à la ___.", "hint": "ja…be (m ou n ?)", "answer": ["jambe"], "explain": "Devant b, on écrit m : jambe." },
+        { "type": "fill", "q": "Ma ___ prépare le dîner.", "hint": "m…re (é, è ou ê ?)", "answer": ["mère"], "explain": "Le son ouvert devant re s'écrit è : mère." },
+        { "type": "error", "q": "Le garcon joue au ballon.", "wrong": 1, "fix": ["garçon"], "explain": "Devant o, il faut la cédille : garçon." },
+        { "type": "error", "q": "Il range sa gitare dans l'armoire.", "wrong": 3, "fix": ["guitare"], "explain": "Devant i, on écrit gu pour entendre [g] : guitare." },
+        { "type": "error", "q": "Nous mangons des pâtes.", "wrong": 1, "fix": ["mangeons"], "explain": "Devant o, on ajoute un e pour garder [ʒ] : mangeons." },
+        { "type": "error", "q": "La foret est pleine d'oiseaux.", "wrong": 1, "fix": ["forêt"], "explain": "Forêt prend un accent circonflexe (pense à « forestier ») ; un foret est un outil pour percer." },
+        { "type": "error", "q": "Ce poison rouge tourne dans son bocal.", "wrong": 1, "fix": ["poisson"], "explain": "Le poisson nage (ss, son [s]) ; le poison rend malade (s, son [z])." }
+      ]
+    },
+    {
+      "id": "1.2",
+      "name": "Un, une, des",
+      "title": "Le nom et ses déterminants : genre et nombre",
+      "goal": "Trouver le genre d'un nom, choisir le bon déterminant et mettre le nom au pluriel.",
+      "lesson": [
+        { "type": "p", "text": "Un nom a un **genre** (masculin ou féminin) et un **nombre** (singulier ou pluriel). Le petit mot placé devant lui, le **déterminant**, nous les indique." },
+        { "type": "rule", "title": "Le genre", "text": "Les noms masculins se reconnaissent avec **un** ou **le** : [[un arbre]], [[le soleil]]. Les noms féminins avec **une** ou **la** : [[une maison]], [[la lune]]. Devant une voyelle ou un h muet, le et la deviennent **l'** : [[l'arbre]], [[l'horloge]]." },
+        { "type": "rule", "title": "Le nombre", "text": "Au pluriel, on ajoute en général un **s** au nom : [[un chat]], [[des chats]]. Ce s ne s'entend pas : c'est le déterminant (les, des, mes…) qui t'avertit. Un nom qui se termine déjà par **s**, **x** ou **z** ne change pas : [[une souris]], [[des souris]] ; [[un nez]], [[des nez]]." },
+        { "type": "table", "head": ["", "Masculin singulier", "Féminin singulier", "Pluriel"], "rows": [["article", "le, l', un", "la, l', une", "les, des"], ["possessif", "mon, ton, son", "ma, ta, sa (mon, ton, son devant une voyelle)", "mes, tes, ses"], ["démonstratif", "ce (cet devant une voyelle)", "cette", "ces"]] },
+        { "type": "examples", "items": [
+          { "ex": "**une** horloge, **une** armoire, **une** écharpe", "note": "des noms féminins souvent pris pour des masculins" },
+          { "ex": "**un** orteil, **un** escalier, **un** épisode", "note": "des noms masculins souvent pris pour des féminins" },
+          { "ex": "**cet** avion, **cet** hiver", "note": "ce devient cet devant une voyelle ou un h muet" },
+          { "ex": "**mon** amie, **mon** écharpe", "note": "devant une voyelle, ma devient mon, même au féminin" }
+        ] },
+        { "type": "compare", "items": [
+          { "ko": "les ~~chat~~ dorment", "ok": "les **chats** dorment", "why": "Après les, le nom prend un s." },
+          { "ko": "~~un~~ horloge", "ok": "**une** horloge", "why": "Horloge est féminin." },
+          { "ko": "~~ma~~ écharpe", "ok": "**mon** écharpe", "why": "Devant une voyelle, on dit mon (pour que ça sonne mieux)." },
+          { "ko": "~~ce~~ ascenseur", "ok": "**cet** ascenseur", "why": "Devant une voyelle, ce devient cet." }
+        ] },
+        { "type": "tip", "title": "L'astuce du genre", "text": "En cas de doute, essaie avec **un petit** ou **une petite** : on dit [[une petite horloge]], donc horloge est féminin." },
+        { "type": "fun", "text": "Le sais-tu ? En français, le s du pluriel ne s'entend presque jamais. À l'oral, on devine le pluriel grâce au déterminant : le chat, les chats. C'est pour ça qu'on l'oublie si souvent à l'écrit !" }
+      ],
+      "vocab": [
+        { "mot": "horloge", "def": "Grand appareil qui indique l'heure, accroché au mur ou posé dans une pièce.", "ex": "L'horloge de la cuisine avance.", "alt": [] },
+        { "mot": "avion", "def": "Engin qui transporte des passagers dans les airs.", "ex": "Un avion passe au-dessus de l'école.", "alt": [] },
+        { "mot": "armoire", "def": "Grand meuble à portes où l'on range le linge.", "ex": "Mes pulls sont dans l'armoire.", "alt": [] },
+        { "mot": "orteil", "def": "Chacun des doigts du pied.", "ex": "Je me suis cogné l'orteil.", "alt": [] },
+        { "mot": "éléphant", "def": "Très gros animal gris qui a une trompe.", "ex": "L'éléphant boit avec sa trompe.", "alt": [] },
+        { "mot": "écharpe", "def": "Longue bande de tissu que l'on enroule autour du cou.", "ex": "Prends ton écharpe, il fait froid.", "alt": [] },
+        { "mot": "escalier", "def": "Suite de marches pour monter ou descendre.", "ex": "Il monte l'escalier en courant.", "alt": [] },
+        { "mot": "oreille", "def": "Organe qui sert à entendre.", "ex": "Le chien dresse les oreilles.", "alt": [] },
+        { "mot": "été", "def": "Saison la plus chaude de l'année.", "ex": "Cet été, nous partons à la mer.", "alt": [] },
+        { "mot": "hiver", "def": "Saison la plus froide de l'année.", "ex": "En hiver, les jours sont courts.", "alt": [] },
+        { "mot": "ongle", "def": "Partie dure qui protège le bout des doigts.", "ex": "Il se coupe les ongles.", "alt": [] },
+        { "mot": "épisode", "def": "Partie d'une histoire racontée en plusieurs fois.", "ex": "J'ai vu le dernier épisode de la série.", "alt": [] },
+        { "mot": "anniversaire", "def": "Jour où l'on fête la date de sa naissance.", "ex": "Mon anniversaire tombe en mai.", "alt": [] },
+        { "mot": "ascenseur", "def": "Cabine qui monte et descend les étages d'un immeuble.", "ex": "L'ascenseur est en panne.", "alt": [] },
+        { "mot": "idée", "def": "Ce que l'on imagine, ce que l'on pense.", "ex": "J'ai une excellente idée !", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Les enfants regardent un avion dans le ciel.", "indice": "Ils lèvent la tête", "trap": ["une", "enfant"], "alt": [] },
+        { "phrase": "Une horloge sonne dans le salon.", "indice": "Il est l'heure", "trap": ["Un", "sone"], "alt": [] },
+        { "phrase": "Mes écharpes sont dans l'armoire.", "indice": "Le linge est rangé", "trap": ["écharpe", "mais"], "alt": [] },
+        { "phrase": "Ce garçon a mal à l'orteil.", "indice": "Une petite douleur au pied", "trap": ["la", "garcon"], "alt": [] },
+        { "phrase": "Les éléphants ont de grandes oreilles.", "indice": "Un détail sur de gros animaux", "trap": ["éléphant", "oreille"], "alt": [] },
+        { "phrase": "Cet hiver, nous fêtons un anniversaire à la montagne.", "indice": "Une fête dans la neige", "trap": ["Ce", "une"], "alt": ["Nous fêtons un anniversaire à la montagne cet hiver."] },
+        { "phrase": "J'ai une idée pour le prochain épisode.", "indice": "Un projet de série", "trap": ["un", "la"], "alt": [] },
+        { "phrase": "Les chats dorment au pied de l'escalier.", "indice": "La sieste des animaux", "trap": ["chat", "la"], "alt": [] },
+        { "phrase": "Cette image montre un ascenseur.", "indice": "Une illustration dans un livre", "trap": ["Cet", "une"], "alt": [] },
+        { "phrase": "Ses ongles sont trop longs.", "indice": "Il faudrait les couper", "trap": ["ongle", "long"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "___ horloge sonne midi.", "choices": ["Une", "Un"], "answer": 0, "explain": "Horloge est un nom féminin : une horloge (essaie « une petite horloge »)." },
+        { "type": "mcq", "q": "J'ai mal à ___ orteil.", "choices": ["une", "un"], "answer": 1, "explain": "Orteil est un nom masculin : un orteil." },
+        { "type": "mcq", "q": "Les ___ jouent dans la cour.", "choices": ["enfant", "enfants", "enfante"], "answer": 1, "explain": "Après les, le nom se met au pluriel : enfants." },
+        { "type": "mcq", "q": "___ ascenseur est en panne.", "choices": ["Ce", "Cette", "Cet"], "answer": 2, "explain": "Devant un nom masculin qui commence par une voyelle, ce devient cet." },
+        { "type": "mcq", "q": "J'aime beaucoup ___ idée !", "choices": ["cette", "cet", "ce"], "answer": 0, "explain": "Idée est féminin : cette idée." },
+        { "type": "fill", "q": "Un livre, des ___.", "hint": "livre", "answer": ["livres"], "explain": "Au pluriel, on ajoute un s : des livres." },
+        { "type": "fill", "q": "Une souris, des ___.", "hint": "souris", "answer": ["souris"], "explain": "Un nom terminé par s ne change pas au pluriel." },
+        { "type": "fill", "q": "Un nez, des ___.", "hint": "nez", "answer": ["nez"], "explain": "Un nom terminé par z ne change pas au pluriel." },
+        { "type": "fill", "q": "Je range mon pull dans ___ armoire.", "hint": "le, la ou l' ?", "answer": ["l'"], "explain": "Devant une voyelle, la devient l' : l'armoire." },
+        { "type": "fill", "q": "Il a trois ___ dans sa trousse.", "hint": "crayon", "answer": ["crayons"], "explain": "Après trois, le nom se met au pluriel : crayons." },
+        { "type": "fill", "q": "Ma tante habite au deuxième étage : elle prend ___ escalier.", "hint": "un ou une ? le ou l' ?", "answer": ["l'"], "explain": "Escalier commence par une voyelle : l'escalier." },
+        { "type": "error", "q": "Les chat dorment sur le canapé.", "wrong": 1, "fix": ["chats"], "explain": "Après les, le nom prend un s : les chats." },
+        { "type": "error", "q": "Une avion décolle de l'aéroport.", "wrong": 0, "fix": ["Un"], "explain": "Avion est masculin : un avion." },
+        { "type": "error", "q": "Ma écharpe est toute neuve.", "wrong": 0, "fix": ["Mon"], "explain": "Devant une voyelle, ma devient mon : mon écharpe." },
+        { "type": "error", "q": "Il a deux ongle cassés.", "wrong": 3, "fix": ["ongles"], "explain": "Après deux, le nom se met au pluriel : deux ongles." },
+        { "type": "error", "q": "Ce idée est géniale.", "wrong": 0, "fix": ["Cette"], "explain": "Idée est féminin : cette idée." }
+      ]
+    },
+    {
+      "id": "1.3",
+      "name": "Qui fait l'action ?",
+      "title": "Le sujet et le verbe : présent des verbes en -er, être et avoir",
+      "goal": "Conjuguer au présent les verbes en -er, être et avoir, et accorder le verbe avec son sujet.",
+      "lesson": [
+        { "type": "p", "text": "Le **verbe** dit ce qui se passe ; le **sujet** dit qui fait l'action. Pour le trouver, pose la question « qui est-ce qui ? » devant le verbe : dans [[Les oiseaux chantent]], qui est-ce qui chante ? Les oiseaux." },
+        { "type": "rule", "title": "Le présent des verbes en -er", "text": "On enlève **-er** et on ajoute **-e, -es, -e, -ons, -ez, -ent**. Le s de tu et le -ent de ils / elles ne s'entendent pas : il faut y penser à l'écrit." },
+        { "type": "table", "head": ["Sujet", "chanter", "être", "avoir"], "rows": [["je / j'", "je chante", "je suis", "j'ai"], ["tu", "tu chantes", "tu es", "tu as"], ["il, elle, on", "elle chante", "il est", "on a"], ["nous", "nous chantons", "nous sommes", "nous avons"], ["vous", "vous chantez", "vous êtes", "vous avez"], ["ils, elles", "ils chantent", "elles sont", "ils ont"]] },
+        { "type": "rule", "title": "L'accord sujet-verbe", "text": "Le verbe s'accorde avec son sujet. Un sujet au pluriel (**les enfants**, **mes parents**, **Léa et Hugo**) se remplace par **ils** ou **elles** : le verbe prend **-ent**. Un sujet comme **mon frère et moi** se remplace par **nous** : [[Mon frère et moi jouons]]." },
+        { "type": "examples", "items": [
+          { "ex": "Tu **chantes** faux, mais tu **chantes** fort !", "note": "-es avec tu" },
+          { "ex": "Les élèves **travaillent** en silence.", "note": "les élèves = ils → -ent" },
+          { "ex": "Nous **sommes** prêts et nous **avons** faim.", "note": "être et avoir avec nous" },
+          { "ex": "Léa et Hugo **dessinent** un bateau.", "note": "deux sujets = ils → -ent" }
+        ] },
+        { "type": "compare", "items": [
+          { "ko": "ils ~~mange~~", "ok": "ils **mangent**", "why": "Avec ils, le verbe se termine par -ent." },
+          { "ko": "tu ~~chante~~", "ok": "tu **chantes**", "why": "Avec tu, le verbe se termine par -s." },
+          { "ko": "nous ~~somme~~", "ok": "nous **sommes**", "why": "Être : nous sommes, avec un s." },
+          { "ko": "mon frère et moi ~~jouent~~", "ok": "mon frère et moi **jouons**", "why": "Mon frère et moi = nous." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Le **-ent** des verbes ne se prononce jamais : [[ils parlent]] se dit comme [[il parle]]. Seul le sujet te dit qu'il faut écrire -ent." },
+        { "type": "fun", "text": "Le sais-tu ? Près de neuf verbes français sur dix se terminent par -er. Quand on invente un verbe, il est presque toujours du premier groupe : on dit « googler », « liker »… et ils se conjuguent comme chanter." }
+      ],
+      "vocab": [
+        { "mot": "travailler", "def": "Faire un effort pour produire quelque chose ; exercer un métier.", "ex": "Mon père travaille à l'hôpital.", "alt": [] },
+        { "mot": "habiter", "def": "Avoir sa maison dans un lieu.", "ex": "Nous habitons près de la gare.", "alt": [] },
+        { "mot": "écouter", "def": "Faire attention à ce que l'on entend.", "ex": "Tu écoutes de la musique ?", "alt": [] },
+        { "mot": "regarder", "def": "Diriger ses yeux vers quelque chose.", "ex": "Ils regardent les étoiles.", "alt": [] },
+        { "mot": "accrocher", "def": "Suspendre quelque chose à un clou ou à un crochet.", "ex": "J'accroche mon manteau.", "alt": [] },
+        { "mot": "arroser", "def": "Verser de l'eau sur des plantes.", "ex": "Elle arrose les tomates du jardin.", "alt": [] },
+        { "mot": "dessiner", "def": "Représenter quelque chose avec un crayon.", "ex": "Vous dessinez très bien.", "alt": [] },
+        { "mot": "bavarder", "def": "Parler de choses et d'autres, souvent trop.", "ex": "Les élèves bavardent pendant le cours.", "alt": [] },
+        { "mot": "grimper", "def": "Monter en s'aidant des mains et des pieds.", "ex": "Le chat grimpe dans l'arbre.", "alt": [] },
+        { "mot": "sauter", "def": "Quitter le sol d'un bond.", "ex": "Les enfants sautent dans les flaques.", "alt": [] },
+        { "mot": "oublier", "def": "Ne plus se souvenir de quelque chose.", "ex": "J'oublie toujours mes clés.", "alt": [] },
+        { "mot": "ranger", "def": "Remettre les choses à leur place.", "ex": "Tu ranges ta chambre ?", "alt": [] },
+        { "mot": "chuchoter", "def": "Parler tout bas, à voix basse.", "ex": "Elle chuchote un secret.", "alt": [] },
+        { "mot": "cuisiner", "def": "Préparer des plats.", "ex": "Mon grand-père cuisine une paella.", "alt": [] },
+        { "mot": "préparer", "def": "Rendre prêt à l'avance.", "ex": "Nous préparons une surprise.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Les enfants jouent dans le jardin.", "indice": "Une après-midi dehors", "trap": ["joue", "jardins"], "alt": [] },
+        { "phrase": "Nous chantons une chanson pour maman.", "indice": "Un cadeau musical", "trap": ["chantont", "chante"], "alt": [] },
+        { "phrase": "Tu regardes les nuages dans le ciel.", "indice": "Allongé dans l'herbe", "trap": ["regarde", "regardent"], "alt": [] },
+        { "phrase": "Mes parents travaillent beaucoup.", "indice": "Des journées chargées", "trap": ["travaille", "parent"], "alt": [] },
+        { "phrase": "Vous êtes très gentils.", "indice": "Un compliment pour plusieurs personnes", "trap": ["ête", "sommes"], "alt": [] },
+        { "phrase": "Elle a un chat et un chien.", "indice": "Ses animaux", "trap": ["à", "est"], "alt": ["Elle a un chien et un chat."] },
+        { "phrase": "Ils sont en vacances à la mer.", "indice": "Le mois d'août", "trap": ["son", "ont"], "alt": [] },
+        { "phrase": "J'écoute la radio le matin.", "indice": "Une habitude au réveil", "trap": ["écoutes", "écoutent"], "alt": ["Le matin, j'écoute la radio."] },
+        { "phrase": "Nous avons un petit jardin.", "indice": "Ce qu'il y a derrière la maison", "trap": ["avont", "ont"], "alt": [] },
+        { "phrase": "Léa et Hugo dessinent un bateau.", "indice": "Deux artistes au travail", "trap": ["dessine", "dessines"], "alt": ["Hugo et Léa dessinent un bateau."] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Les oiseaux ___ dans les arbres.", "choices": ["chante", "chantent", "chantes"], "answer": 1, "explain": "Les oiseaux = ils : le verbe se termine par -ent." },
+        { "type": "mcq", "q": "Tu ___ ta chambre.", "choices": ["ranges", "range", "rangent"], "answer": 0, "explain": "Avec tu, le verbe se termine par -s : tu ranges." },
+        { "type": "mcq", "q": "Nous ___ en retard.", "choices": ["somme", "sont", "sommes"], "answer": 2, "explain": "Être au présent : nous sommes." },
+        { "type": "mcq", "q": "Ils ___ faim.", "choices": ["ont", "on", "sont"], "answer": 0, "explain": "Avoir au présent : ils ont (on peut dire « ils avaient faim »)." },
+        { "type": "mcq", "q": "Vous ___ la télévision.", "choices": ["regarder", "regardez", "regardé"], "answer": 1, "explain": "Avec vous, le verbe se termine par -ez." },
+        { "type": "fill", "q": "Nous ___ près de la gare.", "hint": "habiter, au présent", "answer": ["habitons"], "explain": "Avec nous : -ons." },
+        { "type": "fill", "q": "Mes cousins ___ de la musique.", "hint": "écouter, au présent", "answer": ["écoutent"], "explain": "Mes cousins = ils : -ent." },
+        { "type": "fill", "q": "Tu ___ très bien.", "hint": "dessiner, au présent", "answer": ["dessines"], "explain": "Avec tu : -es." },
+        { "type": "fill", "q": "___ dix ans.", "hint": "je + avoir, au présent", "answer": ["J'ai"], "explain": "Je devient j' devant une voyelle : j'ai." },
+        { "type": "fill", "q": "Vous ___ fatigués.", "hint": "être, au présent", "answer": ["êtes"], "explain": "Être au présent : vous êtes (avec un accent circonflexe)." },
+        { "type": "fill", "q": "Le chat ___ dans l'arbre.", "hint": "grimper, au présent", "answer": ["grimpe"], "explain": "Le chat = il : -e." },
+        { "type": "error", "q": "Les élèves bavarde trop.", "wrong": 2, "fix": ["bavardent"], "explain": "Les élèves = ils : le verbe prend -ent." },
+        { "type": "error", "q": "Tu chante faux.", "wrong": 1, "fix": ["chantes"], "explain": "Avec tu, le verbe se termine par -s." },
+        { "type": "error", "q": "Nous somme prêts.", "wrong": 1, "fix": ["sommes"], "explain": "Être : nous sommes, avec un s." },
+        { "type": "error", "q": "Mon frère et moi jouent au foot.", "wrong": 4, "fix": ["jouons"], "explain": "Mon frère et moi = nous : jouons." }
+      ]
+    },
+    {
+      "id": "1.4",
+      "name": "Les petits mots jumeaux",
+      "title": "a / à, et / est, son / sont, on / ont",
+      "goal": "Choisir le bon homophone grâce aux astuces de remplacement.",
+      "lesson": [
+        { "type": "p", "text": "Certains petits mots se prononcent de la même façon mais ne s'écrivent pas pareil : ce sont des **homophones**. Pour les distinguer, une astuce : on les **remplace** par un autre mot." },
+        { "type": "table", "head": ["Mot", "Ce que c'est", "On peut le remplacer par…", "Exemple"], "rows": [["a", "verbe avoir", "avait", "[[Léa a un chat.]]"], ["à", "préposition", "(rien : avait ne marche pas)", "[[Elle va à l'école.]]"], ["est", "verbe être", "était", "[[Le ciel est bleu.]]"], ["et", "mot de liaison", "et puis", "[[du pain et du beurre]]"], ["sont", "verbe être", "étaient", "[[Ils sont partis.]]"], ["son", "déterminant", "mon, le sien", "[[son vélo]]"], ["ont", "verbe avoir", "avaient", "[[Ils ont faim.]]"], ["on", "pronom sujet", "il", "[[On joue dehors.]]"]] },
+        { "type": "rule", "title": "La règle d'or", "text": "Quand tu hésites, remplace par **avait**, **était**, **étaient** ou **avaient**. Si la phrase reste juste (même au passé), c'est le verbe : **a**, **est**, **sont**, **ont**. Sinon, c'est l'autre mot." },
+        { "type": "examples", "items": [
+          { "ex": "Hugo **a** froid. → Hugo avait froid.", "note": "a = avoir" },
+          { "ex": "Il pense **à** ses vacances. → Il pense ~~avait~~ ses vacances : impossible.", "note": "à = préposition" },
+          { "ex": "Le gâteau **est** prêt **et** il sent bon.", "note": "est = était ; et = et puis" },
+          { "ex": "**On** a gagné ! Les joueurs **ont** sauté de joie.", "note": "on = il ; ont = avaient" }
+        ] },
+        { "type": "compare", "items": [
+          { "ko": "Il ~~à~~ faim.", "ok": "Il **a** faim.", "why": "On peut dire « il avait faim »." },
+          { "ko": "Le ciel ~~et~~ bleu.", "ok": "Le ciel **est** bleu.", "why": "On peut dire « le ciel était bleu »." },
+          { "ko": "Ils ~~son~~ partis.", "ok": "Ils **sont** partis.", "why": "On peut dire « ils étaient partis »." },
+          { "ko": "Mes amis ~~on~~ un chien.", "ok": "Mes amis **ont** un chien.", "why": "On peut dire « mes amis avaient un chien »." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Après **il y**, c'est toujours le verbe avoir : [[il y a]], jamais ~~il y à~~. Et après **ils** ou **elles**, c'est toujours **ont** ou **sont**, jamais on ou son." },
+        { "type": "fun", "text": "Le sais-tu ? Le français a beaucoup d'homophones parce que, au fil des siècles, on a cessé de prononcer de nombreuses lettres finales. L'orthographe, elle, a gardé la trace des anciennes prononciations." }
+      ],
+      "vocab": [
+        { "mot": "aujourd'hui", "def": "Le jour où nous sommes.", "ex": "Aujourd'hui, il pleut.", "alt": [] },
+        { "mot": "beaucoup", "def": "En grande quantité ; le contraire de « peu ».", "ex": "Il y a beaucoup de monde.", "alt": [] },
+        { "mot": "toujours", "def": "À chaque fois, sans exception ; le contraire de « jamais ».", "ex": "Il arrive toujours en retard.", "alt": [] },
+        { "mot": "longtemps", "def": "Pendant une longue durée.", "ex": "Nous avons attendu longtemps.", "alt": [] },
+        { "mot": "maintenant", "def": "En ce moment, tout de suite.", "ex": "Viens maintenant !", "alt": [] },
+        { "mot": "déjà", "def": "Plus tôt que prévu, avant le moment attendu.", "ex": "Tu as déjà fini ?", "alt": [] },
+        { "mot": "peut-être", "def": "Mot qui exprime un doute : c'est possible.", "ex": "Il viendra peut-être demain.", "alt": [] },
+        { "mot": "là-bas", "def": "Dans cet endroit, assez loin d'ici.", "ex": "Regarde là-bas, un écureuil !", "alt": [] },
+        { "mot": "parce que", "def": "Mots qui introduisent la cause, la raison.", "ex": "Je reste parce qu'il pleut.", "alt": [] },
+        { "mot": "quelquefois", "def": "De temps en temps, pas souvent.", "ex": "Quelquefois, nous allons au cinéma.", "alt": [] },
+        { "mot": "ensemble", "def": "L'un avec l'autre, en même temps.", "ex": "Nous chantons ensemble.", "alt": [] },
+        { "mot": "pourtant", "def": "Mot qui marque une opposition : malgré cela.", "ex": "Il fait beau, pourtant il a froid.", "alt": [] },
+        { "mot": "vraiment", "def": "Réellement, tout à fait.", "ex": "Ce gâteau est vraiment bon.", "alt": [] },
+        { "mot": "dehors", "def": "À l'extérieur.", "ex": "Les enfants jouent dehors.", "alt": [] },
+        { "mot": "bientôt", "def": "Dans peu de temps.", "ex": "Les vacances arrivent bientôt.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Léa a un vélo et une trottinette.", "indice": "Ce qu'elle possède pour rouler", "trap": ["à", "est"], "alt": ["Léa a une trottinette et un vélo."] },
+        { "phrase": "Mon frère est à la piscine.", "indice": "Où il se trouve cet après-midi", "trap": ["et", "a"], "alt": [] },
+        { "phrase": "Ils ont froid et ils ont faim.", "indice": "Deux besoins après la promenade", "trap": ["on", "est"], "alt": ["Ils ont faim et ils ont froid."] },
+        { "phrase": "On mange à midi avec nos cousins.", "indice": "Le déjeuner en famille", "trap": ["Ont", "a"], "alt": ["À midi, on mange avec nos cousins."] },
+        { "phrase": "Les élèves sont dans la cour.", "indice": "C'est la récréation", "trap": ["son", "et"], "alt": [] },
+        { "phrase": "Hugo a perdu son écharpe.", "indice": "Un oubli en hiver", "trap": ["à", "sont"], "alt": [] },
+        { "phrase": "On a vu un arc-en-ciel aujourd'hui.", "indice": "Après la pluie", "trap": ["Ont", "à"], "alt": ["Aujourd'hui, on a vu un arc-en-ciel."] },
+        { "phrase": "Le chien est sage et gentil.", "indice": "Un compliment pour l'animal", "trap": ["es", "gentille"], "alt": ["Le chien est gentil et sage."] },
+        { "phrase": "Mes parents ont beaucoup de travail.", "indice": "Une semaine chargée", "trap": ["on", "beaucou"], "alt": [] },
+        { "phrase": "Il a peur et il tremble.", "indice": "Pendant l'orage", "trap": ["à", "est"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Elle ___ une robe rouge.", "choices": ["a", "à"], "answer": 0, "explain": "On peut dire « elle avait une robe » : c'est le verbe avoir." },
+        { "type": "mcq", "q": "Nous allons ___ la plage.", "choices": ["a", "à"], "answer": 1, "explain": "On ne peut pas dire « avait la plage » : c'est la préposition à." },
+        { "type": "mcq", "q": "Le ciel ___ bleu.", "choices": ["et", "est"], "answer": 1, "explain": "On peut dire « le ciel était bleu » : c'est le verbe être." },
+        { "type": "mcq", "q": "Mes amis ___ arrivés.", "choices": ["son", "sont"], "answer": 1, "explain": "On peut dire « mes amis étaient arrivés » : c'est le verbe être." },
+        { "type": "mcq", "q": "Ils ___ gagné le match.", "choices": ["ont", "on"], "answer": 0, "explain": "On peut dire « ils avaient gagné » : c'est le verbe avoir." },
+        { "type": "fill", "q": "Il ___ froid.", "hint": "a ou à ?", "answer": ["a"], "explain": "On peut dire « il avait froid » : a." },
+        { "type": "fill", "q": "Je vais ___ l'école à pied.", "hint": "a ou à ?", "answer": ["à"], "explain": "On ne peut pas dire « avait l'école » : à." },
+        { "type": "fill", "q": "Du pain ___ du fromage.", "hint": "et ou est ?", "answer": ["et"], "explain": "On peut dire « et puis » : et." },
+        { "type": "fill", "q": "Le chat ___ sur le toit.", "hint": "et ou est ?", "answer": ["est"], "explain": "On peut dire « le chat était sur le toit » : est." },
+        { "type": "fill", "q": "Hugo cherche ___ chien partout.", "hint": "son ou sont ?", "answer": ["son"], "explain": "On peut dire « mon chien » : c'est le déterminant son." },
+        { "type": "fill", "q": "___ part en vacances demain.", "hint": "On ou Ont ?", "answer": ["On"], "explain": "On peut dire « il part » : c'est le pronom on." },
+        { "type": "error", "q": "Il à un chat noir.", "wrong": 1, "fix": ["a"], "explain": "On peut dire « il avait un chat » : a, sans accent." },
+        { "type": "error", "q": "Ma sœur et malade.", "wrong": 2, "fix": ["est"], "explain": "On peut dire « ma sœur était malade » : est." },
+        { "type": "error", "q": "Les enfants son contents.", "wrong": 2, "fix": ["sont"], "explain": "On peut dire « les enfants étaient contents » : sont." },
+        { "type": "error", "q": "Mes voisins on un grand jardin.", "wrong": 2, "fix": ["ont"], "explain": "On peut dire « mes voisins avaient un jardin » : ont." }
+      ]
+    },
+    {
+      "id": "1.5",
+      "name": "Point final !",
+      "title": "La phrase : majuscule, ponctuation, types de phrases, négation",
+      "goal": "Écrire des phrases complètes : majuscule, bon signe de ponctuation, négation en deux parties.",
+      "lesson": [
+        { "type": "p", "text": "Une **phrase** est une suite de mots qui a un sens. À l'écrit, elle commence par une **majuscule** et se termine par un signe de ponctuation : **point**, **point d'interrogation**, **point d'exclamation** ou **points de suspension**." },
+        { "type": "table", "head": ["Type de phrase", "À quoi elle sert", "Elle finit par…", "Exemple"], "rows": [["déclarative", "dire, raconter", "un point", "[[Il pleut.]]"], ["interrogative", "poser une question", "un point d'interrogation", "[[Tu viens ?]]"], ["exclamative", "exprimer un sentiment fort", "un point d'exclamation", "[[Quelle chance !]]"], ["impérative", "donner un ordre, un conseil", "un point (ou !)", "[[Ferme la porte.]]"]] },
+        { "type": "rule", "title": "La négation a deux parties", "text": "À l'écrit, la négation se met **autour** du verbe : **ne** … **pas** (ou jamais, plus, rien). Devant une voyelle, ne devient **n'** : [[Je ne mange pas.]], [[Il n'a pas faim.]] À l'oral, on avale souvent le ne ; à l'écrit, jamais !" },
+        { "type": "rule", "title": "La virgule et la majuscule", "text": "Dans une énumération, on sépare les éléments par des **virgules**, et on met **et** avant le dernier : [[du pain, des œufs et du lait]]. Les **noms propres** (prénoms, villes, pays) prennent toujours une majuscule : [[Léa habite à Lyon.]]" },
+        { "type": "examples", "items": [
+          { "ex": "Est-ce que tu viens au cinéma ?", "note": "une question : point d'interrogation" },
+          { "ex": "Comme tu as grandi !", "note": "un sentiment fort : point d'exclamation" },
+          { "ex": "Nous **ne** sommes **pas** en retard.", "note": "la négation encadre le verbe" },
+          { "ex": "Malik **n'**aime **pas** les épinards.", "note": "ne devient n' devant une voyelle" }
+        ] },
+        { "type": "compare", "items": [
+          { "ko": "il ~~pleut~~ (sans majuscule ni point)", "ok": "**Il** pleut.", "why": "Majuscule au début, point à la fin." },
+          { "ko": "Je ~~mange pas~~ de viande.", "ok": "Je **ne** mange **pas** de viande.", "why": "À l'écrit, la négation a deux parties." },
+          { "ko": "Où habites-tu~~.~~", "ok": "Où habites-tu **?**", "why": "Une question finit par un point d'interrogation." },
+          { "ko": "Mon ami s'appelle ~~nathan~~.", "ok": "Mon ami s'appelle **Nathan**.", "why": "Un prénom prend une majuscule." }
+        ] },
+        { "type": "tip", "title": "Typographie française", "text": "En français, on laisse une **espace** avant ? ! : et ; (contrairement à l'anglais) : [[Tu viens ?]] L'appli le fait pour toi dans ses textes ; dans tes rédactions, pense-y." },
+        { "type": "fun", "text": "Le sais-tu ? Dans un dialogue écrit, on utilise souvent le **tiret** (—) pour montrer qu'une autre personne prend la parole, et les guillemets « » pour encadrer les paroles." }
+      ],
+      "vocab": [
+        { "mot": "phrase", "def": "Suite de mots qui a un sens, avec une majuscule au début et un point à la fin.", "ex": "Cette phrase est trop longue.", "alt": [] },
+        { "mot": "majuscule", "def": "Grande lettre que l'on met au début d'une phrase ou d'un nom propre.", "ex": "Paris s'écrit avec une majuscule.", "alt": [] },
+        { "mot": "virgule", "def": "Petit signe qui marque une courte pause dans une phrase.", "ex": "Mets une virgule après « Bonjour ».", "alt": [] },
+        { "mot": "ponctuation", "def": "Ensemble des signes qui organisent un texte (point, virgule…).", "ex": "Vérifie la ponctuation de ton texte.", "alt": [] },
+        { "mot": "guillemets", "def": "Signes « » qui encadrent les paroles de quelqu'un.", "ex": "Les paroles sont entre guillemets.", "alt": [] },
+        { "mot": "parenthèse", "def": "Chacun des deux signes qui encadrent une précision ajoutée.", "ex": "Ferme la parenthèse !", "alt": [] },
+        { "mot": "tiret", "def": "Petit trait horizontal qui annonce une réplique dans un dialogue.", "ex": "Chaque réplique commence par un tiret.", "alt": [] },
+        { "mot": "paragraphe", "def": "Partie d'un texte qui commence à la ligne.", "ex": "Ton texte a trois paragraphes.", "alt": [] },
+        { "mot": "question", "def": "Phrase qui demande quelque chose.", "ex": "Je peux poser une question ?", "alt": [] },
+        { "mot": "réponse", "def": "Ce que l'on dit ou écrit pour répondre.", "ex": "J'attends ta réponse.", "alt": [] },
+        { "mot": "silence", "def": "Absence de bruit.", "ex": "Le silence règne dans la classe.", "alt": [] },
+        { "mot": "dictée", "def": "Exercice où l'on écrit un texte lu à voix haute.", "ex": "Nous avons une dictée demain.", "alt": [] },
+        { "mot": "brouillon", "def": "Premier essai d'un texte, que l'on corrige avant de le recopier.", "ex": "Écris d'abord au brouillon.", "alt": [] },
+        { "mot": "cahier", "def": "Ensemble de feuilles attachées sur lesquelles on écrit.", "ex": "Ouvre ton cahier à la page dix.", "alt": [] },
+        { "mot": "alphabet", "def": "Ensemble des lettres d'une langue, dans un ordre fixé.", "ex": "L'alphabet français a vingt-six lettres.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Est-ce que tu viens au cinéma ?", "indice": "Une invitation pour ce soir", "trap": ["vient", "ou"], "alt": [] },
+        { "phrase": "Je ne mange pas de viande.", "indice": "Un régime végétarien", "trap": ["manges", "pa"], "alt": [] },
+        { "phrase": "Quelle belle journée !", "indice": "Un grand soleil", "trap": ["Quel", "bel"], "alt": [] },
+        { "phrase": "Ferme la porte, s'il te plaît.", "indice": "Il y a un courant d'air", "trap": ["Fermes", "sil"], "alt": [] },
+        { "phrase": "Nous ne sommes pas en retard.", "indice": "Pile à l'heure", "trap": ["somme", "n'"], "alt": [] },
+        { "phrase": "Il n'a pas faim ce matin.", "indice": "Il ne prend pas de petit-déjeuner", "trap": ["na", "à"], "alt": ["Ce matin, il n'a pas faim."] },
+        { "phrase": "Viens-tu avec nous ?", "indice": "Une sortie entre amis", "trap": ["Vient-tu", "nou"], "alt": [] },
+        { "phrase": "J'ai acheté du pain, des œufs et du lait.", "indice": "Les courses du matin", "trap": ["oeuf", "lais"], "alt": ["J'ai acheté du pain, du lait et des œufs."] },
+        { "phrase": "Où est la gare ?", "indice": "Un voyageur perdu", "trap": ["Ou", "et"], "alt": [] },
+        { "phrase": "Les élèves écrivent une dictée.", "indice": "Un exercice en classe", "trap": ["écrive", "dicté"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Quel signe termine la phrase « Où habites-tu » ?", "choices": ["un point d'interrogation", "un point", "un point d'exclamation"], "answer": 0, "explain": "C'est une question : point d'interrogation." },
+        { "type": "mcq", "q": "Je ___ aime pas les épinards.", "choices": ["ne", "n'", "n"], "answer": 1, "explain": "Devant une voyelle, ne devient n' (avec une apostrophe)." },
+        { "type": "mcq", "q": "Quelle est la forme négative de « Il pleut » ?", "choices": ["Il pleut pas.", "Il ne pleut.", "Il ne pleut pas."], "answer": 2, "explain": "La négation a deux parties : ne … pas." },
+        { "type": "mcq", "q": "La phrase « Range ta chambre. » est…", "choices": ["impérative", "interrogative", "exclamative"], "answer": 0, "explain": "Elle donne un ordre : c'est une phrase impérative." },
+        { "type": "mcq", "q": "Quelle phrase est bien écrite ?", "choices": ["Mon chat dort.", "mon chat dort.", "Mon chat dort"], "answer": 0, "explain": "Majuscule au début, point à la fin." },
+        { "type": "fill", "q": "Elle ___ parle pas fort.", "hint": "ne ou n' ?", "answer": ["ne"], "explain": "Devant une consonne, on écrit ne." },
+        { "type": "fill", "q": "Tu ___ as pas répondu.", "hint": "ne ou n' ?", "answer": ["n'"], "explain": "Devant une voyelle, ne devient n'." },
+        { "type": "fill", "q": "Nous ___ jouons jamais au tennis.", "hint": "négation", "answer": ["ne"], "explain": "Ne … jamais : la négation a deux parties." },
+        { "type": "fill", "q": "Le chien de ___ s'appelle Rex.", "hint": "léa (un prénom)", "answer": ["Léa"], "case": true, "explain": "Un prénom prend toujours une majuscule." },
+        { "type": "fill", "q": "Mes grands-parents habitent à ___.", "hint": "marseille (une ville)", "answer": ["Marseille"], "case": true, "explain": "Un nom de ville prend une majuscule." },
+        { "type": "fill", "q": "Elle ___ est pas là.", "hint": "ne ou n' ?", "answer": ["n'"], "explain": "Devant une voyelle, ne devient n' : elle n'est pas là." },
+        { "type": "error", "q": "Je mange pas de soupe.", "wrong": 1, "fix": ["ne mange"], "explain": "À l'écrit, il faut les deux parties de la négation : je ne mange pas." },
+        { "type": "error", "q": "Mon frère s'appelle nathan.", "wrong": 3, "fix": ["Nathan"], "case": true, "explain": "Un prénom prend une majuscule." },
+        { "type": "error", "q": "Ou est mon cartable ?", "wrong": 0, "fix": ["Où"], "explain": "Pour demander un lieu : où, avec un accent." },
+        { "type": "error", "q": "Tu n'a pas compris la question.", "wrong": 2, "fix": ["as"], "explain": "Avec tu, le verbe avoir s'écrit as : tu n'as pas compris." }
+      ]
+    }
+  ]
+}

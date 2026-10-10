@@ -17,7 +17,7 @@ export async function micAvailable() {
 }
 
 /** Listens once; resolves with the list of transcripts (best first). Rejects with a French message. */
-export function listenOnce({ lang = "en-US", timeout = 7000 } = {}) {
+export function listenOnce({ lang = "fr-FR", timeout = 7000 } = {}) {
   return new Promise((resolve, reject) => {
     if (blocked) return reject(new Error("Le micro n'est pas disponible ici."));
     const rec = new SR();

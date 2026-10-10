@@ -13,7 +13,7 @@ export function unitById(uid) {
 
 export const levelOfUnit = (uid) => Number(String(uid).split(".")[0]);
 
-/** V2 content (boss banks, lexicons, placement, writing, humour, C2), injected as window.__EXTRA__. */
+/** Optional content (boss banks, lexicons, placement, writing, humour, DALF), injected as window.__EXTRA__. */
 export const EXTRA = globalThis.window?.__EXTRA__ || { boss: {}, lexicon: {} };
 EXTRA.boss ||= {};
 EXTRA.lexicon ||= {};
@@ -23,7 +23,7 @@ const lexUnits = {};
 export function lexiconUnit(L) {
   const words = EXTRA.lexicon[L];
   if (!words?.length) return null;
-  return (lexUnits[L] ||= { id: `${L}.0`, title: "Lexique", titleEn: "Word Bank", vocab: words, sentences: [], grammar: [] });
+  return (lexUnits[L] ||= { id: `${L}.0`, title: "Lexique", name: "Lexique", vocab: words, sentences: [], grammar: [] });
 }
 const PLACEMENT_UNIT = { id: "0.0", title: "Test de placement", vocab: [], sentences: [], grammar: [] };
 

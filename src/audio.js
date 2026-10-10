@@ -1,4 +1,4 @@
-// Speech synthesis for English audio, and synthesized sound effects (no audio files needed).
+// French speech synthesis (voices of France first), and synthesized sound effects (no audio files needed).
 import { state } from "./store.js";
 
 const synth = typeof window !== "undefined" ? window.speechSynthesis : null;
@@ -13,30 +13,23 @@ const loadVoices = () => {
 loadVoices();
 synth?.addEventListener?.("voiceschanged", loadVoices);
 
-export const englishVoices = () => voices.filter((v) => /^en([-_]|$)/i.test(v.lang));
 export const frenchVoices = () => voices.filter((v) => /^fr([-_]|$)/i.test(v.lang));
 
-/** True when the device can read English aloud. */
-export const ttsReady = () => !!synth && englishVoices().length > 0;
-/** True when the device also has a French voice for the coach. */
-export const coachReady = () => !!synth && frenchVoices().length > 0;
+/** True when the device can read French aloud. */
+export const ttsReady = () => !!synth && frenchVoices().length > 0;
+/** The coach and the exercises use the same French voice. */
+export const coachReady = ttsReady;
 
-const NICE = /natural|neural|premium|enhanced|google|siri/i;
+const NICE = /natural|neural|premium|enhanced|google|siri|online/i;
 
-function chooseVoice(lang = "en") {
-  if (lang === "fr") {
-    const list = frenchVoices();
-    if (!list.length) return null;
-    const ranked = [...list.filter((v) => /fr[-_]CA/i.test(v.lang)), ...list.filter((v) => /fr[-_]FR/i.test(v.lang)), ...list];
-    return ranked.find((v) => NICE.test(v.name)) || ranked[0];
-  }
-  const list = englishVoices();
+/** The voice chosen in the profile, else a voice of France (then Belgium, Switzerland, Canada), natural voices first. */
+function chooseVoice() {
+  const list = frenchVoices();
   if (!list.length) return null;
   const wanted = list.find((v) => v.voiceURI === state.settings.voice);
   if (wanted) return wanted;
   const byLang = (re) => list.filter((v) => re.test(v.lang));
-  const ranked = [...byLang(/en[-_]CA/i), ...byLang(/en[-_]US/i), ...byLang(/en[-_]GB/i), ...list];
-  // Prefer natural/online voices when the platform offers them.
+  const ranked = [...byLang(/fr[-_]FR/i), ...byLang(/fr[-_]BE/i), ...byLang(/fr[-_]CH/i), ...byLang(/fr[-_]CA/i), ...list];
   return ranked.find((v) => NICE.test(v.name)) || ranked[0];
 }
 
@@ -68,13 +61,12 @@ export function speakParts(parts, { onPart } = {}) {
       const part = queue[i++];
       if (!part.text) return next();
       onPart?.(part.idx);
-      const lang = part.lang === "fr" ? "fr" : "en";
-      const voice = chooseVoice(lang);
-      if (!voice && lang === "fr") return next(); // no French voice: skip coach lines
+      const voice = chooseVoice();
+      if (!voice) return next();
       const u = new SpeechSynthesisUtterance(part.text);
-      if (voice) u.voice = voice;
-      u.lang = voice?.lang || (lang === "fr" ? "fr-CA" : "en-US");
-      const base = lang === "fr" ? 1.02 : state.settings.rate || 0.95;
+      u.voice = voice;
+      u.lang = voice.lang || "fr-FR";
+      const base = state.settings.rate || 0.95;
       u.rate = Math.max(0.5, Math.min(1.6, base * (part.rate || 1)));
       let done = false;
       const finish = () => {
@@ -98,21 +90,21 @@ export function speakParts(parts, { onPart } = {}) {
   });
 }
 
-/** Speaks English text. */
+/** Speaks French text. */
 export function speak(text, { rate = 1 } = {}) {
-  return speakParts([{ text, lang: "en", rate }]);
+  return speakParts([{ text, lang: "fr", rate }]);
 }
 
-/** Splits lesson markup into French narration and [[English]] parts. */
+/** Splits lesson markup into narration and [[example]] parts (examples are read a little more slowly). */
 export function mixedParts(text) {
   const parts = [];
   String(text || "")
-    .replace(/\*\*/g, "")
+    .replace(/\*\*|~~/g, "")
     .split(/(\[\[.+?\]\])/)
     .forEach((seg) => {
       if (!seg.trim()) return;
       const m = seg.match(/^\[\[(.+)\]\]$/);
-      if (m) parts.push({ text: m[1], lang: "en", rate: 0.9 });
+      if (m) parts.push({ text: m[1], lang: "fr", rate: 0.85, pause: 150 });
       else parts.push({ text: seg.replace(/[«»]/g, "").replace(/\s+/g, " ").trim(), lang: "fr" });
     });
   return parts.filter((p) => /[\p{L}\d]/u.test(p.text));
@@ -125,6 +117,38 @@ export function stopSpeaking() {
   } catch {
     /* ignore */
   }
+}
+
+// ---------- Dictation ----------
+
+const SAY_PUNCT = { ",": "virgule", ".": "point", ";": "point-virgule", ":": "deux points", "?": "point d'interrogation", "!": "point d'exclamation", "…": "points de suspension", "«": "ouvrez les guillemets", "»": "fermez les guillemets", "(": "ouvrez la parenthèse", ")": "fermez la parenthèse" };
+
+/**
+ * A text cut into dictation groups (a few words each, up to a punctuation mark), each with the punctuation said
+ * aloud as a French teacher does: « Le chat dort, virgule ». Returns [{ text, said }].
+ */
+export function dictationGroups(text, maxWords = 6) {
+  const words = String(text).replace(/[  ]/g, " ").split(/\s+/).filter(Boolean);
+  const groups = [];
+  let cur = [];
+  const flush = () => {
+    if (!cur.length) return;
+    const raw = cur.join(" ");
+    const said = raw
+      .replace(/\.\.\./g, "…")
+      .replace(/([,.;:?!…«»()])/g, (m) => ` ${SAY_PUNCT[m]} `)
+      .replace(/\s+/g, " ")
+      .trim();
+    groups.push({ text: raw, said });
+    cur = [];
+  };
+  for (const w of words) {
+    cur.push(w);
+    const n = cur.filter((x) => /[\p{L}\d]/u.test(x)).length;
+    if (/[,.;:?!…»)]$/.test(w) || (n >= maxWords && !/^(le|la|les|un|une|des|de|du|à|au|et|ou|ne|n'|l'|d'|qu'|que|qui|en|y|se|me|te)$/i.test(w))) flush();
+  }
+  flush();
+  return groups;
 }
 
 // ---------- Sound effects ----------

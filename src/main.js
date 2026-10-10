@@ -19,7 +19,7 @@ import { dashboardScreen } from "./screens/dashboard.js";
 import { dailyScreen } from "./screens/daily.js";
 import { conjugatorScreen } from "./screens/conjugator.js";
 import { writingScreen } from "./screens/writing.js";
-import { c2Screen } from "./screens/c2.js";
+import { dalfScreen } from "./screens/dalf.js";
 import { towerScreen } from "./screens/tower.js";
 
 register("onboarding", onboarding);
@@ -37,7 +37,7 @@ register("dashboard", dashboardScreen);
 register("daily", dailyScreen);
 register("conjugator", conjugatorScreen);
 register("writing", writingScreen);
-register("c2", c2Screen);
+register("dalf", dalfScreen);
 register("tower", towerScreen);
 
 // Sounds and speech need one user gesture before they can play.

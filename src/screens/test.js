@@ -46,7 +46,7 @@ async function showResults(view, { results, unit, L }) {
   if (res.livesRestored) actions.append(h("button", { type: "button", class: "btn btn-primary btn-xl", onClick: () => go("boss", { level: L }) }, `Vies récupérées : affronter ${lvl.boss.name}`));
   else if (res.redoCleared && stillRedo.length) actions.append(h("button", { type: "button", class: "btn btn-primary btn-xl", onClick: () => go("unit", { uid: stillRedo[0].id, tab: "test" }) }, `Station à refaire suivante : ${stillRedo[0].id}`));
   else if (res.passed && stillRedo.length) actions.append(h("button", { type: "button", class: "btn btn-primary btn-xl", onClick: () => go("unit", { uid: stillRedo[0].id, tab: "test" }) }, `Station à refaire : ${stillRedo[0].id}`));
-  else if (res.passed && nextUnit && unitUnlocked(L, U + 1)) actions.append(h("button", { type: "button", class: "btn btn-primary btn-xl", onClick: () => go("unit", { uid: nextUnit.id }) }, `Station suivante : ${nextUnit.titleEn}`));
+  else if (res.passed && nextUnit && unitUnlocked(L, U + 1)) actions.append(h("button", { type: "button", class: "btn btn-primary btn-xl", onClick: () => go("unit", { uid: nextUnit.id }) }, `Station suivante : ${nextUnit.name}`));
   else if (res.passed && !nextUnit && bossReady(L)) actions.append(h("button", { type: "button", class: "btn btn-primary btn-xl", onClick: () => go("boss", { level: L }) }, `Affronter ${lvl.boss.name}`));
   const wrongRefs = results.filter((r) => !r.ok).map((r) => r.q.ref);
   if (!res.passed && wrongRefs.length) actions.append(h("button", { type: "button", class: "btn btn-primary btn-xl", onClick: () => go("review", { refs: wrongRefs, title: `Mes erreurs du test ${unit.id}` }) }, "Réviser ces erreurs maintenant"));
@@ -58,7 +58,7 @@ async function showResults(view, { results, unit, L }) {
     h(
       "div",
       { class: "results", style: { "--line": `var(--l${L})`, "--line-ink": `var(--l${L}-ink)` } },
-      h("p", { class: "eyebrow" }, `Test ${unit.id} · ${unit.titleEn}`),
+      h("p", { class: "eyebrow" }, `Test ${unit.id} · ${unit.name}`),
       h("h1", { class: "results-title" }, res.passed ? (res.stars === 3 ? "Sans faute !" : "Test réussi !") : "Pas encore…"),
       ring,
       h("p", { class: "results-line" }, `${good} bonnes réponses sur ${results.length}. `, res.passed ? (res.firstPass ? "Nouvelle station débloquée." : "") : `Il faut ${need} %. C'est normal de ne pas réussir du premier coup : ce test est fait pour être exigeant. Révise tes erreurs, rejoue un peu, puis retente.`),
@@ -91,7 +91,7 @@ async function showResults(view, { results, unit, L }) {
       await sleep(320);
     }
     if (res.livesRestored) stamp(`${BOSS_LIVES} vies récupérées`, { sub: lvl.boss.name, color: `var(--l${L})`, ms: 1600 });
-    else if (res.firstPass) stamp(nextUnit ? "Station ouverte" : "Terminus ouvert", { sub: nextUnit ? nextUnit.titleEn : lvl.boss.name, color: `var(--l${L})`, ms: 1300 });
+    else if (res.firstPass) stamp(nextUnit ? "Station ouverte" : "Terminus ouvert", { sub: nextUnit ? nextUnit.name : lvl.boss.name, color: `var(--l${L})`, ms: 1300 });
   } else sfx.lose();
   countUp(xp, res.xp, 700);
 }
@@ -121,17 +121,17 @@ export function reviewList(results) {
 function promptHtml(q) {
   const esc = (s) => String(s).replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" })[c]);
   switch (q.kind) {
-    case "type_en":
-      return `Écris en anglais : <strong>${esc(q.fr)}</strong>`;
+    case "type_mot":
+      return `${esc(q.label || "Le mot")} : <strong>${esc(q.def)}</strong>`;
     case "listen_type":
-    case "listen_choose":
-      return `Écoute : <strong>${esc(q.say)}</strong> (${esc(q.fr)})`;
-    case "choose_fr":
-      return `Que veut dire <strong>${esc(q.en)}</strong> ?`;
+    case "spell_choose":
+      return `Le mot qui veut dire : <strong>${esc(q.def)}</strong>`;
+    case "choose_def":
+      return `Que signifie <strong>${esc(q.mot)}</strong> ?`;
     case "build":
-      return `Traduis : <strong>${esc(q.fr)}</strong>`;
+      return `Phrase à remettre dans l'ordre${q.indice ? ` : ${esc(q.indice)}` : ""}`;
     case "dictation":
-      return `Dictée (${esc(q.fr)})`;
+      return `Dictée${q.indice ? ` (${esc(q.indice)})` : ""}`;
     case "mcq":
       return blankHtml(q.q) + (q.hint ? ` <em>(${esc(q.hint)})</em>` : "");
     case "fill":

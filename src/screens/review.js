@@ -26,8 +26,8 @@ export function reviewScreen(view, params = {}) {
   }
 
   const label = (res) => {
-    if (res.type === "vocab") return `${res.item.en} = ${res.item.fr}`;
-    if (res.type === "sentence") return res.item.en;
+    if (res.type === "vocab") return `${res.item.mot} : ${res.item.def}`;
+    if (res.type === "sentence") return res.item.phrase;
     if (res.type === "grammar") return res.item.q;
     if (res.type === "reading") return `${res.reading.title} : ${res.item.q}`;
     return "";
@@ -51,7 +51,7 @@ export function reviewScreen(view, params = {}) {
         h(
           "section",
           { class: "nb-unit", style: { "--line": `var(--l${unit.id.split(".")[0]})` } },
-          h("h2", null, h("span", { class: "bullet sm" }, unit.id.split(".")[0]), `${unit.id} · ${unit.titleEn}`),
+          h("h2", null, h("span", { class: "bullet sm" }, unit.id.split(".")[0]), `${unit.id} · ${unit.name}`),
           h("ul", null, items.map((res) => h("li", null, h("span", { class: "nb-n", title: "Réussites nécessaires" }, `×${state.mistakes[res.ref].n}`), h("span", null, label(res))))),
         ),
       ),

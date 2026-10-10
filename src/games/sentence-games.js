@@ -2,7 +2,7 @@
 import { h, icon, shuffle, sample, sleep } from "../ui.js";
 import { sentenceRefs, grammarRefs } from "../content.js";
 import { makeQuestion, renderQuestion, feedbackDetails } from "../questions.js";
-import { diffWords } from "../answer.js";
+import { compareDictation } from "../answer.js";
 import { recordAnswer } from "../store.js";
 import { speak, sfx } from "../audio.js";
 import { burstAt, shake } from "../fx.js";
@@ -91,8 +91,8 @@ export function dictationGame(api) {
     // Partial credit: each correct word is worth points even when the sentence is not perfect.
     onResult: (q, ok, given) => {
       if (ok) return 0;
-      const d = diffWords(given || "", q.expected);
-      return Math.round((70 * d.filter((x) => x.ok).length) / Math.max(1, d.length));
+      const d = compareDictation(given || "", q.expected).words;
+      return Math.round((70 * d.filter((x) => x.status === "ok").length) / Math.max(1, d.length));
     },
     line: (g, n) => `${g} phrases parfaites sur ${n}.`,
   });
@@ -142,7 +142,7 @@ export function hunt(api) {
             b.classList.add("wrong");
             lives--;
             api.setLives(lives, 3);
-            missed.push({ en: q.tokens.join(" "), fr: `faute : « ${q.tokens[q.wrong]} »` });
+            missed.push({ mot: q.tokens.join(" "), def: `faute : « ${q.tokens[q.wrong]} » → ${q.accept[0]}` });
           }
           right.classList.add("fixed");
           right.innerHTML = `<s>${q.tokens[q.wrong]}</s> <ins>${q.accept[0]}${punct}</ins>`;

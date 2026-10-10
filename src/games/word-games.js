@@ -1,16 +1,20 @@
-// Vocabulary mini-games: memory, word rain, true/false flash, sound bubbles, spelling.
+// Vocabulary mini-games: memory (word ↔ definition), word rain, true/false flash, sound bubbles (spelling), spelling.
 import { h, icon, shuffle, sample, pick, clamp } from "../ui.js";
 import { matches, clean } from "../answer.js";
+import { misspell } from "../engine/french.js";
+import { rng } from "../engine/rng.js";
 import { speak, sfx } from "../audio.js";
 import { burst, burstAt, shake, floatText } from "../fx.js";
+
+const short = (unit, maxDef = 46) => unit.vocab.filter((v) => v.def.length <= maxDef);
 
 // ---------- Paires express (memory) ----------
 
 export function memory(api) {
   const { stage, unit } = api;
-  const pool = unit.vocab.filter((v) => v.en.length <= 22 && v.fr.length <= 30);
+  const pool = unit.vocab.filter((v) => v.mot.length <= 22 && v.def.length <= 44);
   const items = sample(pool.length >= 6 ? pool : unit.vocab, 6);
-  const cards = shuffle(items.flatMap((v, i) => [{ pair: i, text: v.en, en: true }, { pair: i, text: v.fr, en: false }]));
+  const cards = shuffle(items.flatMap((v, i) => [{ pair: i, text: v.mot, word: true }, { pair: i, text: v.def, word: false }]));
   const grid = h("div", { class: "mem-grid" });
   let open = [];
   let lock = false;
@@ -19,13 +23,13 @@ export function memory(api) {
   const t0 = performance.now();
   const timer = setInterval(() => api.setTime((performance.now() - t0) / 1000), 250);
   cards.forEach((c, i) => {
-    const el = h("button", { type: "button", class: `mem-card ${c.en ? "en" : "fr"}`, "aria-label": `Carte ${i + 1}`, style: { "--i": i } }, h("span", { class: "mem-inner" }, h("span", { class: "mem-back", html: icon("sparkle") }), h("span", { class: "mem-front" }, c.text)));
+    const el = h("button", { type: "button", class: `mem-card ${c.word ? "en" : "fr"}`, "aria-label": `Carte ${i + 1}`, style: { "--i": i } }, h("span", { class: "mem-inner" }, h("span", { class: "mem-back", html: icon("sparkle") }), h("span", { class: "mem-front" }, c.text)));
     el.addEventListener("click", () => {
       if (lock || el.classList.contains("flipped") || api.ended) return;
       el.classList.add("flipped");
       el.setAttribute("aria-label", c.text);
       sfx.flip();
-      if (c.en) speak(c.text);
+      if (c.word) speak(c.text);
       open.push({ el, c });
       if (open.length < 2) return;
       moves++;
@@ -63,7 +67,7 @@ export function memory(api) {
     });
     grid.append(el);
   });
-  stage.append(h("p", { class: "g-hint" }, "Les cartes bleues sont en anglais, les cartes claires en français."), grid);
+  stage.append(h("p", { class: "g-hint" }, "Les cartes bleues portent les mots, les cartes claires leurs définitions."), grid);
   return () => clearInterval(timer);
 }
 
@@ -72,8 +76,8 @@ export function memory(api) {
 export function rain(api) {
   const { stage, unit } = api;
   const sky = h("div", { class: "rain-sky" }, h("div", { class: "rain-ground" }));
-  const input = h("input", { class: "answer-input rain-input", type: "text", placeholder: "Tape le mot anglais…", autocomplete: "off", autocapitalize: "off", autocorrect: "off", spellcheck: "false", "aria-label": "Mot anglais", id: "rain-input" });
-  stage.append(sky, input);
+  const input = h("input", { class: "answer-input rain-input", type: "text", placeholder: "Tape le mot (avec ses accents)…", autocomplete: "off", autocapitalize: "off", autocorrect: "off", spellcheck: "false", lang: "fr", "aria-label": "Le mot", id: "rain-input" });
+  stage.append(h("p", { class: "g-hint" }, "Les définitions tombent : tape le mot avant qu'il touche le sol."), sky, input);
   let lives = 3;
   api.setLives(lives, 3);
   let drops = [];
@@ -84,18 +88,19 @@ export function rain(api) {
   let combo = 0;
   const missed = [];
   const bag = [];
+  const pool = short(unit).length >= 6 ? short(unit) : unit.vocab;
   const nextItem = () => {
-    if (!bag.length) bag.push(...shuffle(unit.vocab));
+    if (!bag.length) bag.push(...shuffle(pool));
     return bag.pop();
   };
   const spawn = () => {
     const v = nextItem();
-    const el = h("div", { class: "drop-word" }, v.fr);
+    const el = h("div", { class: "drop-word" }, v.def);
     sky.append(el);
     const w = sky.clientWidth;
     const elW = Math.min(el.offsetWidth, w - 16);
     const x = 8 + Math.random() * Math.max(0, w - elW - 16);
-    drops.push({ v, el, x, y: -40, speed: 34 + Math.min(70, elapsed * 0.9) + Math.random() * 10 });
+    drops.push({ v, el, x, y: -40, speed: 24 + Math.min(55, elapsed * 0.7) + Math.random() * 8 });
   };
   const frame = (t) => {
     if (api.ended) return;
@@ -105,7 +110,7 @@ export function rain(api) {
     spawnIn -= dt * 1000;
     if (spawnIn <= 0) {
       spawn();
-      spawnIn = Math.max(1100, 2700 - elapsed * 22);
+      spawnIn = Math.max(1500, 3200 - elapsed * 22);
     }
     const ground = sky.clientHeight - 34;
     for (const d of drops) {
@@ -120,7 +125,7 @@ export function rain(api) {
         sfx.hurt();
         shake(sky);
         d.el.classList.add("splash");
-        d.el.textContent = d.v.en;
+        d.el.textContent = d.v.mot;
         setTimeout(() => d.el.remove(), 900);
         if (lives <= 0) {
           api.end({ line: `Tu as tenu ${Math.round(elapsed)} secondes.`, review: uniq(missed) });
@@ -134,7 +139,7 @@ export function rain(api) {
   input.addEventListener("input", () => {
     const val = input.value;
     if (!val.trim()) return;
-    const hit = drops.find((d) => matches(val, [d.v.en, ...(d.v.alt || [])]));
+    const hit = drops.find((d) => matches(val, [d.v.mot, ...(d.v.alt || [])]));
     if (!hit) return;
     hit.dead = true;
     combo++;
@@ -148,13 +153,11 @@ export function rain(api) {
     input.value = "";
   });
   input.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && input.value.trim()) {
       // Enter with a wrong word clears it, with a small penalty to discourage guessing.
-      if (input.value.trim()) {
-        shake(input);
-        input.value = "";
-        combo = 0;
-      }
+      shake(input);
+      input.value = "";
+      combo = 0;
     }
   });
   setTimeout(() => input.focus(), 50);
@@ -167,7 +170,7 @@ export function rain(api) {
 
 function uniq(list) {
   const seen = new Set();
-  return list.filter((v) => (seen.has(v.en) ? false : seen.add(v.en)));
+  return list.filter((v) => (seen.has(v.mot) ? false : seen.add(v.mot)));
 }
 
 // ---------- Éclair (true/false) ----------
@@ -188,10 +191,10 @@ export function flash(api) {
   const next = () => {
     const v = pick(unit.vocab);
     const truth = Math.random() < 0.5;
-    const other = pick(unit.vocab.filter((x) => x !== v && clean(x.fr) !== clean(v.fr)));
-    current = { v, truth, shown: truth ? v.fr : other.fr };
+    const other = pick(unit.vocab.filter((x) => x !== v && clean(x.def) !== clean(v.def)));
+    current = { v, truth, shown: truth ? v.def : other.def };
     card.classList.remove("out-left", "out-right");
-    card.replaceChildren(h("span", { class: "flash-en" }, v.en), h("span", { class: "flash-eq" }, "="), h("span", { class: "flash-fr" }, current.shown));
+    card.replaceChildren(h("span", { class: "flash-en" }, v.mot), h("span", { class: "flash-eq" }, "="), h("span", { class: "flash-fr" }, current.shown));
     card.classList.remove("in");
     void card.offsetWidth;
     card.classList.add("in");
@@ -248,7 +251,7 @@ export function flash(api) {
   };
 }
 
-// ---------- Bulles sonores (listening) ----------
+// ---------- Bulles sonores (listen, then pop the right spelling) ----------
 
 export function bubbles(api) {
   const { stage, unit } = api;
@@ -261,41 +264,41 @@ export function bubbles(api) {
   const pond = h("div", { class: "pond" });
   const replay = h("button", { type: "button", class: "audio-big small", "aria-label": "Réécouter", html: icon("speaker") });
   const label = h("div", { class: "pond-label" });
-  stage.append(h("div", { class: "pond-top" }, replay, label), pond);
+  stage.append(h("p", { class: "g-hint" }, "La voix dit un mot : éclate la bulle où il est bien écrit."), h("div", { class: "pond-top" }, replay, label), pond);
   let target = null;
   let live = [];
   let t0 = 0;
-  replay.addEventListener("click", () => target && speak(target.en));
+  const pool = unit.vocab.filter((v) => misspell(v.mot, null, 3).length >= 2);
+  replay.addEventListener("click", () => target && speak(target.mot));
 
   const startRound = () => {
     if (api.ended) return;
-    if (round >= ROUNDS || lives <= 0) {
+    if (round >= ROUNDS || lives <= 0 || !pool.length) {
       api.end({ line: lives > 0 ? "Toutes les bulles ont été jouées." : "Plus de vies !", review: uniq(missed) });
       return;
     }
     round++;
     label.textContent = `Bulle ${round} / ${ROUNDS}`;
     pond.replaceChildren();
-    target = pick(unit.vocab);
-    const others = sample(unit.vocab.filter((v) => v !== target && clean(v.fr) !== clean(target.fr)), 3);
-    const opts = shuffle([target, ...others]);
+    target = pick(pool);
+    const opts = shuffle([target.mot, ...misspell(target.mot, rng, 3)]);
     const w = pond.clientWidth;
     const lane = w / opts.length;
-    live = opts.map((v, i) => {
-      const el = h("button", { type: "button", class: "bubble-btn" }, v.fr);
+    live = opts.map((text, i) => {
+      const el = h("button", { type: "button", class: "bubble-btn" }, text);
       pond.append(el);
       const size = el.offsetWidth;
-      const b = { v, el, x: lane * i + lane / 2 - size / 2, y: pond.clientHeight + 20 + Math.random() * 60, speed: 38 + round * 3 + Math.random() * 14, phase: Math.random() * 6, done: false };
+      const b = { text, el, x: lane * i + lane / 2 - size / 2, y: pond.clientHeight + 20 + Math.random() * 60, speed: 34 + round * 3 + Math.random() * 12, phase: Math.random() * 6, done: false };
       el.addEventListener("click", () => tap(b));
       return b;
     });
     t0 = performance.now();
-    setTimeout(() => speak(target.en), 200);
+    setTimeout(() => speak(target.mot), 200);
   };
 
   const tap = (b) => {
     if (b.done || api.ended) return;
-    if (b.v === target) {
+    if (b.text === target.mot) {
       const r = b.el.getBoundingClientRect();
       burst(r.left + r.width / 2, r.top + r.height / 2, { color: ["#DB2E7A", "#FF5FA2", "#FFC23D"], count: 22 });
       sfx.pop();
@@ -331,7 +334,7 @@ export function bubbles(api) {
       b.y -= b.speed * dt;
       b.phase += dt * 2;
       b.el.style.transform = `translate(${b.x + Math.sin(b.phase) * 10}px, ${b.y}px)`;
-      if (b.v === target && !b.done && b.y < -b.el.offsetHeight) escaped = true;
+      if (b.text === target.mot && !b.done && b.y < -b.el.offsetHeight) escaped = true;
     }
     if (escaped) {
       live.forEach((x) => (x.done = true));
@@ -339,7 +342,7 @@ export function bubbles(api) {
       lives--;
       api.setLives(lives, 3);
       sfx.hurt();
-      floatText(target.en, pond, { color: "var(--stop)", size: 1.3 });
+      floatText(target.mot, pond, { color: "var(--stop)", size: 1.3 });
       setTimeout(startRound, 900);
     }
     raf = requestAnimationFrame(frame);
@@ -349,12 +352,13 @@ export function bubbles(api) {
   return () => cancelAnimationFrame(raf);
 }
 
-// ---------- Épelle-le (spelling) ----------
+// ---------- Épelle-le (spelling, letter by letter, accents included) ----------
 
+const LETTER = /^\p{L}$/u;
 export function spell(api) {
   const { stage, unit } = api;
   const words = sample(
-    unit.vocab.filter((v) => /^[a-z' -]+$/i.test(v.en) && v.en.replace(/[^a-z]/gi, "").length >= 3 && v.en.length <= 14),
+    unit.vocab.filter((v) => /^[\p{L}' -]+$/u.test(v.mot) && v.mot.replace(/[^\p{L}]/gu, "").length >= 3 && v.mot.length <= 16),
     6,
   );
   let wi = -1;
@@ -362,23 +366,23 @@ export function spell(api) {
   let errorsHere = 0;
   let current = null;
   const missed = [];
-  const fr = h("div", { class: "spell-fr" });
+  const def = h("div", { class: "spell-fr" });
   const slots = h("div", { class: "spell-slots" });
   const bulbs = h("div", { class: "spell-bulbs", "aria-label": "Fautes" });
   const listen = h("button", { type: "button", class: "icon-btn", "aria-label": "Écouter le mot", html: icon("speaker") });
   const kb = h("div", { class: "kb" });
   const progress = h("div", { class: "spell-progress" });
-  stage.append(progress, h("div", { class: "spell-card" }, fr, listen, slots, bulbs), kb);
-  listen.addEventListener("click", () => current && speak(current.en));
-  ["qwertyuiop", "asdfghjkl", "zxcvbnm"].forEach((row) => {
-    const r = h("div", { class: "kb-row" });
+  stage.append(progress, h("div", { class: "spell-card" }, def, listen, slots, bulbs), kb);
+  listen.addEventListener("click", () => current && speak(current.mot));
+  ["azertyuiop", "qsdfghjklm", "wxcvbn", "éèêëàâçîïôûùœ"].forEach((row) => {
+    const r = h("div", { class: `kb-row ${row.startsWith("é") ? "accents" : ""}` });
     for (const ch of row) r.append(h("button", { type: "button", class: "kb-key", "data-k": ch, onClick: () => press(ch) }, ch));
     kb.append(r);
   });
-  const chars = () => [...current.en];
+  const chars = () => [...current.mot];
   const letterAt = (i) => chars()[i];
   const skipFixed = () => {
-    while (pos < chars().length && !/[a-z]/i.test(letterAt(pos))) {
+    while (pos < chars().length && !LETTER.test(letterAt(pos))) {
       slots.children[pos].classList.add("filled");
       pos++;
     }
@@ -393,15 +397,16 @@ export function spell(api) {
     pos = 0;
     errorsHere = 0;
     progress.textContent = `Mot ${wi + 1} / ${words.length}`;
-    fr.textContent = current.fr;
-    slots.replaceChildren(...chars().map((c) => h("span", { class: `slot ${/[a-z]/i.test(c) ? "" : "fixed"}` }, /[a-z]/i.test(c) ? "" : c === " " ? " " : c)));
+    def.textContent = current.def;
+    slots.replaceChildren(...chars().map((c) => h("span", { class: `slot ${LETTER.test(c) ? "" : "fixed"}` }, LETTER.test(c) ? "" : c === " " ? " " : c)));
     bulbs.replaceChildren(...[0, 1, 2].map(() => h("span", { class: "bulb on" })));
     skipFixed();
   };
   const press = (ch) => {
     if (api.ended || !current || pos >= chars().length) return;
     const want = letterAt(pos);
-    const key = kb.querySelector(`[data-k="${ch}"]`);
+    const key = kb.querySelector(`[data-k="${ch.toLowerCase()}"]`);
+    // Accents count: « e » is not « é ».
     if (ch.toLowerCase() === want.toLowerCase()) {
       sfx.type();
       const slot = slots.children[pos];
@@ -419,7 +424,7 @@ export function spell(api) {
         if (!clean) missed.push(current);
         sfx.correct();
         burstAt(slots, { color: ["#4B3FCF", "#8679FF", "#FFC23D"], count: 18 });
-        speak(current.en);
+        speak(current.mot);
         slots.classList.add("win");
         setTimeout(() => {
           slots.classList.remove("win");
@@ -445,7 +450,7 @@ export function spell(api) {
         skipFixed();
         if (pos >= chars().length) {
           missed.push(current);
-          speak(current.en);
+          speak(current.mot);
           setTimeout(nextWord, 900);
         }
       }
@@ -453,7 +458,7 @@ export function spell(api) {
   };
   const onKey = (e) => {
     if (e.metaKey || e.ctrlKey || e.altKey) return;
-    if (/^[a-z]$/i.test(e.key)) press(e.key);
+    if (LETTER.test(e.key)) press(e.key);
   };
   document.addEventListener("keydown", onKey);
   nextWord();

@@ -1,17 +1,16 @@
-// A station, as a guided path: 1 Leçon → 2 Son → 3 Mots → 4 Pratique → 5 Test.
-import { h, icon, rich, shuffle, toast, dialog } from "../ui.js";
+// A station, as a guided path: 1 Leçon → 2 Dictée → 3 Mots → 4 Pratique → 5 Test.
+import { h, icon, rich, esc, shuffle, toast, dialog, sleep } from "../ui.js";
 import { unitById, levelById, vocabRefs } from "../content.js";
 import { addCards } from "../srs.js";
 import { quickCheck } from "./writing.js";
-import { state, save, unitState, diff, unitUnlocked, STEPS, stepDone, markStep, missingPrep, pathOf, PRACTICE_GOAL, addXp, touchStreak } from "../store.js";
+import { state, save, unitState, diff, unitUnlocked, STEPS, stepDone, markStep, missingPrep, pathOf, PRACTICE_GOAL, addXp, touchStreak, checkBadges } from "../store.js";
 import { go } from "../router.js";
-import { speak, speakParts, mixedParts, stopSpeaking, ttsReady, coachReady, sfx } from "../audio.js";
-import { micAvailable, listenOnce, heardRight } from "../mic.js";
+import { speak, speakParts, mixedParts, stopSpeaking, ttsReady, dictationGroups, sfx } from "../audio.js";
+import { compareDictation, dictationMark } from "../answer.js";
 import { GAMES } from "../games/index.js";
 import { starsHtml } from "./home.js";
-import { burstAt, confetti, floatText } from "../fx.js";
-
-const STEP_ICON = { lesson: "book", pron: "mic", words: "cards", practice: "game", test: "trophy" };
+import { confetti, floatText } from "../fx.js";
+import { mentorSays, quip } from "../humor.js";
 
 export function unitScreen(view, { uid, tab }) {
   const unit = unitById(uid);
@@ -22,7 +21,7 @@ export function unitScreen(view, { uid, tab }) {
     go("map");
     return;
   }
-  // Open on the first unfinished step, so the kid always knows what to do next.
+  // Open on the first unfinished step, so the learner always knows what to do next.
   const firstOpen = STEPS.find((s) => !stepDone(uid, s.id))?.id || "practice";
   let current = tab || firstOpen;
   state.lessons[uid] = 1;
@@ -59,7 +58,7 @@ export function unitScreen(view, { uid, tab }) {
         "header",
         { class: "unit-hero" },
         h("span", { class: "unit-id" }, `Station ${uid}`),
-        h("h1", { class: "unit-name" }, unit.titleEn),
+        h("h1", { class: "unit-name" }, unit.name),
         h("p", { class: "unit-fr" }, unit.title),
         h("p", { class: "unit-goal" }, unit.goal),
         st.redo ? h("p", { class: "redo-banner" }, h("strong", null, "À refaire. "), "Le boss t'a pris tes vies : réussis à nouveau le test de cette station (étape 5) pour les récupérer.") : null,
@@ -90,7 +89,7 @@ export function unitScreen(view, { uid, tab }) {
       show(STEPS[i + 1].id, { scroll: true });
     };
     if (id === "lesson") cleanup = lessonStep(body, unit, () => next("lesson"));
-    if (id === "pron") cleanup = pronStep(body, unit, () => next("pron"));
+    if (id === "dictee") cleanup = dicteeStep(body, unit, () => next("dictee"), renderSteps);
     if (id === "words") cleanup = wordsStep(body, unit, () => next("words"));
     if (id === "practice") cleanup = practiceStep(body, unit, renderSteps);
     if (id === "test") testStep(body, unit);
@@ -105,22 +104,25 @@ export function unitScreen(view, { uid, tab }) {
   });
   view.addEventListener("click", (e) => {
     const chip = e.target.closest(".say-chip");
-    if (chip) speak(chip.dataset.say);
+    if (chip) speak(chip.dataset.say, { rate: 0.9 });
   });
   show(current);
   return () => cleanup?.();
 }
+
+/** Appends children, skipping the optional ones left empty (the DOM would print them as "null"). */
+const put = (el, ...xs) => el.append(...xs.flat().filter((x) => x != null && x !== false));
+const putIn = (el, ...xs) => el.replaceChildren(...xs.flat().filter((x) => x != null && x !== false));
 
 const stepHead = (n, title, sub) => h("div", { class: "step-head" }, h("span", { class: "step-num" }, `Étape ${n} sur 5`), h("h2", { class: "step-title" }, title), sub ? h("p", { class: "step-sub" }, sub) : null);
 
 // ---------- 1. Lesson ----------
 
 function lessonStep(body, unit, onDone) {
-  let stopDialog = null;
   const blocks = [];
-  const narrate = h("button", { type: "button", class: "btn btn-small coach-btn" }, h("span", { html: icon("speaker") }), "Écouter la leçon avec le coach");
+  const narrate = h("button", { type: "button", class: "btn btn-small coach-btn" }, h("span", { html: icon("speaker") }), "Écouter la leçon");
   if (!ttsReady()) narrate.hidden = true;
-  body.append(stepHead(1, "La leçon", "Lis tranquillement. Touche les mots en anglais pour les entendre."), narrate);
+  body.append(stepHead(1, "La leçon", "Lis tranquillement. Touche les exemples soulignés pour les entendre."), narrate);
   for (const b of unit.lesson) {
     let el = null;
     let parts = [];
@@ -131,10 +133,10 @@ function lessonStep(body, unit, onDone) {
         break;
       case "rule":
         el = h("div", { class: "l-rule" }, h("div", { class: "l-rule-title" }, b.title), h("p", { html: rich(b.text) }));
-        parts = [...mixedParts(b.title + "."), ...mixedParts(b.text)];
+        parts = [...mixedParts(`${b.title}.`), ...mixedParts(b.text)];
         break;
       case "tip":
-        el = h("div", { class: "l-tip" }, h("div", { class: "l-tip-title" }, "Piège de francophone"), h("p", { html: rich(b.text) }));
+        el = h("div", { class: "l-tip" }, h("div", { class: "l-tip-title" }, b.title || "Piège à éviter"), h("p", { html: rich(b.text) }));
         parts = [{ text: "Attention, piège !", lang: "fr" }, ...mixedParts(b.text)];
         break;
       case "fun":
@@ -152,17 +154,31 @@ function lessonStep(body, unit, onDone) {
         el = h(
           "ul",
           { class: "l-examples" },
-          b.items.map((it) => h("li", null, h("button", { type: "button", class: "ex-play", "aria-label": `Écouter : ${it.en}`, html: icon("speaker"), onClick: () => speak(it.en) }), h("div", null, h("div", { class: "ex-en" }, it.en), h("div", { class: "ex-fr" }, it.fr)))),
+          b.items.map((it) => h("li", null, h("button", { type: "button", class: "ex-play", "aria-label": `Écouter : ${it.ex}`, html: icon("speaker"), onClick: () => speak(it.ex, { rate: 0.9 }) }), h("div", null, h("div", { class: "ex-en", html: rich(it.ex) }), it.note ? h("div", { class: "ex-fr", html: rich(it.note) }) : null))),
         );
-        parts = b.items.flatMap((it) => [
-          { text: it.en, lang: "en", pause: 250 },
-          { text: it.fr, lang: "fr", pause: 350 },
-        ]);
+        parts = b.items.flatMap((it) => [{ text: it.ex.replace(/\*\*/g, ""), lang: "fr", rate: 0.9, pause: 300 }]);
         break;
-      case "dialogue": {
-        const d = dialogueEl(b);
-        stopDialog = d.stop;
-        el = d.el;
+      case "compare":
+        el = h(
+          "div",
+          { class: "l-compare" },
+          b.title ? h("div", { class: "l-rule-title" }, b.title) : null,
+          b.items.map((it) =>
+            h(
+              "div",
+              { class: "cmp-row" },
+              h("div", { class: "cmp-ko" }, h("span", { class: "cmp-tag" }, "Non"), h("span", { html: rich(it.ko) })),
+              h("div", { class: "cmp-ok" }, h("span", { class: "cmp-tag" }, "Oui"), h("span", { html: rich(it.ok) })),
+              it.why ? h("p", { class: "cmp-why", html: rich(it.why) }) : null,
+            ),
+          ),
+        );
+        parts = b.items.flatMap((it) => [{ text: `On écrit : ${it.ok.replace(/\*\*/g, "")}`, lang: "fr", pause: 200 }, ...(it.why ? mixedParts(it.why) : [])]);
+        break;
+      case "texte": {
+        const play = h("button", { type: "button", class: "btn btn-small" }, h("span", { html: icon("play") }), "Écouter le texte");
+        play.addEventListener("click", () => speak(b.text));
+        el = h("div", { class: "l-texte" }, h("div", { class: "l-dialogue-head" }, h("div", null, h("div", { class: "l-dialogue-kicker" }, "Texte"), h("div", { class: "l-dialogue-title" }, b.title || "")), ttsReady() ? play : null), b.text.split(/\n\n+/).map((p) => h("p", { html: rich(p) })));
         break;
       }
     }
@@ -179,7 +195,7 @@ function lessonStep(body, unit, onDone) {
     }
     playing = true;
     narrate.classList.add("on");
-    narrate.lastChild.textContent = "Arrêter le coach";
+    narrate.lastChild.textContent = "Arrêter la lecture";
     const all = [];
     const owner = [];
     blocks.forEach((b, i) =>
@@ -201,225 +217,154 @@ function lessonStep(body, unit, onDone) {
     blocks.forEach((b) => b.el.classList.remove("reading"));
     playing = false;
     narrate.classList.remove("on");
-    narrate.lastChild.textContent = "Écouter la leçon avec le coach";
+    narrate.lastChild.textContent = "Écouter la leçon";
   });
-  body.append(h("div", { class: "step-end" }, h("p", null, "Tu as tout lu ? Passe au son de la station."), h("button", { type: "button", class: "btn btn-primary btn-xl", onClick: onDone }, "J'ai compris, étape suivante")));
-  return () => {
-    stopDialog?.();
-    stopSpeaking();
-  };
+  body.append(h("div", { class: "step-end" }, h("p", null, "Tu as tout lu ? Place à la dictée de la station."), h("button", { type: "button", class: "btn btn-primary btn-xl", onClick: onDone }, "J'ai compris, étape suivante")));
+  return () => stopSpeaking();
 }
 
-function dialogueEl(b) {
-  const names = [...new Set(b.lines.map((l) => l.who))];
-  let playing = 0;
-  const lines = b.lines.map((ln) => {
-    const side = names.indexOf(ln.who) % 2 ? "right" : "left";
-    return h("li", { class: `bubble ${side}` }, h("span", { class: "who" }, ln.who), h("button", { type: "button", class: "bubble-en", onClick: () => speak(ln.en) }, ln.en, h("span", { html: icon("speaker", "say-ic") })), h("span", { class: "bubble-fr" }, ln.fr));
-  });
-  const list = h("ol", { class: "dialogue" }, lines);
-  const wrap = h("div", { class: "l-dialogue" });
-  const playAll = h("button", { type: "button", class: "btn btn-small" }, h("span", { html: icon("play") }), "Écouter");
-  const parrot = h("button", { type: "button", class: "btn btn-small btn-ghost" }, h("span", { html: icon("mic") }), "Mode perroquet");
-  const frId = `fr-${Math.random().toString(36).slice(2, 8)}`;
-  const showFr = h("label", { class: "toggle", for: frId }, h("input", { type: "checkbox", checked: true, id: frId }), h("span", null, "Traduction"));
-  showFr.querySelector("input").addEventListener("change", (e) => list.classList.toggle("hide-fr", !e.target.checked));
-  const stop = () => {
-    playing++;
-    stopSpeaking();
-    lines.forEach((l) => l.classList.remove("active", "your-turn"));
-    wrap.classList.remove("running");
-  };
-  const run = async (withPause) => {
-    stop();
-    const me = playing;
-    wrap.classList.add("running");
-    for (const [i, ln] of b.lines.entries()) {
-      if (me !== playing) return;
-      lines.forEach((l) => l.classList.remove("active", "your-turn"));
-      lines[i].classList.add("active");
-      lines[i].scrollIntoView({ block: "nearest", behavior: "smooth" });
-      const t0 = performance.now();
-      await speak(ln.en);
-      if (me !== playing) return;
-      if (withPause) {
-        // The kid repeats the line aloud during a pause a bit longer than the line itself.
-        lines[i].classList.add("your-turn");
-        const pause = Math.max(1600, (performance.now() - t0) * 1.3);
-        lines[i].style.setProperty("--pause", `${pause}ms`);
-        await new Promise((r) => setTimeout(r, pause));
-      } else await new Promise((r) => setTimeout(r, 250));
-    }
-    stop();
-  };
-  playAll.addEventListener("click", () => run(false));
-  parrot.addEventListener("click", () => run(true));
-  wrap.append(
-    h("div", { class: "l-dialogue-head" }, h("div", null, h("div", { class: "l-dialogue-kicker" }, "Dialogue"), h("div", { class: "l-dialogue-title" }, b.title || "Conversation")), h("div", { class: "l-dialogue-actions" }, playAll, parrot, showFr)),
-    list,
-    h("p", { class: "l-dialogue-help" }, "Mode perroquet : après chaque réplique, répète-la à voix haute pendant la pause. C'est comme ça qu'on apprend à parler."),
-  );
-  return { el: wrap, stop };
-}
+// ---------- 2. Dictation ----------
 
-// ---------- 2. Pronunciation ----------
-
-function pronStep(body, unit, onDone) {
-  const p = unit.pron;
-  if (!p) {
-    body.append(stepHead(2, "Prononciation", "L'atelier de cette station arrive bientôt."), h("div", { class: "step-end" }, h("button", { type: "button", class: "btn btn-primary", onClick: onDone }, "Étape suivante")));
+/**
+ * The dictation of the station: the voice reads the whole text, dictates it group by group with the punctuation
+ * said aloud, then reads it again for the final check. Correction word by word, mark out of 20.
+ * Without a French voice: the text is shown for a while, then hidden (copie différée).
+ */
+function dicteeStep(body, unit, onDone, refreshSteps) {
+  const d = unit.dictee;
+  if (!d) {
+    body.append(stepHead(2, "Dictée", "La dictée de cette station arrive bientôt."), h("div", { class: "step-end" }, h("button", { type: "button", class: "btn btn-primary", onClick: onDone }, "Étape suivante")));
     return null;
   }
   let alive = true;
-  const rows = p.words.map((w) => {
-    const micBtn = h("button", { type: "button", class: "icon-btn mic-btn", "aria-label": `Dis ${w.en} au micro`, html: icon("mic"), hidden: true });
-    const result = h("span", { class: "mic-result", "aria-live": "polite" });
-    const row = h(
-      "li",
-      { class: "pron-word" },
-      h("div", { class: "pron-main" }, h("span", { class: "pron-en" }, w.en), h("span", { class: "pron-fr" }, w.fr), h("span", { class: "pron-hint", html: rich(w.hint) }), result),
-      h(
-        "div",
-        { class: "pron-btns" },
-        h("button", { type: "button", class: "icon-btn", "aria-label": `Écouter ${w.en}`, html: icon("speaker"), onClick: () => speak(w.en) }),
-        h("button", { type: "button", class: "icon-btn", "aria-label": `Écouter ${w.en} lentement`, html: icon("turtle"), onClick: () => speak(w.en, { rate: 0.55 }) }),
-        micBtn,
-      ),
-    );
-    micBtn.addEventListener("click", async () => {
-      micBtn.classList.add("listening");
-      result.textContent = "Je t'écoute…";
-      result.className = "mic-result";
-      try {
-        const alts = await listenOnce();
-        const ok = heardRight(alts, w.en);
-        result.textContent = ok ? "Bien prononcé !" : `J'ai entendu « ${alts[0] || "?"} ». Réécoute et réessaie.`;
-        result.className = `mic-result ${ok ? "ok" : "ko"}`;
-        if (ok) {
-          sfx.correct();
-          burstAt(micBtn, { color: ["#12805C", "#FFC23D"], count: 10 });
-        } else sfx.wrong();
-      } catch (e) {
-        result.textContent = e.message;
-        if (/disponible/.test(e.message)) body.querySelectorAll(".mic-btn").forEach((b) => (b.hidden = true));
-      }
-      micBtn.classList.remove("listening");
-    });
-    return { row, micBtn, w };
-  });
-  micAvailable().then((ok) => alive && ok && rows.forEach((r) => (r.micBtn.hidden = false)));
-
-  const coach = h("button", { type: "button", class: "btn btn-primary coach-btn" }, h("span", { html: icon("speaker") }), "Écouter le coach");
-  if (!ttsReady()) coach.hidden = true;
-  let coaching = false;
-  coach.addEventListener("click", async () => {
-    if (coaching) {
-      stopSpeaking();
-      return;
-    }
-    coaching = true;
-    coach.lastChild.textContent = "Arrêter";
-    const parts = [...mixedParts(p.explain), { text: coachReady() ? "Écoute, puis répète chaque mot." : "", lang: "fr", pause: 300 }];
-    const owner = parts.map(() => -1);
-    p.words.forEach((w, i) => {
-      parts.push({ text: w.en, lang: "en", pause: 500 }, { text: w.en, lang: "en", rate: 0.55, pause: 1500 });
-      owner.push(i, i);
-    });
-    await speakParts(parts, {
-      onPart: (k) => rows.forEach((r, i) => r.row.classList.toggle("active", i === owner[k])),
-    });
-    rows.forEach((r) => r.row.classList.remove("active"));
-    coaching = false;
-    coach.lastChild.textContent = "Écouter le coach";
-  });
-
-  body.append(
-    stepHead(2, "Atelier prononciation", "Le coach t'explique le son, puis tu répètes chaque mot à voix haute. Même seul dans ta chambre : parle fort !"),
-    h("div", { class: "pron-card" }, h("div", { class: "pron-focus" }, h("span", { class: "pron-kicker" }, "Le son de la station"), h("strong", null, p.focus), p.ipa ? h("span", { class: "ipa" }, p.ipa) : null), h("p", { class: "pron-explain", html: rich(p.explain) }), coach),
-    h("ol", { class: "pron-list" }, rows.map((r) => r.row)),
-  );
-  if (p.practice?.length) {
-    body.append(
-      h(
-        "div",
-        { class: "pron-practice" },
-        h("div", { class: "pron-kicker" }, "À toi de jouer"),
-        p.practice.map((s) =>
-          h("div", { class: "practice-line" }, h("span", null, s), h("span", { class: "pron-btns" }, h("button", { type: "button", class: "icon-btn", "aria-label": "Écouter", html: icon("speaker"), onClick: () => speak(s) }), h("button", { type: "button", class: "icon-btn", "aria-label": "Écouter lentement", html: icon("turtle"), onClick: () => speak(s, { rate: 0.6 }) }))),
-        ),
-      ),
-    );
-  }
-  const ear = h("div", { class: "ear" });
-  body.append(ear);
-  if (p.pairs?.length && ttsReady()) earTraining(ear, p, onDone);
-  else body.append(h("div", { class: "step-end" }, h("p", null, "Tu as répété chaque mot à voix haute ?"), h("button", { type: "button", class: "btn btn-primary btn-xl", onClick: onDone }, "Oui, étape suivante")));
-  return () => {
-    alive = false;
+  let run = 0;
+  const groups = dictationGroups(d.texte);
+  const area = h("textarea", { class: "field dictee-area", id: "dictee-text", rows: 8, spellcheck: "false", autocorrect: "off", autocapitalize: "sentences", lang: "fr", placeholder: "Écris le texte ici, avec la ponctuation et les majuscules…", "aria-label": "Ta dictée" });
+  const status = h("p", { class: "dictee-status", "aria-live": "polite" });
+  const best = state.dictees?.[unit.id];
+  const btn = (label, ic, fn, cls = "btn-small") => {
+    const b = h("button", { type: "button", class: `btn ${cls}` }, h("span", { html: icon(ic) }), label);
+    b.addEventListener("click", fn);
+    return b;
+  };
+  const stopAll = () => {
+    run++;
     stopSpeaking();
   };
-}
-
-/** Minimal-pair listening game: which of the two words did you hear? */
-function earTraining(root, p, onDone) {
-  const ROUNDS = 8;
-  let round = 0;
-  let good = 0;
-  const intro = h("div", { class: "ear-intro" }, h("div", { class: "pron-kicker" }, "Entraîne ton oreille"), h("p", null, `${ROUNDS} écoutes : la voix dit un des deux mots, trouve lequel. Tu peux réécouter autant que tu veux.`));
-  const start = h("button", { type: "button", class: "btn btn-primary" }, "Commencer l'entraînement");
-  root.replaceChildren(intro, start);
-  start.addEventListener("click", () => play());
-  const play = () => {
-    if (round >= ROUNDS) {
-      const ok = good >= ROUNDS - 2;
-      root.replaceChildren(
-        h(
-          "div",
-          { class: `ear-end ${ok ? "ok" : ""}` },
-          h("strong", null, `${good} / ${ROUNDS}`),
-          h("p", null, ok ? "Super oreille ! Ton cerveau commence à entendre la différence." : "C'est normal au début : ces sons n'existent pas en français. Réécoute les paires et recommence."),
-          h("div", { class: "row" }, h("button", { type: "button", class: "btn btn-ghost", onClick: () => ((round = 0), (good = 0), play()) }, "Recommencer"), h("button", { type: "button", class: "btn btn-primary", onClick: onDone }, "Étape suivante")),
-        ),
-      );
-      if (ok) {
-        sfx.win();
-        confetti({ count: 60 });
-      }
+  const readAll = async (label) => {
+    stopAll();
+    status.textContent = label;
+    await speak(d.texte, { rate: 0.95 });
+    if (alive) status.textContent = "";
+  };
+  let g = 0;
+  const playGroup = async () => {
+    const me = ++run;
+    if (g >= groups.length) {
+      status.textContent = "Fin de la dictée. Écoute la relecture, puis corrige.";
       return;
     }
-    const pair = p.pairs[round % p.pairs.length];
-    const target = Math.random() < 0.5 ? 0 : 1;
-    const word = pair[target];
-    const listen = h("button", { type: "button", class: "audio-big", "aria-label": "Réécouter", html: icon("speaker") });
-    listen.addEventListener("click", () => speak(word));
-    const opts = shuffle([0, 1]).map((i) => h("button", { type: "button", class: "choice en big", "data-i": i }, pair[i]));
-    const box = h("div", { class: "ear-round" }, h("div", { class: "ear-count" }, `Écoute ${round + 1} / ${ROUNDS}`), listen, h("div", { class: "choices two" }, opts));
-    root.replaceChildren(box);
-    setTimeout(() => speak(word), 250);
-    opts.forEach((b) =>
-      b.addEventListener("click", async () => {
-        const ok = Number(b.dataset.i) === target;
-        opts.forEach((o) => {
-          o.disabled = true;
-          if (Number(o.dataset.i) === target) o.classList.add("right");
-          else if (o === b) o.classList.add("wrong");
-        });
-        if (ok) {
-          good++;
-          sfx.correct();
-          burstAt(b, { color: ["#12805C", "#FFC23D"], count: 12 });
-        } else {
-          sfx.wrong();
-          // Replay both so the kid hears the contrast.
-          await speakParts([
-            { text: pair[target], lang: "en", pause: 400 },
-            { text: pair[1 - target], lang: "en" },
-          ]);
-        }
-        round++;
-        setTimeout(play, ok ? 650 : 900);
-      }),
+    status.textContent = `Groupe ${g + 1} sur ${groups.length}`;
+    await speakParts([{ text: groups[g].said, lang: "fr", rate: 0.8, pause: 700 }, { text: groups[g].said, lang: "fr", rate: 0.75 }]);
+    if (me !== run || !alive) return;
+    // A pause to write, about one second per word, then the next group.
+    const words = groups[g].text.split(/\s+/).length;
+    await sleep(1400 + words * 900);
+    if (me !== run || !alive) return;
+    g++;
+    playGroup();
+  };
+  const controls = ttsReady()
+    ? h(
+        "div",
+        { class: "dictee-controls" },
+        btn("1. Lecture du texte", "play", () => readAll("Lecture du texte : écoute sans écrire.")),
+        btn("2. Dicter", "speaker", () => {
+          g = 0;
+          area.focus();
+          playGroup();
+        }, "btn-small btn-primary"),
+        btn("Répéter le groupe", "refresh", () => {
+          stopAll();
+          g = Math.max(0, g - (status.textContent.startsWith("Groupe") ? 0 : 1));
+          playGroup();
+        }),
+        btn("Pause", "close", () => {
+          stopAll();
+          status.textContent = `En pause au groupe ${Math.min(g + 1, groups.length)} sur ${groups.length}. Appuie sur « Reprendre ».`;
+        }),
+        btn("Reprendre", "play", () => playGroup()),
+        btn("3. Relecture", "eye", () => readAll("Relecture : vérifie les accords et les accents.")),
+      )
+    : null;
+  // Without a voice: show the text, then hide it.
+  let shown = null;
+  if (!ttsReady()) {
+    const secs = Math.max(20, Math.round(d.texte.split(/\s+/).length * 0.7));
+    shown = h("div", { class: "dictee-show" }, h("p", { class: "set-help" }, `Ton appareil n'a pas de voix française : voici une « copie différée ». Lis bien le texte (${secs} secondes), il va disparaître, puis écris-le de mémoire.`), h("blockquote", { class: "dictee-text" }, d.texte));
+    let left = secs;
+    const tick = setInterval(() => {
+      left--;
+      if (!alive) return clearInterval(tick);
+      if (left <= 0) {
+        clearInterval(tick);
+        shown.replaceChildren(h("p", { class: "set-help" }, "Le texte a disparu. À toi de l'écrire !"));
+        area.focus();
+      }
+    }, 1000);
+  }
+  const out = h("div", { class: "dictee-out" });
+  const correct = h("button", { type: "button", class: "btn btn-primary btn-xl" }, h("span", { html: icon("check") }), "Corriger ma dictée");
+  correct.addEventListener("click", () => {
+    if (area.value.trim().split(/\s+/).length < 3) return toast("Écris d'abord la dictée.");
+    stopAll();
+    const r = compareDictation(area.value, d.texte);
+    const mark = dictationMark(r.faults);
+    state.dictees ||= {};
+    const first = state.dictees[unit.id] == null;
+    state.dictees[unit.id] = Math.max(state.dictees[unit.id] ?? 0, mark);
+    addXp(Math.round(mark) + (first ? 10 : 0));
+    touchStreak();
+    markStep(unit.id, "dictee");
+    save();
+    checkBadges();
+    refreshSteps();
+    const words = r.words.map((x) => h("span", { class: `dw ${x.status}`, title: x.status === "ok" ? "" : x.typed ? `Tu as écrit : ${x.typed}` : "Mot oublié" }, x.w));
+    const faults = r.words.filter((x) => x.status !== "ok");
+    putIn(
+      out,
+      h("div", { class: "dictee-mark" }, h("strong", null, `${String(mark).replace(".", ",")}/20`), h("span", null, `${String(r.faults).replace(".", ",")} faute${r.faults > 1 ? "s" : ""}`)),
+      mentorSays(quip(mark >= 18 ? "perfect" : mark >= 12 ? "correct" : "fail")),
+      h("p", { class: "set-help" }, "Le texte, mot à mot : vert = juste, orange = accent ou majuscule (½ faute), rouge = faute ou mot oublié (1 faute). Touche un mot pour voir ce que tu as écrit."),
+      h("div", { class: "dictee-correct" }, words),
+      r.extra.length ? h("p", { class: "set-help" }, `Mots en trop : ${r.extra.join(", ")}.`) : null,
+      faults.length
+        ? h("details", { class: "w-all", open: faults.length <= 8 }, h("summary", null, `Tes ${faults.length} erreur${faults.length > 1 ? "s" : ""}`), h("ul", { class: "dictee-faults" }, faults.map((x) => h("li", null, h("span", { class: "ko" }, x.typed || "(oublié)"), " → ", h("strong", null, x.w)))))
+        : null,
+      d.points?.length ? h("div", { class: "l-tip" }, h("div", { class: "l-tip-title" }, "Les pièges de cette dictée"), h("ul", null, d.points.map((p) => h("li", { html: rich(p) })))) : null,
+      h("div", { class: "row" }, h("button", { type: "button", class: "btn btn-ghost", onClick: () => (area.value = "", out.replaceChildren(), area.focus()) }, "Recommencer la dictée"), h("button", { type: "button", class: "btn btn-primary", onClick: onDone }, "Étape suivante")),
     );
+    out.scrollIntoView({ block: "start", behavior: "smooth" });
+    if (mark >= 18) {
+      sfx.win();
+      confetti({ count: 70 });
+    } else sfx.level();
+  });
+  put(
+    body,
+    stepHead(2, `Dictée : ${d.titre}`, ttsReady() ? "Comme en classe : écoute d'abord le texte en entier, puis écris pendant que la voix dicte (la ponctuation est dite à voix haute), puis vérifie pendant la relecture." : null),
+    best != null ? h("p", { class: "test-best" }, `Ta meilleure note : ${String(best).replace(".", ",")}/20`) : null,
+    controls,
+    status,
+    shown,
+    area,
+    correct,
+    out,
+    h("div", { class: "step-end" }, h("button", { type: "button", class: "btn btn-ghost", onClick: onDone }, "Passer la dictée pour l'instant")),
+  );
+  return () => {
+    alive = false;
+    stopAll();
   };
 }
 
@@ -433,16 +378,17 @@ function wordsStep(body, unit, onDone) {
       h(
         "li",
         { class: "word" },
-        h("button", { type: "button", class: "word-play", "aria-label": `Écouter ${v.en}`, html: icon("speaker"), onClick: () => speak(v.en) }),
-        h("div", { class: "word-main" }, h("div", { class: "word-en" }, v.en), h("div", { class: "word-fr" }, v.fr), v.ex ? h("button", { type: "button", class: "word-ex", onClick: () => speak(v.ex) }, v.ex) : null),
+        h("button", { type: "button", class: "word-play", "aria-label": `Écouter ${v.mot}`, html: icon("speaker"), onClick: () => speak(v.mot) }),
+        h("div", { class: "word-main" }, h("div", { class: "word-en" }, v.mot), h("div", { class: "word-fr" }, v.def), v.ex ? h("button", { type: "button", class: "word-ex", onClick: () => speak(v.ex) }, v.ex) : null),
       ),
     ),
   );
   const cardsBtn = h("button", { type: "button", class: "btn btn-primary" }, h("span", { html: icon("cards") }), "Réviser en cartes");
   const area = h("div");
   cardsBtn.addEventListener("click", () => flashcards(area, unit, onDone));
-  body.append(
-    stepHead(3, "Les mots", `${unit.vocab.length} mots et expressions. Écoute-les, puis révise-les en cartes jusqu'à les connaître.`),
+  put(
+    body,
+    stepHead(3, "Les mots", `${unit.vocab.length} mots à savoir écrire et employer. Lis leur définition, écoute-les, puis révise-les en cartes.`),
     h("div", { class: "words-head" }, cardsBtn),
     area,
     list,
@@ -479,8 +425,8 @@ function flashcards(area, unit, onDone) {
     }
     const v = deck[i];
     card.classList.remove("flipped");
-    front.replaceChildren(h("span", { class: "fc-hint" }, "Comment dit-on en anglais…"), h("span", { class: "fc-word" }, v.fr), h("span", { class: "fc-tap" }, "Touche pour retourner"));
-    back.replaceChildren(h("span", { class: "fc-word en" }, v.en), v.ex ? h("span", { class: "fc-ex" }, v.ex) : null);
+    front.replaceChildren(h("span", { class: "fc-hint" }, "Quel est le mot ?"), h("span", { class: "fc-word def" }, v.def), h("span", { class: "fc-tap" }, "Pense au mot (et à son orthographe !), puis touche pour retourner"));
+    back.replaceChildren(h("span", { class: "fc-word en" }, v.mot), v.ex ? h("span", { class: "fc-ex" }, v.ex) : null);
     count.textContent = `${Math.min(i + 1, deck.length)} / ${deck.length}`;
     yes.disabled = no.disabled = true;
   };
@@ -488,7 +434,7 @@ function flashcards(area, unit, onDone) {
     card.classList.toggle("flipped");
     sfx.flip();
     if (card.classList.contains("flipped")) {
-      speak(deck[i].en);
+      speak(deck[i].mot);
       yes.disabled = no.disabled = false;
     }
   });
@@ -525,11 +471,11 @@ function practiceStep(body, unit, refreshSteps) {
       h("span", { class: "game-ic", html: icon(g.icon) }),
       h("span", { class: "game-name" }, g.name),
       h("span", { class: "game-skill" }, g.skill),
-      h("span", { class: "game-desc" }, needsAudio ? "Ton appareil ne lit pas l'anglais à voix haute." : g.desc),
+      h("span", { class: "game-desc" }, needsAudio ? "Ton appareil ne lit pas le français à voix haute." : g.desc),
       h("span", { class: "game-best" }, best ? `Record : ${best}` : "Pas encore joué"),
     );
     card.addEventListener("click", () => {
-      if (needsAudio) return toast("Ce jeu a besoin de la voix anglaise de ton appareil (essaie Chrome, Safari ou Edge).");
+      if (needsAudio) return toast("Ce jeu a besoin d'une voix française sur ton appareil (essaie Chrome, Safari ou Edge).");
       if (!enough) return toast("Pas assez d'éléments dans cette station pour ce jeu.");
       sfx.tap();
       go("game", { uid: unit.id, game: g.id });
@@ -543,7 +489,7 @@ function practiceStep(body, unit, refreshSteps) {
 function missionCard(unit, refreshSteps) {
   const m = unit.mission;
   const oral = m.type === "oral";
-  const answer = oral ? null : h("textarea", { class: "field mission-input", rows: 4, placeholder: "Écris ta réponse en anglais ici…", id: `mission-${unit.id}`, spellcheck: "false", autocapitalize: "sentences" });
+  const answer = oral ? null : h("textarea", { class: "field mission-input", rows: 5, placeholder: "Écris ta réponse ici…", id: `mission-${unit.id}`, spellcheck: "false", autocapitalize: "sentences", lang: "fr" });
   const reveal = h("button", { type: "button", class: "btn btn-primary" }, oral ? "J'ai répondu à voix haute : voir le modèle" : "Voir le modèle");
   const model = h("div", { class: "mission-model", hidden: true });
   const card = h(
@@ -551,7 +497,7 @@ function missionCard(unit, refreshSteps) {
     { class: `mission ${oral ? "oral" : "ecrit"}` },
     h("div", { class: "mission-kicker" }, h("span", { html: icon(oral ? "mic" : "spell") }), oral ? "Mission orale" : "Mission écrite"),
     h("p", { class: "mission-prompt", html: rich(m.prompt) }),
-    oral ? h("p", { class: "mission-help" }, "Dis ta réponse en anglais, à voix haute, en entier. Prends ton temps.") : null,
+    oral ? h("p", { class: "mission-help" }, "Réponds à voix haute, en phrases complètes, comme si quelqu'un t'écoutait. Prends ton temps.") : null,
     answer,
     reveal,
     model,
@@ -580,7 +526,6 @@ function missionCard(unit, refreshSteps) {
       doneBtn,
     );
     model.hidden = false;
-    speak(m.model);
     doneBtn.addEventListener("click", () => {
       const ticked = checks.filter((c) => c.querySelector("input").checked).length;
       if (ticked < checks.length) {
@@ -613,7 +558,7 @@ function testStep(body, unit) {
     if (missing.length && !st.passed) {
       const v = await dialog({
         title: "Tu es sûr d'être prêt ?",
-        body: `<p>Il te reste : <strong>${missing.map((s) => s.label.toLowerCase()).join(", ")}</strong>.</p><p>Le test est difficile. En suivant les étapes dans l'ordre, tu as beaucoup plus de chances de réussir du premier coup.</p>`,
+        body: `<p>Il te reste : <strong>${esc(missing.map((s) => s.label.toLowerCase()).join(", "))}</strong>.</p><p>Le test est difficile. En suivant les étapes dans l'ordre, tu as beaucoup plus de chances de réussir du premier coup.</p>`,
         actions: [
           { label: "Tenter quand même", value: "go" },
           { label: "Finir la préparation", value: "prep", primary: true },
@@ -623,8 +568,9 @@ function testStep(body, unit) {
     }
     go("test", { uid: unit.id });
   });
-  body.append(
-    stepHead(5, "Le test de la station", missing.length ? "Conseil : termine d'abord les étapes 1 à 4." : "Tu as tout préparé. Respire, prends ton temps de lire chaque question."),
+  put(
+    body,
+    stepHead(5, "Le test de la station", missing.length ? "Conseil : termine d'abord les étapes 1 à 4." : "Tu as tout préparé. Respire, prends le temps de lire chaque question."),
     h(
       "div",
       { class: "test-card" },
@@ -633,9 +579,9 @@ function testStep(body, unit) {
         "ul",
         { class: "test-rules" },
         h("li", null, h("span", { html: icon("trophy") }), `Il faut ${Math.round(d.pass * 100)} % pour réussir (${Math.ceil(d.pass * 15 - 1e-9)} bonnes réponses sur 15).`),
-        h("li", null, h("span", { html: icon("clock") }), "Chaque question a un chrono, assez long pour réfléchir."),
-        h("li", null, h("span", { html: icon("spell") }), "Tu écris beaucoup de réponses : l'orthographe compte."),
-        h("li", null, h("span", { html: icon("speaker") }), `Écoute et dictée : ${d.replays} réécoute${d.replays > 1 ? "s" : ""} maximum.`),
+        h("li", null, h("span", { html: icon("clock") }), "Chaque question a un chrono, assez long pour réfléchir (et se relire)."),
+        h("li", null, h("span", { html: icon("spell") }), "Les accents comptent, toujours. Les majuscules comptent dans les dictées."),
+        h("li", null, h("span", { html: icon("speaker") }), `Dictées et écoutes : ${d.replays} réécoute${d.replays > 1 ? "s" : ""} maximum.`),
         h("li", null, h("span", { html: icon("refresh") }), "Raté ? Aucun problème : tes erreurs vont dans ton carnet et tu peux refaire le test autant de fois que tu veux."),
       ),
       st.attempts ? h("p", { class: "test-best" }, `Meilleur score : ${Math.round((st.best || 0) * 100)} % · ${st.attempts} essai${st.attempts > 1 ? "s" : ""}`) : null,

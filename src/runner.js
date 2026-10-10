@@ -11,7 +11,7 @@ import { quip, mentorSays } from "./humor.js";
 export const TIME_BONUS = 10;
 const limitOf = (q) => q.time + TIME_BONUS;
 
-const ENCOURAGE_OK = ["Correct !", "Exact !", "Bien joué !", "Parfait !", "Yes!", "Nailed it!", "Bravo !"];
+const ENCOURAGE_OK = ["Correct !", "Exact !", "Bien joué !", "Parfait !", "Impeccable !", "Sans faute !", "Bravo !"];
 const ENCOURAGE_KO = ["Pas tout à fait…", "Presque !", "Pas encore…", "Bonne tentative !", "Regarde bien :"];
 
 /**
@@ -152,13 +152,13 @@ export function runQuiz(root, questions, opts = {}) {
   function showFeedback(q, ok, given, timedOut, stopAfter, auto = false) {
     const title = auto ? (ok ? "Juste à temps ! Ta réponse a été envoyée." : "Temps écoulé : ta réponse a été corrigée.") : ok ? ENCOURAGE_OK[Math.floor(Math.random() * ENCOURAGE_OK.length)] : timedOut ? "Temps écoulé !" : ENCOURAGE_KO[Math.floor(Math.random() * ENCOURAGE_KO.length)];
     const hearBtn =
-      q.expected && /[a-z]/i.test(q.expected) && q.kind !== "choose_fr" && q.kind !== "reading" && q.kind !== "listening"
+      q.expected && /\p{L}/u.test(q.expected) && q.kind !== "choose_def" && q.kind !== "reading" && q.kind !== "listening" && q.kind !== "mcq"
         ? h("button", { type: "button", class: "icon-btn fb-hear", "aria-label": "Écouter la bonne réponse", html: icon("speaker"), onClick: () => speak(q.kind === "error" ? fixedSentence(q) : q.say || q.expected) })
         : null;
     const cont = h("button", { type: "button", class: `btn ${ok ? "btn-go" : "btn-stop"} btn-continue` }, stopAfter ? "Voir le résultat" : "Continuer");
     fb.className = `feedback ${ok ? "is-ok" : "is-ko"}`;
     fb.replaceChildren(
-      h("div", { class: "fb-inner" }, h("div", { class: "fb-head" }, h("span", { class: "fb-icon", html: icon(ok ? "check" : "close") }), h("strong", { class: "fb-title" }, title), hearBtn), mentorLine(ok, timedOut), ok ? (q.explain && q.kind !== "choose_fr" ? h("p", { class: "fb-explain" }, q.explain) : null) : feedbackDetails(q, given), cont),
+      h("div", { class: "fb-inner" }, h("div", { class: "fb-head" }, h("span", { class: "fb-icon", html: icon(ok ? "check" : "close") }), h("strong", { class: "fb-title" }, title), hearBtn), mentorLine(ok, timedOut), ok ? (q.explain && q.kind !== "choose_def" ? h("p", { class: "fb-explain" }, q.explain) : null) : feedbackDetails(q, given), cont),
     );
     fb.hidden = false;
     let armed = false;

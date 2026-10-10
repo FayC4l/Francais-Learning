@@ -24,7 +24,7 @@ export function loadDictionary(encoded = globalThis.window?.__DICT__ || "") {
       const w = prev.slice(0, p) + rest;
       prev = w;
       if (!TIER.has(w)) {
-        TIER.set(w, k + 1);
+        TIER.set(w, k < 3 ? k + 1 : 2); // a 4th part (words of the content, added by build.mjs) counts as tier 2
         MASK.set(w, parseInt(m, 36) || 0);
         const key = `${w.length}:${stripAccents(w[0])}`;
         if (!BY_LEN.has(key)) BY_LEN.set(key, []);

@@ -1,0 +1,118 @@
+{
+  "level": 1,
+  "units": [
+    {
+      "unit": "1.1",
+      "dictee": {
+        "titre": "Le garçon et le pigeon",
+        "texte": "Ce matin, le petit garçon de la voisine joue de la guitare près de la fenêtre. Un pigeon gris se pose sur le balcon. Le garçon lui donne un morceau de pain. Puis il boit un jus de citron avec un glaçon.",
+        "points": [
+          "**garçon**, **glaçon** : devant o, la cédille fait le son [s] ; **citron** n'en a pas besoin (devant i).",
+          "**pigeon** : on ajoute un e après le g pour garder le son [ʒ] devant o.",
+          "**guitare** : gu pour entendre [g] devant i.",
+          "**fenêtre** : accent circonflexe (on retrouve le s dans « défenestrer »)."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Décris ton repas idéal en trois phrases. Utilise au moins trois mots de la station (garçon, glaçon, dessert, citron, champignon, poisson…).",
+        "model": "Pour mon repas idéal, je mange une omelette aux champignons. Comme boisson, je prends un jus de citron avec un glaçon. Au dessert, je savoure une glace à la fraise.",
+        "checklist": [
+          "J'ai mis la cédille à glaçon (ou à garçon).",
+          "J'ai écrit dessert avec deux s (le désert, c'est le Sahara !).",
+          "Chaque phrase commence par une majuscule et finit par un point."
+        ]
+      }
+    },
+    {
+      "unit": "1.2",
+      "dictee": {
+        "titre": "Le grenier de mamie",
+        "texte": "Dans le grenier de mamie, il y a une vieille armoire, une horloge cassée et des cartons pleins d'images. Les enfants y trouvent un album et deux écharpes. Quelle surprise : une photo de papa à six ans !",
+        "points": [
+          "**une armoire**, **une horloge**, **une écharpe** : trois noms féminins souvent pris pour des masculins.",
+          "**des cartons**, **deux écharpes**, **les enfants** : après des, les, deux, le nom prend un s qu'on n'entend pas.",
+          "**cassée** prend un e parce qu'il s'accorde avec horloge, qui est féminin (on y reviendra à la ligne 2)."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Décris à voix haute trois objets de ta chambre en disant bien « un » ou « une ». Puis redis la même phrase au pluriel, comme si tu en avais plusieurs.",
+        "model": "Dans ma chambre, il y a une armoire, un bureau et une lampe. Dans la chambre de mes rêves, il y a des armoires, des bureaux et des lampes.",
+        "checklist": [
+          "J'ai dit le bon déterminant (un ou une) pour chaque objet.",
+          "J'ai mis chaque nom au pluriel avec des.",
+          "J'ai fait des phrases complètes."
+        ]
+      }
+    },
+    {
+      "unit": "1.3",
+      "dictee": {
+        "titre": "Le samedi",
+        "texte": "Le samedi, mes parents travaillent dans le jardin. Papa arrose les fleurs et maman grimpe sur l'échelle. Moi, je range ma chambre pendant que mes sœurs chantent. Nous sommes contents : le soir, nous avons une crêpe chacun !",
+        "points": [
+          "**travaillent**, **chantent** : avec ils, elles ou un nom au pluriel, le verbe se termine par -ent, qu'on n'entend pas.",
+          "**je range**, **papa arrose**, **maman grimpe** : -e avec je, il, elle.",
+          "**nous sommes**, **nous avons** : être et avoir se connaissent par cœur."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Raconte en quatre phrases ce que fait ta famille le dimanche matin. Utilise au moins quatre sujets différents (je, nous, mes parents, mon frère…).",
+        "model": "Le dimanche matin, mes parents préparent le petit-déjeuner. Mon frère regarde des dessins animés. Nous mangeons des croissants tous ensemble. Ensuite, je range ma chambre en écoutant de la musique.",
+        "checklist": [
+          "J'ai mis -ent après un sujet au pluriel (mes parents préparent).",
+          "J'ai mis -ons avec nous et -e avec je, il ou elle.",
+          "J'ai utilisé quatre sujets différents.",
+          "Chaque phrase commence par une majuscule et finit par un point."
+        ]
+      }
+    },
+    {
+      "unit": "1.4",
+      "dictee": {
+        "titre": "Au parc",
+        "texte": "Hugo a un ballon rouge et il est très fier. Ses cousins sont au parc avec lui. On joue à cache-cache près de la fontaine. Les petits ont peur du chien, mais il est gentil et il a soif.",
+        "points": [
+          "**a** (on peut dire « avait ») et **à** (préposition) : Hugo **a** un ballon ; on joue **à** cache-cache.",
+          "**et** (on peut dire « et puis ») et **est** (on peut dire « était ») : il **est** fier **et** content.",
+          "**sont** (étaient), **ont** (avaient) et **on** (il) : ses cousins **sont** au parc ; les petits **ont** peur ; **on** joue."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Invente à voix haute une phrase avec chacun de ces mots : a, à, et, est, son, sont, on, ont. Après chaque phrase, dis l'astuce qui prouve que tu as raison (avait, était, étaient, avaient, il…).",
+        "model": "Léa a un chat : on peut dire « avait ». Elle va à l'école : « avait » ne marche pas. Le ciel est gris : « était ». Du pain et du beurre : « et puis ». Son vélo est rouge : « mon vélo ». Ils sont fatigués : « étaient ». On a gagné : « il a gagné ». Ils ont faim : « avaient ».",
+        "checklist": [
+          "J'ai fait huit phrases, une par mot.",
+          "Pour chaque mot, j'ai vérifié avec l'astuce de remplacement.",
+          "Je n'ai confondu aucun jumeau."
+        ]
+      }
+    },
+    {
+      "unit": "1.5",
+      "dictee": {
+        "titre": "Le mot de Léa",
+        "texte": "Léa écrit un mot à sa grand-mère : « Chère mamie, est-ce que tu viens dimanche ? Nous ne partons pas en vacances cette année. Papa prépare une tarte aux pommes, et moi, je décore la table. Quelle fête ! »",
+        "points": [
+          "Les **deux-points** et les **guillemets** « » annoncent les paroles écrites par Léa.",
+          "**est-ce que** … ? : une question se termine par un point d'interrogation.",
+          "**ne** … **pas** : à l'écrit, la négation a toujours deux parties.",
+          "**Quelle fête !** : une exclamation se termine par un point d'exclamation."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Écris un petit message à un ami pour l'inviter à un goûter. Il doit contenir une phrase déclarative, une question, un ordre et une exclamation.",
+        "model": "Salut Malik ! Samedi, je fais un goûter chez moi. Est-ce que tu veux venir ? Apporte tes cartes à jouer. Ce sera génial !",
+        "checklist": [
+          "J'ai écrit une phrase déclarative (point), une question (?), un ordre et une exclamation (!).",
+          "J'ai mis une majuscule au début de chaque phrase et au prénom.",
+          "J'ai relu les accents et les homophones (a / à, et / est)."
+        ]
+      }
+    }
+  ]
+}

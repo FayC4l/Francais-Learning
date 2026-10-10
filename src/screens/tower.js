@@ -1,4 +1,4 @@
-// The Tower of Chikh Fayçal (level 12): 50 floors, a boss on each, 200 hearts, dramatic losses, the C2 at the top.
+// The Tower of Chikh Fayçal (level 12): 50 floors, a boss on each, 200 hearts, dramatic losses, the DALF C2 at the top.
 // The player only ever sees 5 floors and the final boss: every floor won past the 5th makes a new one appear.
 import { h, icon, sleep, reducedMotion, dialog } from "../ui.js";
 import { EXTRA, unitById } from "../content.js";
@@ -12,6 +12,7 @@ import { confetti, flash, shake, burst } from "../fx.js";
 import { mentorSays, mentorFaceHtml, quip } from "../humor.js";
 import { createMonster } from "./boss.js";
 import { printCertificate } from "./dashboard.js";
+import { dalfPrompts } from "./writing.js";
 
 export const REWARD = "un jeu PlayStation de ton choix + 25 $";
 
@@ -20,7 +21,7 @@ export function heartsHtml(n, max = TOWER_LIVES) {
   const b = heartBar(n, max);
   return Array.from({ length: b.total }, (_, i) => `<span class="life ${i < b.on ? "on" : "lost"}">${icon("heart")}</span>`).join("");
 }
-const floorTitle = (s) => (s.kind === "final" ? "Boss final : le C2" : s.kind === "writing" ? (s.c2 ? "Écriture C2" : "Boss d'écriture") : s.title);
+const floorTitle = (s) => (s.kind === "final" ? "Boss final : le DALF C2" : s.kind === "writing" ? (s.c2 ? "Écriture DALF C2" : "Boss d'écriture") : s.title);
 
 /** The Tower: the final boss on top, then the visible floors from the highest to the first. */
 export function towerScreen(view) {
@@ -48,9 +49,9 @@ export function towerScreen(view) {
       h(
         "div",
         { class: "tower-rules" },
-        h("p", null, h("strong", null, `${top} étages, un boss à chaque étage${grown ? " (pour l'instant)" : ". C'est tout, promis"}. `), "Conjugaison et grammaire de plus en plus dures, un boss d'expression écrite tous les 5 étages, puis le boss final : l'examen blanc du C2 Proficiency."),
+        h("p", null, h("strong", null, `${top} étages, un boss à chaque étage${grown ? " (pour l'instant)" : ". C'est tout, promis"}. `), "Conjugaison, accords et grammaire de plus en plus durs, un boss d'expression écrite tous les 5 étages, puis le boss final : un DALF C2 blanc complet."),
         h("p", null, h("strong", null, `${TOWER_LIVES} cœurs pour toute la montée. `), "Chaque boss perdu, abandonné ou fui (page fermée en plein combat) coûte un cœur. Plus de cœurs : la tour s'effondre et tu recommences à l'étage 1."),
-        h("p", { class: "tower-reward" }, "🎮 ", h("strong", null, "Au sommet : "), `le C2… et ${REWARD}.`),
+        h("p", { class: "tower-reward" }, "🎮 ", h("strong", null, "Au sommet : "), `le DALF C2… et ${REWARD}.`),
         t.resets ? h("p", { class: "tower-resets" }, `La tour s'est déjà effondrée ${t.resets} fois. Elle se souvient de toi.`) : null,
       ),
       mentorSays(welcomeLine(t), "", t.lives <= Math.ceil(TOWER_LIVES / 10) ? "warning" : "welcome"),
@@ -65,7 +66,7 @@ export function towerScreen(view) {
 
 function welcomeLine(t) {
   if (t.floor >= FLOORS) return "Cette fois, c'est vraiment le boss final. Plus d'étage caché. Je le jure sur mon thé.";
-  if (t.floor === 1 && !t.resets) return `Bienvenue dans ma tour. Cinq petits étages, ${TOWER_LIVES} cœurs, et le C2 au sommet. Facile, non ? … Non.`;
+  if (t.floor === 1 && !t.resets) return `Bienvenue dans ma tour. Cinq petits étages, ${TOWER_LIVES} cœurs, et le DALF C2 au sommet. Facile, non ? … Non.`;
   return quip("welcome");
 }
 
@@ -76,7 +77,7 @@ function floorItem(view, t, n, fresh = false) {
     "li",
     { class: `tower-floor ${st} kind-${s.kind}${fresh ? " is-new" : ""}`, "data-n": s.kind === "final" ? "boss" : n },
     h("span", { class: "tf-n" }, s.kind === "final" ? "★" : n),
-    h("span", { class: "tf-title" }, floorTitle(s), s.kind === "writing" ? h("small", null, ` · ${s.pass}/20 minimum`) : s.kind === "conj" ? h("small", null, ` · ${s.count} questions`) : h("small", null, " · 200 points Cambridge")),
+    h("span", { class: "tf-title" }, floorTitle(s), s.kind === "writing" ? h("small", null, ` · ${s.pass}/20 minimum`) : s.kind === "conj" ? h("small", null, ` · ${s.count} questions`) : h("small", null, " · 60 points sur 100")),
     h("span", { class: "tf-state", html: st === "done" ? icon("check") : st === "now" ? icon("play") : icon("lock") }),
   );
   if (st === "now") li.addEventListener("click", () => startFloor(view, n));
@@ -281,11 +282,11 @@ async function floorWon(view, n, score) {
 
 /** Writing floors: a prompt of the right level, corrected by the workshop; the mark decides. */
 function writingFloor(n, s) {
-  const prompts = s.c2 ? EXTRA.c2papers?.writing || [] : (EXTRA.writing?.prompts || []).filter((p) => p.level === s.level && (!p.ages || p.ages.includes(state.player.age) || p.ages.includes("adulte")));
+  const prompts = s.c2 ? dalfPrompts() : (EXTRA.writing?.prompts || []).filter((p) => p.level === s.level && (!p.ages || p.ages.includes(state.player.age) || p.ages.includes("adulte")));
   if (!prompts.length) return go("tower");
   let id = towerPrompt(n, () => prompts[Math.floor(Math.random() * prompts.length)].id);
   // A subject removed from the content since it was drawn: draw again.
-  const exists = (s.c2 ? EXTRA.c2papers?.writing || [] : (EXTRA.writing?.prompts || []).filter((p) => p.level === s.level)).some((p) => p.id === id);
+  const exists = (s.c2 ? dalfPrompts() : (EXTRA.writing?.prompts || []).filter((p) => p.level === s.level)).some((p) => p.id === id);
   if (!exists) {
     delete tower().prompts[n];
     id = towerPrompt(n, () => prompts[Math.floor(Math.random() * prompts.length)].id);
@@ -293,23 +294,23 @@ function writingFloor(n, s) {
   go("writing", { promptId: id, tower: n });
 }
 
-/** The top: the full C2 Proficiency mock exam; 200 on the Cambridge scale wins the Tower. */
+/** The top: a full DALF C2 mock exam marked out of 100; 60 (and 10/25 in each paper) wins the Tower. */
 async function finalFloor(view) {
   const ok = await dialog({
     title: "Le boss final",
-    body: "<p>L'examen blanc <strong>complet</strong> du C2 Proficiency : Reading & Use of English puis Listening (environ 2 h). Ta dernière copie d'écriture C2 compte aussi.</p><p>Il faut <strong>200</strong> sur l'échelle Cambridge pour vaincre la tour. Sinon, tu perds un cœur.</p><p><strong>Une fois commencé, abandonner ou fermer la page = un cœur perdu.</strong> Prévois deux heures au calme.</p>",
+    body: "<p>Un DALF C2 blanc <strong>complet</strong> : compréhension de l'oral (avec la voix), compréhension des écrits et maîtrise de la langue, puis production écrite (synthèse de documents et essai argumenté). Environ 3 h.</p><p>Il faut <strong>60 sur 100</strong> (le vrai DALF demande 50 : Chikh Fayçal est plus exigeant) et au moins 10 sur 25 dans chaque épreuve. Sinon, tu perds un cœur.</p><p><strong>Une fois commencé, abandonner ou fermer la page = un cœur perdu.</strong> Prévois trois heures au calme.</p>",
     actions: [{ label: "Plus tard", value: false }, { label: "Je suis prêt(e)", value: true, primary: true }],
   });
   if (!ok) return;
   startTowerFloor(FLOORS);
-  const { towerFinal } = await import("./c2.js");
+  const { towerFinal } = await import("./dalf.js");
   towerFinal(
     view,
-    async (scale) => {
-      const r = recordTowerFloor(FLOORS, scale >= 200);
+    async (res) => {
+      const r = recordTowerFloor(FLOORS, res.pass);
       checkBadges();
-      if (r.event === "victory") return victory(view, scale);
-      await drama(r, `Score : ${scale}. Il fallait 200.`);
+      if (r.event === "victory") return victory(view, res.total);
+      await drama(r, `DALF blanc : ${String(res.total).replace(".", ",")}/100. Il fallait 60, et 10/25 dans chaque épreuve.`);
       go("tower");
     },
     async () => {
@@ -330,10 +331,10 @@ function victory(view, scale) {
       { class: "results tower-victory" },
       h("p", { class: "eyebrow" }, "La Tour de Chikh Fayçal"),
       h("div", { class: "victory-trophy", html: icon("trophy") }),
-      h("h1", { class: "results-title" }, "C2 ATTEINT !"),
-      scale ? h("p", { class: "results-line" }, `${scale} sur l'échelle Cambridge.`) : null,
+      h("h1", { class: "results-title" }, "DALF C2 ATTEINT !"),
+      scale ? h("p", { class: "results-line" }, `${String(scale).replace(".", ",")}/100 au DALF C2 blanc.`) : null,
       h("div", { class: "victory-reward" }, h("span", { class: "victory-pad" }, "🎮 💵"), h("p", null, h("strong", null, "Ta récompense : "), `${REWARD}.`), h("p", { class: "set-help" }, `Montre cet écran à Fayçal. Gagné le ${new Date(t.wonAt || Date.now()).toLocaleDateString("fr-CA")}${t.resets ? `, après ${t.resets} effondrement${t.resets > 1 ? "s" : ""} de la tour` : ", sans jamais faire tomber la tour"}.`)),
-      mentorSays(`Cinquante étages. Oui, ${FLOORS} : je t'ai menti dès le cinquième, et tu as tout grimpé quand même. Le C2. Je n'ai plus rien à t'apprendre… Enfin si, mais je vais faire semblant. Je suis fier de toi.`, "", "love"),
+      mentorSays(`Cinquante étages. Oui, ${FLOORS} : je t'ai menti dès le cinquième, et tu as tout grimpé quand même. Le DALF C2. Je n'ai plus rien à t'apprendre… Enfin si, mais je vais faire semblant. Je suis fier de toi.`, "", "love"),
       h("div", { class: "result-actions" }, h("button", { type: "button", class: "btn btn-primary btn-xl", onClick: () => printCertificate("C2") }, "Imprimer mon certificat C2"), h("button", { type: "button", class: "btn btn-ghost", onClick: () => go("map") }, "Retour au réseau")),
     ),
   );

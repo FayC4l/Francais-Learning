@@ -31,7 +31,7 @@ export function whoScreen(view) {
       { type: "button", class: `who-card ${p.id === family.activeId ? "last" : ""}`, "aria-label": `Jouer avec le profil ${p.name}` },
       avatarEl(p.avatar, "xl"),
       h("strong", { class: "who-name" }, p.name),
-      h("span", { class: "who-meta" }, `${rankOf(st)} · ${(st?.xp || 0).toLocaleString("fr-CA")} XP`),
+      h("span", { class: "who-meta" }, `${rankOf(st)} · ${(st?.xp || 0).toLocaleString("fr-FR")} XP`),
       h("span", { class: "who-age" }, AGES[p.age]?.label || ""),
     );
     card.addEventListener("click", () => {
@@ -49,7 +49,7 @@ export function whoScreen(view) {
     h(
       "div",
       { class: "who" },
-      h("p", { class: "eyebrow" }, "Mission Bilingue"),
+      h("p", { class: "eyebrow" }, "Mission Français"),
       h("h1", { class: "page-title" }, "Qui joue aujourd'hui ?"),
       h("p", { class: "page-lead" }, "Chaque membre de la famille a son profil, sa progression et son carnet d'erreurs."),
       grid,
@@ -110,7 +110,7 @@ export function onboarding(view, { adding = false } = {}) {
   );
   const start = h("button", { type: "button", class: "btn btn-primary btn-xl" }, adding ? "Créer le profil" : "Monter à bord");
   const restore = h("button", { type: "button", class: "btn btn-ghost" }, "J'ai une sauvegarde (fichier ou code)");
-  const letters = "Mission Bilingue".split("").map((c, i) => h("span", { class: "drop", style: { "--i": i } }, c === " " ? " " : c));
+  const letters = "Mission Français".split("").map((c, i) => h("span", { class: "drop", style: { "--i": i } }, c === " " ? " " : c));
   const lines = h("div", { class: "intro-lines", "aria-hidden": "true" }, Array.from({ length: LINE_COUNT }, (_, i) => h("span", { style: { "--c": `var(--l${i + 1})`, "--i": i } })));
   view.append(
     h(
@@ -118,17 +118,17 @@ export function onboarding(view, { adding = false } = {}) {
       { class: "onboard" },
       lines,
       adding ? h("div", { class: "topbar" }, h("button", { type: "button", class: "icon-btn", "aria-label": "Retour", html: icon("back"), onClick: () => go("who") }), h("span", { class: "topbar-title" }, "Nouveau profil")) : null,
-      h("p", { class: "eyebrow" }, "Le défi d'anglais de toute la famille"),
+      h("p", { class: "eyebrow" }, "Le défi de français de toute la famille"),
       h("h1", { class: "brand-xl" }, letters),
       adding
         ? null
-        : h("p", { class: "onboard-lead" }, "Du premier « hello » jusqu'au niveau C2 (Cambridge Proficiency). Un test de placement te situe, puis 12 lignes, 60 stations et 12 boss te font grimper. Les parents aussi ont le droit de jouer."),
+        : h("p", { class: "onboard-lead" }, "De l'orthographe de l'école primaire jusqu'au style du DALF C2. Un test de placement te situe, puis 12 lignes, 60 stations et 12 boss te font grimper. Les parents aussi ont le droit de jouer (et de faire des fautes)."),
       adding
         ? null
         : h(
             "ul",
             { class: "onboard-facts" },
-            h("li", null, h("strong", null, "Leçons, conjugaison, vocabulaire"), " : tout l'anglais de A à Z"),
+            h("li", null, h("strong", null, "Dictées, accords, conjugaison, style"), " : tout le français de A à Z"),
             h("li", null, h("strong", null, "Rédactions corrigées et notées"), " sur 20, avec les explications"),
             h("li", null, h("strong", null, "Des boss imprévisibles"), " : impossible d'apprendre les réponses par cœur"),
           ),

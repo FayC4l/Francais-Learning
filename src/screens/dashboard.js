@@ -6,16 +6,16 @@ import { avatarEl } from "./who.js";
 import { mentorFaceHtml } from "../humor.js";
 
 export const SKILLS = [
-  ["vocabulaire", "Vocabulaire"],
+  ["orthographe", "Orthographe"],
   ["grammaire", "Grammaire"],
   ["conjugaison", "Conjugaison"],
-  ["ecoute", "Écoute"],
+  ["vocabulaire", "Vocabulaire"],
   ["lecture", "Lecture"],
+  ["ecoute", "Écoute"],
   ["ecriture", "Écriture"],
-  ["oral", "Oral"],
 ];
 const BANDS = ["A1", "A2", "B1", "B2", "C1", "C2"];
-const LEVEL_BAND = (L) => (L <= 2 ? "A1" : L <= 4 ? "A2" : L <= 6 ? "B1" : L <= 9 ? "B2" : L <= 11 ? "C1" : "C2");
+const LEVEL_BAND = (L) => (L <= 2 ? "A1" : L <= 4 ? "A2" : L <= 6 ? "B1" : L <= 8 ? "B2" : L <= 10 ? "C1" : "C2");
 
 /** Score 0-100 of a skill (smoothed so 2 answers do not give 100 %), and the number of answers. */
 export function skillScore(id) {
@@ -28,12 +28,13 @@ export function skillScore(id) {
   return { score: Math.round(((s.ok + 1) / (s.n + 2)) * 100), n: s.n };
 }
 
-/** Best CEFR band reached: levels beaten, placement test, C2 mock exam. */
+/** Best CEFR band reached: levels beaten, placement test, a full DALF mock passed. */
 export function cefrEstimate() {
   let best = -1;
   for (const [L, b] of Object.entries(state.bosses)) if (b.defeated) best = Math.max(best, BANDS.indexOf(LEVEL_BAND(Number(L))));
   if (state.placement) best = Math.max(best, BANDS.indexOf(state.placement.band) - 1);
-  if (state.c2?.mock?.scale >= 200) best = 5;
+  if (state.c2?.mock?.kind === "full" && state.c2.mock.total >= 50) best = Math.max(best, 4);
+  if (state.c2?.mock?.kind === "full" && state.c2.mock.total >= 60) best = 5;
   return best >= 0 ? BANDS[best] : "—";
 }
 
@@ -87,18 +88,18 @@ export function dashboardScreen(view) {
 
 /** Opens a printable certificate in a new window (falls back to printing the page). */
 export function printCertificate(band) {
-  const names = { A1: "Découverte", A2: "Survie", B1: "Seuil", B2: "Avancé", C1: "Autonome", C2: "Maîtrise" };
+  const names = { A1: "Premiers pas", A2: "Bases solides", B1: "Collège", B2: "Brevet et au-delà", C1: "Lycée et supérieur", C2: "Plume d'expert" };
   const html = `<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Certificat ${band}</title><style>
   body{font-family:Georgia,serif;margin:0;display:grid;place-items:center;min-height:100vh;background:#f4efe3;color:#1b1b1b}
   .c{width:min(90vw,820px);padding:48px;border:10px double #8a6b3e;background:#fffdf7;text-align:center}
   h1{font-size:2.4rem;margin:.2em 0;letter-spacing:.04em}.b{font-size:4rem;font-weight:700;color:#8a2b2b;margin:.1em 0}
   .n{font-size:2rem;margin:.4em 0;font-style:italic}.m{width:110px;height:110px;margin:0 auto}.m img,.m svg{width:100%;height:100%;object-fit:contain}
   .s{margin-top:28px;display:flex;justify-content:space-between;font-size:.95rem}@media print{body{background:#fff}}</style></head>
-  <body><div class="c"><div class="m">${mentorFaceHtml("love")}</div><p>Mission Bilingue certifie que</p><p class="n">${esc(state.player.name)}</p>
-  <p>a atteint en anglais le niveau</p><p class="b">${band}</p><h1>${names[band]}</h1>
+  <body><div class="c"><div class="m">${mentorFaceHtml("love")}</div><p>Mission Français certifie que</p><p class="n">${esc(state.player.name)}</p>
+  <p>a atteint en français écrit le niveau</p><p class="b">${band}</p><h1>${names[band]}</h1>
   <p>du Cadre européen commun de référence pour les langues (CECR), selon ses résultats dans l'application.</p>
-  <div class="s"><span>Le ${new Date().toLocaleDateString("fr-CA")}</span><span>Chikh Fayçal, professeur et examinateur en chef</span></div>
-  <p style="font-size:.75rem;color:#777;margin-top:24px">Certificat d'encouragement, sans valeur officielle. Pour un diplôme reconnu : Cambridge C2 Proficiency.</p></div>
+  <div class="s"><span>Le ${new Date().toLocaleDateString("fr-FR")}</span><span>Chikh Fayçal, professeur et examinateur en chef</span></div>
+  <p style="font-size:.75rem;color:#777;margin-top:24px">Certificat d'encouragement, sans valeur officielle. Pour un diplôme reconnu : DALF C1 ou C2 (France Éducation international).</p></div>
   <script>setTimeout(()=>print(),400)<\/script></body></html>`;
   const w = window.open("", "_blank");
   if (w) {

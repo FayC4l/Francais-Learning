@@ -353,3 +353,40 @@
 @media (prefers-reduced-motion: reduce) { .reveal *, .reveal, .tower-floor.is-new { animation: none !important; } }
 .tower-revise { display: grid; gap: 6px; justify-items: center; text-align: center; }
 .tower-revise .row { justify-content: center; flex-wrap: wrap; }
+
+/* ---------- Mission Français ---------- */
+.l-compare { display: grid; gap: 10px; }
+.cmp-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; background: var(--card); border-radius: var(--r-md); padding: 10px 12px; box-shadow: var(--shadow); }
+.cmp-ko, .cmp-ok { display: flex; gap: 8px; align-items: baseline; min-width: 0; overflow-wrap: anywhere; }
+.cmp-ko span:last-child { color: var(--stop); text-decoration: line-through; text-decoration-thickness: 2px; }
+.cmp-ok span:last-child { color: var(--go); font-weight: 700; }
+.cmp-tag { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 6px; border-radius: 6px; background: var(--card-2); color: var(--ink-2); flex: none; }
+.cmp-why { grid-column: 1 / -1; margin: 0; color: var(--ink-2); font-size: 0.95rem; }
+@media (max-width: 520px) { .cmp-row { grid-template-columns: 1fr; } }
+.l-texte { background: var(--card); border-radius: var(--r-lg); padding: 16px 18px; box-shadow: var(--shadow); display: grid; gap: 8px; }
+.l-texte p { margin: 0; line-height: 1.6; }
+.q-prompt.def { font-size: 1.15rem; line-height: 1.4; }
+.q-prompt.word { font-family: var(--font-display); font-size: 1.7rem; font-weight: 800; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.choice.word .choice-text { font-family: var(--font-display); font-size: 1.2rem; letter-spacing: 0.01em; }
+.fc-word.def { font-family: inherit; font-weight: 700; font-size: clamp(1.05rem, 4.2vw, 1.35rem); }
+.fb-diff .half { color: var(--amber); text-decoration: underline dotted; text-underline-offset: 4px; }
+.dictee-controls { display: flex; flex-wrap: wrap; gap: 8px; }
+.dictee-status { min-height: 1.4em; font-family: var(--font-mono); font-size: 0.85rem; color: var(--ink-2); margin: 4px 0; }
+.dictee-area { width: 100%; min-height: 12em; font-size: 1.1rem; line-height: 1.6; }
+.dictee-text { background: var(--card); border-left: 4px solid var(--line); padding: 12px 16px; border-radius: var(--r-md); line-height: 1.6; }
+.dictee-out { display: grid; gap: 12px; margin-top: 12px; }
+.dictee-mark { display: flex; gap: 14px; align-items: baseline; }
+.dictee-mark strong { font-family: var(--font-display); font-size: 2.4rem; }
+.dictee-mark span { color: var(--ink-2); }
+.dictee-correct { background: var(--card); border-radius: var(--r-lg); padding: 14px 16px; box-shadow: var(--shadow); line-height: 1.9; font-size: 1.08rem; }
+.dw { padding: 1px 2px; border-radius: 4px; }
+.dw.ok { color: var(--go); }
+.dw.accent, .dw.case { color: var(--amber); background: var(--amber-bg); }
+.dw.wrong, .dw.missing { color: var(--stop); background: var(--stop-bg); }
+.dw.missing { text-decoration: underline wavy; }
+.dictee-faults { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+.dictee-faults .ko { color: var(--stop); text-decoration: line-through; }
+.kb-row.accents .kb-key { background: var(--amber-bg); }
+.w-texts blockquote p { margin: 6px 0 0; }
+.w-src { color: var(--ink-2); }
+.wrong-form { color: var(--stop); text-decoration-thickness: 2px; }

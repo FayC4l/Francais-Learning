@@ -3,7 +3,7 @@ import { h, icon, toast, dialog, copyText } from "../ui.js";
 import { state, save, rank, wordsLearned, mistakeCount, streakAlive, BADGES, exportCode, importCode, highestLevelDone } from "../store.js";
 import { family, saveFamily, listProfiles, updateProfile, exportProfile, importBackup, AGES, AVATARS } from "../profiles.js";
 import { go } from "../router.js";
-import { englishVoices, ttsReady, coachReady, speak, speakParts, sfx } from "../audio.js";
+import { frenchVoices, ttsReady, speak, sfx } from "../audio.js";
 import { avatarEl } from "./who.js";
 import { downloadJSON, pickBackupFile, backupName, downloadFamilyBackup } from "./backup.js";
 import { autoSupported, autoStatus, chooseAutoFile, resumeAuto, disableAuto, daysSinceBackup } from "../autobackup.js";
@@ -15,12 +15,12 @@ export function profileScreen(view) {
   const passed = Object.values(state.units).filter((u) => u.passed && !u.placed).length;
   const stat = (v, l) => h("div", { class: "pstat" }, h("strong", null, v), h("span", null, l));
 
-  const voices = englishVoices();
-  const voiceSel = h("select", { class: "field", id: "voice-select", "aria-label": "Voix anglaise" }, h("option", { value: "" }, "Automatique (anglais canadien si possible)"), voices.map((v) => h("option", { value: v.voiceURI, selected: v.voiceURI === state.settings.voice }, `${v.name} (${v.lang})`)));
+  const voices = frenchVoices();
+  const voiceSel = h("select", { class: "field", id: "voice-select", "aria-label": "Voix française" }, h("option", { value: "" }, "Automatique (voix de France si possible)"), voices.map((v) => h("option", { value: v.voiceURI, selected: v.voiceURI === state.settings.voice }, `${v.name} (${v.lang})`)));
   voiceSel.addEventListener("change", () => {
     state.settings.voice = voiceSel.value;
     save();
-    speak("Hello! This is my voice.");
+    speak("Bonjour ! Voici ma voix. Je lirai tes dictées.");
   });
   const rate = h("input", { type: "range", min: "0.6", max: "1.2", step: "0.05", value: String(state.settings.rate), id: "rate", class: "range" });
   const rateVal = h("span", { class: "range-val" }, `${Math.round(state.settings.rate * 100)} %`);
@@ -29,7 +29,7 @@ export function profileScreen(view) {
     rateVal.textContent = `${Math.round(state.settings.rate * 100)} %`;
     save();
   });
-  rate.addEventListener("change", () => speak("I can speak English."));
+  rate.addEventListener("change", () => speak("Les chaussettes de l'archiduchesse sont-elles sèches ?"));
   const sound = h("input", { type: "checkbox", id: "sound", checked: state.settings.sound !== false });
   sound.addEventListener("change", () => {
     state.settings.sound = sound.checked;
@@ -60,7 +60,7 @@ export function profileScreen(view) {
         h("button", { type: "button", class: "btn btn-small btn-ghost", onClick: () => go("placement", { start: placement?.band || "A2" }) }, h("span", { html: icon("refresh") }), "Repasser le test de placement"),
         listProfiles().length > 1 ? h("button", { type: "button", class: "btn btn-small btn-ghost", onClick: () => go("who") }, "Changer de joueur") : h("button", { type: "button", class: "btn btn-small btn-ghost", onClick: () => go("onboarding", { adding: true }) }, "Ajouter un membre de la famille"),
       ),
-      h("div", { class: "pstats" }, stat(state.xp.toLocaleString("fr-CA"), "XP"), stat(streakAlive(), "jours de suite"), stat(passed, "stations réussies"), stat(wordsLearned(), "mots réussis"), stat(`${acc} %`, "de bonnes réponses"), stat(`${minutes} min`, "de réflexion"), stat(mistakeCount(), "erreurs à revoir"), stat(Object.values(state.bosses).filter((b) => b.defeated && !b.placed).length, "boss battus")),
+      h("div", { class: "pstats" }, stat(state.xp.toLocaleString("fr-FR"), "XP"), stat(streakAlive(), "jours de suite"), stat(passed, "stations réussies"), stat(wordsLearned(), "mots réussis"), stat(`${acc} %`, "de bonnes réponses"), stat(`${minutes} min`, "de réflexion"), stat(mistakeCount(), "erreurs à revoir"), stat(Object.values(state.bosses).filter((b) => b.defeated && !b.placed).length, "boss battus")),
       h("h2", { class: "section-title" }, "Badges"),
       h("div", { class: "badges" }, BADGES.map((b) => h("div", { class: `badge ${state.badges[b.id] ? "got" : ""}` }, h("span", { class: "badge-ic", html: icon(state.badges[b.id] ? "trophy" : "lock") }), h("strong", null, b.name), h("small", null, b.desc)))),
       h("h2", { class: "section-title" }, "Réglages"),
@@ -68,9 +68,9 @@ export function profileScreen(view) {
         "div",
         { class: "settings" },
         h("label", { class: "set-row", for: "sound" }, h("span", null, h("strong", null, "Effets sonores"), h("small", null, "Bips, fanfares, bulles…")), sound),
-        h("div", { class: "set-row col" }, h("label", { for: "voice-select" }, h("strong", null, "Voix anglaise"), h("small", null, ttsReady() ? "Choisis la voix qui te plaît le plus." : "Aucune voix anglaise trouvée sur cet appareil.")), voiceSel),
+        h("div", { class: "set-row col" }, h("label", { for: "voice-select" }, h("strong", null, "Voix française"), h("small", null, ttsReady() ? "Choisis la voix qui te plaît le plus (celle de France est la référence des dictées)." : "Aucune voix française trouvée sur cet appareil : les dictées et les écoutes seront remplacées par d'autres exercices.")), voiceSel),
         h("div", { class: "set-row col" }, h("label", { for: "rate" }, h("strong", null, "Vitesse de la voix"), h("small", null, "Ralentis au début, accélère quand tu progresses.")), h("div", { class: "range-row" }, rate, rateVal)),
-        h("div", { class: "set-row" }, h("span", null, h("strong", null, "Tester les voix"), h("small", null, coachReady() ? "Le coach (voix française) et la voix anglaise." : "Pas de voix française : le coach se contentera de l'anglais.")), h("button", { type: "button", class: "btn btn-small", onClick: () => speakParts([{ text: "Salut ! Je suis ton coach. Écoute bien :", lang: "fr" }, { text: "Hello! Nice to meet you.", lang: "en" }]) }, "Écouter")),
+        h("div", { class: "set-row" }, h("span", null, h("strong", null, "Tester la voix"), h("small", null, "Une petite dictée d'essai.")), h("button", { type: "button", class: "btn btn-small", onClick: () => speak("Les enfants, virgule, sortez vos cahiers. Point.") }, "Écouter")),
       ),
       h("h2", { class: "section-title" }, "Sauvegarde"),
       h(
@@ -108,9 +108,9 @@ export function profileScreen(view) {
         "ul",
         { class: "tips" },
         h("li", null, h("strong", null, "15 à 20 minutes par jour"), " valent mieux que 2 heures le dimanche. Commence par l'entraînement du jour : la répétition espacée fait le travail."),
-        h("li", null, h("strong", null, "Parle à voix haute"), " pendant le mode perroquet et l'atelier prononciation, même si tu te sens ridicule."),
+        h("li", null, h("strong", null, "Fais une dictée par jour"), " : c'est l'exercice roi de l'orthographe, et la voix ne se fatigue jamais."),
         h("li", null, h("strong", null, "Écris une rédaction par semaine"), " et corrige-la jusqu'à 15/20."),
-        h("li", null, h("strong", null, "Hors de l'app"), " : séries, vidéos et podcasts en anglais, sous-titres anglais. C'est là que tu deviendras vraiment bilingue."),
+        h("li", null, h("strong", null, "Hors de l'app"), " : lis des romans, des journaux, des essais, et relis-toi toujours avant d'envoyer un message. C'est comme ça qu'on devient une plume."),
       ),
     ),
   );

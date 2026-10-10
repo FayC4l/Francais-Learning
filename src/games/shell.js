@@ -24,7 +24,7 @@ export function gameScreen(view, { uid, game }) {
   const wrap = h(
     "div",
     { class: "game", style: { "--line": `var(--l${L})`, "--line-ink": `var(--l${L}-ink)`, "--g": def.color } },
-    h("div", { class: "g-top" }, back, h("div", { class: "g-title" }, h("span", { class: "g-name" }, def.name), h("span", { class: "g-unit" }, `Station ${uid} · ${unit.titleEn}`)), h("div", { class: "g-hud" }, timeEl, livesEl, h("span", { class: "g-score" }, h("span", { html: icon("star") }), scoreEl))),
+    h("div", { class: "g-top" }, back, h("div", { class: "g-title" }, h("span", { class: "g-name" }, def.name), h("span", { class: "g-unit" }, `Station ${uid} · ${unit.name}`)), h("div", { class: "g-hud" }, timeEl, livesEl, h("span", { class: "g-score" }, h("span", { html: icon("star") }), scoreEl))),
     stage,
   );
   view.append(wrap);
@@ -80,7 +80,7 @@ export function gameScreen(view, { uid, game }) {
       h("p", { class: "g-end-line" }, summary.line || "", res.best ? ` Record : ${res.best}.` : ""),
       h("div", { class: "xp-gain" }, h("span", { html: icon("bolt") }), "+", xp, " XP"),
       summary.review?.length
-        ? h("div", { class: "g-review" }, h("div", { class: "pron-kicker" }, "À revoir"), h("ul", null, summary.review.map((r) => h("li", null, h("strong", null, r.en), " — ", r.fr))))
+        ? h("div", { class: "g-review" }, h("div", { class: "pron-kicker" }, "À revoir"), h("ul", null, summary.review.map((r) => h("li", null, h("strong", null, r.mot), " — ", r.def))))
         : null,
       badges.length ? h("div", { class: "new-badges" }, badges.map((b) => h("div", { class: "badge-pop" }, h("span", { html: icon("trophy") }), h("strong", null, b.name), h("small", null, b.desc)))) : null,
       h(

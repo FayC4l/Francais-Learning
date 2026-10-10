@@ -29,7 +29,7 @@ export function map(view) {
   const header = h(
     "header",
     { class: "map-head" },
-    h("div", { class: "brand" }, h("span", { class: "brand-mark", html: TRAIN_SVG }), h("span", { class: "brand-name" }, "Mission Bilingue")),
+    h("div", { class: "brand" }, h("span", { class: "brand-mark", html: TRAIN_SVG }), h("span", { class: "brand-name" }, "Mission Français")),
     h(
       "div",
       { class: "map-head-right" },
@@ -42,7 +42,7 @@ export function map(view) {
   const stats = h(
     "div",
     { class: "stats" },
-    stat("bolt", state.xp.toLocaleString("fr-CA"), "XP", { cls: "xp" }),
+    stat("bolt", state.xp.toLocaleString("fr-FR"), "XP", { cls: "xp" }),
     stat("flame", streak, streak > 1 ? "jours de suite" : "jour de suite", { cls: streak ? "fire" : "" }),
     stat("book", wordsLearned(), "mots réussis"),
     stat("notebook", mistakes, "erreurs à revoir", { cls: mistakes ? "alert" : "", onClick: () => go("review") }),
@@ -58,7 +58,7 @@ export function map(view) {
       { type: "button", class: "next-card tower-hero", style: { "--line": "var(--l12)", "--line-ink": "var(--l12-ink)" }, onClick: () => go("tower") },
       h("span", { class: "next-eyebrow" }, `La Tour · ${t.lives} cœur${t.lives > 1 ? "s" : ""} sur ${TOWER_LIVES}`),
       h("span", { class: "next-title" }, t.floor >= FLOORS ? "Le boss final" : `Étage ${t.floor} / ${visibleTop(t)}`),
-      h("span", { class: "next-sub" }, "Au sommet : le C2… et un jeu PlayStation + 25 $"),
+      h("span", { class: "next-sub" }, "Au sommet : le DALF C2… et un jeu PlayStation + 25 $"),
       h("span", { class: "next-go" }, "Grimper", h("span", { html: icon("play") })),
     );
   } else if (next) {
@@ -68,7 +68,7 @@ export function map(view) {
       "button",
       { type: "button", class: "next-card", style: { "--line": `var(--l${L})`, "--line-ink": `var(--l${L}-ink)` }, onClick: () => (isBoss ? go("boss", { level: L }) : go("unit", { uid: next.unit.id })) },
       h("span", { class: "next-eyebrow" }, isBoss ? `Terminus · boss · ${bossLives(L)} vie${bossLives(L) > 1 ? "s" : ""}` : unitState(next.unit.id).redo ? `À refaire pour récupérer tes vies (${redoUnits(L).length} restante${redoUnits(L).length > 1 ? "s" : ""})` : "Prochain arrêt"),
-      h("span", { class: "next-title" }, isBoss ? next.level.boss.name : next.unit.titleEn),
+      h("span", { class: "next-title" }, isBoss ? next.level.boss.name : next.unit.name),
       h("span", { class: "next-sub" }, isBoss ? `Ligne ${L} · Bats-le pour ouvrir la ligne ${L + 1}` : `Ligne ${L} · ${next.unit.id} ${next.unit.title}`),
       h("span", { class: "next-go" }, "Continuer", h("span", { html: icon("play") })),
       h("span", { class: "next-train", html: TRAIN_SVG }),
@@ -82,15 +82,15 @@ export function map(view) {
   const tools = h(
     "div",
     { class: "tools-row" },
-    tool("refresh", "Entraînement du jour", "Répétition espacée : mots, verbes, erreurs", "daily", "var(--l5)", due ? `${due} à revoir` : "nouveaux mots"),
+    tool("refresh", "Entraînement du jour", "Répétition espacée : mots, conjugaison, erreurs", "daily", "var(--l5)", due ? `${due} à revoir` : "nouveaux mots"),
     tool("spell", "Atelier d'écriture", "Rédige, l'algorithme corrige et note sur 20", "writing", "var(--l7)"),
     tool("book", "Conjugueur", "Tous les verbes, tous les temps", "conjugator", "var(--l4)"),
-    EXTRA.c2uoe || EXTRA.c2papers ? tool("trophy", "Prépa C2", "Cambridge C2 Proficiency, examens blancs", "c2", "var(--l12)") : null,
+    EXTRA.dalfLangue || EXTRA.dalfPapers ? tool("trophy", "Prépa DALF", "DALF C1-C2 : épreuves et DALF blancs", "dalf", "var(--l12)") : null,
     tool("sparkle", "Mes compétences", "Ton profil et tes certificats", "dashboard", "var(--l9)"),
   );
   const joke = jokeOfTheDay(currentLevel());
   const jokeCard = joke
-    ? h("div", { class: "joke-card" }, h("span", { class: "eyebrow" }, "La blague du jour de Chikh Fayçal"), h("p", { class: "joke-en" }, joke.en), h("details", null, h("summary", null, "Je ne comprends pas…"), h("p", null, joke.fr)))
+    ? h("div", { class: "joke-card" }, h("span", { class: "eyebrow" }, "La blague du jour de Chikh Fayçal"), h("p", { class: "joke-en" }, joke.text), h("details", null, h("summary", null, "Je ne comprends pas…"), h("p", null, joke.explication)))
     : null;
   const lines = h("div", { class: "lines" });
   for (let L = 1; L <= LINE_COUNT; L++) {
@@ -120,7 +120,7 @@ function lineEl(L, lvl, next) {
     "header",
     { class: "line-head" },
     h("span", { class: "bullet" }, L),
-    h("div", { class: "line-name" }, h("h3", null, lvl.title), h("p", null, `${lvl.titleEn} · ${lvl.cefr}`)),
+    h("div", { class: "line-name" }, h("h3", null, lvl.title), h("p", null, `${lvl.sub} · ${lvl.cefr}`)),
     h("span", { class: "line-progress", "aria-label": `${passed} stations sur ${lvl.units.length}` }, done ? h("span", { class: "done-badge", html: icon("check") }) : `${passed}/${lvl.units.length}`),
   );
   const list = h("ol", { class: "stations" });
@@ -133,7 +133,7 @@ function lineEl(L, lvl, next) {
       "button",
       { type: "button", class: "station-btn", "aria-label": `${u.id} ${u.title}${open ? "" : " (verrouillée)"}` },
       h("span", { class: "dot" }, open ? null : h("span", { html: icon("lock") })),
-      h("span", { class: "st-text" }, h("span", { class: "st-name" }, u.titleEn), h("span", { class: "st-fr" }, `${u.id} · ${u.title}`)),
+      h("span", { class: "st-text" }, h("span", { class: "st-name" }, u.name), h("span", { class: "st-fr" }, `${u.id} · ${u.title}`)),
       st.redo ? h("span", { class: "redo-tag" }, "à refaire") : st.passed ? h("span", { class: "stars", html: st.skipped && !st.stars ? '<span class="skipped">validée</span>' : starsHtml(st.stars || 0) }) : null,
     );
     btn.addEventListener("click", () => {

@@ -11,23 +11,30 @@ import { score, CRITERIA_FR, CAT_FR } from "../writing/score.js";
 import { dictionaryReady } from "../writing/spell.js";
 import { quip, mentorSays } from "../humor.js";
 import { currentLevel } from "./daily.js";
+import { countWords } from "../writing/tokenize.js";
 import { floorSpec, copiedShare, surprise } from "../tower.js";
 import { recordTowerFloor, tower } from "../store.js";
 import { drama } from "./tower.js";
 
-const RANGE = (L) => (L <= 2 ? [25, 60] : L <= 4 ? [50, 100] : L <= 6 ? [80, 140] : L <= 8 ? [120, 180] : L <= 10 ? [160, 240] : [220, 320]);
-const CEFR_OF = (L) => (L <= 2 ? "A1" : L <= 4 ? "A2" : L <= 6 ? "B1" : L <= 9 ? "B2" : L <= 11 ? "C1" : "C2");
-const TYPE_FR = { description: "Description", email: "E-mail", letter: "Lettre", story: "Histoire", message: "Message", essay: "Essai", article: "Article", review: "Critique", report: "Rapport", proposal: "Proposition" };
-const countWords = (t) => (String(t).match(/[A-Za-zÀ-ÿ'’-]+/g) || []).length;
+export const RANGE = (L) => (L <= 2 ? [30, 70] : L <= 4 ? [60, 120] : L <= 6 ? [100, 180] : L <= 8 ? [150, 250] : L <= 10 ? [200, 300] : [250, 400]);
+export const CEFR_OF = (L) => (L <= 2 ? "A1" : L <= 4 ? "A2" : L <= 6 ? "B1" : L <= 8 ? "B2" : L <= 10 ? "C1" : "C2");
+export const TYPE_FR = { description: "Description", portrait: "Portrait", lettre: "Lettre", courriel: "Courriel", message: "Message", recit: "Récit", dialogue: "Dialogue", article: "Article", essai: "Essai argumenté", critique: "Critique", "compte-rendu": "Compte rendu", discours: "Discours", synthese: "Synthèse de documents", dissertation: "Dissertation" };
 
-/** Every prompt: course prompts (writing.json) and C2 exam tasks (c2-papers.json). */
+/** DALF writing tasks (dalf-papers.json): document syntheses and argumentative essays. */
+export function dalfPrompts() {
+  const P = EXTRA.dalfPapers || {};
+  const syn = (P.synthese || []).map((x) => ({ id: x.id, level: 12, cefr: "C2", c2: true, type: "synthese", title: x.title, prompt: x.consigne, texts: x.documents, words: x.words, require: x.require || [], model: x.model }));
+  const ess = (P.essai || []).map((x) => ({ id: x.id, level: 12, cefr: "C2", c2: true, type: "essai", title: x.title, prompt: x.prompt, texts: x.documents || [], words: x.words, require: x.require || [], model: x.model }));
+  return [...syn, ...ess];
+}
+
+/** Every prompt: course prompts (writing.json) and DALF tasks (dalf-papers.json). */
 export function allPrompts() {
   const course = (EXTRA.writing?.prompts || []).map((p) => ({ ...p, cefr: CEFR_OF(p.level) }));
-  const c2 = (EXTRA.c2papers?.writing || []).map((p) => ({ ...p, level: 12, cefr: "C2", c2: true }));
-  return [...course, ...c2];
+  return [...course, ...dalfPrompts()];
 }
 const promptById = (id) => allPrompts().find((p) => p.id === id) || null;
-const freePrompt = (L, type = "essay") => ({ id: `free-${L}`, level: L, cefr: CEFR_OF(L), type, title: "Sujet libre", prompt: "Écris sur le sujet de ton choix, en utilisant ce que tu as appris.", words: RANGE(L), require: [] });
+const freePrompt = (L, type = "essai") => ({ id: `free-${L}`, level: L, cefr: CEFR_OF(L), type, title: "Sujet libre", prompt: "Écris sur le sujet de ton choix, en utilisant ce que tu as appris.", words: RANGE(L), require: [] });
 
 export function writingScreen(view, { promptId, level, tower: tw } = {}) {
   if (promptId) return editor(view, promptById(promptId) || freePrompt(currentLevel()), state.writingDraft?.[promptId] || "", tw);
@@ -58,7 +65,7 @@ function list(view, L) {
       { class: "writing" },
       h("div", { class: "topbar" }, h("button", { type: "button", class: "icon-btn", "aria-label": "Retour", html: icon("back"), onClick: () => go("map") }), h("span", { class: "topbar-title" }, "Atelier d'écriture")),
       h("h1", { class: "page-title" }, "Atelier d'écriture"),
-      h("p", { class: "page-lead" }, "Choisis un sujet, écris en anglais, puis fais corriger : chaque faute est soulignée et expliquée, et ton texte reçoit une note sur 20 (contenu, efficacité, organisation, langue)."),
+      h("p", { class: "page-lead" }, "Choisis un sujet, écris, puis fais corriger : chaque faute est soulignée et expliquée, et ton texte reçoit une note sur 20 (consigne, efficacité, organisation, langue)."),
       family.aiKey ? h("p", { class: "set-help" }, "Correction IA activée : tu pourras aussi demander l'avis de Claude.") : null,
       h("div", { class: "row" }, h("label", { class: "field-label", for: "w-level" }, "Niveau des sujets"), levelSel),
       h("div", { class: "w-grid" }, prompts.map(card), h("button", { type: "button", class: "w-card free", onClick: () => editor(view, freePrompt(L), "") }, h("span", { class: "tag" }, "Libre"), h("strong", null, "Sujet libre"), h("small", null, `${RANGE(L)[0]}–${RANGE(L)[1]} mots`))),
@@ -69,14 +76,14 @@ function list(view, L) {
   return undefined;
 }
 
-const back = (p) => (p.c2 ? go("c2", { tab: "writing" }) : go("writing", { level: p.level }));
+const back = (p) => (p.c2 ? go("dalf", { tab: "writing" }) : go("writing", { level: p.level }));
 const bestOf = (pid) => Math.max(...state.writing.filter((w) => w.promptId === pid).map((w) => w.score));
 
 // ---------- Editor ----------
 
 /** `tw` = number of the Tower floor when this essay is a writing boss of level 12. */
 function editor(view, p, initial, tw) {
-  const area = h("textarea", { class: "field w-area", id: "w-text", rows: 12, spellcheck: "false", autocapitalize: "sentences", placeholder: "Write your text here…", "aria-label": "Ton texte en anglais" });
+  const area = h("textarea", { class: "field w-area", id: "w-text", rows: 12, spellcheck: "false", autocapitalize: "sentences", placeholder: "Écris ton texte ici…", "aria-label": "Ton texte", lang: "fr" });
   area.value = initial;
   const counter = h("span", { class: "w-count" });
   const update = () => {
@@ -98,7 +105,7 @@ function editor(view, p, initial, tw) {
     h(
       "div",
       { class: "writing" },
-      h("div", { class: "topbar" }, h("button", { type: "button", class: "icon-btn", "aria-label": "Retour", html: icon("back"), onClick: () => (save(), tw ? go("tower") : back(p)) }), h("span", { class: "topbar-title" }, tw ? `La Tour · étage ${tw}` : p.c2 ? "Prépa C2 · Writing" : "Atelier d'écriture")),
+      h("div", { class: "topbar" }, h("button", { type: "button", class: "icon-btn", "aria-label": "Retour", html: icon("back"), onClick: () => (save(), tw ? go("tower") : back(p)) }), h("span", { class: "topbar-title" }, tw ? `La Tour · étage ${tw}` : p.c2 ? "Prépa DALF · Production écrite" : "Atelier d'écriture")),
       tw ? h("div", { class: "tower-banner" }, h("strong", null, `Boss d'écriture de l'étage ${tw}. `), `Il faut au moins ${floorSpec(tw).pass}/20. Raté = un cœur de la tour en moins. Recopier le modèle ne marche pas : le correcteur le détecte.`) : null,
       promptCard(p),
       h("label", { class: "field-label", for: "w-text" }, "Ton texte"),
@@ -118,7 +125,13 @@ function promptCard(p) {
     h("div", { class: "w-prompt-head" }, h("span", { class: "tag" }, `${TYPE_FR[p.type] || p.type} · ${p.cefr}`), h("span", { class: "tag ok" }, `${p.words[0]}–${p.words[1]} mots`)),
     h("h2", null, p.title),
     h("p", { html: rich(p.prompt) }),
-    p.texts?.length ? h("div", { class: "w-texts" }, p.texts.map((t, i) => h("blockquote", null, h("strong", null, `Text ${i + 1}. `), t))) : null,
+    p.texts?.length
+      ? h(
+          "div",
+          { class: "w-texts" },
+          p.texts.map((t, i) => (typeof t === "string" ? h("blockquote", null, h("strong", null, `Document ${i + 1}. `), t) : h("blockquote", null, h("strong", null, `Document ${i + 1} : ${t.title}`), t.source ? h("small", { class: "w-src" }, ` (${t.source})`) : null, ...String(t.text).split(/\n\n+/).map((x) => h("p", null, x))))),
+        )
+      : null,
     p.require?.length ? h("ul", { class: "w-req" }, p.require.map((r) => h("li", null, r.label))) : null,
   );
 }
@@ -156,6 +169,13 @@ const towerSecret = (id) => { const t = state.tower; return !!t && !t.won && Obj
 function report(view, p, text, tw) {
   const a = analyze(text, p);
   const s = score(a, p);
+  // A synthesis must rephrase the documents: long copied passages cost points.
+  const docs = (p.texts || []).map((t) => (typeof t === "string" ? t : t.text)).join(" ");
+  const docShare = docs ? copiedShare(text, docs) : 0;
+  if (docShare > 0.2) {
+    s.priorities.unshift(`Tu recopies les documents (${Math.round(docShare * 100)} % de ton texte) : reformule avec tes propres mots, c'est la règle de la synthèse.`);
+    s.total = Math.max(0, s.total - (docShare > 0.4 ? 3 : 1.5));
+  }
   // Tower writing boss: the mark (and no copy of the model) decides.
   const copied = tw && p.model ? copiedShare(text, p.model) > 0.35 : false;
   const towerPass = tw ? !copied && s.total >= floorSpec(tw).pass : false;
