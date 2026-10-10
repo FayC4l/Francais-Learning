@@ -1,0 +1,452 @@
+{
+  "id": 7,
+  "cefr": "B2",
+  "title": "Les modes",
+  "sub": "Subjonctif, impératif et hypothèses",
+  "intro": "Le subjonctif présent et passé, le choix entre indicatif et subjonctif, l'impératif et ses pièges, les hypothèses et le conditionnel passé. Il faut que tu sois prêt : Sa Majesté t'attend.",
+  "boss": {
+    "name": "Sa Majesté le Subjonctif",
+    "taunt": "Il faut que tu t'inclines, que tu te prosternes… et surtout que tu n'écrives jamais « que nous soyions » !",
+    "defeat": "Qu'on me ramène à mon trône… Bien que j'aie perdu, avoue que je l'ai fait avec élégance."
+  },
+  "units": [
+    {
+      "id": "7.1",
+      "name": "Il faut que…",
+      "title": "Le subjonctif présent : formation, verbes irréguliers, -ions / -iez",
+      "goal": "Former le subjonctif présent de tous les verbes, y compris les irréguliers.",
+      "lesson": [
+        { "type": "p", "text": "Le subjonctif est le mode de ce qui est **envisagé** (souhaité, craint, ordonné, mis en doute) plutôt que constaté. Il s'emploie presque toujours après **que** : [[Il faut que tu viennes.]]" },
+        { "type": "rule", "title": "La formation", "text": "Radical de la 3e personne du pluriel du présent (ils finiss-ent → finiss-) + **-e, -es, -e, -ions, -iez, -ent** : [[que je finisse]], [[que tu prennes]] (ils prenn-ent), [[qu'il dorme]]." },
+        { "type": "rule", "title": "Nous et vous", "text": "Avec nous et vous, on retrouve souvent le radical de l'imparfait : [[que nous prenions]], [[que vous veniez]], [[que nous voyions]], [[que vous croyiez]]. D'où le double i des verbes en -ier ([[que nous étudiions]]) et le y + i des verbes en -yer ([[que vous essuyiez]])." },
+        { "type": "table", "head": ["être", "avoir", "aller", "faire"], "rows": [["que je sois", "que j'aie", "que j'aille", "que je fasse"], ["que tu sois", "que tu aies", "que tu ailles", "que tu fasses"], ["qu'il soit", "qu'il ait", "qu'il aille", "qu'il fasse"], ["que nous soyons", "que nous ayons", "que nous allions", "que nous fassions"], ["que vous soyez", "que vous ayez", "que vous alliez", "que vous fassiez"], ["qu'ils soient", "qu'ils aient", "qu'ils aillent", "qu'ils fassent"]] },
+        { "type": "rule", "title": "D'autres irréguliers", "text": "[[que je puisse]] (pouvoir), [[que je sache]] (savoir), [[que je veuille, que nous voulions]] (vouloir), [[qu'il vaille]] (valoir), [[qu'il faille]] (falloir), [[qu'il pleuve]] (pleuvoir)." },
+        { "type": "examples", "items": [
+          { "ex": "Il faut que tu **viennes** avec nous.", "note": "ils viennent → que tu viennes" },
+          { "ex": "Je veux que vous **soyez** à l'heure.", "note": "jamais « soyiez »" },
+          { "ex": "Il faut que nous **étudiions** ce chapitre.", "note": "étudi- + -ions : deux i" },
+          { "ex": "Je doute qu'il **sache** la vérité.", "note": "savoir : que je sache" },
+          { "ex": "Pourvu qu'il **fasse** beau demain !", "note": "faire : que je fasse" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "Il faut que tu ~~viens~~.", "ok": "Il faut que tu **viennes**.", "why": "Après « il faut que », le subjonctif." },
+          { "ko": "que nous ~~soyions~~", "ok": "que nous **soyons**", "why": "Pas de i après le y d'être et d'avoir : soyons, ayons, soyez, ayez." },
+          { "ko": "qu'il ~~aie~~", "ok": "qu'il **ait**", "why": "Avec il, avoir au subjonctif s'écrit ait." },
+          { "ko": "Il faut que je ~~vois~~ ce film.", "ok": "Il faut que je **voie** ce film.", "why": "Subjonctif de voir : que je voie, avec un e muet." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Pour vérifier qu'il faut un subjonctif, remplace le verbe par **faire** ou **prendre**, dont le subjonctif s'entend : « Il faut que tu cours » → « il faut que tu fasses » → oui, subjonctif : [[que tu coures]]." },
+        { "type": "fun", "text": "Le sais-tu ? « Que je voie », « que je croie », « que je rie » : ces subjonctifs ont un e muet qu'on n'entend jamais. Ce sont les pièges préférés des dictées pour adultes !" }
+      ],
+      "vocab": [
+        { "mot": "exigence", "def": "Ce que l'on demande de façon impérieuse ; niveau élevé de qualité attendu.", "ex": "Ce professeur a des exigences élevées.", "alt": [] },
+        { "mot": "nécessité", "def": "Caractère de ce dont on ne peut se passer.", "ex": "Il comprend la nécessité de se reposer.", "alt": [] },
+        { "mot": "obligation", "def": "Ce que l'on est tenu de faire.", "ex": "Le port du casque est une obligation.", "alt": [] },
+        { "mot": "injonction", "def": "Ordre formel et pressant.", "ex": "Il obéit à l'injonction du policier.", "alt": [] },
+        { "mot": "requête", "def": "Demande écrite ou orale, souvent officielle.", "ex": "Le maire a examiné notre requête.", "alt": [] },
+        { "mot": "souhaitable", "def": "Qu'il est bon de désirer.", "ex": "Une baisse des prix serait souhaitable.", "alt": [] },
+        { "mot": "indispensable", "def": "Dont on ne peut absolument pas se passer.", "ex": "L'eau est indispensable à la vie.", "alt": [] },
+        { "mot": "primordial", "def": "De la plus haute importance.", "ex": "Il est primordial de bien dormir avant un examen.", "alt": [] },
+        { "mot": "aspiration", "def": "Désir profond d'atteindre un idéal.", "ex": "Ses aspirations le poussent vers la musique.", "alt": [] },
+        { "mot": "volonté", "def": "Faculté de vouloir, de décider ; ce que l'on veut.", "ex": "Il a réussi à force de volonté.", "alt": [] },
+        { "mot": "consentement", "def": "Accord que l'on donne à quelque chose.", "ex": "Il faut le consentement des parents.", "alt": [] },
+        { "mot": "réticence", "def": "Hésitation, réserve devant une décision.", "ex": "Il a accepté non sans réticence.", "alt": [] },
+        { "mot": "crainte", "def": "Sentiment de peur devant un danger possible.", "ex": "Sa crainte de l'eau l'empêche de nager.", "alt": [] },
+        { "mot": "éventualité", "def": "Événement qui peut se produire ou non.", "ex": "Il faut prévoir l'éventualité d'une panne.", "alt": [] },
+        { "mot": "recommandation", "def": "Conseil insistant ; ou appui donné à quelqu'un.", "ex": "Suivez les recommandations du médecin.", "alt": [] },
+        { "mot": "dérogation", "def": "Autorisation exceptionnelle de ne pas appliquer une règle.", "ex": "Il a obtenu une dérogation pour changer d'école.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Il faut que tu viennes avec nous.", "indice": "Une invitation pressante", "trap": ["viens", "vienne"], "alt": [] },
+        { "phrase": "Je veux que vous soyez à l'heure.", "indice": "Une exigence de ponctualité", "trap": ["soyiez", "êtes"], "alt": [] },
+        { "phrase": "Il est important que nous ayons du temps.", "indice": "Un besoin de calme", "trap": ["ayions", "avons"], "alt": [] },
+        { "phrase": "Mes parents souhaitent que je fasse du sport.", "indice": "Un vœu de parents", "trap": ["fais"], "alt": [] },
+        { "phrase": "Bien que tu sois fatigué, tu dois finir.", "indice": "Un effort malgré la fatigue", "trap": ["es"], "alt": ["Tu dois finir, bien que tu sois fatigué."] },
+        { "phrase": "Il faut que j'aille chez le dentiste.", "indice": "Un rendez-vous redouté", "trap": ["alle", "vais"], "alt": [] },
+        { "phrase": "Je doute qu'il sache la vérité.", "indice": "Un secret bien gardé", "trap": ["sait", "saches"], "alt": [] },
+        { "phrase": "Pourvu qu'il fasse beau demain !", "indice": "Un vœu pour le pique-nique", "trap": ["fait"], "alt": [] },
+        { "phrase": "Il faut que nous étudiions ce chapitre.", "indice": "Des révisions obligatoires", "trap": ["étudions"], "alt": [] },
+        { "phrase": "Le professeur exige que vous preniez des notes.", "indice": "Une consigne en classe", "trap": ["prenez", "prenniez"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Il faut que tu ___ tes devoirs.", "choices": ["fasses", "fais", "faises"], "answer": 0, "explain": "Après « il faut que » : subjonctif, que tu fasses." },
+        { "type": "mcq", "q": "Je souhaite qu'elle ___ heureuse.", "choices": ["soit", "est", "sois"], "answer": 0, "explain": "Souhaiter que + subjonctif ; avec elle : soit." },
+        { "type": "mcq", "q": "Il est temps que nous ___.", "choices": ["partions", "partons", "partiions"], "answer": 0, "explain": "Il est temps que + subjonctif : que nous partions." },
+        { "type": "mcq", "q": "Je ne crois pas qu'il ___ raison.", "choices": ["ait", "a", "aie"], "answer": 0, "explain": "Croire à la forme négative : subjonctif, qu'il ait." },
+        { "type": "mcq", "q": "Il faut que vous ___ vos lunettes.", "choices": ["essuyiez", "essuyez", "essuiez"], "answer": 0, "explain": "Essuy- + -iez : que vous essuyiez, avec y puis i." },
+        { "type": "fill", "q": "Il faut que je ___ ce film.", "hint": "voir, au subjonctif présent", "answer": ["voie"], "explain": "Subjonctif de voir : que je voie, avec un e muet." },
+        { "type": "fill", "q": "Je veux que tu ___ la vérité.", "hint": "dire, au subjonctif présent", "answer": ["dises"], "explain": "Ils disent → que tu dises." },
+        { "type": "fill", "q": "Il faut que nous ___ patients.", "hint": "être, au subjonctif présent", "answer": ["soyons"], "explain": "Être : que nous soyons, sans i." },
+        { "type": "fill", "q": "Il est possible qu'il ___ ce soir.", "hint": "pleuvoir, au subjonctif présent", "answer": ["pleuve"], "explain": "Pleuvoir : qu'il pleuve." },
+        { "type": "fill", "q": "Bien qu'ils ___ du talent, ils travaillent beaucoup.", "hint": "avoir, au subjonctif présent", "answer": ["aient"], "explain": "Bien que + subjonctif : qu'ils aient." },
+        { "type": "fill", "q": "Il faut que vous ___ ce livre.", "hint": "lire, au subjonctif présent", "answer": ["lisiez"], "explain": "Radical lis- + -iez : que vous lisiez." },
+        { "type": "fill", "q": "Je crains qu'il ne ___ trop tard.", "hint": "être, au subjonctif présent", "answer": ["soit"], "explain": "Craindre que + subjonctif ; le ne n'a pas de valeur négative (ne explétif)." },
+        { "type": "error", "q": "Il faut que tu viens demain.", "wrong": 4, "fix": ["viennes"], "explain": "Après « il faut que » : subjonctif, que tu viennes." },
+        { "type": "error", "q": "Je veux que nous soyions prêts.", "wrong": 4, "fix": ["soyons"], "explain": "Pas de i après le y : que nous soyons." },
+        { "type": "error", "q": "Il faut qu'il aie confiance.", "wrong": 3, "fix": ["ait"], "explain": "Avec il, avoir au subjonctif s'écrit ait." },
+        { "type": "error", "q": "Il faut que je vois le médecin.", "wrong": 4, "fix": ["voie"], "explain": "Subjonctif de voir : que je voie." }
+      ],
+      "reading": {
+        "title": "La lettre de Mamie Jeanne",
+        "text": "Mon cher Théo, avant que tu partes pour Montréal, je voudrais que tu lises ces quelques lignes. Il faut d'abord que tu saches une chose : je suis fière de toi. Ton grand-père l'aurait été aussi. Que tu aies choisi d'étudier si loin m'inquiète un peu, mais il est normal qu'un jeune homme veuille découvrir le monde. Je ne te demande pas que tu m'appelles chaque jour ; je souhaite seulement que tu donnes des nouvelles de temps en temps. Il faudra que tu fasses attention au froid : là-bas, l'hiver ne plaisante pas. Il est essentiel que tu manges correctement, même si tu préfères les pizzas aux légumes. Surtout, je voudrais que tu restes curieux, que tu poses des questions et que tu ne craignes pas de te tromper. Bien que je ne sois pas une grande voyageuse, je sais une chose : les plus beaux souvenirs naissent souvent des erreurs. Enfin, pourvu que tu sois heureux, le reste n'a guère d'importance. Je t'embrasse, Mamie Jeanne. Post-scriptum : il est possible que j'aie glissé un pot de confiture dans ta valise. Ne le dis pas à ta mère.",
+        "questions": [
+          { "q": "Pourquoi Mamie Jeanne écrit-elle cette lettre ?", "choices": ["Son petit-fils part étudier à l'étranger", "Elle part en voyage", "Elle est malade", "C'est l'anniversaire de Théo"], "answer": 0, "explain": "Théo part pour Montréal, où il va étudier." },
+          { "q": "Quel sentiment domine chez la grand-mère ?", "choices": ["La fierté, mêlée d'un peu d'inquiétude", "La colère", "L'indifférence", "La jalousie"], "answer": 0, "explain": "« Je suis fière de toi » ; son choix « m'inquiète un peu »." },
+          { "q": "Que pense-t-elle des erreurs ?", "choices": ["Elles font naître de beaux souvenirs", "Il faut les éviter à tout prix", "Elles sont honteuses", "Elles coûtent cher"], "answer": 0, "explain": "« Les plus beaux souvenirs naissent souvent des erreurs. »" },
+          { "q": "Que peut-on déduire du post-scriptum ?", "choices": ["La mère de Théo n'aurait sans doute pas approuvé", "La confiture est un cadeau de la mère", "Théo déteste la confiture", "La grand-mère a oublié la valise"], "answer": 0, "explain": "« Ne le dis pas à ta mère » laisse deviner que la mère s'y serait opposée (poids, place…)." },
+          { "q": "« Il faudra que tu fasses attention » : pourquoi le subjonctif ?", "choices": ["« Il faut que » exprime une obligation et demande le subjonctif", "L'action est passée", "C'est une question", "C'est une hypothèse avec si"], "answer": 0, "explain": "Après il faut que (même au futur), on emploie le subjonctif." },
+          { "q": "Quel conseil la grand-mère ne donne-t-elle PAS ?", "choices": ["Appeler chaque jour", "Manger correctement", "Rester curieux", "Faire attention au froid"], "answer": 0, "explain": "Elle précise justement qu'elle ne demande pas qu'il appelle chaque jour." }
+        ]
+      }
+    },
+    {
+      "id": "7.2",
+      "name": "Le bon mode",
+      "title": "Indicatif ou subjonctif ? Verbes et conjonctions ; après que ; espérer que ; le ne explétif",
+      "goal": "Choisir entre l'indicatif et le subjonctif selon le verbe ou la conjonction qui introduit la proposition.",
+      "lesson": [
+        { "type": "p", "text": "Le choix du mode dépend du sens du verbe principal ou de la conjonction. L'**indicatif** présente un fait comme réel ; le **subjonctif** présente une action simplement envisagée par la pensée." },
+        { "type": "table", "head": ["Subjonctif après…", "Indicatif après…"], "rows": [["la volonté, l'ordre, le souhait : vouloir que, exiger que, souhaiter que", "la certitude, la déclaration : savoir que, dire que, être sûr que"], ["le sentiment : être content que, regretter que, avoir peur que", "espérer que (à la forme affirmative)"], ["le doute, la possibilité : douter que, il est possible que", "il est probable que, il paraît que"], ["l'obligation : il faut que, il est nécessaire que", "penser que, croire que (à la forme affirmative)"], ["bien que, pour que, avant que, afin que, sans que, à moins que, pourvu que, jusqu'à ce que", "parce que, puisque, pendant que, après que, alors que, dès que, tandis que"]] },
+        { "type": "rule", "title": "Penser, croire, trouver", "text": "À la forme affirmative, l'indicatif : [[Je pense qu'il viendra.]] À la forme négative, ou dans une question avec inversion, le subjonctif est possible : [[Je ne pense pas qu'il vienne.]] [[Crois-tu qu'il vienne ?]]" },
+        { "type": "rule", "title": "Avant que, après que", "text": "**Avant que** + subjonctif (l'action n'a pas encore eu lieu) : [[avant qu'il parte]]. **Après que** + indicatif (l'action a eu lieu) : [[après qu'il est parti]]. « Après qu'il soit parti » est très répandu, mais la règle reste l'indicatif." },
+        { "type": "rule", "title": "Espérer que", "text": "Espérer que + indicatif, souvent au futur : [[J'espère qu'il viendra.]] À la forme négative, le subjonctif devient possible : [[Je n'espère pas qu'il vienne.]]" },
+        { "type": "examples", "items": [
+          { "ex": "Je ne pense pas qu'il **vienne** demain.", "note": "négation : subjonctif possible" },
+          { "ex": "Bien qu'il **soit** malade, il travaille.", "note": "bien que + subjonctif" },
+          { "ex": "Après qu'il **est** parti, nous avons rangé.", "note": "après que + indicatif" },
+          { "ex": "J'espère que tu **réussiras**.", "note": "espérer que + indicatif" },
+          { "ex": "Je crains qu'il ne **soit** trop tard.", "note": "subjonctif ; ne explétif" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "Après qu'il ~~soit~~ parti…", "ok": "Après qu'il **est** parti…", "why": "Après que exprime un fait accompli : indicatif." },
+          { "ko": "J'espère qu'il ~~vienne~~.", "ok": "J'espère qu'il **viendra**.", "why": "Espérer que (affirmatif) + indicatif." },
+          { "ko": "Bien qu'il ~~est~~ malade…", "ok": "Bien qu'il **soit** malade…", "why": "Bien que + subjonctif." },
+          { "ko": "Je sais qu'il ~~soit~~ là.", "ok": "Je sais qu'il **est** là.", "why": "Savoir exprime une certitude : indicatif." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Le **ne explétif** (sans valeur négative) apparaît dans la langue soignée après avant que, à moins que, de peur que, craindre que : [[Je crains qu'il ne pleuve.]] Il ne nie rien : on craint justement la pluie !" },
+        { "type": "fun", "text": "Le sais-tu ? « Après que » suivi du subjonctif est devenu si courant que des grammairiens y voient une évolution en marche. Mais aux examens, et pour l'Académie française, c'est toujours l'indicatif : [[après qu'il est arrivé]]." }
+      ],
+      "vocab": [
+        { "mot": "déplorer", "def": "Regretter vivement une chose fâcheuse.", "ex": "Nous déplorons ce malentendu.", "alt": [] },
+        { "mot": "redouter", "def": "Craindre fortement.", "ex": "Il redoute l'épreuve orale.", "alt": [] },
+        { "mot": "appréhender", "def": "Envisager avec crainte ; ou arrêter quelqu'un ; ou saisir par l'esprit.", "ex": "Elle appréhende la rentrée.", "alt": [] },
+        { "mot": "escompter", "def": "Compter sur quelque chose, l'espérer.", "ex": "Nous escomptons une réponse rapide.", "alt": [] },
+        { "mot": "envisager", "def": "Considérer comme possible ; avoir le projet de.", "ex": "Il envisage de partir à l'étranger.", "alt": [] },
+        { "mot": "tolérer", "def": "Accepter sans l'approuver vraiment.", "ex": "Il est difficile de tolérer ce bruit.", "alt": [] },
+        { "mot": "consentir", "def": "Accepter qu'une chose se fasse.", "ex": "Ses parents ont fini par consentir à son départ.", "alt": [] },
+        { "mot": "s'opposer", "def": "Faire obstacle, refuser quelque chose.", "ex": "Les habitants veulent s'opposer au projet.", "alt": [] },
+        { "mot": "se réjouir", "def": "Éprouver de la joie à propos de quelque chose.", "ex": "Il faut se réjouir de cette bonne nouvelle.", "alt": [] },
+        { "mot": "s'étonner", "def": "Être surpris de quelque chose.", "ex": "On peut s'étonner qu'il ne soit pas venu.", "alt": [] },
+        { "mot": "s'indigner", "def": "Éprouver et montrer de la colère devant une injustice.", "ex": "Il est normal de s'indigner devant une telle injustice.", "alt": [] },
+        { "mot": "regretter", "def": "Être mécontent d'avoir fait, ou de ne pas avoir fait, quelque chose.", "ex": "Je regrette de t'avoir fait attendre.", "alt": [] },
+        { "mot": "craindre", "def": "Avoir peur de quelque chose ou de quelqu'un.", "ex": "Il ne faut pas craindre l'échec.", "alt": [] },
+        { "mot": "ordonner", "def": "Donner un ordre ; ou mettre en ordre.", "ex": "Le capitaine va ordonner le départ.", "alt": [] },
+        { "mot": "interdire", "def": "Défendre de faire quelque chose.", "ex": "La loi va interdire les sacs en plastique.", "alt": [] },
+        { "mot": "exiger", "def": "Demander avec autorité, comme une chose due.", "ex": "Le client peut exiger un remboursement.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Je pense qu'il viendra demain.", "indice": "Une opinion sûre", "trap": ["vienne"], "alt": [] },
+        { "phrase": "Je ne pense pas qu'il vienne demain.", "indice": "Un doute", "trap": ["viendra"], "alt": [] },
+        { "phrase": "Bien qu'il soit malade, il travaille.", "indice": "Un employé courageux", "trap": ["est"], "alt": ["Il travaille, bien qu'il soit malade."] },
+        { "phrase": "Après qu'il est parti, nous avons rangé.", "indice": "Un rangement après la fête", "trap": ["soit"], "alt": ["Nous avons rangé après qu'il est parti."] },
+        { "phrase": "J'espère que tu réussiras ton examen.", "indice": "Un encouragement", "trap": ["réussisses"], "alt": [] },
+        { "phrase": "Je suis content que tu sois là.", "indice": "Une présence appréciée", "trap": ["es"], "alt": [] },
+        { "phrase": "Il est probable qu'il pleuvra ce soir.", "indice": "Une prévision météo", "trap": ["pleuve"], "alt": [] },
+        { "phrase": "Partons avant qu'il fasse nuit.", "indice": "Un départ pressé", "trap": ["fait"], "alt": [] },
+        { "phrase": "Je sais que tu as raison.", "indice": "Une certitude", "trap": ["aies"], "alt": [] },
+        { "phrase": "Je crains qu'il ne soit trop tard.", "indice": "Une inquiétude", "trap": ["est"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Je suis sûr qu'il ___ la vérité.", "choices": ["dit", "dise"], "answer": 0, "explain": "Être sûr exprime une certitude : indicatif." },
+        { "type": "mcq", "q": "Il est possible qu'elle ___ en retard.", "choices": ["soit", "est", "sera"], "answer": 0, "explain": "Il est possible que exprime une possibilité : subjonctif." },
+        { "type": "mcq", "q": "Je vous écris pour que vous ___ la nouvelle.", "choices": ["sachiez", "savez", "saurez"], "answer": 0, "explain": "Pour que + subjonctif : que vous sachiez." },
+        { "type": "mcq", "q": "Après qu'il ___ arrivé, la fête a commencé.", "choices": ["est", "soit", "fût"], "answer": 0, "explain": "Après que + indicatif : l'arrivée a eu lieu." },
+        { "type": "mcq", "q": "J'espère que vous ___ bien.", "choices": ["allez", "alliez", "aillez"], "answer": 0, "explain": "Espérer que (affirmatif) + indicatif." },
+        { "type": "fill", "q": "Je doute qu'il ___ la réponse.", "hint": "connaître : indicatif ou subjonctif ?", "answer": ["connaisse"], "explain": "Douter que + subjonctif : qu'il connaisse." },
+        { "type": "fill", "q": "Je crois qu'il ___ raison.", "hint": "avoir : indicatif ou subjonctif ?", "answer": ["a"], "explain": "Croire à la forme affirmative : indicatif." },
+        { "type": "fill", "q": "Reste ici jusqu'à ce que je ___.", "hint": "revenir : indicatif ou subjonctif ?", "answer": ["revienne"], "explain": "Jusqu'à ce que + subjonctif." },
+        { "type": "fill", "q": "Il est certain qu'elle ___ prête.", "hint": "être : indicatif ou subjonctif ?", "answer": ["est", "sera"], "explain": "Il est certain que exprime une certitude : indicatif." },
+        { "type": "fill", "q": "Je regrette que tu ___ partir.", "hint": "devoir : indicatif ou subjonctif ?", "answer": ["doives"], "explain": "Regretter que exprime un sentiment : subjonctif." },
+        { "type": "fill", "q": "Puisque tu ___ là, aide-moi.", "hint": "être : indicatif ou subjonctif ?", "answer": ["es"], "explain": "Puisque + indicatif." },
+        { "type": "fill", "q": "Je partirai à moins qu'il ne ___.", "hint": "pleuvoir : indicatif ou subjonctif ?", "answer": ["pleuve"], "explain": "À moins que + subjonctif, souvent avec un ne explétif." },
+        { "type": "error", "q": "Bien qu'il est tard, je reste.", "wrong": 2, "fix": ["soit"], "explain": "Bien que + subjonctif : bien qu'il soit." },
+        { "type": "error", "q": "Après qu'elle soit partie, il a pleuré.", "wrong": 2, "fix": ["est"], "explain": "Après que + indicatif : après qu'elle est partie." },
+        { "type": "error", "q": "J'espère qu'il fasse beau.", "wrong": 2, "fix": ["fera", "fait"], "explain": "Espérer que (affirmatif) + indicatif : j'espère qu'il fera beau." },
+        { "type": "error", "q": "Je veux qu'il vient.", "wrong": 3, "fix": ["vienne"], "explain": "Vouloir que + subjonctif." }
+      ],
+      "reading": {
+        "title": "Le téléphone au collège",
+        "text": "Depuis quelques années, la question revient à chaque rentrée : faut-il que les téléphones portables restent au fond des cartables ? Les partisans de l'interdiction affirment que l'écran nuit à la concentration. Ils souhaitent que les élèves retrouvent le goût des récréations sans écran et que les conversations ne passent plus par les messageries. Certains enseignants estiment même qu'il est indispensable que l'école soit un lieu préservé. D'autres, au contraire, doutent qu'une interdiction totale soit efficace. Bien que le téléphone puisse distraire, il peut aussi servir : chercher une définition, photographier un tableau, s'organiser. Ils proposent que l'on apprenne aux élèves à s'en servir plutôt que de le confisquer. Il est probable que la solution se trouve entre les deux. Dans plusieurs établissements, les téléphones sont rangés dans des casiers pendant les cours, mais les élèves peuvent les utiliser en classe lorsque le professeur le juge utile. Après que cette règle a été mise en place, les incidents ont nettement diminué, selon les chefs d'établissement. Reste à savoir si les élèves eux-mêmes en sont satisfaits : il faudrait qu'on leur pose enfin la question.",
+        "questions": [
+          { "q": "Quel est le sujet du texte ?", "choices": ["La place du téléphone portable au collège", "Les dangers d'internet", "Le prix des téléphones", "La durée des récréations"], "answer": 0, "explain": "Faut-il que les téléphones restent au fond des cartables ?" },
+          { "q": "Quel argument avancent les partisans de l'interdiction ?", "choices": ["L'écran nuit à la concentration", "Le téléphone coûte cher", "Les élèves perdent leur téléphone", "Les parents l'exigent"], "answer": 0, "explain": "Ils affirment que l'écran nuit à la concentration." },
+          { "q": "Quelle solution intermédiaire est décrite ?", "choices": ["Ranger les téléphones pendant les cours, sauf usage décidé par le professeur", "Interdire totalement les téléphones", "Autoriser les téléphones partout", "Confier les téléphones aux parents"], "answer": 0, "explain": "Des casiers pendant les cours, et un usage en classe quand le professeur le juge utile." },
+          { "q": "Que reproche implicitement l'auteur à ce débat ?", "choices": ["On n'a pas demandé leur avis aux élèves", "Les professeurs sont trop sévères", "Les chefs d'établissement mentent", "Les parents ne s'y intéressent pas"], "answer": 0, "explain": "« Il faudrait qu'on leur pose enfin la question » : les élèves n'ont pas été consultés." },
+          { "q": "Pourquoi « après que cette règle a été mise en place » est-il à l'indicatif ?", "choices": ["Après que introduit un fait accompli", "La phrase est négative", "C'est une hypothèse", "C'est une faute"], "answer": 0, "explain": "Après que + indicatif : la règle a bel et bien été mise en place." },
+          { "q": "« Ils doutent qu'une interdiction soit efficace » : pourquoi le subjonctif ?", "choices": ["Douter exprime l'incertitude", "C'est un fait certain", "C'est une habitude", "Le verbe est au futur"], "answer": 0, "explain": "Douter que + subjonctif." }
+        ]
+      }
+    },
+    {
+      "id": "7.3",
+      "name": "Que j'aie fini",
+      "title": "Le subjonctif passé : formation, antériorité, concordance",
+      "goal": "Former le subjonctif passé et l'employer pour une action accomplie ou antérieure.",
+      "lesson": [
+        { "type": "p", "text": "Le subjonctif passé exprime une action **accomplie**, ou antérieure à une autre, dans une phrase qui demande le subjonctif." },
+        { "type": "rule", "title": "La formation", "text": "Auxiliaire **avoir** ou **être** au subjonctif présent + participe passé : [[que j'aie fini]], [[qu'elle soit partie]], [[que nous ayons compris]]." },
+        { "type": "rule", "title": "Présent ou passé ?", "text": "Le subjonctif présent exprime une action simultanée ou à venir : [[Je suis content que tu viennes]] (maintenant ou bientôt). Le subjonctif passé exprime une action accomplie : [[Je suis content que tu sois venu]] (tu es déjà venu). [[Il faut que tu aies fini avant midi]] (accompli à une échéance)." },
+        { "type": "table", "head": ["avec avoir", "avec être"], "rows": [["que j'aie chanté", "que je sois parti(e)"], ["que tu aies chanté", "que tu sois parti(e)"], ["qu'il ait chanté", "qu'il soit parti"], ["que nous ayons chanté", "que nous soyons parti(e)s"], ["que vous ayez chanté", "que vous soyez parti(e)(s)"], ["qu'ils aient chanté", "qu'ils soient partis"]] },
+        { "type": "rule", "title": "Les accords", "text": "Mêmes règles qu'au passé composé : [[Je regrette qu'elles soient parties.]] (être : accord avec le sujet) ; [[Bien qu'il les ait lues…]] (les = les lettres, COD placé avant)." },
+        { "type": "examples", "items": [
+          { "ex": "Je suis content que tu **sois venu**.", "note": "l'action est accomplie" },
+          { "ex": "Je doute qu'il **ait compris** la leçon.", "note": "douter que + subjonctif passé" },
+          { "ex": "Bien qu'ils **aient** beaucoup **travaillé**, ils ont échoué.", "note": "bien que + subjonctif passé" },
+          { "ex": "Il est possible qu'ils se **soient trompés**.", "note": "pronominal : accord avec le sujet" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "Je suis heureux que tu ~~as~~ réussi.", "ok": "Je suis heureux que tu **aies** réussi.", "why": "Être heureux que + subjonctif : que tu aies." },
+          { "ko": "Bien qu'elle ~~ait~~ partie tôt…", "ok": "Bien qu'elle **soit** partie tôt…", "why": "Partir se conjugue avec être." },
+          { "ko": "Il faut que tu ~~aie~~ fini.", "ok": "Il faut que tu **aies** fini.", "why": "Avec tu : aies, avec un s." },
+          { "ko": "que nous ~~ayions~~ compris", "ok": "que nous **ayons** compris", "why": "Pas de i après le y." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "**que j'aie** (e), **que tu aies** (es), **qu'il ait** (t), **qu'ils aient** (ent) : jamais « qu'il aie ». Pour t'en souvenir, compare avec un verbe régulier : que je chante, que tu chantes, qu'il chante… mais avoir garde son t avec il." },
+        { "type": "fun", "text": "Le sais-tu ? « Que j'aie », « que tu aies », « qu'il ait », « qu'ils aient » se prononcent exactement pareil. Quatre orthographes pour un seul son : le subjonctif adore les homophones !" }
+      ],
+      "vocab": [
+        { "mot": "aboutissement", "def": "Résultat final d'un long effort.", "ex": "Ce diplôme est l'aboutissement de cinq ans d'études.", "alt": [] },
+        { "mot": "achèvement", "def": "Fait de terminer complètement quelque chose.", "ex": "L'achèvement des travaux est prévu en juin.", "alt": [] },
+        { "mot": "accomplissement", "def": "Réalisation complète, et satisfaction qui l'accompagne.", "ex": "Ce voyage fut pour lui un accomplissement.", "alt": [] },
+        { "mot": "réussite", "def": "Résultat heureux d'une entreprise.", "ex": "Le spectacle a été une réussite.", "alt": [] },
+        { "mot": "échec", "def": "Fait de ne pas réussir.", "ex": "Cet échec lui a servi de leçon.", "alt": [] },
+        { "mot": "consécration", "def": "Reconnaissance publique qui confirme une réussite.", "ex": "Ce prix est la consécration de sa carrière.", "alt": [] },
+        { "mot": "apogée", "def": "Point le plus haut d'une évolution (ce mot est masculin).", "ex": "L'empire atteignit son apogée au deuxième siècle.", "alt": [] },
+        { "mot": "déclin", "def": "Période où quelque chose perd de sa force.", "ex": "Le village connut un lent déclin.", "alt": [] },
+        { "mot": "bilan", "def": "Résultat d'ensemble que l'on tire d'une période ou d'une action.", "ex": "Faisons le bilan de l'année.", "alt": [] },
+        { "mot": "rétrospective", "def": "Exposition ou émission qui revient sur une période passée ou sur l'œuvre d'un artiste.", "ex": "Le musée présente une rétrospective du peintre.", "alt": [] },
+        { "mot": "réminiscence", "def": "Souvenir vague qui revient à l'esprit.", "ex": "Cette odeur éveille en lui une réminiscence d'enfance.", "alt": [] },
+        { "mot": "aboutir", "def": "Arriver à un résultat.", "ex": "Les négociations ont fini par aboutir.", "alt": [] },
+        { "mot": "parachever", "def": "Mener à la perfection, terminer avec soin.", "ex": "Il reste à parachever le décor.", "alt": [] },
+        { "mot": "entreprendre", "def": "Commencer à faire quelque chose d'important.", "ex": "Il a décidé d'entreprendre un tour du monde.", "alt": [] },
+        { "mot": "renoncer", "def": "Abandonner une idée, un projet ou un droit.", "ex": "Il ne faut jamais renoncer à ses rêves.", "alt": [] },
+        { "mot": "accomplir", "def": "Réaliser entièrement une tâche, un exploit.", "ex": "Il a su accomplir sa mission.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Je suis content que tu sois venu.", "indice": "Une visite appréciée", "trap": ["es", "soit"], "alt": [] },
+        { "phrase": "Il faut que tu aies fini avant midi.", "indice": "Une échéance stricte", "trap": ["aie", "as"], "alt": [] },
+        { "phrase": "Bien qu'elle soit partie tôt, elle est arrivée en retard.", "indice": "Un trajet malchanceux", "trap": ["ait"], "alt": [] },
+        { "phrase": "Je doute qu'il ait compris la leçon.", "indice": "Une incompréhension", "trap": ["aie", "a"], "alt": [] },
+        { "phrase": "Je regrette que nous ayons perdu le match.", "indice": "Une défaite amère", "trap": ["ayions"], "alt": [] },
+        { "phrase": "Elle est triste que ses amies ne soient pas venues.", "indice": "Une fête presque vide", "trap": ["sont", "venus"], "alt": [] },
+        { "phrase": "Il est possible qu'ils se soient trompés.", "indice": "Une erreur probable", "trap": ["sont"], "alt": [] },
+        { "phrase": "Je ne crois pas qu'elle ait lu ce livre.", "indice": "Un doute sur une lecture", "trap": ["a"], "alt": [] },
+        { "phrase": "Pourvu qu'il n'ait rien oublié !", "indice": "Une valise faite en hâte", "trap": ["aie"], "alt": [] },
+        { "phrase": "Bien qu'ils aient beaucoup travaillé, ils ont échoué.", "indice": "Un effort non récompensé", "trap": ["aies", "avaient"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Je suis ravi que vous ___ venus.", "choices": ["soyez", "êtes", "soyiez"], "answer": 0, "explain": "Être ravi que + subjonctif : que vous soyez venus." },
+        { "type": "mcq", "q": "Bien qu'il ___ beaucoup plu, la fête a eu lieu.", "choices": ["ait", "a", "aie"], "answer": 0, "explain": "Bien que + subjonctif passé : qu'il ait plu." },
+        { "type": "mcq", "q": "Je regrette qu'elle ___ partie si tôt.", "choices": ["soit", "est", "ait"], "answer": 0, "explain": "Regretter que + subjonctif ; partir se conjugue avec être." },
+        { "type": "mcq", "q": "Il faut que vous ___ terminé avant ce soir.", "choices": ["ayez", "avez", "ayiez"], "answer": 0, "explain": "Il faut que + subjonctif passé : que vous ayez terminé." },
+        { "type": "mcq", "q": "Je ne pense pas qu'il ___ ce message.", "choices": ["ait reçu", "a reçu", "aura reçu"], "answer": 0, "explain": "Penser à la forme négative : subjonctif, ici passé." },
+        { "type": "fill", "q": "Je suis heureux que tu ___ réussi.", "hint": "avoir, au subjonctif présent", "answer": ["aies"], "explain": "Auxiliaire avoir au subjonctif : que tu aies." },
+        { "type": "fill", "q": "Il est étonnant qu'elles ne ___ pas encore arrivées.", "hint": "être, au subjonctif présent", "answer": ["soient"], "explain": "Auxiliaire être au subjonctif : qu'elles soient." },
+        { "type": "fill", "q": "Bien que nous ___ couru, nous avons raté le train.", "hint": "avoir, au subjonctif présent", "answer": ["ayons"], "explain": "Que nous ayons, sans i." },
+        { "type": "fill", "q": "Je doute qu'il ___ compris.", "hint": "avoir, au subjonctif présent", "answer": ["ait"], "explain": "Avec il : qu'il ait." },
+        { "type": "fill", "q": "Je regrette que vous vous ___ trompés.", "hint": "être, au subjonctif présent", "answer": ["soyez"], "explain": "Verbe pronominal : auxiliaire être, que vous soyez." },
+        { "type": "fill", "q": "Il faut que tu sois ___ avant minuit.", "hint": "rentrer", "answer": ["rentré", "rentrée"], "explain": "Avec être, accord avec tu : rentré ou rentrée." },
+        { "type": "fill", "q": "Bien qu'elle ait ___ toute la nuit, elle est en forme.", "hint": "travailler", "answer": ["travaillé"], "explain": "Avec avoir, sans COD : invariable." },
+        { "type": "error", "q": "Je suis content que tu as gagné.", "wrong": 5, "fix": ["aies"], "explain": "Être content que + subjonctif : que tu aies gagné." },
+        { "type": "error", "q": "Bien qu'il aie fini, il reste.", "wrong": 2, "fix": ["ait"], "explain": "Avec il : qu'il ait." },
+        { "type": "error", "q": "Je regrette qu'ils ont échoué.", "wrong": 3, "fix": ["aient"], "explain": "Regretter que + subjonctif : qu'ils aient échoué." },
+        { "type": "error", "q": "Il est possible qu'elle soit sortit.", "wrong": 5, "fix": ["sortie"], "explain": "Participe de sortir, accordé avec elle : sortie." }
+      ],
+      "reading": {
+        "title": "Le prix des lycéens",
+        "text": "Quand Inès a appris que son premier roman avait reçu le prix des lycéens, elle a d'abord cru à une erreur. « Il est impossible qu'ils aient choisi mon livre », a-t-elle répété au téléphone. Pourtant, le jury, composé de deux cents élèves venus de toute la France, l'avait bel et bien élu. Lors de la cérémonie, Inès a remercié ses premiers lecteurs : « Je suis heureuse que vous ayez pris le temps de lire une histoire aussi étrange. Bien que certains d'entre vous l'aient trouvée trop sombre, vous l'avez défendue jusqu'au bout. » Elle a aussi eu un mot pour son ancienne professeure de français : « Il fallait qu'une personne ait cru en moi avant que j'ose envoyer mon manuscrit. C'est elle. » Dans la salle, la professeure, émue, a essuyé une larme discrète. Plusieurs élèves sont ensuite venus lui demander une dédicace, et certains lui ont même confié leurs propres textes. Aujourd'hui, Inès écrit son deuxième roman. Elle avoue redouter que les lecteurs ne soient déçus. Mais elle ajoute en riant : « Pourvu que mon chat ne se soit pas encore couché sur le clavier pendant que je vous parle ! »",
+        "questions": [
+          { "q": "Comment Inès réagit-elle d'abord à la nouvelle ?", "choices": ["Elle croit à une erreur", "Elle saute de joie", "Elle refuse le prix", "Elle appelle son éditeur"], "answer": 0, "explain": "« Il est impossible qu'ils aient choisi mon livre. »" },
+          { "q": "Qui a choisi le livre ?", "choices": ["Un jury de lycéens", "Des critiques professionnels", "Son éditeur", "Sa professeure"], "answer": 0, "explain": "Un jury de deux cents élèves." },
+          { "q": "Pourquoi Inès remercie-t-elle son ancienne professeure ?", "choices": ["Elle a cru en elle avant tout le monde", "Elle a corrigé le manuscrit", "Elle faisait partie du jury", "Elle a payé l'édition"], "answer": 0, "explain": "Il fallait qu'une personne ait cru en elle : c'est cette professeure." },
+          { "q": "Que craint Inès pour son deuxième roman ?", "choices": ["Que les lecteurs soient déçus", "De ne pas trouver d'éditeur", "Que son chat le détruise", "De manquer d'idées"], "answer": 0, "explain": "Elle redoute que les lecteurs ne soient déçus." },
+          { "q": "Que révèle la dernière réplique ?", "choices": ["Inès garde son humour malgré son inquiétude", "Inès déteste son chat", "Inès a perdu son manuscrit", "Inès refuse de répondre"], "answer": 0, "explain": "Elle plaisante sur son chat juste après avoir avoué sa crainte." },
+          { "q": "« Il est impossible qu'ils aient choisi mon livre » : pourquoi le subjonctif passé ?", "choices": ["Le choix est accompli et « il est impossible que » demande le subjonctif", "La phrase est au futur", "C'est une certitude", "Le sujet est pluriel"], "answer": 0, "explain": "Il est impossible que + subjonctif ; l'action est passée : subjonctif passé." }
+        ]
+      }
+    },
+    {
+      "id": "7.4",
+      "name": "À vos ordres !",
+      "title": "L'impératif : le s des verbes en -er, vas-y, donne-le-moi, aie, sois, sache, veuille",
+      "goal": "Conjuguer l'impératif et placer correctement les pronoms qui le suivent.",
+      "lesson": [
+        { "type": "p", "text": "L'impératif sert à donner un ordre, un conseil, une consigne. Il n'a que trois personnes et pas de sujet exprimé : [[Viens !]] [[Allons-y !]] [[Écoutez.]]" },
+        { "type": "rule", "title": "Le s des verbes en -er", "text": "À la 2e personne du singulier, les verbes en -er (et aller, offrir, ouvrir, cueillir, souffrir…) n'ont **pas de s** : [[Mange !]], [[Va !]], [[Ouvre la porte.]] Mais devant **en** et **y**, on ajoute un s pour la liaison : [[Manges-en.]], [[Vas-y !]]" },
+        { "type": "rule", "title": "Les autres verbes", "text": "Ils gardent le s du présent : [[Finis ton assiette.]], [[Prends ton manteau.]], [[Fais attention.]]" },
+        { "type": "table", "head": ["être", "avoir", "savoir", "vouloir"], "rows": [["sois", "aie", "sache", "veuille"], ["soyons", "ayons", "sachons", "veuillons"], ["soyez", "ayez", "sachez", "veuillez"]] },
+        { "type": "rule", "title": "Les pronoms", "text": "À l'impératif affirmatif, le pronom se place après le verbe, avec un trait d'union : [[Donne-le-moi.]], [[Dis-le-lui.]], [[Allez-vous-en !]]. **Moi** et **toi** remplacent me et te : [[Regarde-moi.]] À la forme négative, retour devant le verbe : [[Ne me regarde pas.]]" },
+        { "type": "examples", "items": [
+          { "ex": "**Vas-y**, tu vas y arriver !", "note": "un s devant y" },
+          { "ex": "**Sois** patient avec ton petit frère.", "note": "être : sois" },
+          { "ex": "**Aie** confiance en toi.", "note": "avoir : aie" },
+          { "ex": "**Achètes-en** deux kilos au marché.", "note": "un s devant en" },
+          { "ex": "**Veuillez** fermer la porte en sortant.", "note": "vouloir : veuillez, formule de politesse" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "~~Manges~~ ta soupe !", "ok": "**Mange** ta soupe !", "why": "Verbe en -er à l'impératif : pas de s." },
+          { "ko": "~~Va-y~~ !", "ok": "**Vas-y** !", "why": "Devant y, on ajoute un s." },
+          { "ko": "~~Ais~~ confiance.", "ok": "**Aie** confiance.", "why": "Impératif d'avoir : aie." },
+          { "ko": "~~Soit~~ sage !", "ok": "**Sois** sage !", "why": "Impératif d'être : sois, avec un s." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "« Veuillez agréer… » : **veuillez** est l'impératif de vouloir, la forme des formules de politesse. Ne le confonds ni avec « voulez » ni avec « veuilliez »." },
+        { "type": "fun", "text": "Le sais-tu ? « Va-t'en » s'écrit avec une apostrophe (t' = toi, élidé), alors que « vas-y » prend un s et un trait d'union. Deux règles en trois mots !" }
+      ],
+      "vocab": [
+        { "mot": "consigne", "def": "Instruction précise sur ce qu'il faut faire.", "ex": "Lis bien la consigne avant de répondre.", "alt": [] },
+        { "mot": "mode d'emploi", "def": "Notice qui explique comment utiliser un appareil.", "ex": "Le mode d'emploi est en douze langues.", "alt": [] },
+        { "mot": "précaution", "def": "Mesure prise pour éviter un danger.", "ex": "Par précaution, emporte un parapluie.", "alt": [] },
+        { "mot": "avertissement", "def": "Signal ou message qui prévient d'un danger ou d'une sanction.", "ex": "L'arbitre lui a donné un avertissement.", "alt": [] },
+        { "mot": "directive", "def": "Instruction générale donnée par une autorité.", "ex": "Le directeur a envoyé de nouvelles directives.", "alt": [] },
+        { "mot": "ultimatum", "def": "Dernières conditions posées, avec une menace en cas de refus.", "ex": "Il a reçu un ultimatum : payer avant lundi.", "alt": [] },
+        { "mot": "sommation", "def": "Ordre formel d'obéir, souvent avant d'employer la force.", "ex": "Les gardes firent une sommation.", "alt": [] },
+        { "mot": "exhortation", "def": "Discours qui pousse vivement quelqu'un à agir.", "ex": "Les exhortations de l'entraîneur ont galvanisé l'équipe.", "alt": [] },
+        { "mot": "supplique", "def": "Demande humble et pressante.", "ex": "Il adressa une supplique au roi.", "alt": [] },
+        { "mot": "décret", "def": "Décision écrite du gouvernement qui a force de loi.", "ex": "Un décret fixe la date des vacances.", "alt": [] },
+        { "mot": "commandement", "def": "Ordre donné ; ou fait de diriger une troupe.", "ex": "Il prit le commandement du navire.", "alt": [] },
+        { "mot": "interdiction", "def": "Défense de faire quelque chose.", "ex": "L'interdiction de fumer est respectée.", "alt": [] },
+        { "mot": "autorisation", "def": "Permission officielle de faire quelque chose.", "ex": "Il faut une autorisation pour filmer ici.", "alt": [] },
+        { "mot": "dispense", "def": "Permission de ne pas faire ce qui est obligatoire.", "ex": "Il a une dispense de sport.", "alt": [] },
+        { "mot": "règlement", "def": "Ensemble des règles d'un lieu ou d'une activité ; ou paiement.", "ex": "Le règlement intérieur interdit les téléphones.", "alt": [] },
+        { "mot": "mise en garde", "def": "Avis donné pour éviter une erreur ou un danger.", "ex": "Malgré la mise en garde, il s'est baigné.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Mange ta soupe avant qu'elle refroidisse.", "indice": "Un conseil à table", "trap": ["Manges"], "alt": [] },
+        { "phrase": "Vas-y, tu vas y arriver !", "indice": "Un encouragement", "trap": ["Va-y"], "alt": [] },
+        { "phrase": "Sois patient avec ton petit frère.", "indice": "Un conseil de parent", "trap": ["Soit"], "alt": [] },
+        { "phrase": "Aie confiance en toi pour l'examen.", "indice": "Un encouragement avant l'épreuve", "trap": ["Ai", "Ais"], "alt": [] },
+        { "phrase": "Donne-le-moi tout de suite, s'il te plaît.", "indice": "Un ordre pressant", "trap": ["moi-le"], "alt": [] },
+        { "phrase": "Veuillez fermer la porte en sortant.", "indice": "Une consigne polie", "trap": ["Voulez"], "alt": [] },
+        { "phrase": "Prends ton parapluie, il va pleuvoir.", "indice": "Une précaution", "trap": ["Prend"], "alt": [] },
+        { "phrase": "Ne lui dis rien, c'est une surprise.", "indice": "Un secret à garder", "trap": ["dit"], "alt": [] },
+        { "phrase": "Achètes-en deux kilos au marché.", "indice": "Une liste de courses", "trap": ["Achète-en"], "alt": [] },
+        { "phrase": "Sachez que la porte ferme à minuit.", "indice": "Une information officielle", "trap": ["Sachiez"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "___ la fenêtre, s'il te plaît.", "choices": ["Ouvre", "Ouvres", "Ouvrent"], "answer": 0, "explain": "Ouvrir se conjugue comme un verbe en -er : ouvre, sans s." },
+        { "type": "mcq", "q": "Des cerises ? ___ autant que tu veux.", "choices": ["Cueilles-en", "Cueille-en", "Cueille-z-en"], "answer": 0, "explain": "Devant en, on ajoute un s : cueilles-en." },
+        { "type": "mcq", "q": "___ sage pendant mon absence.", "choices": ["Sois", "Soit", "Soi"], "answer": 0, "explain": "Impératif d'être : sois." },
+        { "type": "mcq", "q": "Ce livre, ___ !", "choices": ["prête-le-moi", "prête-moi-le", "prêtes-le-moi"], "answer": 0, "explain": "Le COD vient avant moi ; pas de s à prête (pas de en ni de y)." },
+        { "type": "mcq", "q": "___ agréer, Madame, mes salutations distinguées.", "choices": ["Veuillez", "Voulez", "Veuilliez"], "answer": 0, "explain": "Impératif de vouloir : veuillez." },
+        { "type": "fill", "q": "___ ton manteau, il fait froid.", "hint": "mettre, à l'impératif (tu)", "answer": ["Mets"], "explain": "Mettre n'est pas en -er : il garde son s." },
+        { "type": "fill", "q": "___ tes devoirs avant de jouer.", "hint": "finir, à l'impératif (tu)", "answer": ["Finis"], "explain": "Finir garde son s : finis." },
+        { "type": "fill", "q": "___ à la boulangerie, s'il te plaît.", "hint": "aller, à l'impératif (tu)", "answer": ["Va"], "explain": "Aller : va, sans s (sauf devant y)." },
+        { "type": "fill", "q": "___ courage, nous y sommes presque !", "hint": "avoir, à l'impératif (tu)", "answer": ["Aie"], "explain": "Impératif d'avoir : aie." },
+        { "type": "fill", "q": "___ attentifs, les enfants !", "hint": "être, à l'impératif (vous)", "answer": ["Soyez"], "explain": "Impératif d'être : soyez." },
+        { "type": "fill", "q": "___ ta chambre avant ce soir.", "hint": "ranger, à l'impératif (tu)", "answer": ["Range"], "explain": "Verbe en -er : range, sans s." },
+        { "type": "fill", "q": "___ que je suis fier de toi.", "hint": "savoir, à l'impératif (tu)", "answer": ["Sache"], "explain": "Impératif de savoir : sache." },
+        { "type": "error", "q": "Manges tes légumes !", "wrong": 0, "fix": ["Mange"], "explain": "Verbe en -er à l'impératif : pas de s." },
+        { "type": "error", "q": "Va-y, on t'attend !", "wrong": 0, "fix": ["Vas-y"], "explain": "Devant y, on ajoute un s : vas-y." },
+        { "type": "error", "q": "Soit gentil avec ta sœur.", "wrong": 0, "fix": ["Sois"], "explain": "Impératif d'être : sois." },
+        { "type": "error", "q": "Ais confiance en moi.", "wrong": 0, "fix": ["Aie"], "explain": "Impératif d'avoir : aie." }
+      ],
+      "reading": {
+        "title": "Le gâteau aux noix",
+        "text": "Pour réussir le célèbre gâteau aux noix de ma grand-mère, suis ses consignes à la lettre. D'abord, sors le beurre du réfrigérateur une heure à l'avance : ne le fais surtout pas fondre au micro-ondes, elle te l'interdirait. Casse quatre œufs et sépare les blancs des jaunes. Bats les jaunes avec le sucre jusqu'à ce que le mélange blanchisse. Si tu n'as pas de fouet électrique, prends ton courage à deux mains et un bon fouet manuel. Ajoute la farine petit à petit et mélange-la doucement. Concasse les noix, mais ne les mets pas toutes dans la pâte : gardes-en une poignée pour la décoration. Monte les blancs en neige, puis incorpore-les délicatement. Verse la pâte dans un moule beurré et enfourne-la pour quarante minutes. Surtout, n'ouvre pas le four avant la fin : le gâteau retomberait. Pendant ce temps, fais la vaisselle, range la cuisine et sois patient. Enfin, sors le gâteau, laisse-le refroidir et décore-le avec les noix que tu as gardées. Ma grand-mère ajoute toujours un dernier conseil : « Partage-le avec ceux que tu aimes, et n'en garde pas la plus grosse part pour toi ! »",
+        "questions": [
+          { "q": "Pourquoi ne faut-il pas faire fondre le beurre au micro-ondes ?", "choices": ["La grand-mère l'interdirait", "Le micro-ondes est en panne", "Le beurre deviendrait sucré", "Ce serait trop long"], "answer": 0, "explain": "« Elle te l'interdirait. »" },
+          { "q": "Que faut-il faire d'une partie des noix ?", "choices": ["La garder pour la décoration", "La donner aux oiseaux", "La mettre dans la pâte", "La faire griller"], "answer": 0, "explain": "Gardes-en une poignée pour la décoration." },
+          { "q": "Que se passerait-il si l'on ouvrait le four trop tôt ?", "choices": ["Le gâteau retomberait", "Le gâteau brûlerait", "Le four s'éteindrait", "La pâte déborderait"], "answer": 0, "explain": "« N'ouvre pas le four avant la fin : le gâteau retomberait. »" },
+          { "q": "Quel trait de caractère révèle le dernier conseil ?", "choices": ["La générosité", "L'avarice", "La gourmandise", "L'impatience"], "answer": 0, "explain": "Partager, et ne pas garder la plus grosse part pour soi." },
+          { "q": "Dans « gardes-en une poignée », pourquoi ajoute-t-on un s ?", "choices": ["Devant en, on ajoute un s pour la liaison", "Le verbe est au pluriel", "C'est une faute", "C'est le présent de l'indicatif"], "answer": 0, "explain": "À l'impératif, les verbes en -er prennent un s devant en et y." },
+          { "q": "Combien de temps le gâteau doit-il cuire ?", "choices": ["Quarante minutes", "Une heure", "Vingt minutes", "Toute la nuit"], "answer": 0, "explain": "Enfourne-la pour quarante minutes." }
+        ]
+      }
+    },
+    {
+      "id": "7.5",
+      "name": "Avec des si…",
+      "title": "Les hypothèses : si + présent, imparfait, plus-que-parfait ; le conditionnel passé",
+      "goal": "Construire les trois systèmes hypothétiques et former le conditionnel passé.",
+      "lesson": [
+        { "type": "p", "text": "Pour exprimer une hypothèse, on associe **si** et un temps de l'indicatif avec le futur ou le conditionnel. Trois situations, trois constructions." },
+        { "type": "table", "head": ["L'hypothèse est…", "si + …", "conséquence", "Exemple"], "rows": [["réalisable", "présent", "futur", "Si tu viens, nous jouerons."], ["irréelle dans le présent", "imparfait", "conditionnel présent", "Si tu venais, nous jouerions."], ["irréelle dans le passé", "plus-que-parfait", "conditionnel passé", "Si tu étais venu, nous aurions joué."]] },
+        { "type": "rule", "title": "Le conditionnel passé", "text": "Auxiliaire au **conditionnel présent** + participe passé : [[j'aurais aimé]], [[elle serait venue]]. Il exprime un fait qui ne s'est pas réalisé, un regret ou un reproche : [[Tu aurais dû me prévenir.]]" },
+        { "type": "rule", "title": "Jamais de conditionnel après si", "text": "« Si j'aurais su » est une faute célèbre : après si qui introduit une condition, jamais de conditionnel. On dit [[Si j'avais su, je ne serais pas venu.]]" },
+        { "type": "rule", "title": "Les mélanges", "text": "On peut croiser les temps quand le sens le demande : [[Si tu avais pris ton parapluie, tu ne serais pas trempé maintenant.]] (une condition passée, une conséquence présente)." },
+        { "type": "examples", "items": [
+          { "ex": "Si j'**avais su**, je ne **serais** pas **venu**.", "note": "plus-que-parfait, conditionnel passé" },
+          { "ex": "Si tu **viens**, nous **irons** au cinéma.", "note": "présent, futur" },
+          { "ex": "S'il **pleuvait**, nous **resterions** à la maison.", "note": "imparfait, conditionnel présent" },
+          { "ex": "Tu **aurais dû** me prévenir.", "note": "un reproche ; dû avec un accent" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "~~Si j'aurais su~~…", "ok": "**Si j'avais su**…", "why": "Après si, jamais de conditionnel." },
+          { "ko": "Si tu ~~serais~~ venu, tu aurais ri.", "ok": "Si tu **étais** venu, tu aurais ri.", "why": "Si + plus-que-parfait." },
+          { "ko": "Si tu étais venu, tu ~~verrais~~ le spectacle hier.", "ok": "Si tu étais venu, tu **aurais vu** le spectacle hier.", "why": "Une conséquence passée : conditionnel passé." },
+          { "ko": "Il ~~aurait du~~ partir.", "ok": "Il **aurait dû** partir.", "why": "Le participe de devoir prend un accent : dû." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Dans la langue littéraire, on rencontre le **plus-que-parfait du subjonctif** à la place du conditionnel passé : [[S'il l'eût su, il fût venu]] = s'il l'avait su, il serait venu. On l'appelle parfois « conditionnel passé deuxième forme »." },
+        { "type": "fun", "text": "Le sais-tu ? Le proverbe le dit : « Avec des si, on mettrait Paris en bouteille. » Grammaticalement, il est parfait : un si sous-entendu, et un conditionnel présent !" }
+      ],
+      "vocab": [
+        { "mot": "conjecture", "def": "Opinion fondée sur des apparences, sans preuve.", "ex": "Nous en sommes réduits aux conjectures.", "alt": [] },
+        { "mot": "supposition", "def": "Ce que l'on admet comme possible pour raisonner.", "ex": "Ce n'est qu'une supposition.", "alt": [] },
+        { "mot": "spéculation", "def": "Raisonnement abstrait ; ou opération financière risquée.", "ex": "Ces spéculations ne reposent sur aucun fait.", "alt": [] },
+        { "mot": "probabilité", "def": "Chance qu'un événement se produise.", "ex": "La probabilité de pluie est faible.", "alt": [] },
+        { "mot": "uchronie", "def": "Récit qui imagine ce qui se serait passé si l'histoire avait pris un autre cours.", "ex": "Ce roman est une uchronie où Napoléon gagne à Waterloo.", "alt": [] },
+        { "mot": "dilemme", "def": "Situation où l'on doit choisir entre deux solutions également difficiles.", "ex": "Il fait face à un véritable dilemme.", "alt": [] },
+        { "mot": "alternative", "def": "Choix entre deux possibilités ; par extension, solution de remplacement.", "ex": "Nous n'avons pas d'alternative.", "alt": [] },
+        { "mot": "aléa", "def": "Événement imprévisible, risque.", "ex": "Les aléas du voyage ne l'effraient pas.", "alt": [] },
+        { "mot": "imprévu", "def": "Ce qui arrive sans qu'on l'ait prévu.", "ex": "Un imprévu m'a retardé.", "alt": [] },
+        { "mot": "fatalité", "def": "Force qui semble décider à l'avance des événements.", "ex": "Il ne croit pas à la fatalité.", "alt": [] },
+        { "mot": "hasard", "def": "Cause imprévisible des événements.", "ex": "Nous nous sommes rencontrés par hasard.", "alt": [] },
+        { "mot": "coïncidence", "def": "Rencontre surprenante de deux événements.", "ex": "Quelle coïncidence de te voir ici !", "alt": ["coincidence"] },
+        { "mot": "contretemps", "def": "Événement fâcheux qui dérange un projet.", "ex": "Un contretemps nous a obligés à reporter la fête.", "alt": [] },
+        { "mot": "remords", "def": "Douleur morale causée par une faute que l'on a commise.", "ex": "Il est rongé par le remords.", "alt": [] },
+        { "mot": "repentir", "def": "Regret sincère d'une faute, avec le désir de la réparer.", "ex": "Son repentir semblait sincère.", "alt": [] },
+        { "mot": "utopie", "def": "Projet idéal mais irréalisable ; société imaginaire parfaite.", "ex": "Une ville sans voitures n'est plus une utopie.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Si j'avais su, je ne serais pas venu.", "indice": "Un regret célèbre", "trap": ["aurais", "serai"], "alt": [] },
+        { "phrase": "Si tu viens, nous irons au cinéma.", "indice": "Une proposition", "trap": ["viendras"], "alt": ["Nous irons au cinéma si tu viens."] },
+        { "phrase": "Si elle avait pris le train, elle serait arrivée à l'heure.", "indice": "Un mauvais choix de transport", "trap": ["aurait", "arrivé"], "alt": [] },
+        { "phrase": "Tu aurais dû me prévenir.", "indice": "Un reproche", "trap": ["du"], "alt": [] },
+        { "phrase": "Si nous avions gagné, nous aurions fait la fête.", "indice": "Une victoire manquée", "trap": ["gagnés", "avons"], "alt": [] },
+        { "phrase": "S'il pleuvait, nous resterions à la maison.", "indice": "Une hypothèse météo", "trap": ["pleuvrait"], "alt": [] },
+        { "phrase": "J'aurais aimé voir ce spectacle.", "indice": "Une occasion manquée", "trap": ["aimer", "aurai"], "alt": [] },
+        { "phrase": "Si tu avais écouté, tu aurais compris.", "indice": "Un reproche en classe", "trap": ["écouter", "avait"], "alt": ["Tu aurais compris si tu avais écouté."] },
+        { "phrase": "Elle serait venue si on l'avait invitée.", "indice": "Une invitée oubliée", "trap": ["invité"], "alt": [] },
+        { "phrase": "Si j'étais toi, j'accepterais cette offre.", "indice": "Un conseil", "trap": ["serais", "accepterai"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Si tu ___ plus tôt, tu aurais vu le début.", "choices": ["étais arrivé", "serais arrivé", "es arrivé"], "answer": 0, "explain": "Hypothèse irréelle dans le passé : si + plus-que-parfait." },
+        { "type": "mcq", "q": "Si elle avait révisé, elle ___ l'examen.", "choices": ["aurait réussi", "aura réussi", "avait réussi"], "answer": 0, "explain": "Si + plus-que-parfait, puis conditionnel passé." },
+        { "type": "mcq", "q": "Si tu viens demain, nous ___ au parc.", "choices": ["irons", "irions", "serions allés"], "answer": 0, "explain": "Hypothèse réalisable : si + présent, futur." },
+        { "type": "mcq", "q": "Tu ___ me le dire plus tôt !", "choices": ["aurais dû", "aurais du", "avais dû"], "answer": 0, "explain": "Un reproche : conditionnel passé, avec dû accentué." },
+        { "type": "mcq", "q": "S'il ___, nous serions sortis.", "choices": ["n'avait pas plu", "n'aurait pas plu", "n'a pas plu"], "answer": 0, "explain": "Si + plus-que-parfait, jamais de conditionnel après si." },
+        { "type": "fill", "q": "Si j'avais su, je ___ venu.", "hint": "être, au conditionnel présent", "answer": ["serais"], "explain": "Conditionnel passé : je serais venu." },
+        { "type": "fill", "q": "Si tu ___ appelé, je serais venu.", "hint": "avoir, à l'imparfait", "answer": ["avais"], "explain": "Si + plus-que-parfait : si tu avais appelé." },
+        { "type": "fill", "q": "Nous ___ aimé vous voir.", "hint": "avoir, au conditionnel présent", "answer": ["aurions"], "explain": "Conditionnel passé : nous aurions aimé." },
+        { "type": "fill", "q": "Si vous partez maintenant, vous ___ le train.", "hint": "attraper, au futur", "answer": ["attraperez"], "explain": "Si + présent, futur." },
+        { "type": "fill", "q": "Si elle était riche, elle ___ le tour du monde.", "hint": "faire, au conditionnel présent", "answer": ["ferait"], "explain": "Si + imparfait, conditionnel présent." },
+        { "type": "fill", "q": "Ils seraient ___ s'ils avaient pu.", "hint": "venir", "answer": ["venus"], "explain": "Avec être, accord avec ils." },
+        { "type": "fill", "q": "Si tu avais mis ton manteau, tu ___ moins froid maintenant.", "hint": "avoir, au conditionnel présent", "answer": ["aurais"], "explain": "Une condition passée, une conséquence présente : conditionnel présent." },
+        { "type": "error", "q": "Si j'aurais su, je serais resté.", "wrong": 1, "fix": ["j'avais"], "explain": "Après si, jamais de conditionnel : si j'avais su." },
+        { "type": "error", "q": "Si tu serais venu, tu aurais ri.", "wrong": 2, "fix": ["étais"], "explain": "Si + plus-que-parfait : si tu étais venu." },
+        { "type": "error", "q": "Il aurait du partir plus tôt.", "wrong": 2, "fix": ["dû"], "explain": "Le participe de devoir s'écrit dû." },
+        { "type": "error", "q": "Si elle avait couru, elle attrapera le bus.", "wrong": 5, "fix": ["aurait attrapé"], "explain": "Si + plus-que-parfait, puis conditionnel passé : elle aurait attrapé." }
+      ],
+      "reading": {
+        "title": "Et si l'imprimerie n'existait pas ?",
+        "text": "Et si Gutenberg n'avait jamais inventé l'imprimerie ? C'est la question qu'un professeur d'histoire a posée à sa classe de seconde. Les réponses ont aussitôt fusé. « Si les livres avaient continué à être copiés à la main, ils seraient restés très chers, a remarqué Sarah. Seuls les riches auraient appris à lire. » Nathan a ajouté que les idées auraient circulé beaucoup plus lentement : « Les savants auraient mis des siècles à partager leurs découvertes. » Yasmine, elle, a proposé une hypothèse plus audacieuse : « Si l'imprimerie n'existait pas aujourd'hui, nous aurions peut-être inventé internet plus tôt, par nécessité ! » Lucas n'était pas d'accord : « Si personne n'avait su lire, personne n'aurait eu l'idée d'inventer quoi que ce soit ! » La discussion s'est animée jusqu'à la sonnerie. Le professeur a souri : il fallait bien reconnaître que personne ne pouvait le prouver. Il a conclu par une remarque qui a fait réfléchir toute la classe : « Avec des si, on refait l'histoire… mais on comprend surtout mieux celle qui a eu lieu. » En sortant, Karim a soupiré : « Si j'avais su que ce cours serait si intéressant, j'aurais fait mes devoirs. »",
+        "questions": [
+          { "q": "Quelle question le professeur pose-t-il ?", "choices": ["Que se serait-il passé sans l'imprimerie ?", "Qui a inventé internet ?", "Pourquoi les livres sont-ils chers ?", "Comment fonctionne une imprimerie ?"], "answer": 0, "explain": "« Et si Gutenberg n'avait jamais inventé l'imprimerie ? »" },
+          { "q": "Selon Sarah, quelle aurait été la conséquence principale ?", "choices": ["Seuls les riches auraient appris à lire", "Internet aurait été inventé plus tôt", "Les savants auraient disparu", "Les livres auraient été gratuits"], "answer": 0, "explain": "Les livres seraient restés très chers : seuls les riches auraient appris à lire." },
+          { "q": "En quoi l'hypothèse de Yasmine est-elle « audacieuse » ?", "choices": ["Elle imagine une conséquence positive et inattendue", "Elle reprend l'idée de Sarah", "Elle est prouvée par l'histoire", "Elle contredit le professeur"], "answer": 0, "explain": "Elle imagine qu'on aurait inventé internet plus tôt, par nécessité." },
+          { "q": "Que signifie la conclusion du professeur ?", "choices": ["Imaginer d'autres histoires aide à comprendre la vraie", "Il est inutile d'étudier l'histoire", "Les hypothèses sont toujours fausses", "Il faut réécrire les manuels"], "answer": 0, "explain": "« On comprend surtout mieux celle qui a eu lieu. »" },
+          { "q": "Que comprend-on de la dernière phrase de Karim ?", "choices": ["Il n'avait pas fait ses devoirs et le regrette", "Il a fait tous ses devoirs", "Il trouve le cours ennuyeux", "Il veut changer de classe"], "answer": 0, "explain": "« J'aurais fait mes devoirs » : il ne les a pas faits." },
+          { "q": "« Si les livres avaient continué…, ils seraient restés très chers » : quel système est utilisé ?", "choices": ["Si + plus-que-parfait, conditionnel passé", "Si + imparfait, conditionnel présent", "Si + présent, futur", "Si + passé composé, présent"], "answer": 0, "explain": "Une hypothèse irréelle dans le passé." }
+        ]
+      }
+    }
+  ]
+}

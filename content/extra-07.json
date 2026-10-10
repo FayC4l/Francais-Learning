@@ -1,0 +1,120 @@
+{
+  "level": 7,
+  "units": [
+    {
+      "unit": "7.1",
+      "dictee": {
+        "titre": "Les exigences du chef",
+        "texte": "Avant que le restaurant ouvre ses portes, le chef réunit sa brigade. « Il faut que chacun soit à son poste à dix-huit heures précises. Je veux que vous lisiez les fiches techniques, que vous goûtiez chaque sauce et que vous vérifiiez la cuisson des viandes. Il est essentiel que nous ayons toujours des assiettes chaudes. Bien que la salle soit pleine ce soir, je ne tolérerai aucune précipitation. » Puis il ajoute en souriant : « Et pourvu qu'aucun d'entre vous ne fasse brûler le dessert, comme la semaine dernière ! »",
+        "points": [
+          "**ouvre** : avant que est suivi du subjonctif.",
+          "**soit**, **ayons** : pas de i après le y d'avoir et d'être.",
+          "**vérifiiez** : vérifi- + -iez, deux i. **lisiez**, **goûtiez** : -iez avec vous.",
+          "**fasse** : subjonctif de faire, après pourvu que."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Rédige en cinq ou six phrases le règlement d'un club imaginaire, en utilisant au moins cinq verbes au subjonctif (il faut que, il est interdit que, nous souhaitons que…).",
+        "model": "Bienvenue au club des Jeunes Astronomes. Il faut que chaque membre soit présent le vendredi soir. Nous souhaitons que vous apportiez une lampe rouge pour ne pas éblouir les autres. Il est interdit que l'on touche au télescope sans l'accord d'un responsable. Il est indispensable que chacun ait une tenue chaude. Enfin, pourvu que le ciel soit dégagé !",
+        "checklist": [
+          "J'ai utilisé au moins cinq verbes au subjonctif.",
+          "Pas de i après le y : que nous soyons, que vous ayez.",
+          "J'ai vérifié les verbes irréguliers (soit, ait, fasse, puisse, sache…)."
+        ]
+      }
+    },
+    {
+      "unit": "7.2",
+      "dictee": {
+        "titre": "Le voyage à Rome",
+        "texte": "Le directeur a annoncé que le voyage à Rome aurait lieu en avril. Bien que le prix soit élevé, la plupart des familles ont accepté. Les professeurs espèrent que tous les élèves pourront partir, et ils ont proposé que l'on organise une vente de gâteaux pour que personne ne reste à la maison. Il est probable que la vente rapportera assez d'argent. Après que les comptes ont été faits, une bonne nouvelle est tombée : il ne manquait plus rien. Je doute que nous oubliions ce voyage de sitôt.",
+        "points": [
+          "**soit**, **organise**, **reste** : subjonctif après bien que, proposer que, pour que.",
+          "**pourront**, **rapportera** : indicatif après espérer que et il est probable que.",
+          "**ont été faits** : après que est suivi de l'indicatif.",
+          "**oubliions** : douter que + subjonctif ; oubli- + -ions, deux i."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Donne ton avis à voix haute sur une question (faut-il interdire les écrans le soir ?), avec au moins deux expressions suivies de l'indicatif (je pense que, je suis sûr que) et deux suivies du subjonctif (je doute que, il faut que). Puis écris quatre phrases.",
+        "model": "Je pense que les écrans gênent le sommeil. Je suis sûr que beaucoup d'élèves se couchent trop tard. Pourtant, je doute qu'une interdiction totale soit respectée. Il faudrait plutôt que chacun apprenne à éteindre son téléphone à une heure raisonnable.",
+        "checklist": [
+          "Après penser, être sûr, savoir : l'indicatif.",
+          "Après douter, il faut, vouloir : le subjonctif.",
+          "Après que, si je l'ai utilisé : l'indicatif."
+        ]
+      }
+    },
+    {
+      "unit": "7.3",
+      "dictee": {
+        "titre": "Lettre à Hugo",
+        "texte": "Je suis heureux que tu aies enfin trouvé ta place dans ce nouveau collège. Ta mère craignait que tu ne te sois senti seul les premiers jours, mais elle est soulagée que tes camarades t'aient si bien accueilli. Bien que vous n'ayez passé qu'une semaine ensemble, vous semblez déjà inséparables. Il est possible que certains professeurs t'aient paru sévères ; attends qu'ils te connaissent mieux. Je suis sûr que tu garderas de beaux souvenirs de cette année.",
+        "points": [
+          "**aies trouvé**, **aient accueilli**, **ayez passé** : subjonctif passé, avec l'auxiliaire avoir au subjonctif.",
+          "**te sois senti** : verbe pronominal, auxiliaire être ; **ne** explétif après craindre que.",
+          "**t'aient accueilli** : t' désigne Hugo et il est placé avant, d'où l'accord au masculin singulier.",
+          "**garderas** : indicatif après je suis sûr que."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Écris un court message de félicitations de quatre ou cinq phrases à quelqu'un qui a réussi quelque chose, avec au moins trois verbes au subjonctif passé.",
+        "model": "Chère Sarah, je suis ravie que tu aies obtenu ton diplôme. Je suis fière que tu aies tenu bon malgré les difficultés. Bien que tu aies douté de toi, tu as brillamment réussi. Je regrette seulement que nous n'ayons pas pu fêter ça ensemble. Gros bisous, Inès.",
+        "checklist": [
+          "J'ai utilisé au moins trois verbes au subjonctif passé.",
+          "Que j'aie, que tu aies, qu'il ait : jamais « qu'il aie ».",
+          "Avec être, j'ai accordé le participe avec le sujet."
+        ]
+      }
+    },
+    {
+      "unit": "7.4",
+      "dictee": {
+        "titre": "Les consignes du moniteur",
+        "texte": "Écoutez bien, les enfants. Avant de partir en randonnée, vérifiez vos sacs. Prenez de l'eau, mettez un chapeau et n'oubliez pas la crème solaire. Toi, Malik, va chercher la trousse de secours et rapporte-la-moi. Sois prudent sur le sentier, aie toujours un œil sur les plus petits. Si tu vois un serpent, ne le touche pas : préviens-moi. Restez groupés, attendez-vous les uns les autres et buvez régulièrement. Sachez enfin qu'au sommet, une surprise vous attend. Et toi, Léa, cesse de rêver : vas-y, passe devant !",
+        "points": [
+          "**va**, **rapporte**, **touche**, **cesse**, **passe** : verbes en -er (et aller) à l'impératif, sans s.",
+          "**vas-y** : un s devant y.",
+          "**sois**, **aie**, **sachez** : impératifs irréguliers d'être, d'avoir et de savoir.",
+          "**rapporte-la-moi**, **préviens-moi** : pronoms après le verbe, avec des traits d'union ; **ne le touche pas** : à la forme négative, le pronom revient devant."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Explique à voix haute comment préparer ta recette préférée, à l'impératif, avec au moins six verbes, dont un suivi de en ou de y. Puis écris la recette.",
+        "model": "Prends trois œufs et casse-les dans un bol. Ajoute un peu de sel et bats-les avec une fourchette. Fais chauffer une poêle et mets-y un morceau de beurre. Verse les œufs, attends une minute, puis plie l'omelette. Sers-la chaude. Du fromage ? Ajoutes-en si tu veux !",
+        "checklist": [
+          "Pas de s aux verbes en -er à l'impératif (ajoute, verse, plie).",
+          "Un s devant en et y (ajoutes-en, vas-y).",
+          "Le pronom après le verbe, avec un trait d'union (casse-les, sers-la)."
+        ]
+      }
+    },
+    {
+      "unit": "7.5",
+      "dictee": {
+        "titre": "Les regrets de l'oncle Paul",
+        "texte": "Mon oncle Paul raconte souvent sa jeunesse avec une pointe de regret. « Si j'avais écouté mes professeurs, je serais devenu médecin, dit-il. Si j'avais été moins timide, j'aurais demandé ta tante en mariage bien plus tôt. » Puis il éclate de rire : « Mais si j'étais devenu médecin, je ne serais jamais parti en Bretagne, je n'aurais jamais rencontré ta tante, et tu n'aurais pas un oncle aussi drôle ! » Avec des si, on refait sa vie… mais on finit toujours par aimer celle qu'on a eue.",
+        "points": [
+          "**Si j'avais écouté**, **si j'avais été** : si + plus-que-parfait, jamais de conditionnel.",
+          "**je serais devenu**, **j'aurais demandé** : conditionnel passé pour une conséquence qui ne s'est pas réalisée.",
+          "**dit-il** : l'incise, avec un trait d'union.",
+          "**celle qu'on a eue** : que reprend celle (la vie), COD placé avant : eue."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Raconte en cinq ou six phrases ce que serait ta vie si tu étais né à une autre époque, puis ce qui se serait passé si tu avais fait un autre choix dans ta vie.",
+        "model": "Si j'étais né au Moyen Âge, je serais peut-être devenu forgeron. Je vivrais dans un village et je ne saurais pas lire. Si j'avais vécu au dix-neuvième siècle, j'aurais voyagé en train à vapeur. Et si je n'avais pas choisi le théâtre au collège, je n'aurais jamais rencontré mes meilleurs amis. Finalement, je suis content d'être né aujourd'hui.",
+        "checklist": [
+          "Si + imparfait, puis conditionnel présent.",
+          "Si + plus-que-parfait, puis conditionnel passé.",
+          "Jamais de conditionnel juste après si."
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "level": 7,
+  "taunts": {
+    "phase2": [
+      "Il faut que tu t'inclines… ou que tu t'inclinasses, si tu préfères l'imparfait du subjonctif !",
+      "Bien que tu sois courageux, je doute que tu saches toutes mes formes irrégulières.",
+      "Écris, maintenant ! Et que chaque « que » te fasse trembler !"
+    ],
+    "phase3": [
+      "Dernière audience : si tu avais révisé, tu gagnerais… mais as-tu révisé ?",
+      "Mange, ou manges-en ? Les pièges de l'impératif sont mes fidèles sujets !",
+      "Après que tu es tombé… avec l'indicatif, oui… je régnerai pour toujours !"
+    ],
+    "lose": [
+      "Qu'on l'emmène ! Et qu'il revienne quand il saura que « que nous soyons » n'a pas de i.",
+      "Si tu avais révisé, tu aurais gagné. Le conditionnel passé est cruel.",
+      "Il faut que tu reviennes. C'est un ordre. Au subjonctif, bien sûr."
+    ]
+  },
+  "questions": [
+    { "unit": "7.1", "type": "mcq", "q": "Il faut que tu ___ à la poste.", "choices": ["ailles", "vas", "aies"], "answer": 0, "explain": "Subjonctif d'aller : que tu ailles." },
+    { "unit": "7.1", "type": "mcq", "q": "Je voudrais que vous ___ plus attentifs.", "choices": ["soyez", "êtes", "soyiez"], "answer": 0, "explain": "Vouloir que + subjonctif : que vous soyez, sans i." },
+    { "unit": "7.1", "type": "mcq", "q": "Il est nécessaire qu'ils ___ la vérité.", "choices": ["sachent", "savent", "sachant"], "answer": 0, "explain": "Subjonctif de savoir : qu'ils sachent." },
+    { "unit": "7.1", "type": "mcq", "q": "Il faut que nous ___ ensemble.", "choices": ["travaillions", "travaillons", "travailliions"], "answer": 0, "explain": "Travaill- + -ions : que nous travaillions." },
+    { "unit": "7.1", "type": "fill", "q": "Il faut que tu ___ ton vélo.", "hint": "réparer, au subjonctif présent", "answer": ["répares"], "explain": "Que tu répares : -es avec tu." },
+    { "unit": "7.1", "type": "fill", "q": "Je veux qu'elle ___ venir.", "hint": "pouvoir, au subjonctif présent", "answer": ["puisse"], "explain": "Subjonctif de pouvoir : qu'elle puisse." },
+    { "unit": "7.1", "type": "fill", "q": "Il faut que vous ___ le bus.", "hint": "prendre, au subjonctif présent", "answer": ["preniez"], "explain": "Que vous preniez : un seul n avec vous." },
+    { "unit": "7.1", "type": "fill", "q": "Il faut qu'ils ___ ce soir.", "hint": "partir, au subjonctif présent", "answer": ["partent"], "explain": "Que ils partent : -ent." },
+    { "unit": "7.1", "type": "fill", "q": "Je souhaite que nous ___ amis.", "hint": "rester, au subjonctif présent", "answer": ["restions"], "explain": "Que nous restions : -ions." },
+    { "unit": "7.1", "type": "error", "q": "Il faut que tu fais attention.", "wrong": 4, "fix": ["fasses"], "explain": "Après il faut que : subjonctif, que tu fasses." },
+    { "unit": "7.1", "type": "error", "q": "Je veux que vous ayiez confiance.", "wrong": 4, "fix": ["ayez"], "explain": "Pas de i après le y : que vous ayez." },
+    { "unit": "7.1", "type": "error", "q": "Il faut qu'il voit un médecin.", "wrong": 3, "fix": ["voie"], "explain": "Subjonctif de voir : qu'il voie." },
+
+    { "unit": "7.2", "type": "mcq", "q": "Je pense que tu ___ raison.", "choices": ["as", "aies"], "answer": 0, "explain": "Penser à la forme affirmative : indicatif." },
+    { "unit": "7.2", "type": "mcq", "q": "Bien qu'il ___ froid, nous sortons.", "choices": ["fasse", "fait", "fera"], "answer": 0, "explain": "Bien que + subjonctif." },
+    { "unit": "7.2", "type": "mcq", "q": "Il paraît qu'elle ___ déménagé.", "choices": ["a", "ait"], "answer": 0, "explain": "Il paraît que + indicatif." },
+    { "unit": "7.2", "type": "mcq", "q": "Je travaille pour que mes enfants ___ heureux.", "choices": ["soient", "sont", "seront"], "answer": 0, "explain": "Pour que + subjonctif." },
+    { "unit": "7.2", "type": "fill", "q": "Je ne crois pas qu'il ___ là.", "hint": "être : indicatif ou subjonctif ?", "answer": ["soit"], "explain": "Croire à la forme négative : subjonctif." },
+    { "unit": "7.2", "type": "fill", "q": "Dès qu'il ___, nous partirons.", "hint": "arriver : indicatif ou subjonctif ?", "answer": ["arrivera"], "explain": "Dès que + indicatif, ici au futur." },
+    { "unit": "7.2", "type": "fill", "q": "Bien que tu ___ raison, tu dois t'excuser.", "hint": "avoir : indicatif ou subjonctif ?", "answer": ["aies"], "explain": "Bien que + subjonctif : que tu aies." },
+    { "unit": "7.2", "type": "fill", "q": "Je suis certain qu'elle ___ la vérité.", "hint": "dire : indicatif ou subjonctif ?", "answer": ["dit", "dira"], "explain": "Être certain que + indicatif." },
+    { "unit": "7.2", "type": "fill", "q": "Il faut attendre que le gâteau ___.", "hint": "refroidir : indicatif ou subjonctif ?", "answer": ["refroidisse"], "explain": "Attendre que + subjonctif." },
+    { "unit": "7.2", "type": "error", "q": "Je suis sûr qu'il soit innocent.", "wrong": 4, "fix": ["est"], "explain": "Être sûr que exprime une certitude : indicatif." },
+    { "unit": "7.2", "type": "error", "q": "Avant qu'il part, dis-lui au revoir.", "wrong": 2, "fix": ["parte"], "explain": "Avant que + subjonctif : avant qu'il parte." },
+    { "unit": "7.2", "type": "error", "q": "Bien que tu as tort, je t'aime.", "wrong": 3, "fix": ["aies"], "explain": "Bien que + subjonctif : bien que tu aies tort." },
+
+    { "unit": "7.3", "type": "mcq", "q": "Je suis triste que tu ___ parti.", "choices": ["sois", "es", "soit"], "answer": 0, "explain": "Être triste que + subjonctif passé : que tu sois parti." },
+    { "unit": "7.3", "type": "mcq", "q": "Il est possible qu'elle ___ oublié.", "choices": ["ait", "aie", "a"], "answer": 0, "explain": "Il est possible que + subjonctif passé : qu'elle ait oublié." },
+    { "unit": "7.3", "type": "mcq", "q": "Bien que nous ___ arrivés tôt, il n'y avait plus de place.", "choices": ["soyons", "sommes", "soyions"], "answer": 0, "explain": "Bien que + subjonctif passé : que nous soyons arrivés." },
+    { "unit": "7.3", "type": "mcq", "q": "Je doute qu'ils ___ fini à temps.", "choices": ["aient", "ont", "aies"], "answer": 0, "explain": "Douter que + subjonctif passé : qu'ils aient fini." },
+    { "unit": "7.3", "type": "fill", "q": "Je suis contente que vous ___ venus.", "hint": "être, au subjonctif présent", "answer": ["soyez"], "explain": "Subjonctif passé : que vous soyez venus." },
+    { "unit": "7.3", "type": "fill", "q": "Il faut que tu ___ terminé avant midi.", "hint": "avoir, au subjonctif présent", "answer": ["aies"], "explain": "Subjonctif passé : que tu aies terminé." },
+    { "unit": "7.3", "type": "fill", "q": "Je regrette qu'elle ne ___ pas venue.", "hint": "être, au subjonctif présent", "answer": ["soit"], "explain": "Subjonctif passé : qu'elle soit venue." },
+    { "unit": "7.3", "type": "fill", "q": "Bien qu'il ___ beaucoup neigé, la route est ouverte.", "hint": "avoir, au subjonctif présent", "answer": ["ait"], "explain": "Subjonctif passé : qu'il ait neigé." },
+    { "unit": "7.3", "type": "fill", "q": "Je ne pense pas qu'elles se ___ trompées.", "hint": "être, au subjonctif présent", "answer": ["soient"], "explain": "Verbe pronominal : qu'elles se soient trompées." },
+    { "unit": "7.3", "type": "error", "q": "Je suis ravi que tu as appelé.", "wrong": 5, "fix": ["aies"], "explain": "Être ravi que + subjonctif : que tu aies appelé." },
+    { "unit": "7.3", "type": "error", "q": "Bien qu'elle a réussi, elle reste modeste.", "wrong": 2, "fix": ["ait"], "explain": "Bien que + subjonctif : bien qu'elle ait réussi." },
+    { "unit": "7.3", "type": "error", "q": "Il est dommage qu'ils sont partis.", "wrong": 4, "fix": ["soient"], "explain": "Il est dommage que + subjonctif : qu'ils soient partis." },
+
+    { "unit": "7.4", "type": "mcq", "q": "___ ta grand-mère, elle t'attend.", "choices": ["Appelle", "Appelles", "Appele"], "answer": 0, "explain": "Verbe en -er à l'impératif : appelle, sans s." },
+    { "unit": "7.4", "type": "mcq", "q": "Du gâteau ? ___ !", "choices": ["Prends-en", "Prend-en", "Prends-z-en"], "answer": 0, "explain": "Prendre garde son s : prends-en." },
+    { "unit": "7.4", "type": "mcq", "q": "Ne ___ pas, ce n'est rien.", "choices": ["pleure", "pleures", "pleurez-vous"], "answer": 0, "explain": "Verbe en -er à l'impératif : pleure, sans s." },
+    { "unit": "7.4", "type": "mcq", "q": "___ fiers de vous, les enfants !", "choices": ["Soyez", "Soyiez", "Êtes"], "answer": 0, "explain": "Impératif d'être : soyez." },
+    { "unit": "7.4", "type": "fill", "q": "___ la porte en partant.", "hint": "fermer, à l'impératif (tu)", "answer": ["Ferme"], "explain": "Verbe en -er : ferme, sans s." },
+    { "unit": "7.4", "type": "fill", "q": "___ tes chaussures, on part.", "hint": "mettre, à l'impératif (tu)", "answer": ["Mets"], "explain": "Mettre garde son s : mets." },
+    { "unit": "7.4", "type": "fill", "q": "___ prudents sur la route.", "hint": "être, à l'impératif (vous)", "answer": ["Soyez"], "explain": "Impératif d'être : soyez." },
+    { "unit": "7.4", "type": "fill", "q": "___ patience, il arrive.", "hint": "avoir, à l'impératif (vous)", "answer": ["Ayez"], "explain": "Impératif d'avoir : ayez." },
+    { "unit": "7.4", "type": "fill", "q": "___ donc nous voir dimanche !", "hint": "venir, à l'impératif (tu)", "answer": ["Viens"], "explain": "Venir garde son s : viens." },
+    { "unit": "7.4", "type": "error", "q": "Chantes plus fort !", "wrong": 0, "fix": ["Chante"], "explain": "Verbe en -er à l'impératif : chante, sans s." },
+    { "unit": "7.4", "type": "error", "q": "Prend ton temps.", "wrong": 0, "fix": ["Prends"], "explain": "Prendre à l'impératif : prends, avec un s." },
+    { "unit": "7.4", "type": "error", "q": "Veuilliez patienter.", "wrong": 0, "fix": ["Veuillez"], "explain": "Impératif de vouloir : veuillez." },
+
+    { "unit": "7.5", "type": "mcq", "q": "Si j'avais des ailes, je ___ jusqu'à toi.", "choices": ["volerais", "volerai", "vole"], "answer": 0, "explain": "Si + imparfait, conditionnel présent." },
+    { "unit": "7.5", "type": "mcq", "q": "Si nous ___ partis plus tôt, nous serions déjà arrivés.", "choices": ["étions", "serions", "sommes"], "answer": 0, "explain": "Si + plus-que-parfait : si nous étions partis." },
+    { "unit": "7.5", "type": "mcq", "q": "Si tu travailles, tu ___.", "choices": ["réussiras", "réussirais", "aurais réussi"], "answer": 0, "explain": "Si + présent, futur." },
+    { "unit": "7.5", "type": "mcq", "q": "Elle ___ venir si elle avait su.", "choices": ["aurait pu", "pourra", "avait pu"], "answer": 0, "explain": "Si + plus-que-parfait, conditionnel passé." },
+    { "unit": "7.5", "type": "fill", "q": "Si j'étais toi, je ___ attention.", "hint": "faire, au conditionnel présent", "answer": ["ferais"], "explain": "Si + imparfait, conditionnel présent." },
+    { "unit": "7.5", "type": "fill", "q": "S'il ___ fait beau, nous serions allés à la plage.", "hint": "avoir, à l'imparfait", "answer": ["avait"], "explain": "Si + plus-que-parfait : s'il avait fait beau." },
+    { "unit": "7.5", "type": "fill", "q": "Vous ___ dû le dire !", "hint": "avoir, au conditionnel présent", "answer": ["auriez"], "explain": "Conditionnel passé : vous auriez dû." },
+    { "unit": "7.5", "type": "fill", "q": "Si elle vient, je lui ___ mon cadeau.", "hint": "donner, au futur", "answer": ["donnerai"], "explain": "Si + présent, futur." },
+    { "unit": "7.5", "type": "fill", "q": "S'ils avaient couru, ils ___ attrapé le bus.", "hint": "avoir, au conditionnel présent", "answer": ["auraient"], "explain": "Conditionnel passé : ils auraient attrapé." },
+    { "unit": "7.5", "type": "error", "q": "Si on aurait su, on serait venus.", "wrong": 2, "fix": ["avait"], "explain": "Après si, jamais de conditionnel : si on avait su." },
+    { "unit": "7.5", "type": "error", "q": "Si tu viendrais, je serais content.", "wrong": 2, "fix": ["venais"], "explain": "Après si, l'imparfait : si tu venais." },
+    { "unit": "7.5", "type": "error", "q": "Nous aurions du réserver.", "wrong": 2, "fix": ["dû"], "explain": "Le participe de devoir s'écrit dû." }
+  ]
+}
