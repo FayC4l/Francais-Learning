@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 import { clean, matches } from "../src/answer.js";
 import { wordCountMismatches } from "../src/fill.js";
 import { frTypo } from "../src/typo.js";
-import { loadDictionary, tierOf } from "../src/writing/spell.js";
+import { loadDictionary, tierOf, distance } from "../src/writing/spell.js";
 
 export const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 export const loadDict = () => loadDictionary(readFileSync(join(root, "data", "dict-fr.txt"), "utf8"));
@@ -73,6 +73,12 @@ export function checkGrammar(g, W, { err, warn, spell, count = {} }) {
     else if (g.fix.some((f) => matches(tokens[g.wrong], [f], { caseSensitive: !!g.case }) && (!g.case || tokens[g.wrong].replace(/[.,!?;:…»]+$/, "") === f))) err(W, `la correction est identique au mot faux "${tokens[g.wrong]}"`);
     const rest = tokens.filter((_, i) => i !== g.wrong).join(" ");
     spell(W, `${rest} ${g.fix?.join(" ")} ${g.explain}`);
+    // A wrong index usually points next to the real mistake: a neighbour much closer to the fix (« ont regardées » → « regardé »).
+    const bare = (t) => String(t || "").replace(/[.,!?;:…»\s ]+$/u, "").toLowerCase();
+    const fixWord = String(g.fix?.[0] || "").toLowerCase();
+    const own = distance(bare(tokens[g.wrong]), fixWord, 9);
+    const closer = [-2, -1, 1, 2].map((d) => tokens[g.wrong + d]).filter((t) => t && bare(t).length >= 4 && distance(bare(t), fixWord, 9) <= 2 && distance(bare(t), fixWord, 9) < own);
+    if (fixWord && closer.length) warn(W, `« ${closer[0]} », à côté du mot faux, ressemble plus à la correction « ${fixWord} » : vérifie l'index wrong`);
     if (process.env.SHOW_ERRORS) console.log(`    [${W}] mot faux : « ${tokens[g.wrong]} » → ${g.fix}`);
   } else err(W, `type inconnu "${g.type}"`);
 }

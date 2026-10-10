@@ -1,0 +1,86 @@
+{
+  "level": 6,
+  "taunts": {
+    "phase2": [
+      "Les fautes que tu as faites… je les ai toutes notées. En rouge.",
+      "Tu t'es laissé surprendre ? Sans s, bien sûr. Je suis pointilleux.",
+      "Maintenant, écris ! Mes participes t'attendent, accordés ou non…"
+    ],
+    "phase3": [
+      "Dernière épreuve : les pronominaux. Elles se sont parlé… ou parlées ? Hé hé.",
+      "Les heures qu'a duré cet examen… sans accord, voyons !",
+      "Fatiguant ou fatigant ? Toi, tu es surtout fatigué !"
+    ],
+    "lose": [
+      "Les erreurs que tu as commises sont nombreuses. Accordées au pluriel, évidemment.",
+      "Retourne à tes leçons : je t'ai vu hésiter devant chaque participe !",
+      "Reviens quand tu sauras débusquer le COD. Je ne bouge pas d'ici."
+    ]
+  },
+  "questions": [
+    { "unit": "6.1", "type": "mcq", "q": "Mes grands-parents sont ___ en Italie.", "choices": ["partis", "parti", "parties"], "answer": 0, "explain": "Avec être, accord avec le sujet : mes grands-parents, masculin pluriel." },
+    { "unit": "6.1", "type": "mcq", "q": "Les enfants ont ___ un château de sable.", "choices": ["construit", "construits", "construite"], "answer": 0, "explain": "Avec avoir, le COD (un château) est placé après : invariable." },
+    { "unit": "6.1", "type": "mcq", "q": "Cette lettre a été ___ à la main.", "choices": ["écrite", "écrit", "écrites"], "answer": 0, "explain": "Voix passive : accord avec le sujet, cette lettre." },
+    { "unit": "6.1", "type": "mcq", "q": "Nous avons ___ toute la nuit.", "choices": ["marché", "marchés", "marcher"], "answer": 0, "explain": "Avec avoir, sans COD : invariable." },
+    { "unit": "6.1", "type": "fill", "q": "Les tableaux ont été ___ par un expert.", "hint": "examiner", "answer": ["examinés"], "explain": "Voix passive : accord avec les tableaux." },
+    { "unit": "6.1", "type": "fill", "q": "Ma grand-mère est ___ en Bretagne.", "hint": "naître", "answer": ["née"], "explain": "Avec être, accord avec ma grand-mère." },
+    { "unit": "6.1", "type": "fill", "q": "Elles ont ___ des crêpes.", "hint": "faire", "answer": ["fait"], "explain": "Le COD (des crêpes) est placé après : invariable." },
+    { "unit": "6.1", "type": "fill", "q": "Les invités ont ___ très tard.", "hint": "dîner", "answer": ["dîné"], "explain": "Avec avoir, sans COD : invariable." },
+    { "unit": "6.1", "type": "fill", "q": "Les routes ont été ___ par la neige.", "hint": "bloquer", "answer": ["bloquées"], "explain": "Voix passive : accord avec les routes." },
+    { "unit": "6.1", "type": "error", "q": "Mes sœurs ont regardées un film.", "wrong": 3, "fix": ["regardé"], "explain": "Avec avoir, pas d'accord avec le sujet ; le COD est placé après." },
+    { "unit": "6.1", "type": "error", "q": "Les ponts ont été détruit par la crue.", "wrong": 4, "fix": ["détruits"], "explain": "Voix passive : accord avec les ponts." },
+    { "unit": "6.1", "type": "error", "q": "Elle est tombé dans l'escalier.", "wrong": 2, "fix": ["tombée"], "explain": "Avec être, accord avec le sujet féminin." },
+
+    { "unit": "6.2", "type": "mcq", "q": "Les clés que tu as ___ étaient dans ta poche.", "choices": ["cherchées", "cherché", "cherchés"], "answer": 0, "explain": "Que = les clés, COD placé avant : féminin pluriel." },
+    { "unit": "6.2", "type": "mcq", "q": "Cette chanson, je l'ai ___ mille fois.", "choices": ["entendue", "entendu", "entendues"], "answer": 0, "explain": "L' = cette chanson, COD placé avant : féminin singulier." },
+    { "unit": "6.2", "type": "mcq", "q": "Quels films avez-vous ___ ?", "choices": ["vus", "vu", "vues"], "answer": 0, "explain": "Quels films, COD placé avant : masculin pluriel." },
+    { "unit": "6.2", "type": "mcq", "q": "J'ai ___ les tomates du jardin.", "choices": ["cueilli", "cueillies", "cueillis"], "answer": 0, "explain": "Le COD (les tomates) est placé après : invariable." },
+    { "unit": "6.2", "type": "fill", "q": "La voiture qu'il a ___ est rouge.", "hint": "acheter", "answer": ["achetée"], "explain": "Que = la voiture, COD placé avant." },
+    { "unit": "6.2", "type": "fill", "q": "Ces erreurs, tu les as ___ ?", "hint": "corriger", "answer": ["corrigées"], "explain": "Les = ces erreurs, COD placé avant : féminin pluriel." },
+    { "unit": "6.2", "type": "fill", "q": "Combien de kilomètres avez-vous ___ ?", "hint": "parcourir", "answer": ["parcourus"], "explain": "Combien de kilomètres, COD placé avant : masculin pluriel." },
+    { "unit": "6.2", "type": "fill", "q": "Les fleurs que tu m'as ___ sont magnifiques.", "hint": "offrir", "answer": ["offertes"], "explain": "Que = les fleurs, COD placé avant : féminin pluriel." },
+    { "unit": "6.2", "type": "fill", "q": "Ma sœur ? Je l'ai ___ à la gare.", "hint": "accompagner", "answer": ["accompagnée"], "explain": "L' = ma sœur, COD placé avant : féminin singulier." },
+    { "unit": "6.2", "type": "error", "q": "La tarte que maman a préparé est délicieuse.", "wrong": 5, "fix": ["préparée"], "explain": "Que = la tarte, COD placé avant : préparée." },
+    { "unit": "6.2", "type": "error", "q": "Mes lunettes, je les ai cassé.", "wrong": 5, "fix": ["cassées"], "explain": "Les = mes lunettes, COD placé avant : féminin pluriel." },
+    { "unit": "6.2", "type": "error", "q": "Quelle robe as-tu choisi ?", "wrong": 3, "fix": ["choisie"], "explain": "Quelle robe, COD placé avant : féminin singulier." },
+
+    { "unit": "6.3", "type": "mcq", "q": "Elles se sont ___ de bonne heure.", "choices": ["couchées", "couché", "couchés"], "answer": 0, "explain": "Coucher qui ? elles-mêmes : se est COD, accord." },
+    { "unit": "6.3", "type": "mcq", "q": "Ils se sont ___ des cadeaux.", "choices": ["offert", "offerts", "offertes"], "answer": 0, "explain": "Offrir des cadeaux à quelqu'un : se est COI, et le COD est placé après." },
+    { "unit": "6.3", "type": "mcq", "q": "Les années se sont ___.", "choices": ["écoulées", "écoulé", "écoulés"], "answer": 0, "explain": "S'écouler n'existe pas sans se : accord avec les années." },
+    { "unit": "6.3", "type": "mcq", "q": "Elle s'est ___ le genou.", "choices": ["écorché", "écorchée", "écorchés"], "answer": 0, "explain": "Le COD (le genou) est placé après : pas d'accord." },
+    { "unit": "6.3", "type": "fill", "q": "Mes amies se sont ___ en vacances.", "hint": "se retrouver", "answer": ["retrouvées"], "explain": "Retrouver qui ? les unes les autres : se est COD, accord." },
+    { "unit": "6.3", "type": "fill", "q": "Les deux frères se sont ___ toute la soirée.", "hint": "se mentir", "answer": ["menti"], "explain": "Mentir à quelqu'un : se est COI, pas d'accord." },
+    { "unit": "6.3", "type": "fill", "q": "Elle s'est ___ d'un rêve étrange.", "hint": "se souvenir", "answer": ["souvenue"], "explain": "Se souvenir n'existe qu'à la forme pronominale : accord avec elle." },
+    { "unit": "6.3", "type": "fill", "q": "Ils se sont ___ la main.", "hint": "se serrer", "answer": ["serré"], "explain": "Le COD (la main) est placé après : pas d'accord." },
+    { "unit": "6.3", "type": "fill", "q": "Nos voisines se sont ___ du bruit.", "hint": "se plaindre", "answer": ["plaintes"], "explain": "Se plaindre est un verbe pronominal dont le sens change : accord avec le sujet." },
+    { "unit": "6.3", "type": "error", "q": "Ils se sont téléphonés tous les jours.", "wrong": 3, "fix": ["téléphoné"], "explain": "Téléphoner à quelqu'un : se est COI, pas d'accord." },
+    { "unit": "6.3", "type": "error", "q": "Elle s'est coupée les ongles.", "wrong": 2, "fix": ["coupé"], "explain": "Le COD (les ongles) est placé après : pas d'accord." },
+    { "unit": "6.3", "type": "error", "q": "Les filles se sont absenté hier.", "wrong": 4, "fix": ["absentées"], "explain": "S'absenter n'existe qu'à la forme pronominale : accord avec les filles." },
+
+    { "unit": "6.4", "type": "mcq", "q": "Les arbres qu'il a ___ abattre étaient malades.", "choices": ["fait", "faits", "faites"], "answer": 0, "explain": "Fait suivi d'un infinitif reste invariable." },
+    { "unit": "6.4", "type": "mcq", "q": "Des erreurs, j'en ai ___ plusieurs.", "choices": ["fait", "faites", "faits"], "answer": 0, "explain": "Avec en, le participe reste invariable." },
+    { "unit": "6.4", "type": "mcq", "q": "La violoniste que j'ai ___ jouer était jeune.", "choices": ["entendue", "entendu", "entendues"], "answer": 0, "explain": "C'est la violoniste qui joue : accord avec que, mis pour la violoniste." },
+    { "unit": "6.4", "type": "mcq", "q": "Les dix minutes que j'ai ___ m'ont paru une éternité.", "choices": ["attendu", "attendues", "attendus"], "answer": 0, "explain": "Une durée n'est pas un COD : invariable." },
+    { "unit": "6.4", "type": "fill", "q": "Elles se sont ___ prendre au piège.", "hint": "laisser", "answer": ["laissé"], "explain": "Laissé suivi d'un infinitif est invariable (rectifications de 1990)." },
+    { "unit": "6.4", "type": "fill", "q": "Les fruits qu'il y a ___ cet été étaient délicieux.", "hint": "avoir", "answer": ["eu"], "explain": "Il y a : verbe impersonnel, participe invariable." },
+    { "unit": "6.4", "type": "fill", "q": "Les cent euros que ce jeu m'a ___ m'ont manqué.", "hint": "coûter", "answer": ["coûté"], "explain": "Un prix n'est pas un COD : coûté reste invariable." },
+    { "unit": "6.4", "type": "fill", "q": "Les dangers qu'il a ___ affronter l'ont endurci.", "hint": "falloir", "answer": ["fallu"], "explain": "Il faut : verbe impersonnel, participe invariable." },
+    { "unit": "6.4", "type": "fill", "q": "Les oiseaux que j'ai ___ chanter étaient des merles.", "hint": "entendre", "answer": ["entendus"], "explain": "Ce sont les oiseaux qui chantent : accord." },
+    { "unit": "6.4", "type": "error", "q": "Elle s'est faite voler son sac.", "wrong": 2, "fix": ["fait"], "explain": "Fait suivi d'un infinitif reste invariable." },
+    { "unit": "6.4", "type": "error", "q": "Des photos, j'en ai prises des centaines.", "wrong": 4, "fix": ["pris"], "explain": "Avec en, le participe reste invariable." },
+    { "unit": "6.4", "type": "error", "q": "La patience qu'il a fallue était immense.", "wrong": 4, "fix": ["fallu"], "explain": "Il faut : verbe impersonnel, participe invariable." },
+
+    { "unit": "6.5", "type": "mcq", "q": "Ce film au scénario mystérieux est très ___.", "choices": ["intrigant", "intriguant", "intrigants"], "answer": 0, "explain": "Adjectif verbal (très) : intrigant, sans u." },
+    { "unit": "6.5", "type": "mcq", "q": "Les pilotes, ___ au-dessus des nuages, admiraient la vue.", "choices": ["naviguant", "navigants", "naviguants"], "answer": 0, "explain": "Participe présent suivi d'un complément : naviguant, invariable." },
+    { "unit": "6.5", "type": "mcq", "q": "Ces deux propositions sont ___.", "choices": ["équivalentes", "équivalantes", "équivalents"], "answer": 0, "explain": "Adjectif verbal : équivalent, avec -ent, accordé au féminin pluriel." },
+    { "unit": "6.5", "type": "mcq", "q": "On apprend en ___ des erreurs.", "choices": ["faisant", "faisants", "faisante"], "answer": 0, "explain": "Gérondif : en + participe présent, invariable." },
+    { "unit": "6.5", "type": "fill", "q": "Une tenue ___ choqua les invités.", "hint": "provoquer : l'adjectif, accordé", "answer": ["provocante"], "explain": "Adjectif verbal : provocant, avec c, accordé avec tenue." },
+    { "unit": "6.5", "type": "fill", "q": "Les élèves, ___ la consigne, ont échoué.", "hint": "négliger : participe présent", "answer": ["négligeant"], "explain": "Participe présent suivi d'un complément : négligeant, invariable." },
+    { "unit": "6.5", "type": "fill", "q": "Il a obtenu des résultats ___.", "hint": "exceller : l'adjectif, accordé", "answer": ["excellents"], "explain": "Adjectif verbal : excellent, avec -ent, accordé avec résultats." },
+    { "unit": "6.5", "type": "fill", "q": "Il siffle en ___.", "hint": "travailler, au gérondif", "answer": ["travaillant"], "explain": "Gérondif : en + participe présent." },
+    { "unit": "6.5", "type": "fill", "q": "Cette histoire est très ___.", "hint": "émouvoir : l'adjectif, accordé", "answer": ["émouvante"], "explain": "Adjectif verbal accordé avec histoire." },
+    { "unit": "6.5", "type": "error", "q": "Un homme très influant a parlé.", "wrong": 3, "fix": ["influent"], "explain": "Adjectif verbal : influent, avec -ent." },
+    { "unit": "6.5", "type": "error", "q": "Ces exercices sont fatiguants.", "wrong": 3, "fix": ["fatigants"], "explain": "Adjectif verbal : fatigants, sans u." },
+    { "unit": "6.5", "type": "error", "q": "Les élèves, connaissants la réponse, levèrent la main.", "wrong": 2, "fix": ["connaissant"], "explain": "Participe présent suivi d'un complément : invariable." }
+  ]
+}

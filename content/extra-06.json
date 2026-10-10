@@ -1,0 +1,121 @@
+{
+  "level": 6,
+  "units": [
+    {
+      "unit": "6.1",
+      "dictee": {
+        "titre": "La fête de l'école",
+        "texte": "La fête de l'école a été organisée par les parents. Les élèves sont arrivés tôt et ont installé les tables dans la cour. Les filles de la chorale ont chanté trois chansons, puis les plus petits ont dansé sous les applaudissements. Les gâteaux, préparés la veille, ont été vendus en une heure. Le soir, les familles sont reparties ravies : la fête avait été réussie.",
+        "points": [
+          "**a été organisée**, **ont été vendus** : voix passive, accord avec le sujet ; **été** reste invariable.",
+          "**sont arrivés**, **sont reparties** : avec être, accord avec le sujet.",
+          "**ont installé**, **ont chanté**, **ont dansé** : avec avoir, pas d'accord (COD placé après, ou pas de COD).",
+          "**préparés** : participe employé seul, il s'accorde comme un adjectif avec les gâteaux."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Raconte à voix haute une fête ou une sortie de groupe au passé composé, en six phrases, avec des verbes conjugués avec être et avec avoir. Puis écris trois de ces phrases.",
+        "model": "Samedi, mes cousins sont venus à la maison. Nous sommes allés au parc et nous avons joué au ballon. Mes tantes ont préparé un pique-nique. Les gâteaux ont été dévorés en cinq minutes. Le soir, tout le monde est reparti fatigué mais content.",
+        "checklist": [
+          "Avec être, j'ai accordé le participe avec le sujet.",
+          "Avec avoir, je n'ai pas accordé avec le sujet.",
+          "À la voix passive, le participe s'accorde avec le sujet."
+        ]
+      }
+    },
+    {
+      "unit": "6.2",
+      "dictee": {
+        "titre": "Les cadeaux de Noël",
+        "texte": "Les cadeaux que j'ai reçus cette année m'ont fait très plaisir. La montre que mes parents m'ont offerte brille à mon poignet. Les livres que ma tante a choisis sont passionnants : je les ai déjà lus. Quant à l'écharpe que ma grand-mère a tricotée, je l'ai mise dès le premier jour. Et toi, quels cadeaux as-tu préférés ?",
+        "points": [
+          "**reçus**, **offerte**, **choisis**, **tricotée** : que reprend le nom qui précède ; ce COD est placé avant, donc accord.",
+          "**je les ai lus** : les = les livres, masculin pluriel.",
+          "**je l'ai mise** : l' = l'écharpe, féminin.",
+          "**quels cadeaux as-tu préférés** : le COD est dans la question, placé avant."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Décris en cinq phrases des objets auxquels tu tiens, en utilisant au moins trois fois un COD placé avant le verbe (que, le, la, les).",
+        "model": "La montre que mon grand-père m'a donnée ne quitte jamais mon poignet. Les livres que j'ai lus cent fois sont rangés près de mon lit. Ma première médaille, je l'ai gagnée à huit ans. Les photos que nous avons prises en Bretagne sont collées au mur. Ces objets, je les ai tous gardés.",
+        "checklist": [
+          "J'ai repéré chaque COD placé avant le verbe.",
+          "J'ai accordé le participe en genre et en nombre avec ce COD.",
+          "Je n'ai pas accordé quand le COD était placé après."
+        ]
+      }
+    },
+    {
+      "unit": "6.3",
+      "dictee": {
+        "titre": "Le départ en colonie",
+        "texte": "Ce matin, les enfants se sont levés à l'aube. Ils se sont lavé le visage, se sont habillés en silence, puis se sont dirigés vers le car. Les mères se sont embrassées, les pères se sont serré la main. Léa et Chloé se sont promis de s'écrire chaque jour. Quand le car s'est éloigné, les parents se sont souri, un peu émus.",
+        "points": [
+          "**levés**, **habillés**, **dirigés**, **embrassées** : se est COD, placé avant : accord.",
+          "**lavé le visage**, **serré la main** : le COD est placé après : pas d'accord.",
+          "**promis**, **souri** : promettre à, sourire à : se est COI, pas d'accord.",
+          "**s'est éloigné** : accord avec le car, masculin singulier."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Raconte à voix haute ta matinée avec au moins cinq verbes pronominaux au passé composé (se réveiller, se lever, se laver les dents, se dépêcher, se rendre compte…). Puis écris ces phrases.",
+        "model": "Ce matin, je me suis réveillée tard. Je me suis levée d'un bond, je me suis lavé les dents en courant et je me suis habillée en deux minutes. Dans le bus, je me suis rendu compte que nous étions dimanche !",
+        "checklist": [
+          "Se est COD : accord (je me suis levée).",
+          "Un COD placé après le verbe : pas d'accord (je me suis lavé les dents).",
+          "Se rendre compte : rendu reste invariable."
+        ]
+      }
+    },
+    {
+      "unit": "6.4",
+      "dictee": {
+        "titre": "Une soirée inoubliable",
+        "texte": "Les musiciens que nous avons entendus jouer hier étaient remarquables. Les morceaux qu'ils ont choisi d'interpréter étaient pourtant difficiles. Ma sœur, qui s'était fait offrir une place, a pleuré d'émotion. Des concerts, j'en ai vu beaucoup, mais celui-ci restera gravé dans ma mémoire. Les trois heures qu'il a duré sont passées comme un rêve. Quelle soirée il y a eu !",
+        "points": [
+          "**entendus jouer** : ce sont les musiciens qui jouent, donc accord.",
+          "**choisi d'interpréter** : que est le COD d'interpréter, pas de choisir : pas d'accord.",
+          "**s'était fait offrir** : fait suivi d'un infinitif reste invariable. **j'en ai vu** : avec en, pas d'accord.",
+          "**qu'il a duré** : une durée n'est pas un COD. **il y a eu** : verbe impersonnel, invariable."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Écris quatre phrases pièges pour une dictée en famille, chacune avec un cas particulier : fait suivi d'un infinitif, le pronom en, un verbe impersonnel, coûté ou duré.",
+        "model": "Elle s'est fait gronder par le gardien. Des bonbons, j'en ai mangé dix. La neige qu'il a fallu déblayer était lourde. Les deux heures que le trajet a duré m'ont paru longues.",
+        "checklist": [
+          "Fait suivi d'un infinitif : invariable.",
+          "Avec en : invariable.",
+          "Verbe impersonnel : invariable.",
+          "Prix, durée ou poids : invariable."
+        ]
+      }
+    },
+    {
+      "unit": "6.5",
+      "dictee": {
+        "titre": "Une journée fatigante",
+        "texte": "Quelle journée fatigante ! En arrivant au bureau, ma mère a trouvé des dossiers urgents s'empilant jusqu'au plafond. Ses collègues, différant d'avis sur chaque projet, se disputaient sans cesse. Le téléphone, sonnant toutes les cinq minutes, n'arrangeait rien. Heureusement, son chef, toujours souriant, a trouvé des arguments convaincants pour calmer tout le monde. Le soir, en rentrant, elle s'est endormie sur le canapé, épuisée mais satisfaite.",
+        "points": [
+          "**fatigante**, **convaincants** : adjectifs verbaux, accordés et sans u.",
+          "**s'empilant**, **différant** : participes présents suivis d'un complément, invariables.",
+          "**En arrivant**, **en rentrant** : gérondifs ; leur sujet est bien celui du verbe principal (ma mère, elle).",
+          "**s'est endormie** : verbe pronominal, accord avec elle."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Explique à voix haute la différence entre « fatiguant » et « fatigant », avec un exemple pour chacun, puis fais de même pour « convainquant » et « convaincant ». Écris tes quatre exemples.",
+        "model": "En fatiguant ses adversaires, le coureur a gagné : c'est un participe présent. Cette course est fatigante : c'est un adjectif. En convainquant le jury, elle a obtenu le prix. Son discours était convaincant.",
+        "checklist": [
+          "Le participe présent exprime une action et ne s'accorde pas.",
+          "L'adjectif verbal exprime une qualité et s'accorde.",
+          "Les adjectifs fatigant et convaincant n'ont pas de u."
+        ]
+      }
+    }
+  ]
+}

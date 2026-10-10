@@ -1,0 +1,443 @@
+{
+  "id": 6,
+  "cefr": "B1",
+  "title": "Les accords du participe",
+  "sub": "La grande règle et ses pièges",
+  "intro": "Être ou avoir, le COD placé avant, les verbes pronominaux, les cas particuliers qui font trembler les champions de dictée, et la différence entre participe présent et adjectif verbal.",
+  "boss": {
+    "name": "Le Professeur Participe",
+    "taunt": "Les fautes que tu as faites… ou fait ? Hum. Je les ai notées. Ou noté. Bref : prépare-toi !",
+    "defeat": "Les erreurs que j'ai commises… avec un e et un s, oui. Je me suis laissé battre. Sans s, depuis les rectifications de l'orthographe !"
+  },
+  "units": [
+    {
+      "id": "6.1",
+      "name": "Être ou avoir ?",
+      "title": "Révision : l'accord avec être, l'absence d'accord avec avoir, la voix passive",
+      "goal": "Accorder le participe avec le sujet après être, et le laisser invariable après avoir quand le COD n'est pas placé avant.",
+      "lesson": [
+        { "type": "p", "text": "Aux temps composés, le participe passé s'accorde (ou non) selon l'auxiliaire. Deux règles de base couvrent la plupart des cas." },
+        { "type": "rule", "title": "Avec être", "text": "Le participe s'accorde avec le **sujet** : [[Les feuilles sont tombées.]] [[Elle était partie.]] Même chose à la voix passive : [[Ces maisons ont été construites en un an.]]" },
+        { "type": "rule", "title": "Avec avoir", "text": "Le participe ne s'accorde **jamais avec le sujet** : [[Elles ont chanté.]] Il ne s'accorde qu'avec un complément d'objet direct (COD) placé **avant** le verbe (station suivante). Sans COD, ou avec un COD placé après : invariable. [[Elles ont mangé des pommes.]]" },
+        { "type": "rule", "title": "Trouver le COD", "text": "Pose la question **qui ?** ou **quoi ?** après le verbe : « Elles ont mangé quoi ? des pommes » → le COD est placé après : pas d'accord." },
+        { "type": "table", "head": ["Situation", "Règle", "Exemple"], "rows": [["être", "accord avec le sujet", "Elles sont venues."], ["avoir, sans COD", "invariable", "Elles ont dormi."], ["avoir, COD placé après", "invariable", "Elles ont acheté des fleurs."], ["avoir, COD placé avant", "accord avec le COD", "Les fleurs qu'elles ont achetées"]] },
+        { "type": "examples", "items": [
+          { "ex": "Les invités sont **arrivés** à l'heure.", "note": "être : accord avec les invités" },
+          { "ex": "Mes cousines ont **dormi** chez nous.", "note": "avoir, pas de COD : invariable" },
+          { "ex": "Ma sœur a **écrit** une longue lettre.", "note": "avoir, COD après : invariable" },
+          { "ex": "Les élèves ont été **félicités** par le directeur.", "note": "voix passive : accord avec le sujet" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "Elles ont ~~chantées~~.", "ok": "Elles ont **chanté**.", "why": "Avec avoir, jamais d'accord avec le sujet." },
+          { "ko": "Les filles sont ~~arrivé~~.", "ok": "Les filles sont **arrivées**.", "why": "Avec être, accord avec le sujet." },
+          { "ko": "Ma sœur a ~~écrite~~ une lettre.", "ok": "Ma sœur a **écrit** une lettre.", "why": "Le COD (une lettre) est placé après : invariable." },
+          { "ko": "Ces tableaux ont été ~~peint~~ en Provence.", "ok": "Ces tableaux ont été **peints** en Provence.", "why": "Voix passive : accord avec le sujet." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Le participe **été** est toujours invariable : [[elles ont été]]. Mais le participe qui le suit, au passif, s'accorde avec le sujet : [[elles ont été invitées]]." },
+        { "type": "fun", "text": "Le sais-tu ? On attribue la règle de l'accord avec le COD au poète Clément Marot, qui l'a mise en vers au XVIe siècle en s'inspirant de l'italien. Depuis, elle fait transpirer des générations d'élèves !" }
+      ],
+      "vocab": [
+        { "mot": "érudit", "def": "Personne qui possède un savoir très étendu.", "ex": "Ce vieil érudit connaît toutes les langues anciennes.", "alt": [] },
+        { "mot": "pédagogue", "def": "Personne qui sait enseigner et transmettre.", "ex": "Ce professeur est un excellent pédagogue.", "alt": [] },
+        { "mot": "apprentissage", "def": "Fait d'apprendre un savoir ou un métier.", "ex": "L'apprentissage d'une langue demande de la patience.", "alt": [] },
+        { "mot": "connaissance", "def": "Ce que l'on sait ; ou personne que l'on connaît.", "ex": "Il a une connaissance parfaite du sujet.", "alt": [] },
+        { "mot": "compétence", "def": "Capacité reconnue à faire quelque chose.", "ex": "Cette mission dépasse mes compétences.", "alt": [] },
+        { "mot": "lauréat", "def": "Personne qui a remporté un prix ou un concours.", "ex": "Le lauréat du concours monte sur scène.", "alt": [] },
+        { "mot": "mention", "def": "Appréciation qui accompagne un examen réussi ; ou fait de citer.", "ex": "Elle a obtenu son bac avec mention très bien.", "alt": [] },
+        { "mot": "cursus", "def": "Ensemble des études suivies par un élève ou un étudiant.", "ex": "Son cursus l'a menée de Lille à Montréal.", "alt": [] },
+        { "mot": "assiduité", "def": "Présence régulière et application constante.", "ex": "Le professeur salue l'assiduité de ses élèves.", "alt": [] },
+        { "mot": "rigueur", "def": "Grande exactitude, sévérité dans la méthode.", "ex": "Ce travail demande de la rigueur.", "alt": [] },
+        { "mot": "lacune", "def": "Ce qui manque dans les connaissances de quelqu'un.", "ex": "Il a quelques lacunes en conjugaison.", "alt": [] },
+        { "mot": "progrès", "def": "Amélioration, avancée vers le mieux.", "ex": "Tu as fait de grands progrès en orthographe.", "alt": [] },
+        { "mot": "persévérance", "def": "Qualité de celui qui continue malgré les difficultés.", "ex": "Sa persévérance a fini par payer.", "alt": [] },
+        { "mot": "dissertation", "def": "Exercice écrit où l'on réfléchit à une question de façon organisée.", "ex": "La dissertation comporte une introduction, un développement et une conclusion.", "alt": [] },
+        { "mot": "concours", "def": "Examen où l'on classe les candidats pour n'en retenir qu'un nombre limité.", "ex": "Elle prépare un concours d'entrée en école d'art.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Les feuilles sont tombées pendant la nuit.", "indice": "L'automne est là", "trap": ["tombé", "tombés"], "alt": ["Pendant la nuit, les feuilles sont tombées."] },
+        { "phrase": "Mes cousines ont dormi chez nous.", "indice": "Une soirée pyjama", "trap": ["dormies"], "alt": [] },
+        { "phrase": "Ma sœur a écrit une longue lettre.", "indice": "Du courrier fait main", "trap": ["écrite"], "alt": [] },
+        { "phrase": "Ces maisons ont été construites en un an.", "indice": "Un chantier rapide", "trap": ["construit", "étés"], "alt": [] },
+        { "phrase": "Les invités sont arrivés à l'heure.", "indice": "Des invités ponctuels", "trap": ["arrivé"], "alt": [] },
+        { "phrase": "Elles ont acheté des fleurs au marché.", "indice": "Un bouquet pour la maison", "trap": ["achetées"], "alt": [] },
+        { "phrase": "Nous avons beaucoup ri ce soir-là.", "indice": "Une soirée très drôle", "trap": ["ris"], "alt": [] },
+        { "phrase": "Léa et Inès sont parties en Bretagne.", "indice": "Deux amies en voyage", "trap": ["partis"], "alt": [] },
+        { "phrase": "Les élèves ont été félicités par le directeur.", "indice": "Des compliments officiels", "trap": ["félicité"], "alt": [] },
+        { "phrase": "Ma tante a cuisiné toute la journée.", "indice": "Un grand repas en préparation", "trap": ["cuisinée"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Les enfants ont ___ toute la journée.", "choices": ["joué", "joués", "jouées"], "answer": 0, "explain": "Avec avoir et sans COD placé avant : invariable." },
+        { "type": "mcq", "q": "Mes amies sont ___ hier.", "choices": ["venues", "venu", "venus"], "answer": 0, "explain": "Avec être : accord avec le sujet, mes amies (féminin pluriel)." },
+        { "type": "mcq", "q": "Elle a ___ deux romans cet été.", "choices": ["lu", "lue", "lus"], "answer": 0, "explain": "Le COD (deux romans) est placé après : invariable." },
+        { "type": "mcq", "q": "Ces lettres ont été ___ par mon grand-père.", "choices": ["écrites", "écrit", "écrits"], "answer": 0, "explain": "Voix passive : accord avec le sujet, ces lettres." },
+        { "type": "mcq", "q": "Nous avons ___ nos devoirs.", "choices": ["fini", "finis", "finies"], "answer": 0, "explain": "Le COD (nos devoirs) est placé après : invariable." },
+        { "type": "fill", "q": "Les fleurs du vase sont ___.", "hint": "faner", "answer": ["fanées"], "explain": "Avec être : accord avec les fleurs, féminin pluriel." },
+        { "type": "fill", "q": "Mes sœurs ont ___ toute la soirée.", "hint": "danser", "answer": ["dansé"], "explain": "Avec avoir, pas de COD : invariable." },
+        { "type": "fill", "q": "La porte a été ___ par le vent.", "hint": "ouvrir", "answer": ["ouverte"], "explain": "Voix passive : accord avec la porte." },
+        { "type": "fill", "q": "Elles ont ___ des photos.", "hint": "prendre", "answer": ["pris"], "explain": "COD placé après : invariable." },
+        { "type": "fill", "q": "Les voleurs ont été ___.", "hint": "arrêter", "answer": ["arrêtés"], "explain": "Voix passive : accord avec les voleurs." },
+        { "type": "fill", "q": "Ma mère est ___ au marché.", "hint": "aller", "answer": ["allée"], "explain": "Avec être : accord avec ma mère." },
+        { "type": "fill", "q": "Les filles ont ___ une chanson.", "hint": "chanter", "answer": ["chanté"], "explain": "COD placé après : invariable." },
+        { "type": "error", "q": "Elles ont mangées toute la tarte.", "wrong": 2, "fix": ["mangé"], "explain": "Avec avoir, jamais d'accord avec le sujet ; le COD est placé après." },
+        { "type": "error", "q": "La lettre a été envoyé hier.", "wrong": 4, "fix": ["envoyée"], "explain": "Voix passive : accord avec la lettre." },
+        { "type": "error", "q": "Mes parents sont rentré tard.", "wrong": 3, "fix": ["rentrés"], "explain": "Avec être : accord avec mes parents." },
+        { "type": "error", "q": "Les élèves ont étés punis.", "wrong": 3, "fix": ["été"], "explain": "Le participe été est toujours invariable." }
+      ],
+      "reading": {
+        "title": "Le concours d'éloquence",
+        "text": "Lisa avait toujours rêvé de participer au concours d'éloquence de son collège. Cette année, elle s'est enfin inscrite. Pendant trois semaines, elle a travaillé chaque soir : elle a écrit son discours, l'a appris par cœur et l'a récité devant son miroir, puis devant sa famille. Ses parents ont applaudi, son petit frère a bâillé. Le jour venu, les candidats sont arrivés très tôt. Ils ont été accueillis par la principale, qui a tiré au sort l'ordre de passage. Lisa est passée en dernier. Pendant l'attente, elle a relu ses notes une dizaine de fois et a bu trois verres d'eau. Quand elle est montée sur l'estrade, ses jambes tremblaient. Mais dès les premiers mots, la peur a disparu. Le jury a été conquis : Lisa a remporté le premier prix. Le soir, son petit frère a demandé à entendre le discours… une deuxième fois.",
+        "questions": [
+          { "q": "Quel concours Lisa prépare-t-elle ?", "choices": ["Un concours d'éloquence", "Un concours de danse", "Un concours de cuisine", "Un concours de dessin"], "answer": 0, "explain": "Dès la première phrase : le concours d'éloquence de son collège." },
+          { "q": "Comment a-t-elle préparé son discours ?", "choices": ["Elle l'a écrit, appris et récité plusieurs fois", "Elle l'a improvisé", "Sa mère l'a écrit", "Elle l'a lu sur une feuille"], "answer": 0, "explain": "Elle l'a écrit, l'a appris par cœur et l'a récité devant son miroir et sa famille." },
+          { "q": "Comment se sentait-elle en montant sur l'estrade ?", "choices": ["Elle avait peur", "Elle était sereine", "Elle était en colère", "Elle s'ennuyait"], "answer": 0, "explain": "Ses jambes tremblaient." },
+          { "q": "Que montre l'attitude du petit frère à la fin ?", "choices": ["Le discours l'a finalement séduit", "Il est toujours jaloux", "Il n'a rien compris", "Il veut participer au concours"], "answer": 0, "explain": "Lui qui bâillait demande à l'entendre une deuxième fois." },
+          { "q": "Dans « les candidats sont arrivés », pourquoi « arrivés » prend-il un s ?", "choices": ["Avec être, il s'accorde avec le sujet pluriel", "Avec avoir, il s'accorde avec le COD", "C'est un adjectif", "Il est au présent"], "answer": 0, "explain": "Avec être, accord avec le sujet, les candidats." },
+          { "q": "Dans « Ils ont été accueillis », avec quoi s'accorde « accueillis » ?", "choices": ["Avec le sujet ils", "Avec un COD", "Avec la principale", "Il ne s'accorde pas"], "answer": 0, "explain": "À la voix passive, le participe s'accorde avec le sujet." }
+        ]
+      }
+    },
+    {
+      "id": "6.2",
+      "name": "Le COD en embuscade",
+      "title": "L'accord avec le COD placé avant : que, le / la / les, quel, combien de",
+      "goal": "Repérer un COD placé avant l'auxiliaire avoir et accorder le participe avec lui.",
+      "lesson": [
+        { "type": "p", "text": "Avec avoir, le participe passé s'accorde avec le COD quand celui-ci est placé **avant** le verbe. C'est la règle la plus célèbre (et la plus redoutée) de l'orthographe française." },
+        { "type": "rule", "title": "Où se cache le COD placé avant ?", "text": "Un **pronom personnel** : [[Ces fleurs, je les ai cueillies.]] Le **pronom relatif que** : [[Les fleurs que j'ai cueillies]]. Une **question** ou une **exclamation** : [[Quelles fleurs as-tu cueillies ?]], [[Combien de fleurs as-tu cueillies ?]]" },
+        { "type": "rule", "title": "La méthode", "text": "1. Repère l'auxiliaire avoir. 2. Cherche le COD (qui ? quoi ?). 3. S'il est placé avant, accorde avec lui. [[La tarte que maman a préparée]] : maman a préparé quoi ? que, mis pour la tarte (féminin singulier), placé avant → préparée." },
+        { "type": "table", "head": ["Phrase", "COD", "Participe"], "rows": [["J'ai vu tes sœurs.", "tes sœurs, après", "vu"], ["Je les ai vues.", "les (= tes sœurs), avant", "vues"], ["Les sœurs que j'ai vues", "que (= les sœurs), avant", "vues"], ["Quelles sœurs as-tu vues ?", "quelles sœurs, avant", "vues"]] },
+        { "type": "rule", "title": "Avec que, cherche l'antécédent", "text": "Que reprend le nom placé juste avant lui : [[la robe qu'elle a choisie]] (que = la robe). Attention, le sujet est parfois placé après le verbe : [[les gâteaux qu'a faits ma tante]]." },
+        { "type": "examples", "items": [
+          { "ex": "Ta lettre, je l'ai **lue** hier soir.", "note": "l' = ta lettre, féminin" },
+          { "ex": "Quelle route as-tu **prise** ?", "note": "quelle route, placé avant" },
+          { "ex": "Combien de tableaux as-tu **vendus** ?", "note": "combien de tableaux, placé avant" },
+          { "ex": "Elle a **mangé** la pomme que je lui avais **donnée**.", "note": "mangé : COD après ; donnée : que = la pomme, avant" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "Les photos que j'ai ~~pris~~", "ok": "Les photos que j'ai **prises**", "why": "Que = les photos, placé avant : féminin pluriel." },
+          { "ko": "Ta lettre, je l'ai ~~lu~~.", "ok": "Ta lettre, je l'ai **lue**.", "why": "L' = ta lettre, féminin, placé avant." },
+          { "ko": "Quelle route as-tu ~~pris~~ ?", "ok": "Quelle route as-tu **prise** ?", "why": "Quelle route, COD placé avant." },
+          { "ko": "Elle a ~~mangée~~ la pomme.", "ok": "Elle a **mangé** la pomme.", "why": "Le COD (la pomme) est placé après : invariable." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Le pronom **l'** peut être masculin ou féminin : regarde ce qu'il remplace. [[Ton gâteau, je l'ai goûté.]] [[Ta tarte, je l'ai goûtée.]]" },
+        { "type": "fun", "text": "Le sais-tu ? Les rectifications de l'orthographe de 1990 n'ont pas touché à cette règle : trop ancienne, trop célèbre ! Elles l'ont seulement simplifiée pour « laissé » suivi d'un infinitif (tu le verras à la station 6.4)." }
+      ],
+      "vocab": [
+        { "mot": "esquisse", "def": "Premier dessin rapide d'une œuvre.", "ex": "Le peintre fit une esquisse au crayon.", "alt": [] },
+        { "mot": "ébauche", "def": "Premier état d'un ouvrage, encore inachevé.", "ex": "Ce roman n'est encore qu'une ébauche.", "alt": [] },
+        { "mot": "chef-d'œuvre", "def": "Œuvre la plus parfaite d'un artiste.", "ex": "Ce tableau est le chef-d'œuvre du musée.", "alt": ["chef-d'oeuvre"] },
+        { "mot": "toile", "def": "Tissu tendu sur lequel on peint ; ou le tableau lui-même.", "ex": "Le musée a acquis une toile de Monet.", "alt": [] },
+        { "mot": "aquarelle", "def": "Peinture légère faite avec des couleurs délayées dans l'eau.", "ex": "Elle peint des aquarelles de bord de mer.", "alt": [] },
+        { "mot": "fresque", "def": "Grande peinture faite directement sur un mur.", "ex": "Une fresque immense orne la façade de l'école.", "alt": [] },
+        { "mot": "mosaïque", "def": "Image faite de petits morceaux de pierre ou de verre colorés.", "ex": "Cette mosaïque romaine représente un dauphin.", "alt": [] },
+        { "mot": "gravure", "def": "Image imprimée à partir d'une plaque gravée.", "ex": "Une vieille gravure montre le port au Moyen Âge.", "alt": [] },
+        { "mot": "pastel", "def": "Bâtonnet de couleur en poudre compressée, ou dessin fait avec.", "ex": "Elle dessine au pastel des paysages flous.", "alt": [] },
+        { "mot": "nature morte", "def": "Tableau qui représente des objets ou des fruits.", "ex": "Cette nature morte montre des pommes et un pichet.", "alt": [] },
+        { "mot": "portrait", "def": "Représentation d'une personne, en peinture, en photo ou en mots.", "ex": "Le peintre fit le portrait de la reine.", "alt": [] },
+        { "mot": "atelier", "def": "Lieu où travaille un artiste ou un artisan.", "ex": "L'atelier du sculpteur sent le bois.", "alt": [] },
+        { "mot": "chevalet", "def": "Support en bois qui tient le tableau pendant qu'on le peint.", "ex": "Il installa son chevalet face à la mer.", "alt": [] },
+        { "mot": "palette", "def": "Plaque sur laquelle le peintre mélange ses couleurs.", "ex": "Sa palette est couverte de bleus.", "alt": [] },
+        { "mot": "vernissage", "def": "Inauguration d'une exposition, réservée aux invités.", "ex": "Nous sommes invités au vernissage de l'exposition.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Les fleurs que j'ai cueillies sont fanées.", "indice": "Un bouquet qui n'a pas tenu", "trap": ["cueilli", "fanés"], "alt": [] },
+        { "phrase": "Ta lettre, je l'ai lue hier soir.", "indice": "Un courrier bien reçu", "trap": ["lu"], "alt": [] },
+        { "phrase": "Quelle route as-tu prise pour venir ?", "indice": "Une question d'itinéraire", "trap": ["pris"], "alt": [] },
+        { "phrase": "Les photos qu'elle a prises sont superbes.", "indice": "Des souvenirs de vacances", "trap": ["pris"], "alt": [] },
+        { "phrase": "Mes clés ? Je les ai perdues.", "indice": "Une porte qui reste fermée", "trap": ["perdu"], "alt": [] },
+        { "phrase": "Combien de tableaux as-tu vendus ?", "indice": "Une question à un peintre", "trap": ["vendu"], "alt": [] },
+        { "phrase": "La robe que Lina a choisie est bleue.", "indice": "Une tenue pour la fête", "trap": ["choisi"], "alt": [] },
+        { "phrase": "Elle a mangé la pomme que je lui avais donnée.", "indice": "Un fruit offert", "trap": ["mangée", "donné"], "alt": [] },
+        { "phrase": "Ces histoires, mon grand-père les a racontées cent fois.", "indice": "Des souvenirs répétés", "trap": ["raconté"], "alt": [] },
+        { "phrase": "Les gâteaux qu'a faits ma tante sont délicieux.", "indice": "Une pâtissière de talent", "trap": ["fait"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Les chaussures que j'ai ___ sont trop petites.", "choices": ["achetées", "acheté", "achetés"], "answer": 0, "explain": "Que = les chaussures, COD placé avant : féminin pluriel." },
+        { "type": "mcq", "q": "Tes amis ? Je les ai ___ au parc.", "choices": ["vus", "vu", "vues"], "answer": 0, "explain": "Les = tes amis, COD placé avant : masculin pluriel." },
+        { "type": "mcq", "q": "Quelle histoire nous as-tu ___ !", "choices": ["racontée", "raconté", "racontés"], "answer": 0, "explain": "Quelle histoire, COD placé avant : féminin singulier." },
+        { "type": "mcq", "q": "Elle a ___ les fenêtres.", "choices": ["fermé", "fermées", "fermée"], "answer": 0, "explain": "Le COD (les fenêtres) est placé après : invariable." },
+        { "type": "mcq", "q": "La chanson qu'ils ont ___ était belle.", "choices": ["chantée", "chanté", "chantées"], "answer": 0, "explain": "Que = la chanson, placé avant : féminin singulier." },
+        { "type": "fill", "q": "Les lettres qu'il a ___ sont touchantes.", "hint": "écrire", "answer": ["écrites"], "explain": "Que = les lettres, placé avant : féminin pluriel." },
+        { "type": "fill", "q": "Ma valise ? Je l'ai ___ hier.", "hint": "faire", "answer": ["faite"], "explain": "L' = ma valise, féminin, placé avant." },
+        { "type": "fill", "q": "Combien de pages as-tu ___ ?", "hint": "lire", "answer": ["lues"], "explain": "Combien de pages, COD placé avant : féminin pluriel." },
+        { "type": "fill", "q": "Les exercices que nous avons ___ étaient difficiles.", "hint": "faire", "answer": ["faits"], "explain": "Que = les exercices, placé avant : masculin pluriel." },
+        { "type": "fill", "q": "Ces chansons, je les ai ___ par cœur.", "hint": "apprendre", "answer": ["apprises"], "explain": "Les = ces chansons, placé avant : féminin pluriel." },
+        { "type": "fill", "q": "Elle a ___ tous les gâteaux.", "hint": "goûter", "answer": ["goûté"], "explain": "Le COD est placé après : invariable." },
+        { "type": "fill", "q": "La maison qu'ils ont ___ est immense.", "hint": "construire", "answer": ["construite"], "explain": "Que = la maison, placé avant : féminin singulier." },
+        { "type": "error", "q": "Les cerises que j'ai cueilli sont mûres.", "wrong": 4, "fix": ["cueillies"], "explain": "Que = les cerises, placé avant : féminin pluriel." },
+        { "type": "error", "q": "Ta voiture, je l'ai lavé.", "wrong": 4, "fix": ["lavée"], "explain": "L' = ta voiture, féminin, placé avant." },
+        { "type": "error", "q": "Quelles villes avez-vous visité ?", "wrong": 3, "fix": ["visitées"], "explain": "Quelles villes, COD placé avant : féminin pluriel." },
+        { "type": "error", "q": "Elle a perdue ses lunettes.", "wrong": 2, "fix": ["perdu"], "explain": "Le COD (ses lunettes) est placé après : invariable." }
+      ],
+      "reading": {
+        "title": "La boîte de Mamie Jo",
+        "text": "Dans le grenier, ma grand-mère garde une boîte en bois que son père a fabriquée pour elle. Elle y range tous les souvenirs qu'elle a accumulés depuis son enfance : les lettres que son fiancé lui a écrites, les billets de train qu'elle a gardés, la médaille qu'elle a gagnée à un concours de natation. Hier, elle me l'a montrée pour la première fois. Nous nous sommes assis sur le vieux tapis, et elle a soulevé le couvercle avec précaution. « Ces photos, je les ai prises avec mon premier appareil », m'a-t-elle expliqué. Je lui ai demandé quelle photo elle avait préférée. Elle a souri et m'a tendu un cliché jauni : on y voyait une petite fille qui riait sur une plage. « C'est la journée que j'ai le plus aimée. Ce jour-là, j'ai rencontré ton grand-père : il m'a sauvée d'une vague. »",
+        "questions": [
+          { "q": "Qui a fabriqué la boîte ?", "choices": ["Le père de la grand-mère", "La grand-mère", "Le grand-père", "Le narrateur"], "answer": 0, "explain": "Une boîte « que son père a fabriquée pour elle »." },
+          { "q": "Que contient la boîte ?", "choices": ["Des souvenirs : lettres, billets, médaille, photos", "Des bijoux de famille", "De l'argent", "Des jouets anciens"], "answer": 0, "explain": "Elle y range tous ses souvenirs." },
+          { "q": "Pourquoi la journée à la plage est-elle si importante ?", "choices": ["La grand-mère y a rencontré son futur mari", "Elle y a gagné une médaille", "Elle y a pris sa première photo", "Elle y a perdu son père"], "answer": 0, "explain": "Ce jour-là, elle a rencontré le grand-père, qui l'a sauvée d'une vague." },
+          { "q": "Dans « elle me l'a montrée », que remplace « l' » ?", "choices": ["La boîte", "La photo", "La médaille", "La plage"], "answer": 0, "explain": "Elle a montré la boîte : l' est féminin, d'où montrée." },
+          { "q": "Pourquoi écrit-on « les lettres que son fiancé lui a écrites » ?", "choices": ["Que, mis pour les lettres, est un COD placé avant", "Le sujet est féminin pluriel", "Écrire se conjugue avec être", "C'est un adjectif"], "answer": 0, "explain": "Le fiancé a écrit quoi ? que = les lettres, placé avant : accord." },
+          { "q": "Pourquoi « il m'a sauvée » prend-il un e ?", "choices": ["M' désigne la grand-mère, une femme, et il est placé avant", "Le sujet il est féminin", "Sauver se conjugue avec être", "C'est une faute"], "answer": 0, "explain": "M' est le COD, placé avant, et désigne une femme." }
+        ]
+      }
+    },
+    {
+      "id": "6.3",
+      "name": "Les pronominaux",
+      "title": "L'accord des verbes pronominaux : se laver, se laver les mains, se parler, s'enfuir, se rendre compte",
+      "goal": "Accorder le participe des verbes pronominaux selon le rôle du pronom se.",
+      "lesson": [
+        { "type": "p", "text": "Les verbes pronominaux (se laver, s'enfuir, se parler…) se conjuguent toujours avec **être** aux temps composés. Pourtant, leur participe ne s'accorde pas toujours avec le sujet : tout dépend du rôle du pronom **se**." },
+        { "type": "rule", "title": "Les verbes essentiellement pronominaux", "text": "Ils n'existent qu'à la forme pronominale (**s'enfuir, s'évanouir, se souvenir, s'absenter, se méfier, s'écrier**…) : accord avec le sujet. [[Elles se sont enfuies.]] Même chose pour les pronominaux de sens passif : [[Ces livres se sont bien vendus.]] Une exception à retenir : [[ils se sont rendu compte]] (rendu reste invariable)." },
+        { "type": "rule", "title": "Quand se est COD", "text": "On lave qui ? soi-même : se est COD, placé avant → accord avec lui, donc avec le sujet. [[Elle s'est lavée.]] [[Ils se sont regardés.]]" },
+        { "type": "rule", "title": "Quand se est COI, ou quand le COD est après", "text": "On parle **à** qui ? à soi : se est COI → pas d'accord. [[Elles se sont parlé.]] Si un COD suit le verbe, pas d'accord non plus : [[Elle s'est lavé les mains.]] Verbes concernés : se parler, se téléphoner, se sourire, se succéder, se ressembler, se plaire, se mentir, se nuire, se dire, s'écrire…" },
+        { "type": "table", "head": ["Phrase", "Rôle de se", "Accord ?"], "rows": [["Elle s'est coiffée.", "COD", "oui"], ["Elle s'est coiffé les cheveux.", "COI (le COD les cheveux est après)", "non"], ["Ils se sont téléphoné.", "COI (téléphoner à)", "non"], ["Les rois se sont succédé.", "COI (succéder à)", "non"], ["Elles se sont souvenues.", "verbe essentiellement pronominal", "oui"]] },
+        { "type": "examples", "items": [
+          { "ex": "Les deux sœurs se sont **téléphoné** hier.", "note": "téléphoner à : se est COI" },
+          { "ex": "Les voleurs se sont **enfuis** par la fenêtre.", "note": "s'enfuir n'existe qu'à la forme pronominale" },
+          { "ex": "Elles se sont **regardées** sans rien dire.", "note": "regarder quelqu'un : se est COD" },
+          { "ex": "Ils se sont **rendu** compte de leur erreur.", "note": "l'exception à connaître" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "Elles se sont ~~parlées~~.", "ok": "Elles se sont **parlé**.", "why": "Parler à quelqu'un : se est COI." },
+          { "ko": "Elle s'est ~~lavée~~ les mains.", "ok": "Elle s'est **lavé** les mains.", "why": "Le COD (les mains) est placé après." },
+          { "ko": "Ils se sont ~~enfui~~.", "ok": "Ils se sont **enfuis**.", "why": "Verbe essentiellement pronominal : accord avec le sujet." },
+          { "ko": "Elle s'est ~~rendue~~ compte.", "ok": "Elle s'est **rendu** compte.", "why": "Se rendre compte : rendu reste invariable." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Remplace être par avoir et remets le pronom à sa place : « Elle s'est lavé les mains » → elle a lavé les mains **à elle** (se est COI) → pas d'accord. « Elle s'est lavée » → elle a lavé **elle** (se est COD, placé avant) → accord." },
+        { "type": "fun", "text": "Le sais-tu ? « Les rois qui se sont succédé » : succéder se construit avec à (succéder à quelqu'un). Ce participe est si souvent mal accordé que les correcteurs le surveillent comme le lait sur le feu !" }
+      ],
+      "vocab": [
+        { "mot": "s'évanouir", "def": "Perdre connaissance un court moment.", "ex": "Elle a failli s'évanouir de chaleur.", "alt": [] },
+        { "mot": "s'absenter", "def": "Quitter un moment le lieu où l'on devrait être.", "ex": "Il a dû s'absenter de son bureau.", "alt": [] },
+        { "mot": "se méfier", "def": "Ne pas faire confiance, rester sur ses gardes.", "ex": "Il faut se méfier de l'eau qui dort.", "alt": [] },
+        { "mot": "se souvenir", "def": "Avoir en mémoire, se rappeler.", "ex": "Il est doux de se souvenir des vacances.", "alt": [] },
+        { "mot": "s'empresser", "def": "Se dépêcher de faire quelque chose avec zèle.", "ex": "Il ne manqua pas de s'empresser de répondre.", "alt": [] },
+        { "mot": "se repentir", "def": "Regretter sincèrement une faute.", "ex": "Le voleur finit par se repentir.", "alt": [] },
+        { "mot": "s'abstenir", "def": "Ne pas faire quelque chose volontairement ; ne pas voter.", "ex": "Mieux vaut s'abstenir de répondre.", "alt": [] },
+        { "mot": "s'efforcer", "def": "Faire des efforts pour arriver à quelque chose.", "ex": "Il faut s'efforcer de rester calme.", "alt": [] },
+        { "mot": "se moquer", "def": "Rire de quelqu'un ; ou ne pas s'inquiéter de quelque chose.", "ex": "Il ne faut pas se moquer des autres.", "alt": [] },
+        { "mot": "s'écrouler", "def": "Tomber en se brisant ; ou se laisser tomber d'épuisement.", "ex": "Le vieux mur a fini par s'écrouler.", "alt": [] },
+        { "mot": "se blottir", "def": "Se ramasser sur soi-même, se serrer contre quelqu'un pour se protéger.", "ex": "Le chaton vient se blottir contre moi.", "alt": [] },
+        { "mot": "se dérober", "def": "Échapper à une obligation ; ou céder sous les pieds.", "ex": "Il chercha à se dérober à la question.", "alt": [] },
+        { "mot": "se prélasser", "def": "Se reposer avec nonchalance, en prenant ses aises.", "ex": "Le chat aime se prélasser au soleil.", "alt": [] },
+        { "mot": "s'acharner", "def": "Poursuivre un effort ou une attaque avec obstination.", "ex": "Il continue de s'acharner sur ce problème.", "alt": [] },
+        { "mot": "s'insurger", "def": "Se révolter, protester vivement.", "ex": "Les habitants ont décidé de s'insurger contre ce projet.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Les deux sœurs se sont téléphoné hier soir.", "indice": "Une longue conversation", "trap": ["téléphonées"], "alt": [] },
+        { "phrase": "Elle s'est lavé les mains avant de manger.", "indice": "Un réflexe d'hygiène", "trap": ["lavée"], "alt": [] },
+        { "phrase": "Les voleurs se sont enfuis par la fenêtre.", "indice": "Une fuite précipitée", "trap": ["enfui"], "alt": [] },
+        { "phrase": "Mes parents se sont souvenus de mon anniversaire.", "indice": "Une date qu'on n'oublie pas", "trap": ["souvenu"], "alt": [] },
+        { "phrase": "Elles se sont regardées sans rien dire.", "indice": "Un silence gêné", "trap": ["regardé"], "alt": [] },
+        { "phrase": "Ils se sont rendu compte de leur erreur.", "indice": "Une prise de conscience", "trap": ["rendus"], "alt": [] },
+        { "phrase": "Les années se sont succédé très vite.", "indice": "Le temps qui file", "trap": ["succédées"], "alt": [] },
+        { "phrase": "Ma sœur s'est coupée en épluchant les pommes.", "indice": "Un petit accident en cuisine", "trap": ["coupé"], "alt": [] },
+        { "phrase": "Les enfants se sont souri timidement.", "indice": "Une première rencontre", "trap": ["souris"], "alt": [] },
+        { "phrase": "Elle s'est évanouie à cause de la chaleur.", "indice": "Un malaise en été", "trap": ["évanoui"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Elles se sont ___ au téléphone.", "choices": ["parlé", "parlées", "parlés"], "answer": 0, "explain": "Parler à quelqu'un : se est COI, pas d'accord." },
+        { "type": "mcq", "q": "Elle s'est ___ les cheveux.", "choices": ["brossé", "brossée", "brossés"], "answer": 0, "explain": "Le COD (les cheveux) est placé après : pas d'accord." },
+        { "type": "mcq", "q": "Les enfants se sont ___ dans la forêt.", "choices": ["perdus", "perdu", "perdues"], "answer": 0, "explain": "Ils ont perdu qui ? eux-mêmes : se est COD, accord avec les enfants." },
+        { "type": "mcq", "q": "Ils se sont ___ compte de leur oubli.", "choices": ["rendu", "rendus", "rendue"], "answer": 0, "explain": "Se rendre compte : rendu reste invariable." },
+        { "type": "mcq", "q": "Les deux amies se sont ___ des lettres.", "choices": ["écrit", "écrites", "écrits"], "answer": 0, "explain": "Écrire des lettres à quelqu'un : se est COI, le COD (des lettres) est après." },
+        { "type": "fill", "q": "Mes cousines se sont ___ de bonne heure.", "hint": "se lever", "answer": ["levées"], "explain": "Lever qui ? elles-mêmes : se est COD, accord." },
+        { "type": "fill", "q": "Elle s'est ___ la cheville.", "hint": "se tordre", "answer": ["tordu"], "explain": "Le COD (la cheville) est placé après : pas d'accord." },
+        { "type": "fill", "q": "Les chats se sont ___ sous le lit.", "hint": "se cacher", "answer": ["cachés"], "explain": "Cacher qui ? eux-mêmes : se est COD, accord." },
+        { "type": "fill", "q": "Les rois se sont ___ sur le trône.", "hint": "se succéder", "answer": ["succédé"], "explain": "Succéder à quelqu'un : se est COI, pas d'accord." },
+        { "type": "fill", "q": "Mes parents se sont ___ de lui.", "hint": "se méfier", "answer": ["méfiés"], "explain": "Se méfier n'existe qu'à la forme pronominale : accord avec le sujet." },
+        { "type": "fill", "q": "Elles se sont ___ comme deux gouttes d'eau.", "hint": "se ressembler", "answer": ["ressemblé"], "explain": "Ressembler à quelqu'un : se est COI, pas d'accord." },
+        { "type": "fill", "q": "La princesse s'est ___ dans la tour.", "hint": "s'enfermer", "answer": ["enfermée"], "explain": "Enfermer qui ? elle-même : se est COD, accord." },
+        { "type": "error", "q": "Elles se sont parlées pendant des heures.", "wrong": 3, "fix": ["parlé"], "explain": "Parler à quelqu'un : se est COI, pas d'accord." },
+        { "type": "error", "q": "Elle s'est lavée les dents.", "wrong": 2, "fix": ["lavé"], "explain": "Le COD (les dents) est placé après : pas d'accord." },
+        { "type": "error", "q": "Les oiseaux se sont envolé.", "wrong": 4, "fix": ["envolés"], "explain": "S'envoler n'existe qu'à la forme pronominale : accord avec les oiseaux." },
+        { "type": "error", "q": "Elle s'est rendue compte de son erreur.", "wrong": 2, "fix": ["rendu"], "explain": "Se rendre compte : rendu reste invariable." }
+      ],
+      "reading": {
+        "title": "La dispute des jumelles",
+        "text": "Zoé et Lila sont jumelles, mais elles ne se ressemblent pas du tout. Un samedi, elles se sont disputées pour une broutille : qui avait le droit de porter le pull rouge ? Elles se sont lancé des reproches, se sont tourné le dos et ne se sont plus adressé la parole de la journée. Le soir, chacune s'est enfermée dans sa chambre. Leurs parents, inquiets, se sont demandé combien de temps durerait la brouille. Pourtant, vers minuit, elles se sont rendu compte qu'elles ne pouvaient pas dormir fâchées. Elles se sont retrouvées dans la cuisine, devant le réfrigérateur, une cuillère à la main, prêtes à finir la même mousse au chocolat. Elles se sont regardées, puis elles se sont mises à rire. Le lendemain, elles se sont partagé le pull : une manche chacune… façon de parler. Depuis, elles se sont promis de ne plus jamais se disputer pour un vêtement.",
+        "questions": [
+          { "q": "Pourquoi les jumelles se sont-elles disputées ?", "choices": ["Pour un pull rouge", "Pour un garçon", "Pour un jeu vidéo", "Pour une place à table"], "answer": 0, "explain": "Qui avait le droit de porter le pull rouge ?" },
+          { "q": "Que se passe-t-il vers minuit ?", "choices": ["Elles se retrouvent dans la cuisine", "Elles se disputent encore", "Leur mère les réveille", "Elles partent en cachette"], "answer": 0, "explain": "Elles se sont retrouvées devant le réfrigérateur." },
+          { "q": "Que veut dire « une broutille » ?", "choices": ["Une chose sans importance", "Un vêtement rare", "Une grosse bêtise", "Une plante"], "answer": 0, "explain": "Une broutille est un motif futile." },
+          { "q": "« Une manche chacune… façon de parler » : que comprend-on ?", "choices": ["Elles ne l'ont pas découpé : elles le portent à tour de rôle", "Elles ont coupé le pull en deux", "Elles ont jeté le pull", "Elles ont acheté un deuxième pull"], "answer": 0, "explain": "« Façon de parler » signale qu'il ne faut pas prendre l'image au pied de la lettre." },
+          { "q": "Pourquoi écrit-on « elles se sont lancé des reproches » sans accord ?", "choices": ["Le COD des reproches est placé après le verbe", "Lancer se conjugue avec avoir", "Le sujet est masculin", "C'est un verbe essentiellement pronominal"], "answer": 0, "explain": "Se est COI (lancer à), et le COD suit : pas d'accord." },
+          { "q": "Pourquoi écrit-on « elles se sont regardées » avec -es ?", "choices": ["Se est COD et il est placé avant", "Le COD est placé après", "Regarder se construit avec à", "C'est un adjectif"], "answer": 0, "explain": "Elles ont regardé qui ? elles-mêmes : se est COD, placé avant." }
+        ]
+      }
+    },
+    {
+      "id": "6.4",
+      "name": "Les cas qui piègent",
+      "title": "Participe suivi d'un infinitif, fait et laissé, en, coûté et valu, verbes impersonnels",
+      "goal": "Résoudre les cas particuliers d'accord du participe passé.",
+      "lesson": [
+        { "type": "p", "text": "Quelques situations demandent un peu plus de réflexion. Ce sont les pièges favoris des dictées de haut niveau." },
+        { "type": "rule", "title": "Participe suivi d'un infinitif", "text": "Le participe s'accorde avec le COD placé avant **seulement si ce COD fait l'action de l'infinitif**. [[Les musiciens que j'ai entendus jouer]] : ce sont les musiciens qui jouent → accord. [[Les airs que j'ai entendu jouer]] : les airs ne jouent pas, on les joue → pas d'accord." },
+        { "type": "rule", "title": "Fait et laissé suivis d'un infinitif", "text": "**fait** suivi d'un infinitif est toujours invariable : [[Elle s'est fait couper les cheveux.]] [[Les robes qu'elle a fait faire]]. Depuis les rectifications de 1990, **laissé** suivi d'un infinitif est lui aussi invariable : [[Elle s'est laissé convaincre.]]" },
+        { "type": "rule", "title": "Le pronom en", "text": "Quand le COD placé avant est le pronom **en**, le participe reste invariable : [[Des cerises, j'en ai mangé.]]" },
+        { "type": "rule", "title": "Coûté, valu, pesé, vécu, duré", "text": "Avec un complément de mesure (prix, durée, poids), pas d'accord : [[les mille euros que ce vélo a coûté]], [[les dix ans qu'il a vécu]]. Au sens figuré, ce sont de vrais COD : accord. [[les efforts que ce travail m'a coûtés]]." },
+        { "type": "rule", "title": "Les verbes impersonnels", "text": "Le participe d'un verbe impersonnel (il faut, il y a, il fait…) est toujours invariable : [[les orages qu'il y a eu]], [[la patience qu'il a fallu]], [[les chaleurs qu'il a fait]]." },
+        { "type": "examples", "items": [
+          { "ex": "Elle s'est **fait** couper les cheveux.", "note": "fait + infinitif : invariable" },
+          { "ex": "Des cerises, j'en ai **mangé** des kilos.", "note": "en : invariable" },
+          { "ex": "La chanteuse que j'ai **entendue** chanter était émue.", "note": "la chanteuse chante : accord" },
+          { "ex": "La patience qu'il a **fallu** était énorme.", "note": "verbe impersonnel : invariable" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "Elle s'est ~~faite~~ gronder.", "ok": "Elle s'est **fait** gronder.", "why": "Fait suivi d'un infinitif est invariable." },
+          { "ko": "Des pommes, j'en ai ~~mangées~~.", "ok": "Des pommes, j'en ai **mangé**.", "why": "Avec en, pas d'accord." },
+          { "ko": "Les chaleurs qu'il a ~~faites~~", "ok": "Les chaleurs qu'il a **fait**", "why": "Il fait chaud : verbe impersonnel, invariable." },
+          { "ko": "Les vingt minutes que j'ai ~~courues~~", "ok": "Les vingt minutes que j'ai **couru**", "why": "Une durée n'est pas un COD : invariable." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Devant un infinitif, demande-toi : le COD fait-il l'action ? « La chanteuse que j'ai entendue chanter » : la chanteuse chante → accord. « La chanson que j'ai entendu chanter » : la chanson ne chante pas → pas d'accord." },
+        { "type": "fun", "text": "Le sais-tu ? Ces cas particuliers sont les vedettes des grands championnats d'orthographe : un seul participe mal accordé peut faire perdre le titre à un candidat qui n'avait commis aucune autre faute !" }
+      ],
+      "vocab": [
+        { "mot": "dépense", "def": "Argent que l'on utilise pour payer quelque chose.", "ex": "Ce voyage représente une grosse dépense.", "alt": [] },
+        { "mot": "économie", "def": "Argent que l'on garde de côté ; ou gestion des richesses d'un pays.", "ex": "Il a fait des économies pour s'acheter un vélo.", "alt": [] },
+        { "mot": "budget", "def": "Somme prévue pour un ensemble de dépenses.", "ex": "Notre budget pour les vacances est serré.", "alt": [] },
+        { "mot": "facture", "def": "Document qui indique la somme à payer pour un achat ou un service.", "ex": "La facture d'électricité est arrivée.", "alt": [] },
+        { "mot": "devis", "def": "Estimation du prix d'un travail, faite avant de le commencer.", "ex": "Le plombier nous a envoyé un devis.", "alt": [] },
+        { "mot": "rabais", "def": "Diminution du prix.", "ex": "J'ai obtenu un rabais sur ce manteau.", "alt": [] },
+        { "mot": "salaire", "def": "Argent que l'on reçoit en échange de son travail.", "ex": "Elle a reçu son premier salaire.", "alt": [] },
+        { "mot": "fortune", "def": "Ensemble des richesses d'une personne ; ou le hasard.", "ex": "Il a fait fortune dans le commerce.", "alt": [] },
+        { "mot": "dette", "def": "Argent que l'on doit à quelqu'un.", "ex": "Il a enfin remboursé sa dette.", "alt": [] },
+        { "mot": "épargne", "def": "Argent mis de côté peu à peu.", "ex": "Son épargne lui a permis d'acheter un appartement.", "alt": [] },
+        { "mot": "créancier", "def": "Personne à qui l'on doit de l'argent.", "ex": "Le créancier réclame son dû.", "alt": [] },
+        { "mot": "débiteur", "def": "Personne qui doit de l'argent.", "ex": "Le débiteur demande un délai.", "alt": [] },
+        { "mot": "échéance", "def": "Date à laquelle un paiement doit être fait ou une chose doit arriver.", "ex": "L'échéance du loyer tombe le cinq du mois.", "alt": [] },
+        { "mot": "rançon", "def": "Somme exigée pour libérer quelqu'un ; ou prix à payer pour un avantage.", "ex": "La célébrité est la rançon du succès.", "alt": [] },
+        { "mot": "aubaine", "def": "Avantage inattendu, occasion heureuse.", "ex": "Ces soldes sont une véritable aubaine.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Elle s'est fait couper les cheveux très court.", "indice": "Une nouvelle coiffure", "trap": ["faite"], "alt": [] },
+        { "phrase": "Des cerises, j'en ai mangé des kilos.", "indice": "Un été gourmand", "trap": ["mangées"], "alt": [] },
+        { "phrase": "Les musiciens que j'ai entendus jouer étaient doués.", "indice": "Un concert réussi", "trap": ["entendu"], "alt": [] },
+        { "phrase": "Les chansons que j'ai entendu chanter étaient tristes.", "indice": "Un répertoire mélancolique", "trap": ["entendues"], "alt": [] },
+        { "phrase": "Les orages qu'il y a eu ont tout détruit.", "indice": "Un été catastrophique", "trap": ["eus"], "alt": [] },
+        { "phrase": "Les trois heures que j'ai dormi m'ont suffi.", "indice": "Une courte nuit", "trap": ["dormies"], "alt": [] },
+        { "phrase": "Les efforts que ce projet m'a coûtés sont immenses.", "indice": "Un travail épuisant", "trap": ["coûté"], "alt": [] },
+        { "phrase": "La patience qu'il a fallu était énorme.", "indice": "Une longue attente", "trap": ["fallue"], "alt": [] },
+        { "phrase": "Ils se sont laissé surprendre par la nuit.", "indice": "Une promenade qui finit tard", "trap": ["laissés"], "alt": [] },
+        { "phrase": "Les robes qu'elle a fait faire sont superbes.", "indice": "Des vêtements sur mesure", "trap": ["faites"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Elle s'est ___ aider par son frère.", "choices": ["fait", "faite", "faits"], "answer": 0, "explain": "Fait suivi d'un infinitif est toujours invariable." },
+        { "type": "mcq", "q": "Des fraises ? J'en ai ___ trois barquettes.", "choices": ["acheté", "achetées", "achetés"], "answer": 0, "explain": "Avec en, le participe reste invariable." },
+        { "type": "mcq", "q": "Les grandes chaleurs qu'il a ___ cet été ont tout desséché.", "choices": ["fait", "faites", "faits"], "answer": 0, "explain": "Il fait chaud : verbe impersonnel, participe invariable." },
+        { "type": "mcq", "q": "Les acteurs que j'ai ___ jouer étaient excellents.", "choices": ["vus", "vu", "vues"], "answer": 0, "explain": "Ce sont les acteurs qui jouent : accord avec que, mis pour les acteurs." },
+        { "type": "mcq", "q": "Les cent euros que ce livre a ___ m'ont paru excessifs.", "choices": ["coûté", "coûtés", "coûtée"], "answer": 0, "explain": "Un prix n'est pas un COD : coûté reste invariable." },
+        { "type": "fill", "q": "La pièce que j'ai ___ jouer était drôle.", "hint": "voir", "answer": ["vu"], "explain": "La pièce ne joue pas, on la joue : pas d'accord." },
+        { "type": "fill", "q": "Les deux heures que le film a ___ m'ont semblé longues.", "hint": "durer", "answer": ["duré"], "explain": "Une durée n'est pas un COD : invariable." },
+        { "type": "fill", "q": "Des livres, il en a ___ beaucoup.", "hint": "lire", "answer": ["lu"], "explain": "Avec en, le participe reste invariable." },
+        { "type": "fill", "q": "La chanteuse que j'ai ___ chanter était émue.", "hint": "entendre", "answer": ["entendue"], "explain": "C'est la chanteuse qui chante : accord avec que, mis pour la chanteuse." },
+        { "type": "fill", "q": "Les tempêtes qu'il y a ___ ont abîmé le toit.", "hint": "avoir", "answer": ["eu"], "explain": "Il y a : verbe impersonnel, participe invariable." },
+        { "type": "fill", "q": "Les maisons qu'ils ont ___ construire sont modernes.", "hint": "faire", "answer": ["fait"], "explain": "Fait suivi d'un infinitif est toujours invariable." },
+        { "type": "fill", "q": "Les vingt kilos que la valise a ___ m'ont étonné.", "hint": "peser", "answer": ["pesé"], "explain": "Un poids n'est pas un COD : pesé reste invariable." },
+        { "type": "error", "q": "Elle s'est faite opérer hier.", "wrong": 2, "fix": ["fait"], "explain": "Fait suivi d'un infinitif est toujours invariable." },
+        { "type": "error", "q": "Des gâteaux, j'en ai mangés trois.", "wrong": 4, "fix": ["mangé"], "explain": "Avec en, le participe reste invariable." },
+        { "type": "error", "q": "Les inondations qu'il y a eues ont surpris tout le monde.", "wrong": 5, "fix": ["eu"], "explain": "Il y a : verbe impersonnel, participe invariable." },
+        { "type": "error", "q": "La somme qu'a coûtée ce vélo est énorme.", "wrong": 3, "fix": ["coûté"], "explain": "Un prix n'est pas un COD : coûté reste invariable." }
+      ],
+      "reading": {
+        "title": "La grande dictée du village",
+        "text": "Chaque année, la bibliothèque de Saint-Aubin organise une grande dictée. Cette fois, les participants se sont fait piéger dès la deuxième phrase : « Les sommes que ces travaux ont coûté, la patience qu'il a fallu et les efforts qu'ils nous ont coûtés resteront dans nos mémoires. » Le maire, qui s'était inscrit en secret, a écrit « coûtées » partout. Il s'est vite rendu compte de son erreur, mais trop tard : sa copie était déjà ramassée. Madame Roux, l'ancienne institutrice, n'a fait qu'une faute : elle a accordé « fallu ». Quant aux enfants, ils se sont laissé déstabiliser par « les musiciens que j'ai entendus jouer ». Le soir, les correcteurs ont annoncé les résultats. Les fautes qu'il y a eu étaient nombreuses, mais tout le monde a ri. Le maire a promis de revenir l'an prochain… avec un dictionnaire caché dans sa manche.",
+        "questions": [
+          { "q": "Qui organise la dictée ?", "choices": ["La bibliothèque", "L'école", "La mairie", "Le journal local"], "answer": 0, "explain": "« La bibliothèque de Saint-Aubin organise une grande dictée. »" },
+          { "q": "Quelle faute le maire a-t-il faite ?", "choices": ["Il a accordé « coûté » partout", "Il a oublié une phrase", "Il a écrit « fallu » sans accord", "Il a copié sur sa voisine"], "answer": 0, "explain": "Il a écrit « coûtées » partout, même pour les sommes." },
+          { "q": "Pourquoi « fallu » ne doit-il pas s'accorder ?", "choices": ["C'est le participe d'un verbe impersonnel", "Le COD est placé après", "Il se conjugue avec être", "C'est un adjectif"], "answer": 0, "explain": "Il faut : verbe impersonnel, participe toujours invariable." },
+          { "q": "Pourquoi écrit-on « les efforts qu'ils nous ont coûtés » avec un accord ?", "choices": ["Coûter a ici un sens figuré : que est un vrai COD placé avant", "Le sujet est pluriel", "C'est un prix", "Coûter se conjugue avec être"], "answer": 0, "explain": "Au sens figuré, coûter a un vrai COD : accord." },
+          { "q": "Que révèle la dernière phrase sur le maire ?", "choices": ["Il a de l'humour et compte tricher un peu", "Il est vexé et ne reviendra pas", "Il a gagné la dictée", "Il déteste l'orthographe"], "answer": 0, "explain": "Il promet de revenir avec un dictionnaire caché : un aveu plein d'humour." }
+        ]
+      }
+    },
+    {
+      "id": "6.5",
+      "name": "Fatigant ou fatiguant ?",
+      "title": "Participe présent, adjectif verbal et gérondif : fatiguant / fatigant, convainquant / convaincant",
+      "goal": "Distinguer le participe présent invariable de l'adjectif verbal et écrire chacun correctement.",
+      "lesson": [
+        { "type": "p", "text": "Le **participe présent** (en -ant) est une forme du verbe : il est **invariable**. L'**adjectif verbal**, qui vient du même verbe, s'accorde comme un adjectif. Et parfois, les deux ne s'écrivent pas de la même façon !" },
+        { "type": "rule", "title": "Les distinguer", "text": "Le participe présent exprime une **action** ; il a souvent un complément, ou on peut le mettre à la forme négative : [[Les enfants, obéissant à leur mère, rentrèrent.]] L'adjectif verbal exprime une **qualité** ; on peut ajouter « très » : [[des enfants (très) obéissants]]." },
+        { "type": "table", "head": ["Participe présent (invariable)", "Adjectif verbal (variable)"], "rows": [["fatiguant", "fatigant"], ["convainquant", "convaincant"], ["provoquant", "provocant"], ["naviguant", "navigant"], ["négligeant", "négligent"], ["différant", "différent"], ["précédant", "précédent"], ["excellant", "excellent"]] },
+        { "type": "rule", "title": "Le gérondif", "text": "**en + participe présent**, toujours invariable : il indique la manière, la cause ou la simultanéité. [[Il chante en se douchant.]] Le sujet du gérondif doit être le même que celui du verbe principal : [[En sortant, j'ai vu Léa]] (c'est moi qui sors)." },
+        { "type": "examples", "items": [
+          { "ex": "Cette randonnée était vraiment **fatigante**.", "note": "adjectif : on peut dire « très »" },
+          { "ex": "En **fatiguant** ses adversaires, il a gagné.", "note": "gérondif : action, avec un complément" },
+          { "ex": "Le personnel **navigant** salue les passagers.", "note": "adjectif verbal, avec g" },
+          { "ex": "Un bateau **naviguant** vers le sud", "note": "participe présent, avec gu" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "une journée ~~fatiguante~~", "ok": "une journée **fatigante**", "why": "Adjectif verbal : sans u." },
+          { "ko": "des arguments ~~convainquants~~", "ok": "des arguments **convaincants**", "why": "Adjectif verbal : avec c." },
+          { "ko": "Les enfants, ~~obéissants~~ à leur mère, rentrèrent.", "ok": "Les enfants, **obéissant** à leur mère, rentrèrent.", "why": "Participe présent suivi d'un complément : invariable." },
+          { "ko": "~~En attendant le bus, la pluie m'a trempé.~~", "ok": "En attendant le bus, **j'ai été** trempé par la pluie.", "why": "Le sujet du gérondif doit être celui du verbe principal : ce n'est pas la pluie qui attend." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Si le mot en -ant est suivi d'un complément ou d'un adverbe qui le précise, c'est presque toujours un participe présent invariable : [[des paroles provoquant la colère]]. Sinon, c'est souvent un adjectif : [[des paroles provocantes]]." },
+        { "type": "fun", "text": "Le sais-tu ? Les pilotes et les hôtesses forment le « personnel navigant » (adjectif, avec un g), mais un bateau « naviguant vers le sud » prend un u. Une seule lettre change la nature du mot !" }
+      ],
+      "vocab": [
+        { "mot": "fatigant", "def": "Adjectif : qui cause de la fatigue.", "ex": "Ce trajet est fatigant.", "alt": [] },
+        { "mot": "convaincant", "def": "Adjectif : qui persuade, qui emporte l'adhésion.", "ex": "Son argument est convaincant.", "alt": [] },
+        { "mot": "provocant", "def": "Adjectif : qui cherche à faire réagir, à défier.", "ex": "Il prit un air provocant.", "alt": [] },
+        { "mot": "navigant", "def": "Adjectif : qui travaille à bord d'un avion ou d'un navire.", "ex": "Le personnel navigant est en grève.", "alt": [] },
+        { "mot": "négligent", "def": "Adjectif : qui ne fait pas assez attention, qui néglige.", "ex": "Un gardien négligent a laissé la porte ouverte.", "alt": [] },
+        { "mot": "différent", "def": "Adjectif : qui n'est pas pareil.", "ex": "Ces deux jumeaux ont un caractère différent.", "alt": [] },
+        { "mot": "précédent", "def": "Adjectif : qui vient juste avant.", "ex": "J'ai relu le chapitre précédent.", "alt": [] },
+        { "mot": "excellent", "def": "Adjectif : très bon.", "ex": "Ce gâteau est excellent.", "alt": [] },
+        { "mot": "équivalent", "def": "Adjectif : qui a la même valeur.", "ex": "Ces deux méthodes donnent un résultat équivalent.", "alt": [] },
+        { "mot": "influent", "def": "Adjectif : qui a de l'influence, du pouvoir sur les autres.", "ex": "C'est un ministre très influent.", "alt": [] },
+        { "mot": "intrigant", "def": "Adjectif : qui suscite la curiosité ; ou nom : personne qui manœuvre en secret.", "ex": "Ce bruit est intrigant.", "alt": [] },
+        { "mot": "suffocant", "def": "Adjectif : qui coupe la respiration.", "ex": "Une chaleur suffocante régnait dans la pièce.", "alt": [] },
+        { "mot": "vacant", "def": "Adjectif : libre, inoccupé.", "ex": "Ce poste est vacant depuis un mois.", "alt": [] },
+        { "mot": "communicant", "def": "Adjectif : qui communique avec autre chose.", "ex": "Ces deux chambres sont communicantes.", "alt": [] },
+        { "mot": "divergent", "def": "Adjectif : qui s'écarte, qui ne va pas dans le même sens.", "ex": "Nous avons des avis divergents.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Cette randonnée était vraiment fatigante.", "indice": "Une longue marche", "trap": ["fatiguante"], "alt": [] },
+        { "phrase": "Ses arguments sont très convaincants.", "indice": "Un débat gagné", "trap": ["convainquants"], "alt": [] },
+        { "phrase": "Le personnel navigant salue les passagers.", "indice": "À bord d'un avion", "trap": ["naviguant"], "alt": [] },
+        { "phrase": "En fatiguant ses adversaires, il a gagné le match.", "indice": "Une tactique d'endurance", "trap": ["fatigant"], "alt": ["Il a gagné le match en fatiguant ses adversaires."] },
+        { "phrase": "Il a perdu le match précédent.", "indice": "Une défaite récente", "trap": ["précédant"], "alt": [] },
+        { "phrase": "Les enfants, obéissant à leur mère, rentrèrent.", "indice": "Des enfants sages", "trap": ["obéissants"], "alt": [] },
+        { "phrase": "Elle chante en prenant sa douche.", "indice": "Un concert dans la salle de bains", "trap": ["prenante"], "alt": [] },
+        { "phrase": "Ces deux tableaux sont très différents.", "indice": "Une comparaison", "trap": ["différants"], "alt": [] },
+        { "phrase": "Un élève négligent oublie ses devoirs.", "indice": "Un manque de sérieux", "trap": ["négligeant"], "alt": [] },
+        { "phrase": "Ce documentaire est vraiment passionnant.", "indice": "Une soirée télé réussie", "trap": ["passionant"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Cette semaine a été ___.", "choices": ["fatigante", "fatiguante", "fatigant"], "answer": 0, "explain": "Adjectif verbal (on peut dire « très ») : fatigante, sans u." },
+        { "type": "mcq", "q": "Le marin, ___ vers le sud, aperçut une île.", "choices": ["naviguant", "navigant", "naviguants"], "answer": 0, "explain": "Participe présent suivi d'un complément : naviguant, invariable." },
+        { "type": "mcq", "q": "La police a trouvé des preuves ___.", "choices": ["convaincantes", "convainquantes", "convaincants"], "answer": 0, "explain": "Adjectif verbal accordé avec preuves : convaincantes." },
+        { "type": "mcq", "q": "Les élèves, ___ la cloche, se levèrent.", "choices": ["entendant", "entendants", "entendantes"], "answer": 0, "explain": "Participe présent avec un complément (la cloche) : invariable." },
+        { "type": "mcq", "q": "Quelle phrase est correcte ?", "choices": ["En arrivant à la gare, j'ai vu le train partir.", "En arrivant à la gare, le train est parti.", "En arrivant à la gare, le train partait sans moi."], "answer": 0, "explain": "Le sujet du gérondif doit être celui du verbe principal : c'est moi qui arrive." },
+        { "type": "fill", "q": "Il a relu le chapitre ___.", "hint": "précéder : adjectif ou participe présent ?", "answer": ["précédent"], "explain": "Adjectif verbal : précédent, avec -ent." },
+        { "type": "fill", "q": "Les jours ___ la fête, tout le monde s'activait.", "hint": "précéder : adjectif ou participe présent ?", "answer": ["précédant"], "explain": "Participe présent avec un complément (la fête) : précédant, invariable." },
+        { "type": "fill", "q": "Ce sont des personnes très ___.", "hint": "influer : l'adjectif, accordé", "answer": ["influentes"], "explain": "Adjectif verbal : influent, influentes." },
+        { "type": "fill", "q": "Il a réussi en ___ chaque soir.", "hint": "travailler, au gérondif", "answer": ["travaillant"], "explain": "Gérondif : en + participe présent, invariable." },
+        { "type": "fill", "q": "Ces enfants sont très ___.", "hint": "obéir : l'adjectif, accordé", "answer": ["obéissants"], "explain": "Adjectif verbal accordé avec enfants." },
+        { "type": "fill", "q": "Une chaleur ___ régnait dans la pièce.", "hint": "suffoquer : l'adjectif, accordé", "answer": ["suffocante"], "explain": "Adjectif verbal : suffocant, avec c." },
+        { "type": "fill", "q": "Les deux frères, ___ d'avis, se disputaient.", "hint": "différer : participe présent", "answer": ["différant"], "explain": "Participe présent avec un complément : différant, invariable." },
+        { "type": "error", "q": "C'est un travail très fatiguant.", "wrong": 4, "fix": ["fatigant"], "explain": "Adjectif verbal (très) : fatigant, sans u." },
+        { "type": "error", "q": "Ses explications sont convainquantes.", "wrong": 3, "fix": ["convaincantes"], "explain": "Adjectif verbal : convaincantes, avec c." },
+        { "type": "error", "q": "Les voyageurs, ignorants le danger, avançaient.", "wrong": 2, "fix": ["ignorant"], "explain": "Participe présent suivi d'un complément : invariable." },
+        { "type": "error", "q": "Ce poste est vaquant depuis un mois.", "wrong": 3, "fix": ["vacant"], "explain": "Adjectif : vacant, avec c." }
+      ],
+      "reading": {
+        "title": "Un discours convaincant",
+        "text": "Jeudi, le conseil municipal des jeunes devait choisir un projet pour le quartier. Malik avait préparé un discours en faveur d'un jardin partagé. Les membres, fatigués par une longue journée d'école, l'écoutaient d'une oreille distraite. Alors Malik changea de méthode. En montrant des photos du terrain vague, couvert de déchets, il fit réagir toute la salle. Certains membres, découvrant l'état du terrain, poussèrent des cris indignés. Puis, s'appuyant sur des chiffres précis, il expliqua combien coûterait le projet. Ses arguments, simples et convaincants, firent mouche. Une seule élève, négligeant les règles de la discussion, lui coupa plusieurs fois la parole ; Malik garda son calme, souriant poliment. Le vote fut sans appel : le jardin l'emporta. Les plantations commenceront au printemps, en associant les écoles du quartier. Le soir, Malik avoua à sa mère que cette journée avait été épuisante… mais exaltante.",
+        "questions": [
+          { "q": "Quel projet Malik défend-il ?", "choices": ["Un jardin partagé", "Un terrain de sport", "Une bibliothèque", "Un parking"], "answer": 0, "explain": "Un discours en faveur d'un jardin partagé." },
+          { "q": "Pourquoi Malik change-t-il de méthode ?", "choices": ["Les membres l'écoutaient à peine", "Il avait oublié son texte", "Le maire le lui a demandé", "Ses photos étaient perdues"], "answer": 0, "explain": "Les membres, fatigués, l'écoutaient d'une oreille distraite." },
+          { "q": "Comment réagit Malik quand on lui coupe la parole ?", "choices": ["Il garde son calme", "Il se met en colère", "Il quitte la salle", "Il abandonne son projet"], "answer": 0, "explain": "Il garde son calme, souriant poliment." },
+          { "q": "Que veut dire « firent mouche » ?", "choices": ["Atteignirent leur but, convainquirent", "Échouèrent", "Agacèrent le public", "Firent rire"], "answer": 0, "explain": "Faire mouche, c'est toucher juste, comme au centre d'une cible." },
+          { "q": "Dans « une élève, négligeant les règles », pourquoi « négligeant » est-il invariable ?", "choices": ["C'est un participe présent suivi d'un complément", "C'est un adjectif", "C'est un gérondif", "Il se termine par -ent"], "answer": 0, "explain": "Il exprime une action et a un complément : participe présent, invariable." },
+          { "q": "Dans « des arguments convaincants », de quelle nature est « convaincants » ?", "choices": ["Un adjectif verbal, qui s'accorde", "Un participe présent invariable", "Un gérondif", "Un nom"], "answer": 0, "explain": "Il exprime une qualité et s'accorde : adjectif verbal, avec c." }
+        ]
+      }
+    }
+  ]
+}
