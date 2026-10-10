@@ -1,0 +1,86 @@
+{
+  "level": 11,
+  "taunts": {
+    "phase2": [
+      "Fichtre ! Vous avez répondu juste. Il eût été plus convenable que vous échouassiez dès le début.",
+      "Votre français manque de tenue, mon cher. Quelque habile que vous soyez, vous ne passerez point.",
+      "Veuillez agréer, cher candidat, l'expression de ma profonde condescendance."
+    ],
+    "phase3": [
+      "Il fallait que vous vinssiez jusqu'ici pour mieux tomber. Quelle élégance dans la chute !",
+      "Une virgule mal placée, et c'en est fait de vous. Je vous observe, plume en main.",
+      "Quatre-vingts erreurs ou quatre-vingt ? Peu importe : vous les ferez toutes."
+    ],
+    "lose": [
+      "Il eût fallu que vous révisassiez. Je dis cela pour vous, naturellement.",
+      "Vous avez perdu avec un manque de style qui force l'admiration.",
+      "Revenez quand vous saurez distinguer qu'il fut de qu'il fût. Je ne suis pas pressé."
+    ]
+  },
+  "questions": [
+    { "unit": "11.1", "type": "mcq", "q": "Quel mot appartient au registre familier ?", "choices": ["un boulot", "un emploi", "une fonction"], "answer": 0, "explain": "Boulot est familier ; emploi est courant, fonction plus soutenu." },
+    { "unit": "11.1", "type": "mcq", "q": "Quel est l'équivalent courant de « se barrer » ?", "choices": ["partir", "prendre congé", "filer"], "answer": 0, "explain": "Filer est familier, prendre congé soutenu ; partir est courant." },
+    { "unit": "11.1", "type": "mcq", "q": "Quelle formule termine correctement une lettre officielle ?", "choices": ["Je vous prie de croire, Monsieur, à l'expression de mes sentiments respectueux.", "Bises, à plus !", "Merci et à la prochaine."], "answer": 0, "explain": "Une lettre officielle se termine par une formule de politesse complète." },
+    { "unit": "11.1", "type": "mcq", "q": "Quelle phrase relève du registre courant ?", "choices": ["Je ne comprends pas cette consigne.", "Je pige rien à ce truc.", "Cette consigne demeure pour moi une énigme insondable."], "answer": 0, "explain": "La première est correcte et neutre ; la deuxième familière, la troisième soutenue." },
+    { "unit": "11.1", "type": "fill", "q": "« Un bouquin » se dit, en registre courant, « un ___ ».", "hint": "un nom", "answer": ["livre"], "explain": "Bouquin est familier ; livre est courant." },
+    { "unit": "11.1", "type": "fill", "q": "« Je ne suis guère enclin à partir » signifie « je n'ai pas ___ de partir ».", "hint": "un nom", "answer": ["envie"], "explain": "Ne pas être enclin à : ne pas avoir envie de." },
+    { "unit": "11.1", "type": "fill", "q": "Veuillez ___, Madame, l'expression de mes salutations distinguées.", "hint": "un verbe à l'infinitif", "answer": ["agréer", "recevoir"], "explain": "Veuillez agréer : la formule consacrée." },
+    { "unit": "11.1", "type": "fill", "q": "« Il bosse dur » devient, en registre courant, « il ___ dur ».", "hint": "un verbe au présent", "answer": ["travaille"], "explain": "Bosser est familier ; travailler est courant." },
+    { "unit": "11.1", "type": "fill", "q": "Nous vous ___ reconnaissants de bien vouloir nous répondre.", "hint": "être, au conditionnel présent", "answer": ["serions"], "explain": "Le conditionnel de politesse : nous vous serions reconnaissants." },
+    { "unit": "11.1", "type": "error", "q": "Madame, je vous pris d'agréer mes salutations.", "wrong": 3, "fix": ["prie"], "explain": "Prier au présent : je vous prie." },
+    { "unit": "11.1", "type": "error", "q": "Je vous serez reconnaissant de votre réponse.", "wrong": 2, "fix": ["serais"], "explain": "Avec je, le conditionnel de politesse : je vous serais." },
+    { "unit": "11.1", "type": "error", "q": "Je me tient à votre disposition pour tout renseignement.", "wrong": 2, "fix": ["tiens"], "explain": "Avec je : je me tiens." },
+
+    { "unit": "11.2", "type": "mcq", "q": "Elle était ___ honteuse de son erreur.", "choices": ["toute", "tout", "toutes"], "answer": 0, "explain": "Devant un h aspiré au féminin, tout s'accorde : toute honteuse." },
+    { "unit": "11.2", "type": "mcq", "q": "Il a acheté des rideaux ___.", "choices": ["bleu foncé", "bleus foncés", "bleus foncé"], "answer": 0, "explain": "Une couleur composée reste invariable." },
+    { "unit": "11.2", "type": "mcq", "q": "___ soient les difficultés, nous réussirons.", "choices": ["Quelles que", "Quelques", "Quelle que"], "answer": 0, "explain": "Quel que, devant être, s'accorde avec le sujet : les difficultés." },
+    { "unit": "11.2", "type": "mcq", "q": "Ce sont les élèves ___ qui ont tout organisé.", "choices": ["eux-mêmes", "eux-même", "eux mêmes"], "answer": 0, "explain": "Après un pronom, même s'accorde et prend un trait d'union." },
+    { "unit": "11.2", "type": "fill", "q": "Ils ont acheté des vestes ___.", "hint": "marron", "answer": ["marron"], "explain": "Marron, nom employé comme couleur, reste invariable." },
+    { "unit": "11.2", "type": "fill", "q": "Il a dormi deux heures et ___.", "hint": "demi", "answer": ["demie"], "explain": "Après le nom, demi s'accorde en genre : heure est féminin." },
+    { "unit": "11.2", "type": "fill", "q": "Elle avait les bras ___ malgré le froid.", "hint": "nu", "answer": ["nus"], "explain": "Après le nom, nu s'accorde." },
+    { "unit": "11.2", "type": "fill", "q": "___ habiles qu'ils soient, ils ont échoué.", "hint": "quelque (= si)", "answer": ["Quelque"], "explain": "Devant un adjectif, quelque signifie si : invariable." },
+    { "unit": "11.2", "type": "fill", "q": "Ses joues étaient ___ de froid.", "hint": "pourpre", "answer": ["pourpres"], "explain": "Pourpre fait partie des couleurs qui s'accordent." },
+    { "unit": "11.2", "type": "error", "q": "Les invitées, tout gênées, sont parties.", "wrong": 2, "fix": ["toutes"], "explain": "Devant un adjectif féminin commençant par une consonne, tout s'accorde." },
+    { "unit": "11.2", "type": "error", "q": "Il porte des chaussettes marrons.", "wrong": 4, "fix": ["marron"], "explain": "Marron, nom employé comme couleur, reste invariable." },
+    { "unit": "11.2", "type": "error", "q": "Nous avons fait le plus d'efforts possibles.", "wrong": 6, "fix": ["possible"], "explain": "Après le plus de, possible reste invariable." },
+
+    { "unit": "11.3", "type": "mcq", "q": "Ce livre compte ___ pages.", "choices": ["trois cent vingt", "trois cents vingt", "trois cents-vingt"], "answer": 0, "explain": "Cent suivi d'un autre nombre : pas de s." },
+    { "unit": "11.3", "type": "mcq", "q": "Le pluriel d'« arc-en-ciel » est…", "choices": ["des arcs-en-ciel", "des arc-en-ciels", "des arcs-en-ciels"], "answer": 0, "explain": "Nom + complément : seul le premier nom varie." },
+    { "unit": "11.3", "type": "mcq", "q": "Le pluriel de « wagon-lit » est…", "choices": ["des wagons-lits", "des wagon-lits", "des wagons-lit"], "answer": 0, "explain": "Nom + nom : les deux varient." },
+    { "unit": "11.3", "type": "mcq", "q": "Nous sommes en l'an ___.", "choices": ["deux mille vingt-six", "deux milles vingt-six", "deux mille vingts-six"], "answer": 0, "explain": "Mille est invariable ; vingt suivi d'un autre nombre ne prend pas de s." },
+    { "unit": "11.3", "type": "fill", "q": "Ma voisine a ___ ans.", "hint": "90, en lettres", "answer": ["quatre-vingt-dix"], "explain": "Vingt suivi d'un autre nombre : pas de s." },
+    { "unit": "11.3", "type": "fill", "q": "Il y avait ___ spectateurs.", "hint": "400, en lettres", "answer": ["quatre cents"], "explain": "Cent multiplié, en fin de nombre : un s." },
+    { "unit": "11.3", "type": "fill", "q": "Le pluriel de « sous-marin » est des ___.", "hint": "un nom composé", "answer": ["sous-marins"], "explain": "Mot invariable + nom : seul le nom varie." },
+    { "unit": "11.3", "type": "fill", "q": "Le pluriel de « ouvre-boîte » est des ___.", "hint": "un nom composé", "answer": ["ouvre-boîtes"], "explain": "Verbe + nom : seul le nom varie." },
+    { "unit": "11.3", "type": "fill", "q": "Ce terrain mesure deux ___ mètres carrés.", "hint": "1000", "answer": ["mille"], "explain": "Mille est invariable." },
+    { "unit": "11.3", "type": "error", "q": "Elle a couru quatre-vingts-dix kilomètres.", "wrong": 3, "fix": ["quatre-vingt-dix"], "explain": "Vingt suivi d'un autre nombre : pas de s." },
+    { "unit": "11.3", "type": "error", "q": "Le pays compte trois million d'habitants.", "wrong": 4, "fix": ["millions"], "explain": "Million est un nom : il prend un s au pluriel." },
+    { "unit": "11.3", "type": "error", "q": "Nous avons acheté des tires-bouchons.", "wrong": 4, "fix": ["tire-bouchons"], "explain": "Verbe + nom : le verbe ne varie jamais." },
+
+    { "unit": "11.4", "type": "mcq", "q": "Il voulait que je ___ avec lui.", "choices": ["vinsse", "vins", "vinse"], "answer": 0, "explain": "Subjonctif imparfait de venir : que je vinsse." },
+    { "unit": "11.4", "type": "mcq", "q": "Quand elle ___ achevé sa lettre, elle la cacheta.", "choices": ["eut", "eût", "aie"], "answer": 0, "explain": "Passé antérieur : elle eut achevé, sans accent." },
+    { "unit": "11.4", "type": "mcq", "q": "Il eût fallu qu'elle ___ plus prudente.", "choices": ["fût", "fut", "fus"], "answer": 0, "explain": "Subjonctif imparfait : qu'elle fût." },
+    { "unit": "11.4", "type": "mcq", "q": "« S'il eût été là, il eût protesté » signifie…", "choices": ["S'il avait été là, il aurait protesté.", "S'il est là, il protestera.", "Il était là et il protesta."], "answer": 0, "explain": "Le subjonctif plus-que-parfait remplace ici le plus-que-parfait et le conditionnel passé." },
+    { "unit": "11.4", "type": "fill", "q": "Bien qu'il ___ tard, nous continuâmes.", "hint": "être, au subjonctif imparfait", "answer": ["fût"], "explain": "Bien que + subjonctif : qu'il fût." },
+    { "unit": "11.4", "type": "fill", "q": "Il ordonna qu'on ___ les portes.", "hint": "ouvrir, au subjonctif imparfait", "answer": ["ouvrît"], "explain": "Tu ouvris → qu'il ouvrît." },
+    { "unit": "11.4", "type": "fill", "q": "Elle souhaitait que tu ___ heureux.", "hint": "être, au subjonctif imparfait", "answer": ["fusses"], "explain": "Que tu fusses." },
+    { "unit": "11.4", "type": "fill", "q": "Après qu'il ___ parti, la maison redevint silencieuse.", "hint": "être, au passé simple (passé antérieur)", "answer": ["fut"], "explain": "Après que + indicatif : il fut parti, sans accent." },
+    { "unit": "11.4", "type": "fill", "q": "Il ___ été plus sage de partir.", "hint": "avoir : conditionnel passé deuxième forme", "answer": ["eût"], "explain": "Il eût été = il aurait été." },
+    { "unit": "11.4", "type": "error", "q": "Bien qu'il eut raison, il se tut.", "wrong": 2, "fix": ["eût"], "explain": "Bien que + subjonctif imparfait : qu'il eût, avec un accent." },
+    { "unit": "11.4", "type": "error", "q": "Dès qu'il eût mangé, il s'endormit.", "wrong": 2, "fix": ["eut"], "explain": "Passé antérieur (on peut dire « avait mangé ») : il eut, sans accent." },
+    { "unit": "11.4", "type": "error", "q": "Elle exigea qu'il fit ses excuses.", "wrong": 3, "fix": ["fît"], "explain": "Exiger que + subjonctif imparfait : qu'il fît." },
+
+    { "unit": "11.5", "type": "mcq", "q": "Quelle phrase est correctement ponctuée ?", "choices": ["Le directeur, qui était pressé, partit sans saluer.", "Le directeur qui était pressé, partit sans saluer.", "Le directeur, qui était pressé partit sans saluer."], "answer": 0, "explain": "Une incise s'encadre de deux virgules." },
+    { "unit": "11.5", "type": "mcq", "q": "Quelle phrase est correcte ?", "choices": ["Les Espagnols parlent espagnol.", "Les espagnols parlent Espagnol.", "Les Espagnols parlent Espagnol."], "answer": 0, "explain": "Majuscule au peuple, minuscule à la langue." },
+    { "unit": "11.5", "type": "mcq", "q": "Quelle est l'abréviation correcte de « Mademoiselle » ?", "choices": ["Mlle", "Mle", "Melle."], "answer": 0, "explain": "Mademoiselle s'abrège en Mlle, sans point." },
+    { "unit": "11.5", "type": "mcq", "q": "Que signale le point-virgule ?", "choices": ["Un lien entre deux propositions proches par le sens", "La fin d'un paragraphe", "Une question"], "answer": 0, "explain": "Il relie deux propositions sans les fondre." },
+    { "unit": "11.5", "type": "fill", "q": "Les ___ sont réputés pour leur ponctualité.", "hint": "les habitants de la Suisse", "answer": ["Suisses"], "case": true, "explain": "Nom de peuple : majuscule." },
+    { "unit": "11.5", "type": "fill", "q": "Il parle couramment l'___.", "hint": "la langue de l'Allemagne", "answer": ["allemand"], "case": true, "explain": "Nom de langue : minuscule." },
+    { "unit": "11.5", "type": "fill", "q": "Nous nous verrons en ___.", "hint": "le dernier mois de l'année", "answer": ["décembre"], "case": true, "explain": "Pas de majuscule aux noms de mois." },
+    { "unit": "11.5", "type": "fill", "q": "Ils ont visité l'Amérique du ___.", "hint": "un point cardinal qui fait partie du nom", "answer": ["Sud", "Nord"], "case": true, "explain": "Dans un nom de région, le point cardinal prend une majuscule." },
+    { "unit": "11.5", "type": "fill", "q": "Le ___ Martin a soigné mon père.", "hint": "l'abréviation de docteur", "answer": ["Dr"], "case": true, "explain": "Docteur s'abrège en Dr, sans point." },
+    { "unit": "11.5", "type": "error", "q": "Nous partirons en Août prochain.", "wrong": 3, "fix": ["août"], "case": true, "explain": "Pas de majuscule aux noms de mois." },
+    { "unit": "11.5", "type": "error", "q": "Elle adore la cuisine Italienne.", "wrong": 4, "fix": ["italienne"], "case": true, "explain": "Un adjectif de nationalité prend une minuscule." },
+    { "unit": "11.5", "type": "error", "q": "Elle est née un Dimanche de printemps.", "wrong": 4, "fix": ["dimanche"], "case": true, "explain": "Pas de majuscule aux jours de la semaine." }
+  ]
+}

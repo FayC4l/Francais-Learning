@@ -151,6 +151,20 @@ export function tileKey(words) {
 
 const baseKey = (w) => stripAccents(w.toLowerCase()).replace(/['-]/g, "");
 
+/** A rectified numeral typed in a dictation (deux-cent-vingt-et-un) back to the traditional words (deux cent vingt et un). */
+const NUM_BREAK = new Set("et cent cents mille".split(" "));
+function unhyphenNumeral(w) {
+  const parts = w.split("-");
+  if (parts.length < 2 || !parts.every((p) => NUMWORD.has(p.toLowerCase()))) return [w];
+  const out = [parts[0]];
+  for (let i = 1; i < parts.length; i++) {
+    const prev = parts[i - 1].toLowerCase();
+    if (NUM_BREAK.has(prev) || NUM_BREAK.has(parts[i].toLowerCase())) out.push(parts[i]);
+    else out[out.length - 1] += `-${parts[i]}`;
+  }
+  return out;
+}
+
 /**
  * Word-by-word correction of a dictation. Returns { words: [{ w, typed, status }], extra: [typed words],
  * faults } where status is "ok", "accent" (accents only), "case" (capital only), "wrong" or "missing".
@@ -158,7 +172,7 @@ const baseKey = (w) => stripAccents(w.toLowerCase()).replace(/['-]/g, "");
  */
 export function compareDictation(typed, expectedText) {
   const exp = clean(expectedText, { keepCase: true }).split(" ").filter(Boolean);
-  const got = clean(typed, { keepCase: true }).split(" ").filter(Boolean);
+  const got = clean(typed, { keepCase: true }).split(" ").flatMap(unhyphenNumeral).filter(Boolean);
   const a = got.map(baseKey);
   const b = exp.map(baseKey);
   const n = a.length;

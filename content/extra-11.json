@@ -1,0 +1,120 @@
+{
+  "level": 11,
+  "units": [
+    {
+      "unit": "11.1",
+      "dictee": {
+        "titre": "Lettre à monsieur le maire",
+        "texte": "Monsieur le Maire, je me permets de vous écrire au nom des habitants de la rue des Tilleuls, qui s'inquiètent de l'état de la place du marché. Depuis plusieurs mois, les bancs sont dégradés, l'éclairage ne fonctionne plus et les enfants ne peuvent guère y jouer en sécurité. Nous ne doutons pas que vous ayez de nombreuses priorités ; néanmoins, nous vous serions reconnaissants de bien vouloir examiner cette situation. Les riverains se tiennent à votre disposition pour en discuter lors d'une prochaine réunion du conseil de quartier. Vous trouverez ci-joint la liste des signataires, qui sont près d'une centaine et dont la plupart habitent le quartier depuis plus de vingt ans. Dans l'attente de votre réponse, je vous prie d'agréer, Monsieur le Maire, l'expression de ma haute considération.",
+        "points": [
+          "**Je me permets** : avec je, le verbe prend un s.",
+          "**ne peuvent guère** : une négation du registre soutenu.",
+          "**Nous ne doutons pas que vous ayez** : ne pas douter que + subjonctif.",
+          "**ci-joint la liste** : devant le nom, ci-joint reste invariable ; **Monsieur le Maire** : majuscule au titre dans la formule d'appel."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Rédige une courte lettre formelle (cinq à sept phrases) à la directrice de ton établissement pour proposer la création d'un club (lecture, échecs, théâtre…), avec une formule d'appel, une demande polie et une formule finale.",
+        "model": "Madame la Directrice, je me permets de vous écrire afin de vous proposer la création d'un club de théâtre au sein de notre établissement. Plusieurs élèves souhaiteraient en effet se réunir une fois par semaine pour monter une pièce. Un professeur de lettres a déjà accepté de nous accompagner. Nous vous serions très reconnaissants de bien vouloir mettre une salle à notre disposition le mercredi après-midi. Je reste à votre disposition pour vous présenter ce projet plus en détail. Je vous prie d'agréer, Madame la Directrice, l'expression de mes salutations respectueuses.",
+        "checklist": [
+          "Ma lettre commence par une formule d'appel sans adjectif affectueux.",
+          "Je vouvoie mon interlocuteur et mes négations sont complètes.",
+          "Ma formule finale reprend la formule d'appel."
+        ]
+      }
+    },
+    {
+      "unit": "11.2",
+      "dictee": {
+        "titre": "Le mariage de ma cousine",
+        "texte": "Le mariage de ma cousine fut une fête haute en couleur. Les demoiselles d'honneur, toutes souriantes, portaient des robes vert amande et des chaussures orange. La mariée, tout émue, avançait au bras de son père, dont les yeux bleu clair brillaient de fierté. Même les invités les plus réservés applaudirent lorsqu'elle apparut. La cérémonie dura une demi-heure ; le repas, en revanche, se prolongea jusqu'à deux heures et demie du matin. Les mêmes chansons revinrent plusieurs fois, et quelque deux cents convives dansèrent jusqu'à l'aube. Vers minuit, les enfants, épuisés, s'endormirent pieds nus sur les banquettes. Quant aux pivoines roses qui ornaient les tables, chacun en emporta quelques-unes en souvenir. Ma tante, elle, rentra tout heureuse, ses escarpins mauves à la main.",
+        "points": [
+          "**toutes souriantes** : devant une consonne au féminin, tout s'accorde ; **tout émue** : devant une voyelle, il reste invariable.",
+          "**vert amande**, **bleu clair**, **orange** : invariables ; mais **roses** s'accorde.",
+          "**une demi-heure** / **deux heures et demie** : demi invariable avant le nom, accordé en genre après.",
+          "**quelque deux cents convives** : quelque = environ, invariable ; **Même les invités** : adverbe, invariable."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Décris à voix haute la tenue de trois personnes (réelles ou imaginaires) avec au moins quatre couleurs, dont une couleur composée et un nom employé comme couleur (orange, marron…). Puis écris ta description.",
+        "model": "Ma sœur porte une veste bleu marine et des baskets orange. Mon père a choisi une chemise rose et un pantalon marron. Ma grand-mère, tout élégante, a mis des gants gris perle et des boucles d'oreilles vertes.",
+        "checklist": [
+          "Mes couleurs composées (bleu marine, gris perle) sont invariables.",
+          "Orange et marron restent invariables ; rose s'accorde.",
+          "J'ai accordé tout correctement devant un adjectif féminin."
+        ]
+      }
+    },
+    {
+      "unit": "11.3",
+      "dictee": {
+        "titre": "Le marché aux puces",
+        "texte": "Chaque premier dimanche du mois, le marché aux puces attire quelque trois mille visiteurs. Mon grand-père y tient un stand depuis quarante-deux ans. Il y vend des objets de toutes sortes : des tire-bouchons anciens, des porte-clés en cuir, des coffres-forts rouillés et même deux cents cartes postales jaunies. Ce matin, un collectionneur lui a acheté quatre-vingts timbres pour deux cent cinquante euros. Une dame a longtemps marchandé un service à thé de vingt-deux pièces, avant de repartir avec des choux-fleurs achetés au stand voisin. À midi, mon grand-père a compté sa recette : mille deux cent quatre-vingt-dix euros. Il a souri dans sa moustache : ses arrière-grands-parents, disait-il, n'en gagnaient pas autant en une année entière. Puis il a rangé ses tire-bouchons et ses porte-clés dans une vieille malle.",
+        "points": [
+          "**quatre-vingts timbres**, **deux cents cartes** : multipliés et en fin de nombre ; **deux cent cinquante** : cent suivi d'un autre nombre.",
+          "**trois mille**, **mille deux cent quatre-vingt-dix** : mille est invariable.",
+          "**tire-bouchons**, **porte-clés** : verbe + nom, seul le nom varie ; **coffres-forts**, **choux-fleurs** : les deux mots varient.",
+          "**arrière-grands-parents** : arrière reste invariable."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Écris en cinq phrases des nombres de ta vie, en lettres (le nombre d'élèves de ton école, un prix, une distance…), et emploie au moins trois noms composés au pluriel.",
+        "model": "Mon collège accueille quatre cent quatre-vingts élèves. Mon vélo a coûté deux cents euros. Dans la cuisine, nous avons trois tire-bouchons et deux ouvre-boîtes. Mes grands-parents habitent à trois cents kilomètres de chez nous. Cet été, j'ai lu mille deux cent cinquante pages.",
+        "checklist": [
+          "Vingt et cent prennent un s seulement s'ils sont multipliés et terminent le nombre.",
+          "Mille est resté invariable.",
+          "Mes noms composés sont correctement accordés."
+        ]
+      }
+    },
+    {
+      "unit": "11.4",
+      "dictee": {
+        "titre": "Le bal du château",
+        "texte": "Lorsque le vieux comte eut achevé son discours, les musiciens attaquèrent la première valse. Il eût souhaité que sa fille ouvrît le bal, mais elle tardait à paraître. On craignait qu'elle ne fût souffrante. Quand enfin elle descendit l'escalier, vêtue d'une robe ivoire, un murmure parcourut l'assemblée. Bien qu'elle dansât peu, elle accepta l'invitation d'un jeune officier qu'elle ne connaissait pas. Le comte eût préféré qu'elle choisît un cavalier plus fortuné ; il se garda pourtant de le dire. Dès que la valse fut terminée, l'officier s'inclina et disparut dans la foule. Il fallut attendre l'aube pour que la jeune fille apprît son nom. Cette rencontre, qu'on eût crue sans lendemain, changea pourtant le cours de leurs deux vies : un an plus tard, ils se mariaient dans la chapelle du château.",
+        "points": [
+          "**eut achevé**, **fut terminée** : passé antérieur, sans accent (on peut dire « avait achevé »).",
+          "**ouvrît**, **fût**, **dansât**, **choisît**, **apprît** : subjonctif imparfait, avec un accent circonflexe.",
+          "**Il eût souhaité**, **eût préféré** : conditionnel passé deuxième forme (= aurait souhaité).",
+          "**qu'on eût crue** : accord avec que, mis pour rencontre, placé avant le verbe."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Raconte à voix haute, comme un conteur d'autrefois, un souvenir en cinq phrases avec au moins deux subjonctifs imparfaits et un passé antérieur. Puis écris ton récit.",
+        "model": "Lorsque mon grand-père eut fini son repas, il nous appela près de la cheminée. Il fallait que nous l'écoutassions en silence. Bien qu'il fût fatigué, il nous raconta son premier voyage en mer. Il eût aimé que nous vinssions un jour avec lui sur son bateau. Nous l'écoutâmes jusqu'à ce que le feu s'éteignît.",
+        "checklist": [
+          "J'ai employé au moins deux subjonctifs imparfaits, avec l'accent à la troisième personne.",
+          "Mon passé antérieur (eut, fut) n'a pas d'accent.",
+          "Mon récit reste lisible malgré les temps rares."
+        ]
+      }
+    },
+    {
+      "unit": "11.5",
+      "dictee": {
+        "titre": "La gardienne des virgules",
+        "texte": "Ma tante Agathe, ancienne correctrice dans une maison d'édition, ne laisse rien passer. Lorsqu'elle reçoit une lettre, elle la lit deux fois : une fois pour le sens, une fois pour la ponctuation. L'an dernier, mon cousin lui a envoyé une carte de vœux qui disait : « Bonne année à toi ma tante préférée ! » Elle lui a répondu, le lundi suivant, par une carte où elle avait simplement ajouté une virgule. Mon cousin n'a pas compris ; moi, si. Quant aux majuscules, elle les traque sans pitié : on écrit les Français, mais le français ; le nord de la France, mais l'Afrique du Nord. Elle prétend qu'une phrase bien ponctuée respire, et qu'une phrase mal ponctuée étouffe. M. Durand, son voisin, l'appelle en riant « la gardienne des virgules ».",
+        "points": [
+          "**deux fois : une fois pour le sens…** : les deux-points annoncent une explication.",
+          "**Mon cousin n'a pas compris ; moi, si.** : le point-virgule relie deux idées opposées.",
+          "**les Français** (le peuple) / **le français** (la langue) ; **le nord de la France** / **l'Afrique du Nord**.",
+          "**M. Durand** : l'abréviation française de Monsieur ; **lundi** s'écrit sans majuscule."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Ponctue ce texte et ajoute les majuscules : « hier soir paul m'a dit je viendrai demain à huit heures il n'est jamais venu ». Puis écris deux phrases dont le sens change selon la place d'une virgule.",
+        "model": "Hier soir, Paul m'a dit : « Je viendrai demain à huit heures. » Il n'est jamais venu. On mange, les enfants ! On mange les enfants ! Les élèves, qui étaient fatigués, sont partis. Les élèves qui étaient fatigués sont partis.",
+        "checklist": [
+          "J'ai mis les deux-points et les guillemets avant les paroles rapportées.",
+          "Je n'ai jamais séparé le sujet de son verbe par une virgule.",
+          "Mes deux phrases montrent clairement le changement de sens."
+        ]
+      }
+    }
+  ]
+}

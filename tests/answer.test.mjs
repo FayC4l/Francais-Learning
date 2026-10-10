@@ -85,5 +85,9 @@ test("correction de dictée mot à mot", () => {
   const extra = compareDictation("Le le chat.", "Le chat.");
   assert.equal(extra.extra.length, 1);
   assert.equal(compareDictation("Ecole fermée.", "École fermée.").faults, 0);
+  // Rectified numerals (1990) are accepted in dictations too.
+  assert.equal(compareDictation("Il a payé deux-cent-quatre-vingts euros pour vingt-et-une places.", "Il a payé deux cent quatre-vingts euros pour vingt et une places.").faults, 0);
+  assert.equal(compareDictation("mille-deux-cent-quatre-vingt-dix", "mille deux cent quatre-vingt-dix").faults, 0);
+  assert.equal(compareDictation("deux-cents-cinquante", "deux cent cinquante").faults, 1);
   assert.equal(compareDictation("Il connait la réponse.", "Il connaît la réponse.").faults, 0);
 });

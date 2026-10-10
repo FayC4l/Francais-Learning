@@ -1,0 +1,452 @@
+{
+  "id": 11,
+  "cefr": "C2",
+  "title": "Le style",
+  "sub": "Registres, accords délicats, temps rares, ponctuation",
+  "intro": "Les registres de langue et la lettre formelle, les accords qui piègent les champions (tout, même, couleurs, demi), les nombres et les mots composés, les temps littéraires et l'art de la ponctuation. Bienvenue dans la cour des grands.",
+  "boss": {
+    "name": "Le Marquis de Registre",
+    "taunt": "Il eût fallu que vous vinssiez plus tôt, mon cher. Désormais, il est trop tard : apprêtez-vous à perdre avec élégance.",
+    "defeat": "Diantre ! Que je fusse vaincu par un roturier… Il eût mieux valu que je restasse au château."
+  },
+  "units": [
+    {
+      "id": "11.1",
+      "name": "Familier, courant, soutenu",
+      "title": "Les registres de langue ; la lettre formelle",
+      "goal": "Reconnaître les registres de langue et rédiger dans le registre adapté, notamment une lettre formelle.",
+      "lesson": [
+        { "type": "p", "text": "Selon la situation et l'interlocuteur, on ne s'exprime pas de la même façon. On distingue trois registres principaux : **familier**, **courant**, **soutenu**. Le DALF évalue ta capacité à choisir le registre adapté." },
+        { "type": "table", "head": ["Familier", "Courant", "Soutenu"], "rows": [["une bagnole", "une voiture", "une automobile"], ["bosser", "travailler", "œuvrer"], ["un bouquin", "un livre", "un ouvrage"], ["j'ai la flemme", "je n'ai pas envie", "je ne suis guère enclin"], ["c'est pas grave", "ce n'est pas grave", "cela n'a guère d'importance"], ["T'as vu ?", "Tu as vu ?", "As-tu vu ?"]] },
+        { "type": "rule", "title": "Les marques du registre familier", "text": "Suppression du ne (« j'sais pas »), « ça » pour cela, « on » pour nous, mots familiers (truc, boulot, bouquin), interrogation sans inversion, phrases inachevées. Dans une copie, ces marques sont pénalisées." },
+        { "type": "rule", "title": "Les marques du registre soutenu", "text": "Négation complète, inversion du sujet, subjonctif, vocabulaire précis et parfois rare, tournures recherchées ([[il sied de]], [[force est de constater]]), et parfois les temps littéraires (passé simple, subjonctif imparfait)." },
+        { "type": "rule", "title": "La lettre formelle", "text": "Formule d'appel sans possessif ([[Madame, Monsieur,]]), objet précis, phrases complètes, vouvoiement, et formule finale qui reprend la formule d'appel : [[Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.]]" },
+        { "type": "examples", "items": [
+          { "ex": "**Je ne sais pas** si je pourrai venir.", "note": "négation complète" },
+          { "ex": "**As-tu** terminé ton travail ?", "note": "inversion du sujet" },
+          { "ex": "**Cela n'a guère d'importance.**", "note": "registre soutenu" },
+          { "ex": "**Madame, Monsieur,** je me permets de vous écrire…", "note": "formule d'appel d'une lettre officielle" }
+        ] },
+        { "type": "compare", "title": "Les fautes de registre", "items": [
+          { "ko": "~~J'sais pas~~ si je viendrai.", "ok": "**Je ne sais pas** si je viendrai.", "why": "À l'écrit, la négation est complète." },
+          { "ko": "~~Chère Madame la directrice~~,", "ok": "**Madame la Directrice**,", "why": "Pas d'adjectif affectueux dans une lettre officielle ; majuscule au titre." },
+          { "ko": "~~Ça~~ me fait plaisir de vous écrire.", "ok": "**J'ai le plaisir** de vous écrire.", "why": "Registre soutenu : on évite « ça »." },
+          { "ko": "~~Bisous~~ et à bientôt !", "ok": "**Je vous prie d'agréer**, Monsieur, l'expression de mes salutations distinguées.", "why": "Une lettre formelle se termine par une formule de politesse." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Le registre soutenu n'est pas le registre ampoulé : trop de mots rares rendent un texte précieux et ridicule. L'idéal à l'écrit : un registre courant soigné, rehaussé de quelques tournures soutenues." },
+        { "type": "fun", "text": "Le sais-tu ? Le verlan inverse les syllabes : « louche » devient « chelou », « bizarre » devient « zarbi ». Certains mots de verlan sont même entrés dans le dictionnaire, comme « ouf » (fou)." }
+      ],
+      "vocab": [
+        { "mot": "automobile", "def": "Mot soutenu pour voiture.", "ex": "Une automobile de collection était garée devant le château.", "alt": [] },
+        { "mot": "ouvrage", "def": "Mot soutenu pour livre ; ou travail réalisé.", "ex": "Cet ouvrage a reçu un prix littéraire.", "alt": [] },
+        { "mot": "œuvrer", "def": "Travailler à une tâche importante (registre soutenu).", "ex": "Elle a œuvré toute sa vie pour la paix.", "alt": ["oeuvrer"] },
+        { "mot": "demeurer", "def": "Habiter ; ou rester (registre soutenu).", "ex": "Il demeure à Lyon depuis dix ans.", "alt": [] },
+        { "mot": "quérir", "def": "Aller chercher (mot littéraire, employé à l'infinitif).", "ex": "Il envoya quérir le médecin.", "alt": [] },
+        { "mot": "convier", "def": "Inviter (registre soutenu).", "ex": "Nous avons été conviés à une réception.", "alt": [] },
+        { "mot": "besogne", "def": "Travail que l'on doit faire, souvent pénible.", "ex": "Il s'est attelé à la besogne dès l'aube.", "alt": [] },
+        { "mot": "labeur", "def": "Travail long et pénible (mot littéraire).", "ex": "Des années de labeur lui ont permis d'acheter cette ferme.", "alt": [] },
+        { "mot": "collation", "def": "Repas léger.", "ex": "Une collation sera servie après la conférence.", "alt": [] },
+        { "mot": "agapes", "def": "Repas copieux et joyeux entre amis (au pluriel).", "ex": "Les agapes se prolongèrent tard dans la nuit.", "alt": [] },
+        { "mot": "pécule", "def": "Petite somme d'argent économisée.", "ex": "Il a amassé un petit pécule pour voyager.", "alt": [] },
+        { "mot": "courroux", "def": "Colère violente (mot littéraire).", "ex": "Le roi ne put contenir son courroux.", "alt": [] },
+        { "mot": "nonobstant", "def": "Malgré (registre soutenu, souvent juridique).", "ex": "Nonobstant les difficultés, le projet a abouti.", "alt": [] },
+        { "mot": "moult", "def": "Beaucoup de (mot ancien, souvent employé par plaisanterie).", "ex": "Il m'a fait moult compliments.", "alt": [] },
+        { "mot": "seoir", "def": "Convenir, être approprié (il sied ; mot littéraire).", "ex": "Cette robe semble seoir parfaitement à la cérémonie.", "alt": [] },
+        { "mot": "céans", "def": "Ici, dans cette maison (mot ancien).", "ex": "Le maître de céans nous accueillit.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Je ne sais pas si je pourrai venir.", "indice": "Une incertitude bien écrite", "trap": ["j'sais"], "alt": [] },
+        { "phrase": "As-tu terminé ton travail avant le dîner ?", "indice": "Une question soignée", "trap": ["T'as"], "alt": [] },
+        { "phrase": "Cela n'a guère d'importance pour nous.", "indice": "Une remarque soutenue", "trap": ["ça"], "alt": [] },
+        { "phrase": "Nous avons emprunté un ouvrage à la bibliothèque.", "indice": "Une lecture empruntée", "trap": ["bouquin"], "alt": [] },
+        { "phrase": "Je vous prie d'agréer mes salutations distinguées.", "indice": "La fin d'une lettre officielle", "trap": ["bisous"], "alt": [] },
+        { "phrase": "Il envoya quérir le médecin du village.", "indice": "Un appel au secours d'autrefois", "trap": ["quérire"], "alt": [] },
+        { "phrase": "Madame, Monsieur, je me permets de vous écrire.", "indice": "Le début d'une lettre officielle", "trap": ["Salut"], "alt": [] },
+        { "phrase": "Nous avons été conviés à une réception.", "indice": "Une invitation officielle", "trap": ["convié"], "alt": [] },
+        { "phrase": "Il demeure à Lyon depuis dix ans.", "indice": "Une adresse ancienne", "trap": ["demeurent"], "alt": [] },
+        { "phrase": "Le directeur nous a fait part de son courroux.", "indice": "Une colère exprimée", "trap": ["courou"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Quelle phrase relève du registre soutenu ?", "choices": ["Je ne suis guère enclin à accepter.", "J'ai pas trop envie d'accepter.", "Je n'ai pas envie d'accepter."], "answer": 0, "explain": "Guère et enclin appartiennent au registre soutenu." },
+        { "type": "mcq", "q": "« Bouquin » appartient au registre…", "choices": ["familier", "courant", "soutenu"], "answer": 0, "explain": "Bouquin : registre familier pour livre." },
+        { "type": "mcq", "q": "Quel est l'équivalent soutenu de « travailler » ?", "choices": ["œuvrer", "bosser", "bûcher"], "answer": 0, "explain": "Bosser et bûcher sont familiers." },
+        { "type": "mcq", "q": "Quelle formule d'appel convient à une lettre officielle ?", "choices": ["Madame, Monsieur,", "Coucou,", "Salut à vous,"], "answer": 0, "explain": "La formule neutre et respectueuse : Madame, Monsieur." },
+        { "type": "mcq", "q": "Quelle question appartient au registre soutenu ?", "choices": ["Pourriez-vous m'indiquer le chemin ?", "Vous pouvez me dire le chemin ?", "C'est où, le chemin ?"], "answer": 0, "explain": "Inversion et conditionnel de politesse." },
+        { "type": "fill", "q": "« J'sais pas » s'écrit, en registre courant, « Je ne ___ pas ».", "hint": "savoir, au présent", "answer": ["sais"], "explain": "Négation complète : je ne sais pas." },
+        { "type": "fill", "q": "« Une bagnole » se dit, en registre soutenu, « une ___ ».", "hint": "un nom", "answer": ["automobile"], "explain": "Automobile : registre soutenu." },
+        { "type": "fill", "q": "Je vous prie d'___, Madame, l'expression de mes salutations distinguées.", "hint": "un verbe", "answer": ["agréer"], "explain": "La formule consacrée : je vous prie d'agréer." },
+        { "type": "fill", "q": "« Ça m'énerve » devient, en registre soutenu, « cela m'___ ».", "hint": "un verbe au présent", "answer": ["agace", "irrite", "exaspère", "contrarie"], "explain": "Cela et un verbe plus précis." },
+        { "type": "fill", "q": "Le registre ___ utilise des mots comme « boulot » ou « truc ».", "hint": "un adjectif", "answer": ["familier"], "explain": "Boulot et truc sont familiers." },
+        { "type": "fill", "q": "Il ___ de rappeler que la séance est publique.", "hint": "seoir, au présent : il convient", "answer": ["sied"], "explain": "Il sied : il convient (registre soutenu)." },
+        { "type": "fill", "q": "Nous ___ à vous informer de notre décision.", "hint": "tenir, au présent", "answer": ["tenons"], "explain": "Nous tenons à : formule courtoise." },
+        { "type": "error", "q": "Je vous prie d'agréer mes salutations distinguer.", "wrong": 6, "fix": ["distinguées"], "explain": "Adjectif accordé avec salutations : distinguées." },
+        { "type": "error", "q": "Madame, je vous écrit pour solliciter un rendez-vous.", "wrong": 3, "fix": ["écris"], "explain": "Avec je : j'écris, avec un s." },
+        { "type": "error", "q": "Veuillez agréer, Monsieur, l'expression de mes sentiments respectueuse.", "wrong": 7, "fix": ["respectueux"], "explain": "Accord avec sentiments : respectueux." },
+        { "type": "error", "q": "Je me permet de vous adresser ma candidature.", "wrong": 2, "fix": ["permets"], "explain": "Avec je : je me permets." }
+      ],
+      "reading": {
+        "title": "La lettre du stagiaire",
+        "text": "Lorsque Théo commença son stage dans un cabinet d'avocats, sa première mission lui parut simple : écrire au propriétaire d'un immeuble pour réclamer des réparations. Il rédigea en dix minutes un message qu'il trouvait parfait : « Salut, on a un souci avec la chaudière de vos locataires, ça marche plus depuis trois semaines. Ce serait cool de faire venir quelqu'un vite fait. Merci d'avance ! » Sa tutrice, maître Duval, lut le texte sans un mot, puis lui tendit un stylo rouge. « Votre message est clair, Théo, et c'est une qualité. Mais vous écrivez à un propriétaire que vous ne connaissez pas, au nom d'un cabinet : le registre doit être soutenu. » Ensemble, ils réécrivirent la lettre. « Salut » devint « Monsieur », « un souci » devint « un dysfonctionnement », « ça marche plus » devint « ne fonctionne plus », et le joyeux « Merci d'avance ! » céda la place à une formule plus solennelle : « Je vous prie d'agréer, Monsieur, l'expression de mes salutations distinguées. » Théo protesta un peu : la nouvelle version lui paraissait lourde, presque hypocrite. Maître Duval sourit. « Le registre soutenu n'est pas une politesse vide, expliqua-t-elle. C'est une marque de respect envers votre interlocuteur et de sérieux envers votre client. Vous pouvez être familier avec vos amis ; avec un inconnu, la courtoisie est votre meilleur argument. » Théo relut les deux versions côte à côte et dut admettre que la seconde inspirait davantage confiance. Deux jours plus tard, le chauffagiste était sur place.",
+        "questions": [
+          { "q": "Quelle était la mission de Théo ?", "choices": ["Écrire à un propriétaire pour réclamer des réparations", "Plaider au tribunal", "Réparer une chaudière", "Recruter un stagiaire"], "answer": 0, "explain": "Il devait réclamer des réparations au propriétaire." },
+          { "q": "Que reproche maître Duval au premier message ?", "choices": ["Son registre familier, inadapté à la situation", "Son manque de clarté", "Ses fautes d'orthographe", "Sa longueur"], "answer": 0, "explain": "Le message est clair, mais le registre doit être soutenu." },
+          { "q": "Par quoi « un souci » a-t-il été remplacé ?", "choices": ["un dysfonctionnement", "un problème", "une panne", "une difficulté"], "answer": 0, "explain": "« Un souci devint un dysfonctionnement. »" },
+          { "q": "Comment Théo juge-t-il d'abord la nouvelle version ?", "choices": ["Lourde, presque hypocrite", "Parfaite", "Trop familière", "Incompréhensible"], "answer": 0, "explain": "Elle « lui paraissait lourde, presque hypocrite »." },
+          { "q": "Selon maître Duval, que représente le registre soutenu ?", "choices": ["Une marque de respect et de sérieux", "Une politesse vide", "Une perte de temps", "Une habitude démodée"], "answer": 0, "explain": "Respect envers l'interlocuteur, sérieux envers le client." },
+          { "q": "Que suggère la dernière phrase ?", "choices": ["La lettre soutenue a été efficace", "Le propriétaire a refusé", "Théo a été renvoyé", "La chaudière fonctionnait déjà"], "answer": 0, "explain": "Deux jours plus tard, le chauffagiste était là." }
+        ]
+      }
+    },
+    {
+      "id": "11.2",
+      "name": "Les accords qui piègent",
+      "title": "Les accords délicats : tout, même, quelque, couleurs, demi, nu, ci-joint, possible",
+      "goal": "Distinguer l'emploi adjectif (variable) de l'emploi adverbe (invariable) des mots les plus piégeux.",
+      "lesson": [
+        { "type": "p", "text": "Quelques mots changent de nature selon leur emploi : **adjectifs** (variables) ou **adverbes** (invariables). Les reconnaître est la clé des dictées de haut niveau." },
+        { "type": "rule", "title": "Tout", "text": "Adjectif ou pronom, il s'accorde : [[toute la journée]], [[tous les jours]], [[ils sont tous venus]]. Adverbe (= tout à fait) devant un adjectif, il est invariable : [[ils sont tout contents]]… sauf devant un adjectif féminin qui commence par une consonne ou un h aspiré, où il s'accorde pour l'oreille : [[elles sont toutes contentes]], [[toute honteuse]] ; mais [[tout heureuse]], [[tout étonnée]]." },
+        { "type": "rule", "title": "Même", "text": "Adjectif (= identique ; ou après un pronom), il s'accorde : [[les mêmes erreurs]], [[eux-mêmes]]. Adverbe (= aussi, y compris), il est invariable : [[même les enfants ont compris]]." },
+        { "type": "rule", "title": "Quelque", "text": "Devant un nom, déterminant variable : [[quelques amis]]. Devant un nombre (= environ) ou un adjectif (= si), adverbe invariable : [[quelque cinquante personnes]], [[quelque habiles qu'ils soient]]. Devant le verbe être : quel que, en deux mots : [[quelles que soient tes raisons]]." },
+        { "type": "table", "head": ["Couleurs", "Exemples"], "rows": [["un nom employé comme couleur reste invariable", "des robes orange, des yeux marron"], ["exceptions qui s'accordent : rose, mauve, pourpre, fauve, écarlate, incarnat", "des joues roses"], ["une couleur composée reste invariable", "des yeux bleu clair, des vestes vert foncé"], ["deux couleurs pour un même objet", "des drapeaux bleu et blanc"]] },
+        { "type": "rule", "title": "Demi, nu, ci-joint, possible", "text": "**demi** avant le nom : invariable avec un trait d'union ([[une demi-heure]]) ; après le nom, il s'accorde en genre seulement ([[deux heures et demie]]). **nu** : [[nu-pieds]], mais [[pieds nus]]. **ci-joint** est invariable devant le nom ([[Veuillez trouver ci-joint la facture]]), variable après ([[la facture ci-jointe]]). **possible** après le plus, le moins reste invariable : [[le plus de livres possible]]." },
+        { "type": "examples", "items": [
+          { "ex": "Elles sont **toutes** contentes.", "note": "féminin + consonne : tout s'accorde" },
+          { "ex": "Elle est **tout** étonnée.", "note": "devant une voyelle : invariable" },
+          { "ex": "**Même** les plus sceptiques ont applaudi.", "note": "adverbe : invariable" },
+          { "ex": "Il a les yeux **bleu clair**.", "note": "couleur composée : invariable" },
+          { "ex": "Il est rentré à deux heures et **demie**.", "note": "après le nom : accord en genre" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "Elles sont ~~tout~~ contentes.", "ok": "Elles sont **toutes** contentes.", "why": "Devant un adjectif féminin commençant par une consonne, tout s'accorde." },
+          { "ko": "des robes ~~oranges~~", "ok": "des robes **orange**", "why": "Un nom de fruit employé comme couleur reste invariable." },
+          { "ko": "une ~~demie~~-heure", "ok": "une **demi**-heure", "why": "Avant le nom, demi est invariable." },
+          { "ko": "~~nus~~-pieds", "ok": "**nu**-pieds", "why": "Avant le nom, nu est invariable et suivi d'un trait d'union." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Pour reconnaître **tout** adverbe, remplace-le par « tout à fait » : [[ils sont tout à fait surpris]] → tout est adverbe. Si « tout à fait » ne convient pas, c'est un adjectif ou un pronom, qui s'accorde." },
+        { "type": "fun", "text": "Le sais-tu ? « Marron » et « orange » sont invariables parce que ce sont d'abord un fruit et une châtaigne : des yeux couleur de marron. Mais « rose », pourtant nom de fleur, s'accorde par l'usage : des joues roses !" }
+      ],
+      "vocab": [
+        { "mot": "écarlate", "def": "D'un rouge vif et éclatant.", "ex": "Il est devenu écarlate de honte.", "alt": [] },
+        { "mot": "pourpre", "def": "D'un rouge foncé tirant sur le violet.", "ex": "Le cardinal porte une robe pourpre.", "alt": [] },
+        { "mot": "vermillon", "def": "D'un rouge vif tirant sur l'orangé.", "ex": "Le peintre a choisi un vermillon éclatant.", "alt": [] },
+        { "mot": "carmin", "def": "D'un rouge très vif et profond.", "ex": "Elle porte un rouge à lèvres carmin.", "alt": [] },
+        { "mot": "turquoise", "def": "D'un bleu tirant sur le vert ; ou pierre de cette couleur.", "ex": "La mer est turquoise dans cette baie.", "alt": [] },
+        { "mot": "azur", "def": "Bleu clair du ciel ; le ciel lui-même (mot poétique).", "ex": "Un ciel d'azur s'étendait au-dessus de nous.", "alt": [] },
+        { "mot": "céladon", "def": "Vert pâle tirant sur le gris.", "ex": "Les volets sont peints en vert céladon.", "alt": [] },
+        { "mot": "ocre", "def": "Jaune-brun tirant sur l'orangé, couleur de certaines terres.", "ex": "Les maisons du Roussillon ont des façades ocre.", "alt": [] },
+        { "mot": "safran", "def": "D'un jaune orangé ; ou épice tirée d'une fleur.", "ex": "Il porte une écharpe safran.", "alt": [] },
+        { "mot": "ivoire", "def": "Blanc légèrement jaune ; matière des défenses d'éléphant.", "ex": "Elle a choisi des rideaux ivoire.", "alt": [] },
+        { "mot": "ébène", "def": "Noir profond et brillant ; bois très dur et noir.", "ex": "Elle a des cheveux d'ébène.", "alt": [] },
+        { "mot": "anthracite", "def": "Gris très foncé, presque noir.", "ex": "Il a acheté un costume anthracite.", "alt": [] },
+        { "mot": "kaki", "def": "Brun-vert, couleur des uniformes militaires.", "ex": "Les soldats portent des tenues kaki.", "alt": [] },
+        { "mot": "bordeaux", "def": "Rouge foncé, couleur de certains vins.", "ex": "Il porte des chaussettes bordeaux.", "alt": [] },
+        { "mot": "indigo", "def": "Bleu foncé tirant sur le violet.", "ex": "Le jean est teint à l'indigo.", "alt": [] },
+        { "mot": "émeraude", "def": "D'un vert vif et lumineux ; ou pierre précieuse verte.", "ex": "Une mer émeraude borde la côte.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Elles sont toutes contentes de partir en vacances.", "indice": "Une joie partagée", "trap": ["tout"], "alt": [] },
+        { "phrase": "Elle est tout étonnée de ta réponse.", "indice": "Une grande surprise", "trap": ["toute"], "alt": [] },
+        { "phrase": "Même les enfants ont compris la leçon.", "indice": "Une leçon limpide", "trap": ["Mêmes"], "alt": [] },
+        { "phrase": "Ils ont fait les mêmes erreurs que l'an dernier.", "indice": "Des fautes répétées", "trap": ["même"], "alt": [] },
+        { "phrase": "Elle porte des chaussures orange avec sa robe.", "indice": "Une tenue colorée", "trap": ["oranges"], "alt": [] },
+        { "phrase": "Il a les yeux bleu clair de sa mère.", "indice": "Un regard hérité", "trap": ["bleus"], "alt": [] },
+        { "phrase": "Nous avons attendu une demi-heure sous la pluie.", "indice": "Une attente mouillée", "trap": ["demie"], "alt": [] },
+        { "phrase": "Il est rentré à deux heures et demie du matin.", "indice": "Un retour tardif", "trap": ["demi"], "alt": [] },
+        { "phrase": "Les enfants courent pieds nus sur la plage.", "indice": "Une course sur le sable", "trap": ["nu"], "alt": [] },
+        { "phrase": "Veuillez trouver ci-joint la facture du mois.", "indice": "Une formule administrative", "trap": ["ci-jointe"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Elles sont ___ heureuses de te voir.", "choices": ["tout", "toutes", "toute"], "answer": 0, "explain": "Devant un h muet, tout adverbe reste invariable : tout heureuses." },
+        { "type": "mcq", "q": "Ces fleurs sont ___ fanées.", "choices": ["toutes", "tout", "toute"], "answer": 0, "explain": "Devant un adjectif féminin commençant par une consonne, tout s'accorde." },
+        { "type": "mcq", "q": "Il a des cravates ___.", "choices": ["marron", "marrons", "marronnes"], "answer": 0, "explain": "Marron, nom employé comme couleur, reste invariable." },
+        { "type": "mcq", "q": "Il est midi et ___.", "choices": ["demi", "demie", "demis"], "answer": 0, "explain": "Après le nom, demi s'accorde en genre avec lui : midi est masculin." },
+        { "type": "mcq", "q": "Achète le plus de fruits ___.", "choices": ["possible", "possibles"], "answer": 0, "explain": "Après le plus de, possible reste invariable." },
+        { "type": "fill", "q": "Ils ont tous les ___ goûts.", "hint": "même", "answer": ["mêmes"], "explain": "Adjectif (= identiques) : il s'accorde." },
+        { "type": "fill", "q": "___ les plus sceptiques ont applaudi.", "hint": "même (= y compris)", "answer": ["Même"], "explain": "Adverbe : invariable." },
+        { "type": "fill", "q": "Elle a des joues ___.", "hint": "rose", "answer": ["roses"], "explain": "Rose fait partie des exceptions qui s'accordent." },
+        { "type": "fill", "q": "Il marche ___-tête sous la pluie.", "hint": "nu", "answer": ["nu"], "explain": "Avant le nom : nu invariable, avec un trait d'union." },
+        { "type": "fill", "q": "La lettre ___ précise les horaires.", "hint": "ci-joint", "answer": ["ci-jointe"], "explain": "Après le nom, ci-joint s'accorde." },
+        { "type": "fill", "q": "Il y avait ___ trente personnes.", "hint": "quelque (= environ)", "answer": ["quelque"], "explain": "Devant un nombre, quelque signifie environ : invariable." },
+        { "type": "fill", "q": "J'ai lu ___ livres cet été.", "hint": "quelque", "answer": ["quelques"], "explain": "Devant un nom pluriel, quelques s'accorde." },
+        { "type": "error", "q": "Elles sont tout surprises.", "wrong": 2, "fix": ["toutes"], "explain": "Devant un adjectif féminin commençant par une consonne, tout s'accorde." },
+        { "type": "error", "q": "Il porte des chemises oranges.", "wrong": 4, "fix": ["orange"], "explain": "Orange, nom de fruit employé comme couleur, reste invariable." },
+        { "type": "error", "q": "Nous partons dans une demie-heure.", "wrong": 4, "fix": ["demi-heure"], "explain": "Avant le nom, demi est invariable." },
+        { "type": "error", "q": "Ils marchaient nus-pieds dans l'herbe.", "wrong": 2, "fix": ["nu-pieds"], "explain": "Avant le nom, nu est invariable." }
+      ],
+      "reading": {
+        "title": "La finale du championnat",
+        "text": "Chaque année, la finale du championnat d'orthographe réunit les meilleurs amateurs du pays. Cette fois, le texte choisi par le jury était redoutable. Dès la première phrase, les candidats sentirent le piège : « Toutes contentes qu'elles fussent, les demoiselles d'honneur, vêtues de robes vert pomme et de gants mauve pâle, tremblaient quelque peu. » Fallait-il accorder tout ? Écrire « vert pommes » ? Une candidate, Inès, ne se laissa pas impressionner. Elle se rappela les règles : devant un adjectif féminin commençant par une consonne, tout s'accorde pour l'oreille ; une couleur composée reste invariable ; et quelque devant un adverbe ne prend jamais de s. Les phrases suivantes ne furent pas plus aimables : des yeux marron, des chapeaux ivoire, deux heures et demie, une demi-douzaine d'invités nu-pieds… Même les finalistes les plus aguerris hésitèrent. Lorsque les copies furent corrigées, la surprise fut générale : Inès, seize ans, n'avait commis qu'une seule faute, sur un mot que tout le monde avait raté. Le président du jury, lui-même ancien champion, la félicita chaleureusement. Interrogée par un journaliste, elle répondit simplement : « Je n'apprends pas les exceptions par cœur : je cherche à comprendre pourquoi elles existent. Une fois qu'on a compris, on ne les oublie plus. » Le soir même, elle reçut le trophée sous les applaudissements nourris d'une salle debout, puis posa avec les autres finalistes. Ses parents, eux, avouèrent n'avoir rien compris à la dictée.",
+        "questions": [
+          { "q": "Pourquoi le texte de la finale était-il « redoutable » ?", "choices": ["Il accumulait les accords délicats", "Il était très long", "Il était en vers", "Il contenait des mots étrangers"], "answer": 0, "explain": "Tout, couleurs, quelque, demi, nu : tous les pièges réunis." },
+          { "q": "Pourquoi écrit-on « robes vert pomme » sans accord ?", "choices": ["Une couleur composée reste invariable", "Vert est un nom", "Il n'y a qu'une pomme", "Les robes sont uniques"], "answer": 0, "explain": "Une couleur composée de deux mots reste invariable." },
+          { "q": "Pourquoi « Toutes contentes » prend-il un s ?", "choices": ["Devant un adjectif féminin commençant par une consonne, tout s'accorde", "Tout est ici un nom", "C'est une erreur du jury", "Contentes est au singulier"], "answer": 0, "explain": "L'accord se fait pour l'oreille devant une consonne." },
+          { "q": "Quelle est la méthode d'Inès ?", "choices": ["Comprendre la raison des exceptions", "Apprendre les exceptions par cœur", "Deviner", "Copier sur ses voisins"], "answer": 0, "explain": "« Je cherche à comprendre pourquoi elles existent. »" },
+          { "q": "Que révèle la dernière phrase ?", "choices": ["Une note d'humour : les parents n'ont rien compris à la dictée", "Les parents sont fâchés", "Les parents ont gagné", "Les parents ont écrit la dictée"], "answer": 0, "explain": "Un trait d'humour qui souligne la difficulté du texte." },
+          { "q": "Dans « tremblaient quelque peu », pourquoi « quelque » est-il invariable ?", "choices": ["Il est adverbe, devant l'adverbe peu", "Il est au singulier", "Il s'accorde avec peu", "C'est une faute"], "answer": 0, "explain": "Quelque peu : locution adverbiale, invariable." }
+        ]
+      }
+    },
+    {
+      "id": "11.3",
+      "name": "Vingt, cent, mille",
+      "title": "Les nombres en lettres ; le pluriel des noms composés",
+      "goal": "Écrire les nombres en lettres et mettre au pluriel les noms composés.",
+      "lesson": [
+        { "type": "p", "text": "Écrire les nombres en lettres et accorder les noms composés : deux classiques des dictées, où même les adultes trébuchent." },
+        { "type": "rule", "title": "Vingt et cent", "text": "Ils prennent un **s** quand ils sont multipliés et terminent le nombre : [[quatre-vingts]], [[deux cents]]. Ils restent invariables s'ils sont suivis d'un autre nombre : [[quatre-vingt-trois]], [[deux cent cinq]]. **Mille** est toujours invariable : [[trois mille]]. **Million** et **milliard** sont des noms : [[deux millions]]." },
+        { "type": "rule", "title": "Les traits d'union", "text": "Traditionnellement, on met un trait d'union entre les nombres inférieurs à cent, sauf autour de et : [[vingt-deux]], [[vingt et un]]. Depuis les rectifications de 1990, on peut relier tous les éléments par des traits d'union : [[deux-cent-vingt-et-un]]. Les deux usages sont acceptés." },
+        { "type": "rule", "title": "Ordinaux et numéros", "text": "Employés pour un rang (page, année), vingt et cent ne prennent pas de s : [[la page quatre-vingt]], [[l'an deux mille]]. On écrit [[premier]], [[deuxième]], [[vingt et unième]]." },
+        { "type": "table", "head": ["Composition", "Règle", "Exemples"], "rows": [["nom + nom", "les deux varient", "des choux-fleurs, des wagons-lits"], ["nom + adjectif", "les deux varient", "des coffres-forts, des grands-mères"], ["nom + complément", "seul le premier varie", "des chefs-d'œuvre, des arcs-en-ciel"], ["verbe + nom", "le verbe ne varie jamais", "des tire-bouchons, des porte-monnaies (rectification 1990)"], ["mot invariable + nom", "seul le nom varie", "des avant-gardes, des arrière-pensées"]] },
+        { "type": "examples", "items": [
+          { "ex": "Ce livre coûte **quatre-vingts** euros.", "note": "vingt multiplié, en fin de nombre" },
+          { "ex": "Mon grand-père a **quatre-vingt-trois** ans.", "note": "suivi d'un autre nombre : pas de s" },
+          { "ex": "Elle a couru **trois mille** mètres.", "note": "mille est invariable" },
+          { "ex": "J'ai acheté deux **choux-fleurs**.", "note": "nom + nom : les deux varient" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "~~quatre-vingt~~ euros", "ok": "**quatre-vingts** euros", "why": "Vingt multiplié et en fin de nombre : un s." },
+          { "ko": "deux ~~cents~~ trois", "ok": "deux **cent** trois", "why": "Cent suivi d'un autre nombre : pas de s." },
+          { "ko": "trois ~~milles~~", "ok": "trois **mille**", "why": "Mille est invariable." },
+          { "ko": "des ~~chef-d'œuvres~~", "ok": "des **chefs-d'œuvre**", "why": "Nom + complément : seul le premier nom varie." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Pour un nom composé, demande-toi ce que chaque élément désigne au pluriel : des **arcs** en ciel (plusieurs arcs, un seul ciel) → des arcs-en-ciel ; des **tire**-bouchons : le verbe tirer ne prend jamais la marque du pluriel." },
+        { "type": "fun", "text": "Le sais-tu ? En Belgique et en Suisse, on dit « septante » et « nonante », et même « huitante » dans certains cantons suisses. Bien plus logique que « soixante-dix » et « quatre-vingt-dix »… mais la France y résiste !" }
+      ],
+      "vocab": [
+        { "mot": "centaine", "def": "Groupe d'environ cent unités.", "ex": "Une centaine de personnes attendaient devant la salle.", "alt": [] },
+        { "mot": "millier", "def": "Groupe d'environ mille unités.", "ex": "Des milliers d'oiseaux migrent chaque automne.", "alt": [] },
+        { "mot": "douzaine", "def": "Groupe de douze unités.", "ex": "J'ai acheté une douzaine d'œufs.", "alt": [] },
+        { "mot": "quinzaine", "def": "Groupe d'environ quinze unités ; ou période de deux semaines.", "ex": "Nous partons pour une quinzaine de jours.", "alt": [] },
+        { "mot": "vingtaine", "def": "Groupe d'environ vingt unités.", "ex": "Une vingtaine d'élèves ont participé au concours.", "alt": [] },
+        { "mot": "bicentenaire", "def": "Anniversaire des deux cents ans d'un événement.", "ex": "La ville fête le bicentenaire de son théâtre.", "alt": [] },
+        { "mot": "quadragénaire", "def": "Personne qui a entre quarante et quarante-neuf ans.", "ex": "Ce quadragénaire a repris ses études.", "alt": [] },
+        { "mot": "sexagénaire", "def": "Personne qui a entre soixante et soixante-neuf ans.", "ex": "Une sexagénaire a remporté le marathon.", "alt": [] },
+        { "mot": "octogénaire", "def": "Personne qui a entre quatre-vingts et quatre-vingt-neuf ans.", "ex": "Mon voisin octogénaire jardine encore chaque matin.", "alt": [] },
+        { "mot": "nonagénaire", "def": "Personne qui a entre quatre-vingt-dix et quatre-vingt-dix-neuf ans.", "ex": "Ma grand-tante, nonagénaire, lit sans lunettes.", "alt": [] },
+        { "mot": "chou-fleur", "def": "Légume dont on mange la tête blanche et compacte.", "ex": "Le gratin de chou-fleur est prêt.", "alt": [] },
+        { "mot": "coffre-fort", "def": "Coffre blindé où l'on range les objets de valeur.", "ex": "Les bijoux sont dans le coffre-fort.", "alt": [] },
+        { "mot": "tire-bouchon", "def": "Instrument qui sert à retirer le bouchon d'une bouteille.", "ex": "Passe-moi le tire-bouchon, s'il te plaît.", "alt": [] },
+        { "mot": "porte-monnaie", "def": "Petite pochette où l'on range les pièces.", "ex": "J'ai perdu mon porte-monnaie au marché.", "alt": [] },
+        { "mot": "arc-boutant", "def": "Construction en arc qui soutient un mur de l'extérieur, dans les cathédrales.", "ex": "Un arc-boutant soutient le mur de la cathédrale.", "alt": [] },
+        { "mot": "garde-manger", "def": "Petit placard aéré où l'on conserve les aliments.", "ex": "Le fromage est dans le garde-manger.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Ce livre ancien coûte quatre-vingts euros.", "indice": "Un prix rond", "trap": ["quatre-vingt"], "alt": [] },
+        { "phrase": "Il y avait deux cents invités à la noce.", "indice": "Un grand mariage", "trap": ["cent"], "alt": [] },
+        { "phrase": "Elle a couru trois mille mètres sans s'arrêter.", "indice": "Une course d'endurance", "trap": ["milles"], "alt": [] },
+        { "phrase": "Mon grand-père vient d'avoir quatre-vingt-trois ans.", "indice": "Un âge respectable", "trap": ["quatre-vingts-trois"], "alt": [] },
+        { "phrase": "La ville compte deux millions d'habitants.", "indice": "Une grande métropole", "trap": ["million"], "alt": [] },
+        { "phrase": "J'ai acheté deux choux-fleurs au marché.", "indice": "Des légumes pour le gratin", "trap": ["chou-fleurs"], "alt": [] },
+        { "phrase": "Les coffres-forts de la banque sont vides.", "indice": "Un cambriolage", "trap": ["coffre-forts"], "alt": [] },
+        { "phrase": "Range les tire-bouchons dans le tiroir.", "indice": "Du rangement en cuisine", "trap": ["tires-bouchons"], "alt": [] },
+        { "phrase": "Elle a lu trois cent vingt pages en un week-end.", "indice": "Une lectrice rapide", "trap": ["cents"], "alt": [] },
+        { "phrase": "Ses arrière-grands-parents vivaient autrefois en Bretagne.", "indice": "Des ancêtres bretons", "trap": ["arrières"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Il a ___ ans.", "choices": ["quatre-vingts", "quatre-vingt", "quatres-vingts"], "answer": 0, "explain": "Vingt multiplié, en fin de nombre : un s." },
+        { "type": "mcq", "q": "Ce stylo coûte ___ euros.", "choices": ["deux cent cinq", "deux cents cinq", "deux cents-cinq"], "answer": 0, "explain": "Cent suivi d'un autre nombre : pas de s." },
+        { "type": "mcq", "q": "Trois ___ spectateurs ont assisté au match.", "choices": ["mille", "milles", "mils"], "answer": 0, "explain": "Mille est invariable." },
+        { "type": "mcq", "q": "Le pluriel de « chef-d'œuvre » est…", "choices": ["des chefs-d'œuvre", "des chef-d'œuvres", "des chefs-d'œuvres"], "answer": 0, "explain": "Nom + complément : seul le premier nom varie." },
+        { "type": "mcq", "q": "Le pluriel de « grand-père » est…", "choices": ["des grands-pères", "des grand-pères", "des grands-père"], "answer": 0, "explain": "Adjectif + nom : les deux varient." },
+        { "type": "fill", "q": "Ce château a ___ ans.", "hint": "300, en lettres", "answer": ["trois cents"], "explain": "Cent multiplié, en fin de nombre : trois cents." },
+        { "type": "fill", "q": "Il a payé ___ euros.", "hint": "80, en lettres", "answer": ["quatre-vingts"], "explain": "Quatre-vingts, avec un s." },
+        { "type": "fill", "q": "Nous étions ___ personnes.", "hint": "21, en lettres (personnes est féminin)", "answer": ["vingt et une"], "explain": "Un s'accorde avec un nom féminin : vingt et une personnes." },
+        { "type": "fill", "q": "La France compte environ soixante-huit ___ d'habitants.", "hint": "million", "answer": ["millions"], "explain": "Million est un nom : il prend un s." },
+        { "type": "fill", "q": "Le pluriel de « porte-clé » est des ___.", "hint": "un nom composé", "answer": ["porte-clés", "porte-clefs"], "explain": "Verbe + nom : le nom prend le pluriel." },
+        { "type": "fill", "q": "Le pluriel de « coffre-fort » est des ___.", "hint": "un nom composé", "answer": ["coffres-forts"], "explain": "Nom + adjectif : les deux varient." },
+        { "type": "fill", "q": "Ouvrez votre livre à la page ___.", "hint": "200, en lettres (c'est un rang)", "answer": ["deux cent"], "explain": "Employé comme rang, cent ne prend pas de s." },
+        { "type": "error", "q": "Il a quatre-vingt ans.", "wrong": 2, "fix": ["quatre-vingts"], "explain": "Vingt multiplié et en fin de nombre : un s." },
+        { "type": "error", "q": "Cela coûte deux cents trois euros.", "wrong": 3, "fix": ["cent"], "explain": "Cent suivi d'un autre nombre : pas de s." },
+        { "type": "error", "q": "Trois milles personnes ont manifesté.", "wrong": 1, "fix": ["mille"], "explain": "Mille est invariable." },
+        { "type": "error", "q": "J'ai acheté deux chou-fleurs.", "wrong": 3, "fix": ["choux-fleurs"], "explain": "Nom + nom : les deux varient." }
+      ],
+      "reading": {
+        "title": "Le chèque de grand-père",
+        "text": "Mon grand-père appartient à une génération qui écrivait encore des chèques. Le jour de mes dix-huit ans, il m'en tendit un, rempli de sa belle écriture penchée : « Deux cent quatre-vingts euros ». Je le remerciai chaleureusement, mais en le regardant de plus près, je remarquai un détail : « quatre-vingts » avait un s. Je m'en étonnai à voix haute. Mon grand-père, ancien instituteur, prit aussitôt un air de professeur. « Vingt et cent prennent un s quand ils sont multipliés et qu'ils terminent le nombre, m'expliqua-t-il. Quatre fois vingt, et rien derrière : quatre-vingts. Mais si j'avais écrit deux cent quatre-vingt-cinq, je n'aurais mis de s ni à cent ni à vingt. » Il ajouta, l'œil malicieux, que mille, lui, ne prenait jamais de s. Puis il me raconta qu'à son époque, les banques refusaient parfois les chèques mal rédigés, et qu'un de ses collègues avait dû réécrire trois fois un chèque de mille deux cents francs avant qu'il soit accepté. Je ne sais pas si l'anecdote était vraie. Mais depuis ce jour, chaque fois que j'écris un nombre en lettres, j'entends sa voix me rappeler la règle. Quant aux deux cent quatre-vingts euros, je les ai dépensés en livres : je suis sûr qu'il ne m'en aurait pas voulu. Il m'a d'ailleurs offert, l'année suivante, un dictionnaire, en me recommandant d'y vérifier les nombres plutôt que de lui poser la question.",
+        "questions": [
+          { "q": "Quel cadeau le grand-père fait-il ?", "choices": ["Un chèque de deux cent quatre-vingts euros", "Un livre", "Une montre", "Un billet de train"], "answer": 0, "explain": "Un chèque, pour les dix-huit ans du narrateur." },
+          { "q": "Pourquoi « quatre-vingts » prend-il un s ici ?", "choices": ["Vingt est multiplié et termine le nombre", "Il y a plusieurs euros", "C'est une exception", "Le grand-père s'est trompé"], "answer": 0, "explain": "Quatre fois vingt, et rien derrière." },
+          { "q": "Comment aurait-il écrit 285 ?", "choices": ["deux cent quatre-vingt-cinq", "deux cents quatre-vingt-cinq", "deux cent quatre-vingts cinq", "deux cents quatre-vingts cinq"], "answer": 0, "explain": "Ni cent ni vingt ne terminent le nombre : pas de s." },
+          { "q": "Que dit le grand-père à propos de « mille » ?", "choices": ["Il ne prend jamais de s", "Il prend un s au pluriel", "Il prend un s s'il termine le nombre", "Il s'écrit « mil » au pluriel"], "answer": 0, "explain": "Mille est invariable." },
+          { "q": "Quelle attitude le narrateur a-t-il face à l'anecdote des banques ?", "choices": ["Il doute qu'elle soit vraie", "Il la trouve évidente", "Il l'a vérifiée", "Il la trouve triste"], "answer": 0, "explain": "« Je ne sais pas si l'anecdote était vraie. »" },
+          { "q": "Que fait le narrateur de l'argent ?", "choices": ["Il achète des livres", "Il le garde", "Il le rend", "Il achète un vélo"], "answer": 0, "explain": "Il les a dépensés en livres." }
+        ]
+      }
+    },
+    {
+      "id": "11.4",
+      "name": "Qu'il fût, qu'il eût",
+      "title": "Les temps rares : subjonctif imparfait et plus-que-parfait, passé antérieur, conditionnel passé deuxième forme",
+      "goal": "Reconnaître et écrire sans faute les temps littéraires, et distinguer il fut / qu'il fût, il eut / qu'il eût.",
+      "lesson": [
+        { "type": "p", "text": "La langue littéraire emploie encore des temps devenus rares à l'oral : le **subjonctif imparfait**, le **subjonctif plus-que-parfait** et le **passé antérieur**. Il faut savoir les reconnaître, les écrire… et les employer avec mesure." },
+        { "type": "rule", "title": "Le subjonctif imparfait", "text": "Il se forme sur le passé simple, à la 2e personne du singulier : [[tu chantas]] → [[que je chantasse, que tu chantasses, qu'il chantât, que nous chantassions, que vous chantassiez, qu'ils chantassent]]. De même : [[tu fis]] → [[qu'il fît]] ; [[tu fus]] → [[qu'il fût]] ; [[tu eus]] → [[qu'il eût]]." },
+        { "type": "rule", "title": "Quand l'employer ?", "text": "Dans la langue littéraire, quand le verbe principal est au passé : [[Il fallait qu'il partît]] (langue courante : qu'il parte). Seule la 3e personne du singulier (qu'il fût, qu'il eût, qu'il fît) reste assez fréquente à l'écrit soutenu." },
+        { "type": "table", "head": ["Infinitif", "Passé simple", "Subjonctif imparfait"], "rows": [["chanter", "il chanta", "qu'il chantât"], ["finir", "il finit", "qu'il finît"], ["être", "il fut", "qu'il fût"], ["avoir", "il eut", "qu'il eût"], ["faire", "il fit", "qu'il fît"], ["venir", "il vint", "qu'il vînt"]] },
+        { "type": "rule", "title": "Le subjonctif plus-que-parfait", "text": "Auxiliaire au subjonctif imparfait + participe : [[qu'il eût fini]], [[qu'elle fût partie]]. Il sert aussi de conditionnel passé littéraire : [[S'il l'eût voulu, il eût réussi]] = s'il l'avait voulu, il aurait réussi." },
+        { "type": "examples", "items": [
+          { "ex": "Il fallait qu'il **fût** présent.", "note": "subjonctif imparfait : accent" },
+          { "ex": "Quand il **eut** fini son discours, il s'assit.", "note": "passé antérieur : pas d'accent" },
+          { "ex": "Bien qu'elle **chantât** faux, on l'applaudit.", "note": "bien que + subjonctif imparfait" },
+          { "ex": "Il **eût** été préférable de se taire.", "note": "conditionnel passé deuxième forme" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "Il fallait qu'il ~~fut~~ là.", "ok": "Il fallait qu'il **fût** là.", "why": "Subjonctif imparfait : accent circonflexe." },
+          { "ko": "Quand il ~~eût~~ fini, il partit.", "ok": "Quand il **eut** fini, il partit.", "why": "Passé antérieur (indicatif) : pas d'accent." },
+          { "ko": "Bien qu'il ~~chanta~~ faux…", "ok": "Bien qu'il **chantât** faux…", "why": "Bien que + subjonctif : chantât." },
+          { "ko": "J'aurais voulu qu'il ~~vint~~.", "ok": "J'aurais voulu qu'il **vînt**.", "why": "Subjonctif imparfait de venir : vînt." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "**eut** ou **eût** ? Remplace par « avait » : si ça marche, c'est un passé antérieur, sans accent (quand il avait fini → quand il eut fini). Remplace par « ait » : si ça marche, c'est un subjonctif, avec accent (bien qu'il ait fini → bien qu'il eût fini)." },
+        { "type": "fun", "text": "Le sais-tu ? Le subjonctif imparfait produit des formes réputées comiques, comme « que nous nous aimassions ». Alphonse Allais s'en amusait dans un poème resté célèbre : « Oui, dès l'instant que je vous vis, beauté féroce, vous me plûtes… »" }
+      ],
+      "vocab": [
+        { "mot": "tirade", "def": "Longue réplique d'un personnage de théâtre.", "ex": "La tirade du nez, dans Cyrano de Bergerac, est célèbre.", "alt": [] },
+        { "mot": "monologue", "def": "Scène où un personnage seul parle à voix haute.", "ex": "Dans son monologue, le héros hésite entre l'amour et l'honneur.", "alt": [] },
+        { "mot": "aparté", "def": "Paroles qu'un personnage dit à part, censées n'être entendues que du public.", "ex": "Le valet glisse un aparté moqueur au public.", "alt": [] },
+        { "mot": "stichomythie", "def": "Échange de répliques très courtes et rapides au théâtre.", "ex": "La dispute culmine dans une stichomythie haletante.", "alt": [] },
+        { "mot": "didascalie", "def": "Indication de mise en scène écrite par l'auteur, souvent en italique.", "ex": "La didascalie précise que l'actrice doit pleurer.", "alt": [] },
+        { "mot": "bienséance", "def": "Règle du théâtre classique qui interdit de choquer le public.", "ex": "Par bienséance, les morts ont lieu hors de la scène.", "alt": [] },
+        { "mot": "vraisemblance", "def": "Qualité de ce qui paraît vrai, crédible.", "ex": "Le dramaturge veille à la vraisemblance de l'intrigue.", "alt": [] },
+        { "mot": "catharsis", "def": "Purification des passions du spectateur par la tragédie.", "ex": "Selon Aristote, la tragédie produit une catharsis.", "alt": [] },
+        { "mot": "nœud", "def": "Moment où l'intrigue se complique ; ou entrelacement de fils.", "ex": "Le nœud de l'action se forme au deuxième acte.", "alt": ["noeud"] },
+        { "mot": "coup de théâtre", "def": "Événement inattendu qui change brusquement la situation.", "ex": "Le retour du père est un véritable coup de théâtre.", "alt": [] },
+        { "mot": "deus ex machina", "def": "Intervention inattendue qui résout une situation sans issue (expression latine).", "ex": "L'arrivée du roi sert de deus ex machina.", "alt": [] },
+        { "mot": "confident", "def": "Personnage secondaire à qui le héros confie ses pensées.", "ex": "Le héros révèle son plan à son confident.", "alt": [] },
+        { "mot": "dramaturgie", "def": "Art de composer des pièces de théâtre.", "ex": "Elle enseigne la dramaturgie au conservatoire.", "alt": [] },
+        { "mot": "tragi-comédie", "def": "Pièce qui mêle éléments tragiques et comiques et finit bien.", "ex": "Le Cid fut d'abord présenté comme une tragi-comédie.", "alt": [] },
+        { "mot": "acte", "def": "Chacune des grandes parties d'une pièce de théâtre ; ou action.", "ex": "La tragédie classique compte cinq actes.", "alt": [] },
+        { "mot": "rampe", "def": "Rangée de lumières au bord de la scène ; passer la … : toucher le public.", "ex": "Son personnage a du mal à passer la rampe.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Il fallait qu'il fût présent à la cérémonie.", "indice": "Une obligation d'autrefois", "trap": ["fut"], "alt": [] },
+        { "phrase": "Quand il eut fini son discours, il s'assit.", "indice": "Une fin de discours", "trap": ["eût"], "alt": [] },
+        { "phrase": "Bien qu'elle chantât faux, on l'applaudit.", "indice": "Un public indulgent", "trap": ["chanta"], "alt": [] },
+        { "phrase": "Je voulais qu'il vînt me voir au printemps.", "indice": "Un souhait passé", "trap": ["vint"], "alt": [] },
+        { "phrase": "S'il l'eût su, il serait venu.", "indice": "Un regret littéraire", "trap": ["eut"], "alt": [] },
+        { "phrase": "Il aurait aimé qu'elle fît un effort.", "indice": "Une déception", "trap": ["fit"], "alt": [] },
+        { "phrase": "Le roi ordonna qu'on lui obéît sur-le-champ.", "indice": "Un ordre royal", "trap": ["obéit"], "alt": [] },
+        { "phrase": "Elle craignait qu'il ne fût trop tard.", "indice": "Une inquiétude", "trap": ["fut"], "alt": [] },
+        { "phrase": "Dès qu'il fut arrivé, la fête commença.", "indice": "Un invité attendu", "trap": ["fût"], "alt": [] },
+        { "phrase": "Il eût été préférable de se taire.", "indice": "Un conseil après coup", "trap": ["eut"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Il fallait qu'il ___ là.", "choices": ["fût", "fut", "fus"], "answer": 0, "explain": "Subjonctif imparfait d'être : qu'il fût, avec un accent." },
+        { "type": "mcq", "q": "Dès qu'il ___ terminé, il sortit.", "choices": ["eut", "eût", "ait"], "answer": 0, "explain": "Passé antérieur : il eut terminé, sans accent." },
+        { "type": "mcq", "q": "Bien qu'il ___ beaucoup, il ne finit pas.", "choices": ["travaillât", "travailla", "travaillat"], "answer": 0, "explain": "Bien que + subjonctif imparfait : travaillât." },
+        { "type": "mcq", "q": "S'il l'___ voulu, il eût réussi.", "choices": ["eût", "eut", "a"], "answer": 0, "explain": "Subjonctif plus-que-parfait, ici à valeur de plus-que-parfait de l'indicatif : accent." },
+        { "type": "mcq", "q": "Je craignais qu'elle ne ___ malade.", "choices": ["fût", "fut", "soit été"], "answer": 0, "explain": "Craindre que + subjonctif ; au passé littéraire : qu'elle fût." },
+        { "type": "fill", "q": "Il exigea qu'on lui ___ la vérité.", "hint": "dire, au subjonctif imparfait", "answer": ["dît"], "explain": "Tu dis (passé simple) → qu'il dît." },
+        { "type": "fill", "q": "Il eût fallu qu'il ___ plus tôt.", "hint": "venir, au subjonctif imparfait", "answer": ["vînt"], "explain": "Tu vins → qu'il vînt." },
+        { "type": "fill", "q": "Quoiqu'il ___ raison, il se tut.", "hint": "avoir, au subjonctif imparfait", "answer": ["eût"], "explain": "Tu eus → qu'il eût." },
+        { "type": "fill", "q": "Lorsqu'elle ___ partie, il pleura.", "hint": "être, au passé simple (passé antérieur)", "answer": ["fut"], "explain": "Passé antérieur : elle fut partie, sans accent." },
+        { "type": "fill", "q": "Il fallait que nous ___ prudents.", "hint": "être, au subjonctif imparfait", "answer": ["fussions"], "explain": "Que nous fussions." },
+        { "type": "fill", "q": "Le maître voulait que ses élèves ___.", "hint": "réussir, au subjonctif imparfait", "answer": ["réussissent"], "explain": "Qu'ils réussissent (même forme qu'au présent)." },
+        { "type": "fill", "q": "Il eût mieux ___ se taire.", "hint": "valoir, au participe passé", "answer": ["valu"], "explain": "Il eût mieux valu : conditionnel passé deuxième forme." },
+        { "type": "error", "q": "Il fallait qu'il fut là.", "wrong": 3, "fix": ["fût"], "explain": "Subjonctif imparfait : qu'il fût, avec un accent." },
+        { "type": "error", "q": "Quand il eût fini, il partit.", "wrong": 2, "fix": ["eut"], "explain": "Passé antérieur : il eut, sans accent." },
+        { "type": "error", "q": "Bien qu'il chanta faux, on l'aimait.", "wrong": 2, "fix": ["chantât"], "explain": "Bien que + subjonctif : qu'il chantât." },
+        { "type": "error", "q": "Je voulais qu'il vint.", "wrong": 3, "fix": ["vînt"], "explain": "Subjonctif imparfait : qu'il vînt, avec un accent." }
+      ],
+      "reading": {
+        "title": "Lettre d'Henri",
+        "text": "« Madame, il fallait que je vous écrivisse avant de quitter Paris, car je ne saurais partir sans vous avoir remerciée de vos bontés. Lorsque j'eus reçu votre dernière lettre, je demeurai longtemps immobile, tant vos paroles m'avaient touché. Vous craigniez que je ne fusse offensé de votre silence ; il n'en était rien. Quand bien même vous eussiez tardé davantage, je vous eusse attendue sans impatience. Mon oncle, qui eût souhaité que je restasse à ses côtés, a fini par consentir à mon départ, pourvu que je revinsse au printemps. Je pars donc demain pour la Bretagne, où ma mère réclame ma présence. Souffrez, Madame, que je vous dise encore combien vos conseils m'ont été précieux : sans eux, j'eusse sans doute commis bien des sottises. Je vous prie d'agréer l'expression de mon respectueux attachement. Henri. » Cette lettre imaginaire, écrite à la manière du XVIIIe siècle, accumule volontairement les temps rares. Aujourd'hui, on écrirait plus simplement : « il fallait que je vous écrive », « vous craigniez que je sois offensé », « j'aurais sans doute commis bien des sottises ». Les deux versions sont correctes ; seule change la couleur du style. Employés avec mesure, ces temps donnent à un texte une élégance un peu désuète ; accumulés, ils le rendent vite précieux. Tout l'art consiste donc à savoir doser, comme un cuisinier qui relève un plat sans le noyer sous les épices.",
+        "questions": [
+          { "q": "Pourquoi Henri écrit-il cette lettre ?", "choices": ["Pour remercier sa correspondante avant de partir", "Pour demander de l'argent", "Pour annoncer un mariage", "Pour se plaindre de son oncle"], "answer": 0, "explain": "Il ne saurait partir sans la remercier de ses bontés." },
+          { "q": "Où part-il ?", "choices": ["En Bretagne, auprès de sa mère", "À Paris", "À l'étranger", "Chez son oncle"], "answer": 0, "explain": "« Je pars donc demain pour la Bretagne. »" },
+          { "q": "« Il fallait que je vous écrivisse » : à quel temps est « écrivisse » ?", "choices": ["Au subjonctif imparfait", "Au passé simple", "À l'imparfait de l'indicatif", "Au subjonctif présent"], "answer": 0, "explain": "Formé sur le passé simple tu écrivis." },
+          { "q": "Que signifie « j'eusse sans doute commis bien des sottises » ?", "choices": ["J'aurais sans doute commis bien des sottises", "J'ai commis des sottises", "Je commettrai des sottises", "Je commettais des sottises"], "answer": 0, "explain": "C'est le conditionnel passé deuxième forme." },
+          { "q": "À quelle condition l'oncle a-t-il accepté le départ ?", "choices": ["Qu'Henri revienne au printemps", "Qu'Henri se marie", "Qu'Henri écrive chaque jour", "Qu'Henri reste à Paris"], "answer": 0, "explain": "« Pourvu que je revinsse au printemps. »" },
+          { "q": "Que conclut le commentaire final ?", "choices": ["Ces temps sont élégants avec mesure, précieux en excès", "Il faut toujours écrire au subjonctif imparfait", "La lettre contient des fautes", "Les temps rares sont interdits"], "answer": 0, "explain": "Avec mesure, élégance ; accumulés, préciosité." }
+        ]
+      }
+    },
+    {
+      "id": "11.5",
+      "name": "Points et virgules",
+      "title": "Ponctuation et typographie : virgule, point-virgule, deux-points, majuscules, abréviations",
+      "goal": "Ponctuer pour servir le sens et respecter les usages typographiques français.",
+      "lesson": [
+        { "type": "p", "text": "La ponctuation organise la pensée ; la typographie (majuscules, espaces, abréviations) donne au texte sa tenue. Une virgule mal placée peut changer le sens d'une phrase." },
+        { "type": "rule", "title": "La virgule", "text": "Elle sépare les éléments d'une énumération, isole un complément détaché ou une incise. Jamais de virgule entre le sujet et le verbe : [[Les élèves du lycée sont partis]]. Elle peut changer le sens : [[Les élèves, qui étaient fatigués, sont partis]] (tous) / [[Les élèves qui étaient fatigués sont partis]] (seulement certains)." },
+        { "type": "rule", "title": "Point-virgule et deux-points", "text": "Le **point-virgule** sépare deux propositions liées par le sens : [[Il pleuvait ; nous sommes restés.]] Les **deux-points** annoncent une explication, une conséquence, une énumération ou une citation : [[Il est absent : il est malade.]]" },
+        { "type": "rule", "title": "Les majuscules", "text": "Majuscule aux noms propres et aux noms de peuples ([[les Français]]), mais pas aux adjectifs ni aux langues ([[le français]], [[un vin français]]). Pas de majuscule aux jours, aux mois, ni aux points cardinaux qui indiquent une direction ([[le nord de la France]]) ; mais [[l'Afrique du Nord]]. Pour une institution, majuscule au premier nom : [[l'Assemblée nationale]], [[le Conseil d'État]]." },
+        { "type": "table", "head": ["Abréviation", "Mot"], "rows": [["M.", "Monsieur"], ["Mme", "Madame"], ["Mlle", "Mademoiselle"], ["Dr", "docteur"], ["etc.", "et cetera"], ["p.", "page"], ["n°", "numéro"], ["1er, 2e", "premier, deuxième"]] },
+        { "type": "rule", "title": "Les espaces de la typographie française", "text": "On met une espace insécable avant ; : ! ? et à l'intérieur des guillemets en chevrons. Pas d'espace avant la virgule ni avant le point. « Mr » est l'abréviation anglaise de Mister : en français, on écrit **M.**" },
+        { "type": "examples", "items": [
+          { "ex": "Il pleuvait **;** nous sommes restés à la maison.", "note": "deux idées liées" },
+          { "ex": "Il est absent **:** il a la grippe.", "note": "une explication" },
+          { "ex": "Les **Français** aiment le pain ; elle parle le **français**.", "note": "le peuple / la langue" },
+          { "ex": "On mange**,** les enfants !", "note": "la virgule qui sauve des vies" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "Les candidats du concours~~,~~ ont réussi.", "ok": "Les candidats du concours ont réussi.", "why": "Jamais de virgule entre le sujet et le verbe." },
+          { "ko": "Elle étudie le ~~Français~~.", "ok": "Elle étudie le **français**.", "why": "Les noms de langues ne prennent pas de majuscule." },
+          { "ko": "~~Mr~~ Dupont", "ok": "**M.** Dupont", "why": "L'abréviation française de Monsieur est M." },
+          { "ko": "le ~~Lundi~~ trois mars", "ok": "le **lundi** trois mars", "why": "Pas de majuscule aux jours ni aux mois." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Lis ta phrase à voix haute : là où tu marques une pause, une virgule est souvent utile. Mais méfie-toi : on ne sépare jamais le sujet de son verbe, même après un long groupe sujet." },
+        { "type": "fun", "text": "Le sais-tu ? Une virgule peut sauver une vie : « On mange, les enfants ! » n'a pas du tout le même sens que « On mange les enfants ! »" }
+      ],
+      "vocab": [
+        { "mot": "point-virgule", "def": "Signe qui sépare deux propositions liées par le sens.", "ex": "Un point-virgule relie ces deux phrases.", "alt": [] },
+        { "mot": "deux-points", "def": "Signe qui annonce une explication, une énumération ou une citation.", "ex": "Les deux-points introduisent la liste des invités.", "alt": [] },
+        { "mot": "points de suspension", "def": "Signe de trois points qui marque une interruption ou un sous-entendu.", "ex": "Il termina sa phrase par des points de suspension.", "alt": [] },
+        { "mot": "crochet", "def": "Signe [ ] qui encadre une précision ou une coupure dans une citation.", "ex": "Le crochet signale une coupure dans la citation.", "alt": [] },
+        { "mot": "astérisque", "def": "Petit signe en forme d'étoile qui renvoie à une note (ce mot est masculin).", "ex": "Un astérisque renvoie au bas de la page.", "alt": [] },
+        { "mot": "apostrophe", "def": "Signe qui marque l'élision d'une voyelle ; ou interpellation.", "ex": "On met une apostrophe dans « l'arbre ».", "alt": [] },
+        { "mot": "trait d'union", "def": "Petit trait qui relie les éléments d'un mot composé.", "ex": "Il faut un trait d'union entre « grand » et « mère ».", "alt": [] },
+        { "mot": "barre oblique", "def": "Trait incliné qui sépare deux éléments (et/ou), aussi appelé slash.", "ex": "Une barre oblique sépare le jour et le mois.", "alt": [] },
+        { "mot": "esperluette", "def": "Signe & qui signifie « et ».", "ex": "Le logo du magasin contient une esperluette.", "alt": [] },
+        { "mot": "arobase", "def": "Signe @ utilisé dans les adresses électroniques.", "ex": "Une adresse électronique contient toujours une arobase.", "alt": [] },
+        { "mot": "alinéa", "def": "Retrait au début d'une ligne qui marque un nouveau paragraphe.", "ex": "Commence chaque paragraphe par un alinéa.", "alt": [] },
+        { "mot": "minuscule", "def": "Petite lettre, par opposition à la majuscule.", "ex": "Les noms de langues s'écrivent avec une minuscule.", "alt": [] },
+        { "mot": "italique", "def": "Caractère d'imprimerie penché.", "ex": "Les titres d'œuvres s'écrivent en italique.", "alt": [] },
+        { "mot": "abréviation", "def": "Forme raccourcie d'un mot.", "ex": "« M. » est l'abréviation de Monsieur.", "alt": [] },
+        { "mot": "coquille", "def": "Faute de frappe dans un texte imprimé ; ou enveloppe dure d'un escargot.", "ex": "Le journal a laissé passer une coquille dans le titre.", "alt": [] },
+        { "mot": "interligne", "def": "Espace entre deux lignes d'un texte.", "ex": "Laisse un double interligne pour les corrections.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Il pleuvait ; nous sommes restés à la maison.", "indice": "Une journée à l'intérieur", "trap": ["pleuvais"], "alt": [] },
+        { "phrase": "Il est absent : il a la grippe.", "indice": "Une absence expliquée", "trap": ["absente"], "alt": [] },
+        { "phrase": "Les élèves du lycée sont partis en voyage.", "indice": "Un départ en groupe", "trap": ["parti"], "alt": [] },
+        { "phrase": "Les Français aiment beaucoup le pain.", "indice": "Une habitude nationale", "trap": ["francais"], "alt": [] },
+        { "phrase": "Elle parle couramment le français et l'arabe.", "indice": "Une personne bilingue", "trap": ["francais"], "alt": [] },
+        { "phrase": "Nous partirons le lundi douze mars.", "indice": "Une date de départ", "trap": ["lundis"], "alt": [] },
+        { "phrase": "M. Martin est arrivé hier soir.", "indice": "Une arrivée annoncée", "trap": ["Mr"], "alt": [] },
+        { "phrase": "L'Assemblée nationale a voté la loi.", "indice": "Une décision des députés", "trap": ["votée"], "alt": [] },
+        { "phrase": "Il habite dans le nord de la France.", "indice": "Une région froide", "trap": ["habitent"], "alt": [] },
+        { "phrase": "À table : on mange, les enfants !", "indice": "Un appel à table", "trap": ["mangent"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Quelle phrase est correctement ponctuée ?", "choices": ["Les invités de ma sœur sont arrivés.", "Les invités de ma sœur, sont arrivés.", "Les invités, de ma sœur sont arrivés."], "answer": 0, "explain": "Jamais de virgule entre le sujet et le verbe." },
+        { "type": "mcq", "q": "Quel signe annonce une explication ?", "choices": ["les deux-points", "le point-virgule", "les points de suspension"], "answer": 0, "explain": "Les deux-points annoncent une explication." },
+        { "type": "mcq", "q": "Comment écrit-on le nom de la langue ?", "choices": ["le français", "le Français", "les Français"], "answer": 0, "explain": "Les noms de langues prennent une minuscule." },
+        { "type": "mcq", "q": "Quelle est l'abréviation française de « Monsieur » ?", "choices": ["M.", "Mr", "Mr."], "answer": 0, "explain": "M. ; Mr est l'abréviation anglaise." },
+        { "type": "mcq", "q": "Quelle phrase est correcte ?", "choices": ["Il viendra en juillet.", "Il viendra en Juillet.", "Il viendra en JUILLET."], "answer": 0, "explain": "Pas de majuscule aux noms de mois." },
+        { "type": "fill", "q": "Les ___ ont gagné la Coupe du monde.", "hint": "les habitants de la France", "answer": ["Français"], "case": true, "explain": "Nom de peuple : majuscule." },
+        { "type": "fill", "q": "Elle étudie l'___ à l'université.", "hint": "la langue de l'Italie", "answer": ["italien"], "case": true, "explain": "Nom de langue : minuscule." },
+        { "type": "fill", "q": "Nous partons ___ prochain.", "hint": "le premier jour de la semaine", "answer": ["lundi"], "case": true, "explain": "Pas de majuscule aux jours." },
+        { "type": "fill", "q": "Le ___ d'État a rendu son avis.", "hint": "une institution", "answer": ["Conseil"], "case": true, "explain": "Majuscule au premier nom de l'institution." },
+        { "type": "fill", "q": "Il vit dans le ___ de la France.", "hint": "un point cardinal indiquant une direction", "answer": ["nord", "sud"], "case": true, "explain": "Point cardinal employé comme direction : minuscule." },
+        { "type": "fill", "q": "___ Durand est absente aujourd'hui.", "hint": "l'abréviation de Madame", "answer": ["Mme"], "case": true, "explain": "Madame s'abrège en Mme, sans point." },
+        { "type": "fill", "q": "Le ___ de la République a pris la parole.", "hint": "le chef de l'État", "answer": ["président"], "case": true, "explain": "Le titre s'écrit avec une minuscule : le président de la République." },
+        { "type": "error", "q": "Mr Dupont est en retard.", "wrong": 0, "fix": ["M."], "case": true, "explain": "L'abréviation française de Monsieur est M." },
+        { "type": "error", "q": "Nous viendrons le Mardi suivant.", "wrong": 3, "fix": ["mardi"], "case": true, "explain": "Pas de majuscule aux jours." },
+        { "type": "error", "q": "Ils apprennent le Français au collège.", "wrong": 3, "fix": ["français"], "case": true, "explain": "Nom de langue : minuscule." },
+        { "type": "error", "q": "Le Conseil d'état s'est réuni.", "wrong": 2, "fix": ["d'État"], "case": true, "explain": "On écrit le Conseil d'État, avec une majuscule à État." }
+      ],
+      "reading": {
+        "title": "L'art de la ponctuation",
+        "text": "On l'oublie souvent, mais dans l'Antiquité, on écrivait presque sans ponctuation, et parfois même sans espaces entre les mots. Le lecteur devait deviner où s'arrêtait une phrase, ce qui supposait de lire à voix haute. Ce sont les copistes, puis les imprimeurs de la Renaissance, qui ont peu à peu fixé les signes que nous connaissons. Aujourd'hui, la ponctuation n'est pas un simple ornement : elle porte le sens. Comparez « Le professeur, dit l'élève, est absent » et « Le professeur dit : l'élève est absent ». Les mots sont les mêmes ; pourtant, l'absent n'est pas le même. La virgule distingue aussi deux catégories de rédacteurs : ceux qui savent qu'on ne sépare jamais le sujet de son verbe, et ceux qui sèment des virgules au hasard, comme on jette du sel. Le point-virgule, lui, souffre d'une mauvaise réputation : certains le jugent prétentieux, d'autres l'ignorent. Il est pourtant précieux pour relier deux idées sœurs sans les fondre. Quant aux points de suspension, leur abus trahit souvent une pensée inachevée… ou un auteur qui n'ose pas conclure. La typographie française a enfin ses propres usages, que les logiciels venus d'ailleurs malmènent : une espace avant le point d'exclamation, des guillemets en chevrons, des majuscules plus rares qu'en anglais. Respecter ces règles, ce n'est pas faire preuve de pédanterie ; c'est offrir au lecteur un texte qui respire. Un texte bien ponctué se lit sans effort.",
+        "questions": [
+          { "q": "Comment écrivait-on dans l'Antiquité selon le texte ?", "choices": ["Presque sans ponctuation, parfois sans espaces", "Avec beaucoup de virgules", "Uniquement en italique", "Avec les mêmes signes qu'aujourd'hui"], "answer": 0, "explain": "Le lecteur devait deviner où s'arrêtait une phrase." },
+          { "q": "Qui a fixé peu à peu les signes de ponctuation ?", "choices": ["Les copistes et les imprimeurs", "Les orateurs romains", "L'Académie française au XXe siècle", "Les logiciels"], "answer": 0, "explain": "Les copistes, puis les imprimeurs de la Renaissance." },
+          { "q": "Que montre l'exemple du professeur et de l'élève ?", "choices": ["La ponctuation change le sens d'une phrase", "La virgule est inutile", "Les professeurs sont souvent absents", "L'ordre des mots est libre"], "answer": 0, "explain": "Mêmes mots, absent différent." },
+          { "q": "Quelle règle de la virgule le texte rappelle-t-il ?", "choices": ["On ne sépare jamais le sujet de son verbe", "On met une virgule avant chaque verbe", "La virgule remplace le point", "On évite la virgule dans les énumérations"], "answer": 0, "explain": "C'est ce qui distingue les bons rédacteurs." },
+          { "q": "Que reproche l'auteur à l'abus des points de suspension ?", "choices": ["Il trahit une pensée inachevée", "Il est interdit", "Il est trop moderne", "Il ralentit la lecture"], "answer": 0, "explain": "« Une pensée inachevée… ou un auteur qui n'ose pas conclure. »" },
+          { "q": "Quelle est la position finale de l'auteur sur la typographie ?", "choices": ["La respecter rend le texte agréable au lecteur", "C'est de la pédanterie", "Elle est dépassée", "Il faut adopter les usages anglais"], "answer": 0, "explain": "« C'est offrir au lecteur un texte qui respire. »" }
+        ]
+      }
+    }
+  ]
+}
