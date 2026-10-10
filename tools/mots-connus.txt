@@ -123,3 +123,8 @@ crêperies
 courriel
 courriels
 lou
+suffixe
+suffixes
+préfixe
+préfixes
+tandis

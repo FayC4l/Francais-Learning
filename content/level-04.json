@@ -1,0 +1,437 @@
+{
+  "id": 4,
+  "cefr": "A2",
+  "title": "Futur et nuances",
+  "sub": "Futur, conditionnel et pronoms",
+  "intro": "Le futur et ses radicaux rebelles, le conditionnel de la politesse et des rêves, les pronoms compléments, les adverbes en -ment et cinq nouvelles paires de jumeaux. Madame Conditionnelle t'attend… enfin, elle t'attendrait volontiers.",
+  "boss": {
+    "name": "Madame Conditionnelle",
+    "taunt": "Si tu me battais, je serais très surprise… Mais si j'aurais gagné… Oups. Disons simplement que je gagnerais !",
+    "defeat": "Si j'avais su, je serais restée couchée. Tu vois ? Moi aussi, je sais conjuguer… quand je perds."
+  },
+  "units": [
+    {
+      "id": "4.1",
+      "name": "Demain, on verra",
+      "title": "Le futur simple : terminaisons, radicaux irréguliers (irai, verrai, enverrai, courrai, acquerrai…)",
+      "goal": "Conjuguer au futur simple, y compris les verbes aux radicaux irréguliers.",
+      "lesson": [
+        { "type": "p", "text": "Le futur simple annonce ce qui se passera : [[Demain, il pleuvra.]] [[Je serai astronaute.]]" },
+        { "type": "rule", "title": "La formation", "text": "**Infinitif + -ai, -as, -a, -ons, -ez, -ont** : [[je chanterai]], [[nous finirons]]. Les verbes en -re perdent leur e final : [[prendre → je prendrai]], [[lire → tu liras]]." },
+        { "type": "rule", "title": "Le e muet des verbes en -er", "text": "Au futur, on n'entend pas toujours le e des verbes en -er, mais on l'écrit : [[je jouerai]], [[il continuera]], [[tu crieras]], [[nous remercierons]]." },
+        { "type": "table", "head": ["Infinitif", "Futur", "Infinitif", "Futur"], "rows": [["être", "je serai", "avoir", "j'aurai"], ["aller", "j'irai", "faire", "je ferai"], ["venir", "je viendrai", "voir", "je verrai"], ["envoyer", "j'enverrai", "pouvoir", "je pourrai"], ["courir", "je courrai", "savoir", "je saurai"], ["vouloir", "je voudrai", "falloir", "il faudra"], ["recevoir", "je recevrai", "acquérir", "j'acquerrai"]] },
+        { "type": "rule", "title": "Les doubles r", "text": "**pouvoir, voir, envoyer, courir, mourir** et **acquérir** ont deux r au futur : [[je pourrai]], [[je verrai]], [[j'enverrai]], [[je courrai]], [[il mourra]], [[j'acquerrai]]. Les verbes en **-eler** et **-eter** doublent souvent la consonne : [[j'appellerai]], [[je jetterai]] ; mais [[j'achèterai]], [[je gèlerai]]." },
+        { "type": "examples", "items": [
+          { "ex": "Demain, nous **irons** à la piscine.", "note": "aller → ir-" },
+          { "ex": "Tu **enverras** une carte à Mamie.", "note": "envoyer → enverr-" },
+          { "ex": "Il **faudra** partir tôt.", "note": "falloir → faudr-" },
+          { "ex": "Vous **jouerez** dans l'équipe.", "note": "le e de jouer reste" },
+          { "ex": "Nous **courrons** le marathon.", "note": "deux r : à ne pas confondre avec nous courons (présent)" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "je ~~courirai~~", "ok": "je **courrai**", "why": "Courir a un radical irrégulier : courr-." },
+          { "ko": "il ~~envoiera~~", "ok": "il **enverra**", "why": "Envoyer a un radical irrégulier : enverr-." },
+          { "ko": "je ~~jourai~~", "ok": "je **jouerai**", "why": "On garde le e de l'infinitif jouer." },
+          { "ko": "nous ~~voirons~~", "ok": "nous **verrons**", "why": "Voir a un radical irrégulier : verr-." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Futur (je chanterai) ou conditionnel (je chanterais) ? Remplace **je** par **nous** : [[nous chanterons]] (futur) → je chanterai ; [[nous chanterions]] (conditionnel) → je chanterais. Tu verras le conditionnel à la station suivante." },
+        { "type": "fun", "text": "Le sais-tu ? Notre futur vient d'une tournure latine : « cantare habeo », « j'ai à chanter ». Avec le temps, « chanter-ai » s'est soudé : c'est pour cela que les terminaisons du futur ressemblent tant au verbe avoir (ai, as, a, ont) !" }
+      ],
+      "vocab": [
+        { "mot": "avenir", "def": "Le temps qui viendra plus tard.", "ex": "Personne ne connaît l'avenir.", "alt": [] },
+        { "mot": "astronaute", "def": "Personne qui voyage dans l'espace.", "ex": "L'astronaute flotte dans la station spatiale.", "alt": [] },
+        { "mot": "planète", "def": "Grand astre qui tourne autour du Soleil, comme la Terre ou Mars.", "ex": "Jupiter est la plus grosse planète.", "alt": [] },
+        { "mot": "robot", "def": "Machine qui peut faire des tâches toute seule.", "ex": "Ce robot passe l'aspirateur.", "alt": [] },
+        { "mot": "invention", "def": "Chose nouvelle que quelqu'un a imaginée et créée.", "ex": "L'imprimerie est une invention géniale.", "alt": [] },
+        { "mot": "découverte", "def": "Action de trouver quelque chose que l'on ne connaissait pas.", "ex": "Cette découverte a changé la médecine.", "alt": [] },
+        { "mot": "projet", "def": "Ce que l'on a l'intention de faire.", "ex": "Mon projet est de construire une cabane.", "alt": [] },
+        { "mot": "horoscope", "def": "Prédictions sur l'avenir selon la date de naissance.", "ex": "Mon horoscope annonce une semaine chanceuse.", "alt": [] },
+        { "mot": "prédiction", "def": "Ce que l'on annonce à l'avance.", "ex": "Sa prédiction s'est réalisée.", "alt": [] },
+        { "mot": "météorologue", "def": "Spécialiste qui étudie le temps et le prévoit.", "ex": "La météorologue annonce de la neige.", "alt": [] },
+        { "mot": "satellite", "def": "Engin ou astre qui tourne autour d'une planète.", "ex": "La Lune est le satellite de la Terre.", "alt": [] },
+        { "mot": "ordinateur", "def": "Machine électronique qui traite des informations.", "ex": "J'écris mon exposé sur l'ordinateur.", "alt": [] },
+        { "mot": "énergie", "def": "Force qui permet de faire fonctionner les machines ; ou vitalité.", "ex": "Le soleil fournit de l'énergie.", "alt": [] },
+        { "mot": "calendrier", "def": "Tableau des jours, des semaines et des mois de l'année.", "ex": "Je note la date sur le calendrier.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Demain, nous irons à la piscine.", "indice": "Un projet pour demain", "trap": ["irrons", "allerons"], "alt": ["Nous irons à la piscine demain."] },
+        { "phrase": "Je verrai mes cousins pendant les vacances.", "indice": "Des retrouvailles en famille", "trap": ["voirai", "verais"], "alt": ["Pendant les vacances, je verrai mes cousins."] },
+        { "phrase": "Tu enverras une carte à Mamie.", "indice": "Du courrier à poster", "trap": ["envoieras"], "alt": [] },
+        { "phrase": "Il faudra partir très tôt.", "indice": "Un réveil matinal", "trap": ["fallera"], "alt": [] },
+        { "phrase": "Mes parents seront fiers de toi.", "indice": "Des félicitations à venir", "trap": ["serons", "serai"], "alt": [] },
+        { "phrase": "Nous courrons le marathon l'an prochain.", "indice": "Un défi sportif", "trap": ["courons"], "alt": ["L'an prochain, nous courrons le marathon."] },
+        { "phrase": "Vous jouerez dans l'équipe de l'école.", "indice": "Une sélection sportive", "trap": ["jourez"], "alt": [] },
+        { "phrase": "J'appellerai le médecin ce soir.", "indice": "Un rendez-vous à prendre", "trap": ["appelerai"], "alt": ["Ce soir, j'appellerai le médecin."] },
+        { "phrase": "Elle aura dix ans en mai.", "indice": "Un anniversaire au printemps", "trap": ["aurra"], "alt": ["En mai, elle aura dix ans."] },
+        { "phrase": "Ils feront un gâteau pour la fête.", "indice": "Une pâtisserie maison", "trap": ["faireront"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Demain, je ___ à la plage.", "choices": ["irai", "irais", "allerai"], "answer": 0, "explain": "Aller a un radical irrégulier au futur : ir-. Avec je : irai." },
+        { "type": "mcq", "q": "Ce soir, nous ___ le film.", "choices": ["verrons", "voirons", "verons"], "answer": 0, "explain": "Voir : radical verr-, avec deux r." },
+        { "type": "mcq", "q": "Tu ___ ton cadeau demain.", "choices": ["recevras", "receveras", "reçevras"], "answer": 0, "explain": "Recevoir : radical recevr-. Pas de cédille devant e." },
+        { "type": "mcq", "q": "Ils t'___ un message.", "choices": ["enverront", "envoieront", "enveront"], "answer": 0, "explain": "Envoyer : radical enverr-, avec deux r." },
+        { "type": "mcq", "q": "La prochaine fois, je ___ plus vite.", "choices": ["courrai", "courirai", "courai"], "answer": 0, "explain": "Courir : radical courr-, avec deux r." },
+        { "type": "fill", "q": "L'année prochaine, je ___ au collège.", "hint": "être, au futur", "answer": ["serai"], "explain": "Être au futur : je serai." },
+        { "type": "fill", "q": "Tu ___ ce que tu veux.", "hint": "faire, au futur", "answer": ["feras"], "explain": "Faire : radical fer-, tu feras." },
+        { "type": "fill", "q": "Nous ___ te rendre visite.", "hint": "pouvoir, au futur", "answer": ["pourrons"], "explain": "Pouvoir : radical pourr-, avec deux r." },
+        { "type": "fill", "q": "Il ___ beau demain.", "hint": "faire, au futur", "answer": ["fera"], "explain": "Faire au futur : il fera." },
+        { "type": "fill", "q": "Vous ___ tout ce soir.", "hint": "savoir, au futur", "answer": ["saurez"], "explain": "Savoir : radical saur-, vous saurez." },
+        { "type": "fill", "q": "Elles ___ la vérité.", "hint": "dire, au futur", "answer": ["diront"], "explain": "Dire perd son e : dir- + -ont." },
+        { "type": "fill", "q": "Je ___ ces vieux papiers.", "hint": "jeter, au futur", "answer": ["jetterai"], "explain": "Jeter double le t au futur : je jetterai." },
+        { "type": "error", "q": "Demain, il pleuvera.", "wrong": 2, "fix": ["pleuvra"], "explain": "Pleuvoir a pour radical pleuvr- : il pleuvra." },
+        { "type": "error", "q": "Je jourai avec toi.", "wrong": 1, "fix": ["jouerai"], "explain": "On garde le e de l'infinitif : je jouerai." },
+        { "type": "error", "q": "Nous voirons bien.", "wrong": 1, "fix": ["verrons"], "explain": "Voir a pour radical verr- : nous verrons." },
+        { "type": "error", "q": "Tu venira avec nous ?", "wrong": 1, "fix": ["viendras"], "explain": "Venir a pour radical viendr- : tu viendras." }
+      ],
+      "reading": {
+        "title": "Lettre à moi-même",
+        "text": "Chère Jade du futur, quand tu liras cette lettre, tu auras trente ans. Je me demande où tu habiteras. Peut-être que tu vivras à Lyon, ou au bord de la mer, comme tu en rêves aujourd'hui. Tu seras sûrement vétérinaire, ou alors astronaute. Est-ce que tu auras toujours peur des araignées ? J'espère que tu te souviendras de Moustache, notre chat, et que tu feras encore des crêpes le dimanche. Moi, je mettrai cette lettre dans une boîte, au fond du grenier. Promets-moi une chose : tu ne deviendras jamais une grande personne ennuyeuse. Jade, dix ans.",
+        "questions": [
+          { "q": "À qui Jade écrit-elle ?", "choices": ["À elle-même, dans le futur", "À sa grand-mère", "À sa meilleure amie", "À son chat"], "answer": 0, "explain": "La lettre commence par « Chère Jade du futur »." },
+          { "q": "Quel âge Jade aura-t-elle quand elle lira la lettre ?", "choices": ["Trente ans", "Dix ans", "Vingt ans", "Quarante ans"], "answer": 0, "explain": "« Quand tu liras cette lettre, tu auras trente ans. »" },
+          { "q": "Où Jade va-t-elle cacher la lettre ?", "choices": ["Dans une boîte, au grenier", "Sous son lit", "Dans le jardin", "Chez sa grand-mère"], "answer": 0, "explain": "« Je mettrai cette lettre dans une boîte, au fond du grenier. »" },
+          { "q": "Que demande-t-elle à son « moi » du futur ?", "choices": ["De ne jamais devenir une adulte ennuyeuse", "De devenir vétérinaire", "D'adopter un chat", "De déménager à Lyon"], "answer": 0, "explain": "« Tu ne deviendras jamais une grande personne ennuyeuse. »" },
+          { "q": "Pourquoi le texte est-il surtout au futur ?", "choices": ["Jade imagine ce qui arrivera plus tard", "Jade raconte ses souvenirs", "Jade donne des ordres", "Jade décrit une photo"], "answer": 0, "explain": "Elle imagine sa vie à trente ans : le futur exprime ce qui viendra." }
+        ]
+      }
+    },
+    {
+      "id": "4.2",
+      "name": "On dirait que…",
+      "title": "Le conditionnel présent : -rai / -rais, politesse, souhait, hypothèse avec si + imparfait",
+      "goal": "Former le conditionnel présent et l'employer pour la politesse, le souhait et l'hypothèse.",
+      "lesson": [
+        { "type": "p", "text": "Le conditionnel exprime ce qui **pourrait** arriver : un souhait, une demande polie, une hypothèse, un conseil." },
+        { "type": "rule", "title": "La formation", "text": "**Radical du futur + terminaisons de l'imparfait** : -ais, -ais, -ait, -ions, -iez, -aient. [[je chanterais]], [[nous ferions]], [[ils voudraient]]." },
+        { "type": "table", "head": ["Futur", "Conditionnel"], "rows": [["je serai", "je serais"], ["tu auras", "tu aurais"], ["il ira", "il irait"], ["nous ferons", "nous ferions"], ["vous pourrez", "vous pourriez"], ["ils verront", "ils verraient"]] },
+        { "type": "rule", "title": "-rai ou -rais ?", "text": "Avec je, le futur et le conditionnel se prononcent presque pareil. Remplace **je** par **nous** : [[nous voudrons]] → je voudrai (futur) ; [[nous voudrions]] → je voudrais (conditionnel)." },
+        { "type": "rule", "title": "Les emplois", "text": "La **politesse** : [[Je voudrais un croissant, s'il vous plaît.]] Le **souhait** : [[J'aimerais voyager.]] L'**hypothèse** avec **si + imparfait** : [[Si j'avais des ailes, je volerais.]] Le **conseil** : [[Tu devrais te reposer.]]" },
+        { "type": "examples", "items": [
+          { "ex": "Je **voudrais** un chocolat chaud, s'il vous plaît.", "note": "politesse : nous voudrions → -ais" },
+          { "ex": "Si j'étais riche, j'**achèterais** une île.", "note": "si + imparfait, puis conditionnel" },
+          { "ex": "Tu **devrais** te coucher plus tôt.", "note": "un conseil" },
+          { "ex": "Nous **aimerions** visiter le château.", "note": "un souhait" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "~~Si j'aurais~~ le temps, je viendrais.", "ok": "**Si j'avais** le temps, je viendrais.", "why": "Après si, l'imparfait, jamais le conditionnel." },
+          { "ko": "Je ~~voudrai~~ un verre d'eau, s'il vous plaît.", "ok": "Je **voudrais** un verre d'eau, s'il vous plaît.", "why": "Une demande polie : conditionnel (nous voudrions)." },
+          { "ko": "Si tu ~~viendrais~~, on jouerait.", "ok": "Si tu **venais**, on jouerait.", "why": "Après si, l'imparfait." },
+          { "ko": "Ils ~~iront~~ bien à la plage, mais il pleut.", "ok": "Ils **iraient** bien à la plage, mais il pleut.", "why": "Un souhait qui ne se réalise pas : conditionnel." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Après **si** qui exprime une condition, jamais de conditionnel : **si + imparfait**, puis le conditionnel dans l'autre partie de la phrase. Retiens la formule : « les si n'aiment pas les -rais »." },
+        { "type": "fun", "text": "Le sais-tu ? Quand ils jouent, les enfants disent souvent : « On dirait que tu serais le roi et moi le dragon. » C'est le conditionnel du jeu et de l'imaginaire : les grammairiens l'appellent le conditionnel ludique !" }
+      ],
+      "vocab": [
+        { "mot": "souhait", "def": "Ce que l'on désire voir se réaliser.", "ex": "Mon souhait le plus cher est d'avoir un chien.", "alt": [] },
+        { "mot": "politesse", "def": "Ensemble des bonnes manières : dire bonjour, merci, s'il te plaît.", "ex": "Par politesse, il a cédé sa place.", "alt": [] },
+        { "mot": "rêve", "def": "Images que l'on voit en dormant ; ou grand désir.", "ex": "J'ai fait un rêve étrange cette nuit.", "alt": [] },
+        { "mot": "conseil", "def": "Ce que l'on dit à quelqu'un pour l'aider à bien agir.", "ex": "Suis le conseil de ton professeur.", "alt": [] },
+        { "mot": "hypothèse", "def": "Ce que l'on suppose, sans en être sûr.", "ex": "Le détective formule une hypothèse.", "alt": [] },
+        { "mot": "vœu", "def": "Souhait que l'on fait, souvent en soufflant des bougies.", "ex": "Fais un vœu avant de souffler !", "alt": ["voeu"] },
+        { "mot": "désir", "def": "Envie forte d'avoir ou de faire quelque chose.", "ex": "Il a un grand désir de voyager.", "alt": [] },
+        { "mot": "envie", "def": "Ce que l'on aimerait avoir ou faire tout de suite.", "ex": "J'ai envie d'une glace.", "alt": [] },
+        { "mot": "excuse", "def": "Ce que l'on dit pour demander pardon ou expliquer une faute.", "ex": "Il a présenté ses excuses à la voisine.", "alt": [] },
+        { "mot": "remerciement", "def": "Parole ou geste pour dire merci.", "ex": "Elle a envoyé un mot de remerciement.", "alt": [] },
+        { "mot": "faveur", "def": "Service que l'on rend à quelqu'un par gentillesse.", "ex": "Peux-tu me faire une faveur ?", "alt": [] },
+        { "mot": "demande", "def": "Ce que l'on sollicite auprès de quelqu'un, une requête.", "ex": "Le directeur a accepté notre demande.", "alt": [] },
+        { "mot": "regret", "def": "Tristesse de ne pas avoir fait quelque chose, ou de l'avoir fait.", "ex": "Il part avec un peu de regret.", "alt": [] },
+        { "mot": "possibilité", "def": "Ce qui peut arriver ou que l'on peut faire.", "ex": "Il y a une possibilité de neige demain.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Je voudrais un chocolat chaud, s'il vous plaît.", "indice": "Une commande polie au café", "trap": ["voudrai"], "alt": [] },
+        { "phrase": "Si j'étais riche, j'achèterais une île.", "indice": "Un rêve de millionnaire", "trap": ["serais", "achèterai"], "alt": ["J'achèterais une île si j'étais riche."] },
+        { "phrase": "Tu devrais te coucher plus tôt.", "indice": "Un conseil pour être en forme", "trap": ["devras"], "alt": [] },
+        { "phrase": "Nous aimerions visiter le château.", "indice": "Un souhait de touristes", "trap": ["aimerons"], "alt": [] },
+        { "phrase": "Pourriez-vous fermer la porte ?", "indice": "Une demande polie", "trap": ["Pourrez"], "alt": [] },
+        { "phrase": "Si tu venais, nous serions contents.", "indice": "Une invitation", "trap": ["viendrais", "serons"], "alt": ["Nous serions contents si tu venais."] },
+        { "phrase": "Ils iraient bien à la plage.", "indice": "Une envie de mer", "trap": ["iront"], "alt": [] },
+        { "phrase": "Il faudrait réparer ce robinet.", "indice": "Une fuite à la cuisine", "trap": ["faudra"], "alt": [] },
+        { "phrase": "À ta place, je lui dirais la vérité.", "indice": "Un conseil d'ami", "trap": ["dirai"], "alt": ["Je lui dirais la vérité, à ta place."] },
+        { "phrase": "Elle serait ravie de te voir.", "indice": "Une bonne nouvelle pour une visite", "trap": ["sera"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Je ___ un verre d'eau, s'il vous plaît.", "choices": ["voudrais", "voudrai", "voudrait"], "answer": 0, "explain": "Une demande polie : conditionnel. Nous voudrions → je voudrais." },
+        { "type": "mcq", "q": "Si nous ___ le temps, nous viendrions.", "choices": ["avions", "aurions", "avons"], "answer": 0, "explain": "Après si, l'imparfait : si nous avions." },
+        { "type": "mcq", "q": "Si tu étais là, tu ___ ce spectacle.", "choices": ["adorerais", "adoreras", "adorais"], "answer": 0, "explain": "Si + imparfait, puis conditionnel : tu adorerais." },
+        { "type": "mcq", "q": "À ta place, je ___ prudent.", "choices": ["serais", "serai", "suis"], "answer": 0, "explain": "« À ta place » introduit une hypothèse : conditionnel." },
+        { "type": "mcq", "q": "Ils ___ bien venir, mais ils sont malades.", "choices": ["voudraient", "voudront", "voulaient"], "answer": 0, "explain": "Un souhait qui ne se réalisera pas : conditionnel." },
+        { "type": "fill", "q": "Nous ___ partir en Italie.", "hint": "aimer, au conditionnel", "answer": ["aimerions"], "explain": "Radical du futur aimer- + -ions : nous aimerions." },
+        { "type": "fill", "q": "Tu ___ ranger ta chambre.", "hint": "devoir, au conditionnel", "answer": ["devrais"], "explain": "Un conseil : tu devrais (radical devr- + -ais)." },
+        { "type": "fill", "q": "Si j'avais des ailes, je ___.", "hint": "voler, au conditionnel", "answer": ["volerais"], "explain": "Si + imparfait, puis conditionnel : je volerais." },
+        { "type": "fill", "q": "Si vous couriez, vous ___ le bus.", "hint": "attraper, au conditionnel", "answer": ["attraperiez"], "explain": "Radical attraper- + -iez : vous attraperiez." },
+        { "type": "fill", "q": "Elle ___ ravie de venir.", "hint": "être, au conditionnel", "answer": ["serait"], "explain": "Être : radical ser- + -ait." },
+        { "type": "fill", "q": "Si nous étions en vacances, nous ___ à la mer.", "hint": "aller, au conditionnel", "answer": ["irions"], "explain": "Aller : radical ir- + -ions." },
+        { "type": "fill", "q": "Avec des lunettes, ils ___ mieux.", "hint": "voir, au conditionnel", "answer": ["verraient"], "explain": "Voir : radical verr- + -aient." },
+        { "type": "error", "q": "Si j'aurais su, je serais venu.", "wrong": 1, "fix": ["j'avais"], "explain": "Après si, jamais de conditionnel : si j'avais su." },
+        { "type": "error", "q": "Je voudrai une baguette, s'il vous plaît.", "wrong": 1, "fix": ["voudrais"], "explain": "Une demande polie : conditionnel, je voudrais." },
+        { "type": "error", "q": "Si tu viendrais, on jouerait aux cartes.", "wrong": 2, "fix": ["venais"], "explain": "Après si, l'imparfait : si tu venais." },
+        { "type": "error", "q": "Nous aimerons bien vous aider, mais nous sommes occupés.", "wrong": 1, "fix": ["aimerions"], "explain": "Un souhait qui ne se réalise pas : conditionnel, nous aimerions." }
+      ],
+      "reading": {
+        "title": "Si j'étais maire",
+        "text": "Si j'étais maire de ma ville, je changerais beaucoup de choses. D'abord, je construirais une piste cyclable devant chaque école. Les enfants viendraient à vélo et les voitures rouleraient moins vite. Ensuite, je planterais des arbres fruitiers dans tous les parcs : chacun pourrait cueillir une pomme en passant. Je créerais aussi une bibliothèque ouverte le dimanche, avec des fauteuils si confortables qu'on y lirait jusqu'au soir. Évidemment, il faudrait de l'argent. Je demanderais aux habitants de m'aider. Mon père dit que je serais une maire très populaire… et très vite ruinée.",
+        "questions": [
+          { "q": "Que construirait la narratrice devant les écoles ?", "choices": ["Une piste cyclable", "Un parking", "Une piscine", "Une bibliothèque"], "answer": 0, "explain": "« Je construirais une piste cyclable devant chaque école. »" },
+          { "q": "Pourquoi planterait-elle des arbres fruitiers ?", "choices": ["Pour que chacun puisse cueillir des fruits", "Pour vendre les fruits", "Pour faire de l'ombre aux voitures", "Pour nourrir les oiseaux"], "answer": 0, "explain": "« Chacun pourrait cueillir une pomme en passant. »" },
+          { "q": "Qu'est-ce qui rendrait la bibliothèque spéciale ?", "choices": ["Elle serait ouverte le dimanche, avec des fauteuils confortables", "Elle serait gratuite", "Elle n'aurait que des bandes dessinées", "Elle serait dans un arbre"], "answer": 0, "explain": "Ouverte le dimanche, avec des fauteuils si confortables qu'on y lirait jusqu'au soir." },
+          { "q": "Que pense son père de ces projets ?", "choices": ["Ils plairaient beaucoup mais coûteraient très cher", "Ils sont impossibles", "Ils sont ennuyeux", "Ils sont déjà réalisés"], "answer": 0, "explain": "Elle serait « très populaire… et très vite ruinée »." },
+          { "q": "Pourquoi les verbes sont-ils au conditionnel ?", "choices": ["Ce sont des projets imaginaires", "Ce sont des souvenirs", "Ce sont des ordres", "Ce sont des faits réels"], "answer": 0, "explain": "Tout dépend de « si j'étais maire » : c'est une hypothèse." }
+        ]
+      }
+    },
+    {
+      "id": "4.3",
+      "name": "Le, lui, en, y",
+      "title": "Les pronoms compléments : le, la, les, lui, leur, en, y ; leur place et leur ordre",
+      "goal": "Remplacer un complément par le bon pronom et le placer correctement.",
+      "lesson": [
+        { "type": "p", "text": "Pour éviter les répétitions, on remplace un complément par un **pronom** placé devant le verbe : [[Je vois Léa]] → [[Je la vois]]." },
+        { "type": "table", "head": ["Ce que l'on remplace", "Pronom", "Exemple"], "rows": [["un nom masculin, sans préposition", "le (l')", "[[Je le regarde.]]"], ["un nom féminin, sans préposition", "la (l')", "[[Je l'aime.]]"], ["un nom pluriel, sans préposition", "les", "[[Je les range.]]"], ["à + une personne", "lui / leur", "[[Je lui parle.]] [[Je leur parle.]]"], ["de + une chose, une quantité", "en", "[[J'en veux.]] [[J'en ai trois.]]"], ["à + une chose, un lieu", "y", "[[J'y pense.]] [[J'y vais.]]"]] },
+        { "type": "rule", "title": "La place du pronom", "text": "Il se place devant le **verbe conjugué** ([[Je le prends]]), ou devant l'**infinitif** dont il dépend ([[Je vais le prendre]]). Au passé composé, devant l'auxiliaire : [[Je l'ai pris]]." },
+        { "type": "rule", "title": "L'ordre de deux pronoms", "text": "me, te, se, nous, vous → le, la, les → lui, leur → y → en : [[Il me le donne]], [[Je le lui donne]], [[Je leur en parle]], [[Il y en a]]." },
+        { "type": "rule", "title": "À l'impératif", "text": "À l'impératif affirmatif, le pronom passe derrière le verbe, avec un trait d'union : [[Prends-le]], [[Donne-le-moi]], [[Vas-y]], [[Manges-en]]. À la forme négative, il revient devant : [[Ne le prends pas]]." },
+        { "type": "examples", "items": [
+          { "ex": "Cette histoire, je **la** connais par cœur.", "note": "la remplace cette histoire" },
+          { "ex": "Je **leur** ai envoyé une carte.", "note": "envoyer à mes cousins : leur" },
+          { "ex": "Des bonbons ? J'**en** veux bien un.", "note": "en remplace des bonbons" },
+          { "ex": "Le parc ? Nous **y** allons après l'école.", "note": "y remplace au parc" },
+          { "ex": "Donne-**le-moi**, s'il te plaît.", "note": "impératif : le pronom après le verbe" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "Je ~~leurs~~ ai parlé.", "ok": "Je **leur** ai parlé.", "why": "Le pronom leur ne prend jamais de s." },
+          { "ko": "Mon chien ? Je ~~lui~~ promène.", "ok": "Mon chien ? Je **le** promène.", "why": "On promène quelqu'un, sans préposition : le." },
+          { "ko": "Mes amies ? Je ~~les~~ parle.", "ok": "Mes amies ? Je **leur** parle.", "why": "On parle à quelqu'un : leur." },
+          { "ko": "Donne-~~moi-le~~ !", "ok": "Donne-**le-moi** !", "why": "À l'impératif, le complément d'objet passe d'abord." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "**lui** ou **le** ? Cherche la préposition : on téléphone **à** quelqu'un → [[je lui téléphone]] ; on appelle quelqu'un, sans préposition → [[je l'appelle]]." },
+        { "type": "fun", "text": "Le sais-tu ? « Il y en a » fait partie des expressions les plus courantes du français… et des plus redoutées par ceux qui apprennent notre langue : trois petits mots qui remplacent toute une phrase !" }
+      ],
+      "vocab": [
+        { "mot": "message", "def": "Information que l'on envoie à quelqu'un.", "ex": "J'ai reçu ton message.", "alt": [] },
+        { "mot": "courrier", "def": "Ensemble des lettres et paquets que l'on reçoit ou que l'on envoie.", "ex": "Le courrier arrive vers dix heures.", "alt": [] },
+        { "mot": "colis", "def": "Paquet que l'on envoie par la poste.", "ex": "Un colis t'attend chez la voisine.", "alt": [] },
+        { "mot": "enveloppe", "def": "Pochette de papier dans laquelle on glisse une lettre.", "ex": "Colle bien l'enveloppe.", "alt": [] },
+        { "mot": "timbre", "def": "Petite vignette que l'on colle sur une lettre pour payer son envoi.", "ex": "N'oublie pas de mettre un timbre.", "alt": [] },
+        { "mot": "conversation", "def": "Échange de paroles entre plusieurs personnes.", "ex": "Nous avons eu une longue conversation.", "alt": [] },
+        { "mot": "secret", "def": "Ce que l'on ne doit pas révéler.", "ex": "Je te confie un secret.", "alt": [] },
+        { "mot": "rumeur", "def": "Nouvelle qui se répand sans que l'on sache si elle est vraie.", "ex": "Une rumeur court dans le village.", "alt": [] },
+        { "mot": "promesse", "def": "Engagement à faire quelque chose.", "ex": "Il a tenu sa promesse.", "alt": [] },
+        { "mot": "nouvelle", "def": "Information sur un événement récent.", "ex": "J'ai une bonne nouvelle à t'annoncer.", "alt": [] },
+        { "mot": "appel", "def": "Coup de téléphone ; ou lecture des noms des élèves pour savoir qui est présent.", "ex": "Le professeur fait l'appel.", "alt": [] },
+        { "mot": "sonnerie", "def": "Bruit d'une cloche, d'un réveil ou d'un téléphone.", "ex": "La sonnerie annonce la fin du cours.", "alt": [] },
+        { "mot": "répondeur", "def": "Appareil qui enregistre les messages quand on ne décroche pas.", "ex": "Laisse un message sur le répondeur.", "alt": [] },
+        { "mot": "destinataire", "def": "Personne à qui l'on envoie une lettre ou un message.", "ex": "Écris le nom du destinataire sur l'enveloppe.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Je lui ai prêté mon vélo.", "indice": "Un service à un copain", "trap": ["leurs", "le"], "alt": [] },
+        { "phrase": "Mes cousins ? Je les vois demain.", "indice": "Une visite en famille", "trap": ["leur"], "alt": [] },
+        { "phrase": "Cette histoire, je la connais par cœur.", "indice": "Un conte entendu cent fois", "trap": ["lui"], "alt": [] },
+        { "phrase": "Des bonbons ? J'en veux bien un.", "indice": "Une gourmandise acceptée", "trap": ["y"], "alt": [] },
+        { "phrase": "Le parc ? Nous y allons après l'école.", "indice": "Une sortie de fin de journée", "trap": ["en"], "alt": [] },
+        { "phrase": "Donne-le-moi, s'il te plaît.", "indice": "Une demande d'objet", "trap": ["moi-le"], "alt": [] },
+        { "phrase": "Je leur ai envoyé une carte postale.", "indice": "Des nouvelles de vacances", "trap": ["leurs", "les"], "alt": [] },
+        { "phrase": "Ne le dis à personne !", "indice": "Un secret à garder", "trap": ["lui"], "alt": [] },
+        { "phrase": "Il me l'a promis.", "indice": "Un engagement", "trap": ["lui"], "alt": [] },
+        { "phrase": "Vas-y, tu peux le faire !", "indice": "Un encouragement", "trap": ["Va-y"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Tu connais Léa ? Oui, je ___ connais.", "choices": ["la", "lui", "leur"], "answer": 0, "explain": "On connaît quelqu'un, sans préposition : la." },
+        { "type": "mcq", "q": "Mes grands-parents ? Je ___ téléphone chaque dimanche.", "choices": ["leur", "les", "leurs"], "answer": 0, "explain": "On téléphone à quelqu'un : leur, sans s." },
+        { "type": "mcq", "q": "Des cerises ? Il ___ a mangé trois.", "choices": ["en", "y", "les"], "answer": 0, "explain": "En remplace une quantité : il a mangé trois cerises." },
+        { "type": "mcq", "q": "À la piscine ? Nous ___ allons le mercredi.", "choices": ["y", "en", "lui"], "answer": 0, "explain": "Y remplace un lieu introduit par à : à la piscine." },
+        { "type": "mcq", "q": "Mon frère ? Je ___ ai offert un livre.", "choices": ["lui", "le", "leur"], "answer": 0, "explain": "On offre quelque chose à quelqu'un : lui." },
+        { "type": "fill", "q": "Ton manteau ? Je ___ ai rangé dans l'armoire.", "hint": "le pronom qui remplace ton manteau", "answer": ["l'"], "explain": "Le devient l' devant une voyelle : je l'ai rangé." },
+        { "type": "fill", "q": "Ces livres, je ___ ai tous lus.", "hint": "le pronom qui remplace ces livres", "answer": ["les"], "explain": "Un nom pluriel sans préposition : les." },
+        { "type": "fill", "q": "J'ai écrit à Inès : je ___ ai raconté mes vacances.", "hint": "le pronom qui remplace à Inès", "answer": ["lui"], "explain": "Raconter à quelqu'un : lui." },
+        { "type": "fill", "q": "Ton examen, tu ___ penses souvent ?", "hint": "le pronom qui remplace à ton examen", "answer": ["y"], "explain": "Penser à une chose : y." },
+        { "type": "fill", "q": "Des frères, il ___ a deux.", "hint": "le pronom qui remplace des frères", "answer": ["en"], "explain": "En remplace une quantité : il a deux frères." },
+        { "type": "fill", "q": "Le cadeau, ne ___ ouvre pas avant Noël !", "hint": "le pronom qui remplace le cadeau", "answer": ["l'"], "explain": "À l'impératif négatif, le pronom reste devant le verbe : ne l'ouvre pas." },
+        { "type": "fill", "q": "Prends ce gâteau et donne-___ à ta sœur.", "hint": "le pronom qui remplace ce gâteau", "answer": ["le"], "explain": "À l'impératif affirmatif, le pronom suit le verbe : donne-le." },
+        { "type": "error", "q": "Je leurs ai dit bonjour.", "wrong": 1, "fix": ["leur"], "explain": "Le pronom leur ne prend jamais de s." },
+        { "type": "error", "q": "Mon chien ? Je lui promène le soir.", "wrong": 3, "fix": ["le"], "explain": "On promène quelqu'un, sans préposition : le." },
+        { "type": "error", "q": "Mes amies ? Je les parle souvent.", "wrong": 3, "fix": ["leur"], "explain": "On parle à quelqu'un : leur." },
+        { "type": "error", "q": "Donne-moi-le !", "wrong": 0, "fix": ["Donne-le-moi"], "explain": "À l'impératif affirmatif, le complément d'objet vient d'abord : donne-le-moi." }
+      ],
+      "reading": {
+        "title": "Le secret de Karim",
+        "text": "Karim a trouvé un chaton sous la pluie. Il l'a pris dans ses bras et l'a ramené en cachette dans sa chambre. Ses parents ? Il ne leur a rien dit, car ils lui avaient interdit d'avoir un animal. Pendant trois jours, il l'a nourri avec du lait et des croquettes ; il en achetait avec son argent de poche. Sa sœur Yasmine a vite découvert le secret. « Je ne le répéterai pas, a-t-elle promis, si tu me le prêtes le mercredi. » Mais le chaton miaulait fort, la nuit. Le quatrième soir, la porte s'est ouverte : leur père était là, le chaton sur l'épaule. « Comment l'appelle-t-on ? » a-t-il demandé en souriant.",
+        "questions": [
+          { "q": "Où Karim a-t-il caché le chaton ?", "choices": ["Dans sa chambre", "Dans le jardin", "Chez sa sœur", "Au garage"], "answer": 0, "explain": "Il l'a ramené en cachette dans sa chambre." },
+          { "q": "Pourquoi n'a-t-il rien dit à ses parents ?", "choices": ["Ils lui avaient interdit d'avoir un animal", "Ils étaient en voyage", "Ils détestaient les chats", "C'était une surprise"], "answer": 0, "explain": "« Ils lui avaient interdit d'avoir un animal. »" },
+          { "q": "Dans « il en achetait », que remplace « en » ?", "choices": ["Des croquettes", "Du lait", "Le chaton", "L'argent de poche"], "answer": 0, "explain": "Il achetait des croquettes avec son argent de poche." },
+          { "q": "Que demande Yasmine en échange de son silence ?", "choices": ["Qu'on lui prête le chaton le mercredi", "De l'argent", "Des croquettes", "Que Karim range sa chambre"], "answer": 0, "explain": "« Si tu me le prêtes le mercredi » : le remplace le chaton." },
+          { "q": "Comment réagit le père à la fin ?", "choices": ["Il accepte le chaton avec le sourire", "Il se met en colère", "Il ramène le chaton dehors", "Il punit Karim"], "answer": 0, "explain": "Il demande en souriant comment on l'appelle : il l'adopte." }
+        ]
+      }
+    },
+    {
+      "id": "4.4",
+      "name": "Doucement, mais sûrement",
+      "title": "Les adverbes en -ment : formation, -amment / -emment, adverbes irréguliers",
+      "goal": "Former et écrire sans faute les adverbes en -ment, y compris en -amment et -emment.",
+      "lesson": [
+        { "type": "p", "text": "Beaucoup d'adverbes se forment à partir d'un adjectif et du suffixe **-ment**. Ils précisent comment se fait l'action : [[Il parle doucement.]]" },
+        { "type": "rule", "title": "La règle de base", "text": "On part de l'adjectif au **féminin** et on ajoute **-ment** : [[doux → douce → doucement]], [[lent → lente → lentement]], [[heureux → heureuse → heureusement]]." },
+        { "type": "rule", "title": "Les adjectifs terminés par une voyelle", "text": "On part du **masculin** : [[vrai → vraiment]], [[poli → poliment]], [[absolu → absolument]]. Exception : [[gai → gaiement]]." },
+        { "type": "rule", "title": "-ant → -amment, -ent → -emment", "text": "[[courant → couramment]], [[bruyant → bruyamment]], [[évident → évidemment]], [[prudent → prudemment]]. Les deux finales se prononcent pareil : [amɑ̃]. Exceptions : [[lent → lentement]], [[présent → présentement]]." },
+        { "type": "table", "head": ["Adjectif", "Adverbe", "Adjectif", "Adverbe"], "rows": [["fier", "fièrement", "gentil", "gentiment"], ["précis", "précisément", "énorme", "énormément"], ["profond", "profondément", "bref", "brièvement"], ["constant", "constamment", "patient", "patiemment"], ["récent", "récemment", "fréquent", "fréquemment"]] },
+        { "type": "examples", "items": [
+          { "ex": "**Évidemment**, il est encore en retard.", "note": "évident → -emment" },
+          { "ex": "Ma tante parle **couramment** l'espagnol.", "note": "courant → -amment" },
+          { "ex": "Il a répondu **gentiment**.", "note": "un adverbe irrégulier" },
+          { "ex": "Nous avons **énormément** ri.", "note": "un é devant -ment" },
+          { "ex": "Le bébé dort **profondément**.", "note": "un é devant -ment" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "~~évidement~~", "ok": "**évidemment**", "why": "Évident se termine par -ent : -emment, avec deux m." },
+          { "ko": "~~gentillement~~", "ok": "**gentiment**", "why": "Un adverbe irrégulier, sans ll." },
+          { "ko": "~~prudament~~", "ok": "**prudemment**", "why": "Prudent → prudemment." },
+          { "ko": "~~vraiement~~", "ok": "**vraiment**", "why": "Vrai finit par une voyelle : on ajoute directement -ment." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Pour choisir entre **-amment** et **-emment**, regarde l'adjectif : prud**ent** → prud**emment**, brill**ant** → brill**amment**. La voyelle de l'adjectif se retrouve dans l'adverbe, et il y a toujours **deux m**." },
+        { "type": "fun", "text": "Le sais-tu ? Le suffixe -ment vient du latin « mente », « avec un esprit ». « Doucement » voulait d'abord dire « d'un esprit doux ». Et comme ce mot latin était féminin, on part de l'adjectif au féminin !" }
+      ],
+      "vocab": [
+        { "mot": "évidemment", "def": "Bien sûr, de façon évidente.", "ex": "Évidemment, tu as raison.", "alt": [] },
+        { "mot": "prudemment", "def": "Avec prudence.", "ex": "Il conduit prudemment sous la pluie.", "alt": [] },
+        { "mot": "couramment", "def": "Avec aisance, sans hésiter (pour parler une langue).", "ex": "Elle parle couramment l'arabe.", "alt": [] },
+        { "mot": "bruyamment", "def": "En faisant beaucoup de bruit.", "ex": "Les enfants rentrent bruyamment.", "alt": [] },
+        { "mot": "patiemment", "def": "Avec patience, sans s'énerver.", "ex": "Le chat attend patiemment devant le trou.", "alt": [] },
+        { "mot": "récemment", "def": "Il y a peu de temps.", "ex": "J'ai récemment changé d'école.", "alt": [] },
+        { "mot": "fréquemment", "def": "De façon fréquente, à intervalles rapprochés.", "ex": "Il pleut fréquemment en novembre.", "alt": [] },
+        { "mot": "gentiment", "def": "Avec gentillesse.", "ex": "Il m'a gentiment aidé.", "alt": [] },
+        { "mot": "énormément", "def": "Extrêmement, en très grande quantité.", "ex": "Je t'aime énormément.", "alt": [] },
+        { "mot": "précisément", "def": "De façon exacte, avec précision.", "ex": "Explique-moi précisément ce qui s'est passé.", "alt": [] },
+        { "mot": "profondément", "def": "Très fort, jusqu'au fond (dormir, respirer…).", "ex": "Respire profondément.", "alt": [] },
+        { "mot": "brièvement", "def": "En peu de mots, en peu de temps.", "ex": "Résume brièvement l'histoire.", "alt": [] },
+        { "mot": "gaiement", "def": "Avec gaieté, joyeusement.", "ex": "Les oiseaux chantent gaiement.", "alt": [] },
+        { "mot": "suffisamment", "def": "Assez, autant qu'il le faut.", "ex": "As-tu suffisamment dormi ?", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Évidemment, il est encore en retard.", "indice": "Un ami jamais à l'heure", "trap": ["Évidement"], "alt": ["Il est évidemment encore en retard."] },
+        { "phrase": "Conduis prudemment sur la route.", "indice": "Un conseil au conducteur", "trap": ["prudament"], "alt": [] },
+        { "phrase": "Ma tante parle couramment l'espagnol.", "indice": "Une tante bilingue", "trap": ["couramant"], "alt": [] },
+        { "phrase": "Les enfants jouent bruyamment dans la cour.", "indice": "Une récréation animée", "trap": ["bruyemment"], "alt": [] },
+        { "phrase": "Il a répondu gentiment à ma question.", "indice": "Une réponse aimable", "trap": ["gentillement"], "alt": [] },
+        { "phrase": "Nous avons énormément ri.", "indice": "Une soirée très drôle", "trap": ["énormement"], "alt": [] },
+        { "phrase": "Elle attend patiemment son tour.", "indice": "Une file d'attente", "trap": ["patiament"], "alt": [] },
+        { "phrase": "Le bébé dort profondément.", "indice": "Un sommeil paisible", "trap": ["profondement"], "alt": [] },
+        { "phrase": "J'ai récemment déménagé à Lille.", "indice": "Une nouvelle adresse", "trap": ["récament"], "alt": [] },
+        { "phrase": "Il marche lentement vers la porte.", "indice": "Un pas tranquille", "trap": ["lentemment"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Il parle ___ trois langues.", "choices": ["couramment", "courament", "couremment"], "answer": 0, "explain": "Courant → couramment : -amment, avec deux m." },
+        { "type": "mcq", "q": "Elle a ___ réussi son examen.", "choices": ["brillamment", "brillemment", "brillament"], "answer": 0, "explain": "Brillant → brillamment." },
+        { "type": "mcq", "q": "Réponds ___.", "choices": ["poliment", "polimment", "poliement"], "answer": 0, "explain": "Poli finit par une voyelle : on ajoute -ment au masculin, poliment." },
+        { "type": "mcq", "q": "Le chat s'approche ___.", "choices": ["silencieusement", "silencieusment", "silencieuxment"], "answer": 0, "explain": "Silencieux → silencieuse → silencieusement." },
+        { "type": "mcq", "q": "Il pleut ___.", "choices": ["abondamment", "abondemment", "abondament"], "answer": 0, "explain": "Abondant → abondamment." },
+        { "type": "fill", "q": "Le vieil homme marche ___.", "hint": "adverbe formé sur lent", "answer": ["lentement"], "explain": "Lent est une exception : lentement, et non « lemment »." },
+        { "type": "fill", "q": "Elle chante ___.", "hint": "adverbe formé sur doux", "answer": ["doucement"], "explain": "Doux → douce → doucement." },
+        { "type": "fill", "q": "Il a ___ raison.", "hint": "adverbe formé sur évident", "answer": ["évidemment"], "explain": "Évident → évidemment, avec deux m." },
+        { "type": "fill", "q": "Sur la neige, conduis ___.", "hint": "adverbe formé sur prudent", "answer": ["prudemment"], "explain": "Prudent → prudemment." },
+        { "type": "fill", "q": "Ils ont ___ fêté leur victoire.", "hint": "adverbe formé sur joyeux", "answer": ["joyeusement"], "explain": "Joyeux → joyeuse → joyeusement." },
+        { "type": "fill", "q": "Il a ___ cassé le vase.", "hint": "adverbe formé sur malheureux", "answer": ["malheureusement"], "explain": "Malheureux → malheureuse → malheureusement." },
+        { "type": "fill", "q": "Nous avons ___ mangé.", "hint": "adverbe formé sur énorme", "answer": ["énormément"], "explain": "Énorme → énormément, avec un é devant -ment." },
+        { "type": "error", "q": "Il est vraiement gentil.", "wrong": 2, "fix": ["vraiment"], "explain": "Vrai finit par une voyelle : on ajoute directement -ment." },
+        { "type": "error", "q": "Elle répond toujours gentillement.", "wrong": 3, "fix": ["gentiment"], "explain": "Gentil donne un adverbe irrégulier : gentiment." },
+        { "type": "error", "q": "Ils ont attendu patiament.", "wrong": 3, "fix": ["patiemment"], "explain": "Patient → patiemment, avec -emment." },
+        { "type": "error", "q": "Je vais fréquement au cinéma.", "wrong": 2, "fix": ["fréquemment"], "explain": "Fréquent → fréquemment, avec deux m." }
+      ],
+      "reading": {
+        "title": "Le concours de pâtisserie",
+        "text": "Chaque année, le village organise un concours de pâtisserie. Cette fois, Théo s'est inscrit avec son grand-père. Ils ont préparé leur gâteau patiemment, pendant toute la matinée. Le grand-père pesait précisément la farine, Théo battait énergiquement les œufs. Soudain, le chat a sauté sur la table et renversé bruyamment le bol de chocolat. Heureusement, il en restait assez pour le glaçage ! Ils ont décoré le gâteau rapidement et l'ont apporté juste à temps. Le jury l'a goûté attentivement… et leur a donné le premier prix. Évidemment, le chat n'a pas été invité à la remise des médailles.",
+        "questions": [
+          { "q": "Avec qui Théo a-t-il participé au concours ?", "choices": ["Avec son grand-père", "Avec son chat", "Avec sa mère", "Seul"], "answer": 0, "explain": "« Théo s'est inscrit avec son grand-père. »" },
+          { "q": "Qu'a fait le chat ?", "choices": ["Il a renversé le bol de chocolat", "Il a mangé le gâteau", "Il a gagné une médaille", "Il a cassé des œufs"], "answer": 0, "explain": "Il a sauté sur la table et renversé le bol de chocolat." },
+          { "q": "Pourquoi l'auteur écrit-il « heureusement » ?", "choices": ["Il restait assez de chocolat malgré l'accident", "Le chat n'était pas blessé", "Le jury était en retard", "Le gâteau était déjà cuit"], "answer": 0, "explain": "« Heureusement, il en restait assez pour le glaçage ! »" },
+          { "q": "Quel prix ont-ils gagné ?", "choices": ["Le premier prix", "Le deuxième prix", "Un prix spécial pour le chat", "Aucun prix"], "answer": 0, "explain": "Le jury leur a donné le premier prix." },
+          { "q": "Quel adverbe du texte vient de l'adjectif « patient » ?", "choices": ["patiemment", "précisément", "rapidement", "attentivement"], "answer": 0, "explain": "Patient → patiemment." }
+        ]
+      }
+    },
+    {
+      "id": "4.5",
+      "name": "Les jumeaux contre-attaquent",
+      "title": "quel / quelle / qu'elle, quand / quant / qu'en, sans / s'en, si / s'y, dans / d'en",
+      "goal": "Distinguer cinq nouvelles paires d'homophones grâce au remplacement.",
+      "lesson": [
+        { "type": "p", "text": "Cinq nouvelles paires de jumeaux. L'astuce reste la même : **remplacer** pour vérifier." },
+        { "type": "rule", "title": "quel / quelle / qu'elle", "text": "**quel(s)**, **quelle(s)** accompagnent un nom et s'accordent avec lui : [[Quelle heure est-il ?]], [[Quels beaux chevaux !]]. **qu'elle** = que + elle : on peut dire **qu'il** ([[Je crois qu'elle viendra]] → je crois qu'il viendra)." },
+        { "type": "rule", "title": "quand / quant / qu'en", "text": "**quand** = à quel moment, lorsque : [[Quand pars-tu ?]]. **quant** ne s'emploie que dans **quant à** (= en ce qui concerne) : [[Quant à moi, je reste.]]. **qu'en** = que + en : [[Qu'en penses-tu ?]]" },
+        { "type": "table", "head": ["Mot", "Astuce", "Exemple"], "rows": [["sans", "le contraire de avec", "[[un thé sans sucre]]"], ["s'en", "se + en, devant un verbe (je m'en…)", "[[Il s'en va.]] → je m'en vais"], ["si", "une condition, ou très", "[[si tu veux]], [[si beau]]"], ["s'y", "se + y, devant un verbe (je m'y…)", "[[Il s'y trouve bien.]] → je m'y trouve"], ["dans", "à l'intérieur de", "[[dans la boîte]]"], ["d'en", "de + en, devant un verbe", "[[Il vient d'en sortir.]]"]] },
+        { "type": "examples", "items": [
+          { "ex": "**Quelle** belle journée !", "note": "« qu'il belle journée » ne veut rien dire : quelle" },
+          { "ex": "Je pense **qu'elle** a raison.", "note": "je pense qu'il a raison : qu'elle" },
+          { "ex": "**Quant** à moi, je préfère rester ici.", "note": "quant à = en ce qui me concerne" },
+          { "ex": "Elle **s'en** va demain matin.", "note": "je m'en vais : s'en" },
+          { "ex": "Mon frère vient **d'en** acheter deux.", "note": "de + en devant un verbe" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "~~Qu'elle~~ heure est-il ?", "ok": "**Quelle** heure est-il ?", "why": "Devant un nom : quelle, accordé avec heure." },
+          { "ko": "~~Quand~~ à moi, je refuse.", "ok": "**Quant** à moi, je refuse.", "why": "Dans l'expression quant à, avec un t." },
+          { "ko": "Il ~~sans~~ va.", "ok": "Il **s'en** va.", "why": "Je m'en vais : se + en." },
+          { "ko": "Je pense ~~quelle~~ a raison.", "ok": "Je pense **qu'elle** a raison.", "why": "Je pense qu'il a raison : que + elle." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "**quel** ou **qu'elle** ? Remplace par **qu'il**. Si la phrase garde un sens, écris qu'elle : [[Je sais qu'elle ment]] → je sais qu'il ment. Sinon, c'est quel, quelle, quels ou quelles, accordé avec le nom : [[Quelles chaussures ?]]" },
+        { "type": "fun", "text": "Le sais-tu ? Le mot quant ne vit presque plus que dans l'expression « quant à ». On le retrouve pourtant caché dans « quantième », le jour du mois indiqué sur certaines montres anciennes !" }
+      ],
+      "vocab": [
+        { "mot": "arrosoir", "def": "Récipient à bec percé de trous pour arroser les plantes.", "ex": "Remplis l'arrosoir au robinet.", "alt": [] },
+        { "mot": "râteau", "def": "Outil à dents pour ramasser les feuilles ou égaliser la terre.", "ex": "Ramasse les feuilles avec le râteau.", "alt": ["rateau"] },
+        { "mot": "pelle", "def": "Outil plat à manche pour creuser ou ramasser la terre.", "ex": "Le petit creuse un trou avec sa pelle.", "alt": [] },
+        { "mot": "brouette", "def": "Petit chariot à une roue que l'on pousse pour transporter de la terre.", "ex": "La brouette est pleine de cailloux.", "alt": [] },
+        { "mot": "tondeuse", "def": "Machine qui coupe l'herbe de la pelouse.", "ex": "Le voisin passe la tondeuse le samedi.", "alt": [] },
+        { "mot": "sécateur", "def": "Gros ciseaux pour couper les branches et les fleurs.", "ex": "Mamie taille les rosiers avec son sécateur.", "alt": [] },
+        { "mot": "semis", "def": "Graines que l'on vient de semer, ou jeunes pousses qui en sortent.", "ex": "Les semis de tomates sortent de terre.", "alt": [] },
+        { "mot": "graine", "def": "Petite partie d'une plante qui, mise en terre, donne une nouvelle plante.", "ex": "J'ai planté une graine de tournesol.", "alt": [] },
+        { "mot": "bourgeon", "def": "Petite pousse qui deviendra une feuille ou une fleur.", "ex": "Au printemps, chaque bourgeon éclate.", "alt": [] },
+        { "mot": "pétale", "def": "Chacune des parties colorées d'une fleur (ce mot est masculin).", "ex": "Un pétale rose est tombé sur la table.", "alt": [] },
+        { "mot": "tige", "def": "Partie longue et fine de la plante qui porte les feuilles et les fleurs.", "ex": "La tige de la rose a des épines.", "alt": [] },
+        { "mot": "jardinière", "def": "Bac allongé où l'on plante des fleurs sur un balcon.", "ex": "Des géraniums poussent dans la jardinière.", "alt": [] },
+        { "mot": "haie", "def": "Rangée d'arbustes qui sert de clôture.", "ex": "Le chat se faufile sous la haie.", "alt": [] },
+        { "mot": "allée", "def": "Chemin bordé d'arbres ou de fleurs, dans un jardin ou un parc.", "ex": "Nous nous promenons dans l'allée des tilleuls.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Quelle belle journée pour un pique-nique !", "indice": "Un grand soleil", "trap": ["Qu'elle"], "alt": [] },
+        { "phrase": "Je pense qu'elle a raison.", "indice": "Un avis favorable", "trap": ["quelle"], "alt": [] },
+        { "phrase": "Quand partez-vous en vacances ?", "indice": "Une question de date", "trap": ["Quant", "Qu'en"], "alt": [] },
+        { "phrase": "Quant à moi, je préfère rester ici.", "indice": "Un choix personnel", "trap": ["Quand"], "alt": [] },
+        { "phrase": "Qu'en penses-tu, toi qui l'as lu ?", "indice": "Une demande d'avis sur un livre", "trap": ["Quand"], "alt": [] },
+        { "phrase": "Il est parti sans dire au revoir.", "indice": "Un départ discret", "trap": ["s'en"], "alt": [] },
+        { "phrase": "Elle s'en va demain matin.", "indice": "Un départ prévu", "trap": ["sans"], "alt": ["Demain matin, elle s'en va."] },
+        { "phrase": "Si tu veux, nous irons au parc.", "indice": "Une proposition de sortie", "trap": ["S'y"], "alt": ["Nous irons au parc si tu veux."] },
+        { "phrase": "Le chat s'y cache toujours.", "indice": "Une cachette préférée", "trap": ["si"], "alt": [] },
+        { "phrase": "Mon frère vient d'en acheter deux.", "indice": "Un achat tout récent", "trap": ["dans"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "___ est ta couleur préférée ?", "choices": ["Quelle", "Qu'elle", "Quel"], "answer": 0, "explain": "Quelle accompagne le nom couleur (féminin) : quelle." },
+        { "type": "mcq", "q": "Je crois ___ a oublié son sac.", "choices": ["qu'elle", "quelle", "quel"], "answer": 0, "explain": "Je crois qu'il a oublié son sac : que + elle." },
+        { "type": "mcq", "q": "___ à mon frère, il dort encore.", "choices": ["Quant", "Quand", "Qu'en"], "answer": 0, "explain": "Quant à = en ce qui concerne." },
+        { "type": "mcq", "q": "Il boit son café ___ sucre.", "choices": ["sans", "s'en", "cent"], "answer": 0, "explain": "Le contraire de avec : sans." },
+        { "type": "mcq", "q": "Ces vacances ? Les enfants ___ souviennent encore.", "choices": ["s'en", "sans"], "answer": 0, "explain": "Je m'en souviens : se + en, s'en." },
+        { "type": "fill", "q": "___ arrives-tu ?", "hint": "quand, quant ou qu'en ?", "answer": ["Quand"], "explain": "Une question de moment : quand." },
+        { "type": "fill", "q": "___ dis-tu ?", "hint": "quand, quant ou qu'en ?", "answer": ["Qu'en"], "explain": "Que dis-tu de cela ? Que + en : qu'en." },
+        { "type": "fill", "q": "___ films as-tu vus ?", "hint": "quel, quels, quelle ou quelles ?", "answer": ["Quels"], "explain": "Quel s'accorde avec films : masculin pluriel, quels." },
+        { "type": "fill", "q": "Il est ___ fatigué qu'il dort debout.", "hint": "si ou s'y ?", "answer": ["si"], "explain": "Si veut dire ici « tellement »." },
+        { "type": "fill", "q": "Cette maison est belle : on ___ sent bien.", "hint": "si ou s'y ?", "answer": ["s'y"], "explain": "Je m'y sens bien : se + y, s'y." },
+        { "type": "fill", "q": "Les clés sont ___ le tiroir.", "hint": "dans ou d'en ?", "answer": ["dans"], "explain": "À l'intérieur du tiroir : dans." },
+        { "type": "fill", "q": "Ces bonbons ? Il vient ___ manger trois.", "hint": "dans ou d'en ?", "answer": ["d'en"], "explain": "Il vient de manger trois bonbons : de + en, d'en." },
+        { "type": "error", "q": "Qu'elle chance tu as !", "wrong": 0, "fix": ["Quelle"], "explain": "Devant le nom chance : quelle." },
+        { "type": "error", "q": "Il ne peut pas vivre s'en musique.", "wrong": 5, "fix": ["sans"], "explain": "Le contraire de avec : sans." },
+        { "type": "error", "q": "Quand à elle, elle dort.", "wrong": 0, "fix": ["Quant"], "explain": "Dans l'expression quant à, avec un t." },
+        { "type": "error", "q": "Je sais quelle viendra demain.", "wrong": 2, "fix": ["qu'elle"], "explain": "Je sais qu'il viendra : que + elle." }
+      ],
+      "reading": {
+        "title": "Quel désordre !",
+        "text": "Quand Sarah est rentrée de l'école, elle a trouvé sa chambre sens dessus dessous. Quel désordre ! Ses livres traînaient par terre, et son lapin, Caramel, s'était caché dans le placard. « Qu'en penses-tu, Caramel ? Qui a fait ça ? » Le lapin s'en moquait bien : il grignotait tranquillement un lacet. Sarah a soupçonné son petit frère. Quant à lui, il jurait qu'il n'y était pour rien. Sans preuve, impossible de l'accuser. Le soir, Sarah a découvert la vérité : la fenêtre était restée ouverte, et le vent s'y était engouffré toute la journée. Si seulement elle l'avait fermée !",
+        "questions": [
+          { "q": "Qu'a découvert Sarah en rentrant de l'école ?", "choices": ["Sa chambre en désordre", "Un lapin perdu", "Son frère qui pleurait", "Une fenêtre cassée"], "answer": 0, "explain": "Sa chambre était « sens dessus dessous »." },
+          { "q": "Où était Caramel ?", "choices": ["Dans le placard", "Sous le lit", "Dans le jardin", "Sur le rebord de la fenêtre"], "answer": 0, "explain": "Le lapin s'était caché dans le placard." },
+          { "q": "Qui Sarah a-t-elle d'abord soupçonné ?", "choices": ["Son petit frère", "Son lapin", "Sa mère", "Le vent"], "answer": 0, "explain": "« Sarah a soupçonné son petit frère. »" },
+          { "q": "Quelle était la vraie cause du désordre ?", "choices": ["Le vent, par la fenêtre restée ouverte", "Le lapin", "Le petit frère", "Un voleur"], "answer": 0, "explain": "La fenêtre était restée ouverte et le vent s'y était engouffré." },
+          { "q": "Dans « Quant à lui », que veut dire « quant à » ?", "choices": ["En ce qui le concerne", "Au moment où", "Sans lui", "Parce que"], "answer": 0, "explain": "Quant à = en ce qui concerne." }
+        ]
+      }
+    }
+  ]
+}

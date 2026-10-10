@@ -1,0 +1,121 @@
+{
+  "level": 4,
+  "units": [
+    {
+      "unit": "4.1",
+      "dictee": {
+        "titre": "L'été prochain",
+        "texte": "L'été prochain, nous irons en Bretagne. Mon père conduira toute la nuit et nous verrons la mer au lever du soleil. Je courrai sur la plage, mes cousins viendront nous rejoindre et nous enverrons des cartes à toute la famille. Il faudra bien sûr emporter des imperméables : en Bretagne, il pleuvra sûrement !",
+        "points": [
+          "**irons**, **verrons**, **viendront** : aller, voir et venir ont un radical irrégulier au futur.",
+          "**courrai**, **enverrons** : deux r pour courir et envoyer.",
+          "**faudra**, **pleuvra** : falloir et pleuvoir ne se conjuguent qu'avec il.",
+          "**conduira** : infinitif conduire, sans son e final, + -a."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Présente à voix haute tes projets pour les prochaines vacances, en six phrases au futur. Puis écris trois de ces phrases.",
+        "model": "Pendant les prochaines vacances, j'irai chez ma tante à Bordeaux. Nous visiterons la dune du Pilat. Je courrai sur le sable et je verrai l'océan. Ma cousine viendra avec nous. Le soir, nous ferons des grillades. Il faudra penser à la crème solaire !",
+        "checklist": [
+          "J'ai utilisé le futur simple.",
+          "J'ai vérifié les radicaux irréguliers (irai, verrai, viendrai, ferai, faudra).",
+          "J'ai gardé le e muet des verbes en -er (je visiterai)."
+        ]
+      }
+    },
+    {
+      "unit": "4.2",
+      "dictee": {
+        "titre": "Si j'avais un dragon",
+        "texte": "Si j'avais un dragon, je l'appellerais Brindille. Il dormirait au fond du jardin et il me conduirait à l'école chaque matin. Mes amis voudraient tous monter sur son dos. Évidemment, il faudrait le nourrir : il mangerait des montagnes de crêpes. Mes parents seraient sûrement un peu inquiets.",
+        "points": [
+          "**Si j'avais** : après si, l'imparfait, jamais le conditionnel.",
+          "**appellerais**, **dormirait**, **conduirait** : radical du futur + terminaisons de l'imparfait.",
+          "**voudraient**, **seraient** : -aient avec un sujet pluriel.",
+          "**faudrait** : falloir au conditionnel."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Écris un message poli de quatre ou cinq phrases pour demander un service à un voisin ou à un professeur. Utilise au moins trois verbes au conditionnel.",
+        "model": "Bonjour madame Martin, je pars en vacances la semaine prochaine. Pourriez-vous arroser mes plantes pendant mon absence ? Je vous laisserais la clé dans la boîte aux lettres. Je serais ravi de vous rendre service à mon tour. Merci beaucoup, Lucas.",
+        "checklist": [
+          "J'ai utilisé au moins trois verbes au conditionnel.",
+          "J'ai vérifié les terminaisons -rais, -rait, -riez.",
+          "J'ai commencé et terminé mon message poliment."
+        ]
+      }
+    },
+    {
+      "unit": "4.3",
+      "dictee": {
+        "titre": "La boîte de Mamie",
+        "texte": "Ma grand-mère garde une vieille boîte en fer. Hier, elle a voulu me la montrer. Dedans, il y avait des photos : elle m'en a donné une. Mes cousins aussi voulaient la voir ; elle leur a promis de la leur ouvrir dimanche. Cette boîte, j'y pense souvent. Je rêve d'en avoir une pareille un jour.",
+        "points": [
+          "**me la montrer** : la remplace la boîte et se place devant l'infinitif.",
+          "**m'en a donné une** : en remplace des photos.",
+          "**leur a promis** : devant un verbe, leur ne prend jamais de s. **la leur ouvrir** : la d'abord, puis leur.",
+          "**j'y pense** : y remplace à cette boîte."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Joue à « Devine ce que c'est » : décris un objet à voix haute en le remplaçant toujours par un pronom (le, la, les, lui, en, y). Puis écris ta devinette.",
+        "model": "Je l'utilise tous les matins. Je le remplis d'eau et j'y mets ma brosse. Ma sœur en a un rose. Je le range dans la salle de bains. Qu'est-ce que c'est ? Mon gobelet à dents !",
+        "checklist": [
+          "J'ai utilisé au moins trois pronoms différents.",
+          "Chaque pronom est placé devant le verbe.",
+          "Leur ne prend jamais de s devant un verbe."
+        ]
+      }
+    },
+    {
+      "unit": "4.4",
+      "dictee": {
+        "titre": "Le chat de la bibliothèque",
+        "texte": "Le chat de la bibliothèque se promène tranquillement entre les rayons. Il saute légèrement sur les tables et observe patiemment les lecteurs. Quand un enfant parle bruyamment, il le fixe longuement. Aussitôt, tout le monde se tait. Le soir, il dort profondément sur le gros dictionnaire. Évidemment, personne n'ose le réveiller.",
+        "points": [
+          "**tranquillement**, **légèrement**, **longuement** : adjectif au féminin + -ment.",
+          "**patiemment**, **évidemment** : -ent devient -emment. **bruyamment** : -ant devient -amment.",
+          "**profondément** : un é devant -ment.",
+          "**Aussitôt** : un accent circonflexe sur le o, comme dans tôt."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Décris en cinq phrases la façon dont un animal se déplace ou se comporte. Utilise au moins quatre adverbes en -ment, dont un en -amment ou en -emment.",
+        "model": "Le chat avance silencieusement dans l'herbe. Il observe patiemment un papillon. Soudain, il bondit brusquement. Le papillon s'envole tranquillement. Évidemment, le chat fait semblant de n'avoir rien raté.",
+        "checklist": [
+          "J'ai utilisé au moins quatre adverbes en -ment.",
+          "J'ai écrit -emment ou -amment avec deux m.",
+          "Mes adverbes sont formés sur l'adjectif au féminin."
+        ]
+      }
+    },
+    {
+      "unit": "4.5",
+      "dictee": {
+        "titre": "Quel voyage !",
+        "texte": "Quand Inès est partie en Italie, elle a fermé sa valise sans cadenas. Quelle erreur ! À l'arrivée, la valise était ouverte. Quant à son appareil photo, il était resté dans l'avion. Je crois qu'elle s'y attendait un peu. Elle s'en souviendra longtemps ! Si elle repart, elle vérifiera tout. Qu'en penses-tu ?",
+        "points": [
+          "**Quand** (à quel moment) et **Quant à** (en ce qui concerne).",
+          "**Quelle erreur** : quelle accompagne le nom erreur. **qu'elle** : on peut dire qu'il.",
+          "**sans** (le contraire de avec) et **s'en** (je m'en souviendrai).",
+          "**s'y attendait** : je m'y attendais. **Qu'en penses-tu** : que penses-tu de cela ?"
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Lis à voix haute ces phrases, puis écris-les en choisissant le bon mot : « (Quel / Quelle / Qu'elle) belle surprise ! Je pense (quelle / qu'elle) viendra. (Quand / Quant) à moi, je pars (sans / s'en) attendre. »",
+        "model": "Quelle belle surprise ! Je pense qu'elle viendra. Quant à moi, je pars sans attendre.",
+        "checklist": [
+          "Quelle devant un nom féminin.",
+          "Qu'elle quand on peut dire qu'il.",
+          "Quant à, pour dire « en ce qui concerne ».",
+          "Sans, le contraire de avec."
+        ]
+      }
+    }
+  ]
+}

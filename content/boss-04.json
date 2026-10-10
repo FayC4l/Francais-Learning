@@ -1,0 +1,86 @@
+{
+  "level": 4,
+  "taunts": {
+    "phase2": [
+      "Si tu continuais comme ça, tu gagnerais… mais je ne te laisserai pas faire !",
+      "Je voudrais que tu échoues. Poliment, bien sûr : avec un s.",
+      "Maintenant, il faudrait écrire. Enfin, il faudra. Enfin… écris !"
+    ],
+    "phase3": [
+      "Dernière manche : mes pronoms vont se mélanger !",
+      "Quant à moi, je ne perds jamais. Et quand je perds, je ne compte pas.",
+      "Je te conseillerais bien d'abandonner. Gentiment. Sans deux l."
+    ],
+    "lose": [
+      "Ha ! Si tu avais révisé, tu aurais gagné. Mais voilà…",
+      "Je serais ravie de te revoir… quand tu sauras ton conditionnel !",
+      "Tu reviendras, évidemment. Avec deux m, j'espère."
+    ]
+  },
+  "questions": [
+    { "unit": "4.1", "type": "mcq", "q": "Nous ___ pour l'Espagne cet été.", "choices": ["partirons", "partirerons", "partiront"], "answer": 0, "explain": "Futur de partir : infinitif + -ons, nous partirons." },
+    { "unit": "4.1", "type": "mcq", "q": "Le facteur ___ à la porte.", "choices": ["frappera", "frapra", "frapperra"], "answer": 0, "explain": "On garde l'infinitif frapper + -a : frappera." },
+    { "unit": "4.1", "type": "mcq", "q": "Tu ___ quand tu seras grand.", "choices": ["comprendras", "comprenderas", "comprendreras"], "answer": 0, "explain": "Comprendre perd son e final : comprendr- + -as." },
+    { "unit": "4.1", "type": "mcq", "q": "Elles ___ les résultats demain.", "choices": ["sauront", "savront", "saveront"], "answer": 0, "explain": "Savoir a un radical irrégulier : saur-." },
+    { "unit": "4.1", "type": "fill", "q": "Demain, tu ___ ta grand-mère.", "hint": "appeler, au futur", "answer": ["appelleras"], "explain": "Appeler double le l au futur : tu appelleras." },
+    { "unit": "4.1", "type": "fill", "q": "Je t'___ une photo.", "hint": "envoyer, au futur", "answer": ["enverrai"], "explain": "Envoyer a pour radical enverr- : j'enverrai." },
+    { "unit": "4.1", "type": "fill", "q": "Les élèves ___ leur bulletin.", "hint": "recevoir, au futur", "answer": ["recevront"], "explain": "Recevoir : radical recevr- + -ont." },
+    { "unit": "4.1", "type": "fill", "q": "Nous ___ du vélo dimanche.", "hint": "faire, au futur", "answer": ["ferons"], "explain": "Faire : radical fer- + -ons." },
+    { "unit": "4.1", "type": "fill", "q": "Vous ___ fiers de vous.", "hint": "être, au futur", "answer": ["serez"], "explain": "Être : radical ser- + -ez." },
+    { "unit": "4.1", "type": "error", "q": "Nous pourons venir demain.", "wrong": 1, "fix": ["pourrons"], "explain": "Pouvoir a deux r au futur : nous pourrons." },
+    { "unit": "4.1", "type": "error", "q": "J'aurrai neuf ans en mars.", "wrong": 0, "fix": ["J'aurai"], "explain": "Avoir au futur n'a qu'un r : j'aurai." },
+    { "unit": "4.1", "type": "error", "q": "Il créra un jeu vidéo.", "wrong": 1, "fix": ["créera"], "explain": "On garde l'infinitif créer en entier : il créera." },
+
+    { "unit": "4.2", "type": "mcq", "q": "Si j'étais un animal, je ___ un aigle.", "choices": ["serais", "serai", "suis"], "answer": 0, "explain": "Si + imparfait, puis conditionnel : je serais." },
+    { "unit": "4.2", "type": "mcq", "q": "Si tu avais le temps, tu ___ m'aider ?", "choices": ["pourrais", "pourras", "peux"], "answer": 0, "explain": "Si + imparfait, puis conditionnel : tu pourrais." },
+    { "unit": "4.2", "type": "mcq", "q": "Si nous ___ des ailes, nous volerions.", "choices": ["avions", "aurions", "aurons"], "answer": 0, "explain": "Après si, l'imparfait : si nous avions." },
+    { "unit": "4.2", "type": "mcq", "q": "À ta place, je ___ ce manteau.", "choices": ["prendrais", "prendrai", "prenais"], "answer": 0, "explain": "« À ta place » : une hypothèse, donc le conditionnel." },
+    { "unit": "4.2", "type": "fill", "q": "Si j'étais toi, je ___ tout de suite.", "hint": "partir, au conditionnel", "answer": ["partirais"], "explain": "Radical partir- + -ais : je partirais." },
+    { "unit": "4.2", "type": "fill", "q": "Vous ___ mieux de vous reposer.", "hint": "faire, au conditionnel", "answer": ["feriez"], "explain": "Faire : radical fer- + -iez, vous feriez." },
+    { "unit": "4.2", "type": "fill", "q": "Si tu travaillais, tu ___.", "hint": "réussir, au conditionnel", "answer": ["réussirais"], "explain": "Si + imparfait, puis conditionnel : tu réussirais." },
+    { "unit": "4.2", "type": "fill", "q": "Mes parents ___ un chien, mais l'appartement est trop petit.", "hint": "vouloir, au conditionnel", "answer": ["voudraient"], "explain": "Un souhait qui ne se réalise pas : ils voudraient." },
+    { "unit": "4.2", "type": "fill", "q": "Regarde cette maison : on ___ un vrai château !", "hint": "dire, au conditionnel", "answer": ["dirait"], "explain": "On dirait : radical dir- + -ait." },
+    { "unit": "4.2", "type": "error", "q": "Si tu m'aurais prévenu, je serais venu.", "wrong": 2, "fix": ["m'avais"], "explain": "Après si, jamais de conditionnel : si tu m'avais prévenu." },
+    { "unit": "4.2", "type": "error", "q": "J'aimerai beaucoup venir, mais je suis malade.", "wrong": 0, "fix": ["J'aimerais"], "explain": "Un souhait qui ne se réalise pas : conditionnel, j'aimerais (nous aimerions)." },
+    { "unit": "4.2", "type": "error", "q": "Si on serait riches, on voyagerait.", "wrong": 2, "fix": ["était"], "explain": "Après si, l'imparfait : si on était riches." },
+
+    { "unit": "4.3", "type": "mcq", "q": "Ma sœur ? Je ___ ai prêté mon pull.", "choices": ["lui", "la", "leur"], "answer": 0, "explain": "Prêter quelque chose à quelqu'un : lui." },
+    { "unit": "4.3", "type": "mcq", "q": "Les clés ? Je ___ ai perdues.", "choices": ["les", "leur", "en"], "answer": 0, "explain": "On perd quelque chose, sans préposition : les." },
+    { "unit": "4.3", "type": "mcq", "q": "Du pain ? Il n'y ___ a plus.", "choices": ["en", "y", "le"], "answer": 0, "explain": "En remplace du pain : il n'y en a plus." },
+    { "unit": "4.3", "type": "mcq", "q": "Ce jeu, je ___ joue tous les soirs.", "choices": ["y", "en", "le"], "answer": 0, "explain": "Jouer à ce jeu : y." },
+    { "unit": "4.3", "type": "fill", "q": "Tes amis ? Tu ___ as invités ?", "hint": "le pronom qui remplace tes amis", "answer": ["les"], "explain": "Inviter quelqu'un, sans préposition : les." },
+    { "unit": "4.3", "type": "fill", "q": "Ma tante ? Je ___ écris une lettre.", "hint": "le pronom qui remplace à ma tante", "answer": ["lui"], "explain": "Écrire à quelqu'un : lui." },
+    { "unit": "4.3", "type": "fill", "q": "De l'eau ? Bois-___ !", "hint": "le pronom qui remplace de l'eau", "answer": ["en"], "explain": "En remplace de l'eau ; à l'impératif, il suit le verbe : bois-en." },
+    { "unit": "4.3", "type": "fill", "q": "Mes voisins ? Je ___ dis bonjour chaque matin.", "hint": "le pronom qui remplace à mes voisins", "answer": ["leur"], "explain": "Dire bonjour à quelqu'un : leur, sans s." },
+    { "unit": "4.3", "type": "fill", "q": "Ce livre ? Prête-___-moi.", "hint": "le pronom qui remplace ce livre", "answer": ["le"], "explain": "À l'impératif affirmatif : prête-le-moi." },
+    { "unit": "4.3", "type": "error", "q": "Mes parents ? Je les ai téléphoné.", "wrong": 3, "fix": ["leur"], "explain": "On téléphone à quelqu'un : leur." },
+    { "unit": "4.3", "type": "error", "q": "Le stade ? Nous en allons ce soir.", "wrong": 3, "fix": ["y"], "explain": "Aller au stade : y, qui remplace un lieu." },
+    { "unit": "4.3", "type": "error", "q": "Mes chats ? Je leur nourris le matin.", "wrong": 3, "fix": ["les"], "explain": "On nourrit quelqu'un, sans préposition : les." },
+
+    { "unit": "4.4", "type": "mcq", "q": "Sous la pluie, il conduit ___.", "choices": ["prudemment", "prudament", "prudement"], "answer": 0, "explain": "Prudent → prudemment." },
+    { "unit": "4.4", "type": "mcq", "q": "Elle a ___ compris.", "choices": ["parfaitement", "parfaitemment", "parfaitment"], "answer": 0, "explain": "Parfait → parfaite → parfaitement." },
+    { "unit": "4.4", "type": "mcq", "q": "Il a agi ___.", "choices": ["intelligemment", "intelligement", "intelligeamment"], "answer": 0, "explain": "Intelligent → intelligemment." },
+    { "unit": "4.4", "type": "mcq", "q": "Nous sommes ___ arrivés.", "choices": ["finalement", "finallement", "finalemment"], "answer": 0, "explain": "Final → finale → finalement." },
+    { "unit": "4.4", "type": "fill", "q": "Ils marchent ___.", "hint": "adverbe formé sur rapide", "answer": ["rapidement"], "explain": "Rapide → rapidement." },
+    { "unit": "4.4", "type": "fill", "q": "Elle parle ___.", "hint": "adverbe formé sur franc", "answer": ["franchement"], "explain": "Franc → franche → franchement." },
+    { "unit": "4.4", "type": "fill", "q": "Il répond ___.", "hint": "adverbe formé sur bref", "answer": ["brièvement"], "explain": "Bref donne un adverbe irrégulier : brièvement." },
+    { "unit": "4.4", "type": "fill", "q": "Il travaille ___.", "hint": "adverbe formé sur sérieux", "answer": ["sérieusement"], "explain": "Sérieux → sérieuse → sérieusement." },
+    { "unit": "4.4", "type": "fill", "q": "Elle a ___ gagné.", "hint": "adverbe formé sur facile", "answer": ["facilement"], "explain": "Facile → facilement." },
+    { "unit": "4.4", "type": "error", "q": "Il parle constament.", "wrong": 2, "fix": ["constamment"], "explain": "Constant → constamment, avec deux m." },
+    { "unit": "4.4", "type": "error", "q": "Elle a gentillement accepté.", "wrong": 2, "fix": ["gentiment"], "explain": "Gentil donne un adverbe irrégulier : gentiment." },
+    { "unit": "4.4", "type": "error", "q": "Je l'ai fait volontairemment.", "wrong": 3, "fix": ["volontairement"], "explain": "Volontaire → volontairement, avec un seul m : seuls les adverbes en -amment et -emment en ont deux." },
+
+    { "unit": "4.5", "type": "mcq", "q": "___ livre préfères-tu ?", "choices": ["Quel", "Qu'elle", "Quelle"], "answer": 0, "explain": "Quel accompagne le nom livre (masculin singulier)." },
+    { "unit": "4.5", "type": "mcq", "q": "Je sais ___ dit la vérité.", "choices": ["qu'elle", "quelle"], "answer": 0, "explain": "Je sais qu'il dit la vérité : que + elle." },
+    { "unit": "4.5", "type": "mcq", "q": "Il est sorti ___ son manteau.", "choices": ["sans", "s'en"], "answer": 0, "explain": "Le contraire de avec : sans." },
+    { "unit": "4.5", "type": "mcq", "q": "Ce jardin est calme : on ___ repose bien.", "choices": ["s'y", "si"], "answer": 0, "explain": "Je m'y repose : se + y, s'y." },
+    { "unit": "4.5", "type": "fill", "q": "___ je serai grand, je serai pilote.", "hint": "quand, quant ou qu'en ?", "answer": ["Quand"], "explain": "Au moment où : quand." },
+    { "unit": "4.5", "type": "fill", "q": "___ à toi, tu restes ici.", "hint": "quand, quant ou qu'en ?", "answer": ["Quant"], "explain": "Quant à = en ce qui concerne." },
+    { "unit": "4.5", "type": "fill", "q": "___ belles fleurs !", "hint": "quel, quels, quelle ou quelles ?", "answer": ["Quelles"], "explain": "Quelles s'accorde avec fleurs : féminin pluriel." },
+    { "unit": "4.5", "type": "fill", "q": "Le magasin ? Je viens ___ sortir.", "hint": "dans ou d'en ?", "answer": ["d'en"], "explain": "Je viens de sortir du magasin : de + en, d'en." },
+    { "unit": "4.5", "type": "fill", "q": "Tu peux venir ___ tu veux.", "hint": "si ou s'y ?", "answer": ["si"], "explain": "Une condition : si." },
+    { "unit": "4.5", "type": "error", "q": "Je pense quelle est partie tôt.", "wrong": 2, "fix": ["qu'elle"], "explain": "Je pense qu'il est parti tôt : que + elle." },
+    { "unit": "4.5", "type": "error", "q": "Il s'en va s'en dire un mot.", "wrong": 3, "fix": ["sans"], "explain": "Le contraire de avec : sans dire un mot." },
+    { "unit": "4.5", "type": "error", "q": "Qu'en il pleut, je reste chez moi.", "wrong": 0, "fix": ["Quand"], "explain": "Au moment où il pleut : quand." }
+  ]
+}
