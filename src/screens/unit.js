@@ -50,7 +50,10 @@ export function unitScreen(view, { uid, tab }) {
       h(
         "div",
         { class: "topbar" },
-        h("button", { type: "button", class: "icon-btn", "aria-label": "Retour au réseau", html: icon("back"), onClick: () => go("map") }),
+        // The stations of level 12 open from the Tower: going back returns there.
+        L === 12
+          ? h("button", { type: "button", class: "icon-btn", "aria-label": "Retour à la tour", html: icon("back"), onClick: () => go("tower") })
+          : h("button", { type: "button", class: "icon-btn", "aria-label": "Retour au réseau", html: icon("back"), onClick: () => go("map") }),
         h("span", { class: "bullet sm" }, L),
         h("span", { class: "topbar-title" }, `Ligne ${L} · ${lvl.title}`),
       ),

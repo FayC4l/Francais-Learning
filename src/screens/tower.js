@@ -1,7 +1,7 @@
 // The Tower of Chikh Fayçal (level 12): 50 floors, a boss on each, 200 hearts, dramatic losses, the DALF C2 at the top.
 // The player only ever sees 5 floors and the final boss: every floor won past the 5th makes a new one appear.
 import { h, icon, sleep, reducedMotion, dialog } from "../ui.js";
-import { EXTRA, unitById } from "../content.js";
+import { EXTRA, unitById, levelById } from "../content.js";
 import { state, tower, recordTowerFloor, startTowerFloor, towerRevealed, towerPrompt, levelUnlocked, checkBadges } from "../store.js";
 import { FLOORS, TOWER_LIVES, TOWER_LEVEL, VISIBLE, floorSpec, visibleTop, surprise, heartBar, BLOCKS } from "../tower.js";
 import { go } from "../router.js";
@@ -56,6 +56,7 @@ export function towerScreen(view) {
       ),
       mentorSays(welcomeLine(t), "", t.lives <= Math.ceil(TOWER_LIVES / 10) ? "warning" : "welcome"),
       h("button", { type: "button", class: "btn btn-primary btn-xl tower-go", onClick: () => startFloor(view, t.floor) }, s.kind === "final" ? "Affronter le boss final" : `Affronter l'étage ${t.floor} : ${floorTitle(s)}`),
+      towerLessons(),
       h("div", { class: "tower-shaft" }, list),
     ),
   );
@@ -184,6 +185,18 @@ function floorIntro(view, n, s) {
   });
   start.focus();
   return () => monster.stop();
+}
+
+/** The five revision stations of level 12, always open from the Tower (they are not on the map). */
+function towerLessons() {
+  const units = levelById(TOWER_LEVEL)?.units || [];
+  if (!units.length) return null;
+  return h(
+    "div",
+    { class: "tower-revise tower-lessons" },
+    h("p", { class: "set-help" }, "Les leçons de la Tour, à réviser quand tu veux :"),
+    h("div", { class: "row" }, units.map((u) => h("button", { type: "button", class: "btn btn-small btn-ghost", "aria-label": `${u.id} ${u.title}`, onClick: () => go("unit", { uid: u.id }) }, `${u.id} · ${u.name}`))),
+  );
 }
 
 /** Before a fight: the lessons of the floor's block, to revise (they open in a normal station page). */

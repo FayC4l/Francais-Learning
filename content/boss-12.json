@@ -1,0 +1,86 @@
+{
+  "level": 12,
+  "taunts": {
+    "phase2": [
+      "Tu as passé la moitié. Je suis presque fier. Presque.",
+      "Je t'ai appris tout ce que je sais. Enfin, presque tout : je garde quelques pièges pour l'occasion.",
+      "Tu conjugues « résoudre » sans d ? Bien. Voyons si tu résous la suite."
+    ],
+    "phase3": [
+      "Dernière ligne droite. C'est souvent là qu'on trébuche sur un accent circonflexe.",
+      "Ne te presse pas. Le temps ne m'appartient pas, mais tes fautes, si.",
+      "Rares sont ceux qui arrivent jusqu'ici. Plus rares encore ceux qui en repartent vainqueurs."
+    ],
+    "lose": [
+      "Ce n'est pas un échec, c'est une révision. Longue, certes.",
+      "La Tour est patiente. Moi aussi. Mais n'abuse pas.",
+      "Tu reviendras. Ils reviennent tous. C'est ce qui fait le charme de l'endroit."
+    ]
+  },
+  "questions": [
+    { "unit": "12.1", "type": "mcq", "q": "Nous ___ la question dès demain.", "choices": ["résoudrons", "résolverons", "résoudons"], "answer": 0, "explain": "Futur de résoudre : nous résoudrons." },
+    { "unit": "12.1", "type": "mcq", "q": "La poudre s'est ___ dans l'eau.", "choices": ["dissoute", "dissolue", "dissout"], "answer": 0, "explain": "Participe de dissoudre : dissous, dissoute (dissolu signifie débauché)." },
+    { "unit": "12.1", "type": "mcq", "q": "Autrefois, ils ___ les vaches à la main.", "choices": ["trayaient", "traiaient", "trayèrent"], "answer": 0, "explain": "Imparfait de traire : ils trayaient (traire n'a pas de passé simple)." },
+    { "unit": "12.1", "type": "mcq", "q": "Il ___ qu'il pleuve demain.", "choices": ["craint", "craind", "crains"], "answer": 0, "explain": "Craindre : il craint, sans d." },
+    { "unit": "12.1", "type": "fill", "q": "Nous ___ nos adversaires sans peine.", "hint": "vaincre, au présent", "answer": ["vainquons"], "explain": "Devant une voyelle, le c de vaincre devient qu : nous vainquons." },
+    { "unit": "12.1", "type": "fill", "q": "Le jour ___ à peine quand nous sommes partis.", "hint": "poindre, à l'imparfait", "answer": ["poignait"], "explain": "Poindre se conjugue comme joindre : il poignait." },
+    { "unit": "12.1", "type": "fill", "q": "Je ___ ce mystère avant ce soir.", "hint": "résoudre, au futur", "answer": ["résoudrai"], "explain": "Futur de résoudre : je résoudrai." },
+    { "unit": "12.1", "type": "fill", "q": "Elle ___ l'hypocrisie.", "hint": "haïr, au présent", "answer": ["hait"], "explain": "Au singulier du présent, haïr perd son tréma : je hais, elle hait." },
+    { "unit": "12.1", "type": "fill", "q": "Ils ___ peu à peu une solide réputation.", "hint": "acquérir, au présent", "answer": ["acquièrent"], "explain": "Acquérir : ils acquièrent, avec un accent grave." },
+    { "unit": "12.1", "type": "error", "q": "Le chef vainquera tous ses rivaux.", "wrong": 2, "fix": ["vaincra"], "explain": "Futur de vaincre : il vaincra." },
+    { "unit": "12.1", "type": "error", "q": "Nous craindons l'orage de ce soir.", "wrong": 1, "fix": ["craignons"], "explain": "Craindre : nous craignons, avec gn." },
+    { "unit": "12.1", "type": "error", "q": "L'eau bouille dans la marmite.", "wrong": 1, "fix": ["bout"], "explain": "Bouillir au présent : l'eau bout." },
+
+    { "unit": "12.2", "type": "mcq", "q": "Quelle orthographe est correcte ?", "choices": ["un acompte", "un accompte", "un acomte"], "answer": 0, "explain": "Exception : acompte, avec un seul c." },
+    { "unit": "12.2", "type": "mcq", "q": "Quelle orthographe est correcte ?", "choices": ["innombrable", "inombrable", "innombrabble"], "answer": 0, "explain": "Préfixe in- devant n : deux n." },
+    { "unit": "12.2", "type": "mcq", "q": "Ce fruit est bien ___.", "choices": ["mûr", "mur", "mûre"], "answer": 0, "explain": "Mûr (prêt à manger) prend un accent ; fruit est masculin." },
+    { "unit": "12.2", "type": "mcq", "q": "Quelle orthographe est correcte ?", "choices": ["un atelier", "un attelier", "un atellier"], "answer": 0, "explain": "Exception : atelier, avec un seul t." },
+    { "unit": "12.2", "type": "fill", "q": "Ces deux droites sont ___.", "hint": "qui ne se rencontrent jamais", "answer": ["parallèles"], "explain": "Parallèle : deux l au milieu, un seul à la fin." },
+    { "unit": "12.2", "type": "fill", "q": "Il a reçu une ___ correcte pour ce travail.", "hint": "un salaire (un nom en -tion)", "answer": ["rémunération"], "explain": "Rémunération : m puis n (pensez à rémunérer)." },
+    { "unit": "12.2", "type": "fill", "q": "Ce comportement est ___.", "hint": "contraire à la raison (préfixe ir-)", "answer": ["irrationnel"], "explain": "Deux r (ir- devant r) et deux n (rationnel)." },
+    { "unit": "12.2", "type": "fill", "q": "Il a contracté une ___ grave.", "hint": "une infection des poumons", "answer": ["pneumonie"], "explain": "Pneumonie : un p muet au début." },
+    { "unit": "12.2", "type": "fill", "q": "Ne reste pas sous la pluie, mets-toi à l'___.", "hint": "un lieu protégé (un seul b)", "answer": ["abri"], "explain": "Abri, abriter : un seul b." },
+    { "unit": "12.2", "type": "error", "q": "Il a versé un accompte de cent euros.", "wrong": 4, "fix": ["acompte"], "explain": "Exception : acompte, avec un seul c." },
+    { "unit": "12.2", "type": "error", "q": "Ce fut une résurection inattendue.", "wrong": 3, "fix": ["résurrection"], "explain": "Résurrection : deux r après le u." },
+    { "unit": "12.2", "type": "error", "q": "Il est resté abassourdi par la nouvelle.", "wrong": 3, "fix": ["abasourdi"], "explain": "Abasourdi : un seul s." },
+
+    { "unit": "12.3", "type": "mcq", "q": "Les deux heures que la réunion a ___ m'ont paru longues.", "choices": ["duré", "durées", "durés"], "answer": 0, "explain": "Durer n'a pas de COD : que est complément de temps, pas d'accord." },
+    { "unit": "12.3", "type": "mcq", "q": "Une foule de curieux s'est ___ devant la vitrine.", "choices": ["massée", "massé", "massés"], "answer": 0, "explain": "Avec s'est au singulier, l'accord se fait avec foule." },
+    { "unit": "12.3", "type": "mcq", "q": "Ni Paul ni Léa ne ___ venus.", "choices": ["sont", "est", "soient"], "answer": 0, "explain": "Ni… ni : verbe au pluriel en général." },
+    { "unit": "12.3", "type": "mcq", "q": "Elles se sont ___ de leur erreur.", "choices": ["aperçues", "aperçu", "aperçus"], "answer": 0, "explain": "S'apercevoir de : verbe essentiellement pronominal, accord avec le sujet." },
+    { "unit": "12.3", "type": "fill", "q": "Elles se sont ___ des secrets.", "hint": "confier, au participe passé (le COD est après)", "answer": ["confié"], "explain": "Le COD (des secrets) est après : pas d'accord." },
+    { "unit": "12.3", "type": "fill", "q": "Les histoires qu'il nous a ___ étaient drôles.", "hint": "raconter, au participe passé", "answer": ["racontées"], "explain": "COD placé avant (que = les histoires) : accord." },
+    { "unit": "12.3", "type": "fill", "q": "Les enfants qu'on a ___ jouer dans le parc sont rentrés.", "hint": "voir, au participe passé (ce sont eux qui jouent)", "answer": ["vus"], "explain": "Le COD fait l'action de l'infinitif : accord." },
+    { "unit": "12.3", "type": "fill", "q": "Moins de deux semaines ___ suffi.", "hint": "avoir, au présent (auxiliaire)", "answer": ["ont"], "explain": "Moins de deux : verbe au pluriel." },
+    { "unit": "12.3", "type": "fill", "q": "Que de soucis cette affaire m'a ___ !", "hint": "valoir, au participe passé (sens figuré : causer)", "answer": ["valus"], "explain": "Au sens figuré, valoir a un COD placé avant : accord." },
+    { "unit": "12.3", "type": "error", "q": "Ils se sont téléphonés hier soir.", "wrong": 3, "fix": ["téléphoné"], "explain": "Téléphoner à quelqu'un : se est COI, pas d'accord." },
+    { "unit": "12.3", "type": "error", "q": "Des fraises, j'en ai cueillies trois kilos.", "wrong": 4, "fix": ["cueilli"], "explain": "Avec en, le participe reste invariable." },
+    { "unit": "12.3", "type": "error", "q": "Plus d'un spectateur ont quitté la salle.", "wrong": 3, "fix": ["a"], "explain": "Plus d'un : verbe au singulier." },
+
+    { "unit": "12.4", "type": "mcq", "q": "La consigne demande d'écrire au maire au nom des habitants : quel genre adopter ?", "choices": ["une lettre formelle", "un poème", "une dissertation"], "answer": 0, "explain": "Le genre et le destinataire font partie de la consigne." },
+    { "unit": "12.4", "type": "mcq", "q": "Quelle formule est interdite dans une synthèse ?", "choices": ["Je pense que", "Selon les auteurs", "Les documents s'accordent sur"], "answer": 0, "explain": "Pas d'avis personnel dans une synthèse." },
+    { "unit": "12.4", "type": "mcq", "q": "Quelle formule introduit une problématique ?", "choices": ["Dans quelle mesure peut-on affirmer que…", "Voilà le sujet :", "Je vais parler de…"], "answer": 0, "explain": "Une vraie question, formulée avec élégance." },
+    { "unit": "12.4", "type": "mcq", "q": "Que doit faire la conclusion d'un essai ?", "choices": ["Dresser un bilan et ouvrir une perspective", "Ajouter un nouvel argument", "Recopier l'introduction"], "answer": 0, "explain": "Bilan, puis ouverture." },
+    { "unit": "12.4", "type": "fill", "q": "Le premier document ___ une idée que le second contredit.", "hint": "défendre, au présent", "answer": ["défend", "soutient"], "explain": "Défendre au présent : il défend." },
+    { "unit": "12.4", "type": "fill", "q": "Tous les auteurs ___ que la situation est préoccupante.", "hint": "reconnaître, au présent", "answer": ["reconnaissent"], "explain": "Sujet pluriel : ils reconnaissent." },
+    { "unit": "12.4", "type": "fill", "q": "Dans l'introduction, on ___ le plan.", "hint": "annoncer, au présent", "answer": ["annonce"], "explain": "L'introduction annonce le plan." },
+    { "unit": "12.4", "type": "fill", "q": "Une synthèse respecte le nombre de ___ imposé.", "hint": "un nom au pluriel", "answer": ["mots"], "explain": "Un texte trop long ou trop court est pénalisé." },
+    { "unit": "12.4", "type": "fill", "q": "Pour conclure, il ___ de dresser un bilan.", "hint": "importer, au présent", "answer": ["importe"], "explain": "Il importe de : formule soutenue." },
+    { "unit": "12.4", "type": "error", "q": "Les documents divergent sur ce point, mais se rejoint sur l'essentiel.", "wrong": 8, "fix": ["rejoignent"], "explain": "Sujet pluriel (les documents) : ils se rejoignent." },
+    { "unit": "12.4", "type": "error", "q": "Le second auteur nuances cette idée.", "wrong": 3, "fix": ["nuance"], "explain": "Sujet singulier : il nuance." },
+    { "unit": "12.4", "type": "error", "q": "Les idées que les auteurs ont développé sont proches.", "wrong": 6, "fix": ["développées"], "explain": "COD placé avant (que = les idées) : accord." },
+
+    { "unit": "12.5", "type": "mcq", "q": "Quel verbe remplace « mettre » dans « mettre une veste » ?", "choices": ["enfiler", "commettre", "prononcer"], "answer": 0, "explain": "On enfile une veste." },
+    { "unit": "12.5", "type": "mcq", "q": "Quel verbe remplace « avoir » dans « avoir un poste important » ?", "choices": ["occuper", "effectuer", "formuler"], "answer": 0, "explain": "On occupe un poste." },
+    { "unit": "12.5", "type": "mcq", "q": "Quelle phrase évite la lourdeur ?", "choices": ["Son départ a surpris tout le monde.", "Le fait qu'il soit parti, ça a surpris tout le monde.", "Il y a son départ qui a surpris tout le monde."], "answer": 0, "explain": "La nominalisation (son départ) allège la phrase." },
+    { "unit": "12.5", "type": "mcq", "q": "Quelle phrase contient une mise en relief ?", "choices": ["Ce sont les détails qui font la différence.", "Les détails font la différence.", "La différence tient aux détails."], "answer": 0, "explain": "L'extraction ce sont… qui met en relief." },
+    { "unit": "12.5", "type": "fill", "q": "Il a ___ une longue lettre à son député.", "hint": "faire → un verbe précis, au participe passé", "answer": ["rédigé", "écrit", "adressé"], "explain": "On rédige une lettre." },
+    { "unit": "12.5", "type": "fill", "q": "Cette entreprise ___ trois cents salariés.", "hint": "avoir → un verbe précis, au présent", "answer": ["emploie", "compte"], "explain": "Une entreprise emploie des salariés." },
+    { "unit": "12.5", "type": "fill", "q": "Elle a ___ une remarque judicieuse.", "hint": "dire → un verbe précis, au participe passé", "answer": ["formulé", "émis"], "explain": "On formule une remarque." },
+    { "unit": "12.5", "type": "fill", "q": "Le ___ des températures inquiète les scientifiques.", "hint": "nominalise le verbe réchauffer", "answer": ["réchauffement"], "explain": "Réchauffer → le réchauffement." },
+    { "unit": "12.5", "type": "fill", "q": "___ sont les candidats qui obtiennent la note maximale.", "hint": "peu nombreux, en tête de phrase", "answer": ["Rares"], "explain": "Rares sont… : une inversion élégante." },
+    { "unit": "12.5", "type": "error", "q": "Ce sont la patience et le travail qui comptes.", "wrong": 8, "fix": ["comptent"], "explain": "Qui reprend la patience et le travail : pluriel." },
+    { "unit": "12.5", "type": "error", "q": "Nombreux sont les élèves qui le pense.", "wrong": 6, "fix": ["pensent"], "explain": "Qui reprend les élèves : pluriel." },
+    { "unit": "12.5", "type": "error", "q": "Il a formuller une objection.", "wrong": 2, "fix": ["formulé"], "explain": "Participe passé de formuler, avec un seul l." }
+  ]
+}

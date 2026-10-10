@@ -42,7 +42,11 @@ await page.evaluate((u) => {
 }, uid);
 await page.reload({ waitUntil: "domcontentloaded" });
 await page.waitForSelector(".map");
-await page.click(`.station-btn[aria-label^="${uid} "]`);
+if (uid.startsWith("12.")) {
+  // Level 12 is the Tower: its stations open from the Tower screen, not from the map.
+  await page.click(".tower-card");
+  await page.click(`.tower-lessons button[aria-label^="${uid} "]`);
+} else await page.click(`.station-btn[aria-label^="${uid} "]`);
 await page.waitForSelector(".unit-body");
 await shot("lesson");
 await page.click(".step[data-step=dictee]");

@@ -1,0 +1,450 @@
+{
+  "id": 12,
+  "cefr": "C2",
+  "title": "La Tour de Chikh Fayçal",
+  "sub": "Révisions C2 : conjugaison, orthographe, accords, synthèse, style",
+  "intro": "Le sommet approche. Ces cinq stations rassemblent ce qu'un candidat au DALF C2 doit maîtriser : les verbes les plus rares, l'orthographe d'usage, les accords experts, la méthode de la synthèse et de l'essai, et l'élégance du style. Révise-les avant chaque assaut de la Tour.",
+  "boss": {
+    "name": "Chikh Fayçal, maître de la Tour",
+    "taunt": "Cinquante étages, et au sommet, moi. Je ne mords pas. Je corrige, ce qui est pire.",
+    "defeat": "Bien. Très bien, même. Je n'ai plus rien à t'apprendre… sauf l'humilité, mais tu l'apprendras seul."
+  },
+  "units": [
+    {
+      "id": "12.1",
+      "name": "Les verbes impossibles",
+      "title": "Conjugaison de haut vol : verbes rares et défectifs",
+      "goal": "Conjuguer sans faute les verbes rares (résoudre, vaincre, acquérir, bouillir…) et reconnaître les verbes défectifs.",
+      "lesson": [
+        { "type": "p", "text": "Au sommet de la Tour, on attend de toi une conjugaison sans faille, même pour les verbes que l'on n'emploie presque jamais. Voici les plus redoutables." },
+        { "type": "table", "head": ["Verbe", "Présent", "Passé simple", "Participe"], "rows": [["résoudre", "je résous, il résout, nous résolvons", "il résolut", "résolu"], ["coudre", "je couds, il coud, nous cousons", "il cousit", "cousu"], ["vaincre", "je vaincs, il vainc, nous vainquons", "il vainquit", "vaincu"], ["acquérir", "j'acquiers, nous acquérons, ils acquièrent", "il acquit", "acquis"], ["haïr", "je hais, nous haïssons", "il haït", "haï"], ["bouillir", "je bous, nous bouillons", "il bouillit", "bouilli"], ["mouvoir", "je meus, nous mouvons, ils meuvent", "il mut", "mû"]] },
+        { "type": "rule", "title": "Les verbes en -soudre et en -indre", "text": "Les verbes en -soudre perdent le d au présent : [[je résous]], [[il résout]] ; mais coudre et moudre le gardent : [[je couds]], [[il moud]]. Participes : [[résolu]], mais [[absous, absoute]] et [[dissous, dissoute]]. Les verbes en -indre perdent aussi le d : [[je peins]], [[il craint]] ; au pluriel apparaît le son « gn » : [[nous peignons]], [[ils craignent]], et à l'imparfait [[nous peignions]], avec un i après gn." },
+        { "type": "rule", "title": "Les verbes défectifs", "text": "Il leur manque des temps ou des personnes. [[falloir]] et [[pleuvoir]] ne se conjuguent qu'à la troisième personne ; [[clore]] n'a ni imparfait ni passé simple ; [[gésir]] ne s'emploie guère qu'au présent et à l'imparfait ([[ci-gît]]) ; [[choir]], [[échoir]], [[frire]] et [[traire]] (sans passé simple) sont incomplets." },
+        { "type": "rule", "title": "Les futurs à deux r", "text": "[[je courrai]], [[je mourrai]], [[j'acquerrai]], [[je verrai]], [[j'enverrai]], [[je pourrai]] : on prononce parfois les deux r. Mais [[je cueillerai]], comme un verbe en -er." },
+        { "type": "examples", "items": [
+          { "ex": "Ce problème, je le **résous** en deux minutes.", "note": "-soudre : pas de d" },
+          { "ex": "Il **vainc** tous ses adversaires.", "note": "vaincre : c final, sans t" },
+          { "ex": "Nous **acquérons** de l'expérience.", "note": "accent aigu au pluriel" },
+          { "ex": "L'eau **bout** à cent degrés.", "note": "bouillir au présent" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "je ~~résouds~~", "ok": "je **résous**", "why": "Les verbes en -soudre perdent le d." },
+          { "ko": "il ~~vaint~~", "ok": "il **vainc**", "why": "Vaincre garde son c et ne prend pas de t." },
+          { "ko": "j'~~acquérirai~~", "ok": "j'**acquerrai**", "why": "Futur d'acquérir : deux r, sans accent." },
+          { "ko": "il a ~~acquéri~~", "ok": "il a **acquis**", "why": "Participe passé d'acquérir : acquis." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Pense aux familles : acquérir se conjugue comme conquérir et requérir ; résoudre comme absoudre et dissoudre ; craindre comme plaindre et contraindre. Apprendre un modèle, c'est en apprendre dix." },
+        { "type": "fun", "text": "Le sais-tu ? « Ci-gît », gravé sur les tombes, vient du verbe gésir (être couché). C'est l'une des rares formes de ce verbe encore vivantes. Et le vieux verbe choir survit dans « laisser choir »… et dans le nom « chute »." }
+      ],
+      "vocab": [
+        { "mot": "absoudre", "def": "Pardonner une faute ; déclarer non coupable.", "ex": "Le jury a refusé d'absoudre l'accusé.", "alt": [] },
+        { "mot": "dissoudre", "def": "Faire fondre une substance dans un liquide ; ou mettre fin à une assemblée.", "ex": "Le sucre se dissout lentement dans le thé froid.", "alt": [] },
+        { "mot": "éclore", "def": "S'ouvrir, en parlant d'un œuf ou d'une fleur.", "ex": "Les roses vont bientôt éclore.", "alt": [] },
+        { "mot": "choir", "def": "Tomber (mot ancien, surtout dans « laisser … »).", "ex": "Il laissa choir son mouchoir.", "alt": [] },
+        { "mot": "gésir", "def": "Être couché, étendu sans mouvement (verbe défectif).", "ex": "Le verbe gésir ne survit plus que dans quelques formes, comme « ci-gît ».", "alt": [] },
+        { "mot": "clore", "def": "Fermer, terminer (verbe défectif).", "ex": "Le président va clore la séance.", "alt": [] },
+        { "mot": "traire", "def": "Tirer le lait d'une vache, d'une chèvre ou d'une brebis.", "ex": "Le fermier se lève tôt pour traire les vaches.", "alt": [] },
+        { "mot": "vêtir", "def": "Habiller, couvrir d'habits.", "ex": "Il faut nourrir et vêtir les sinistrés.", "alt": [] },
+        { "mot": "mouvoir", "def": "Mettre en mouvement (verbe rare ; participe : mû).", "ex": "Le blessé avait du mal à se mouvoir.", "alt": [] },
+        { "mot": "conquérir", "def": "S'emparer d'un territoire par les armes ; ou gagner l'affection de quelqu'un.", "ex": "Elle a su conquérir le public dès la première chanson.", "alt": [] },
+        { "mot": "vaincre", "def": "Remporter la victoire sur un adversaire ou un obstacle.", "ex": "Il faut vaincre sa peur pour avancer.", "alt": [] },
+        { "mot": "ceindre", "def": "Entourer, mettre autour du corps ou de la tête.", "ex": "Le maire doit ceindre son écharpe tricolore.", "alt": [] },
+        { "mot": "astreindre", "def": "Obliger quelqu'un à une chose pénible ou régulière.", "ex": "Il s'astreint à courir chaque matin.", "alt": [] },
+        { "mot": "enfreindre", "def": "Ne pas respecter une règle, une loi.", "ex": "Il a enfreint le règlement intérieur.", "alt": [] },
+        { "mot": "poindre", "def": "Commencer à paraître, en parlant du jour.", "ex": "Le jour commençait à poindre.", "alt": [] },
+        { "mot": "échoir", "def": "Revenir à quelqu'un par le sort ou l'héritage ; arriver à échéance.", "ex": "Le loyer échoit le premier jour du mois.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Je résous toujours ce genre de problème.", "indice": "Un esprit logique", "trap": ["résouds"], "alt": [] },
+        { "phrase": "Il vainc ses peurs une à une.", "indice": "Un courage qui grandit", "trap": ["vaint"], "alt": [] },
+        { "phrase": "Nous acquérons de l'expérience chaque jour.", "indice": "Un apprentissage continu", "trap": ["acquèrons"], "alt": [] },
+        { "phrase": "L'eau bout dans la casserole depuis dix minutes.", "indice": "Les pâtes vont bientôt cuire", "trap": ["bouille"], "alt": [] },
+        { "phrase": "Je courrai le marathon de Lyon au printemps.", "indice": "Un défi sportif", "trap": ["courirai"], "alt": [] },
+        { "phrase": "Le fermier trayait ses vaches chaque matin.", "indice": "Une routine à la ferme", "trap": ["traiait"], "alt": [] },
+        { "phrase": "Ils craignent que l'orage n'éclate ce soir.", "indice": "Une météo menaçante", "trap": ["craindent"], "alt": [] },
+        { "phrase": "Elle coud un bouton sur sa veste.", "indice": "Une petite réparation", "trap": ["coue"], "alt": [] },
+        { "phrase": "Le sucre s'est dissous dans le café.", "indice": "Une boisson sucrée", "trap": ["dissout"], "alt": [] },
+        { "phrase": "Nous peignions la clôture quand il a plu.", "indice": "Des travaux interrompus", "trap": ["peignons"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Je ___ ce problème en deux minutes.", "choices": ["résous", "résouds", "résout"], "answer": 0, "explain": "Les verbes en -soudre perdent le d : je résous." },
+        { "type": "mcq", "q": "Il ___ toutes les difficultés.", "choices": ["vainc", "vaint", "vainct"], "answer": 0, "explain": "Vaincre : il vainc, sans t." },
+        { "type": "mcq", "q": "Le participe passé d'« acquérir » est…", "choices": ["acquis", "acquéri", "acquit"], "answer": 0, "explain": "Acquis ; à ne pas confondre avec le nom acquit (par acquit de conscience)." },
+        { "type": "mcq", "q": "Demain, je ___ jusqu'au parc.", "choices": ["courrai", "courirai", "courerai"], "answer": 0, "explain": "Futur de courir : je courrai, avec deux r." },
+        { "type": "mcq", "q": "Ils ___ l'injustice.", "choices": ["haïssent", "haient", "hayent"], "answer": 0, "explain": "Haïr : ils haïssent, avec un tréma." },
+        { "type": "fill", "q": "Ce pull, je le ___ moi-même.", "hint": "coudre, au présent", "answer": ["couds"], "explain": "Coudre garde son d : je couds." },
+        { "type": "fill", "q": "L'eau ___ à cent degrés.", "hint": "bouillir, au présent", "answer": ["bout"], "explain": "Bouillir : je bous, il bout." },
+        { "type": "fill", "q": "Le chat ___ l'orage.", "hint": "craindre, au présent", "answer": ["craint"], "explain": "Craindre : il craint, sans d." },
+        { "type": "fill", "q": "Hier, nous ___ les volets quand il s'est mis à pleuvoir.", "hint": "peindre, à l'imparfait", "answer": ["peignions"], "explain": "Imparfait : nous peignions, avec un i après gn." },
+        { "type": "fill", "q": "J'___ une maison à la campagne l'an prochain.", "hint": "acquérir, au futur", "answer": ["acquerrai"], "explain": "Futur d'acquérir : j'acquerrai, deux r et sans accent." },
+        { "type": "fill", "q": "Le roi ___ ses ennemis à Bouvines.", "hint": "vaincre, au passé simple", "answer": ["vainquit"], "explain": "Passé simple de vaincre : il vainquit." },
+        { "type": "fill", "q": "Le chirurgien a ___ la plaie.", "hint": "recoudre, au participe passé", "answer": ["recousu"], "explain": "Coudre, recoudre : cousu, recousu." },
+        { "type": "error", "q": "Je résouds enfin cette énigme.", "wrong": 1, "fix": ["résous"], "explain": "Les verbes en -soudre perdent le d : je résous." },
+        { "type": "error", "q": "Il a acquéri une grande sagesse.", "wrong": 2, "fix": ["acquis"], "explain": "Participe passé d'acquérir : acquis." },
+        { "type": "error", "q": "Le champion vaint tous ses adversaires.", "wrong": 2, "fix": ["vainc"], "explain": "Vaincre : il vainc, sans t." },
+        { "type": "error", "q": "Je mourirai de rire si tu racontes cette histoire.", "wrong": 1, "fix": ["mourrai"], "explain": "Futur de mourir : je mourrai, avec deux r." }
+      ],
+      "reading": {
+        "title": "Le championnat des verbes impossibles",
+        "text": "Chaque printemps, le lycée Jules-Ferry organise un concours un peu particulier : le championnat des verbes impossibles. Le principe est simple. Un professeur tire au sort un verbe rare et un temps, et les candidats doivent écrire la conjugaison complète en moins d'une minute. Cette année, la finale opposait Malik, élève de terminale, à Mme Lefèvre, la documentaliste, réputée imbattable. Le premier tirage fut clément : « acquérir, au présent ». Tous deux écrivirent sans hésiter j'acquiers, nous acquérons, ils acquièrent. Le deuxième fut plus cruel : « résoudre, au passé simple ». Malik hésita un instant, puis écrivit je résolus, tu résolus, il résolut, tandis que Mme Lefèvre, sûre d'elle, avait déjà terminé. Vint enfin le tirage décisif : « gésir, au passé simple ». Un murmure parcourut la salle. Malik leva la main : « Monsieur, ce verbe n'a pas de passé simple. C'est un verbe défectif. » Le professeur sourit : c'était précisément le piège. Mme Lefèvre, elle, avait inventé une conjugaison complète, fort élégante d'ailleurs, mais parfaitement imaginaire. Malik remporta le trophée, un vieux livre de conjugaison dédicacé par toute l'équipe des professeurs. Mme Lefèvre applaudit la première, avant de réclamer une revanche pour l'année suivante. Dans son petit discours, Malik avoua qu'il n'avait jamais appris ce verbe par cœur : il se souvenait simplement de l'épitaphe « ci-gît », lue un jour sur une tombe lors d'une sortie scolaire. Comme quoi, conclut-il sous les rires, la grammaire mène à tout, même au cimetière.",
+        "questions": [
+          { "q": "En quoi consiste le concours ?", "choices": ["Conjuguer un verbe rare à un temps tiré au sort, en moins d'une minute", "Écrire une dictée", "Inventer des verbes", "Réciter des poèmes"], "answer": 0, "explain": "Un verbe rare, un temps, une minute." },
+          { "q": "Qui affronte Malik en finale ?", "choices": ["La documentaliste", "Le proviseur", "Un élève de seconde", "Le professeur de latin"], "answer": 0, "explain": "Mme Lefèvre, la documentaliste." },
+          { "q": "Pourquoi le dernier tirage est-il un piège ?", "choices": ["Gésir n'a pas de passé simple", "Gésir est un verbe du premier groupe", "Le passé simple n'existe plus", "Le verbe est inventé"], "answer": 0, "explain": "C'est un verbe défectif." },
+          { "q": "Qu'a fait Mme Lefèvre au dernier tirage ?", "choices": ["Elle a inventé une conjugaison imaginaire", "Elle a abandonné", "Elle a trouvé la bonne réponse", "Elle a triché"], "answer": 0, "explain": "Une conjugaison « fort élégante, mais parfaitement imaginaire »." },
+          { "q": "Comment Malik connaissait-il le verbe gésir ?", "choices": ["Grâce à l'épitaphe « ci-gît » vue sur une tombe", "Il l'avait appris par cœur", "Sa mère le lui avait appris", "Il l'avait lu dans un roman"], "answer": 0, "explain": "Il se souvenait de l'épitaphe lue lors d'une sortie." },
+          { "q": "Quel est le ton de la dernière phrase ?", "choices": ["Humoristique", "Tragique", "Polémique", "Solennel"], "answer": 0, "explain": "La grammaire mène à tout, même au cimetière : un trait d'humour." }
+        ]
+      }
+    },
+    {
+      "id": "12.2",
+      "name": "Les mots qui piègent",
+      "title": "L'orthographe d'usage : doubles consonnes, accents, mots difficiles",
+      "goal": "Écrire sans faute les mots réputés difficiles et s'appuyer sur les familles de mots… en connaissant leurs pièges.",
+      "lesson": [
+        { "type": "p", "text": "L'orthographe d'usage, c'est celle des mots eux-mêmes, hors de toute règle d'accord. Elle s'apprend par la lecture, par les familles de mots… et par quelques régularités utiles." },
+        { "type": "rule", "title": "Les doubles consonnes après a-", "text": "Au début d'un mot, après a-, la consonne est souvent doublée : [[accord]], [[affaire]], [[appel]], [[attente]], [[arrêt]]. Exceptions à retenir : [[acompte]], [[acolyte]], [[afin]], [[apercevoir]], [[apaiser]], [[aplatir]], [[atelier]], [[atout]], [[atroce]]." },
+        { "type": "rule", "title": "Les préfixes in-, im-, il-, ir-", "text": "Devant un mot qui commence par m, l, r ou n, la consonne du préfixe se double : [[immobile]], [[illégal]], [[irréel]], [[innombrable]]. Devant une voyelle, elle reste simple : [[inutile]], [[inégal]]." },
+        { "type": "table", "head": ["Une seule consonne", "Deux consonnes"], "rows": [["honorer, honorable", "honneur"], ["chariot", "charrette"], ["persifler", "siffler"], ["imbécile", "imbécillité"], ["consonance", "consonne"], ["attraper", "trappe"], ["combatif", "combattre"], ["bonhomie", "bonhomme"]] },
+        { "type": "rule", "title": "Les accents qui changent le sens", "text": "[[sur]] / [[sûr]], [[du]] / [[dû]], [[mur]] / [[mûr]], [[jeune]] / [[jeûne]], [[tache]] / [[tâche]], [[cote]] / [[côte]]. L'accent circonflexe rappelle souvent un s disparu, qui réapparaît dans la famille : [[forêt]] (forestier), [[hôpital]] (hospitalier), [[fête]] (festif)." },
+        { "type": "examples", "items": [
+          { "ex": "Il a **aperçu** un renard.", "note": "un seul p : exception" },
+          { "ex": "En l'**occurrence**, il a raison.", "note": "deux c, deux r" },
+          { "ex": "Le **rythme** de la musique s'accélère.", "note": "un y et un h" },
+          { "ex": "Il est **sûr** de lui.", "note": "sûr = certain : accent" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "~~appercevoir~~", "ok": "**apercevoir**", "why": "Exception : un seul p." },
+          { "ko": "le ~~language~~", "ok": "le **langage**", "why": "Influence de l'anglais : en français, langage s'écrit sans u." },
+          { "ko": "une ~~connection~~", "ok": "une **connexion**", "why": "En français, connexion s'écrit avec un x." },
+          { "ko": "un ~~dilemne~~", "ok": "un **dilemme**", "why": "Deux m, et pas de n." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Pour une consonne double, cherche dans la famille du mot… mais méfie-toi des familles désunies : honneur / honorer, charrette / chariot. Dans le doute, le dictionnaire reste ton meilleur allié." },
+        { "type": "fun", "text": "Le sais-tu ? Les rectifications de 1990 ont réconcilié certaines familles : on peut écrire « charriot » avec deux r, comme charrette, et « imbécilité » avec un seul l, comme imbécile. Les deux orthographes sont acceptées." }
+      ],
+      "vocab": [
+        { "mot": "occurrence", "def": "Fait de se produire ; cas qui se présente (en l'… : dans ce cas précis).", "ex": "En l'occurrence, il a eu raison.", "alt": [] },
+        { "mot": "connexion", "def": "Liaison entre deux choses ; accès à un réseau.", "ex": "La connexion au réseau est coupée.", "alt": [] },
+        { "mot": "parallèle", "def": "Se dit de lignes qui ne se rencontrent jamais ; ou comparaison.", "ex": "Ces deux rues sont parallèles.", "alt": [] },
+        { "mot": "abasourdi", "def": "Très étonné, stupéfait.", "ex": "Il est resté abasourdi par la nouvelle.", "alt": [] },
+        { "mot": "ballottage", "def": "Situation d'une élection où personne n'a obtenu la majorité au premier tour.", "ex": "Les deux candidats sont en ballottage.", "alt": [] },
+        { "mot": "résurrection", "def": "Retour de la mort à la vie ; renouveau.", "ex": "Ce festival marque la résurrection du quartier.", "alt": [] },
+        { "mot": "rémunération", "def": "Somme d'argent reçue pour un travail.", "ex": "La rémunération de ce stage est modeste.", "alt": [] },
+        { "mot": "abysse", "def": "Fosse très profonde au fond de l'océan.", "ex": "Des poissons étranges vivent dans les abysses.", "alt": [] },
+        { "mot": "rythme", "def": "Retour régulier de sons, de mouvements ou d'événements.", "ex": "Il tape le rythme avec son pied.", "alt": [] },
+        { "mot": "pneumonie", "def": "Infection des poumons.", "ex": "Il a attrapé une pneumonie cet hiver.", "alt": [] },
+        { "mot": "accueil", "def": "Manière de recevoir quelqu'un ; lieu où l'on reçoit le public.", "ex": "Merci pour votre accueil chaleureux.", "alt": [] },
+        { "mot": "imbécillité", "def": "Grande sottise ; manque d'intelligence.", "ex": "Cette remarque est d'une imbécillité rare.", "alt": ["imbécilité"] },
+        { "mot": "chariot", "def": "Petit véhicule à roues pour transporter des charges.", "ex": "Pousse le chariot jusqu'aux caisses.", "alt": ["charriot"] },
+        { "mot": "aggraver", "def": "Rendre plus sérieux, empirer.", "ex": "Le froid a aggravé sa toux.", "alt": [] },
+        { "mot": "honorer", "def": "Rendre hommage à quelqu'un ; respecter un engagement.", "ex": "Il a honoré sa promesse.", "alt": [] },
+        { "mot": "exorbitant", "def": "Excessif, beaucoup trop élevé (un prix, une demande).", "ex": "Le loyer de cet appartement est exorbitant.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "J'ai aperçu un renard au fond du jardin.", "indice": "Une rencontre furtive", "trap": ["apperçu"], "alt": [] },
+        { "phrase": "Cette occurrence du mot est très rare.", "indice": "Un emploi exceptionnel", "trap": ["occurence"], "alt": [] },
+        { "phrase": "Le rythme de cette chanson est entraînant.", "indice": "Une musique qui fait danser", "trap": ["rhytme"], "alt": [] },
+        { "phrase": "La connexion au réseau est très lente.", "indice": "Un internet capricieux", "trap": ["connection"], "alt": [] },
+        { "phrase": "Il est sûr de gagner la course demain.", "indice": "Un coureur confiant", "trap": ["sur"], "alt": [] },
+        { "phrase": "Ils ont attrapé le chat dans le grenier.", "indice": "Une capture", "trap": ["attrappé"], "alt": [] },
+        { "phrase": "Mon père a honoré sa promesse de venir.", "indice": "Un engagement tenu", "trap": ["honnoré"], "alt": [] },
+        { "phrase": "Les deux routes sont parallèles jusqu'au village.", "indice": "Deux chemins côte à côte", "trap": ["paralèles"], "alt": [] },
+        { "phrase": "Le froid a aggravé la toux de mon frère.", "indice": "Un rhume qui empire", "trap": ["agravé"], "alt": [] },
+        { "phrase": "Nous avons été touchés par leur accueil.", "indice": "Une hospitalité appréciée", "trap": ["acceuil"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Quelle orthographe est correcte ?", "choices": ["apercevoir", "appercevoir", "apercevoire"], "answer": 0, "explain": "Exception : un seul p." },
+        { "type": "mcq", "q": "Quelle orthographe est correcte ?", "choices": ["un dilemme", "un dilemne", "un dilème"], "answer": 0, "explain": "Deux m, pas de n." },
+        { "type": "mcq", "q": "Il est ___ de lui.", "choices": ["sûr", "sur", "sure"], "answer": 0, "explain": "Sûr = certain : accent circonflexe." },
+        { "type": "mcq", "q": "Quel mot s'écrit avec un seul n ?", "choices": ["honorer", "honneur", "consonne"], "answer": 0, "explain": "Honorer n'a qu'un n, malgré honneur." },
+        { "type": "mcq", "q": "Quelle orthographe est correcte ?", "choices": ["le langage", "le language", "le langague"], "answer": 0, "explain": "Langage, sans u (language est anglais)." },
+        { "type": "fill", "q": "Le ___ de la musique s'accélère.", "hint": "la cadence (un mot avec un y)", "answer": ["rythme"], "explain": "Rythme : un y et un h." },
+        { "type": "fill", "q": "Je l'ai ___ de loin.", "hint": "apercevoir, au participe passé", "answer": ["aperçu"], "explain": "Un seul p, et une cédille devant u." },
+        { "type": "fill", "q": "Ce stationnement est ___.", "hint": "contraire à la loi (préfixe il-)", "answer": ["illégal"], "explain": "Devant l, le préfixe in- devient il- : deux l." },
+        { "type": "fill", "q": "Cette histoire est ___.", "hint": "qui ne paraît pas vraie (préfixe in-)", "answer": ["invraisemblable"], "explain": "Devant v, le préfixe reste in-." },
+        { "type": "fill", "q": "Le chat a été ___ par le voisin.", "hint": "attraper, au participe passé", "answer": ["attrapé"], "explain": "Attraper : deux t, un seul p." },
+        { "type": "fill", "q": "Ce film nous a laissés ___.", "hint": "très étonnés", "answer": ["abasourdis"], "explain": "Abasourdi, accordé avec nous (masculin pluriel)." },
+        { "type": "fill", "q": "Il a reçu un ___ des plus chaleureux.", "hint": "la manière de recevoir quelqu'un", "answer": ["accueil"], "explain": "Accueil : cueil, comme dans cueillir." },
+        { "type": "error", "q": "Nous avons apperçu le phare au loin.", "wrong": 2, "fix": ["aperçu"], "explain": "Apercevoir : un seul p." },
+        { "type": "error", "q": "Cette situation me met dans un dilemne terrible.", "wrong": 6, "fix": ["dilemme"], "explain": "Dilemme : deux m, pas de n." },
+        { "type": "error", "q": "Le language des adolescents évolue vite.", "wrong": 1, "fix": ["langage"], "explain": "En français : langage, sans u." },
+        { "type": "error", "q": "La connection au réseau est coupée.", "wrong": 1, "fix": ["connexion"], "explain": "En français : connexion, avec un x." }
+      ],
+      "reading": {
+        "title": "Les familles désunies",
+        "text": "Pourquoi écrit-on « honneur » avec deux n, mais « honorer » avec un seul ? Pourquoi « charrette » prend-elle deux r, quand « chariot » n'en prenait traditionnellement qu'un ? Ces bizarreries, qui désespèrent les élèves, ont une histoire. L'orthographe française s'est fixée lentement, entre le XVIe et le XIXe siècle, sous l'influence d'imprimeurs, de grammairiens et de l'Académie française. Certains voulaient rapprocher l'écriture du latin, d'autres de la prononciation ; chacun a laissé sa trace, et les familles de mots en ont parfois été disloquées. Ainsi, « honneur » a gardé une double consonne héritée d'une ancienne graphie, tandis que « honorer » a été aligné sur le latin. De même, des lettres muettes ont été ajoutées pour rappeler l'étymologie : le g de « doigt » évoque le latin digitus, le p de « sept » rappelle septem. Faut-il pour autant renoncer à comprendre ? Certainement pas. Beaucoup de régularités existent : les mots qui commencent par ac- doublent souvent le c, et les préfixes il-, im-, ir- doublent la consonne devant l, m et r. Lorsque l'histoire a créé une incohérence trop criante, les réformes tentent de la corriger : depuis les rectifications orthographiques de la fin du XXe siècle, on peut écrire « charriot » comme « charrette ». Ces rectifications restent facultatives, et l'ancienne orthographe n'est pas fautive. Au fond, connaître l'histoire d'un mot, c'est déjà commencer à l'écrire correctement : on n'oublie plus une lettre dont on sait d'où elle vient.",
+        "questions": [
+          { "q": "Quelle est l'idée principale du texte ?", "choices": ["Les bizarreries de l'orthographe s'expliquent par l'histoire", "L'orthographe est totalement illogique", "Il faut supprimer l'orthographe", "Le latin est inutile"], "answer": 0, "explain": "« Ces bizarreries… ont une histoire. »" },
+          { "q": "Qui a fixé l'orthographe française selon le texte ?", "choices": ["Des imprimeurs, des grammairiens et l'Académie", "Un seul roi", "Les écoliers", "Les journalistes"], "answer": 0, "explain": "Sous l'influence d'imprimeurs, de grammairiens et de l'Académie française." },
+          { "q": "Pourquoi « doigt » contient-il un g ?", "choices": ["Pour rappeler le latin digitus", "Pour la prononciation", "Par erreur d'un copiste", "Pour faire plus joli"], "answer": 0, "explain": "Une lettre muette ajoutée pour rappeler l'étymologie." },
+          { "q": "Quelle régularité le texte cite-t-il ?", "choices": ["Les préfixes il-, im-, ir- doublent la consonne devant l, m et r", "Tous les mots en a- doublent la consonne", "Les mots latins n'ont pas d'accents", "Les noms finissent tous par -e"], "answer": 0, "explain": "C'est l'une des régularités citées." },
+          { "q": "Que permettent les rectifications pour « charriot » ?", "choices": ["L'écrire avec deux r, comme charrette", "L'écrire sans t", "L'écrire avec un accent", "Rien du tout"], "answer": 0, "explain": "On peut écrire « charriot » comme « charrette »." },
+          { "q": "Quel conseil se dégage de la conclusion ?", "choices": ["Connaître l'histoire d'un mot aide à l'écrire", "Apprendre par cœur sans comprendre", "Ignorer l'étymologie", "Écrire comme on parle"], "answer": 0, "explain": "On n'oublie plus une lettre dont on sait d'où elle vient." }
+        ]
+      }
+    },
+    {
+      "id": "12.3",
+      "name": "Les accords de maître",
+      "title": "Les accords experts : participes, accords selon le sens, sujets inversés",
+      "goal": "Accorder sans hésiter les participes les plus délicats et les verbes dont le sujet est collectif ou inversé.",
+      "lesson": [
+        { "type": "p", "text": "Dernière marche avant le sommet : les accords qui font hésiter même les correcteurs. Ils reposent presque tous sur deux questions simples : qui fait l'action, et qu'est-ce qui est placé avant le verbe ?" },
+        { "type": "rule", "title": "Participe suivi d'un infinitif", "text": "[[fait]] suivi d'un infinitif est toujours invariable : [[la maison qu'il a fait construire]]. Depuis 1990, [[laissé]] suit la même règle. Pour les autres verbes (voir, entendre…), on accorde si le COD placé avant fait l'action de l'infinitif : [[la chanteuse que j'ai entendue chanter]] (c'est elle qui chante), mais [[la chanson que j'ai entendu chanter]] (la chanson est chantée)." },
+        { "type": "rule", "title": "Les verbes pronominaux", "text": "Le participe s'accorde avec le COD placé avant : [[elle s'est lavée]] (se = COD), mais [[elle s'est lavé les mains]] (le COD, les mains, est après). Si se est COI, pas d'accord : [[ils se sont parlé]], [[elles se sont souri]], [[ils se sont succédé]], [[elles se sont plu]]." },
+        { "type": "rule", "title": "Coûter, valoir, peser, courir ; impersonnels ; en", "text": "Au sens propre (prix, poids, durée), ces verbes n'ont pas de COD : [[les dix euros que ce livre m'a coûté]]. Au sens figuré, ils en ont un : [[les efforts que ce travail m'a coûtés]]. Les verbes impersonnels ne s'accordent jamais : [[les chaleurs qu'il a fait]]. Avec en, pas d'accord : [[des pommes, j'en ai mangé]]." },
+        { "type": "table", "head": ["Sujet", "Accord", "Exemple"], "rows": [["la plupart (de)", "pluriel", "la plupart des élèves sont venus"], ["une foule de, un groupe de", "selon ce qu'on veut souligner", "une foule de curieux s'est massée / se sont massés"], ["plus d'un", "singulier", "plus d'un élève a échoué"], ["moins de deux", "pluriel", "moins de deux heures ont suffi"], ["ni… ni", "pluriel en général", "ni Paul ni Léa ne sont venus"], ["sujet inversé", "accord avec le sujet placé après", "où sont passées les clés ?"]] },
+        { "type": "examples", "items": [
+          { "ex": "La maison qu'il a **fait** construire est magnifique.", "note": "fait + infinitif : invariable" },
+          { "ex": "Elles se sont **souri**.", "note": "sourire à quelqu'un : se = COI" },
+          { "ex": "Les efforts que ce projet m'a **coûtés** sont immenses.", "note": "sens figuré : accord" },
+          { "ex": "Plus d'un spectateur **a** pleuré.", "note": "plus d'un : singulier" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "la maison qu'il a ~~faite~~ construire", "ok": "la maison qu'il a **fait** construire", "why": "Fait suivi d'un infinitif est invariable." },
+          { "ko": "Les rois se sont ~~succédés~~.", "ok": "Les rois se sont **succédé**.", "why": "Succéder à quelqu'un : se est COI." },
+          { "ko": "les chaleurs qu'il a ~~faites~~", "ok": "les chaleurs qu'il a **fait**", "why": "Verbe impersonnel : invariable." },
+          { "ko": "Plus d'un élève ~~ont~~ échoué.", "ok": "Plus d'un élève **a** échoué.", "why": "Plus d'un : verbe au singulier." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Pour un verbe pronominal, remplace être par avoir et pose la question : « Ils ont succédé à qui ? » À quelqu'un : c'est un COI, donc pas d'accord. « Elle a lavé quoi ? » Elle-même : COD placé avant, donc accord." },
+        { "type": "fun", "text": "Le sais-tu ? Le poète Clément Marot aurait importé d'Italie la règle d'accord du participe passé avec l'avoir, au XVIe siècle, dans un petit poème adressé à ses élèves. Depuis, des générations l'ont maudite… et appliquée." }
+      ],
+      "vocab": [
+        { "mot": "collectif", "def": "Nom singulier qui désigne un ensemble (foule, groupe, troupeau).", "ex": "« Foule » est un nom collectif.", "alt": [] },
+        { "mot": "inversion", "def": "Place du sujet après le verbe.", "ex": "L'inversion du sujet marque souvent la question.", "alt": [] },
+        { "mot": "participe", "def": "Forme du verbe qui peut servir d'adjectif (chanté, chantant).", "ex": "Le participe passé s'accorde parfois avec le COD.", "alt": [] },
+        { "mot": "impersonnel", "def": "Se dit d'un verbe employé avec un il qui ne désigne rien (il pleut).", "ex": "Falloir est un verbe impersonnel.", "alt": [] },
+        { "mot": "pronominal", "def": "Se dit d'un verbe accompagné d'un pronom de la même personne que le sujet (se laver).", "ex": "« S'enfuir » est un verbe pronominal.", "alt": [] },
+        { "mot": "antécédent", "def": "Mot que remplace un pronom relatif.", "ex": "Dans « le livre que je lis », livre est l'antécédent de que.", "alt": [] },
+        { "mot": "attribut", "def": "Mot qui exprime une qualité du sujet par l'intermédiaire d'un verbe comme être.", "ex": "Dans « elle est heureuse », heureuse est attribut du sujet.", "alt": [] },
+        { "mot": "apposition", "def": "Mot ou groupe placé à côté d'un nom, souvent entre virgules, pour le préciser.", "ex": "Dans « Paris, capitale de la France », le groupe en apposition précise Paris.", "alt": [] },
+        { "mot": "épithète", "def": "Adjectif placé directement à côté du nom qu'il qualifie.", "ex": "Dans « une robe rouge », rouge est épithète.", "alt": [] },
+        { "mot": "auxiliaire", "def": "Verbe être ou avoir qui sert à former les temps composés.", "ex": "Le passé composé se forme avec un auxiliaire.", "alt": [] },
+        { "mot": "syllepse", "def": "Accord selon le sens plutôt que selon la forme grammaticale.", "ex": "Écrire « une foule de gens sont venus » est une syllepse.", "alt": [] },
+        { "mot": "invariable", "def": "Qui ne change jamais de forme.", "ex": "Les adverbes sont invariables.", "alt": [] },
+        { "mot": "réciproque", "def": "Se dit d'une action échangée entre plusieurs sujets (ils se parlent).", "ex": "« Ils se sont souri » a un sens réciproque.", "alt": [] },
+        { "mot": "partitif", "def": "Article qui désigne une partie d'un ensemble : du, de la, des.", "ex": "Dans « boire du lait », du est un article partitif.", "alt": [] },
+        { "mot": "incise", "def": "Courte proposition insérée dans une phrase, souvent pour indiquer qui parle.", "ex": "« Viens, dit-il, il est tard » : « dit-il » est une incise.", "alt": [] },
+        { "mot": "complément", "def": "Mot ou groupe qui complète le sens d'un autre.", "ex": "Le complément d'objet direct répond à la question « quoi ? ».", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "La maison qu'il a fait construire est magnifique.", "indice": "Une belle demeure", "trap": ["faite"], "alt": [] },
+        { "phrase": "Elles se sont souri sans dire un mot.", "indice": "Une complicité silencieuse", "trap": ["souries"], "alt": [] },
+        { "phrase": "Les rois se sont succédé sur le trône.", "indice": "Une dynastie", "trap": ["succédés"], "alt": [] },
+        { "phrase": "Elle s'est lavé les mains avant le dîner.", "indice": "Une bonne habitude", "trap": ["lavée"], "alt": [] },
+        { "phrase": "Les efforts que ce travail m'a coûtés sont immenses.", "indice": "Un travail épuisant", "trap": ["coûté"], "alt": [] },
+        { "phrase": "Les fortes chaleurs qu'il a fait ont tout desséché.", "indice": "Un été torride", "trap": ["faites"], "alt": [] },
+        { "phrase": "Plus d'un élève a réussi l'examen cette année.", "indice": "De bons résultats", "trap": ["ont"], "alt": [] },
+        { "phrase": "La plupart des invités sont partis tard.", "indice": "Une fête animée", "trap": ["est"], "alt": [] },
+        { "phrase": "Où sont passées les clés de la voiture ?", "indice": "Une recherche agacée", "trap": ["passé"], "alt": [] },
+        { "phrase": "Des cerises, j'en ai mangé toute la journée.", "indice": "Un été gourmand", "trap": ["mangées"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Les robes qu'elle a ___ faire sont superbes.", "choices": ["fait", "faites", "faits"], "answer": 0, "explain": "Fait suivi d'un infinitif est invariable." },
+        { "type": "mcq", "q": "Ils se sont ___ toute la soirée.", "choices": ["parlé", "parlés", "parlée"], "answer": 0, "explain": "Parler à quelqu'un : se est COI, pas d'accord." },
+        { "type": "mcq", "q": "Les vingt kilos que ce sac a ___ m'ont épuisé.", "choices": ["pesé", "pesés", "pesée"], "answer": 0, "explain": "Peser au sens propre (le poids) n'a pas de COD : invariable." },
+        { "type": "mcq", "q": "Plus d'un candidat ___ abandonné.", "choices": ["a", "ont", "avaient"], "answer": 0, "explain": "Plus d'un : verbe au singulier." },
+        { "type": "mcq", "q": "Que ___ les journaux ce matin ?", "choices": ["disent", "dit", "disons"], "answer": 0, "explain": "Sujet inversé : les journaux, pluriel." },
+        { "type": "fill", "q": "Elles se sont ___ dans la rue.", "hint": "croiser, au participe passé (se = COD)", "answer": ["croisées"], "explain": "Croiser quelqu'un : se est COD placé avant, accord." },
+        { "type": "fill", "q": "Elles se sont ___ des cadeaux.", "hint": "offrir, au participe passé (le COD est après)", "answer": ["offert"], "explain": "Le COD (des cadeaux) est après : pas d'accord." },
+        { "type": "fill", "q": "La chanteuse que j'ai ___ chanter était bouleversante.", "hint": "entendre, au participe passé (c'est elle qui chante)", "answer": ["entendue"], "explain": "Le COD fait l'action de l'infinitif : accord." },
+        { "type": "fill", "q": "Les dangers que cette expédition a ___ étaient réels.", "hint": "courir, au participe passé (sens figuré : affronter)", "answer": ["courus"], "explain": "Au sens figuré, courir a un COD placé avant : accord." },
+        { "type": "fill", "q": "Des romans, j'en ai ___ des dizaines.", "hint": "lire, au participe passé", "answer": ["lu"], "explain": "Avec en, le participe reste invariable." },
+        { "type": "fill", "q": "Les orages qu'il y a ___ ont ravagé les vignes.", "hint": "avoir, au participe passé (tournure impersonnelle)", "answer": ["eu"], "explain": "Il y a : tournure impersonnelle, participe invariable." },
+        { "type": "fill", "q": "La plupart des spectateurs ___ applaudi.", "hint": "avoir, au présent", "answer": ["ont"], "explain": "La plupart : verbe au pluriel." },
+        { "type": "error", "q": "Les rois se sont succédés pendant des siècles.", "wrong": 4, "fix": ["succédé"], "explain": "Succéder à quelqu'un : se est COI, pas d'accord." },
+        { "type": "error", "q": "La maison qu'ils ont faite construire est grande.", "wrong": 4, "fix": ["fait"], "explain": "Fait suivi d'un infinitif est invariable." },
+        { "type": "error", "q": "Les grandes chaleurs qu'il a faites ont tout séché.", "wrong": 5, "fix": ["fait"], "explain": "Verbe impersonnel : invariable." },
+        { "type": "error", "q": "Elles se sont plues à Lyon.", "wrong": 3, "fix": ["plu"], "explain": "Se plaire : participe invariable (plaire à)." }
+      ],
+      "reading": {
+        "title": "Le procès du participe",
+        "text": "Dans une petite ville de province, une association de passionnés de langue française organise chaque année un procès fictif. Cette fois, l'accusé était le participe passé, poursuivi pour « complication excessive et harcèlement d'écoliers ». L'avocate de l'accusation, une institutrice à la retraite, ouvrit les débats avec fougue. Elle cita pêle-mêle les verbes pronominaux, les participes suivis d'un infinitif et les fameuses chaleurs qu'il a fait. « Combien d'enfants, s'écria-t-elle, ont pleuré devant ces règles ? » La salle applaudit. Puis vint la défense, assurée par un vieux correcteur d'imprimerie. Il ne nia rien, mais demanda au tribunal de considérer les services rendus. « Sans l'accord, déclara-t-il, comment savoir si les lettres que j'ai reçues venaient d'une ou de plusieurs personnes ? Comment distinguer la chanteuse que j'ai entendue chanter de la chanson que j'ai entendu chanter ? L'accord n'est pas une coquetterie : il porte du sens. » Il rappela également que les rectifications avaient déjà simplifié certains cas, comme celui de laissé suivi d'un infinitif. Après une courte délibération, le jury rendit son verdict : le participe passé fut reconnu coupable de complication, mais acquitté au bénéfice de l'utilité. Il fut seulement condamné à se laisser expliquer plus simplement dans les écoles. L'institutrice, bonne joueuse, serra la main du correcteur. Le public, ravi, quitta la salle en discutant d'accords jusque sur le trottoir. On dit qu'ils préparent ensemble le procès de l'année prochaine : celui du subjonctif imparfait.",
+        "questions": [
+          { "q": "De quoi le participe passé est-il accusé ?", "choices": ["De complication excessive", "De vol", "D'être inutile", "D'avoir disparu"], "answer": 0, "explain": "« Complication excessive et harcèlement d'écoliers »." },
+          { "q": "Qui défend le participe passé ?", "choices": ["Un vieux correcteur d'imprimerie", "Une institutrice", "Un élève", "Un académicien"], "answer": 0, "explain": "La défense est assurée par un correcteur d'imprimerie." },
+          { "q": "Quel est l'argument principal de la défense ?", "choices": ["L'accord porte du sens", "L'accord est joli", "L'accord est très ancien", "L'accord est facile"], "answer": 0, "explain": "« L'accord n'est pas une coquetterie : il porte du sens. »" },
+          { "q": "Quel cas simplifié par les rectifications est cité ?", "choices": ["Laissé suivi d'un infinitif", "Les couleurs", "Le pluriel des noms composés", "Les verbes en -oudre"], "answer": 0, "explain": "Laissé suivi d'un infinitif est devenu invariable." },
+          { "q": "Quel est le verdict ?", "choices": ["Coupable de complication, mais acquitté pour son utilité", "Condamné à disparaître", "Innocenté sans réserve", "Renvoyé à l'an prochain"], "answer": 0, "explain": "Acquitté au bénéfice de l'utilité." },
+          { "q": "Quel sera le prochain accusé ?", "choices": ["Le subjonctif imparfait", "Le passé simple", "L'accent circonflexe", "La virgule"], "answer": 0, "explain": "Le procès de l'année prochaine : celui du subjonctif imparfait." }
+        ]
+      }
+    },
+    {
+      "id": "12.4",
+      "name": "La méthode du DALF",
+      "title": "La synthèse et l'essai : la méthode du DALF",
+      "goal": "Confronter des documents dans une synthèse objective et défendre une position nuancée dans un essai, en respectant la consigne.",
+      "lesson": [
+        { "type": "p", "text": "Au DALF, l'épreuve écrite te demande de lire un dossier de plusieurs documents, puis de produire une synthèse ou un texte argumenté. Le jury évalue autant ta méthode que ta langue." },
+        { "type": "rule", "title": "La synthèse", "text": "Rassembler en un texte unique, objectif et organisé les idées de plusieurs documents. Pas d'avis personnel, pas d'exemple ajouté, pas de phrase recopiée : on reformule. Le plan est thématique (une partie par idée), jamais document par document. On donne un titre et l'on respecte le nombre de mots imposé." },
+        { "type": "rule", "title": "L'essai argumenté", "text": "On répond à une question en défendant une position nuancée : introduction (accroche, problématique, annonce du plan), développement en deux ou trois parties avec arguments et exemples, conclusion (bilan et ouverture). Au niveau C2, on te demande souvent d'adopter un rôle : rédiger un éditorial, une lettre ouverte, un discours." },
+        { "type": "table", "head": ["Étape", "Temps conseillé", "Ce qu'on fait"], "rows": [["Lecture du dossier", "une demi-heure", "souligner les idées, repérer les accords et les désaccords entre documents"], ["Plan", "une demi-heure", "classer les idées par thème, prévoir les transitions"], ["Rédaction", "une heure et demie", "écrire au propre, paragraphe par paragraphe"], ["Relecture", "une demi-heure", "accords, conjugaison, ponctuation, nombre de mots"]] },
+        { "type": "rule", "title": "Les pièges", "text": "Recopier des phrases entières des documents ; juxtaposer les résumés de chaque document ; oublier la consigne (le rôle, le destinataire, le nombre de mots) ; conclure sans répondre à la problématique." },
+        { "type": "examples", "items": [
+          { "ex": "**Les deux auteurs s'accordent sur** la nécessité d'agir.", "note": "un point commun" },
+          { "ex": "**Si le premier document insiste sur** le coût, **le second nuance** cette idée.", "note": "une confrontation" },
+          { "ex": "**Il convient de se demander** si l'école peut tout réparer.", "note": "une problématique" },
+          { "ex": "**En définitive**, les avantages l'emportent.", "note": "une conclusion" }
+        ] },
+        { "type": "compare", "title": "Ce que le jury sanctionne", "items": [
+          { "ko": "~~Le premier document dit que… Le second dit que…~~", "ok": "**Tous les documents soulignent…, mais seul le second précise…**", "why": "On confronte les documents au lieu de les juxtaposer." },
+          { "ko": "~~À mon avis~~, il faut interdire les écrans.", "ok": "**Selon les auteurs**, il faudrait limiter les écrans.", "why": "Pas d'avis personnel dans une synthèse." },
+          { "ko": "~~Je vais vous parler de~~ la ville.", "ok": "**Il convient de s'interroger sur** l'avenir de la ville.", "why": "Une annonce élégante, sans « je vais vous parler »." },
+          { "ko": "~~Voilà, c'est tout.~~", "ok": "**En définitive**, …, **ce qui invite à**…", "why": "Une conclusion dresse un bilan et ouvre une perspective." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Compte tes mots au fil de la rédaction : note le total en marge à la fin de chaque paragraphe. Au DALF, un texte trop court ou trop long est pénalisé." },
+        { "type": "fun", "text": "Le sais-tu ? « Synthèse » vient du grec et signifie « action de mettre ensemble ». Son contraire, « analyse », signifie « action de délier ». Lire un dossier, c'est délier ; écrire la synthèse, c'est relier." }
+      ],
+      "vocab": [
+        { "mot": "confrontation", "def": "Comparaison de documents ou d'idées pour en dégager les points communs et les différences.", "ex": "La confrontation des documents révèle un désaccord.", "alt": [] },
+        { "mot": "chapeau", "def": "Court texte placé sous le titre d'un article, qui en résume l'essentiel.", "ex": "Le chapeau de l'article tient en trois lignes.", "alt": [] },
+        { "mot": "intertitre", "def": "Titre placé à l'intérieur d'un article pour annoncer une partie.", "ex": "Chaque partie de l'article commence par un intertitre.", "alt": [] },
+        { "mot": "reformulation", "def": "Fait de dire autrement, avec ses propres mots.", "ex": "La synthèse exige un vrai travail de reformulation.", "alt": [] },
+        { "mot": "lettre ouverte", "def": "Lettre adressée à une personne mais publiée pour être lue de tous.", "ex": "Des médecins ont publié une lettre ouverte au ministre.", "alt": [] },
+        { "mot": "impartialité", "def": "Qualité de celui qui ne prend parti pour personne.", "ex": "Le rédacteur d'une synthèse doit faire preuve d'impartialité.", "alt": [] },
+        { "mot": "contrepoint", "def": "Idée qui s'oppose à une autre et la met en valeur.", "ex": "Ce témoignage apporte un contrepoint utile au débat.", "alt": [] },
+        { "mot": "barème", "def": "Grille qui fixe les points attribués à chaque critère.", "ex": "Le barème accorde plusieurs points à la correction de la langue.", "alt": [] },
+        { "mot": "argumentaire", "def": "Ensemble organisé d'arguments en faveur d'une idée.", "ex": "Elle a préparé un argumentaire solide.", "alt": [] },
+        { "mot": "thématique", "def": "Organisé par thèmes, par idées.", "ex": "La synthèse suit un plan thématique.", "alt": [] },
+        { "mot": "rédacteur", "def": "Personne qui écrit un texte, en particulier pour un journal.", "ex": "Le rédacteur en chef a relu l'article.", "alt": [] },
+        { "mot": "relecture", "def": "Fait de relire un texte pour le corriger.", "ex": "Garde un quart d'heure pour la relecture.", "alt": [] },
+        { "mot": "chronologique", "def": "Qui suit l'ordre du temps.", "ex": "Il a classé les événements dans l'ordre chronologique.", "alt": [] },
+        { "mot": "posture", "def": "Position, attitude que l'on adopte dans un débat ou un texte.", "ex": "Adopte la posture d'un journaliste.", "alt": [] },
+        { "mot": "énonciation", "def": "Situation dans laquelle un texte est produit : qui parle, à qui, quand.", "ex": "Repère d'abord la situation d'énonciation.", "alt": [] },
+        { "mot": "angle", "def": "Point de vue particulier sous lequel on aborde un sujet.", "ex": "Le journaliste a choisi un angle original.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "La synthèse ne contient aucun avis personnel.", "indice": "Une règle d'or", "trap": ["personnelle"], "alt": [] },
+        { "phrase": "Les deux auteurs s'accordent sur la nécessité d'agir.", "indice": "Un point commun", "trap": ["accorde"], "alt": [] },
+        { "phrase": "Le plan suit les idées et non les documents.", "indice": "Un plan thématique", "trap": ["suis"], "alt": [] },
+        { "phrase": "Il convient de s'interroger sur les causes du problème.", "indice": "Une problématique", "trap": ["convien"], "alt": [] },
+        { "phrase": "Le second document nuance fortement cette idée.", "indice": "Une confrontation", "trap": ["nuancent"], "alt": [] },
+        { "phrase": "N'oublie pas de compter tes mots avant de rendre ta copie.", "indice": "Un conseil pour l'examen", "trap": ["oublies"], "alt": [] },
+        { "phrase": "Chaque paragraphe développe une seule idée.", "indice": "Une règle de construction", "trap": ["développent"], "alt": [] },
+        { "phrase": "Le titre doit annoncer le contenu de la synthèse.", "indice": "Un titre utile", "trap": ["annoncé"], "alt": [] },
+        { "phrase": "En définitive, les documents se complètent plus qu'ils ne s'opposent.", "indice": "Une conclusion nuancée", "trap": ["complète"], "alt": [] },
+        { "phrase": "Tu dois adopter le rôle d'un journaliste.", "indice": "Une consigne du DALF", "trap": ["adopté"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Dans une synthèse, on peut…", "choices": ["reformuler les idées des documents", "donner son avis", "ajouter ses propres exemples"], "answer": 0, "explain": "La synthèse reformule, sans avis ni exemple ajouté." },
+        { "type": "mcq", "q": "Le plan d'une synthèse est…", "choices": ["thématique", "document par document", "toujours chronologique"], "answer": 0, "explain": "Une partie par idée, en confrontant les documents." },
+        { "type": "mcq", "q": "Quelle phrase confronte deux documents ?", "choices": ["Si le premier texte insiste sur l'école, le second privilégie la famille.", "Le premier texte parle de l'école. Le second texte parle de la famille.", "Je pense que l'école compte davantage."], "answer": 0, "explain": "La confrontation met les documents en relation." },
+        { "type": "mcq", "q": "Que doit contenir l'introduction d'un essai ?", "choices": ["Une accroche, une problématique et l'annonce du plan", "La conclusion", "Tous les exemples"], "answer": 0, "explain": "Accroche, problématique, annonce du plan." },
+        { "type": "mcq", "q": "Quelle phrase convient pour une conclusion ?", "choices": ["En définitive, les avantages l'emportent, ce qui invite à repenser nos habitudes.", "Voilà, c'est tout.", "Pour finir, je vais parler d'un autre sujet."], "answer": 0, "explain": "Un bilan, puis une ouverture." },
+        { "type": "fill", "q": "Une synthèse doit rester ___ : aucun avis personnel.", "hint": "sans parti pris (un adjectif au féminin)", "answer": ["objective", "neutre", "impartiale"], "explain": "La synthèse est objective." },
+        { "type": "fill", "q": "Les deux documents ___ sur un point : l'urgence d'agir.", "hint": "s'accorder, au présent", "answer": ["s'accordent"], "explain": "Sujet pluriel : ils s'accordent." },
+        { "type": "fill", "q": "La ___ est la question à laquelle l'essai répond.", "hint": "un nom en -ique", "answer": ["problématique"], "explain": "La problématique guide tout l'essai." },
+        { "type": "fill", "q": "Il ___ de distinguer deux aspects du problème.", "hint": "convenir, au présent", "answer": ["convient"], "explain": "Il convient de : formule soutenue." },
+        { "type": "fill", "q": "Le second document ___ cette affirmation.", "hint": "apporter des nuances, au présent", "answer": ["nuance"], "explain": "Nuancer : apporter des réserves." },
+        { "type": "fill", "q": "On ne recopie pas les documents : on les ___.", "hint": "dire autrement, au présent", "answer": ["reformule"], "explain": "Reformuler prouve qu'on a compris." },
+        { "type": "fill", "q": "Une lettre ___ est publiée pour être lue de tous.", "hint": "un adjectif", "answer": ["ouverte"], "explain": "La lettre ouverte, un genre fréquent au DALF." },
+        { "type": "error", "q": "Les deux auteurs s'accorde sur ce point.", "wrong": 3, "fix": ["s'accordent"], "explain": "Sujet pluriel : ils s'accordent." },
+        { "type": "error", "q": "Il convient de s'interrogé sur ce choix.", "wrong": 3, "fix": ["s'interroger"], "explain": "Après une préposition, l'infinitif : s'interroger." },
+        { "type": "error", "q": "Ces documents, bien qu'ils s'opposent, se complète.", "wrong": 6, "fix": ["complètent"], "explain": "Sujet pluriel (ces documents) : ils se complètent." },
+        { "type": "error", "q": "La synthèse que j'ai rédigé compte deux cents mots.", "wrong": 4, "fix": ["rédigée"], "explain": "COD placé avant (que = la synthèse) : accord au féminin." }
+      ],
+      "reading": {
+        "title": "Les confidences d'une correctrice",
+        "text": "Correctrice du DALF depuis quinze ans, Hélène a lu des milliers de copies. Elle accepte de nous livrer ses observations, sans trahir aucun secret. « La première erreur, explique-t-elle, est de vouloir tout dire. Les candidats lisent le dossier, découvrent une foule d'idées passionnantes et veulent toutes les caser. Résultat : un texte surchargé, sans fil conducteur. Une bonne synthèse choisit. » La deuxième erreur concerne le plan. Beaucoup de candidats résument chaque document à la suite, comme on remplit des cases. « Ce n'est pas une synthèse, c'est un catalogue, sourit Hélène. On attend que les documents dialoguent : que l'un confirme, que l'autre nuance, qu'un troisième contredise. » La troisième erreur est plus subtile : recopier. Sous la pression du temps, certains reprennent des phrases entières des documents. « Nous le voyons immédiatement, et c'est sanctionné. Reformuler, c'est prouver qu'on a compris. » Quant à l'essai, Hélène insiste sur la consigne. « Si l'on vous demande un éditorial pour un journal régional, écrivez un éditorial, avec un titre, un ton, un lecteur imaginé. Une dissertation scolaire, même brillante, passe à côté du sujet. » Enfin, elle rappelle l'importance de la langue : au niveau le plus élevé, une copie bien construite mais truffée de fautes d'accord ne peut pas obtenir une excellente note. Son dernier conseil tient en une phrase : « Gardez du temps pour vous relire. C'est souvent dans le dernier quart d'heure que se gagnent les points. »",
+        "questions": [
+          { "q": "Quelle est la première erreur selon Hélène ?", "choices": ["Vouloir tout dire", "Écrire trop court", "Oublier le titre", "Écrire au crayon"], "answer": 0, "explain": "« Une bonne synthèse choisit. »" },
+          { "q": "Pourquoi un résumé document par document est-il un « catalogue » ?", "choices": ["Les documents n'y dialoguent pas", "Il est trop long", "Il contient des fautes", "Il n'a pas de titre"], "answer": 0, "explain": "On attend que les documents dialoguent." },
+          { "q": "Que prouve la reformulation ?", "choices": ["Qu'on a compris", "Qu'on écrit vite", "Qu'on connaît les auteurs", "Qu'on a de la mémoire"], "answer": 0, "explain": "« Reformuler, c'est prouver qu'on a compris. »" },
+          { "q": "Que faire si la consigne demande un éditorial ?", "choices": ["Écrire un véritable éditorial, avec titre, ton et lecteur", "Écrire une dissertation scolaire", "Résumer les documents", "Donner une liste d'arguments"], "answer": 0, "explain": "Respecter le genre demandé." },
+          { "q": "Que dit Hélène de la langue au niveau C2 ?", "choices": ["Des fautes nombreuses empêchent une excellente note", "Elle ne compte pas", "Seul le plan compte", "Les fautes d'accord sont tolérées"], "answer": 0, "explain": "Une copie truffée de fautes ne peut pas obtenir une excellente note." },
+          { "q": "Quel est son dernier conseil ?", "choices": ["Garder du temps pour se relire", "Écrire le plus possible", "Commencer par la conclusion", "Ne pas faire de brouillon"], "answer": 0, "explain": "Les points se gagnent souvent dans le dernier quart d'heure." }
+        ]
+      }
+    },
+    {
+      "id": "12.5",
+      "name": "L'art d'écrire",
+      "title": "Le style C2 : précision, variété, rythme, nominalisation, élégance",
+      "goal": "Remplacer les mots passe-partout, varier les phrases, alléger et rythmer un texte.",
+      "lesson": [
+        { "type": "p", "text": "Au sommet, il ne suffit plus d'écrire juste : il faut écrire bien. Le style, c'est la précision du mot, la variété des phrases et l'élégance du rythme." },
+        { "type": "rule", "title": "Fuir les verbes passe-partout", "text": "[[faire]], [[dire]], [[avoir]], [[mettre]], [[il y a]] conviennent à tout… donc à rien. On les remplace par un verbe précis : [[faire une erreur]] → [[commettre une erreur]] ; [[dire son avis]] → [[exprimer son avis]] ; [[avoir un défaut]] → [[présenter un défaut]] ; [[il y a des risques]] → [[ce projet comporte des risques]]." },
+        { "type": "rule", "title": "Varier la longueur des phrases", "text": "Une suite de phrases courtes hache le texte ; une suite de phrases longues l'étouffe. Alterne : une phrase ample pour développer, une phrase brève pour frapper. [[Il chercha longtemps, fouilla chaque tiroir, interrogea chaque voisin. En vain.]]" },
+        { "type": "rule", "title": "Le rythme", "text": "Le rythme ternaire (trois éléments) donne de l'ampleur : [[Il est venu, il a vu, il a vaincu.]] Une phrase dont les groupes s'allongent sonne harmonieusement (cadence majeure) ; une phrase qui finit brusquement crée un effet de chute (cadence mineure)." },
+        { "type": "table", "head": ["Lourd", "Élégant"], "rows": [["Il y a beaucoup de gens qui pensent que…", "Nombreux sont ceux qui pensent que…"], ["Le fait que les prix augmentent inquiète.", "La hausse des prix inquiète."], ["Il a fait un discours qui était très long.", "Il a prononcé un long discours."], ["C'est une chose qui est importante.", "C'est un point essentiel."]] },
+        { "type": "rule", "title": "La mise en relief", "text": "Pour souligner une idée : l'extraction ([[C'est la patience qui manque.]]), le détachement ([[La patience, voilà ce qui manque.]]), l'inversion ([[Rares sont les élèves qui…]])." },
+        { "type": "examples", "items": [
+          { "ex": "Il a **commis** une erreur.", "note": "un verbe précis" },
+          { "ex": "**Nombreux sont ceux qui** l'ignorent.", "note": "une inversion élégante" },
+          { "ex": "**La hausse des prix** inquiète les familles.", "note": "une nominalisation" },
+          { "ex": "**Rares** sont les textes parfaits.", "note": "mise en relief" }
+        ] },
+        { "type": "compare", "title": "Avant, après", "items": [
+          { "ko": "Il a ~~fait~~ une erreur.", "ok": "Il a **commis** une erreur.", "why": "Un verbe précis plutôt que faire." },
+          { "ko": "~~Il y a des élèves qui~~ trichent.", "ok": "**Certains élèves** trichent.", "why": "On supprime « il y a… qui »." },
+          { "ko": "Il a ~~dit~~ son désaccord.", "ok": "Il a **exprimé** son désaccord.", "why": "Un verbe précis plutôt que dire." },
+          { "ko": "~~Le fait que la pollution augmente~~ inquiète.", "ok": "**L'augmentation de la pollution** inquiète.", "why": "La nominalisation allège la phrase." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Relis-toi à mi-voix : si tu manques de souffle, coupe la phrase ; si tout se ressemble, varie. Et chasse les répétitions : un même mot deux fois dans une phrase se remarque toujours." },
+        { "type": "fun", "text": "Le sais-tu ? Flaubert éprouvait ses phrases en les criant à pleine voix dans une pièce de sa maison qu'il appelait son « gueuloir ». Une phrase qui ne résistait pas à l'épreuve était réécrite." }
+      ],
+      "vocab": [
+        { "mot": "receler", "def": "Contenir en soi, garder caché (un secret, un trésor).", "ex": "Ce vieux grenier peut receler des trésors.", "alt": ["recéler"] },
+        { "mot": "arborer", "def": "Porter fièrement, montrer de façon visible.", "ex": "Il arbore un large sourire.", "alt": [] },
+        { "mot": "éprouver", "def": "Ressentir ; ou mettre à l'épreuve.", "ex": "J'éprouve une grande joie à te revoir.", "alt": [] },
+        { "mot": "comporter", "def": "Contenir, être constitué de.", "ex": "Ce projet comporte des risques.", "alt": [] },
+        { "mot": "effectuer", "def": "Réaliser, accomplir une action.", "ex": "Il a effectué un long voyage.", "alt": [] },
+        { "mot": "formuler", "def": "Exprimer avec précision par des mots.", "ex": "Formule clairement ta question.", "alt": [] },
+        { "mot": "commettre", "def": "Accomplir une action mauvaise ou maladroite (une faute, une erreur).", "ex": "Il craint de commettre une erreur de calcul.", "alt": [] },
+        { "mot": "nourrir", "def": "Au sens figuré : entretenir en soi un sentiment, un projet.", "ex": "Elle nourrit de grands espoirs.", "alt": [] },
+        { "mot": "cadence", "def": "Rythme régulier ; dans une phrase, manière dont elle se termine.", "ex": "La cadence de cette phrase est harmonieuse.", "alt": [] },
+        { "mot": "allégement", "def": "Action de rendre plus léger.", "ex": "L'allégement du texte le rend plus clair.", "alt": ["allègement"] },
+        { "mot": "lourdeur", "def": "Caractère de ce qui est pesant, maladroit.", "ex": "Évite les lourdeurs dans tes phrases.", "alt": [] },
+        { "mot": "euphonie", "def": "Succession harmonieuse de sons.", "ex": "Le t de « a-t-il » est ajouté par euphonie.", "alt": [] },
+        { "mot": "hiatus", "def": "Rencontre de deux voyelles, l'une finissant un mot, l'autre commençant le suivant.", "ex": "« Il alla à Alger » contient un hiatus disgracieux.", "alt": [] },
+        { "mot": "cacophonie", "def": "Rencontre de sons désagréables à l'oreille.", "ex": "Cette répétition de sons produit une cacophonie.", "alt": [] },
+        { "mot": "limpidité", "def": "Clarté parfaite.", "ex": "Son explication est d'une grande limpidité.", "alt": [] },
+        { "mot": "emphase", "def": "Exagération pompeuse dans le ton ou le style.", "ex": "Il parle avec emphase de ses exploits.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Il a commis une erreur de jugement.", "indice": "Une mauvaise décision", "trap": ["fait"], "alt": [] },
+        { "phrase": "Nombreux sont ceux qui ignorent cette règle.", "indice": "Une règle méconnue", "trap": ["Nombreuses"], "alt": [] },
+        { "phrase": "La hausse des prix inquiète les familles.", "indice": "Une préoccupation économique", "trap": ["inquiètent"], "alt": [] },
+        { "phrase": "Rares sont les textes sans aucune faute.", "indice": "La perfection est rare", "trap": ["Rare"], "alt": [] },
+        { "phrase": "Il a prononcé un long discours devant l'assemblée.", "indice": "Une prise de parole", "trap": ["fait"], "alt": [] },
+        { "phrase": "C'est la patience qui manque le plus.", "indice": "Une qualité absente", "trap": ["manquent"], "alt": [] },
+        { "phrase": "Elle a exprimé son désaccord avec fermeté.", "indice": "Une opposition claire", "trap": ["dit"], "alt": [] },
+        { "phrase": "Ce projet comporte des risques importants.", "indice": "Une entreprise risquée", "trap": ["comportent"], "alt": [] },
+        { "phrase": "Elle nourrit de grands espoirs pour ses enfants.", "indice": "Une mère ambitieuse", "trap": ["nourris"], "alt": [] },
+        { "phrase": "Il chercha partout, interrogea chacun, en vain.", "indice": "Une quête inutile", "trap": ["cherchait"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Quel verbe remplace le mieux « faire » dans « faire une erreur » ?", "choices": ["commettre", "effectuer", "réaliser"], "answer": 0, "explain": "On commet une erreur, une faute." },
+        { "type": "mcq", "q": "Quelle phrase est la plus élégante ?", "choices": ["La hausse des prix inquiète les ménages.", "Le fait que les prix augmentent, ça inquiète les ménages.", "Il y a les prix qui augmentent et les ménages sont inquiets."], "answer": 0, "explain": "La nominalisation allège la phrase." },
+        { "type": "mcq", "q": "Quelle phrase repose sur un rythme ternaire ?", "choices": ["Il chercha, douta, puis comprit.", "Il chercha longtemps.", "Il chercha et trouva."], "answer": 0, "explain": "Trois verbes : un rythme ternaire." },
+        { "type": "mcq", "q": "Quel verbe remplace le mieux « dire » dans « dire son avis » ?", "choices": ["exprimer", "commettre", "effectuer"], "answer": 0, "explain": "On exprime un avis." },
+        { "type": "mcq", "q": "Quelle phrase met en relief « la patience » ?", "choices": ["C'est la patience qui lui manque.", "Il manque de patience.", "Sa patience est un peu faible."], "answer": 0, "explain": "L'extraction c'est… qui met en relief." },
+        { "type": "fill", "q": "Il a ___ un discours émouvant.", "hint": "faire → un verbe précis, au participe passé", "answer": ["prononcé"], "explain": "On prononce un discours." },
+        { "type": "fill", "q": "Ce texte ___ trois parties.", "hint": "avoir → un verbe précis, au présent", "answer": ["comporte", "compte", "contient"], "explain": "Comporter : être constitué de." },
+        { "type": "fill", "q": "Elle ___ de grands espoirs pour l'avenir.", "hint": "avoir → un verbe précis au sens figuré, au présent", "answer": ["nourrit", "fonde"], "explain": "Nourrir des espoirs : les entretenir." },
+        { "type": "fill", "q": "___ sont ceux qui ont compris.", "hint": "beaucoup, en tête de phrase", "answer": ["Nombreux"], "explain": "Nombreux sont ceux qui… : une inversion élégante." },
+        { "type": "fill", "q": "L'___ de la pollution inquiète les médecins.", "hint": "nominalise le verbe augmenter", "answer": ["augmentation"], "explain": "Augmenter → l'augmentation." },
+        { "type": "fill", "q": "Il a ___ une erreur grave.", "hint": "faire → un verbe précis, au participe passé", "answer": ["commis"], "explain": "On commet une erreur." },
+        { "type": "fill", "q": "Ce problème ___ une solution rapide.", "hint": "avoir besoin de → un verbe précis, au présent", "answer": ["exige", "requiert", "nécessite", "appelle"], "explain": "Un verbe précis remplace « a besoin de »." },
+        { "type": "error", "q": "Il a commit une erreur de calcul.", "wrong": 2, "fix": ["commis"], "explain": "Participe passé de commettre : commis." },
+        { "type": "error", "q": "Nombreuses sont ceux qui le pensent.", "wrong": 0, "fix": ["Nombreux"], "explain": "Accord avec ceux, masculin pluriel." },
+        { "type": "error", "q": "C'est les détails qui comptent.", "wrong": 0, "fix": ["Ce sont"], "explain": "À l'écrit soutenu, ce sont devant un pluriel." },
+        { "type": "error", "q": "Rare sont les élèves qui réussissent du premier coup.", "wrong": 0, "fix": ["Rares"], "explain": "Accord avec les élèves : rares." }
+      ],
+      "reading": {
+        "title": "Réécrire",
+        "text": "Voici un paragraphe extrait d'une copie, reproduit avec l'accord de son auteur, un élève de terminale : « Il y a beaucoup de gens qui pensent que les réseaux sociaux sont dangereux. Il y a des gens qui disent que ça rend les jeunes dépendants. Il y a aussi des gens qui disent qu'il y a des avantages. » Le propos n'est pas faux, mais le style est pauvre : trois phrases construites sur le même moule, quatre fois « il y a », deux fois « disent », un « ça » familier. Comment l'améliorer ? D'abord, chasser les verbes passe-partout : « Il y a beaucoup de gens qui pensent » devient « Nombreux sont ceux qui jugent ». Ensuite, préciser : au lieu de « ça rend les jeunes dépendants », on peut écrire « les réseaux sociaux favoriseraient la dépendance des adolescents ». Enfin, articuler les idées par un connecteur qui montre leur rapport, ici une opposition. On obtient : « Nombreux sont ceux qui jugent les réseaux sociaux dangereux : ils favoriseraient, selon certains, la dépendance des adolescents. D'autres, en revanche, soulignent leurs atouts. » Le texte est plus court, mais il dit davantage. Chaque mot y travaille. C'est là tout le secret du style : non pas ajouter des ornements, mais retirer ce qui est inutile et choisir, pour chaque idée, le mot exact. Les grands stylistes le répètent à leur manière : un texte est achevé non quand on ne peut plus rien y ajouter, mais quand on ne peut plus rien en retirer. L'élève, lui, a promis de ne plus jamais écrire « il y a ». Nous lui avons conseillé de ne pas exagérer.",
+        "questions": [
+          { "q": "Quel défaut principal présente le paragraphe de l'élève ?", "choices": ["Un style pauvre et répétitif", "Des idées fausses", "Trop de mots rares", "Une absence de ponctuation"], "answer": 0, "explain": "Le propos n'est pas faux, mais le style est pauvre." },
+          { "q": "Combien de fois « il y a » apparaît-il dans la version d'origine ?", "choices": ["Quatre", "Deux", "Trois", "Une"], "answer": 0, "explain": "« Quatre fois il y a »." },
+          { "q": "Par quoi « Il y a beaucoup de gens qui pensent » est-il remplacé ?", "choices": ["Nombreux sont ceux qui jugent", "Beaucoup de gens pensent", "On pense", "Tout le monde pense"], "answer": 0, "explain": "Une inversion élégante et un verbe plus précis." },
+          { "q": "Quel rapport logique le connecteur final exprime-t-il ?", "choices": ["Une opposition", "Une cause", "Une conséquence", "Un but"], "answer": 0, "explain": "En revanche marque l'opposition." },
+          { "q": "Que remarque l'auteur sur la version réécrite ?", "choices": ["Elle est plus courte mais dit davantage", "Elle est plus longue", "Elle est plus familière", "Elle a perdu des idées"], "answer": 0, "explain": "« Le texte est plus court, mais il dit davantage. »" },
+          { "q": "Selon le texte, quel est le secret du style ?", "choices": ["Retirer l'inutile et choisir le mot exact", "Ajouter des ornements", "Employer des mots rares", "Écrire des phrases longues"], "answer": 0, "explain": "Retirer ce qui est inutile, choisir le mot exact." }
+        ]
+      }
+    }
+  ]
+}

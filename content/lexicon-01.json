@@ -140,7 +140,7 @@
     { "mot": "voisin", "def": "Personne qui habite à côté de chez nous.", "ex": "Notre voisin a un grand chien.", "theme": "les gens", "nature": "nom" },
     { "mot": "médecin", "def": "Personne qui soigne les malades.", "ex": "Le médecin écoute mon cœur.", "theme": "les gens", "nature": "nom" },
     { "mot": "boulanger", "def": "Personne qui fabrique et vend le pain.", "ex": "Le boulanger sort les baguettes du four.", "theme": "les gens", "nature": "nom" },
-    { "mot": "facteur", "def": "Personne qui distribue le courrier.", "ex": "Le facteur a apporté un colis.", "theme": "les gens", "nature": "nom" },
+    { "mot": "coiffeur", "def": "Personne qui coupe et arrange les cheveux.", "ex": "Le coiffeur m'a coupé les cheveux très court.", "theme": "les gens", "nature": "nom" },
     { "mot": "vétérinaire", "def": "Personne qui soigne les animaux.", "ex": "Nous emmenons le chat chez le vétérinaire.", "theme": "les gens", "nature": "nom" },
 
     { "mot": "semaine", "def": "Période de sept jours, du lundi au dimanche.", "ex": "Je vais au judo deux fois par semaine.", "theme": "le temps", "nature": "nom" },

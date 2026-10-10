@@ -1,0 +1,120 @@
+{
+  "level": 12,
+  "units": [
+    {
+      "unit": "12.1",
+      "dictee": {
+        "titre": "L'atelier de la couturière",
+        "texte": "Dans son petit atelier, Mme Garnier coud depuis l'aube. Elle résout chaque problème avec patience : une manche trop courte, un ourlet qui bâille, un bouton qui menace de choir. Pendant que l'eau bout pour le thé, elle peint à la main des motifs sur la soie. Ses clientes la craignent un peu, car elle vainc toutes les résistances : quand elle a décidé qu'une robe serait bleue, nul ne la convainc du contraire. Elle a acquis ce savoir auprès de sa grand-mère, qui cousait déjà pour les grandes maisons de Paris. Parfois, elle avoue en riant qu'elle mourra l'aiguille à la main. En attendant, elle acquerra bientôt une nouvelle machine, car l'ancienne, dit-elle, ne se meut plus qu'à grand-peine. Ce soir, elle clora sa journée en cousant un dernier bouton, puis elle s'accordera enfin un peu de repos.",
+        "points": [
+          "**coud**, **cousait**, **cousant** : coudre garde son d au présent singulier, puis devient cous-.",
+          "**résout**, **bout**, **peint** : présents sans d ; **vainc**, **convainc** : sans t.",
+          "**acquis**, **acquerra** : participe et futur d'acquérir, deux r au futur.",
+          "**mourra** : futur à deux r ; **clora** : futur de clore ; **se meut** : présent de mouvoir."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Récite à voix haute, sans hésiter, le présent de résoudre, de vaincre et d'acquérir. Puis invente une phrase pour chaque verbe et écris-la.",
+        "model": "Je résous mes problèmes un par un. Notre équipe vainc enfin son éternel rival. Mes parents acquièrent une vieille maison en Bretagne.",
+        "checklist": [
+          "Résoudre perd son d : je résous, il résout.",
+          "Vaincre ne prend pas de t : il vainc ; nous vainquons.",
+          "Acquérir : ils acquièrent, avec un accent grave."
+        ]
+      }
+    },
+    {
+      "unit": "12.2",
+      "dictee": {
+        "titre": "Un dilemme au marché",
+        "texte": "En l'occurrence, le dilemme de mon oncle n'avait rien de tragique : il hésitait entre un chariot de légumes et une charrette de fleurs. Abasourdi par les prix exorbitants du marché, il avait aperçu, au fond de l'allée, un vendeur qui proposait les deux à moitié prix. Le rythme des affaires s'accélérait ; les clients se pressaient dans un joyeux désordre. Mon oncle, homme d'honneur, avait promis à ma tante de ne rien acheter d'inutile. Il honora sa promesse, mais à sa manière : il acheta les fleurs pour elle et les légumes pour lui. L'accueil qu'il reçut à la maison fut pourtant mitigé : ma tante, qui souffrait du rhume des foins, éternua toute la soirée. Il jura, mais un peu tard, qu'on ne l'y reprendrait plus.",
+        "points": [
+          "**occurrence** : deux c, deux r ; **dilemme** : deux m.",
+          "**chariot** (ou charriot) / **charrette** ; **honneur** (deux n) / **honora** (un n).",
+          "**Abasourdi**, **exorbitants**, **aperçu** : un seul s, pas de h, un seul p.",
+          "**rythme**, **rhume** : attention au h ; **accueil** : cueil, comme dans cueillir."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Écris un court paragraphe (quatre à six phrases) qui contienne au moins six mots difficiles de la station : occurrence, rythme, connexion, accueil, apercevoir, dilemme…",
+        "model": "En l'occurrence, notre connexion était si lente que nous avons renoncé au film. Nous avons aperçu, par la fenêtre, un concert improvisé dans la rue. Le rythme des percussions nous a attirés dehors. L'accueil des musiciens fut chaleureux. Le seul dilemme de la soirée : rester danser ou rentrer dormir.",
+        "checklist": [
+          "J'ai employé au moins six mots difficiles.",
+          "J'ai vérifié chaque double consonne.",
+          "J'ai relu les accents (sûr, dû, mûr…)."
+        ]
+      }
+    },
+    {
+      "unit": "12.3",
+      "dictee": {
+        "titre": "La réunion de famille",
+        "texte": "La plupart des cousins sont arrivés dès le matin. Les années qui se sont succédé n'ont pas entamé leur complicité : à peine entrés, ils se sont souri, puis se sont embrassés longuement. Ma grand-mère s'est lavé les mains, a enfilé son tablier et a sorti les tartes qu'elle avait fait cuire la veille. Des tartes, nous en avons mangé toute la journée. Plus d'un invité a regretté sa troisième part. Les efforts que ce repas lui avait coûtés étaient immenses, mais elle n'en a rien dit. Le soir, les grandes chaleurs qu'il avait fait tout l'après-midi ont laissé place à une brise légère. Où sont passées les heures ? Personne ne l'a su. Les enfants, que nous avons entendus chanter jusqu'à minuit, se sont endormis sur les canapés.",
+        "points": [
+          "**se sont succédé**, **se sont souri** : se est COI, pas d'accord ; **se sont embrassés** : se est COD, accord.",
+          "**s'est lavé les mains** : le COD est après ; **qu'elle avait fait cuire** : fait + infinitif, invariable.",
+          "**nous en avons mangé** : avec en, pas d'accord ; **qu'il avait fait** : verbe impersonnel, invariable.",
+          "**Plus d'un invité a regretté** : singulier ; **que nous avons entendus chanter** : ce sont les enfants qui chantent, accord."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Raconte à voix haute la rencontre de deux amies en employant trois verbes pronominaux, dont un sans accord (se sourire, se parler…). Puis écris ton récit en accordant correctement.",
+        "model": "Léa et Inès se sont croisées devant la boulangerie. Elles se sont souri, puis se sont parlé pendant une heure. Elles se sont promis de se revoir bientôt.",
+        "checklist": [
+          "Se est COD placé avant : accord (elles se sont croisées).",
+          "Se est COI : pas d'accord (elles se sont souri, parlé).",
+          "Le COD est après le verbe : pas d'accord (elles se sont promis de se revoir)."
+        ]
+      }
+    },
+    {
+      "unit": "12.4",
+      "dictee": {
+        "titre": "Conseils pour la synthèse",
+        "texte": "Avant de rédiger une synthèse, il convient de lire attentivement chacun des documents du dossier. On souligne les idées essentielles, on repère les points d'accord et de désaccord, puis on construit un plan thématique. Les candidats qui résument les textes l'un après l'autre commettent une erreur fréquente : ils juxtaposent au lieu de confronter. La synthèse, rappelons-le, ne contient ni avis personnel ni exemple ajouté. Elle reformule avec précision, sans jamais recopier les phrases des auteurs. Son titre doit annoncer le contenu, et son introduction présenter brièvement le thème commun. Enfin, il faut garder une vingtaine de minutes pour la relecture : les accords, la ponctuation et le nombre de mots y sont vérifiés un à un. C'est souvent là que se joue la différence entre une bonne copie et une excellente.",
+        "points": [
+          "**il convient de** : formule soutenue, convenir au présent.",
+          "**commettent** : deux m, deux t ; **juxtaposent** : un x.",
+          "**ni avis personnel ni exemple ajouté** : ni répété, sans pas.",
+          "**rappelons-le** : impératif suivi du pronom, avec un trait d'union."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Deux documents affirment : « Le télétravail améliore la qualité de vie » et « Le télétravail isole les salariés ». Rédige un paragraphe de synthèse de quatre phrases qui les confronte, sans avis personnel.",
+        "model": "Le télétravail suscite des appréciations contrastées. Si le premier document souligne l'amélioration de la qualité de vie qu'il permet, le second en pointe le revers : l'isolement des salariés, privés des échanges du bureau. Les deux textes invitent ainsi à mesurer ses effets avec nuance. Un équilibre entre présence et distance semble donc se dessiner.",
+        "checklist": [
+          "Je confronte les deux idées dans une même phrase.",
+          "Je n'ai donné aucun avis personnel.",
+          "J'ai reformulé sans recopier les documents."
+        ]
+      }
+    },
+    {
+      "unit": "12.5",
+      "dictee": {
+        "titre": "L'artisan de la langue",
+        "texte": "Il est des écrivains qui ne se contentent jamais d'une phrase juste : ils la veulent belle. On raconte que certains passaient une journée entière sur un seul paragraphe, pesant chaque mot, chassant chaque répétition, éprouvant le rythme à voix haute. Rares sont ceux qui ont aujourd'hui cette patience. Pourtant, la règle demeure : un texte s'améliore moins par ce qu'on y ajoute que par ce qu'on en retire. Les verbes passe-partout cèdent la place à des verbes précis ; les phrases trop longues se divisent ; les tournures lourdes s'allègent. Il ne s'agit pas de briller, mais de servir l'idée. Le lecteur ne remarque pas un style limpide : il lit, il comprend, il est ému. Et c'est précisément à cela qu'on reconnaît le travail d'un véritable artisan de la langue.",
+        "points": [
+          "**Il est des écrivains** : il est = il y a, en registre soutenu.",
+          "**pesant**, **chassant**, **éprouvant** : participes présents, invariables.",
+          "**Rares sont ceux qui** : l'attribut placé en tête, accordé avec ceux.",
+          "**il lit, il comprend, il est ému** : un rythme ternaire."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Lis à voix haute ce paragraphe lourd, puis réécris-le avec élégance : « Il y a des gens qui font du sport tous les jours. Il y a des gens qui disent que c'est bon pour la santé. Le fait que le sport soit bon pour le moral est aussi une chose qui est vraie. »",
+        "model": "Nombreux sont ceux qui pratiquent un sport chaque jour, convaincus de ses bienfaits pour la santé. Son effet sur le moral est tout aussi réel.",
+        "checklist": [
+          "J'ai supprimé les « il y a… qui ».",
+          "J'ai remplacé faire et dire par des verbes précis.",
+          "J'ai remplacé « le fait que » par une tournure plus légère."
+        ]
+      }
+    }
+  ]
+}

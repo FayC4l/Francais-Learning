@@ -145,7 +145,7 @@
     { "mot": "prémices", "def": "Premiers signes, débuts de quelque chose (au pluriel).", "ex": "On sent les prémices du printemps.", "theme": "le temps", "nature": "nom" },
     { "mot": "genèse", "def": "Origine et formation de quelque chose.", "ex": "Le film raconte la genèse de ce roman.", "theme": "le temps", "nature": "nom" },
     { "mot": "révolu", "def": "Terminé, qui appartient au passé.", "ex": "Cette époque est révolue.", "theme": "le temps", "nature": "adj" },
-    { "mot": "imminent", "def": "Qui va arriver très bientôt.", "ex": "Le départ est imminent.", "theme": "le temps", "nature": "adj" },
+    { "mot": "sporadique", "def": "Qui se produit de temps en temps, de façon irrégulière.", "ex": "Des averses sporadiques sont annoncées.", "theme": "le temps", "nature": "adj" },
     { "mot": "désuet", "def": "Démodé, qui n'est plus en usage.", "ex": "Ce mot un peu désuet fait sourire.", "theme": "le temps", "nature": "adj" },
     { "mot": "anachronisme", "def": "Erreur qui place une chose à une époque qui n'est pas la sienne.", "ex": "Une montre dans un film sur les Romains : quel anachronisme !", "theme": "le temps", "nature": "nom" },
     { "mot": "contemporain", "def": "Qui vit à la même époque ; ou de notre époque.", "ex": "Elle aime l'art contemporain.", "theme": "le temps", "nature": "adj" },
