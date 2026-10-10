@@ -29,6 +29,8 @@ const FAMILIAR = /(?<![\p{L}'])(bosser|bossé|boulot|boulots|truc|trucs|machin|m
 const GREETING = /^\s*(madame|monsieur|mesdames|messieurs|cher|chère|chers|chères|bonjour|salut|coucou|à l'attention)/iu;
 const SIGNOFF = /(cordialement|bien à (toi|vous)|amicalement|bises|bisous|grosses bises|à bientôt|à très vite|je vous prie d'agréer|veuillez agréer|recevez|salutations|affectueusement|je t'embrasse|amitiés|au plaisir)[^.!?]*[,.!]?\s*\n*\s*[\p{L}-]*\s*$/iu;
 
+const DETERMINER = /^(le|la|les|l'|un|une|des|du|de|d'|au|aux|ce|cet|cette|ces|mon|ma|mes|ton|ta|tes|son|sa|ses|notre|nos|votre|vos|leur|leurs|chaque)$/;
+
 /** Verb phrases per tense (approximate, good enough to check a requirement). */
 export function detectTenses(tk) {
   const c = { present: 0, imparfait: 0, passe_simple: 0, passe_compose: 0, plus_que_parfait: 0, futur: 0, conditionnel: 0, subjonctif: 0, passif: 0 };
@@ -42,10 +44,21 @@ export function detectTenses(tk) {
     const isAux = r.some((x) => x.inf === "avoir" || x.inf === "être");
     if (isAux) {
       let a = k + 1;
-      while (a < W.length && /^(pas|jamais|plus|déjà|bien|tout|encore|beaucoup|toujours|souvent|enfin|ne|n'|rien|vraiment)$/.test(W[a].lower) && a < k + 3) a++;
+      while (a < W.length && /^(pas|jamais|plus|déjà|bien|tout|encore|beaucoup|toujours|souvent|parfois|enfin|ne|n'|rien|vraiment|d'abord|peu|à|aussitôt|longtemps|mal|trop|presque|même|vite|assez|certainement|probablement|sûrement|aussi|alors|ensuite)$/.test(W[a].lower) && a < k + 4) a++;
       const pp = W[a] ? ppReadings(W[a].lower) : [];
+      const auxR = r.find((x) => x.inf === "avoir" || x.inf === "être");
+      if (pp.length && W[a].lower === "été" && auxR.inf === "avoir") {
+        // « a été » : a compound tense of être, and a passive when a participle follows (a été organisée).
+        const next = W[a + 1] ? ppReadings(W[a + 1].lower) : [];
+        if (next.length && W[a + 1].lower !== "été") {
+          c.passif++;
+          a++;
+        }
+        c[COMPOUND[auxR.tense] || "passe_compose"]++;
+        k = a;
+        continue;
+      }
       if (pp.length && W[a].lower !== "été") {
-        const auxR = r.find((x) => x.inf === "avoir" || x.inf === "être");
         const isEtre = auxR.inf === "être";
         if (isEtre && verbInfo(pp[0].inf)?.aux === "avoir" && !/^(se|s'|me|m'|te|t'|nous|vous)$/.test(W[k - 1]?.lower || "")) c.passif++;
         c[COMPOUND[auxR.tense] || "passe_compose"]++;
@@ -56,9 +69,13 @@ export function detectTenses(tk) {
     const prevQue = [1, 2, 3].some((d) => /^(que|qu')$/.test(W[k - d]?.lower || ""));
     const subj = r.find((x) => x.tense.startsWith("subj_"));
     const pick = prevQue && subj ? subj : r.find((x) => x.tense === "present") || r[0];
-    // A noun or an adjective that happens to be a verb form (la porte, une marche) is not counted.
+    // A noun or an adjective that happens to be a verb form (la porte, une marche) is not counted. Être and avoir
+    // (est, a) are verbs unless a determiner comes just before (l'est, un a).
     const mk = maskOf(w);
-    if (mk & (TAGS.NS | TAGS.NP | TAGS.AS | TAGS.AP) && !/^(je|j'|tu|il|elle|on|nous|vous|ils|elles|qui|ne|n'|se|s'|me|m'|te|t')$/.test(W[k - 1]?.lower || "")) continue;
+    const prev = W[k - 1]?.lower || "";
+    if (mk & (TAGS.NS | TAGS.NP | TAGS.AS | TAGS.AP)) {
+      if (isAux ? DETERMINER.test(prev) : !/^(je|j'|tu|il|elle|on|nous|vous|ils|elles|qui|ne|n'|se|s'|me|m'|te|t')$/.test(prev)) continue;
+    }
     c[SIMPLE[pick.tense]]++;
   }
   return c;

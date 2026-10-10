@@ -161,7 +161,11 @@ function tokenRules(tk) {
     const W = s.tokens.filter((i) => Tk[i].word);
     // Capital letter at the start of the sentence.
     const first = Tk[s.tokens[0]];
-    if (first?.word && /^\p{Ll}/u.test(first.text)) add(first.i, first.i, "mechanics", "capital-start", "Une phrase commence par une **majuscule**.", first.text.charAt(0).toUpperCase() + first.text.slice(1));
+    // After suspension points, the sentence may go on in lower case (« Je tiendrai… du moins jusqu'en février »),
+    // and so does a dialogue tag after ? or ! (« — Qui a mangé le gâteau ? demanda Inès. »).
+    const before = tk.text.slice(0, first?.start ?? 0);
+    const dialogueTag = /[?!]\s*$/.test(before) && first?.word && (readings(first.lower).length > 0 || /^(s'|se|lui|leur|me|m'|t')$/.test(first.lower));
+    if (first?.word && /^\p{Ll}/u.test(first.text) && !/(…|\.\.\.)\s*$/.test(before) && !dialogueTag) add(first.i, first.i, "mechanics", "capital-start", "Une phrase commence par une **majuscule**.", first.text.charAt(0).toUpperCase() + first.text.slice(1));
     // Clause starts (for « si », « nous / vous » subjects).
     const clauseStart = (k) => k === 0 || STARTS_CLAUSE.has(low(W[k] - 1)) || STARTS_CLAUSE.has(low(W[k - 1]));
     for (let k = 0; k < W.length; k++) {
@@ -273,7 +277,9 @@ function tokenRules(tk) {
 
       // leur + verb / leurs before a verb, leur + plural noun.
       if (lw === "leurs" && adjacent && readings(next.lower).length && !(m(next.lower) & (T.NP | T.AP))) add(i, i, "grammar", "leur-verb", "Devant un verbe, **leur** est un pronom (= à eux) : il ne prend jamais de s.", keepCase(t.text, "leur"));
-      if (lw === "leur" && adjacent && m(next.lower) & T.NP && !(m(next.lower) & (T.NS | T.V | T.AS))) add(i, i, "grammar", "leur-plural", "Devant un nom au pluriel, le déterminant prend un s : **leurs**.", keepCase(t.text, "leurs"));
+      // (A noun in -s, -x or -z without a singular form is invariable: leur avis, leur choix.)
+      const invariable = (w) => /[sxz]$/.test(w) && !m(w.slice(0, -1));
+      if (lw === "leur" && adjacent && m(next.lower) & T.NP && !(m(next.lower) & (T.NS | T.V | T.AS)) && !invariable(next.lower)) add(i, i, "grammar", "leur-plural", "Devant un nom au pluriel, le déterminant prend un s : **leurs**.", keepCase(t.text, "leurs"));
 
       // être + participle / adjective agreed with elle, elles, ils (elle est parti → partie).
       if (/^(elle|elles|ils)$/.test(lw) && !(prev && PREPOSITIONS.has(prev.lower))) {
@@ -404,9 +410,17 @@ function tokenRules(tk) {
       if (lw === "sans" && prev && /^(il|elle|on|ils|elles)$/.test(prev.lower) && next && readings(next.lower).length) add(i, i, "grammar", "sans-sen", "Devant un verbe, c'est **s'en** (se + en) : il s'en va.", "s'en");
       if (/^(quelle|quelles)$/.test(lw) && next && readings(next.lower).length && !(m(next.lower) & (T.NS | T.NP | T.AS | T.AP)) && prev && /^(que|crois|pense|sais|dit|veux|faut|espère)$/.test(prev.lower)) add(i, i, "grammar", "quelle-quelle", "Devant un verbe, c'est **qu'elle** (que + elle) : on peut dire « qu'il ».", lw === "quelle" ? "qu'elle" : "qu'elles");
     }
-    // Final punctuation of the sentence.
+    // Final punctuation of the sentence — but a signature alone on its line after a comma (« À bientôt,\nLéa ») is not a sentence.
     const last = Tk[s.tokens[s.tokens.length - 1]];
-    if (last && last.word && W.length >= 3) add(last.i, last.i, "mechanics", "end-punct", "Termine ta phrase par un **point** (ou ? ! …).", `${last.text}.`);
+    const comma = s.tokens.findLastIndex((i) => Tk[i].text === ",");
+    const tail = comma >= 0 ? s.tokens.slice(comma + 1) : [];
+    const afterComma = tail.length > 0 && tail.length <= 4 && tk.text.slice(Tk[s.tokens[comma]].end, Tk[tail[0]].start).includes("\n");
+    // … or the last line of a letter, alone after the closing formula (« M. et Mme Petit »).
+    const lastLine = s === tk.sentences[tk.sentences.length - 1] && W.length <= 5 && /\n\s*$/.test(tk.text.slice(0, Tk[s.tokens[0]].start)) && W.every((i) => /^\p{Lu}/u.test(Tk[i].text) || /^(et|de|du|des|la|le)$/.test(Tk[i].lower));
+    // A title on the first line (« Une vache en vadrouille sur l'autoroute ») needs no point either.
+    const title = s === tk.sentences[0] && W.length <= 12 && /^[^\S\n]*\n/.test(tk.text.slice(last?.end ?? 0));
+    const signature = afterComma || lastLine || title;
+    if (last && last.word && W.length >= 3 && !signature) add(last.i, last.i, "mechanics", "end-punct", "Termine ta phrase par un **point** (ou ? ! …).", `${last.text}.`);
   }
   return out;
 }
@@ -455,6 +469,8 @@ function spellingRules(tk, suggestFn) {
     if (/^\p{Lu}/u.test(t.text) && (!firstOfSentence.has(t.i) || names.has(t.lower) || shortSentence.has(t.i))) continue;
     if (/^\p{Lu}{2,}$/u.test(t.text)) continue;
     if (tierOf(t.lower) > 0) continue;
+    // A rarer form of a verb the dictionary knows (cultiveront, baignerais), checked by the conjugator.
+    if (readings(t.lower).length || ppReadings(t.lower).length) continue;
     // A missing apostrophe: « sétait » → « s'était », « jai » → « j'ai ».
     const ap = t.lower.match(/^(c|d|j|l|m|n|s|t|qu)(.+)$/);
     const fix = [];

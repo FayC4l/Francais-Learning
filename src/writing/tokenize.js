@@ -4,6 +4,7 @@
 
 const WORD = /[\p{L}]+(?:['’][\p{L}]+)*(?:-[\p{L}]+(?:['’][\p{L}]+)*)*['’]?|\d+(?:[.,  ]\d{3})*(?:[.,]\d+)?|\.{3}|[.!?]+|[,;:()"“”«»…—–-]/gu;
 const ELIDED = /^(c|d|j|l|m|n|s|t|qu|jusqu|lorsqu|puisqu|quoiqu)['’](?=\p{L})/iu;
+const ABBREVIATION = /^(M|MM|cf|p|pp|av|bd|vol|chap|env|éd)$/;
 const WHOLE = new Set(["aujourd'hui", "quelqu'un", "quelqu'une", "presqu'île", "presqu'îles", "prud'homme", "prud'hommes", "entr'ouvrir", "c'est-à-dire", "d'abord", "d'accord", "d'ailleurs", "d'autant", "d'après"]);
 
 /**
@@ -42,7 +43,9 @@ export function tokenize(text) {
   tokens.forEach((t, i) => {
     if (cur.length && /\n\s*\n/.test(src.slice(tokens[i - 1].end, t.start))) close();
     cur.push(i);
-    if (/^[.!?]+$|^\.\.\.$|^…$/.test(t.text)) close();
+    // The point of an abbreviation (M. Durand, cf. p. 12) does not end the sentence.
+    const abbr = t.text === "." && ABBREVIATION.test(tokens[i - 1]?.text || "") && tokens[i - 1].end === t.start && tokens[i + 1];
+    if (/^[.!?]+$|^\.\.\.$|^…$/.test(t.text) && !abbr) close();
   });
   close();
   tokens.forEach((t, i) => (t.i = i));

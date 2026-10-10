@@ -1,0 +1,655 @@
+{
+  "prompts": [
+    {
+      "id": "w01-1", "level": 1, "type": "description", "title": "Mon animal préféré",
+      "prompt": "Décris ton animal préféré : à quoi il ressemble, ce qu'il fait, pourquoi tu l'aimes. Écris au présent et emploie au moins une fois « et » et une fois « est ».",
+      "words": [25, 60],
+      "require": [
+        { "kind": "tense", "value": "present", "min": 3, "label": "Au moins 3 verbes au présent" },
+        { "kind": "words", "value": ["et", "est"], "min": 2, "label": "Emploie « et » et « est »" }
+      ],
+      "model": "Mon animal préféré est le chat. Il est doux et très malin. Il a de grands yeux verts et une longue queue. Le matin, il dort au soleil sur le balcon. Le soir, il joue avec une petite balle. Quand je rentre de l'école, il vient toujours me dire bonjour."
+    },
+    {
+      "id": "w01-2", "level": 1, "type": "message", "title": "Une invitation à jouer", "ages": ["enfant", "ado"],
+      "prompt": "Écris un petit message à un ami pour l'inviter à jouer chez toi mercredi. Pose-lui au moins une question et emploie « a » et « à ».",
+      "words": [25, 60],
+      "require": [
+        { "kind": "questions", "min": 1, "label": "Au moins une question" },
+        { "kind": "words", "value": ["a", "à"], "min": 2, "label": "Emploie « a » et « à »" }
+      ],
+      "model": "Salut Hugo !\n\nMercredi, je suis libre tout l'après-midi. Tu veux venir jouer à la maison ? Ma mère a acheté un nouveau jeu de société. On peut aussi faire du vélo dans le jardin. Réponds-moi vite !\n\nÀ bientôt,\nLéa"
+    },
+    {
+      "id": "w01-3", "level": 1, "type": "description", "title": "Ma chambre",
+      "prompt": "Décris ta chambre : les meubles, les couleurs, ce que tu aimes y faire. Écris au présent.",
+      "words": [25, 60],
+      "require": [
+        { "kind": "tense", "value": "present", "min": 4, "label": "Au moins 4 verbes au présent" }
+      ],
+      "model": "Ma chambre est petite mais très claire. Les murs sont bleus et le lit est sous la fenêtre. Sur mon bureau, il y a une lampe verte et une pile de livres. J'aime lire dans mon lit le soir. Le samedi, je range mes jouets dans un grand coffre en bois."
+    },
+    {
+      "id": "w01-4", "level": 1, "type": "courriel", "title": "Une absence à l'école", "ages": ["adulte"],
+      "prompt": "Votre enfant est malade. Écrivez un court courriel à son enseignante pour la prévenir de son absence et demander les devoirs.",
+      "words": [25, 60],
+      "require": [
+        { "kind": "questions", "min": 1, "label": "Au moins une question" },
+        { "kind": "words", "value": ["est", "et"], "min": 2, "label": "Emploie « est » et « et »" }
+      ],
+      "model": "Madame,\n\nMon fils Lucas est malade depuis hier soir. Il a de la fièvre et il tousse beaucoup. Il ne peut donc pas venir à l'école aujourd'hui. Pouvez-vous lui donner les devoirs de la semaine ? Je vous remercie.\n\nCordialement,\nKarim"
+    },
+    {
+      "id": "w01-5", "level": 1, "type": "message", "title": "Une carte postale", "ages": ["enfant", "ado"],
+      "prompt": "Tu es en vacances. Écris une carte postale à ta grand-mère : où tu es, le temps qu'il fait, ce que tu fais chaque jour.",
+      "words": [25, 60],
+      "require": [
+        { "kind": "words", "value": ["il fait", "il y a"], "min": 1, "label": "Emploie « il fait » ou « il y a »" },
+        { "kind": "tense", "value": "present", "min": 4, "label": "Au moins 4 verbes au présent" }
+      ],
+      "model": "Chère Mamie,\n\nJe t'écris de la mer. Il fait beau et chaud. Le matin, je nage avec Papa. L'après-midi, je construis des châteaux de sable avec ma sœur. Le soir, nous mangeons une glace sur le port. Je pense fort à toi.\n\nJe t'embrasse,\nInès"
+    },
+    {
+      "id": "w01-6", "level": 1, "type": "description", "title": "Mon quartier", "ages": ["ado", "adulte"],
+      "prompt": "Décris ton quartier : les rues, les magasins, les gens que l'on y croise. Écris au présent.",
+      "words": [25, 60],
+      "require": [
+        { "kind": "words", "value": ["il y a"], "min": 1, "label": "Emploie « il y a »" },
+        { "kind": "tense", "value": "present", "min": 4, "label": "Au moins 4 verbes au présent" }
+      ],
+      "model": "J'habite dans un quartier calme, près de la gare. Dans ma rue, il y a une boulangerie, une pharmacie et un petit parc. Le matin, les gens achètent leur pain et partent au travail. Le soir, les enfants jouent au ballon sur la place. Tout le monde se connaît et se dit bonjour."
+    },
+    {
+      "id": "w01-7", "level": 1, "type": "portrait", "title": "Mon meilleur ami",
+      "prompt": "Fais le portrait de ton meilleur ami ou de ta meilleure amie : son physique, son caractère, ce que vous faites ensemble.",
+      "words": [25, 60],
+      "require": [
+        { "kind": "words", "value": ["il est", "elle est"], "min": 1, "label": "Emploie « il est » ou « elle est »" },
+        { "kind": "tense", "value": "present", "min": 3, "label": "Au moins 3 verbes au présent" }
+      ],
+      "model": "Ma meilleure amie s'appelle Jade. Elle est grande et elle a les cheveux bruns. Elle est drôle et toujours gentille avec tout le monde. Nous sommes dans la même classe. À la récréation, nous jouons à la corde à sauter. Le week-end, nous faisons souvent des gâteaux ensemble."
+    },
+    {
+      "id": "w01-8", "level": 1, "type": "courriel", "title": "Réserver une table", "ages": ["adulte"],
+      "prompt": "Écrivez un court courriel à un restaurant pour réserver une table : le jour, l'heure, le nombre de personnes. Posez une question.",
+      "words": [25, 60],
+      "require": [
+        { "kind": "questions", "min": 1, "label": "Au moins une question" }
+      ],
+      "model": "Bonjour,\n\nJe souhaite réserver une table pour quatre personnes samedi soir, à vingt heures. Nous fêtons l'anniversaire de ma fille, qui a dix ans, et nous aimerions être au calme. Est-il possible d'avoir une table près de la fenêtre ? Merci d'avance pour votre réponse.\n\nCordialement,\nSarah"
+    },
+
+    {
+      "id": "w02-1", "level": 2, "type": "description", "title": "Le jardin de mes grands-parents", "ages": ["enfant", "ado"],
+      "prompt": "Décris le jardin de tes grands-parents (ou un jardin que tu aimes) : les fleurs, les arbres, les animaux. Attention aux pluriels !",
+      "words": [25, 60],
+      "require": [
+        { "kind": "words", "value": ["les", "des"], "min": 2, "label": "Emploie « les » et « des »" },
+        { "kind": "tense", "value": "present", "min": 4, "label": "Au moins 4 verbes au présent" }
+      ],
+      "model": "Le jardin de mes grands-parents est plein de couleurs. Les roses rouges grimpent le long du mur et les tulipes jaunes bordent les allées. Au fond, deux grands pommiers donnent des fruits délicieux. Les oiseaux chantent dans les branches et un vieux chat gris dort sous le banc."
+    },
+    {
+      "id": "w02-2", "level": 2, "type": "portrait", "title": "Ma famille",
+      "prompt": "Présente les membres de ta famille : leur âge, leur caractère, ce qu'ils aiment. Accorde bien les adjectifs.",
+      "words": [25, 60],
+      "require": [
+        { "kind": "words", "value": ["ils", "elles"], "min": 1, "label": "Emploie « ils » ou « elles »" },
+        { "kind": "tense", "value": "present", "min": 5, "label": "Au moins 5 verbes au présent" }
+      ],
+      "model": "Dans ma famille, nous sommes cinq. Mon père est patient et ma mère est très drôle. Mes deux sœurs sont jumelles : elles ont huit ans et elles adorent danser. Moi, je suis l'aîné. Le dimanche, nous allons tous ensemble au parc. Nos voisins disent que nous sommes une famille bruyante !"
+    },
+    {
+      "id": "w02-3", "level": 2, "type": "description", "title": "Le marché du samedi",
+      "prompt": "Décris le marché : les étals, les couleurs, les odeurs, les marchands. Emploie au moins trois noms au pluriel.",
+      "words": [25, 60],
+      "require": [
+        { "kind": "words", "value": ["les", "des"], "min": 2, "label": "Emploie « les » et « des »" },
+        { "kind": "tense", "value": "present", "min": 4, "label": "Au moins 4 verbes au présent" }
+      ],
+      "model": "Le samedi matin, le marché envahit la place. Les marchands crient leurs prix et les clients remplissent leurs paniers. Les fraises sentent bon, les melons sont bien mûrs et les fromages forment de petites montagnes. Des enfants goûtent des cerises. Les fleuristes vendent des bouquets colorés."
+    },
+    {
+      "id": "w02-4", "level": 2, "type": "message", "title": "Le chat perdu", "ages": ["ado", "adulte"],
+      "prompt": "Ton chat a disparu. Écris un message à tes voisins pour le décrire et leur demander de l'aide.",
+      "words": [25, 60],
+      "require": [
+        { "kind": "questions", "min": 1, "label": "Au moins une question" },
+        { "kind": "tense", "value": "present", "min": 3, "label": "Au moins 3 verbes au présent" }
+      ],
+      "model": "Bonjour à tous,\n\nNotre chat Caramel a disparu depuis lundi. Il est roux, avec des pattes blanches et un collier bleu. Il est un peu peureux. Pouvez-vous regarder dans vos garages et vos jardins ? Si vous le trouvez, appelez-nous. Merci beaucoup !\n\nAmitiés,\nla famille Martin"
+    },
+    {
+      "id": "w02-5", "level": 2, "type": "message", "title": "Mon anniversaire", "ages": ["enfant", "ado"],
+      "prompt": "Écris une invitation pour ton anniversaire : le jour, l'heure, le lieu, les activités prévues. Pose une question à la fin.",
+      "words": [25, 60],
+      "require": [
+        { "kind": "questions", "min": 1, "label": "Au moins une question" },
+        { "kind": "tense", "value": "futur", "min": 1, "label": "Au moins un verbe au futur" }
+      ],
+      "model": "Chers amis,\n\nPour mes dix ans, je fais une grande fête samedi après-midi, à partir de quinze heures. Nous jouerons dans le jardin et nous mangerons un énorme gâteau au chocolat. Mes parents préparent aussi une chasse au trésor. Pouvez-vous me répondre avant jeudi ?\n\nÀ samedi,\nNathan"
+    },
+    {
+      "id": "w02-6", "level": 2, "type": "courriel", "title": "Merci pour le cadeau",
+      "prompt": "Écris un courriel à un membre de ta famille pour le remercier d'un cadeau : décris le cadeau et dis pourquoi il te plaît.",
+      "words": [25, 60],
+      "require": [
+        { "kind": "words", "value": ["merci", "remercie"], "min": 1, "label": "Remercie ton correspondant" },
+        { "kind": "tense", "value": "present", "min": 3, "label": "Au moins 3 verbes au présent" }
+      ],
+      "model": "Chère tante Sophie,\n\nMerci beaucoup pour le livre sur les volcans ! Les photos sont magnifiques et les explications sont claires. Je le lis tous les soirs avant de dormir. Mes amis le trouvent génial. Plus tard, je veux devenir volcanologue.\n\nJe t'embrasse très fort,\nThéo"
+    },
+    {
+      "id": "w02-7", "level": 2, "type": "description", "title": "À la ferme",
+      "prompt": "Décris une ferme et ses animaux : ce qu'ils mangent, ce qu'ils font, les bruits qu'ils font. Attention aux pluriels en -x !",
+      "words": [25, 60],
+      "require": [
+        { "kind": "words", "value": ["chevaux", "animaux", "agneaux", "veaux", "oiseaux"], "min": 1, "label": "Un pluriel en -x (chevaux, animaux, agneaux…)" },
+        { "kind": "tense", "value": "present", "min": 4, "label": "Au moins 4 verbes au présent" }
+      ],
+      "model": "À la ferme, les animaux se réveillent tôt. Le coq chante dès l'aube. Les vaches broutent l'herbe du pré et les chevaux galopent près de la rivière. Dans la grange, les agneaux dorment sur la paille. Les poules picorent les graines que la fermière leur donne."
+    },
+    {
+      "id": "w02-8", "level": 2, "type": "courriel", "title": "Un problème dans la rue", "ages": ["adulte"],
+      "prompt": "Écrivez un courriel à la mairie pour signaler un problème dans votre rue (lampadaires cassés, trottoir abîmé…) et demander une intervention.",
+      "words": [25, 60],
+      "require": [
+        { "kind": "questions", "min": 1, "label": "Au moins une question" },
+        { "kind": "tense", "value": "present", "min": 3, "label": "Au moins 3 verbes au présent" }
+      ],
+      "model": "Madame, Monsieur,\n\nDans la rue des Lilas, trois lampadaires sont cassés depuis un mois. Le soir, la rue est très sombre et les piétons ont peur. Les enfants rentrent de l'école à la nuit tombée. Pouvez-vous envoyer rapidement une équipe ?\n\nCordialement,\nYasmine"
+    },
+
+    {
+      "id": "w03-1", "level": 3, "type": "recit", "title": "Un souvenir de vacances", "ages": ["enfant", "ado"],
+      "prompt": "Raconte un souvenir de vacances. Décris le décor à l'imparfait et raconte les actions au passé composé.",
+      "words": [50, 100],
+      "require": [
+        { "kind": "tense", "value": "imparfait", "min": 2, "label": "Au moins 2 verbes à l'imparfait (le décor)" },
+        { "kind": "tense", "value": "passe_compose", "min": 3, "label": "Au moins 3 verbes au passé composé (les actions)" }
+      ],
+      "model": "L'été dernier, nous sommes partis en Bretagne. Il faisait beau et la mer était calme. Un matin, mon père a loué un petit bateau. Nous avons navigué jusqu'à une île déserte. Sur la plage, il y avait des milliers de coquillages. Ma sœur en a ramassé un plein seau. Soudain, un phoque a sorti la tête de l'eau, juste devant nous ! Nous avons ri pendant tout le retour. C'est mon plus beau souvenir de vacances."
+    },
+    {
+      "id": "w03-2", "level": 3, "type": "recit", "title": "Une journée qui commence mal",
+      "prompt": "Raconte une journée qui a très mal commencé (réveil en retard, bus manqué…) mais qui a bien fini. Utilise des mots pour enchaîner les actions (d'abord, ensuite, puis, enfin).",
+      "words": [50, 100],
+      "require": [
+        { "kind": "tense", "value": "passe_compose", "min": 4, "label": "Au moins 4 verbes au passé composé" },
+        { "kind": "connectors", "min": 3, "label": "Au moins 3 mots de liaison différents" }
+      ],
+      "model": "Lundi, rien n'a fonctionné. D'abord, mon réveil n'a pas sonné. Ensuite, j'ai renversé mon chocolat sur mon pantalon. Puis j'ai couru jusqu'à l'arrêt, mais le bus était déjà parti. Je suis donc arrivé en retard au collège, tout essoufflé. Pourtant, la journée s'est bien terminée : le professeur avait oublié le contrôle et nous a proposé un jeu. Enfin, le soir, ma mère a préparé des crêpes."
+    },
+    {
+      "id": "w03-3", "level": 3, "type": "courriel", "title": "Mon week-end", "ages": ["ado", "adulte"],
+      "prompt": "Écris un courriel à un ami pour lui raconter ton week-end, puis demande-lui des nouvelles.",
+      "words": [50, 100],
+      "require": [
+        { "kind": "tense", "value": "passe_compose", "min": 3, "label": "Au moins 3 verbes au passé composé" },
+        { "kind": "questions", "min": 1, "label": "Au moins une question" }
+      ],
+      "model": "Salut Malik,\n\nJ'ai passé un très bon week-end ! Samedi, je suis allé à Lyon avec mes cousins. Nous avons visité le vieux quartier et nous avons mangé dans un petit restaurant. Le soir, il pleuvait, alors nous avons regardé un film à la maison. Dimanche, je me suis reposé et j'ai terminé mon livre. Et toi, qu'est-ce que tu as fait ? Tu as gagné ton match de basket ?\n\nÀ bientôt,\nThéo"
+    },
+    {
+      "id": "w03-4", "level": 3, "type": "description", "title": "Quand j'étais petit", "ages": ["enfant", "ado"],
+      "prompt": "Décris tes habitudes quand tu étais plus petit : tes jeux, tes repas, tes peurs, tes amis. Emploie l'imparfait.",
+      "words": [50, 100],
+      "require": [
+        { "kind": "tense", "value": "imparfait", "min": 5, "label": "Au moins 5 verbes à l'imparfait" }
+      ],
+      "model": "Quand j'étais petit, j'habitais dans une maison au bord d'une forêt. Chaque mercredi, je construisais des cabanes avec mon voisin Lucas. Nous imaginions que nous étions des explorateurs perdus. Le soir, ma grand-mère nous préparait une soupe de légumes que je détestais. J'avais peur du noir, alors je dormais toujours avec une petite lampe. Aujourd'hui, la forêt n'a pas changé, mais je n'ai plus peur du noir."
+    },
+    {
+      "id": "w03-5", "level": 3, "type": "lettre", "title": "Un colis abîmé", "ages": ["adulte"],
+      "prompt": "Vous avez reçu un colis abîmé. Écrivez une lettre au service client pour raconter ce qui s'est passé et demander une solution.",
+      "words": [50, 100],
+      "require": [
+        { "kind": "tense", "value": "passe_compose", "min": 3, "label": "Au moins 3 verbes au passé composé" },
+        { "kind": "connectors", "min": 2, "label": "Au moins 2 mots de liaison différents" }
+      ],
+      "model": "Madame, Monsieur,\n\nLe dix mars, j'ai commandé un service à thé sur votre site. J'ai reçu le colis hier, mais le carton était déchiré et deux tasses étaient cassées. J'ai pris des photos, que je joins à ce courrier. Je souhaite donc recevoir deux tasses neuves ou être remboursé. Je vous remercie par avance de votre réponse rapide.\n\nJe vous prie d'agréer, Madame, Monsieur, mes salutations distinguées.\nKarim Haddad"
+    },
+    {
+      "id": "w03-6", "level": 3, "type": "recit", "title": "La panne d'électricité",
+      "prompt": "Raconte une soirée où l'électricité a été coupée. Qu'avez-vous fait ? Mélange l'imparfait et le passé composé.",
+      "words": [50, 100],
+      "require": [
+        { "kind": "tense", "value": "imparfait", "min": 2, "label": "Au moins 2 verbes à l'imparfait" },
+        { "kind": "tense", "value": "passe_compose", "min": 3, "label": "Au moins 3 verbes au passé composé" }
+      ],
+      "model": "C'était un soir d'hiver. Nous dînions tranquillement quand, soudain, toutes les lumières se sont éteintes. Mon petit frère a crié. Mon père a cherché des bougies dans le placard pendant que ma mère allumait la lampe de son téléphone. Puis nous avons joué aux cartes à la lueur des bougies. Ma grand-mère nous a raconté des histoires de son enfance. Quand le courant est revenu, personne ne voulait arrêter la partie !"
+    },
+    {
+      "id": "w03-7", "level": 3, "type": "message", "title": "Le match de samedi", "ages": ["enfant", "ado"],
+      "prompt": "Raconte à un ami absent le match (ou la compétition) de samedi : le déroulement, le moment le plus fort, le résultat.",
+      "words": [50, 100],
+      "require": [
+        { "kind": "tense", "value": "passe_compose", "min": 4, "label": "Au moins 4 verbes au passé composé" },
+        { "kind": "connectors", "min": 2, "label": "Au moins 2 mots de liaison différents" }
+      ],
+      "model": "Salut Karim,\n\nTu as raté un match incroyable ! Au début, l'équipe adverse a marqué deux buts très vite. Nous étions découragés. Mais à la mi-temps, l'entraîneur nous a encouragés. Ensuite, Hugo a marqué de la tête et Inès a égalisé juste avant la fin. Enfin, pendant les tirs au but, notre gardienne a arrêté le dernier tir. Nous avons gagné ! Tout le monde a fêté la victoire sur le terrain.\n\nÀ lundi,\nSarah"
+    },
+    {
+      "id": "w03-8", "level": 3, "type": "courriel", "title": "Un objet oublié", "ages": ["adulte"],
+      "prompt": "Vous avez oublié un objet dans un train. Écrivez au service des objets trouvés pour le décrire et demander comment le récupérer.",
+      "words": [50, 100],
+      "require": [
+        { "kind": "tense", "value": "passe_compose", "min": 3, "label": "Au moins 3 verbes au passé composé" },
+        { "kind": "questions", "min": 1, "label": "Au moins une question" }
+      ],
+      "model": "Madame, Monsieur,\n\nHier soir, j'ai pris le train de dix-huit heures entre Lille et Paris. En descendant, j'ai oublié mon sac à dos noir sur le porte-bagages de la voiture numéro quatre. Il contenait un ordinateur portable et un carnet rouge. J'ai déjà appelé la gare, mais personne n'a pu me renseigner. Avez-vous retrouvé ce sac ? Comment puis-je le récupérer ?\n\nCordialement,\nChloé Bernard"
+    },
+
+    {
+      "id": "w04-1", "level": 4, "type": "lettre", "title": "Lettre à moi dans dix ans", "ages": ["enfant", "ado"],
+      "prompt": "Écris une lettre à la personne que tu seras dans dix ans : où vivras-tu, que feras-tu, qu'auras-tu appris ?",
+      "words": [50, 100],
+      "require": [
+        { "kind": "tense", "value": "futur", "min": 5, "label": "Au moins 5 verbes au futur" }
+      ],
+      "model": "Cher moi du futur,\n\nDans dix ans, tu auras vingt-deux ans. Tu vivras peut-être dans une grande ville, près de la mer. Tu feras sans doute des études de biologie, car tu aimes les animaux depuis toujours. Tu parleras trois langues et tu voyageras souvent. J'espère que tu seras resté curieux et gentil. Surtout, n'oublie pas de rendre visite à Mamie !\n\nÀ dans dix ans,\nNathan"
+    },
+    {
+      "id": "w04-2", "level": 4, "type": "message", "title": "Organiser une sortie",
+      "prompt": "Propose à un groupe d'amis une sortie le week-end prochain : le programme, l'heure, ce que chacun apportera.",
+      "words": [50, 100],
+      "require": [
+        { "kind": "tense", "value": "futur", "min": 4, "label": "Au moins 4 verbes au futur" },
+        { "kind": "questions", "min": 1, "label": "Au moins une question" }
+      ],
+      "model": "Salut à tous,\n\nSamedi prochain, je vous propose une randonnée dans les Alpes. Nous partirons à huit heures de la gare et nous prendrons le car jusqu'au village. Ensuite, nous marcherons deux heures jusqu'au lac. Léa apportera les sandwichs, Hugo s'occupera des boissons et moi, je prendrai les fruits. Nous rentrerons vers dix-huit heures. Qui sera de la partie ?\n\nAmitiés,\nJade"
+    },
+    {
+      "id": "w04-3", "level": 4, "type": "description", "title": "La ville de demain",
+      "prompt": "Imagine ta ville dans cinquante ans : les transports, les maisons, la nature, la vie quotidienne.",
+      "words": [50, 100],
+      "require": [
+        { "kind": "tense", "value": "futur", "min": 5, "label": "Au moins 5 verbes au futur" },
+        { "kind": "connectors", "min": 2, "label": "Au moins 2 mots de liaison différents" }
+      ],
+      "model": "Dans cinquante ans, ma ville sera plus verte et plus calme. Les voitures ne rouleront plus dans le centre : on se déplacera à vélo ou en tramway. Les toits des immeubles deviendront des jardins où les habitants cultiveront des légumes. De plus, chaque quartier aura son parc et sa bibliothèque. Cependant, certaines choses ne changeront pas : on ira toujours au marché le samedi matin."
+    },
+    {
+      "id": "w04-4", "level": 4, "type": "courriel", "title": "Des cours de natation", "ages": ["adulte"],
+      "prompt": "Écrivez à la piscine municipale pour demander des renseignements sur les cours de natation pour enfants. Soyez poli : employez le conditionnel.",
+      "words": [50, 100],
+      "require": [
+        { "kind": "tense", "value": "conditionnel", "min": 2, "label": "Au moins 2 verbes au conditionnel (politesse)" },
+        { "kind": "questions", "min": 2, "label": "Au moins 2 questions" }
+      ],
+      "model": "Madame, Monsieur,\n\nJe souhaiterais inscrire mes deux enfants, âgés de six et huit ans, aux cours de natation de la piscine municipale. Pourriez-vous m'indiquer les horaires des cours du mercredi ? Quel est le tarif pour l'année ? J'aimerais aussi savoir s'il reste des places pour la rentrée. Je vous serais reconnaissante de me répondre rapidement.\n\nCordialement,\nSarah Lambert"
+    },
+    {
+      "id": "w04-5", "level": 4, "type": "recit", "title": "Si j'étais invisible…", "ages": ["enfant", "ado"],
+      "prompt": "Imagine : si tu étais invisible pendant une journée, que ferais-tu ? Emploie si + imparfait, puis le conditionnel.",
+      "words": [50, 100],
+      "require": [
+        { "kind": "tense", "value": "conditionnel", "min": 4, "label": "Au moins 4 verbes au conditionnel" },
+        { "kind": "words", "value": ["si j'étais", "si je pouvais", "si j'avais"], "min": 1, "label": "Une phrase en « si + imparfait »" }
+      ],
+      "model": "Si j'étais invisible pendant une journée, je commencerais par entrer dans les cuisines d'un grand restaurant pour goûter tous les desserts. Ensuite, j'irais au stade et je m'assiérais sur le banc des joueurs. L'après-midi, je visiterais les coulisses d'un théâtre. Le soir, je ferais une blague à mon frère : je déplacerais ses affaires sans qu'il me voie ! Mais au fond, je serais content de redevenir visible."
+    },
+    {
+      "id": "w04-6", "level": 4, "type": "courriel", "title": "Un projet pour le club", "ages": ["ado", "adulte"],
+      "prompt": "Écris au président d'un club (sport, théâtre, musique) pour proposer un projet : un tournoi, un spectacle, une sortie. Explique comment il se déroulera.",
+      "words": [50, 100],
+      "require": [
+        { "kind": "tense", "value": "conditionnel", "min": 2, "label": "Au moins 2 verbes au conditionnel" },
+        { "kind": "tense", "value": "futur", "min": 2, "label": "Au moins 2 verbes au futur" }
+      ],
+      "model": "Monsieur le Président,\n\nJe voudrais vous proposer d'organiser un tournoi de tennis de table pour les familles du club. Il aurait lieu un samedi de juin, dans le gymnase. Les équipes seront composées d'un parent et d'un enfant. Les bénévoles prépareront un goûter et nous remettrons une coupe aux gagnants. Ce tournoi permettrait de faire connaître le club dans le quartier.\n\nBien à vous,\nLucas Moreau"
+    },
+    {
+      "id": "w04-7", "level": 4, "type": "description", "title": "Mes vacances idéales", "ages": ["adulte"],
+      "prompt": "Décrivez vos vacances idéales : la destination, le logement, les activités, les compagnons de voyage. Employez le conditionnel.",
+      "words": [50, 100],
+      "require": [
+        { "kind": "tense", "value": "conditionnel", "min": 5, "label": "Au moins 5 verbes au conditionnel" }
+      ],
+      "model": "Mes vacances idéales se dérouleraient en Corse, au mois de juin, avant l'arrivée des touristes. Nous louerions une petite maison en pierre au-dessus de la mer. Le matin, je me baignerais dans une crique déserte. L'après-midi, nous partirions marcher dans le maquis, puis nous dînerions sur la terrasse en regardant le coucher du soleil. Je n'emporterais ni ordinateur ni montre : le temps n'aurait plus d'importance."
+    },
+    {
+      "id": "w04-8", "level": 4, "type": "message", "title": "Mes bonnes résolutions",
+      "prompt": "C'est le premier janvier. Écris tes bonnes résolutions pour l'année qui commence, et explique pourquoi tu les prends.",
+      "words": [50, 100],
+      "require": [
+        { "kind": "tense", "value": "futur", "min": 5, "label": "Au moins 5 verbes au futur" },
+        { "kind": "connectors", "min": 2, "label": "Au moins 2 mots de liaison différents" }
+      ],
+      "model": "Cette année, je serai plus organisé. D'abord, je préparerai mon sac la veille, car je déteste courir le matin. Ensuite, je lirai un livre par mois, parce que la lecture me calme. Je passerai aussi moins de temps sur mon téléphone. Le week-end, j'aiderai davantage mes parents à la maison. Enfin, j'apprendrai à cuisiner trois plats. Je tiendrai mes promesses… du moins jusqu'en février !"
+    },
+
+    {
+      "id": "w05-1", "level": 5, "type": "recit", "title": "Le trésor du grenier",
+      "prompt": "Écris le début d'un récit : un enfant découvre un objet mystérieux dans un grenier. Raconte au passé simple et décris à l'imparfait.",
+      "words": [80, 140],
+      "require": [
+        { "kind": "tense", "value": "passe_simple", "min": 4, "label": "Au moins 4 verbes au passé simple" },
+        { "kind": "tense", "value": "imparfait", "min": 2, "label": "Au moins 2 verbes à l'imparfait" }
+      ],
+      "model": "Le grenier de la vieille maison sentait la poussière et le bois sec. Une lumière pâle filtrait par la lucarne. Léon avança prudemment entre les cartons et les meubles recouverts de draps. Soudain, son pied heurta un objet dur. Il se pencha et découvrit un coffret de bois sculpté, fermé par un cadenas rouillé. Le cœur battant, il le secoua doucement : quelque chose tintait à l'intérieur. Il chercha une clé dans les tiroirs d'une commode, en vain. Alors il descendit l'escalier en courant pour appeler sa sœur. Ce soir-là, les deux enfants ne dormirent pas beaucoup."
+    },
+    {
+      "id": "w05-2", "level": 5, "type": "dialogue", "title": "La dispute",
+      "prompt": "Écris un dialogue entre deux frères et sœurs qui se disputent pour une raison drôle. Utilise les tirets et des verbes de parole variés (demanda, répondit, s'écria…).",
+      "words": [80, 140],
+      "require": [
+        { "kind": "words", "value": ["dit", "demanda", "répondit", "s'écria", "protesta", "soupira", "murmura", "lança", "répliqua"], "min": 3, "label": "Au moins 3 verbes de parole différents" },
+        { "kind": "questions", "min": 2, "label": "Au moins 2 questions" }
+      ],
+      "model": "— Qui a mangé le dernier morceau de gâteau ? demanda Inès en ouvrant le réfrigérateur.\n— Ce n'est pas moi, répondit Malik sans lever les yeux de son livre.\n— Tu as du chocolat sur le menton ! s'écria sa sœur.\n— C'est du chocolat d'hier, répliqua-t-il calmement.\n— Hier, nous avons mangé une tarte aux pommes !\nMalik referma son livre et soupira.\n— Bon, d'accord. Mais tu avais promis de le partager avec moi, tu te souviens ?\n— Partager, oui. Pas te le donner entièrement !\nLeur mère, qui passait dans le couloir, murmura en souriant :\n— Demain, je ferai deux gâteaux."
+    },
+    {
+      "id": "w05-3", "level": 5, "type": "recit", "title": "Le dragon timide", "ages": ["enfant", "ado"],
+      "prompt": "Écris un petit conte : un dragon très timide doit affronter une épreuve. Raconte au passé simple.",
+      "words": [80, 140],
+      "require": [
+        { "kind": "tense", "value": "passe_simple", "min": 5, "label": "Au moins 5 verbes au passé simple" },
+        { "kind": "words", "value": ["il était une fois", "un jour", "soudain", "alors", "finalement"], "min": 2, "label": "Au moins 2 expressions du conte (il était une fois, un jour, soudain…)" }
+      ],
+      "model": "Il était une fois un dragon nommé Pistache, si timide qu'il rougissait dès qu'on le regardait. Les autres dragons crachaient du feu ; lui ne crachait que de petits nuages roses. Un jour, une terrible tempête de neige s'abattit sur le village voisin. Les habitants grelottaient dans leurs maisons glacées. Alors Pistache prit son courage à deux pattes. Il vola jusqu'au village, ferma les yeux et souffla de toutes ses forces. Ses nuages roses, tout tièdes, réchauffèrent les rues. Les villageois sortirent pour l'applaudir. Pistache rougit encore, mais cette fois, il sourit."
+    },
+    {
+      "id": "w05-4", "level": 5, "type": "lettre", "title": "Lettre à un ami d'enfance", "ages": ["adulte"],
+      "prompt": "Vous retrouvez l'adresse d'un ami d'enfance perdu de vue. Écrivez-lui : rappelez vos souvenirs communs, racontez ce que vous êtes devenu et proposez de vous revoir.",
+      "words": [80, 140],
+      "require": [
+        { "kind": "tense", "value": "imparfait", "min": 3, "label": "Au moins 3 verbes à l'imparfait (les souvenirs)" },
+        { "kind": "tense", "value": "passe_compose", "min": 3, "label": "Au moins 3 verbes au passé composé" },
+        { "kind": "questions", "min": 1, "label": "Au moins une question" }
+      ],
+      "model": "Cher Paul,\n\nTu te souviens de moi ? Nous étions voisins rue des Acacias, et nous passions nos mercredis à construire des cabanes au bord du canal. Tu inventais toujours des histoires de pirates, et moi, je jouais le capitaine malchanceux.\n\nDepuis, j'ai beaucoup déménagé. J'ai fait des études d'architecture à Bordeaux, puis je me suis installé à Nantes avec ma famille. J'ai retrouvé ton adresse par hasard, grâce à ta sœur. Si tu passes par Nantes, nous pourrions déjeuner ensemble et rire de nos aventures.\n\nJe t'embrasse,\nAntoine"
+    },
+    {
+      "id": "w05-5", "level": 5, "type": "portrait", "title": "Un personnage étrange",
+      "prompt": "Fais le portrait d'un personnage étrange croisé dans un récit (un voyageur, une vieille dame, un inconnu) : son apparence, ses gestes, ce qu'il laisse deviner. Écris à l'imparfait.",
+      "words": [80, 140],
+      "require": [
+        { "kind": "tense", "value": "imparfait", "min": 5, "label": "Au moins 5 verbes à l'imparfait" },
+        { "kind": "words", "value": ["comme", "semblait", "paraissait", "on aurait dit"], "min": 1, "label": "Une comparaison ou une impression (comme, semblait…)" }
+      ],
+      "model": "L'homme qui attendait sur le quai portait un long manteau vert, beaucoup trop chaud pour la saison. Il était très grand et légèrement voûté, comme un arbre fatigué par le vent. Ses cheveux blancs dépassaient d'un chapeau cabossé. Il tenait contre lui une valise en cuir usé, qu'il ne quittait jamais des yeux. De temps en temps, il sortait de sa poche une montre en argent, la regardait longuement, puis la rangeait en soupirant. Il semblait attendre un train qui n'existait plus. Personne n'osait lui adresser la parole."
+    },
+    {
+      "id": "w05-6", "level": 5, "type": "compte-rendu", "title": "La sortie scolaire", "ages": ["enfant", "ado"],
+      "prompt": "Rédige le compte rendu d'une sortie scolaire pour le journal de l'école : où, quand, ce que vous avez vu et appris, ce que la classe en a pensé.",
+      "words": [80, 140],
+      "require": [
+        { "kind": "tense", "value": "passe_compose", "min": 4, "label": "Au moins 4 verbes au passé composé" },
+        { "kind": "connectors", "min": 3, "label": "Au moins 3 mots de liaison différents" }
+      ],
+      "model": "Mardi dernier, notre classe de sixième a visité le musée d'histoire naturelle de Lille. D'abord, une guide nous a présenté la galerie des dinosaures. Nous avons découvert le squelette d'un iguanodon, haut de cinq mètres ! Ensuite, nous avons participé à un atelier sur les fossiles : chacun a fabriqué le moulage d'une coquille. Après le déjeuner, nous avons observé des insectes au microscope. Certains élèves ont trouvé les araignées effrayantes, mais tout le monde a adoré la journée. Finalement, nous sommes rentrés fatigués et pleins de questions."
+    },
+    {
+      "id": "w05-7", "level": 5, "type": "recit", "title": "Perdus dans la forêt",
+      "prompt": "Raconte la nuit où deux amis se sont perdus en forêt. Emploie le passé simple et au moins un plus-que-parfait pour une action antérieure.",
+      "words": [80, 140],
+      "require": [
+        { "kind": "tense", "value": "passe_simple", "min": 4, "label": "Au moins 4 verbes au passé simple" },
+        { "kind": "tense", "value": "plus_que_parfait", "min": 1, "label": "Au moins un plus-que-parfait" }
+      ],
+      "model": "Le soleil se couchait quand Hugo et Chloé comprirent qu'ils s'étaient trompés de chemin. Ils avaient quitté le sentier pour suivre un écureuil, et maintenant, tous les arbres se ressemblaient. Chloé sortit sa lampe de poche, mais les piles étaient presque vides. Ils marchèrent longtemps en silence. Soudain, un hibou hulula au-dessus de leurs têtes ; Hugo sursauta. Pour se rassurer, ils chantèrent les chansons de la colonie. Vers minuit, ils aperçurent enfin une lumière entre les branches : c'était la ferme du vieux Marcel, qui les accueillit avec une soupe brûlante."
+    },
+    {
+      "id": "w05-8", "level": 5, "type": "recit", "title": "Une rencontre inattendue", "ages": ["adulte"],
+      "prompt": "Racontez une rencontre inattendue dans un lieu public (gare, café, musée). Employez le passé simple pour les actions et l'imparfait pour le décor.",
+      "words": [80, 140],
+      "require": [
+        { "kind": "tense", "value": "passe_simple", "min": 4, "label": "Au moins 4 verbes au passé simple" },
+        { "kind": "tense", "value": "imparfait", "min": 2, "label": "Au moins 2 verbes à l'imparfait" }
+      ],
+      "model": "Il pleuvait sur Paris et le café était bondé. Je lisais un roman près de la vitrine lorsqu'une femme s'approcha de ma table. Elle me demanda poliment si la chaise était libre. Je levai les yeux et restai muet : c'était Mme Garnier, mon institutrice de cours moyen, que je n'avais pas revue depuis trente ans. Elle me reconnut aussitôt, malgré ma barbe et mes lunettes. Nous parlâmes pendant deux heures de l'école, des camarades disparus, des dictées qu'elle nous infligeait le lundi. En partant, elle me glissa avec un sourire : « Tu fais toujours autant de fautes ? »"
+    },
+
+    {
+      "id": "w06-1", "level": 6, "type": "courriel", "title": "Merci pour le séjour", "ages": ["adulte"],
+      "prompt": "Vous avez passé un week-end chez des amis. Écrivez-leur pour les remercier et rappeler les meilleurs moments. Attention aux accords des participes passés.",
+      "words": [80, 140],
+      "require": [
+        { "kind": "tense", "value": "passe_compose", "min": 5, "label": "Au moins 5 verbes au passé composé" },
+        { "kind": "words", "value": ["que nous avons", "que vous avez", "qu'elle a", "qu'il a", "que j'ai"], "min": 1, "label": "Un participe avec un COD placé avant (les balades que nous avons faites…)" }
+      ],
+      "model": "Chers Claire et Julien,\n\nNous sommes rentrés hier soir, la tête encore pleine de souvenirs. Merci mille fois pour ce week-end en Bourgogne ! Les balades que nous avons faites dans les vignes resteront inoubliables, et les enfants parlent encore des poules qu'ils ont nourries chaque matin. La tarte aux prunes que vous avez préparée samedi a fait l'unanimité. Nous avons aussi beaucoup apprécié vos conseils pour notre futur jardin.\n\nLa prochaine fois, c'est vous qui viendrez chez nous, à Lyon. Nous vous attendons avec impatience.\n\nAvec toute notre amitié,\nSarah et Karim"
+    },
+    {
+      "id": "w06-2", "level": 6, "type": "critique", "title": "Le dernier film que j'ai vu", "ages": ["ado", "adulte"],
+      "prompt": "Rédige la critique du dernier film que tu as vu : l'histoire en quelques phrases, ce que tu as aimé ou non, ta note finale.",
+      "words": [80, 140],
+      "require": [
+        { "kind": "tense", "value": "passe_compose", "min": 3, "label": "Au moins 3 verbes au passé composé" },
+        { "kind": "connectors", "min": 3, "label": "Au moins 3 mots de liaison différents" }
+      ],
+      "model": "J'ai vu samedi un film d'animation qui raconte le voyage d'une jeune fille à la recherche de son grand-père, disparu dans les montagnes. L'histoire m'a d'abord semblé simple, mais elle m'a peu à peu émue. Les paysages, dessinés à la main, sont magnifiques et la musique accompagne parfaitement les émotions. Cependant, le milieu du film m'a paru un peu long : certaines scènes se répètent. En revanche, la fin, que je n'avais pas devinée, est très réussie. Finalement, je recommande ce film aux enfants comme aux adultes. Ma note : seize sur vingt."
+    },
+    {
+      "id": "w06-3", "level": 6, "type": "recit", "title": "La fête surprise", "ages": ["enfant", "ado"],
+      "prompt": "Raconte une fête surprise que tu as préparée (ou à laquelle tu as participé). Emploie des verbes avec être et avec avoir au passé composé.",
+      "words": [80, 140],
+      "require": [
+        { "kind": "tense", "value": "passe_compose", "min": 6, "label": "Au moins 6 verbes au passé composé" },
+        { "kind": "connectors", "min": 2, "label": "Au moins 2 mots de liaison différents" }
+      ],
+      "model": "Pour les quarante ans de notre mère, mon frère et moi avons organisé une fête surprise. Pendant une semaine, nous avons tout préparé en secret. Nos cousins sont arrivés le samedi matin et se sont cachés dans le garage. Ma tante a décoré le salon avec des guirlandes que nous avions fabriquées. Ensuite, mon père a emmené maman faire des courses pour l'éloigner. Quand elle est rentrée, tout le monde a crié « Surprise ! ». Elle est restée bouche bée, puis elle a éclaté de rire. Nous avons dansé jusqu'au soir."
+    },
+    {
+      "id": "w06-4", "level": 6, "type": "lettre", "title": "Des travaux mal faits", "ages": ["adulte"],
+      "prompt": "Une entreprise a fait des travaux chez vous, mais le résultat est décevant. Écrivez une lettre de réclamation : rappelez les faits et demandez une solution.",
+      "words": [80, 140],
+      "require": [
+        { "kind": "tense", "value": "passe_compose", "min": 4, "label": "Au moins 4 verbes au passé composé" },
+        { "kind": "connectors", "min": 3, "label": "Au moins 3 mots de liaison différents" }
+      ],
+      "model": "Madame, Monsieur,\n\nLe quinze avril, votre entreprise a repeint la façade de notre maison, au trente-deux rue Victor-Hugo. Or, trois semaines plus tard, la peinture s'écaille déjà sous les fenêtres. De plus, les ouvriers ont laissé des taches sur la terrasse, que nous avons dû nettoyer nous-mêmes. Nous avons appelé votre secrétariat à deux reprises, mais personne ne nous a rappelés.\n\nPar conséquent, nous vous demandons de reprendre les travaux dans les meilleurs délais, à vos frais. Vous trouverez ci-joint les photos que nous avons prises.\n\nVeuillez agréer, Madame, Monsieur, nos salutations distinguées.\nM. et Mme Petit"
+    },
+    {
+      "id": "w06-5", "level": 6, "type": "article", "title": "Une journée sans écrans",
+      "prompt": "Rédige un article pour le journal de ton école ou de ta ville : une journée sans écrans a été organisée. Raconte comment elle s'est déroulée et ce qu'en ont pensé les participants.",
+      "words": [80, 140],
+      "require": [
+        { "kind": "tense", "value": "passe_compose", "min": 4, "label": "Au moins 4 verbes au passé composé" },
+        { "kind": "tense", "value": "passif", "min": 1, "label": "Au moins une forme passive (a été organisée…)" }
+      ],
+      "model": "Une journée sans écrans a été organisée vendredi dans notre collège. Dès le matin, les téléphones ont été rangés dans des boîtes à l'entrée. Les professeurs ont proposé des jeux de société, un tournoi d'échecs et un atelier d'écriture. À la récréation, des élèves ont ressorti les cordes à sauter et les billes. Certains ont d'abord trouvé l'expérience difficile : « J'ai cherché mon téléphone toute la matinée », avoue Lucas. Pourtant, la plupart ont aimé ces moments de discussion. Le principal envisage déjà de renouveler l'opération chaque trimestre."
+    },
+    {
+      "id": "w06-6", "level": 6, "type": "recit", "title": "Les objets perdus",
+      "prompt": "Raconte une journée où tu as perdu plusieurs objets, puis où tu les as retrouvés. Emploie des participes passés avec un COD placé avant (les clés que j'ai perdues…).",
+      "words": [80, 140],
+      "require": [
+        { "kind": "tense", "value": "passe_compose", "min": 5, "label": "Au moins 5 verbes au passé composé" },
+        { "kind": "words", "value": ["que j'ai", "que tu as", "qu'il a", "qu'elle a", "que nous avons", "que j'avais", "je les ai", "je l'ai"], "min": 2, "label": "Au moins 2 participes avec un COD placé avant" }
+      ],
+      "model": "Mardi, tout a disparu. Le matin, j'ai cherché mes clés partout : je les ai finalement retrouvées dans le réfrigérateur, à côté du beurre. Ensuite, au collège, j'ai perdu ma trousse. Mon voisin l'avait prise par erreur. À midi, la carte de cantine que j'avais posée sur la table s'est envolée par la fenêtre ; un surveillant l'a ramassée dans la cour. Le soir, impossible de trouver mes lunettes. Ma sœur les a découvertes… sur ma tête. Depuis ce jour, ma famille m'appelle « le professeur Tournesol »."
+    },
+    {
+      "id": "w06-7", "level": 6, "type": "message", "title": "Mes vacances à la montagne", "ages": ["enfant", "ado"],
+      "prompt": "Écris à un ami pour lui raconter tes vacances à la montagne (ou à la mer) et lui demander comment se sont passées les siennes.",
+      "words": [80, 140],
+      "require": [
+        { "kind": "tense", "value": "passe_compose", "min": 5, "label": "Au moins 5 verbes au passé composé" },
+        { "kind": "questions", "min": 1, "label": "Au moins une question" }
+      ],
+      "model": "Salut Yasmine,\n\nJe suis rentrée hier des Alpes et j'ai plein de choses à te raconter ! La première semaine, nous avons fait de longues randonnées. Un matin, nous sommes montés jusqu'à un lac glacé, et mon frère s'est baigné : il est ressorti tout bleu ! Nous avons aussi vu des marmottes, qui se sont cachées dès qu'elles nous ont entendus. Le soir, nous avons mangé de la fondue au chalet. J'ai pris beaucoup de photos, je te les montrerai.\n\nEt toi, tes vacances en Bretagne se sont bien passées ?\n\nÀ très vite,\nJade"
+    },
+    {
+      "id": "w06-8", "level": 6, "type": "description", "title": "La maison de mon enfance", "ages": ["adulte"],
+      "prompt": "Décrivez la maison de votre enfance telle qu'elle était, puis dites ce qu'elle est devenue. Mélangez l'imparfait et le passé composé.",
+      "words": [80, 140],
+      "require": [
+        { "kind": "tense", "value": "imparfait", "min": 4, "label": "Au moins 4 verbes à l'imparfait" },
+        { "kind": "tense", "value": "passe_compose", "min": 2, "label": "Au moins 2 verbes au passé composé" }
+      ],
+      "model": "La maison de mon enfance se trouvait à la sortie d'un petit village du Périgord. Elle avait des murs de pierre blonde et des volets bleus que mon grand-père repeignait chaque printemps. Dans la cuisine, un grand poêle chauffait toute la maison, et l'on y faisait sécher le linge en hiver. Derrière, un verger descendait jusqu'à la rivière. J'y passais des heures à lire dans les branches d'un vieux cerisier.\n\nLa maison a été vendue il y a quinze ans. Depuis, les nouveaux propriétaires ont abattu le cerisier et construit une piscine. Pourtant, je ne suis jamais retourné la voir, car je préfère la garder intacte dans ma mémoire."
+    },
+
+    {
+      "id": "w07-1", "level": 7, "type": "courriel", "title": "Convaincre ses parents", "ages": ["enfant", "ado"],
+      "prompt": "Tu voudrais adopter un animal. Écris un courriel à tes parents pour les convaincre : tes arguments, tes promesses, la réponse que tu espères. Emploie le subjonctif et le conditionnel.",
+      "words": [120, 180],
+      "require": [
+        { "kind": "tense", "value": "subjonctif", "min": 2, "label": "Au moins 2 verbes au subjonctif" },
+        { "kind": "tense", "value": "conditionnel", "min": 2, "label": "Au moins 2 verbes au conditionnel" },
+        { "kind": "paragraphs", "min": 3, "label": "Organise ton texte en au moins 3 paragraphes" }
+      ],
+      "model": "Chers parents,\n\nJe sais que vous hésitez depuis longtemps, mais je voudrais vraiment adopter un chat. Il faut que je vous explique pourquoi c'est une bonne idée. D'abord, un chat ne demande pas beaucoup de place : notre appartement suffirait largement. De plus, il n'a pas besoin de promenades, contrairement à un chien.\n\nJe m'engage à m'en occuper tous les jours. Je nettoierai sa litière, je lui donnerai à manger et je l'emmènerai chez le vétérinaire avec vous. Il est important que vous sachiez que j'ai déjà économisé de l'argent pour acheter ses croquettes.\n\nJe comprends que vous ayez peur des griffes sur le canapé. C'est pourquoi j'ai trouvé un arbre à chat d'occasion. Pourriez-vous au moins y réfléchir ce week-end ? Ce serait le plus beau cadeau d'anniversaire.\n\nVotre enfant qui vous aime,\nLéa"
+    },
+    {
+      "id": "w07-2", "level": 7, "type": "article", "title": "Le parc idéal",
+      "prompt": "Ta ville va rénover un parc. Rédige un article pour le journal local : décris ce qu'il faudrait y installer et les règles à respecter pour que chacun en profite.",
+      "words": [120, 180],
+      "require": [
+        { "kind": "tense", "value": "subjonctif", "min": 3, "label": "Au moins 3 verbes au subjonctif" },
+        { "kind": "paragraphs", "min": 3, "label": "Organise ton texte en au moins 3 paragraphes" }
+      ],
+      "model": "Le parc du Moulin sera rénové l'an prochain. Avant que les travaux ne commencent, la mairie invite les habitants à donner leur avis. Voici nos propositions.\n\nD'abord, il faudrait que chaque génération y trouve sa place. Les enfants réclament une aire de jeux ombragée, les adolescents un terrain de basket, et les plus âgés des bancs confortables près du bassin. Il serait également utile d'installer des tables de pique-nique et des fontaines d'eau potable.\n\nEnsuite, pour que le parc reste agréable, quelques règles semblent indispensables. Il est essentiel que les chiens soient tenus en laisse près des jeux. Il faut aussi que chacun emporte ses déchets, puisque les poubelles débordent chaque dimanche. Enfin, la musique devrait rester discrète après vingt heures.\n\nUn parc bien pensé est un lieu de rencontre. Espérons que ces idées soient entendues !"
+    },
+    {
+      "id": "w07-3", "level": 7, "type": "lettre", "title": "Un voisin bruyant", "ages": ["adulte"],
+      "prompt": "Votre voisin du dessus fait beaucoup de bruit le soir. Écrivez-lui une lettre courtoise mais ferme : décrivez le problème et proposez une solution.",
+      "words": [120, 180],
+      "require": [
+        { "kind": "tense", "value": "subjonctif", "min": 2, "label": "Au moins 2 verbes au subjonctif" },
+        { "kind": "tense", "value": "conditionnel", "min": 2, "label": "Au moins 2 verbes au conditionnel (politesse)" },
+        { "kind": "paragraphs", "min": 3, "label": "Organisez votre lettre en au moins 3 paragraphes" }
+      ],
+      "model": "Cher voisin,\n\nJe me permets de vous écrire au sujet du bruit que nous entendons chaque soir depuis votre appartement. Depuis quelques semaines, la musique et les déplacements de meubles se prolongent souvent après minuit. Mes enfants se lèvent tôt pour l'école, et ils ont beaucoup de mal à s'endormir.\n\nJe ne doute pas que vous ayez des raisons d'être occupé le soir, et je ne voudrais surtout pas vous imposer un silence complet. Cependant, il serait souhaitable que vous baissiez le volume à partir de vingt-deux heures. Des patins sous les chaises suffiraient peut-être à réduire le bruit des meubles.\n\nJe préfère vous en parler directement plutôt que de m'adresser au syndic. Si vous le souhaitez, nous pourrions en discuter autour d'un café. Je suis certain que nous trouverons ensemble une solution.\n\nBien cordialement,\nThomas Girard"
+    },
+    {
+      "id": "w07-4", "level": 7, "type": "discours", "title": "Élisez-moi déléguée !",
+      "prompt": "Tu te présentes comme délégué(e) de classe (ou représentant d'une association). Écris ton discours : tes qualités, tes projets, ce que tu attends des autres.",
+      "words": [120, 180],
+      "require": [
+        { "kind": "tense", "value": "subjonctif", "min": 2, "label": "Au moins 2 verbes au subjonctif" },
+        { "kind": "tense", "value": "futur", "min": 2, "label": "Au moins 2 verbes au futur" },
+        { "kind": "paragraphs", "min": 3, "label": "Organise ton discours en au moins 3 paragraphes" }
+      ],
+      "model": "Chers camarades,\n\nSi je me présente aujourd'hui, c'est parce que je crois qu'une classe unie réussit mieux. Je suis à l'écoute, je sais garder un secret et je n'ai pas peur de prendre la parole devant les professeurs.\n\nSi vous m'élisez, je défendrai trois projets. D'abord, je proposerai que nous ayons un vrai coin lecture au CDI, avec des bandes dessinées. Ensuite, je demanderai que les contrôles soient mieux répartis dans la semaine, afin que personne n'en ait trois le même jour. Enfin, j'organiserai une sortie de fin d'année, pour que la classe garde un beau souvenir.\n\nMais un délégué ne peut rien faire seul. Il faut que vous veniez me parler de vos difficultés et de vos idées. Ensemble, nous ferons de cette année une réussite. Merci de votre attention !"
+    },
+    {
+      "id": "w07-5", "level": 7, "type": "courriel", "title": "Partir étudier à l'étranger", "ages": ["ado", "adulte"],
+      "prompt": "Un ami part étudier un an à l'étranger. Écris-lui un courriel plein de conseils pour que son séjour se passe bien.",
+      "words": [120, 180],
+      "require": [
+        { "kind": "tense", "value": "subjonctif", "min": 3, "label": "Au moins 3 verbes au subjonctif" },
+        { "kind": "paragraphs", "min": 3, "label": "Organise ton courriel en au moins 3 paragraphes" }
+      ],
+      "model": "Salut Nathan,\n\nQuelle nouvelle ! Une année entière à Montréal, je suis vraiment heureux pour toi. Comme j'ai vécu la même aventure il y a deux ans, je me permets de te donner quelques conseils.\n\nAvant de partir, il faut que tu vérifies tes papiers et ton assurance santé. Sur place, je te conseille de loger d'abord chez l'habitant : c'est le meilleur moyen de rencontrer des gens. Il est important que tu ailles aux soirées d'accueil de l'université, même si tu es timide. Et surtout, prévois des vêtements très chauds, car l'hiver là-bas ne plaisante pas !\n\nEnfin, ne t'inquiète pas si tu te sens seul les premières semaines : c'est normal. Je souhaite que tu profites de chaque moment et que tu reviennes plein d'histoires à raconter. Écris-moi dès ton arrivée.\n\nBon voyage,\nHugo"
+    },
+    {
+      "id": "w07-6", "level": 7, "type": "message", "title": "Le règlement de la cabane", "ages": ["enfant", "ado"],
+      "prompt": "Avec tes amis, vous avez construit une cabane. Rédige son règlement : ce qui est permis, ce qui est interdit, ce qu'il faut que chacun fasse.",
+      "words": [120, 180],
+      "require": [
+        { "kind": "tense", "value": "subjonctif", "min": 3, "label": "Au moins 3 verbes au subjonctif (il faut que…)" },
+        { "kind": "paragraphs", "min": 3, "label": "Organise ton texte en au moins 3 paragraphes" }
+      ],
+      "model": "Règlement officiel de la cabane du Grand Chêne\n\nCette cabane appartient aux cinq membres fondateurs : Jade, Malik, Lucas, Inès et moi. Pour qu'elle reste un endroit agréable, chacun doit respecter les règles suivantes.\n\nD'abord, il faut que chaque membre connaisse le mot de passe, qui change tous les lundis. Il est interdit d'y apporter des bonbons sans les partager. Il faut aussi que le dernier qui part ferme bien la trappe, car les écureuils adorent nos biscuits. Le mercredi, il est indispensable que tout le monde participe au rangement.\n\nEnfin, aucun adulte ne peut entrer sans invitation, sauf en cas de pluie très forte. Si quelqu'un ne respecte pas le règlement, il devra apporter le goûter pendant une semaine. Nous voulons que cette cabane soit la plus belle du quartier !"
+    },
+    {
+      "id": "w07-7", "level": 7, "type": "essai", "title": "Faut-il supprimer les devoirs ?", "ages": ["ado", "adulte"],
+      "prompt": "Faut-il supprimer les devoirs à la maison ? Rédige un court essai : présente les arguments des deux camps, puis donne ton avis nuancé.",
+      "words": [120, 180],
+      "require": [
+        { "kind": "tense", "value": "subjonctif", "min": 2, "label": "Au moins 2 verbes au subjonctif" },
+        { "kind": "connectors", "min": 5, "label": "Au moins 5 mots de liaison différents" },
+        { "kind": "paragraphs", "min": 4, "label": "Organise ton essai en au moins 4 paragraphes" }
+      ],
+      "model": "Chaque soir, dans de nombreuses familles, les devoirs provoquent des disputes. Faut-il pour autant les supprimer ?\n\nD'un côté, les partisans de la suppression rappellent que tous les élèves ne sont pas égaux à la maison : certains sont aidés, d'autres non. Par ailleurs, après une longue journée, les enfants ont besoin de jouer et de se reposer.\n\nD'un autre côté, les devoirs permettent de revoir les leçons et de prendre l'habitude de travailler seul. En effet, il est rare qu'une notion soit comprise dès la première explication. De plus, les parents peuvent ainsi suivre les progrès de leurs enfants.\n\nÀ mon avis, il ne faut pas supprimer les devoirs, mais il faut qu'ils soient courts et adaptés. Des exercices de révision de vingt minutes suffiraient. Ainsi, chacun pourrait progresser sans que la soirée devienne un combat."
+    },
+    {
+      "id": "w07-8", "level": 7, "type": "lettre", "title": "Un jardin partagé", "ages": ["adulte"],
+      "prompt": "Écrivez au maire de votre commune pour proposer la création d'un jardin partagé : le lieu, le fonctionnement, les avantages pour le quartier.",
+      "words": [120, 180],
+      "require": [
+        { "kind": "tense", "value": "conditionnel", "min": 3, "label": "Au moins 3 verbes au conditionnel" },
+        { "kind": "tense", "value": "subjonctif", "min": 1, "label": "Au moins un verbe au subjonctif" },
+        { "kind": "paragraphs", "min": 3, "label": "Organisez votre lettre en au moins 3 paragraphes" }
+      ],
+      "model": "Monsieur le Maire,\n\nAu nom de l'association des habitants du quartier Saint-Michel, je souhaite vous proposer la création d'un jardin partagé sur le terrain vague situé derrière l'école.\n\nCe jardin serait divisé en parcelles confiées aux familles volontaires, tandis qu'un espace commun accueillerait des plantes aromatiques et un composteur. De plus, les élèves de l'école pourraient y venir une fois par semaine avec leurs enseignants. Pour sa part, l'association s'engage à entretenir le terrain et à organiser des ateliers de jardinage.\n\nEn effet, un tel projet renforcerait les liens entre voisins et embellirait le quartier. Par ailleurs, son coût resterait modeste : il suffirait que la mairie prenne en charge la clôture et le raccordement à l'eau. Nous serions heureux de vous présenter ce projet en détail lors d'un rendez-vous.\n\nDans l'attente de votre réponse, je vous prie d'agréer, Monsieur le Maire, l'expression de mes salutations distinguées.\nCatherine Roux"
+    },
+
+    {
+      "id": "w08-1", "level": 8, "type": "article", "title": "Une découverte étonnante",
+      "prompt": "Rédige un article sur une découverte scientifique (réelle ou imaginaire). Emploie des propositions relatives variées : qui, que, dont, où.",
+      "words": [120, 180],
+      "require": [
+        { "kind": "words", "value": ["qui", "que", "dont", "où", "lequel", "laquelle", "lesquels", "auquel"], "min": 4, "label": "Au moins 4 pronoms relatifs différents" },
+        { "kind": "paragraphs", "min": 3, "label": "Organise ton article en au moins 3 paragraphes" }
+      ],
+      "model": "Une équipe de biologistes a découvert, dans une grotte des Pyrénées, une espèce de poisson qui vit dans l'obscurité totale. Cette grotte, où aucun humain n'était descendu depuis des siècles, abrite un lac souterrain dont l'eau reste glacée toute l'année.\n\nLe poisson, que les chercheurs ont baptisé « fantôme des Pyrénées », ne possède pas d'yeux. Il se repère grâce à des capteurs sensibles aux vibrations, sur lesquels les scientifiques fondent de grands espoirs. En effet, ces organes pourraient inspirer de nouveaux appareils destinés aux personnes malvoyantes.\n\nLa découverte soulève toutefois une inquiétude. Le lac dont dépend cette espèce est menacé par la pollution des sols. Les chercheurs demandent donc que la grotte soit protégée au plus vite, afin que ce petit fantôme ne disparaisse pas avant même d'avoir livré tous ses secrets."
+    },
+    {
+      "id": "w08-2", "level": 8, "type": "article", "title": "Un fait divers",
+      "prompt": "Rédige un fait divers (amusant ou spectaculaire) pour un journal : les faits, les témoins, la conclusion. Emploie la voix passive.",
+      "words": [120, 180],
+      "require": [
+        { "kind": "tense", "value": "passif", "min": 2, "label": "Au moins 2 verbes à la voix passive" },
+        { "kind": "paragraphs", "min": 3, "label": "Organise ton article en au moins 3 paragraphes" }
+      ],
+      "model": "Une vache en vadrouille sur l'autoroute\n\nHier matin, la circulation a été interrompue pendant deux heures sur l'autoroute près de Bordeaux. Une vache, échappée d'une ferme voisine, avait été aperçue vers sept heures sur la voie de gauche par un automobiliste stupéfait.\n\nLes gendarmes, qui ont été alertés aussitôt, ont mis en place une déviation. « Elle avançait tranquillement, comme si elle allait au marché », raconte un chauffeur routier. L'animal a finalement été rattrapé par son propriétaire, qui l'a attiré avec un seau de granulés.\n\nPersonne n'a été blessé. Selon l'éleveur, la clôture avait été endommagée par l'orage de la nuit. Elle sera réparée dès aujourd'hui. Quant à la vache, surnommée « Marguerite la fugueuse » par les internautes, elle a regagné son pré sous les applaudissements."
+    },
+    {
+      "id": "w08-3", "level": 8, "type": "description", "title": "Le lieu où je me sens bien", "ages": ["enfant", "ado"],
+      "prompt": "Décris un lieu où tu te sens bien : à quoi il ressemble, ce que tu y fais, ce qu'il représente pour toi. Emploie des relatives (qui, que, où, dont).",
+      "words": [120, 180],
+      "require": [
+        { "kind": "words", "value": ["qui", "que", "dont", "où"], "min": 3, "label": "Au moins 3 pronoms relatifs différents" },
+        { "kind": "paragraphs", "min": 3, "label": "Organise ton texte en au moins 3 paragraphes" }
+      ],
+      "model": "Le lieu où je me sens le mieux, c'est le grenier de ma grand-mère, à Annecy. On y monte par un escalier étroit qui grince à chaque marche.\n\nSous le toit, il y a une petite fenêtre ronde par laquelle on aperçoit le lac et les montagnes. Ma grand-mère y a installé un vieux fauteuil que je partage avec son chat. Autour, s'entassent des malles dont personne ne connaît vraiment le contenu, des cartons de livres et des jouets que ma mère avait quand elle était petite.\n\nQuand je suis là-haut, j'oublie le bruit et les écrans. Je lis, je dessine ou je regarde la pluie tomber sur le lac. Ce grenier est un endroit où le temps semble s'arrêter, et c'est sans doute pour cela que je l'aime autant."
+    },
+    {
+      "id": "w08-4", "level": 8, "type": "courriel", "title": "Compte rendu d'une réunion", "ages": ["adulte"],
+      "prompt": "Vous n'avez pas pu assister à une réunion de parents d'élèves ; une amie vous en a fait le récit. Écrivez à un autre parent pour lui rapporter ce qui a été dit (discours indirect).",
+      "words": [120, 180],
+      "require": [
+        { "kind": "words", "value": ["a annoncé que", "a expliqué que", "a précisé que", "a ajouté que", "a demandé si", "a déclaré que", "a rappelé que", "a promis que"], "min": 3, "label": "Au moins 3 verbes introducteurs du discours indirect" },
+        { "kind": "paragraphs", "min": 3, "label": "Organisez votre courriel en au moins 3 paragraphes" }
+      ],
+      "model": "Bonjour Nadia,\n\nTu n'as pas pu venir à la réunion de jeudi non plus, alors voici ce que Claire m'en a raconté.\n\nLa directrice a annoncé que l'école accueillerait une nouvelle classe à la rentrée. Elle a expliqué que les travaux de la cantine commenceraient en juillet et qu'ils dureraient tout l'été. Elle a précisé que les repas seraient servis dans le gymnase pendant les deux premières semaines de septembre. Un père a demandé si la sortie au zoo était maintenue ; la maîtresse a répondu qu'elle aurait lieu le douze juin. Enfin, le président de l'association a rappelé que la kermesse avait besoin de bénévoles.\n\nJe pense m'inscrire pour tenir le stand des crêpes. Veux-tu le tenir avec moi ? Ce serait plus amusant à deux.\n\nÀ bientôt,\nÉmilie"
+    },
+    {
+      "id": "w08-5", "level": 8, "type": "recit", "title": "Le témoin",
+      "prompt": "Un témoin raconte à la police une scène étrange qu'il a observée. Respecte la concordance des temps : imparfait, plus-que-parfait, passé composé ou passé simple.",
+      "words": [120, 180],
+      "require": [
+        { "kind": "tense", "value": "plus_que_parfait", "min": 2, "label": "Au moins 2 verbes au plus-que-parfait" },
+        { "kind": "tense", "value": "imparfait", "min": 2, "label": "Au moins 2 verbes à l'imparfait" },
+        { "kind": "paragraphs", "min": 3, "label": "Organise ton récit en au moins 3 paragraphes" }
+      ],
+      "model": "Monsieur l'inspecteur, je vais tout vous raconter depuis le début.\n\nIl était environ vingt-deux heures. Je promenais mon chien dans la rue des Tanneurs, qui était déserte à cause de la pluie. Devant la bijouterie, j'ai remarqué une camionnette blanche dont le moteur tournait. Je l'avais déjà vue la veille, garée au même endroit, ce qui m'avait semblé curieux.\n\nSoudain, deux hommes sont sortis de la boutique avec de grands sacs. L'un d'eux portait un chapeau qu'il avait enfoncé jusqu'aux yeux. Mon chien a aboyé, et ils se sont précipités dans la camionnette, qui a démarré en trombe.\n\nJ'ai aussitôt noté une partie de la plaque d'immatriculation sur mon ticket de bus. Je n'avais jamais assisté à un cambriolage auparavant ; j'avoue que mes jambes tremblaient encore quand vos collègues sont arrivés."
+    },
+    {
+      "id": "w08-6", "level": 8, "type": "critique", "title": "Un livre qui m'a marqué", "ages": ["ado", "adulte"],
+      "prompt": "Présente un livre qui t'a marqué : de quoi il parle, ce qui t'a touché, à qui tu le conseillerais. Emploie des relatives et des connecteurs variés.",
+      "words": [120, 180],
+      "require": [
+        { "kind": "words", "value": ["qui", "que", "dont", "où"], "min": 3, "label": "Au moins 3 pronoms relatifs différents" },
+        { "kind": "connectors", "min": 4, "label": "Au moins 4 mots de liaison différents" },
+        { "kind": "paragraphs", "min": 3, "label": "Organise ta critique en au moins 3 paragraphes" }
+      ],
+      "model": "Le livre qui m'a le plus marqué ces dernières années est un roman d'aventures que j'ai découvert par hasard dans une boîte à livres. Il raconte l'histoire d'une jeune cartographe qui part explorer une île dont personne n'est jamais revenu.\n\nCe qui m'a d'abord frappé, c'est l'écriture, à la fois simple et poétique. L'autrice décrit si bien les paysages que l'on a l'impression de marcher aux côtés de l'héroïne. Par ailleurs, le récit alterne les moments de suspense et les passages plus calmes, où le personnage réfléchit à sa vie. Cependant, la fin m'a un peu déçu, car elle laisse trop de questions sans réponse.\n\nJe conseillerais néanmoins ce roman à tous ceux qui aiment les voyages et les mystères. En effet, il donne envie de quitter son fauteuil… pour mieux y revenir avec un autre livre."
+    },
+    {
+      "id": "w08-7", "level": 8, "type": "lettre", "title": "Devenir bénévole", "ages": ["adulte"],
+      "prompt": "Vous souhaitez devenir bénévole dans une association (aide aux devoirs, banque alimentaire, refuge…). Écrivez une lettre de motivation : votre parcours, vos raisons, vos disponibilités.",
+      "words": [120, 180],
+      "require": [
+        { "kind": "connectors", "min": 4, "label": "Au moins 4 mots de liaison différents" },
+        { "kind": "tense", "value": "conditionnel", "min": 1, "label": "Au moins un verbe au conditionnel" },
+        { "kind": "paragraphs", "min": 4, "label": "Organisez votre lettre en au moins 4 paragraphes" }
+      ],
+      "model": "Madame la Présidente,\n\nAyant appris que votre association recherchait des bénévoles pour l'aide aux devoirs, je me permets de vous proposer ma candidature.\n\nJe suis retraitée de l'enseignement depuis deux ans, après une carrière de professeure de mathématiques dans un collège de Lille. J'ai donc l'habitude d'accompagner des élèves en difficulté, et je sais combien un adulte patient peut les aider à reprendre confiance.\n\nPar ailleurs, je souhaite rester utile et garder le contact avec les jeunes, qui m'ont toujours beaucoup apporté. C'est pourquoi votre projet, qui s'adresse aux enfants du quartier, me tient particulièrement à cœur.\n\nJe serais disponible le mardi et le jeudi, de seize heures à dix-huit heures. Je reste à votre disposition pour un entretien.\n\nJe vous prie d'agréer, Madame la Présidente, l'expression de mes salutations distinguées.\nFrançoise Lemoine"
+    },
+    {
+      "id": "w08-8", "level": 8, "type": "message", "title": "Comment garder mon hamster", "ages": ["enfant", "ado"],
+      "prompt": "Tu pars en vacances et un ami va garder ton hamster. Écris-lui un message clair avec toutes les consignes. Emploie des subordonnées (quand, si, pour que, afin que…).",
+      "words": [120, 180],
+      "require": [
+        { "kind": "words", "value": ["quand", "lorsque", "si", "pour que", "afin que", "parce que", "dès que", "avant que"], "min": 3, "label": "Au moins 3 conjonctions de subordination différentes" },
+        { "kind": "paragraphs", "min": 3, "label": "Organise ton message en au moins 3 paragraphes" }
+      ],
+      "model": "Salut Lucas,\n\nMerci encore de garder Biscotte pendant mes vacances ! Voici tout ce qu'il faut savoir pour qu'elle soit heureuse chez toi.\n\nChaque soir, quand elle se réveille, donne-lui une cuillère de graines et un petit morceau de carotte. Change son eau tous les jours, parce qu'elle renverse souvent sa coupelle. Si elle grimpe aux barreaux en couinant, c'est qu'elle veut sortir : tu peux la laisser courir dans sa boule, mais surveille-la afin qu'elle ne se cache pas sous un meuble. Le samedi, nettoie sa cage dès que tu as un moment.\n\nSurtout, ne la réveille pas pendant la journée, car les hamsters dorment le jour. Et si tu as le moindre problème, appelle ma mère : son numéro est sur le frigo.\n\nMerci, tu es un vrai ami !\nJade"
+    }
+  ]
+}
