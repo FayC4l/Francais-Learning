@@ -1,0 +1,436 @@
+{
+  "id": 3,
+  "cefr": "A2",
+  "title": "Raconter au passé",
+  "sub": "Imparfait et passé composé",
+  "intro": "L'imparfait, le passé composé avec avoir et avec être, la grande famille -é / -er / -ez / -ait, et de nouveaux jumeaux : la / l'a / là, leur / leurs, peu / peut / peux, ni / n'y. De quoi raconter tes souvenirs sans faute !",
+  "boss": {
+    "name": "Le Capitaine Imparfait",
+    "taunt": "Autrefois, je naviguais sur toutes les mers… et je confondais tout ! J'ai mangé, je mangeais, je vais manger : moi, j'écris tout pareil !",
+    "defeat": "Je coule… Promis, à partir d'aujourd'hui, j'écrirai « j'ai coulé » et non « j'ai couler »."
+  },
+  "units": [
+    {
+      "id": "3.1",
+      "name": "Il était une fois",
+      "title": "L'imparfait : formation, -ais / -ait / -aient, nous criions, vous payiez",
+      "goal": "Conjuguer tous les verbes à l'imparfait, y compris les pièges en -ier, -yer, -cer et -ger.",
+      "lesson": [
+        { "type": "p", "text": "L'imparfait sert à **décrire** le passé : le décor, les habitudes, ce qui durait. [[Quand j'étais petit, je jouais dans le jardin.]] C'est le temps des souvenirs et des contes : [[Il était une fois…]]" },
+        { "type": "rule", "title": "La formation", "text": "On prend le radical de **nous** au présent ([[nous finissons]] → finiss-) et on ajoute **-ais, -ais, -ait, -ions, -iez, -aient**. Une seule exception : **être** ([[j'étais]], [[nous étions]])." },
+        { "type": "table", "head": ["chanter", "finir", "faire", "être"], "rows": [["je chantais", "je finissais", "je faisais", "j'étais"], ["tu chantais", "tu finissais", "tu faisais", "tu étais"], ["il chantait", "il finissait", "il faisait", "il était"], ["nous chantions", "nous finissions", "nous faisions", "nous étions"], ["vous chantiez", "vous finissiez", "vous faisiez", "vous étiez"], ["ils chantaient", "ils finissaient", "ils faisaient", "ils étaient"]] },
+        { "type": "rule", "title": "Le piège du i", "text": "Les verbes en **-ier**, **-yer**, **-iller** et **-gner** gardent la dernière lettre du radical devant -ions et -iez : [[nous criions]] (cri- + -ions), [[vous payiez]] (pay- + -iez), [[nous travaillions]], [[vous gagniez]]. On entend à peine ce i, mais il faut l'écrire !" },
+        { "type": "rule", "title": "Le ç et le ge", "text": "Les verbes en **-cer** et en **-ger** gardent leur son devant a : [[je commençais]], [[il mangeait]]. Devant i, pas besoin : [[nous commencions]], [[nous mangions]]." },
+        { "type": "examples", "items": [
+          { "ex": "Mes grands-parents **habitaient** à la campagne.", "note": "ils : -aient" },
+          { "ex": "Nous **criions** de joie sur le manège.", "note": "cri- + -ions : deux i" },
+          { "ex": "Vous **payiez** toujours en pièces.", "note": "pay- + -iez : y puis i" },
+          { "ex": "Il **neigeait** sur les toits.", "note": "ge devant a" },
+          { "ex": "Le soir, nous **lisions** sous la couette.", "note": "radical de nous lisons : lis-" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "Les oiseaux ~~chantait~~.", "ok": "Les oiseaux **chantaient**.", "why": "Le sujet est pluriel : -aient." },
+          { "ko": "Avant, nous ~~crions~~ fort.", "ok": "Avant, nous **criions** fort.", "why": "À l'imparfait : cri- + -ions." },
+          { "ko": "Il ~~mangait~~ vite.", "ok": "Il **mangeait** vite.", "why": "Il faut un e après le g devant a." },
+          { "ko": "Je ~~commencais~~ mon dessin.", "ok": "Je **commençais** mon dessin.", "why": "Il faut une cédille devant a." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "**-ait** ou **-aient** ? Remplace le sujet par il ou ils : « Les enfants jouaient » → ils jouaient : -aient. Et attention, **je** et **tu** prennent un s : [[je jouais]], [[tu jouais]]." },
+        { "type": "fun", "text": "Le sais-tu ? Jusqu'au XIXe siècle, on écrivait « je chantois », alors qu'on prononçait déjà « je chantais ». Voltaire a réclamé qu'on écrive -ais ; l'Académie française ne lui a donné raison que bien après sa mort !" }
+      ],
+      "vocab": [
+        { "mot": "souvenir", "def": "Ce qui reste dans la mémoire d'un moment passé.", "ex": "Ce voyage est mon meilleur souvenir.", "alt": [] },
+        { "mot": "enfance", "def": "Période de la vie qui va de la naissance à l'adolescence.", "ex": "Mon père a passé son enfance en Normandie.", "alt": [] },
+        { "mot": "habitude", "def": "Chose que l'on fait souvent, toujours de la même façon.", "ex": "J'ai l'habitude de lire avant de dormir.", "alt": [] },
+        { "mot": "jadis", "def": "Dans un passé lointain (mot de conte).", "ex": "Jadis, un dragon vivait dans cette grotte.", "alt": [] },
+        { "mot": "veillée", "def": "Soirée que l'on passe ensemble à parler ou à raconter des histoires.", "ex": "Pendant la veillée, Papi raconte des histoires de loups.", "alt": [] },
+        { "mot": "lanterne", "def": "Boîte transparente dans laquelle on met une lumière pour la protéger du vent.", "ex": "Il éclaire le chemin avec une lanterne.", "alt": [] },
+        { "mot": "bougie", "def": "Bâton de cire avec une mèche que l'on allume pour éclairer.", "ex": "Souffle les bougies du gâteau !", "alt": [] },
+        { "mot": "balançoire", "def": "Siège suspendu à des cordes sur lequel on se balance.", "ex": "Pousse-moi sur la balançoire.", "alt": [] },
+        { "mot": "cabane", "def": "Petite maison simple, souvent en bois, construite dans un arbre ou un jardin.", "ex": "Nous avons construit une cabane dans le bois.", "alt": [] },
+        { "mot": "toboggan", "def": "Pente lisse sur laquelle on glisse, dans les parcs de jeux.", "ex": "Les petits glissent sur le toboggan.", "alt": [] },
+        { "mot": "bille", "def": "Petite boule de verre avec laquelle on joue.", "ex": "J'ai gagné une bille bleue.", "alt": [] },
+        { "mot": "marelle", "def": "Jeu où l'on saute à cloche-pied dans des cases tracées au sol.", "ex": "Les filles jouent à la marelle dans la cour.", "alt": [] },
+        { "mot": "cerf-volant", "def": "Jouet de toile tendue que le vent fait voler au bout d'une ficelle.", "ex": "Mon cerf-volant monte très haut.", "alt": [] },
+        { "mot": "poupée", "def": "Jouet qui représente un bébé ou une personne.", "ex": "Ma petite sœur coiffe sa poupée.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Quand j'étais petit, je jouais aux billes.", "indice": "Un souvenir d'enfance", "trap": ["jouait", "étai"], "alt": ["Je jouais aux billes quand j'étais petit."] },
+        { "phrase": "Nous criions de joie sur le manège.", "indice": "Une fête foraine", "trap": ["crions"], "alt": [] },
+        { "phrase": "Mes grands-parents habitaient à la campagne.", "indice": "Une maison loin de la ville", "trap": ["habitait"], "alt": [] },
+        { "phrase": "Vous payiez toujours en pièces.", "indice": "Une vieille habitude au magasin", "trap": ["payez"], "alt": [] },
+        { "phrase": "Il mangeait une tartine tous les matins.", "indice": "Un petit-déjeuner habituel", "trap": ["mangait"], "alt": ["Tous les matins, il mangeait une tartine."] },
+        { "phrase": "Le soir, nous lisions sous la couette.", "indice": "Avant de dormir", "trap": ["lisons"], "alt": [] },
+        { "phrase": "Les enfants construisaient une cabane dans le bois.", "indice": "Un jeu dans la nature", "trap": ["construisait"], "alt": [] },
+        { "phrase": "Je commençais toujours par le dessert.", "indice": "Un drôle d'ordre au repas", "trap": ["commencais"], "alt": [] },
+        { "phrase": "Tu étais le plus rapide de la classe.", "indice": "Un champion de la course", "trap": ["était"], "alt": [] },
+        { "phrase": "Il neigeait sur les toits du village.", "indice": "Un paysage d'hiver", "trap": ["neigait"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Autrefois, les enfants ___ à la marelle.", "choices": ["jouaient", "jouait", "jouais"], "answer": 0, "explain": "Le sujet, les enfants, est pluriel : -aient." },
+        { "type": "mcq", "q": "Chaque été, nous ___ à la mer.", "choices": ["allions", "allons", "alions"], "answer": 0, "explain": "Une habitude du passé : imparfait. Radical all- + -ions : allions." },
+        { "type": "mcq", "q": "Vous ___ toujours en retard.", "choices": ["étiez", "étaient", "êtiez"], "answer": 0, "explain": "Être à l'imparfait : vous étiez, avec un accent aigu." },
+        { "type": "mcq", "q": "Le chat ___ près du feu.", "choices": ["dormait", "dormais", "dormaient"], "answer": 0, "explain": "Le chat, c'est il : -ait." },
+        { "type": "mcq", "q": "Le soir, nous ___ nos leçons ensemble.", "choices": ["étudiions", "étudions", "étudiont"], "answer": 0, "explain": "Étudier à l'imparfait : radical étudi- + -ions, donc deux i." },
+        { "type": "fill", "q": "Je ___ souvent mon chien.", "hint": "promener, à l'imparfait", "answer": ["promenais"], "explain": "Avec je, l'imparfait se termine par -ais : je promenais." },
+        { "type": "fill", "q": "Tu ___ dans ta chambre.", "hint": "lire, à l'imparfait", "answer": ["lisais"], "explain": "Nous lisons → radical lis- : tu lisais." },
+        { "type": "fill", "q": "Ils ___ des châteaux de sable.", "hint": "construire, à l'imparfait", "answer": ["construisaient"], "explain": "Nous construisons → construis- + -aient." },
+        { "type": "fill", "q": "Nous ___ la table après le repas.", "hint": "nettoyer, à l'imparfait", "answer": ["nettoyions"], "explain": "Nettoy- + -ions : nous nettoyions, avec un y puis un i." },
+        { "type": "fill", "q": "Elle ___ la danse classique.", "hint": "apprendre, à l'imparfait", "answer": ["apprenait"], "explain": "Nous apprenons → appren- + -ait : elle apprenait." },
+        { "type": "fill", "q": "Vous ___ des glaces tous les jours.", "hint": "manger, à l'imparfait", "answer": ["mangiez"], "explain": "Devant i, pas besoin d'ajouter un e : vous mangiez." },
+        { "type": "fill", "q": "On ___ des heures au téléphone.", "hint": "parler, à l'imparfait", "answer": ["parlait"], "explain": "On se conjugue comme il : on parlait." },
+        { "type": "error", "q": "Les oiseaux chantait dans les arbres.", "wrong": 2, "fix": ["chantaient"], "explain": "Le sujet est pluriel, les oiseaux : -aient." },
+        { "type": "error", "q": "Il commencait à pleuvoir.", "wrong": 1, "fix": ["commençait"], "explain": "Devant a, il faut une cédille pour garder le son [s] : commençait." },
+        { "type": "error", "q": "Quand nous étions petits, nous oublions toujours nos clés.", "wrong": 5, "fix": ["oubliions"], "explain": "C'est une habitude passée, donc l'imparfait : oubli- + -ions, avec deux i." },
+        { "type": "error", "q": "Quand vous étiez enfants, vous essayez toujours de tricher.", "wrong": 5, "fix": ["essayiez"], "explain": "C'est une habitude passée : imparfait, essay- + -iez." }
+      ],
+      "reading": {
+        "title": "Les étés chez Papi Jo",
+        "text": "Quand j'étais petite, je passais tous mes étés chez mon grand-père, dans un village de l'Ardèche. Sa maison sentait le pain grillé et la lavande. Le matin, nous allions chercher les œufs au poulailler ; les poules nous regardaient d'un air vexé. L'après-midi, il faisait trop chaud pour sortir : Papi Jo réparait de vieilles radios dans son atelier et je triais les vis par couleur. Le soir, nous mangions dehors, sous le tilleul. Mon grand-père racontait toujours la même histoire, celle du sanglier qui lui avait volé son chapeau. Je connaissais la fin par cœur, mais je riais à chaque fois.",
+        "questions": [
+          { "q": "Où la narratrice passait-elle ses étés ?", "choices": ["Chez son grand-père, à la campagne", "Au bord de la mer", "Dans une grande ville", "En colonie de vacances"], "answer": 0, "explain": "Elle allait chez son grand-père, dans un village de l'Ardèche." },
+          { "q": "Que faisait-elle l'après-midi ?", "choices": ["Elle triait des vis dans l'atelier", "Elle se baignait dans la rivière", "Elle ramassait les œufs", "Elle dormait sous le tilleul"], "answer": 0, "explain": "Il faisait trop chaud : elle triait les vis pendant que son grand-père réparait des radios." },
+          { "q": "Pourquoi les poules avaient-elles « un air vexé » ?", "choices": ["On venait leur prendre leurs œufs", "Il faisait trop chaud", "Le grand-père chantait faux", "Elles avaient faim"], "answer": 0, "explain": "Le matin, on allait chercher leurs œufs : l'auteure imagine qu'elles en sont vexées." },
+          { "q": "Que pensait la narratrice de l'histoire du sanglier ?", "choices": ["Elle l'amusait, même si elle connaissait la fin", "Elle lui faisait peur", "Elle la trouvait ennuyeuse", "Elle ne la comprenait pas"], "answer": 0, "explain": "Elle connaissait la fin par cœur, mais elle riait à chaque fois." },
+          { "q": "Pourquoi le texte est-il presque entièrement à l'imparfait ?", "choices": ["Il décrit des habitudes du passé", "Il raconte un événement unique", "Il parle de l'avenir", "Il donne des ordres"], "answer": 0, "explain": "Tous les étés, le matin, le soir : ce sont des habitudes, décrites à l'imparfait." }
+        ]
+      }
+    },
+    {
+      "id": "3.2",
+      "name": "C'est arrivé hier",
+      "title": "Le passé composé avec avoir ; participes en -é, -i, -u, -is, -it ; participes irréguliers",
+      "goal": "Former le passé composé avec avoir et écrire juste la fin du participe passé.",
+      "lesson": [
+        { "type": "p", "text": "Le passé composé raconte une action **terminée** : [[Hier, j'ai mangé une glace.]] Il se forme avec l'auxiliaire **avoir** (ou être, à la station suivante) au présent, suivi du **participe passé**." },
+        { "type": "rule", "title": "Les verbes en -er", "text": "Leur participe passé se termine toujours par **-é** : [[chanter → chanté]], [[manger → mangé]], [[aller → allé]]." },
+        { "type": "rule", "title": "Les autres participes", "text": "**-i** : [[fini]], [[dormi]], [[parti]] ; **-u** : [[vendu]], [[vu]], [[lu]], [[voulu]] ; **-is** : [[pris]], [[mis]], [[appris]] ; **-it** : [[dit]], [[écrit]], [[fait]], [[conduit]] ; **-ert** : [[ouvert]], [[offert]], [[couvert]]." },
+        { "type": "rule", "title": "Trouver la lettre finale", "text": "Mets le participe au **féminin** : on entend la consonne cachée. [[une lettre écrite]] → écrit, avec un t ; [[la leçon apprise]] → appris, avec un s ; [[la course finie]] → fini, sans rien." },
+        { "type": "table", "head": ["Infinitif", "Participe", "Infinitif", "Participe"], "rows": [["avoir", "eu", "être", "été"], ["faire", "fait", "mettre", "mis"], ["prendre", "pris", "voir", "vu"], ["pouvoir", "pu", "devoir", "dû"], ["savoir", "su", "boire", "bu"], ["lire", "lu", "ouvrir", "ouvert"]] },
+        { "type": "examples", "items": [
+          { "ex": "J'**ai pris** le train pour Lyon.", "note": "prendre → pris (une décision prise)" },
+          { "ex": "Elle **a écrit** une lettre à sa grand-mère.", "note": "écrire → écrit (une lettre écrite)" },
+          { "ex": "Nous **avons fini** le puzzle.", "note": "finir → fini (une course finie)" },
+          { "ex": "Ils **ont ouvert** la fenêtre.", "note": "ouvrir → ouvert" },
+          { "ex": "J'**ai dû** partir plus tôt.", "note": "devoir → dû, avec un accent" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "J'ai ~~prit~~ mon sac.", "ok": "J'ai **pris** mon sac.", "why": "Au féminin : prise. Donc un s." },
+          { "ko": "Il a ~~écris~~ un poème.", "ok": "Il a **écrit** un poème.", "why": "Au féminin : écrite. Donc un t." },
+          { "ko": "J'ai ~~finit~~.", "ok": "J'ai **fini**.", "why": "Au féminin : finie. Pas de consonne." },
+          { "ko": "Elle a ~~ouvri~~ la boîte.", "ok": "Elle a **ouvert** la boîte.", "why": "Ouvrir a un participe irrégulier : ouvert." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Avec **avoir**, le participe ne s'accorde **pas** avec le sujet : [[Elles ont mangé]] (et non « mangées »). Il existe un cas où il s'accorde (le complément placé avant) : tu le découvriras à la ligne 6." },
+        { "type": "fun", "text": "Le sais-tu ? Le participe de devoir prend un accent circonflexe (dû) pour ne pas être confondu avec « du » (du pain). Au féminin, plus de risque de confusion : la somme due, sans accent !" }
+      ],
+      "vocab": [
+        { "mot": "aventure", "def": "Suite d'événements inattendus et parfois dangereux.", "ex": "Notre randonnée s'est transformée en aventure.", "alt": [] },
+        { "mot": "voyage", "def": "Déplacement pour aller loin de chez soi.", "ex": "Le voyage en avion a duré trois heures.", "alt": [] },
+        { "mot": "accident", "def": "Événement imprévu qui cause des dégâts ou des blessures.", "ex": "Il y a eu un accident de vélo devant l'école.", "alt": [] },
+        { "mot": "naufrage", "def": "Perte d'un bateau qui coule en mer.", "ex": "Les marins ont survécu au naufrage.", "alt": [] },
+        { "mot": "trésor", "def": "Ensemble d'objets précieux, souvent cachés.", "ex": "Les pirates ont enterré un trésor sur l'île.", "alt": [] },
+        { "mot": "voleur", "def": "Personne qui prend ce qui appartient aux autres.", "ex": "Le voleur s'est enfui par la fenêtre.", "alt": [] },
+        { "mot": "témoin", "def": "Personne qui a vu ou entendu quelque chose et peut le raconter.", "ex": "Un témoin a vu toute la scène.", "alt": [] },
+        { "mot": "anecdote", "def": "Petite histoire amusante ou curieuse, souvent vraie.", "ex": "Ma tante raconte une anecdote sur son enfance.", "alt": [] },
+        { "mot": "exploit", "def": "Action remarquable et difficile.", "ex": "Traverser la Manche à la nage est un exploit.", "alt": [] },
+        { "mot": "épreuve", "def": "Moment difficile à traverser, ou partie d'un examen ou d'une compétition.", "ex": "La première épreuve du concours est une course.", "alt": [] },
+        { "mot": "spectacle", "def": "Ce que l'on présente à un public : théâtre, danse, cirque…", "ex": "Le spectacle de fin d'année était magnifique.", "alt": [] },
+        { "mot": "excursion", "def": "Courte promenade ou visite d'un lieu, souvent en groupe.", "ex": "La classe part en excursion au château.", "alt": [] },
+        { "mot": "pique-nique", "def": "Repas que l'on prend dehors, assis dans l'herbe.", "ex": "Nous avons fait un pique-nique au bord du lac.", "alt": [] },
+        { "mot": "panne", "def": "Arrêt d'une machine qui ne fonctionne plus.", "ex": "La voiture est tombée en panne sur l'autoroute.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "J'ai pris le train pour Lyon.", "indice": "Un voyage en train", "trap": ["prit", "pri"], "alt": [] },
+        { "phrase": "Nous avons fini le puzzle hier soir.", "indice": "Un jeu terminé", "trap": ["finit"], "alt": ["Hier soir, nous avons fini le puzzle."] },
+        { "phrase": "Mes amis ont vu un dauphin.", "indice": "Une rencontre en mer", "trap": ["vue", "on"], "alt": [] },
+        { "phrase": "Elle a écrit une lettre à sa grand-mère.", "indice": "Du courrier pour Mamie", "trap": ["écris"], "alt": [] },
+        { "phrase": "Tu as mis tes chaussures à l'envers.", "indice": "Un habillage raté", "trap": ["mit"], "alt": [] },
+        { "phrase": "Le facteur a apporté un colis.", "indice": "Une livraison", "trap": ["apporter"], "alt": [] },
+        { "phrase": "Vous avez fait un gâteau délicieux.", "indice": "Un compliment au pâtissier", "trap": ["fais"], "alt": [] },
+        { "phrase": "Ils ont ouvert la fenêtre.", "indice": "Un peu d'air frais", "trap": ["ouvri", "on"], "alt": [] },
+        { "phrase": "J'ai dû partir plus tôt.", "indice": "Un départ avancé", "trap": ["du"], "alt": [] },
+        { "phrase": "Nous avons bu un chocolat chaud.", "indice": "Une boisson d'hiver", "trap": ["bue"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Hier, j'ai ___ un roman.", "choices": ["lu", "lus", "lut"], "answer": 0, "explain": "Lire a pour participe lu." },
+        { "type": "mcq", "q": "Il a ___ la porte.", "choices": ["ouvert", "ouvri", "ouvré"], "answer": 0, "explain": "Ouvrir a un participe irrégulier : ouvert." },
+        { "type": "mcq", "q": "Nous avons ___ nos devoirs.", "choices": ["fait", "fais", "fai"], "answer": 0, "explain": "Au féminin : une chose faite. Le participe est fait, avec un t." },
+        { "type": "mcq", "q": "Elle a ___ son parapluie.", "choices": ["pris", "prit", "pri"], "answer": 0, "explain": "Au féminin : une décision prise. Le participe est pris, avec un s." },
+        { "type": "mcq", "q": "Les enfants ont ___ très tôt.", "choices": ["dormi", "dormis", "dormit"], "answer": 0, "explain": "Dormir a pour participe dormi. Avec avoir, pas d'accord avec le sujet." },
+        { "type": "fill", "q": "J'ai ___ une carte postale.", "hint": "écrire, au passé composé", "answer": ["écrit"], "explain": "Une carte écrite : le participe est écrit, avec un t." },
+        { "type": "fill", "q": "Tu as ___ ton goûter ?", "hint": "finir, au passé composé", "answer": ["fini"], "explain": "Une tâche finie : le participe est fini, sans consonne." },
+        { "type": "fill", "q": "Ils ont ___ leur maison.", "hint": "vendre, au passé composé", "answer": ["vendu"], "explain": "Vendre a pour participe vendu." },
+        { "type": "fill", "q": "Nous avons ___ le bus pendant une heure.", "hint": "attendre, au passé composé", "answer": ["attendu"], "explain": "Attendre a pour participe attendu." },
+        { "type": "fill", "q": "Elle a ___ la vérité.", "hint": "dire, au passé composé", "answer": ["dit"], "explain": "Une chose dite : le participe est dit, avec un t." },
+        { "type": "fill", "q": "Vous avez ___ ce film ?", "hint": "voir, au passé composé", "answer": ["vu"], "explain": "Voir a pour participe vu." },
+        { "type": "fill", "q": "Mon frère a ___ sa chambre.", "hint": "ranger, au passé composé", "answer": ["rangé"], "explain": "Les verbes en -er ont un participe en -é : rangé." },
+        { "type": "error", "q": "J'ai apprit ma leçon.", "wrong": 1, "fix": ["appris"], "explain": "Une leçon apprise : le participe est appris, avec un s." },
+        { "type": "error", "q": "Elle a mit son manteau.", "wrong": 2, "fix": ["mis"], "explain": "Une table mise : le participe est mis, avec un s." },
+        { "type": "error", "q": "Nous avons finit de manger.", "wrong": 2, "fix": ["fini"], "explain": "Une course finie : le participe est fini, sans t." },
+        { "type": "error", "q": "Les filles ont chantées une chanson.", "wrong": 3, "fix": ["chanté"], "explain": "Avec avoir, le participe ne s'accorde pas avec le sujet : elles ont chanté." }
+      ],
+      "reading": {
+        "title": "Le jour où j'ai perdu Biscotte",
+        "text": "Samedi dernier, j'ai emmené mon chien Biscotte au parc. J'ai lancé sa balle, il a couru… et il a disparu derrière les buissons. J'ai crié son nom pendant dix minutes. J'ai fouillé chaque allée, j'ai interrogé un jardinier et deux promeneurs. Personne n'avait vu de petit chien roux. Alors j'ai pris mon téléphone pour appeler mes parents. C'est à ce moment-là que j'ai entendu un aboiement joyeux : Biscotte avait trouvé le stand de crêpes ! Le vendeur lui a offert un morceau de crêpe au sucre. Moi, j'ai eu la peur de ma vie ; lui, il a fait le meilleur goûter de la sienne.",
+        "questions": [
+          { "q": "Où le narrateur a-t-il emmené son chien ?", "choices": ["Au parc", "À la plage", "Chez le vétérinaire", "Au marché"], "answer": 0, "explain": "Dès la première phrase : il l'a emmené au parc." },
+          { "q": "Qu'a fait le narrateur pour retrouver Biscotte ?", "choices": ["Il a fouillé les allées et interrogé des passants", "Il a appelé la police", "Il est rentré chez lui", "Il a acheté une crêpe"], "answer": 0, "explain": "Il a fouillé chaque allée et interrogé un jardinier et deux promeneurs." },
+          { "q": "Où se trouvait Biscotte ?", "choices": ["Près du stand de crêpes", "Derrière un arbre", "Dans un buisson", "Chez le jardinier"], "answer": 0, "explain": "Biscotte avait trouvé le stand de crêpes." },
+          { "q": "Que veut dire la dernière phrase ?", "choices": ["Le maître a eu très peur, mais le chien s'est régalé", "Le chien a eu très peur", "Le maître a mangé une crêpe", "Le vendeur était en colère"], "answer": 0, "explain": "Le maître a eu « la peur de sa vie », le chien a fait « le meilleur goûter » de la sienne." }
+        ]
+      }
+    },
+    {
+      "id": "3.3",
+      "name": "La maison d'être",
+      "title": "Le passé composé avec être : verbes de mouvement, accord avec le sujet",
+      "goal": "Choisir l'auxiliaire être quand il le faut et accorder le participe avec le sujet.",
+      "lesson": [
+        { "type": "p", "text": "Une quinzaine de verbes, qui expriment surtout un **mouvement** ou un **changement d'état**, se conjuguent avec **être** au passé composé. Avec être, le participe s'accorde avec le sujet, comme un adjectif." },
+        { "type": "rule", "title": "Les verbes avec être", "text": "**aller, venir, arriver, partir, entrer, sortir, monter, descendre, tomber, rester, naître, mourir, retourner, passer**, et leurs dérivés (**devenir, revenir, rentrer, repartir**…). Tous les verbes pronominaux aussi ([[je me suis levé]]) : tu les étudieras à la ligne 6." },
+        { "type": "rule", "title": "L'accord avec le sujet", "text": "[[Léa est partie]] (féminin), [[Les garçons sont arrivés]] (masculin pluriel), [[Mes sœurs sont venues]] (féminin pluriel). Avec **je**, **tu**, **nous**, **vous**, on accorde selon la personne qui parle : [[je suis allée]] si c'est une fille." },
+        { "type": "table", "head": ["aller", "partir"], "rows": [["je suis allé(e)", "je suis parti(e)"], ["tu es allé(e)", "tu es parti(e)"], ["il est allé / elle est allée", "il est parti / elle est partie"], ["nous sommes allé(e)s", "nous sommes parti(e)s"], ["vous êtes allé(e)(s)", "vous êtes parti(e)(s)"], ["ils sont allés / elles sont allées", "ils sont partis / elles sont parties"]] },
+        { "type": "examples", "items": [
+          { "ex": "Ma grand-mère **est née** en Bretagne.", "note": "féminin singulier : -ée" },
+          { "ex": "Mes cousins **sont arrivés** en retard.", "note": "masculin pluriel : -és" },
+          { "ex": "Les hirondelles **sont revenues** au printemps.", "note": "féminin pluriel : -ues" },
+          { "ex": "Le vase **est tombé** de la table.", "note": "masculin singulier : pas de terminaison ajoutée" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "Elle est ~~parti~~.", "ok": "Elle est **partie**.", "why": "Avec être, accord avec le sujet féminin : -ie." },
+          { "ko": "Ils sont ~~arrivé~~.", "ok": "Ils sont **arrivés**.", "why": "Sujet pluriel : -és." },
+          { "ko": "Nous ~~avons~~ tombés.", "ok": "Nous **sommes** tombés.", "why": "Tomber se conjugue avec être." },
+          { "ko": "Elle ~~a~~ née à Lille.", "ok": "Elle **est** née à Lille.", "why": "Naître se conjugue avec être." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "**Monter, descendre, sortir, rentrer, retourner** et **passer** prennent **avoir** quand ils ont un complément d'objet : [[Elle est montée au grenier]] mais [[Elle a monté les valises]]. Avec avoir, plus d'accord avec le sujet." },
+        { "type": "fun", "text": "Le sais-tu ? Les professeurs dessinent souvent la « maison d'être » : on y naît, on entre, on monte l'escalier, on descend, on tombe, on reste, on sort, on part… Tous ces verbes habitent la même maison : celle de l'auxiliaire être !" }
+      ],
+      "vocab": [
+        { "mot": "voyageur", "def": "Personne qui fait un voyage.", "ex": "Les voyageurs attendent sur le quai.", "alt": [] },
+        { "mot": "valise", "def": "Bagage rigide avec une poignée, dans lequel on range ses vêtements pour partir.", "ex": "Ma valise est trop lourde.", "alt": [] },
+        { "mot": "bagage", "def": "Ensemble des sacs et valises que l'on emporte en voyage.", "ex": "Ne laisse jamais ton bagage sans surveillance.", "alt": [] },
+        { "mot": "billet", "def": "Petit papier qui prouve que l'on a payé son voyage ou son entrée.", "ex": "Le contrôleur vérifie mon billet.", "alt": [] },
+        { "mot": "quai", "def": "Bord de la voie où l'on monte dans le train.", "ex": "Le train entre en gare, reculez du bord du quai.", "alt": [] },
+        { "mot": "aéroport", "def": "Endroit où les avions décollent et atterrissent.", "ex": "Nous partons de l'aéroport de Marseille.", "alt": [] },
+        { "mot": "escale", "def": "Arrêt pendant un voyage, avant de repartir.", "ex": "L'avion fait une escale à Madrid.", "alt": [] },
+        { "mot": "frontière", "def": "Limite qui sépare deux pays.", "ex": "Nous avons passé la frontière espagnole.", "alt": [] },
+        { "mot": "itinéraire", "def": "Chemin que l'on choisit pour aller d'un lieu à un autre.", "ex": "Le GPS calcule l'itinéraire le plus rapide.", "alt": [] },
+        { "mot": "destination", "def": "Lieu où l'on veut aller.", "ex": "Le train à destination de Bordeaux part voie trois.", "alt": [] },
+        { "mot": "départ", "def": "Moment où l'on s'en va.", "ex": "Le départ est prévu à huit heures.", "alt": [] },
+        { "mot": "arrivée", "def": "Moment où l'on atteint le lieu où l'on allait.", "ex": "À notre arrivée, il pleuvait.", "alt": [] },
+        { "mot": "retour", "def": "Le voyage qui nous ramène chez nous.", "ex": "Le retour des vacances est toujours triste.", "alt": [] },
+        { "mot": "passeport", "def": "Document officiel qui permet de voyager dans d'autres pays.", "ex": "N'oublie pas ton passeport !", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Léa est partie en vacances hier.", "indice": "Un départ en congés", "trap": ["parti", "à"], "alt": ["Hier, Léa est partie en vacances."] },
+        { "phrase": "Mes cousins sont arrivés en retard.", "indice": "Des invités pas très ponctuels", "trap": ["arrivé", "son"], "alt": [] },
+        { "phrase": "Nous sommes allés au cirque.", "indice": "Une sortie sous le chapiteau", "trap": ["allé", "avons"], "alt": [] },
+        { "phrase": "Ma grand-mère est née en Bretagne.", "indice": "Une origine bretonne", "trap": ["né", "nez"], "alt": [] },
+        { "phrase": "Elles sont descendues à la cave.", "indice": "Une visite au sous-sol", "trap": ["descendu"], "alt": [] },
+        { "phrase": "Le vase est tombé de la table.", "indice": "Un petit accident à la maison", "trap": ["tombée"], "alt": [] },
+        { "phrase": "Vous êtes restés jusqu'à minuit, les enfants ?", "indice": "Une soirée qui finit tard", "trap": ["resté"], "alt": [] },
+        { "phrase": "Les hirondelles sont revenues au printemps.", "indice": "Le retour des oiseaux", "trap": ["revenu"], "alt": ["Au printemps, les hirondelles sont revenues."] },
+        { "phrase": "Il est monté au sommet de la tour.", "indice": "Une belle vue d'en haut", "trap": ["montée"], "alt": [] },
+        { "phrase": "Elle est entrée sans frapper.", "indice": "Une arrivée sans prévenir", "trap": ["entré", "entrer"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Hier, ma sœur est ___ au cinéma.", "choices": ["allée", "allé", "allés"], "answer": 0, "explain": "Avec être, le participe s'accorde avec le sujet, ma sœur : allée." },
+        { "type": "mcq", "q": "Les invités sont ___.", "choices": ["arrivés", "arrivé", "arrivées"], "answer": 0, "explain": "Les invités : masculin pluriel, arrivés." },
+        { "type": "mcq", "q": "Nous ___ partis à l'aube.", "choices": ["sommes", "avons", "sont"], "answer": 0, "explain": "Partir se conjugue avec être : nous sommes partis." },
+        { "type": "mcq", "q": "Elle a ___ les valises au grenier.", "choices": ["monté", "montée", "montés"], "answer": 0, "explain": "Ici, monter a un complément (les valises) : il se conjugue avec avoir, sans accord avec le sujet." },
+        { "type": "mcq", "q": "Les feuilles sont ___ de l'arbre.", "choices": ["tombées", "tombés", "tombé"], "answer": 0, "explain": "Avec être, accord avec le sujet, les feuilles : féminin pluriel." },
+        { "type": "fill", "q": "Mes parents sont ___ tard.", "hint": "rentrer, au passé composé", "answer": ["rentrés"], "explain": "Accord avec mes parents : masculin pluriel, rentrés." },
+        { "type": "fill", "q": "Inès est ___ à la maison.", "hint": "rester, au passé composé", "answer": ["restée"], "explain": "Accord avec Inès : féminin singulier, restée." },
+        { "type": "fill", "q": "Mes sœurs sont ___ en bus.", "hint": "venir, au passé composé", "answer": ["venues"], "explain": "Accord avec mes sœurs : féminin pluriel, venues." },
+        { "type": "fill", "q": "Le petit chat est ___ au printemps.", "hint": "naître, au passé composé", "answer": ["né"], "explain": "Naître se conjugue avec être : le chat est né." },
+        { "type": "fill", "q": "Mes amies sont ___ de bonne heure.", "hint": "partir, au passé composé", "answer": ["parties"], "explain": "Accord avec mes amies : féminin pluriel, parties." },
+        { "type": "fill", "q": "Les alpinistes sont ___ au sommet.", "hint": "monter, au passé composé", "answer": ["montés"], "explain": "Sans complément d'objet, monter prend être : accord avec les alpinistes, montés." },
+        { "type": "fill", "q": "Ma tante est ___ médecin.", "hint": "devenir, au passé composé", "answer": ["devenue"], "explain": "Devenir se conjugue avec être : accord avec ma tante, devenue." },
+        { "type": "error", "q": "Elle est sorti sans manteau.", "wrong": 2, "fix": ["sortie"], "explain": "Avec être, accord avec le sujet féminin : sortie." },
+        { "type": "error", "q": "Nous avons allés à la piscine.", "wrong": 1, "fix": ["sommes"], "explain": "Aller se conjugue avec être : nous sommes allés." },
+        { "type": "error", "q": "Mes cousines sont arrivé hier.", "wrong": 3, "fix": ["arrivées"], "explain": "Accord avec mes cousines : féminin pluriel, arrivées." },
+        { "type": "error", "q": "Ils sont descendu à la plage.", "wrong": 2, "fix": ["descendus"], "explain": "Accord avec ils : masculin pluriel, descendus." }
+      ],
+      "reading": {
+        "title": "Une journée à Paris",
+        "text": "Dimanche, Malik et sa petite sœur Inès sont partis de Lille à sept heures. Ils sont arrivés à Paris une heure plus tard. D'abord, ils sont montés en haut de la tour Eiffel ; Inès est restée collée à la vitre de l'ascenseur. Ensuite, ils sont allés au musée d'Orsay, où Malik est tombé en admiration devant un tableau de chevaux. À midi, ils sont entrés dans une crêperie. Le soir, ils sont rentrés épuisés. Leur mère leur a demandé : « Alors, c'était bien ? » Inès a répondu : « Génial ! Mais la tour Eiffel n'a même pas de toboggan pour redescendre ! »",
+        "questions": [
+          { "q": "D'où Malik et Inès sont-ils partis ?", "choices": ["De Lille", "De Paris", "De Lyon", "De Bordeaux"], "answer": 0, "explain": "Ils sont partis de Lille à sept heures." },
+          { "q": "Qu'ont-ils visité en premier ?", "choices": ["La tour Eiffel", "Le musée d'Orsay", "Une crêperie", "Le Louvre"], "answer": 0, "explain": "« D'abord, ils sont montés en haut de la tour Eiffel. »" },
+          { "q": "Que signifie « Malik est tombé en admiration » ?", "choices": ["Il a beaucoup admiré un tableau", "Il a glissé dans le musée", "Il s'est endormi", "Il a fait tomber un tableau"], "answer": 0, "explain": "Tomber en admiration, c'est se mettre à admirer très fort : ici, un tableau de chevaux." },
+          { "q": "Pourquoi « partis », « arrivés » et « montés » se terminent-ils par -s ?", "choices": ["Ils sont conjugués avec être et s'accordent avec un sujet pluriel", "Ils sont au présent", "Ils sont conjugués avec avoir", "Ce sont des noms"], "answer": 0, "explain": "Avec être, le participe s'accorde avec le sujet : Malik et Inès, masculin pluriel." },
+          { "q": "Dans quel état les enfants sont-ils rentrés ?", "choices": ["Épuisés", "En colère", "Malades", "Tristes"], "answer": 0, "explain": "« Le soir, ils sont rentrés épuisés. »" }
+        ]
+      }
+    },
+    {
+      "id": "3.4",
+      "name": "L'astuce de « vendre »",
+      "title": "-é, -er, -ez, -ait : infinitif, participe, présent avec vous, imparfait",
+      "goal": "Choisir entre -é, -er, -ez et -ait grâce à l'astuce du verbe vendre.",
+      "lesson": [
+        { "type": "p", "text": "À la fin d'un verbe en -er, le son [e] peut s'écrire **-é** (participe passé), **-er** (infinitif) ou **-ez** (avec vous) ; et l'imparfait **-ait** s'entend presque pareil. C'est l'une des fautes les plus répandues, chez les enfants comme chez les adultes. Heureusement, il existe une astuce imparable." },
+        { "type": "rule", "title": "L'astuce du verbe vendre", "text": "Remplace le verbe par **vendre** (ou prendre, mordre). Si tu dis **vendre**, écris **-er** ; si tu dis **vendu**, écris **-é** (et accorde si besoin). [[Il va manger]] → il va vendre : -er. [[Il a mangé]] → il a vendu : -é." },
+        { "type": "rule", "title": "Après une préposition ou un verbe conjugué", "text": "Après **à, de, pour, sans, par** et après un verbe conjugué (**aller, vouloir, pouvoir, devoir, falloir, aimer…**), on met l'**infinitif** : [[pour jouer]], [[il faut ranger]], [[je veux danser]]." },
+        { "type": "table", "head": ["Avec vendre, on dit…", "On écrit", "Exemple"], "rows": [["vendre", "-er", "[[Je vais acheter du pain.]]"], ["vendu", "-é", "[[J'ai acheté du pain.]]"], ["vendez", "-ez", "[[Vous achetez du pain.]]"], ["vendait", "-ait (ou -ais)", "[[Il achetait du pain.]]"]] },
+        { "type": "rule", "title": "-ez et -ait", "text": "Avec **vous**, le verbe conjugué finit par **-ez** : [[vous chantez]]. À l'imparfait, on entend [ɛ] : [[il chantait]] (il vendait). Si l'astuce donne « vendait », écris **-ait** (ou **-ais** avec je et tu)." },
+        { "type": "examples", "items": [
+          { "ex": "Il faut **ranger** ta chambre avant de **jouer**.", "note": "il faut vendre, avant de vendre : -er" },
+          { "ex": "J'ai **mangé** une pomme.", "note": "j'ai vendu : -é" },
+          { "ex": "Vous **parlez** trop fort.", "note": "vous vendez : -ez" },
+          { "ex": "Autrefois, il **travaillait** à la ferme.", "note": "il vendait : -ait" },
+          { "ex": "La porte est **fermée**.", "note": "elle est vendue : -ée, accordé" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "Il faut ~~rangé~~ ta chambre.", "ok": "Il faut **ranger** ta chambre.", "why": "Il faut vendre : -er." },
+          { "ko": "J'ai ~~manger~~.", "ok": "J'ai **mangé**.", "why": "J'ai vendu : -é." },
+          { "ko": "Vous ~~parlé~~ trop.", "ok": "Vous **parlez** trop.", "why": "Vous vendez : -ez." },
+          { "ko": "Avant, elle ~~chanté~~ souvent.", "ok": "Avant, elle **chantait** souvent.", "why": "Elle vendait : -ait." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Un pronom peut séparer les deux verbes : [[je vais le laver]] (je vais le vendre → -er), [[je l'ai lavé]] (je l'ai vendu → -é). Applique l'astuce à toute la phrase, pronoms compris." },
+        { "type": "fun", "text": "Le sais-tu ? Les professeurs de français le savent bien : la confusion -é / -er se glisse partout, dans les copies comme dans les courriels des adultes. Avec l'astuce de « vendre », tu fais déjà mieux que beaucoup de grandes personnes !" }
+      ],
+      "vocab": [
+        { "mot": "balayer", "def": "Nettoyer le sol avec un balai.", "ex": "Il faut balayer la cuisine.", "alt": [] },
+        { "mot": "repasser", "def": "Rendre un vêtement lisse avec un fer chaud.", "ex": "Papa va repasser ma chemise.", "alt": [] },
+        { "mot": "plier", "def": "Rabattre une chose sur elle-même, comme une feuille ou un drap.", "ex": "Aide-moi à plier le linge.", "alt": [] },
+        { "mot": "essuyer", "def": "Sécher ou nettoyer en frottant avec un torchon.", "ex": "Je vais essuyer la vaisselle.", "alt": [] },
+        { "mot": "secouer", "def": "Agiter fortement dans un sens et dans l'autre.", "ex": "Il faut secouer la bouteille avant de l'ouvrir.", "alt": [] },
+        { "mot": "éplucher", "def": "Enlever la peau d'un fruit ou d'un légume.", "ex": "Peux-tu éplucher les pommes de terre ?", "alt": [] },
+        { "mot": "râper", "def": "Réduire en petits morceaux avec un ustensile plein de trous coupants.", "ex": "Nous allons râper le fromage.", "alt": ["raper"] },
+        { "mot": "mélanger", "def": "Mettre ensemble plusieurs choses et les remuer pour qu'elles se mêlent.", "ex": "Il faut mélanger la farine et le sucre.", "alt": [] },
+        { "mot": "verser", "def": "Faire couler un liquide d'un récipient dans un autre.", "ex": "Je vais verser le lait dans le bol.", "alt": [] },
+        { "mot": "goûter", "def": "Manger un petit peu d'un plat pour savoir s'il est bon.", "ex": "Tu peux goûter la sauce ?", "alt": ["gouter"] },
+        { "mot": "remuer", "def": "Tourner une préparation avec une cuillère.", "ex": "Il faut remuer la soupe sans arrêt.", "alt": [] },
+        { "mot": "étaler", "def": "Répandre en couche fine sur une surface.", "ex": "Je vais étaler la pâte avec un rouleau.", "alt": [] },
+        { "mot": "décorer", "def": "Rendre plus joli en ajoutant des ornements.", "ex": "Nous allons décorer le sapin.", "alt": [] },
+        { "mot": "emballer", "def": "Envelopper dans du papier ou mettre dans un paquet.", "ex": "Aide-moi à emballer le cadeau.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Il faut ranger ta chambre avant de jouer.", "indice": "Une consigne de parent", "trap": ["rangé", "jouez"], "alt": [] },
+        { "phrase": "J'ai mangé une pomme et une poire.", "indice": "Un goûter fruité", "trap": ["manger"], "alt": [] },
+        { "phrase": "Vous parlez trop fort.", "indice": "Une remarque à la bibliothèque", "trap": ["parlé", "parler"], "alt": [] },
+        { "phrase": "Ma sœur aime chanter sous la douche.", "indice": "Un concert dans la salle de bains", "trap": ["chanté", "chantait"], "alt": [] },
+        { "phrase": "Nous allons regarder un film.", "indice": "Une soirée canapé", "trap": ["regardé"], "alt": [] },
+        { "phrase": "Le chat a renversé le lait.", "indice": "Une bêtise de chat", "trap": ["renverser"], "alt": [] },
+        { "phrase": "Autrefois, il travaillait à la ferme.", "indice": "Un ancien métier", "trap": ["travaillé", "travailler"], "alt": ["Il travaillait à la ferme autrefois."] },
+        { "phrase": "Tu dois laver tes mains avant le repas.", "indice": "Une règle d'hygiène", "trap": ["lavé", "lavez"], "alt": [] },
+        { "phrase": "Les élèves ont terminé leur dessin.", "indice": "Un travail fini en classe", "trap": ["terminer", "terminez"], "alt": [] },
+        { "phrase": "La boulangerie est fermée le lundi.", "indice": "Un jour de repos", "trap": ["fermer", "fermé"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Je vais ___ mes affaires.", "choices": ["ranger", "rangé", "rangez"], "answer": 0, "explain": "Je vais vendre : infinitif en -er." },
+        { "type": "mcq", "q": "Elle a ___ toute la nuit.", "choices": ["dansé", "danser", "dansait"], "answer": 0, "explain": "Elle a vendu : participe en -é." },
+        { "type": "mcq", "q": "Vous ___ très bien.", "choices": ["dessinez", "dessiné", "dessiner"], "answer": 0, "explain": "Vous vendez : -ez." },
+        { "type": "mcq", "q": "Quand j'étais petit, je ___ des bonbons.", "choices": ["mangeais", "mangé", "manger"], "answer": 0, "explain": "Je vendais : imparfait, -ais avec je." },
+        { "type": "mcq", "q": "Il est parti sans nous ___.", "choices": ["saluer", "salué", "saluez"], "answer": 0, "explain": "Après sans, on met l'infinitif : sans nous vendre → saluer." },
+        { "type": "fill", "q": "J'ai oublié de ___ la porte.", "hint": "fermer", "answer": ["fermer"], "explain": "Oublier de vendre : après de, l'infinitif en -er." },
+        { "type": "fill", "q": "Le gardien a ___ la grille.", "hint": "fermer", "answer": ["fermé"], "explain": "Il a vendu : participe passé en -é." },
+        { "type": "fill", "q": "Vous ___ souvent au tennis ?", "hint": "jouer, au présent", "answer": ["jouez"], "explain": "Avec vous, le verbe conjugué se termine par -ez." },
+        { "type": "fill", "q": "Il faut ___ les plantes.", "hint": "arroser", "answer": ["arroser"], "explain": "Il faut vendre : infinitif en -er." },
+        { "type": "fill", "q": "Mes grands-parents ___ à la campagne.", "hint": "habiter, à l'imparfait", "answer": ["habitaient"], "explain": "Ils vendaient : imparfait, -aient avec ils." },
+        { "type": "fill", "q": "Les fenêtres sont ___.", "hint": "fermer", "answer": ["fermées"], "explain": "Elles sont vendues : participe en -é, accordé avec les fenêtres (féminin pluriel)." },
+        { "type": "fill", "q": "Nous avons ___ un gâteau.", "hint": "préparer", "answer": ["préparé"], "explain": "Nous avons vendu : participe en -é." },
+        { "type": "error", "q": "Je vais mangé au restaurant.", "wrong": 2, "fix": ["manger"], "explain": "Je vais vendre : infinitif en -er." },
+        { "type": "error", "q": "Il a rater son bus.", "wrong": 2, "fix": ["raté"], "explain": "Il a vendu : participe passé en -é." },
+        { "type": "error", "q": "Vous chanté faux !", "wrong": 1, "fix": ["chantez"], "explain": "Vous vendez : -ez." },
+        { "type": "error", "q": "Elle commence à pleuré.", "wrong": 3, "fix": ["pleurer"], "explain": "Après à, on met l'infinitif : à vendre → pleurer." }
+      ],
+      "reading": {
+        "title": "Le mot de Chloé",
+        "text": "Chloé a laissé ce mot à son frère : « Théo, maman a appelé : elle va rentrer tard. Tu dois sortir le chien et préparer le dîner. J'ai déjà acheté les pâtes, elles sont posées sur la table. N'oublie pas de fermer la fenêtre de la cuisine : le chat a déjà essayé de sauter dehors. Vous avez un contrôle de maths demain, toi et Malik : révisez ensemble ! Moi, je suis partie au judo. Bisous. » Théo a lu le mot, il a sorti le chien… puis il a oublié tout le reste. Quand maman est rentrée, le chat dormait sur le toit.",
+        "questions": [
+          { "q": "Qui a écrit le mot ?", "choices": ["Chloé", "Théo", "Maman", "Malik"], "answer": 0, "explain": "« Chloé a laissé ce mot à son frère. »" },
+          { "q": "Que devait faire Théo ?", "choices": ["Sortir le chien et préparer le dîner", "Aller au judo", "Acheter des pâtes", "Appeler sa mère"], "answer": 0, "explain": "« Tu dois sortir le chien et préparer le dîner. »" },
+          { "q": "Pourquoi fallait-il fermer la fenêtre de la cuisine ?", "choices": ["Le chat avait déjà essayé de sauter dehors", "Il faisait froid", "Il allait pleuvoir", "Le chien aboyait"], "answer": 0, "explain": "Le chat avait déjà essayé de s'échapper par là." },
+          { "q": "Que s'est-il passé à la fin ?", "choices": ["Le chat a fini sur le toit", "Théo a préparé un bon dîner", "Chloé est rentrée tard", "Maman a fermé la fenêtre"], "answer": 0, "explain": "Théo a oublié la fenêtre : le chat est sorti et dormait sur le toit." },
+          { "q": "Dans « tu dois préparer le dîner », pourquoi écrit-on -er ?", "choices": ["Après « tu dois », le verbe est à l'infinitif", "C'est un participe passé", "Le sujet est vous", "C'est l'imparfait"], "answer": 0, "explain": "Tu dois vendre : après un verbe conjugué, l'infinitif en -er." }
+        ]
+      }
+    },
+    {
+      "id": "3.5",
+      "name": "La revanche des jumeaux",
+      "title": "la / l'a / là, leur / leurs, peu / peut / peux, ni / n'y",
+      "goal": "Distinguer quatre nouvelles familles d'homophones grâce au remplacement.",
+      "lesson": [
+        { "type": "p", "text": "Quatre nouvelles familles d'homophones, et toujours la même méthode : **remplacer** pour vérifier." },
+        { "type": "rule", "title": "la / l'a / là", "text": "**la** : devant un nom ([[la porte]]) ou devant un verbe, à la place d'un nom féminin ([[je la vois]]). **l'a** : on peut dire **l'avait** ([[il l'a vue]] → il l'avait vue). **là** : un lieu, on peut dire **ici** ([[Pose-le là]])." },
+        { "type": "rule", "title": "leur / leurs", "text": "Devant un verbe, **leur** est un pronom (= à eux, à elles) et ne prend **jamais** de s : [[Je leur parle]]. Devant un nom, leur est un déterminant : **leur** pour une seule chose ([[leur maison]]), **leurs** pour plusieurs ([[leurs enfants]])." },
+        { "type": "table", "head": ["Mot", "Astuce", "Exemple"], "rows": [["peu", "le contraire de beaucoup", "[[un peu de sel]]"], ["peut", "on peut dire pouvait (il, elle, on)", "[[Il peut venir.]]"], ["peux", "avec je ou tu", "[[Je peux]], [[tu peux]]"]] },
+        { "type": "rule", "title": "ni / n'y", "text": "**ni** sert à nier deux choses : [[ni chaud ni froid]]. **n'y** = ne + y : on peut ajouter « là-bas » : [[Je n'y vais pas]] (je ne vais pas là-bas)." },
+        { "type": "examples", "items": [
+          { "ex": "Je **leur** ai prêté mes billes.", "note": "devant un verbe : leur, sans s" },
+          { "ex": "Les enfants rangent **leurs** jouets.", "note": "plusieurs jouets : leurs" },
+          { "ex": "Il **l'a** appelée hier soir.", "note": "il l'avait appelée" },
+          { "ex": "Je **peux** t'aider un **peu**.", "note": "verbe pouvoir avec je ; le contraire de beaucoup" },
+          { "ex": "Nous **n'y** sommes jamais allés.", "note": "nous ne sommes jamais allés là-bas" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "Je ~~leurs~~ ai dit.", "ok": "Je **leur** ai dit.", "why": "Devant un verbe, leur ne prend jamais de s." },
+          { "ko": "Il ~~la~~ mangée.", "ok": "Il **l'a** mangée.", "why": "On peut dire il l'avait mangée." },
+          { "ko": "Pose ton sac ~~la~~.", "ok": "Pose ton sac **là**.", "why": "Un lieu : on peut dire ici." },
+          { "ko": "Il ~~ni~~ a pas pensé.", "ok": "Il **n'y** a pas pensé.", "why": "Ne + y : il ne pense pas à cela." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "**leurs** avec un s seulement devant un nom au pluriel : [[leurs vélos]]. Devant un verbe, jamais de s, même quand on parle de plusieurs personnes : [[je leur donne]]." },
+        { "type": "fun", "text": "Le sais-tu ? Là prend un accent grave pour se distinguer de la. Même chose pour où et ou, à et a : l'accent grave est le meilleur ami des jumeaux !" }
+      ],
+      "vocab": [
+        { "mot": "clown", "def": "Artiste de cirque au nez rouge qui fait rire.", "ex": "Le clown glisse sur une peau de banane.", "alt": [] },
+        { "mot": "jongleur", "def": "Artiste qui lance et rattrape plusieurs objets sans les faire tomber.", "ex": "Le jongleur lance cinq balles à la fois.", "alt": [] },
+        { "mot": "acrobate", "def": "Artiste qui fait des sauts et des figures difficiles.", "ex": "L'acrobate fait un saut périlleux.", "alt": [] },
+        { "mot": "trapéziste", "def": "Artiste qui fait des figures en se balançant en hauteur.", "ex": "La trapéziste vole au-dessus de la piste.", "alt": [] },
+        { "mot": "dompteur", "def": "Personne qui dresse des animaux sauvages.", "ex": "Le dompteur fait entrer les lions.", "alt": [] },
+        { "mot": "chapiteau", "def": "Grande tente ronde sous laquelle se joue un spectacle de cirque.", "ex": "Le chapiteau rouge et jaune se voit de loin.", "alt": [] },
+        { "mot": "piste", "def": "Espace rond, au centre du cirque, où se passe le spectacle.", "ex": "Les chevaux entrent sur la piste.", "alt": [] },
+        { "mot": "magicien", "def": "Artiste qui fait des tours de magie.", "ex": "Le magicien sort un lapin de son chapeau.", "alt": [] },
+        { "mot": "funambule", "def": "Artiste qui marche en équilibre sur un fil tendu.", "ex": "La funambule avance lentement sur son fil.", "alt": [] },
+        { "mot": "spectateur", "def": "Personne qui regarde un spectacle.", "ex": "Chaque spectateur retient son souffle.", "alt": [] },
+        { "mot": "applaudissement", "def": "Bruit des mains que l'on frappe pour féliciter.", "ex": "Un tonnerre d'applaudissements salue les artistes.", "alt": [] },
+        { "mot": "costume", "def": "Vêtement que l'on porte pour jouer un personnage.", "ex": "Le costume du roi brille de mille feux.", "alt": [] },
+        { "mot": "rideau", "def": "Grande pièce de tissu qui s'ouvre au début du spectacle.", "ex": "Le rideau se lève sur la scène.", "alt": [] },
+        { "mot": "coulisses", "def": "Partie cachée derrière la scène, où les artistes se préparent.", "ex": "Les artistes attendent dans les coulisses.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Je leur ai prêté mes billes.", "indice": "Un prêt entre copains", "trap": ["leurs"], "alt": [] },
+        { "phrase": "Les enfants rangent leurs jouets.", "indice": "Une chambre en ordre", "trap": ["leur"], "alt": [] },
+        { "phrase": "Il l'a appelée hier soir.", "indice": "Un coup de téléphone", "trap": ["la", "là"], "alt": [] },
+        { "phrase": "Pose ton sac là, près de la porte.", "indice": "Un endroit pour le sac", "trap": ["l'a"], "alt": [] },
+        { "phrase": "Je peux t'aider un peu.", "indice": "Une proposition modeste", "trap": ["peut"], "alt": [] },
+        { "phrase": "Il peut courir très vite.", "indice": "Un coureur rapide", "trap": ["peu", "peux"], "alt": [] },
+        { "phrase": "Je n'aime ni le chou ni les épinards.", "indice": "Deux légumes détestés", "trap": ["n'y"], "alt": ["Je n'aime ni les épinards ni le chou."] },
+        { "phrase": "Nous n'y sommes jamais allés.", "indice": "Un endroit inconnu", "trap": ["ni"], "alt": [] },
+        { "phrase": "Cette soupe a peu de goût.", "indice": "Un plat fade", "trap": ["peut"], "alt": [] },
+        { "phrase": "Leur chien aboie toute la nuit.", "indice": "Des voisins bruyants", "trap": ["Leurs"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Je ___ téléphone tous les soirs.", "choices": ["leur", "leurs"], "answer": 0, "explain": "Devant un verbe, leur est un pronom : jamais de s." },
+        { "type": "mcq", "q": "Ils ont perdu ___ clés.", "choices": ["leurs", "leur"], "answer": 0, "explain": "Devant un nom pluriel, le déterminant prend un s : leurs clés." },
+        { "type": "mcq", "q": "Le chat ___ griffé.", "choices": ["l'a", "la", "là"], "answer": 0, "explain": "On peut dire le chat l'avait griffé : l'a." },
+        { "type": "mcq", "q": "Tu ___ venir avec nous.", "choices": ["peux", "peut", "peu"], "answer": 0, "explain": "Avec tu, pouvoir s'écrit peux." },
+        { "type": "mcq", "q": "Elle ___ est jamais allée.", "choices": ["n'y", "ni"], "answer": 0, "explain": "Elle n'est jamais allée là-bas : ne + y, n'y." },
+        { "type": "fill", "q": "Mets ton manteau ___, sur la chaise.", "hint": "la, l'a ou là ?", "answer": ["là"], "explain": "Un lieu, on peut dire ici : là." },
+        { "type": "fill", "q": "Il ___ vu au marché.", "hint": "la, l'a ou là ?", "answer": ["l'a"], "explain": "On peut dire il l'avait vu : l'a." },
+        { "type": "fill", "q": "Je ___ regarde danser.", "hint": "la, l'a ou là ?", "answer": ["la"], "explain": "La remplace un nom féminin devant le verbe : je regarde la danseuse." },
+        { "type": "fill", "q": "Ce bébé dort très ___.", "hint": "peu, peut ou peux ?", "answer": ["peu"], "explain": "Le contraire de beaucoup : peu." },
+        { "type": "fill", "q": "On ___ entrer ?", "hint": "peu, peut ou peux ?", "answer": ["peut"], "explain": "On pouvait entrer : peut." },
+        { "type": "fill", "q": "Les voisins arrosent ___ jardin.", "hint": "leur ou leurs ?", "answer": ["leur"], "explain": "Un seul jardin : leur, sans s." },
+        { "type": "fill", "q": "Je ne veux ___ thé ni café.", "hint": "ni ou n'y ?", "answer": ["ni"], "explain": "On nie deux choses : ni thé ni café." },
+        { "type": "error", "q": "Je leurs ai offert des fleurs.", "wrong": 1, "fix": ["leur"], "explain": "Devant un verbe, leur est un pronom : jamais de s." },
+        { "type": "error", "q": "Il ni comprend rien.", "wrong": 1, "fix": ["n'y"], "explain": "Il ne comprend rien à cela : ne + y, n'y." },
+        { "type": "error", "q": "Je peut porter ce sac.", "wrong": 1, "fix": ["peux"], "explain": "Avec je, pouvoir s'écrit peux." },
+        { "type": "error", "q": "Ton livre est la, sur la table.", "wrong": 3, "fix": ["là"], "explain": "Un lieu, on peut dire ici : là." }
+      ],
+      "reading": {
+        "title": "Les jumeaux du cirque",
+        "text": "Lou et Max sont jumeaux et travaillent au cirque Fantasia. Leur numéro est simple : Lou marche sur un fil, et Max jongle juste en dessous avec leurs sept balles rouges. Un soir, le fil s'est mis à trembler. Lou a vacillé, Max a levé les yeux… et toutes les balles sont tombées. Le public a retenu son souffle. Mais Lou n'a eu ni peur ni vertige : elle a rattrapé une balle d'un geste rapide, l'a lancée à son frère, et le numéro a continué. Les spectateurs ont cru que c'était prévu. Depuis, les jumeaux font tomber les balles exprès, à chaque représentation.",
+        "questions": [
+          { "q": "Quel est le numéro de Lou ?", "choices": ["Elle marche sur un fil", "Elle jongle", "Elle dompte des lions", "Elle fait le clown"], "answer": 0, "explain": "« Lou marche sur un fil, et Max jongle juste en dessous. »" },
+          { "q": "Que s'est-il passé un soir ?", "choices": ["Le fil a tremblé et les balles sont tombées", "Max est tombé du fil", "Le chapiteau s'est envolé", "Le public est parti"], "answer": 0, "explain": "Le fil s'est mis à trembler, Max a levé les yeux et les balles sont tombées." },
+          { "q": "Comment Lou a-t-elle réagi ?", "choices": ["Elle a gardé son calme et relancé une balle", "Elle a pleuré", "Elle est descendue du fil", "Elle a arrêté le spectacle"], "answer": 0, "explain": "Elle n'a eu ni peur ni vertige et a relancé une balle à son frère." },
+          { "q": "Pourquoi les jumeaux font-ils maintenant tomber les balles exprès ?", "choices": ["Le public a cru que c'était prévu et l'a adoré", "Ils sont maladroits", "Le fil tremble toujours", "Le directeur l'exige"], "answer": 0, "explain": "Les spectateurs ont cru que l'incident faisait partie du numéro : les jumeaux l'ont gardé." },
+          { "q": "Dans « leurs sept balles », pourquoi leurs prend-il un s ?", "choices": ["Il y a plusieurs balles", "Il est devant un verbe", "Il y a deux jumeaux", "C'est un pronom"], "answer": 0, "explain": "Le déterminant leur prend un s quand le nom qui suit est au pluriel : leurs balles." }
+        ]
+      }
+    }
+  ]
+}

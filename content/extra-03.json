@@ -1,0 +1,121 @@
+{
+  "level": 3,
+  "units": [
+    {
+      "unit": "3.1",
+      "dictee": {
+        "titre": "Les vacances au bord du lac",
+        "texte": "Quand j'étais petite, je passais mes vacances chez mes grands-parents, au bord d'un lac. Le matin, nous pêchions avec mon grand-père. Ma grand-mère commençait la journée par un grand bol de café. Le soir, nous mangions dehors et nous jouions aux cartes jusqu'à la nuit. Les étoiles brillaient, les grillons chantaient : j'étais heureuse.",
+        "points": [
+          "**j'étais**, **je passais** : avec je, l'imparfait se termine par -ais.",
+          "**nous pêchions**, **nous jouions** : -ions avec nous.",
+          "**commençait** : la cédille garde le son [s] devant a. Mais **nous mangions** : devant i, pas de e après le g.",
+          "**brillaient**, **chantaient** : -aient avec un sujet pluriel."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Raconte en cinq phrases un souvenir d'enfance ou une habitude de tes vacances, à l'imparfait.",
+        "model": "Quand j'avais six ans, j'habitais près de Lille. Chaque mercredi, ma grand-mère m'emmenait au parc. Nous donnions du pain aux canards et nous mangions une gaufre. Je criais de joie sur la balançoire. Ces après-midi me semblaient durer une éternité.",
+        "checklist": [
+          "Tous mes verbes sont à l'imparfait.",
+          "J'ai écrit -ais avec je, -ait avec il ou elle, -aient avec ils ou elles.",
+          "J'ai vérifié les verbes en -ier et en -yer (nous criions, vous payiez)."
+        ]
+      }
+    },
+    {
+      "unit": "3.2",
+      "dictee": {
+        "titre": "Un samedi bien rempli",
+        "texte": "Samedi, j'ai pris le bus avec ma sœur. Nous avons acheté des fleurs au marché, puis nous avons vu un spectacle de marionnettes. Ma sœur a ri aux éclats. Le soir, j'ai écrit une lettre à mon cousin et j'ai lu trois chapitres de mon roman. Quelle journée !",
+        "points": [
+          "**pris** (une décision prise), **écrit** (une lettre écrite) : le féminin révèle la consonne finale.",
+          "**ri**, **lu**, **vu** : pas de consonne finale.",
+          "**acheté** : participe des verbes en -er, toujours en -é.",
+          "**nous avons acheté**, **nous avons vu** : avec avoir, pas d'accord avec le sujet."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Raconte à voix haute ton dernier week-end en six phrases au passé composé avec avoir. Puis écris trois de ces phrases.",
+        "model": "Samedi, j'ai fait du vélo avec mon père. Nous avons pris un pique-nique. Dimanche, j'ai lu une bande dessinée et j'ai vu un film. Ma sœur a cuisiné des crêpes. Le soir, nous avons joué aux cartes.",
+        "checklist": [
+          "J'ai utilisé l'auxiliaire avoir au présent.",
+          "J'ai vérifié la fin de chaque participe (pris, fait, lu, vu).",
+          "Je n'ai pas accordé le participe avec le sujet."
+        ]
+      }
+    },
+    {
+      "unit": "3.3",
+      "dictee": {
+        "titre": "Le grand départ",
+        "texte": "Ce matin, mes parents sont partis très tôt. Ma petite sœur est montée dans la voiture en pyjama. Nous sommes arrivés à la gare à sept heures. Mon frère est resté sur le quai pour caresser un chien. Finalement, il est monté dans le train juste avant le départ. Ma mère est devenue toute rouge !",
+        "points": [
+          "Partir, monter, arriver, rester, devenir : ces verbes se conjuguent avec **être**.",
+          "**partis**, **arrivés** : accord avec un sujet masculin pluriel.",
+          "**montée**, **devenue** : accord avec un sujet féminin singulier.",
+          "**resté**, **monté** : sujet masculin singulier, pas de terminaison ajoutée."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Écris une carte postale de vacances de quatre à six phrases, avec au moins quatre verbes conjugués avec être au passé composé (partir, arriver, aller, rester, monter…).",
+        "model": "Chère Mamie, nous sommes arrivés à Marseille hier soir. Ce matin, Léa et moi sommes allées à la plage. Papa est resté à l'hôtel pour dormir ! Cet après-midi, nous sommes montés jusqu'à la basilique. Gros bisous, Inès.",
+        "checklist": [
+          "J'ai utilisé être avec les verbes de mouvement.",
+          "J'ai accordé chaque participe avec son sujet.",
+          "J'ai mis une formule pour saluer et une pour finir."
+        ]
+      }
+    },
+    {
+      "unit": "3.4",
+      "dictee": {
+        "titre": "La tarte de Papa",
+        "texte": "Papa a décidé de préparer une tarte aux pommes. Il a épluché les fruits, il a mélangé la farine et le beurre, puis il a enfourné la tarte. Pendant la cuisson, il nous a demandé : « Vous voulez goûter la crème ? » Nous avons léché le bol en entier. Quand la tarte était prête, il ne restait plus de crème !",
+        "points": [
+          "**préparer**, **goûter** : après décider de et vouloir, l'infinitif (on dirait vendre).",
+          "**épluché**, **mélangé**, **demandé**, **léché** : après avoir, le participe en -é (on dirait vendu).",
+          "**voulez** : avec vous, -ez.",
+          "**était**, **restait** : imparfait en -ait (on dirait vendait)."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Explique à voix haute à quelqu'un de ta famille l'astuce du verbe vendre, avec deux exemples. Puis écris tes deux exemples.",
+        "model": "Pour savoir s'il faut écrire -é ou -er, on remplace le verbe par vendre. « Je vais jouer » : je vais vendre, donc -er. « J'ai joué » : j'ai vendu, donc -é.",
+        "checklist": [
+          "Mon premier exemple contient un infinitif en -er.",
+          "Mon second exemple contient un participe en -é.",
+          "J'ai vérifié mes deux exemples avec vendre."
+        ]
+      }
+    },
+    {
+      "unit": "3.5",
+      "dictee": {
+        "titre": "La chatte des voisins",
+        "texte": "Nos voisins partent en voyage. Je leur ai promis d'arroser leurs plantes. Leur chatte, Moka, mange peu quand ils ne sont pas là. Je peux la nourrir, mais elle n'y touche jamais avant le soir. Elle n'aime ni le poisson ni le poulet : seulement les croquettes au fromage ! Ma mère l'a souvent dit : cette chatte est une princesse.",
+        "points": [
+          "**leur ai promis** : devant un verbe, leur ne prend pas de s. **leurs plantes** : plusieurs plantes, donc un s.",
+          "**peu** (le contraire de beaucoup) et **je peux** (verbe pouvoir avec je).",
+          "**là** : un lieu. **la nourrir** : la remplace la chatte. **l'a dit** : on peut dire l'avait dit.",
+          "**n'y touche** : ne + y. **ni le poisson ni le poulet** : on nie deux choses."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Écris trois phrases sur des voisins, des amis ou des cousins en utilisant leur, leurs, peu, peux et n'y.",
+        "model": "Mes cousins ont un jardin immense. Je leur rends visite le dimanche et je joue avec leurs chiens. Leur maison est un peu loin : je ne peux pas y aller à pied et je n'y vais jamais seul.",
+        "checklist": [
+          "Leur sans s devant un verbe.",
+          "Leurs avec un s devant un nom pluriel.",
+          "Peu pour le contraire de beaucoup, peux avec je ou tu.",
+          "N'y, c'est ne + y."
+        ]
+      }
+    }
+  ]
+}

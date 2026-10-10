@@ -34,6 +34,7 @@ export function unknownWords(text) {
     if (/^\p{Lu}/u.test(w) && !/(^|[.!?…]\s*|«\s*|—\s*)$/.test(before) && m.index > 0) continue; // a name
     if (/^\p{Lu}{2,}$/u.test(w)) continue; // an acronym or a key word in capitals
     if (/[-…]$/.test(before) || FRAGMENTS.has(w.toLowerCase())) continue; // an ending quoted in a lesson
+    if (/^-(?!\p{L})/u.test(t.slice(m.index + m[0].length, m.index + m[0].length + 2))) continue; // a stem (finiss-)
     const parts = w.split("'");
     const core = parts.length > 1 && /^(c|d|j|l|m|n|s|t|qu|jusqu|lorsqu|puisqu|quoiqu|presqu|quelqu)$/i.test(parts[0]) ? parts.slice(1).join("'") : w;
     if (parts.length > 1 && /^\p{Lu}/u.test(core)) continue; // d'Afrique, l'Élysée

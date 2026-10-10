@@ -1,0 +1,86 @@
+{
+  "level": 3,
+  "taunts": {
+    "phase2": [
+      "Hier, je navigais… Pardon : je naviguais ! Ne me déconcentre pas !",
+      "Je vais mangé tes points, moussaillon ! Ou mangée ? Ou manger ? Peu importe !",
+      "Maintenant, écris ! Et que la mer emporte tes participes !"
+    ],
+    "phase3": [
+      "Dernière bordée : la, l'a, là… à l'abordage !",
+      "Mes perroquets répètent « leurs » devant tous les verbes !",
+      "Plus que quelques questions avant que tu ne coules !"
+    ],
+    "lose": [
+      "Ha ! Tu as sombré corps et biens. Reviens quand tu sauras ramer… ou ramé ?",
+      "Le Capitaine garde son trésor. Révise ton imparfait, moussaillon !",
+      "Tu t'es noyé dans mes participes. À la prochaine marée !"
+    ]
+  },
+  "questions": [
+    { "unit": "3.1", "type": "mcq", "q": "Pendant les vacances, nous ___ tard.", "choices": ["dormions", "dormons", "dormiions"], "answer": 0, "explain": "Une habitude du passé : imparfait. Radical dorm- + -ions : dormions." },
+    { "unit": "3.1", "type": "mcq", "q": "Quand tu étais petit, tu ___ toujours le dernier.", "choices": ["arrivais", "arrivait", "arrivé"], "answer": 0, "explain": "Avec tu, l'imparfait se termine par -ais." },
+    { "unit": "3.1", "type": "mcq", "q": "Autrefois, les cloches ___ à toute heure.", "choices": ["sonnaient", "sonnait", "sonnais"], "answer": 0, "explain": "Le sujet, les cloches, est pluriel : -aient." },
+    { "unit": "3.1", "type": "mcq", "q": "Autrefois, vous ___ souvent vos lunettes.", "choices": ["oubliiez", "oubliez", "oublier"], "answer": 0, "explain": "À l'imparfait : oubli- + -iez, avec deux i. « Vous oubliez » serait le présent." },
+    { "unit": "3.1", "type": "fill", "q": "Avant, je ___ à l'école à pied.", "hint": "aller, à l'imparfait", "answer": ["allais"], "explain": "Avec je, -ais : j'allais." },
+    { "unit": "3.1", "type": "fill", "q": "La nuit, nous ___ des bruits étranges.", "hint": "entendre, à l'imparfait", "answer": ["entendions"], "explain": "Radical entend- + -ions : nous entendions." },
+    { "unit": "3.1", "type": "fill", "q": "Mes grands-parents ___ beaucoup.", "hint": "voyager, à l'imparfait", "answer": ["voyageaient"], "explain": "Devant a, on garde le e après le g : ils voyageaient." },
+    { "unit": "3.1", "type": "fill", "q": "Vous ___ aux éclats pendant la fête.", "hint": "rire, à l'imparfait", "answer": ["riiez"], "explain": "Radical ri- + -iez : vous riiez, avec deux i." },
+    { "unit": "3.1", "type": "fill", "q": "Elle ___ la vaisselle chaque soir.", "hint": "faire, à l'imparfait", "answer": ["faisait"], "explain": "Nous faisons → fais- + -ait : elle faisait." },
+    { "unit": "3.1", "type": "error", "q": "Les enfants dormait déjà.", "wrong": 2, "fix": ["dormaient"], "explain": "Le sujet est pluriel, les enfants : -aient." },
+    { "unit": "3.1", "type": "error", "q": "Il nagait comme un poisson.", "wrong": 1, "fix": ["nageait"], "explain": "Devant a, il faut un e après le g : nageait." },
+    { "unit": "3.1", "type": "error", "q": "Autrefois, nous travaillons à la ferme.", "wrong": 2, "fix": ["travaillions"], "explain": "Autrefois appelle l'imparfait : travaill- + -ions, travaillions." },
+
+    { "unit": "3.2", "type": "mcq", "q": "J'ai ___ mon portefeuille.", "choices": ["perdu", "perdus", "perdut"], "answer": 0, "explain": "Perdre a pour participe perdu." },
+    { "unit": "3.2", "type": "mcq", "q": "Tu as ___ la réponse ?", "choices": ["su", "sus", "sut"], "answer": 0, "explain": "Savoir a pour participe su." },
+    { "unit": "3.2", "type": "mcq", "q": "Mes cousins ont ___ un nouveau jeu.", "choices": ["inventé", "inventés", "inventer"], "answer": 0, "explain": "Avec avoir, le participe ne s'accorde pas avec le sujet : inventé." },
+    { "unit": "3.2", "type": "mcq", "q": "Elle a ___ un cri de surprise.", "choices": ["poussé", "poussée", "pousser"], "answer": 0, "explain": "Avec avoir, pas d'accord avec le sujet : elle a poussé." },
+    { "unit": "3.2", "type": "fill", "q": "Le soleil a ___ toute la journée.", "hint": "briller, au passé composé", "answer": ["brillé"], "explain": "Verbe en -er : participe en -é, brillé." },
+    { "unit": "3.2", "type": "fill", "q": "J'ai ___ un verre de lait.", "hint": "boire, au passé composé", "answer": ["bu"], "explain": "Boire a pour participe bu." },
+    { "unit": "3.2", "type": "fill", "q": "Nous avons ___ une cabane.", "hint": "construire, au passé composé", "answer": ["construit"], "explain": "Une cabane construite : le participe est construit, avec un t." },
+    { "unit": "3.2", "type": "fill", "q": "Ils ont ___ un cadeau à leur mère.", "hint": "offrir, au passé composé", "answer": ["offert"], "explain": "Offrir a un participe irrégulier : offert." },
+    { "unit": "3.2", "type": "fill", "q": "Elle a ___ la valise.", "hint": "remplir, au passé composé", "answer": ["rempli"], "explain": "Une valise remplie : le participe est rempli, sans consonne." },
+    { "unit": "3.2", "type": "error", "q": "Il a conduis prudemment.", "wrong": 2, "fix": ["conduit"], "explain": "Une voiture conduite : le participe est conduit, avec un t." },
+    { "unit": "3.2", "type": "error", "q": "J'ai éteind la lumière.", "wrong": 1, "fix": ["éteint"], "explain": "Une lumière éteinte : le participe est éteint, avec un t." },
+    { "unit": "3.2", "type": "error", "q": "Vous avez prit vos billets ?", "wrong": 2, "fix": ["pris"], "explain": "Une décision prise : le participe est pris, avec un s." },
+
+    { "unit": "3.3", "type": "mcq", "q": "Mes grands-parents sont ___ en Provence.", "choices": ["nés", "né", "nées"], "answer": 0, "explain": "Avec être, accord avec le sujet, mes grands-parents : masculin pluriel." },
+    { "unit": "3.3", "type": "mcq", "q": "La lettre est ___ hier.", "choices": ["arrivée", "arrivé", "arrivés"], "answer": 0, "explain": "Accord avec la lettre : féminin singulier, arrivée." },
+    { "unit": "3.3", "type": "mcq", "q": "Elles ___ sorties ce soir.", "choices": ["sont", "ont", "son"], "answer": 0, "explain": "Sortir, sans complément, se conjugue avec être : elles sont sorties." },
+    { "unit": "3.3", "type": "mcq", "q": "Papa ___ les poubelles.", "choices": ["a sorti", "est sorti", "est sortis"], "answer": 0, "explain": "Ici, sortir a un complément (les poubelles) : il se conjugue avec avoir." },
+    { "unit": "3.3", "type": "fill", "q": "Mes amis sont ___ en retard.", "hint": "venir, au passé composé", "answer": ["venus"], "explain": "Accord avec mes amis : masculin pluriel, venus." },
+    { "unit": "3.3", "type": "fill", "q": "La neige est ___ toute la nuit.", "hint": "tomber, au passé composé", "answer": ["tombée"], "explain": "Accord avec la neige : féminin singulier, tombée." },
+    { "unit": "3.3", "type": "fill", "q": "Elles sont ___ au dernier étage.", "hint": "monter, au passé composé", "answer": ["montées"], "explain": "Accord avec elles : féminin pluriel, montées." },
+    { "unit": "3.3", "type": "fill", "q": "Papa et moi, nous sommes ___ de bonne heure.", "hint": "partir, au passé composé", "answer": ["partis"], "explain": "Papa et moi : au moins un masculin, donc masculin pluriel, partis." },
+    { "unit": "3.3", "type": "fill", "q": "Le bébé est ___ en juin.", "hint": "naître, au passé composé", "answer": ["né"], "explain": "Naître se conjugue avec être : accord avec le bébé, né." },
+    { "unit": "3.3", "type": "error", "q": "Ma mère est rentré tard.", "wrong": 3, "fix": ["rentrée"], "explain": "Accord avec ma mère : féminin singulier, rentrée." },
+    { "unit": "3.3", "type": "error", "q": "Ils ont arrivés en avance.", "wrong": 1, "fix": ["sont"], "explain": "Arriver se conjugue avec être : ils sont arrivés." },
+    { "unit": "3.3", "type": "error", "q": "Les filles sont allé au parc.", "wrong": 3, "fix": ["allées"], "explain": "Accord avec les filles : féminin pluriel, allées." },
+
+    { "unit": "3.4", "type": "mcq", "q": "Il a commencé à ___.", "choices": ["neiger", "neigé", "neigez"], "answer": 0, "explain": "Après à, l'infinitif : à vendre, donc neiger." },
+    { "unit": "3.4", "type": "mcq", "q": "Nous avons ___ le match.", "choices": ["regardé", "regarder", "regardez"], "answer": 0, "explain": "Nous avons vendu : participe en -é." },
+    { "unit": "3.4", "type": "mcq", "q": "Vous ___ quand ?", "choices": ["arrivez", "arrivé", "arriver"], "answer": 0, "explain": "Vous vendez : -ez." },
+    { "unit": "3.4", "type": "mcq", "q": "Je dois ___ mon frère.", "choices": ["appeler", "appelé", "appelez"], "answer": 0, "explain": "Je dois vendre : infinitif en -er." },
+    { "unit": "3.4", "type": "fill", "q": "Tu peux ___ la radio ?", "hint": "allumer", "answer": ["allumer"], "explain": "Tu peux vendre : infinitif en -er." },
+    { "unit": "3.4", "type": "fill", "q": "Ma tante a ___ un vélo.", "hint": "acheter", "answer": ["acheté"], "explain": "Elle a vendu : participe en -é." },
+    { "unit": "3.4", "type": "fill", "q": "Vous ___ trop vite !", "hint": "manger, au présent", "answer": ["mangez"], "explain": "Vous vendez : -ez." },
+    { "unit": "3.4", "type": "fill", "q": "Avant, il ___ dans une banque.", "hint": "travailler, à l'imparfait", "answer": ["travaillait"], "explain": "Il vendait : imparfait en -ait." },
+    { "unit": "3.4", "type": "fill", "q": "Les cadeaux sont ___.", "hint": "emballer", "answer": ["emballés"], "explain": "Ils sont vendus : participe en -é, accordé avec les cadeaux (masculin pluriel)." },
+    { "unit": "3.4", "type": "error", "q": "Il faut accroché ce tableau.", "wrong": 2, "fix": ["accrocher"], "explain": "Il faut vendre : infinitif en -er." },
+    { "unit": "3.4", "type": "error", "q": "Nous avons gagner la partie.", "wrong": 2, "fix": ["gagné"], "explain": "Nous avons vendu : participe en -é." },
+    { "unit": "3.4", "type": "error", "q": "Elle ne veut pas mangé de soupe.", "wrong": 4, "fix": ["manger"], "explain": "Elle ne veut pas vendre : infinitif en -er." },
+
+    { "unit": "3.5", "type": "mcq", "q": "Mes voisins promènent ___ chiens.", "choices": ["leurs", "leur"], "answer": 0, "explain": "Devant un nom pluriel, le déterminant prend un s : leurs chiens." },
+    { "unit": "3.5", "type": "mcq", "q": "Je ___ ai écrit une lettre.", "choices": ["leur", "leurs"], "answer": 0, "explain": "Devant un verbe, leur est un pronom : jamais de s." },
+    { "unit": "3.5", "type": "mcq", "q": "Ma clé ? ___ voilà enfin !", "choices": ["La", "L'a", "Là"], "answer": 0, "explain": "La remplace le nom féminin ma clé : la voilà." },
+    { "unit": "3.5", "type": "mcq", "q": "Ce restaurant ? Nous ___ allons plus.", "choices": ["n'y", "ni"], "answer": 0, "explain": "Y remplace « dans ce restaurant », et ne s'élide devant y : nous n'y allons plus." },
+    { "unit": "3.5", "type": "fill", "q": "Il a ___ de patience.", "hint": "peu, peut ou peux ?", "answer": ["peu"], "explain": "Le contraire de beaucoup : peu." },
+    { "unit": "3.5", "type": "fill", "q": "Elle ___ nager sous l'eau.", "hint": "peu, peut ou peux ?", "answer": ["peut"], "explain": "Elle pouvait nager : peut." },
+    { "unit": "3.5", "type": "fill", "q": "Ma voiture ? Mon père ___ réparée.", "hint": "la, l'a ou là ?", "answer": ["l'a"], "explain": "On peut dire mon père l'avait réparée : l'a." },
+    { "unit": "3.5", "type": "fill", "q": "Coucou, nous sommes ___ !", "hint": "la, l'a ou là ?", "answer": ["là"], "explain": "Un lieu, on peut dire ici : là." },
+    { "unit": "3.5", "type": "fill", "q": "Je n'ai ___ frère ni sœur.", "hint": "ni ou n'y ?", "answer": ["ni"], "explain": "On nie deux choses : ni frère ni sœur." },
+    { "unit": "3.5", "type": "error", "q": "Je peu venir demain.", "wrong": 1, "fix": ["peux"], "explain": "Verbe pouvoir avec je : je peux." },
+    { "unit": "3.5", "type": "error", "q": "Les élèves rangent leur affaires.", "wrong": 3, "fix": ["leurs"], "explain": "Devant un nom pluriel : leurs affaires." },
+    { "unit": "3.5", "type": "error", "q": "Tu ni penses pas.", "wrong": 1, "fix": ["n'y"], "explain": "Tu ne penses pas à cela : ne + y, n'y." }
+  ]
+}

@@ -118,3 +118,8 @@ gérondif
 COD
 COI
 france
+crêperie
+crêperies
+courriel
+courriels
+lou
