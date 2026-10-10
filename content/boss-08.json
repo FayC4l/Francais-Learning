@@ -1,0 +1,86 @@
+{
+  "level": 8,
+  "taunts": {
+    "phase2": [
+      "Le piège dont tu as peur, celui auquel tu penses, celui dans lequel tu tomberas… tu le vois ?",
+      "Il m'a dit qu'il gagnera… pardon, qu'il gagnerait. Ha, même moi je m'y perds !",
+      "Écris, maintenant ! Et que chaque subordonnée t'emprisonne !"
+    ],
+    "phase3": [
+      "Dernière épreuve : a-t-il fini ? a-il fini ? Lequel est juste, hé hé ?",
+      "On n'a jamais vu un tel candidat. Remarque le n' : moi, je ne l'oublie jamais.",
+      "Ta défaite sera prononcée par le jury, et elle sera applaudie de tous !"
+    ],
+    "lose": [
+      "Le candidat dont j'ai triomphé… c'est toi. Reviens quand tu sauras ton « dont » !",
+      "Je t'avais dit que tu perdrais. Avec la concordance des temps, en plus.",
+      "Ta copie a été corrigée, notée et rendue. Révise, et reviens."
+    ]
+  },
+  "questions": [
+    { "unit": "8.1", "type": "mcq", "q": "La robe ___ elle rêve coûte trop cher.", "choices": ["dont", "que", "où"], "answer": 0, "explain": "Rêver de quelque chose : dont." },
+    { "unit": "8.1", "type": "mcq", "q": "C'est vous qui ___ gagné.", "choices": ["avez", "a", "ont"], "answer": 0, "explain": "Après qui, accord avec l'antécédent vous." },
+    { "unit": "8.1", "type": "mcq", "q": "Les amis ___ je pense vivent loin.", "choices": ["auxquels", "dont", "que"], "answer": 0, "explain": "Penser à quelqu'un, au pluriel : auxquels (à qui est aussi possible pour des personnes)." },
+    { "unit": "8.1", "type": "mcq", "q": "La raison pour ___ il est parti reste obscure.", "choices": ["laquelle", "lequel", "quoi"], "answer": 0, "explain": "Après pour, antécédent féminin (la raison) : laquelle." },
+    { "unit": "8.1", "type": "fill", "q": "La femme ___ parle est ma tante.", "hint": "pronom relatif", "answer": ["qui"], "explain": "La femme parle : sujet, qui." },
+    { "unit": "8.1", "type": "fill", "q": "Voici la lettre ___ j'ai reçue.", "hint": "pronom relatif", "answer": ["que"], "explain": "J'ai reçu la lettre : COD, que." },
+    { "unit": "8.1", "type": "fill", "q": "Le pays ___ il vient est lointain.", "hint": "de + où", "answer": ["d'où"], "explain": "Venir d'un lieu : d'où." },
+    { "unit": "8.1", "type": "fill", "q": "Le concours ___ elle s'est inscrite est difficile.", "hint": "à + pronom relatif", "answer": ["auquel"], "explain": "S'inscrire à un concours : auquel." },
+    { "unit": "8.1", "type": "fill", "q": "C'est moi qui ___ raison.", "hint": "avoir, au présent", "answer": ["ai"], "explain": "Après qui, accord avec moi : ai." },
+    { "unit": "8.1", "type": "error", "q": "Le jouet que mon fils a besoin est cher.", "wrong": 2, "fix": ["dont"], "explain": "Avoir besoin de quelque chose : dont." },
+    { "unit": "8.1", "type": "error", "q": "C'est toi qui a cassé le vase.", "wrong": 3, "fix": ["as"], "explain": "Après qui, accord avec toi : as." },
+    { "unit": "8.1", "type": "error", "q": "L'hôtel que nous avons dormi était calme.", "wrong": 1, "fix": ["où"], "explain": "Dormir dans un lieu : où." },
+
+    { "unit": "8.2", "type": "mcq", "q": "Il a tellement plu que la route ___ inondée.", "choices": ["est", "soit", "fût"], "answer": 0, "explain": "Une conséquence réelle : indicatif." },
+    { "unit": "8.2", "type": "mcq", "q": "Je t'explique pour que tu ___.", "choices": ["comprennes", "comprends", "comprendras"], "answer": 0, "explain": "Pour que (but) + subjonctif." },
+    { "unit": "8.2", "type": "mcq", "q": "___ il était tard, nous sommes rentrés.", "choices": ["Comme", "Bien qu'", "Pour qu'"], "answer": 0, "explain": "Une cause, en tête de phrase : comme." },
+    { "unit": "8.2", "type": "mcq", "q": "Je viendrai à condition que tu ___ là.", "choices": ["sois", "es", "seras"], "answer": 0, "explain": "À condition que + subjonctif." },
+    { "unit": "8.2", "type": "fill", "q": "Bien qu'il ___ fatigué, il a couru.", "hint": "être : indicatif ou subjonctif ?", "answer": ["soit"], "explain": "Bien que + subjonctif." },
+    { "unit": "8.2", "type": "fill", "q": "Puisque tu ___ le temps, aide-moi.", "hint": "avoir : indicatif ou subjonctif ?", "answer": ["as"], "explain": "Puisque + indicatif." },
+    { "unit": "8.2", "type": "fill", "q": "Range ta chambre avant que ta mère ___.", "hint": "rentrer : indicatif ou subjonctif ?", "answer": ["rentre"], "explain": "Avant que + subjonctif." },
+    { "unit": "8.2", "type": "fill", "q": "Même si tu ___ en retard, je t'attendrai.", "hint": "être : indicatif ou subjonctif ?", "answer": ["es"], "explain": "Même si + indicatif." },
+    { "unit": "8.2", "type": "fill", "q": "Il travaille afin que sa famille ___ à l'abri.", "hint": "être : indicatif ou subjonctif ?", "answer": ["soit"], "explain": "Afin que + subjonctif." },
+    { "unit": "8.2", "type": "error", "q": "Bien qu'elle a raison, elle se tait.", "wrong": 2, "fix": ["ait"], "explain": "Bien que + subjonctif : bien qu'elle ait." },
+    { "unit": "8.2", "type": "error", "q": "Malgré qu'il fasse froid, il sort.", "wrong": 0, "fix": ["Bien"], "explain": "Dans la langue soignée : bien que, et non malgré que." },
+    { "unit": "8.2", "type": "error", "q": "Je resterai jusqu'à ce que tu pars.", "wrong": 6, "fix": ["partes"], "explain": "Jusqu'à ce que + subjonctif : que tu partes." },
+
+    { "unit": "8.3", "type": "mcq", "q": "Elle m'a demandé ___ je voulais.", "choices": ["ce que", "qu'est-ce que", "quoi que"], "answer": 0, "explain": "Qu'est-ce que devient ce que dans une question indirecte." },
+    { "unit": "8.3", "type": "mcq", "q": "Il a promis qu'il ___ le lendemain.", "choices": ["reviendrait", "reviendra", "revient"], "answer": 0, "explain": "Le futur devient conditionnel après un verbe au passé." },
+    { "unit": "8.3", "type": "mcq", "q": "Il m'a demandé ___ j'étais libre.", "choices": ["si", "est-ce que", "que"], "answer": 0, "explain": "Une question fermée rapportée commence par si." },
+    { "unit": "8.3", "type": "mcq", "q": "Elle a dit qu'elle ___ déjà mangé.", "choices": ["avait", "a", "aura"], "answer": 0, "explain": "Une action antérieure, rapportée au passé : plus-que-parfait." },
+    { "unit": "8.3", "type": "fill", "q": "« Je suis malade. » → Il a dit qu'il ___ malade.", "hint": "être, à l'imparfait", "answer": ["était"], "explain": "Présent → imparfait." },
+    { "unit": "8.3", "type": "fill", "q": "« Tais-toi ! » → Il m'a ordonné ___ me taire.", "hint": "un mot", "answer": ["de"], "explain": "Impératif → de + infinitif." },
+    { "unit": "8.3", "type": "fill", "q": "« Quand pars-tu ? » → Elle m'a demandé ___ je partais.", "hint": "un mot", "answer": ["quand"], "explain": "Le mot interrogatif se conserve." },
+    { "unit": "8.3", "type": "fill", "q": "« J'arriverai ce soir. » → Il a annoncé qu'il ___ le soir même.", "hint": "arriver, au conditionnel présent", "answer": ["arriverait"], "explain": "Futur → conditionnel." },
+    { "unit": "8.3", "type": "fill", "q": "« Je l'ai vu hier. » → Elle a affirmé qu'elle l'avait vu la ___.", "hint": "hier, dans un récit au passé", "answer": ["veille"], "explain": "Hier devient la veille." },
+    { "unit": "8.3", "type": "error", "q": "Il m'a demandé si j'ai faim.", "wrong": 4, "fix": ["j'avais"], "explain": "Après un verbe au passé, le présent devient imparfait." },
+    { "unit": "8.3", "type": "error", "q": "Elle a dit qu'elle partira le lendemain.", "wrong": 4, "fix": ["partirait"], "explain": "Le futur devient conditionnel après un verbe au passé." },
+    { "unit": "8.3", "type": "error", "q": "Le professeur nous a dit que l'examen aura lieu le lendemain.", "wrong": 7, "fix": ["aurait"], "explain": "Le futur devient conditionnel après un verbe au passé." },
+
+    { "unit": "8.4", "type": "mcq", "q": "Les résultats ___ demain.", "choices": ["seront publiés", "publieront", "ont été publiés"], "answer": 0, "explain": "Futur passif : seront + participe ; demain exclut le passé composé." },
+    { "unit": "8.4", "type": "mcq", "q": "La maison a été ___ par un architecte célèbre.", "choices": ["construite", "construit", "construites"], "answer": 0, "explain": "Accord avec le sujet, la maison." },
+    { "unit": "8.4", "type": "mcq", "q": "Ces films ont ___ tournés en Bretagne.", "choices": ["été", "étés", "êtes"], "answer": 0, "explain": "Été reste invariable." },
+    { "unit": "8.4", "type": "mcq", "q": "Il est apprécié ___ tous ses voisins.", "choices": ["de", "à", "chez"], "answer": 0, "explain": "Avec un verbe de sentiment, de introduit le complément d'agent." },
+    { "unit": "8.4", "type": "fill", "q": "« On a fermé la piscine. » → La piscine a été ___.", "hint": "fermer", "answer": ["fermée"], "explain": "Accord avec la piscine." },
+    { "unit": "8.4", "type": "fill", "q": "« Le chef préparera les desserts. » → Les desserts ___ préparés par le chef.", "hint": "être, au futur", "answer": ["seront"], "explain": "Futur passif." },
+    { "unit": "8.4", "type": "fill", "q": "« Le vent avait abattu les arbres. » → Les arbres avaient été ___ par le vent.", "hint": "abattre", "answer": ["abattus"], "explain": "Accord avec les arbres." },
+    { "unit": "8.4", "type": "fill", "q": "Il faut que les dossiers ___ envoyés avant vendredi.", "hint": "être, au subjonctif présent", "answer": ["soient"], "explain": "Subjonctif passif : qu'ils soient envoyés." },
+    { "unit": "8.4", "type": "fill", "q": "La rue est bordée ___ platanes.", "hint": "un mot", "answer": ["de"], "explain": "Avec un verbe de description : de." },
+    { "unit": "8.4", "type": "error", "q": "Les cadeaux ont été emballé avec soin.", "wrong": 4, "fix": ["emballés"], "explain": "Accord avec les cadeaux." },
+    { "unit": "8.4", "type": "error", "q": "La porte avait étée fermée à clé.", "wrong": 3, "fix": ["été"], "explain": "Été reste invariable." },
+    { "unit": "8.4", "type": "error", "q": "Les championnes seront récompensés.", "wrong": 3, "fix": ["récompensées"], "explain": "Accord avec les championnes." },
+
+    { "unit": "8.5", "type": "mcq", "q": "On ___ jamais vu ça !", "choices": ["n'a", "a", "n'as"], "answer": 0, "explain": "Négation complète : on n'a jamais." },
+    { "unit": "8.5", "type": "mcq", "q": "Votre frère ___ raison ?", "choices": ["a-t-il", "a-il", "à-t-il"], "answer": 0, "explain": "Nom repris par il, -t- entre deux voyelles." },
+    { "unit": "8.5", "type": "mcq", "q": "Je ___ veux que ton bonheur.", "choices": ["ne", "n'", "pas"], "answer": 0, "explain": "Ne… que = seulement." },
+    { "unit": "8.5", "type": "mcq", "q": "Il est plus intelligent qu'il ___ paraît.", "choices": ["ne le", "le pas", "ne le pas"], "answer": 0, "explain": "Comparaison d'inégalité : ne explétif, sans pas." },
+    { "unit": "8.5", "type": "fill", "q": "On ___ arrive jamais à l'heure.", "hint": "ne ou n' ?", "answer": ["n'"], "explain": "Devant une voyelle : n'." },
+    { "unit": "8.5", "type": "fill", "q": "___-t-on le droit d'entrer ?", "hint": "avoir, au présent", "answer": ["A"], "explain": "A-t-on : -t- entre deux voyelles." },
+    { "unit": "8.5", "type": "fill", "q": "Je n'ai vu ___ dans la rue.", "hint": "aucune personne", "answer": ["personne"], "explain": "Ne… personne." },
+    { "unit": "8.5", "type": "fill", "q": "Il ___ reste plus de pain.", "hint": "ne ou n' ?", "answer": ["ne"], "explain": "Devant une consonne : ne." },
+    { "unit": "8.5", "type": "fill", "q": "Je crains qu'il ___ soit trop tard.", "hint": "ne explétif", "answer": ["ne"], "explain": "Après craindre que, ne explétif." },
+    { "unit": "8.5", "type": "error", "q": "On a jamais vu ça.", "wrong": 1, "fix": ["n'a"], "explain": "Négation complète : on n'a jamais." },
+    { "unit": "8.5", "type": "error", "q": "Va-il venir ?", "wrong": 0, "fix": ["Va-t-il"], "explain": "Entre deux voyelles, -t- : va-t-il." },
+    { "unit": "8.5", "type": "error", "q": "Pourquoi as-t-il menti ?", "wrong": 1, "fix": ["a-t-il"], "explain": "Avoir avec il : a-t-il, sans s." }
+  ]
+}

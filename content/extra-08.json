@@ -1,0 +1,120 @@
+{
+  "level": 8,
+  "units": [
+    {
+      "unit": "8.1",
+      "dictee": {
+        "titre": "La bibliothèque de mon grand-père",
+        "texte": "Mon grand-père possédait une bibliothèque dont il était très fier. Les livres qu'il avait lus étaient rangés sur des étagères auxquelles personne n'avait le droit de toucher. Au milieu de la pièce se dressait un fauteuil de cuir dans lequel il passait ses après-midi. C'est lui qui m'a appris à aimer la lecture. Aujourd'hui, la maison où il vivait a été vendue, mais j'ai gardé le vieux dictionnaire dont il se servait pour vérifier chaque mot.",
+        "points": [
+          "**dont il était fier**, **dont il se servait** : être fier de, se servir de.",
+          "**auxquelles** : toucher à des étagères (féminin pluriel).",
+          "**dans lequel** : après une préposition, pour une chose.",
+          "**qui m'a appris** : accord avec lui ; **où il vivait** : un lieu."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Décris à voix haute un lieu qui compte pour toi, avec au moins cinq pronoms relatifs différents (qui, que, dont, où, lequel…). Puis écris ta description.",
+        "model": "La plage où je passe mes étés est une petite crique que peu de gens connaissent. Il y a un rocher sur lequel je m'assois pour lire, et une cabane dont la porte ne ferme plus. C'est mon grand-père qui m'y a emmené la première fois.",
+        "checklist": [
+          "J'ai utilisé au moins cinq pronoms relatifs différents.",
+          "Dont remplace un complément introduit par de.",
+          "Après qui, le verbe s'accorde avec l'antécédent."
+        ]
+      }
+    },
+    {
+      "unit": "8.2",
+      "dictee": {
+        "titre": "La fête annulée",
+        "texte": "Comme la météo annonçait un orage, le maire a décidé d'annuler la fête du village. Bien que la décision soit raisonnable, beaucoup d'habitants ont protesté. Les organisateurs avaient tant travaillé que la déception était immense. Pour que les enfants ne soient pas trop tristes, la mairie a proposé d'organiser la fête la semaine suivante, à condition que le ciel le permette. Même si le soleil est revenu dès le lendemain, personne n'a reproché au maire sa prudence.",
+        "points": [
+          "**Comme** (cause) et **tant… que** (conséquence) : indicatif.",
+          "**Bien que la décision soit**, **pour que les enfants ne soient pas**, **à condition que le ciel le permette** : subjonctif.",
+          "**Même si le soleil est revenu** : même si se construit avec l'indicatif.",
+          "**personne n'a reproché** : négation complète, avec n' devant la voyelle."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Écris un petit texte de six phrases qui explique une décision (déménager, adopter un animal, changer de sport…), en exprimant la cause, la conséquence, le but et la concession.",
+        "model": "Comme notre appartement était trop petit, nous avons décidé de déménager. Nous avons choisi une maison avec un jardin pour que notre chien puisse courir. Bien qu'elle soit plus loin du collège, je suis ravi. Le trajet est si long que je me lève une demi-heure plus tôt. Même si je suis fatigué le matin, je ne regrette rien. Puisque j'ai enfin ma propre chambre, je peux inviter mes amis.",
+        "checklist": [
+          "J'ai exprimé la cause (comme, puisque, parce que).",
+          "J'ai exprimé le but avec pour que + subjonctif.",
+          "J'ai exprimé la concession (bien que + subjonctif, même si + indicatif)."
+        ]
+      }
+    },
+    {
+      "unit": "8.3",
+      "dictee": {
+        "titre": "Le message de la directrice",
+        "texte": "La directrice nous a annoncé que les cours reprendraient lundi. Elle a précisé que les élèves qui avaient oublié leurs livres devaient les récupérer le lendemain. Un parent lui a demandé si la cantine serait ouverte. Elle a répondu qu'elle ne le savait pas encore et qu'elle nous préviendrait dès qu'elle aurait des nouvelles. Avant de partir, elle nous a demandé de bien fermer le portail et nous a souhaité une bonne fin de semaine.",
+        "points": [
+          "**reprendraient**, **serait**, **préviendrait**, **aurait** : le futur devient conditionnel après un verbe au passé.",
+          "**avaient oublié** : le passé composé devient plus-que-parfait.",
+          "**si la cantine serait ouverte** : une question fermée rapportée commence par si.",
+          "**de bien fermer** : un ordre rapporté devient de + infinitif ; **le lendemain** remplace demain."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Raconte à voix haute une conversation que tu as eue récemment, en rapportant les paroles au discours indirect (il m'a dit que…, elle m'a demandé si…). Puis écris quatre phrases.",
+        "model": "Hier, mon ami Lucas m'a demandé si je voulais aller au cinéma. Je lui ai répondu que je devais d'abord finir mes devoirs. Il m'a dit qu'il m'attendrait devant le cinéma à dix-huit heures. Ma mère m'a rappelé de rentrer avant le dîner.",
+        "checklist": [
+          "Une question fermée rapportée commence par si.",
+          "Après un verbe au passé : présent → imparfait, futur → conditionnel.",
+          "Un ordre rapporté : de + infinitif."
+        ]
+      }
+    },
+    {
+      "unit": "8.4",
+      "dictee": {
+        "titre": "Le château restauré",
+        "texte": "Le château, qui avait été abandonné pendant des siècles, a enfin été restauré. Les toitures ont été refaites, les fenêtres ont été remplacées et les jardins ont été replantés. Les travaux, financés par la région, ont été achevés au printemps. Le monument sera inauguré samedi par la ministre de la Culture. Les visiteurs seront accueillis par des guides en costume, et les plus jeunes seront invités à participer à un jeu de piste. Il est probable que le château sera bientôt classé.",
+        "points": [
+          "**avait été abandonné**, **a été restauré**, **sera inauguré** : voix passive à différents temps.",
+          "**refaites**, **remplacées**, **replantés**, **achevés** : le participe s'accorde avec le sujet.",
+          "**été** reste toujours invariable.",
+          "**financés par la région** : participe employé seul, accordé avec les travaux."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Rédige une brève de journal de cinq phrases sur un événement local (inauguration, rénovation, concours…), avec au moins quatre verbes à la voix passive.",
+        "model": "La nouvelle médiathèque du quartier a été inaugurée samedi par le maire. Le bâtiment, qui avait été fermé pendant deux ans, a été entièrement rénové. Les travaux ont été financés par la ville et la région. Plus de mille livres ont été offerts par les habitants. La médiathèque sera ouverte tous les jours, sauf le lundi.",
+        "checklist": [
+          "J'ai utilisé au moins quatre verbes à la voix passive.",
+          "Le participe s'accorde avec le sujet ; été reste invariable.",
+          "J'ai varié les temps (passé composé, plus-que-parfait, futur)."
+        ]
+      }
+    },
+    {
+      "unit": "8.5",
+      "dictee": {
+        "titre": "Le chat disparu",
+        "texte": "Ce matin, on n'a pas retrouvé Moustache. Il n'était ni dans le jardin ni sous le lit. Ma sœur n'a rien voulu manger : elle ne pensait qu'à lui. « Est-il parti chez les voisins ? A-t-il été enfermé dans un garage ? » se demandait mon père. Nous n'avons jamais autant cherché. Le soir, alors que nous n'espérions plus rien, Moustache est rentré par la fenêtre, plus gros que nous ne l'avions jamais vu. La voisine, paraît-il, l'avait nourri toute la journée. Il ne semblait guère pressé de s'excuser.",
+        "points": [
+          "**on n'a pas** : le n' ne s'entend pas, mais il s'écrit.",
+          "**ni… ni**, **ne… rien**, **ne… que**, **ne… jamais**, **ne… plus** : négations complètes.",
+          "**Est-il parti ?**, **A-t-il été enfermé ?** : inversion du sujet, avec -t- entre deux voyelles.",
+          "**plus gros que nous ne l'avions vu** : ne explétif dans une comparaison."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Imagine une interview d'une personne célèbre, réelle ou inventée : pose-lui à voix haute cinq questions dans un registre soutenu (avec inversion), puis écris-les.",
+        "model": "Quand avez-vous commencé à chanter ? Votre famille vous a-t-elle encouragée ? Pourquoi avez-vous choisi de vivre à la campagne ? Ne regrettez-vous jamais la ville ? Quel conseil donneriez-vous aux jeunes artistes ?",
+        "checklist": [
+          "Le pronom sujet est placé après le verbe, avec un trait d'union.",
+          "J'ai ajouté -t- entre deux voyelles (a-t-elle).",
+          "Avec un nom sujet, je l'ai repris par un pronom (votre famille vous a-t-elle…)."
+        ]
+      }
+    }
+  ]
+}

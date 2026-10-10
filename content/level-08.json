@@ -1,0 +1,449 @@
+{
+  "id": 8,
+  "cefr": "B2",
+  "title": "La phrase complexe",
+  "sub": "Relatives, subordonnées, discours rapporté",
+  "intro": "Les pronoms relatifs (dont, auquel, duquel…), les subordonnées et leur mode, le discours rapporté et la concordance des temps, la voix passive, la négation et l'interrogation de la langue écrite.",
+  "boss": {
+    "name": "Le Seigneur des Subordonnées",
+    "taunt": "Le piège dans lequel tu vas tomber, celui auquel tu ne t'attends pas, celui dont tu te souviendras longtemps… c'est moi !",
+    "defeat": "Je suis vaincu par celui-là même que je méprisais, à qui je devrai désormais obéir. Quelle phrase complexe, n'est-ce pas ?"
+  },
+  "units": [
+    {
+      "id": "8.1",
+      "name": "Qui, que, dont, où",
+      "title": "Les pronoms relatifs : qui, que, dont, où, lequel, auquel, duquel",
+      "goal": "Choisir le pronom relatif qui correspond à la construction du verbe.",
+      "lesson": [
+        { "type": "p", "text": "Le pronom relatif relie une proposition subordonnée à un nom, l'**antécédent**, qu'il remplace : [[Le livre que tu m'as prêté est passionnant.]]" },
+        { "type": "table", "head": ["Pronom", "Rôle", "Exemple"], "rows": [["qui", "sujet", "La fille qui chante est ma sœur."], ["que", "COD", "Le film que j'ai vu"], ["dont", "complément introduit par de", "Le livre dont je parle (parler de)"], ["où", "lieu ou temps", "La ville où je vis ; le jour où il est né"], ["lequel, laquelle…", "après une préposition", "La table sur laquelle j'écris"], ["auquel, à laquelle, auxquels…", "à + lequel", "Le concours auquel je participe"], ["duquel, de laquelle…", "de + lequel, après une locution", "La maison près de laquelle…"]] },
+        { "type": "rule", "title": "Dont", "text": "**dont** remplace un complément introduit par **de** : [[parler de]] → le sujet dont je parle ; [[avoir besoin de]] → l'outil dont j'ai besoin ; [[être fier de]] → le travail dont je suis fier. Il peut aussi marquer l'appartenance : [[l'ami dont le père est pilote]]." },
+        { "type": "rule", "title": "Duquel après une locution", "text": "Après une locution prépositionnelle (près de, à côté de, au milieu de, au bord de), on n'emploie pas dont mais **duquel**, **de laquelle**… : [[l'arbre près duquel nous avons pique-niqué]]." },
+        { "type": "rule", "title": "L'accord après qui", "text": "Le verbe qui suit qui s'accorde avec l'antécédent : [[C'est moi qui suis venu.]] [[C'est toi qui as gagné.]] [[Ce sont eux qui ont raison.]]" },
+        { "type": "examples", "items": [
+          { "ex": "Voici l'outil **dont** j'ai besoin.", "note": "avoir besoin de" },
+          { "ex": "Le concours **auquel** je participe est difficile.", "note": "participer à" },
+          { "ex": "L'arbre près **duquel** nous avons pique-niqué est un chêne.", "note": "près de + lequel" },
+          { "ex": "C'est toi qui **as** gagné le concours.", "note": "accord avec toi" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "le livre ~~que~~ je t'ai parlé", "ok": "le livre **dont** je t'ai parlé", "why": "On parle de quelque chose : dont." },
+          { "ko": "C'est moi qui ~~a~~ gagné.", "ok": "C'est moi qui **ai** gagné.", "why": "Le verbe s'accorde avec moi." },
+          { "ko": "le jour ~~que~~ je suis né", "ok": "le jour **où** je suis né", "why": "Un moment : où." },
+          { "ko": "le projet ~~dont~~ je pense", "ok": "le projet **auquel** je pense", "why": "On pense à quelque chose : auquel." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Pour choisir, remets le complément dans une phrase simple : « Je parle **de** ce livre » → dont. « Je pense **à** ce projet » → auquel. « Je travaille **avec** ce collègue » → avec qui, ou avec lequel." },
+        { "type": "fun", "text": "Le sais-tu ? « Dont » vient du latin « de unde », « d'où ». Il a longtemps eu ce sens : chez les écrivains classiques, on lit encore « la maison dont je sors »." }
+      ],
+      "vocab": [
+        { "mot": "demeure", "def": "Maison, souvent belle et vaste (mot soutenu).", "ex": "Ils vivent dans une demeure du dix-huitième siècle.", "alt": [] },
+        { "mot": "logis", "def": "Logement, habitation (mot littéraire).", "ex": "Le voyageur cherchait un logis pour la nuit.", "alt": [] },
+        { "mot": "bâtisse", "def": "Grand bâtiment, souvent sans charme.", "ex": "Une vieille bâtisse se dressait au bout du chemin.", "alt": [] },
+        { "mot": "édifice", "def": "Grand bâtiment imposant.", "ex": "La cathédrale est l'édifice le plus haut de la ville.", "alt": [] },
+        { "mot": "façade", "def": "Face extérieure d'un bâtiment, où se trouve l'entrée.", "ex": "La façade a été repeinte en blanc.", "alt": [] },
+        { "mot": "perron", "def": "Petit escalier extérieur devant l'entrée d'une maison.", "ex": "Le maître de maison attendait sur le perron.", "alt": [] },
+        { "mot": "vestibule", "def": "Pièce d'entrée d'une maison.", "ex": "Laissez vos manteaux dans le vestibule.", "alt": [] },
+        { "mot": "mansarde", "def": "Chambre sous le toit, aux murs en pente.", "ex": "L'étudiant louait une mansarde à Paris.", "alt": [] },
+        { "mot": "soupente", "def": "Petit réduit aménagé sous un escalier ou sous un toit.", "ex": "Le balai est rangé dans la soupente.", "alt": [] },
+        { "mot": "véranda", "def": "Pièce vitrée accolée à une maison.", "ex": "Nous déjeunons dans la véranda.", "alt": [] },
+        { "mot": "tonnelle", "def": "Abri de jardin couvert de plantes grimpantes.", "ex": "Une glycine recouvre la tonnelle.", "alt": [] },
+        { "mot": "portail", "def": "Grande porte qui ferme l'entrée d'une propriété ou d'une église.", "ex": "Le portail grince quand on l'ouvre.", "alt": [] },
+        { "mot": "enceinte", "def": "Mur qui entoure et protège un espace ; ou haut-parleur.", "ex": "Le château est protégé par une double enceinte.", "alt": [] },
+        { "mot": "voûte", "def": "Plafond en forme d'arc.", "ex": "La voûte de l'église est peinte en bleu.", "alt": ["voute"] },
+        { "mot": "corniche", "def": "Saillie qui couronne un mur ; ou route en bord de falaise.", "ex": "Un pigeon s'est posé sur la corniche.", "alt": [] },
+        { "mot": "balustrade", "def": "Rangée de petites colonnes qui forme un garde-corps.", "ex": "Elle s'appuya contre la balustrade du balcon.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Le livre dont tu m'as parlé est épuisé.", "indice": "Un livre introuvable", "trap": ["que", "qu'"], "alt": [] },
+        { "phrase": "C'est toi qui as gagné le concours.", "indice": "Une victoire", "trap": ["a"], "alt": [] },
+        { "phrase": "La ville où je suis né est au bord de la mer.", "indice": "Un lieu de naissance", "trap": ["que", "dont"], "alt": [] },
+        { "phrase": "Voici l'outil dont j'ai besoin.", "indice": "Un objet indispensable", "trap": ["que"], "alt": [] },
+        { "phrase": "Le concours auquel je participe est difficile.", "indice": "Une compétition exigeante", "trap": ["auxquel", "dont"], "alt": [] },
+        { "phrase": "La table sur laquelle j'écris est ancienne.", "indice": "Un meuble de famille", "trap": ["lequel", "laquel"], "alt": [] },
+        { "phrase": "C'est moi qui suis responsable.", "indice": "Un aveu", "trap": ["est"], "alt": [] },
+        { "phrase": "L'arbre près duquel nous avons pique-niqué est un chêne.", "indice": "Un pique-nique à l'ombre", "trap": ["dont"], "alt": [] },
+        { "phrase": "Les amis avec qui je pars sont très drôles.", "indice": "Des compagnons de voyage", "trap": ["que"], "alt": [] },
+        { "phrase": "Le jour où il est arrivé, il neigeait.", "indice": "Une arrivée en hiver", "trap": ["que"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Le film ___ je t'ai parlé passe ce soir.", "choices": ["dont", "que", "où"], "answer": 0, "explain": "Parler de quelque chose : dont." },
+        { "type": "mcq", "q": "La maison ___ ils vivent est grande.", "choices": ["où", "dont", "laquelle"], "answer": 0, "explain": "Un lieu : où." },
+        { "type": "mcq", "q": "C'est nous qui ___ raison.", "choices": ["avons", "ont", "a"], "answer": 0, "explain": "Après qui, accord avec l'antécédent nous : avons." },
+        { "type": "mcq", "q": "Le projet ___ je pense est ambitieux.", "choices": ["auquel", "dont", "que"], "answer": 0, "explain": "Penser à quelque chose : auquel." },
+        { "type": "mcq", "q": "Voici la personne ___ je travaille.", "choices": ["avec qui", "dont", "que"], "answer": 0, "explain": "Travailler avec quelqu'un : avec qui." },
+        { "type": "fill", "q": "C'est le chien ___ aboie toute la nuit.", "hint": "pronom relatif", "answer": ["qui"], "explain": "Le chien aboie : sujet, qui." },
+        { "type": "fill", "q": "Le gâteau ___ tu as fait est délicieux.", "hint": "pronom relatif", "answer": ["que"], "explain": "Tu as fait le gâteau : COD, que." },
+        { "type": "fill", "q": "C'est un ami ___ je suis fier.", "hint": "pronom relatif", "answer": ["dont"], "explain": "Être fier de quelqu'un : dont." },
+        { "type": "fill", "q": "Les questions ___ tu as répondu étaient faciles.", "hint": "à + pronom relatif", "answer": ["auxquelles"], "explain": "Répondre à des questions (féminin pluriel) : auxquelles." },
+        { "type": "fill", "q": "L'époque ___ nous vivons est passionnante.", "hint": "pronom relatif de temps", "answer": ["où"], "explain": "Un moment : où." },
+        { "type": "fill", "q": "Le stylo avec ___ j'écris est neuf.", "hint": "pronom relatif après une préposition", "answer": ["lequel"], "explain": "Après avec, pour une chose : lequel." },
+        { "type": "fill", "q": "C'est toi qui ___ en retard.", "hint": "être, au présent", "answer": ["es"], "explain": "Après qui, accord avec toi : es." },
+        { "type": "error", "q": "C'est l'ami que je t'ai parlé.", "wrong": 2, "fix": ["dont"], "explain": "Parler de quelqu'un : dont." },
+        { "type": "error", "q": "C'est moi qui a raison.", "wrong": 3, "fix": ["ai"], "explain": "Après qui, accord avec moi : ai." },
+        { "type": "error", "q": "La rivière près dont nous campons est froide.", "wrong": 3, "fix": ["de laquelle"], "explain": "Après la locution près de : de laquelle." },
+        { "type": "error", "q": "Le jour que je suis né, il pleuvait.", "wrong": 2, "fix": ["où"], "explain": "Un moment : où." }
+      ],
+      "reading": {
+        "title": "La maison dont je rêve",
+        "text": "La maison dont je rêve n'existe pas encore, mais je la connais par cœur. Elle se trouve au bout d'un chemin bordé de tilleuls, dans un village où tout le monde se salue. La porte d'entrée, que j'imagine bleu lavande, s'ouvre sur une grande cuisine dans laquelle trône une table en chêne. C'est autour de cette table que ma famille, à qui je pense souvent, se réunira le dimanche. À l'étage, il y aura une bibliothèque dont les murs seront entièrement couverts de livres, et une fenêtre ronde par laquelle on verra la mer. Le jardin, au milieu duquel poussera un vieux figuier, abritera des poules qui s'appelleront toutes Gertrude, car je n'ai aucune imagination pour les prénoms de poules. Mon frère, qui se moque de moi, prétend que cette maison coûtera une fortune. C'est possible. Mais le prix auquel je pense n'est pas celui que l'on paie en euros : c'est celui des années de travail que j'y consacrerai. En attendant, je dessine les plans de ma maison sur mes cahiers de mathématiques, ce dont mon professeur se passerait volontiers.",
+        "questions": [
+          { "q": "Où se trouve la maison rêvée ?", "choices": ["Au bout d'un chemin, dans un village", "En plein centre-ville", "Au sommet d'une montagne", "Sur une île déserte"], "answer": 0, "explain": "Au bout d'un chemin bordé de tilleuls, dans un village." },
+          { "q": "Que verra-t-on par la fenêtre ronde ?", "choices": ["La mer", "Le jardin", "Le village", "Les tilleuls"], "answer": 0, "explain": "Une fenêtre ronde « par laquelle on verra la mer »." },
+          { "q": "Pourquoi toutes les poules s'appelleront-elles Gertrude ?", "choices": ["Faute d'imagination pour les prénoms de poules", "C'est le prénom d'une grand-mère", "Le frère l'a décidé", "C'est une tradition du village"], "answer": 0, "explain": "« Je n'ai aucune imagination pour les prénoms de poules. »" },
+          { "q": "Quel « prix » est évoqué à la fin ?", "choices": ["Les années de travail nécessaires", "Le prix en euros", "Le prix du terrain", "Le prix des poules"], "answer": 0, "explain": "Ce n'est pas celui que l'on paie en euros, mais celui des années de travail." },
+          { "q": "Que comprend-on de la dernière phrase ?", "choices": ["Le professeur n'apprécie pas ces dessins en cours de maths", "Le professeur admire ces plans", "Le professeur dessine aussi", "Le professeur a acheté la maison"], "answer": 0, "explain": "Il « se passerait volontiers » de ces dessins faits sur les cahiers de maths." },
+          { "q": "Dans « une bibliothèque dont les murs seront couverts de livres », que marque « dont » ?", "choices": ["L'appartenance : les murs de la bibliothèque", "Le lieu", "Le temps", "La cause"], "answer": 0, "explain": "Les murs de la bibliothèque : dont marque l'appartenance." }
+        ]
+      }
+    },
+    {
+      "id": "8.2",
+      "name": "Pourquoi, pour quoi, malgré quoi",
+      "title": "Les subordonnées de cause, conséquence, but, concession, temps et condition ; leur mode",
+      "goal": "Exprimer les rapports logiques avec la bonne conjonction et le bon mode.",
+      "lesson": [
+        { "type": "p", "text": "Les subordonnées circonstancielles précisent les circonstances de l'action principale : pourquoi, dans quel but, avec quelle conséquence, à quel moment, malgré quoi. Le **mode** dépend de la conjonction." },
+        { "type": "table", "head": ["Rapport", "Conjonctions", "Mode"], "rows": [["cause", "parce que, puisque, comme, étant donné que, vu que", "indicatif"], ["conséquence", "si bien que, au point que, si… que, tellement… que", "indicatif"], ["but", "pour que, afin que, de peur que, de crainte que", "subjonctif"], ["concession", "bien que, quoique, encore que", "subjonctif"], ["concession", "même si", "indicatif"], ["temps", "quand, lorsque, dès que, pendant que, après que", "indicatif"], ["temps", "avant que, jusqu'à ce que, en attendant que", "subjonctif"], ["condition", "si", "indicatif"], ["condition", "à condition que, pourvu que, à moins que", "subjonctif"]] },
+        { "type": "rule", "title": "But ou conséquence ?", "text": "La conséquence est un fait réel : indicatif. [[Il a tant plu que la rivière a débordé.]] Le but est une intention : subjonctif. [[Il crie pour qu'on l'entende.]] **De sorte que** peut exprimer les deux : [[de sorte qu'on l'entend]] (résultat) ; [[de sorte qu'on l'entende]] (but)." },
+        { "type": "rule", "title": "Comme et puisque", "text": "**Comme** se place en tête de phrase et annonce la cause : [[Comme il pleuvait, nous sommes restés.]] **Puisque** présente une cause évidente, connue de tous : [[Puisque tu es là, aide-moi.]]" },
+        { "type": "examples", "items": [
+          { "ex": "Il parle fort **pour qu'on l'entende**.", "note": "but : subjonctif" },
+          { "ex": "Il a tant plu **que la rivière a débordé**.", "note": "conséquence : indicatif" },
+          { "ex": "**Même si tu es** fatigué, viens avec nous.", "note": "même si + indicatif" },
+          { "ex": "Attends ici **jusqu'à ce que je revienne**.", "note": "jusqu'à ce que + subjonctif" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "Bien qu'il ~~est~~ tard…", "ok": "Bien qu'il **soit** tard…", "why": "Bien que + subjonctif." },
+          { "ko": "~~Malgré qu'~~il pleuve…", "ok": "**Bien qu'**il pleuve…", "why": "Malgré que est critiqué dans la langue soignée." },
+          { "ko": "Même si tu ~~sois~~ fatigué…", "ok": "Même si tu **es** fatigué…", "why": "Même si + indicatif." },
+          { "ko": "Pour qu'il ~~vient~~…", "ok": "Pour qu'il **vienne**…", "why": "Pour que + subjonctif." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "**Malgré que** est considéré comme fautif dans la langue soignée : écris **bien que**. Et **même si** est toujours suivi de l'indicatif : [[même si tu es fatigué]]." },
+        { "type": "fun", "text": "Le sais-tu ? « Quoique » en un mot signifie « bien que » ; « quoi que » en deux mots signifie « quelle que soit la chose que ». [[Quoi que tu dises, et quoique tu aies raison, je partirai.]] Tu retrouveras ces jumeaux à la ligne 10." }
+      ],
+      "vocab": [
+        { "mot": "motif", "def": "Raison qui pousse à agir ; ou dessin répété.", "ex": "Quel est le motif de votre visite ?", "alt": [] },
+        { "mot": "mobile", "def": "Raison qui pousse quelqu'un à commettre un acte ; ou objet suspendu qui bouge.", "ex": "Les enquêteurs cherchent le mobile du crime.", "alt": [] },
+        { "mot": "raison", "def": "Cause d'un fait ; ou faculté de bien juger.", "ex": "Pour quelle raison es-tu parti ?", "alt": [] },
+        { "mot": "conséquence", "def": "Ce qui résulte d'un fait.", "ex": "Cette décision aura de lourdes conséquences.", "alt": [] },
+        { "mot": "répercussion", "def": "Effet indirect, qui se propage.", "ex": "La grève a eu des répercussions sur tout le pays.", "alt": [] },
+        { "mot": "retombée", "def": "Conséquence, souvent indirecte, d'un événement.", "ex": "Les retombées économiques du festival sont importantes.", "alt": [] },
+        { "mot": "incidence", "def": "Effet, influence d'un fait sur un autre.", "ex": "La météo a une incidence sur les récoltes.", "alt": [] },
+        { "mot": "finalité", "def": "But vers lequel tend une action.", "ex": "Quelle est la finalité de ce projet ?", "alt": [] },
+        { "mot": "dessein", "def": "Intention, projet (à ne pas confondre avec dessin).", "ex": "Il a agi dans le dessein de nous aider.", "alt": [] },
+        { "mot": "intention", "def": "Ce que l'on se propose de faire.", "ex": "Je n'avais pas l'intention de te vexer.", "alt": [] },
+        { "mot": "prétexte", "def": "Fausse raison donnée pour cacher la vraie.", "ex": "Il a pris un prétexte pour ne pas venir.", "alt": [] },
+        { "mot": "corollaire", "def": "Conséquence directe et nécessaire d'une chose.", "ex": "La liberté a pour corollaire la responsabilité.", "alt": [] },
+        { "mot": "origine", "def": "Point de départ, cause première.", "ex": "Quelle est l'origine de ce conflit ?", "alt": [] },
+        { "mot": "enjeu", "def": "Ce que l'on peut gagner ou perdre dans une situation.", "ex": "L'enjeu de ce match est la qualification.", "alt": [] },
+        { "mot": "facteur", "def": "Élément qui contribue à un résultat ; ou personne qui distribue le courrier.", "ex": "Le stress est un facteur de fatigue.", "alt": [] },
+        { "mot": "déclencheur", "def": "Ce qui provoque le début d'un phénomène.", "ex": "Cette injustice a été l'élément déclencheur de la révolte.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Comme il pleuvait, nous sommes restés à la maison.", "indice": "Une sortie annulée", "trap": ["pleuve"], "alt": ["Nous sommes restés à la maison comme il pleuvait."] },
+        { "phrase": "Il parle fort pour qu'on l'entende.", "indice": "Un orateur sans micro", "trap": ["entend"], "alt": [] },
+        { "phrase": "Bien qu'il soit tard, je continue.", "indice": "Un travail de nuit", "trap": ["est"], "alt": ["Je continue, bien qu'il soit tard."] },
+        { "phrase": "Il a tant plu que la rivière a débordé.", "indice": "Une inondation", "trap": ["ait"], "alt": [] },
+        { "phrase": "Même si tu es fatigué, viens avec nous.", "indice": "Une invitation insistante", "trap": ["sois"], "alt": [] },
+        { "phrase": "Attends ici jusqu'à ce que je revienne.", "indice": "Une consigne d'attente", "trap": ["reviens"], "alt": [] },
+        { "phrase": "Puisque tu es là, aide-moi à porter ce carton.", "indice": "Un déménagement", "trap": ["sois"], "alt": [] },
+        { "phrase": "Je te prête mon vélo à condition que tu en prennes soin.", "indice": "Un prêt sous condition", "trap": ["prends"], "alt": [] },
+        { "phrase": "Dès qu'il aura fini, il nous rejoindra.", "indice": "Un rendez-vous plus tard", "trap": ["ait"], "alt": ["Il nous rejoindra dès qu'il aura fini."] },
+        { "phrase": "Elle travaille afin que ses enfants puissent étudier.", "indice": "Une mère courageuse", "trap": ["peuvent"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Je te le dis pour que tu le ___.", "choices": ["saches", "sais", "sauras"], "answer": 0, "explain": "Pour que (but) + subjonctif." },
+        { "type": "mcq", "q": "Il était si fatigué qu'il ___ endormi en classe.", "choices": ["s'est", "se soit", "se fût"], "answer": 0, "explain": "Si… que (conséquence réelle) + indicatif." },
+        { "type": "mcq", "q": "___ qu'il pleuve, nous sortirons.", "choices": ["Bien", "Malgré", "Parce"], "answer": 0, "explain": "Bien que + subjonctif ; malgré que est critiqué ; parce que ne convient pas au sens." },
+        { "type": "mcq", "q": "Même si tu ___ raison, reste poli.", "choices": ["as", "aies", "aurais"], "answer": 0, "explain": "Même si + indicatif." },
+        { "type": "mcq", "q": "___ il faisait beau, nous avons pique-niqué.", "choices": ["Comme", "Bien que", "Afin que"], "answer": 0, "explain": "Une cause, en tête de phrase : comme, suivi de l'indicatif." },
+        { "type": "fill", "q": "Je partirai avant qu'il ___.", "hint": "arriver : indicatif ou subjonctif ?", "answer": ["arrive"], "explain": "Avant que + subjonctif." },
+        { "type": "fill", "q": "Il a crié si fort que tout le monde l'___ entendu.", "hint": "avoir : indicatif ou subjonctif ?", "answer": ["a"], "explain": "Conséquence réelle : indicatif." },
+        { "type": "fill", "q": "Parle lentement afin qu'on te ___.", "hint": "comprendre : indicatif ou subjonctif ?", "answer": ["comprenne"], "explain": "Afin que (but) + subjonctif." },
+        { "type": "fill", "q": "Puisqu'il ___ beau, sortons.", "hint": "faire : indicatif ou subjonctif ?", "answer": ["fait"], "explain": "Puisque (cause) + indicatif." },
+        { "type": "fill", "q": "Quoiqu'il ___ riche, il vit simplement.", "hint": "être : indicatif ou subjonctif ?", "answer": ["soit"], "explain": "Quoique (concession) + subjonctif." },
+        { "type": "fill", "q": "Je viendrai à moins qu'il ne ___ trop.", "hint": "neiger : indicatif ou subjonctif ?", "answer": ["neige"], "explain": "À moins que + subjonctif." },
+        { "type": "fill", "q": "Après qu'il ___ parti, la fête a continué.", "hint": "être : indicatif ou subjonctif ?", "answer": ["est"], "explain": "Après que + indicatif." },
+        { "type": "error", "q": "Malgré qu'il soit malade, il travaille.", "wrong": 0, "fix": ["Bien"], "explain": "Dans la langue soignée, on écrit bien que et non malgré que." },
+        { "type": "error", "q": "Même si tu sois en retard, viens.", "wrong": 3, "fix": ["es"], "explain": "Même si + indicatif." },
+        { "type": "error", "q": "Je l'aide pour qu'il réussit.", "wrong": 4, "fix": ["réussisse"], "explain": "Pour que + subjonctif." },
+        { "type": "error", "q": "Reste ici jusqu'à ce qu'il revient.", "wrong": 5, "fix": ["revienne"], "explain": "Jusqu'à ce que + subjonctif." }
+      ],
+      "reading": {
+        "title": "Le grand voyage des hirondelles",
+        "text": "Chaque automne, les hirondelles quittent nos villages pour l'Afrique. Pourquoi entreprennent-elles un voyage aussi long ? Contrairement à ce qu'on croit souvent, ce n'est pas le froid qui les chasse. Comme elles se nourrissent exclusivement d'insectes attrapés en vol, elles partent parce que leur nourriture disparaît quand les températures baissent. Elles s'en vont avant que les premiers frimas ne s'installent, afin que les jeunes, nés au printemps, aient assez de forces pour traverser la Méditerranée et le Sahara. Le voyage est si éprouvant que beaucoup d'oiseaux n'y survivent pas. Les tempêtes, la faim et l'épuisement font de nombreuses victimes en chemin. Bien qu'elles parcourent parfois plus de dix mille kilomètres, les hirondelles retrouvent souvent le même nid au printemps suivant, si bien que certains couples reviennent sous le même toit pendant des années. Les scientifiques, qui les étudient depuis longtemps, s'inquiètent pourtant : elles sont de moins en moins nombreuses. Puisque les insectes déclinent à cause des pesticides, les hirondelles manquent de nourriture. Si nous voulons qu'elles continuent d'annoncer le printemps, il faudra que nous protégions aussi les plus petits habitants de nos campagnes.",
+        "questions": [
+          { "q": "Pourquoi les hirondelles partent-elles à l'automne ?", "choices": ["Les insectes dont elles se nourrissent disparaissent", "Elles ont trop froid", "Elles fuient les prédateurs", "Elles cherchent un partenaire"], "answer": 0, "explain": "Elles partent parce que leur nourriture disparaît." },
+          { "q": "Pourquoi partent-elles avant les premiers frimas ?", "choices": ["Pour que les jeunes aient assez de forces pour le voyage", "Pour arriver les premières en Afrique", "Parce que le voyage est court", "Pour éviter les pesticides"], "answer": 0, "explain": "Afin que les jeunes aient assez de forces." },
+          { "q": "« Si éprouvant que beaucoup d'oiseaux n'y survivent pas » exprime…", "choices": ["une conséquence", "un but", "une concession", "une condition"], "answer": 0, "explain": "Si… que + indicatif : une conséquence." },
+          { "q": "Qu'est-ce qui étonne dans leur retour au printemps ?", "choices": ["Elles retrouvent souvent le même nid", "Elles reviennent plus nombreuses", "Elles changent de pays", "Elles ne reviennent jamais"], "answer": 0, "explain": "Malgré la distance, elles retrouvent souvent le même nid." },
+          { "q": "Selon le texte, quelle est la cause du déclin des hirondelles ?", "choices": ["Le déclin des insectes, à cause des pesticides", "Le froid de plus en plus intense", "La chasse", "Le manque de toits"], "answer": 0, "explain": "Les insectes déclinent à cause des pesticides : les hirondelles manquent de nourriture." },
+          { "q": "Quel est le but de la dernière phrase ?", "choices": ["Inviter à protéger les insectes", "Raconter un souvenir", "Décrire le Sahara", "Critiquer les scientifiques"], "answer": 0, "explain": "Il faudra protéger « les plus petits habitants de nos campagnes »." }
+        ]
+      }
+    },
+    {
+      "id": "8.3",
+      "name": "Il a dit que…",
+      "title": "Le discours rapporté : direct, indirect, indirect libre ; la concordance des temps",
+      "goal": "Passer du discours direct au discours indirect en respectant la concordance des temps.",
+      "lesson": [
+        { "type": "p", "text": "On peut rapporter des paroles de trois façons : telles quelles (**discours direct**), dans une subordonnée (**discours indirect**), ou fondues dans le récit (**discours indirect libre**)." },
+        { "type": "rule", "title": "Du direct à l'indirect", "text": "Les guillemets disparaissent, on introduit une subordonnée, et les pronoms changent : [[Il dit : « Je suis fatigué. »]] → [[Il dit qu'il est fatigué.]] Une question fermée devient **si** : [[« Tu viens ? »]] → [[Il demande si je viens.]] « Qu'est-ce que » devient **ce que** : [[Il demande ce que je fais.]]" },
+        { "type": "table", "head": ["Paroles (discours direct)", "Rapportées au passé"], "rows": [["« Je pars. » (présent)", "Il a dit qu'il partait. (imparfait)"], ["« J'ai fini. » (passé composé)", "Il a dit qu'il avait fini. (plus-que-parfait)"], ["« Je viendrai. » (futur)", "Il a dit qu'il viendrait. (conditionnel)"], ["« J'aurai fini. » (futur antérieur)", "Il a dit qu'il aurait fini. (conditionnel passé)"], ["« Viens ! » (impératif)", "Il m'a dit de venir. (de + infinitif)"]] },
+        { "type": "rule", "title": "Les mots du temps et du lieu", "text": "Quand le récit est au passé : aujourd'hui → **ce jour-là** ; hier → **la veille** ; demain → **le lendemain** ; ici → **là** ; maintenant → **alors**." },
+        { "type": "rule", "title": "Le discours indirect libre", "text": "Il mêle la voix du narrateur et celle du personnage, sans verbe introducteur ni guillemets : [[Elle regarda le ciel. Pleuvrait-il encore demain ? Tant pis, elle partirait quand même.]]" },
+        { "type": "examples", "items": [
+          { "ex": "Il m'a demandé **si** je venais à la fête.", "note": "question fermée → si" },
+          { "ex": "Elle a dit qu'elle **viendrait** le lendemain.", "note": "futur → conditionnel ; demain → le lendemain" },
+          { "ex": "Le professeur nous a demandé **de** nous taire.", "note": "impératif → de + infinitif" },
+          { "ex": "Je me demande **où** il a caché la clé.", "note": "pas d'inversion, pas de point d'interrogation" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "Il m'a demandé ~~est-ce que~~ je venais.", "ok": "Il m'a demandé **si** je venais.", "why": "Une question fermée rapportée commence par si." },
+          { "ko": "Elle a dit qu'elle ~~viendra~~ le lendemain.", "ok": "Elle a dit qu'elle **viendrait** le lendemain.", "why": "Après un verbe au passé, le futur devient conditionnel." },
+          { "ko": "Il m'a demandé ~~qu'est-ce que~~ je faisais.", "ok": "Il m'a demandé **ce que** je faisais.", "why": "Qu'est-ce que devient ce que." },
+          { "ko": "Je me demande où ~~est-il~~.", "ok": "Je me demande où **il est**.", "why": "Pas d'inversion dans une question indirecte." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Une question indirecte n'a ni point d'interrogation ni inversion du sujet : [[Je me demande où il est.]] (et non « où est-il ? »)." },
+        { "type": "fun", "text": "Le sais-tu ? Flaubert est resté célèbre pour son usage du discours indirect libre dans Madame Bovary : on entend les pensées d'Emma sans quitter la voix du narrateur." }
+      ],
+      "vocab": [
+        { "mot": "déclarer", "def": "Faire connaître officiellement ou avec force.", "ex": "Le témoin a déclaré n'avoir rien vu.", "alt": [] },
+        { "mot": "annoncer", "def": "Faire savoir une nouvelle.", "ex": "Il est venu annoncer son mariage.", "alt": [] },
+        { "mot": "confier", "def": "Dire un secret à quelqu'un en qui l'on a confiance ; ou remettre à quelqu'un.", "ex": "Elle a voulu me confier ses doutes.", "alt": [] },
+        { "mot": "révéler", "def": "Faire connaître ce qui était caché.", "ex": "Le journaliste a fini par révéler la vérité.", "alt": [] },
+        { "mot": "préciser", "def": "Dire de façon plus exacte.", "ex": "Pouvez-vous préciser l'heure du rendez-vous ?", "alt": [] },
+        { "mot": "ajouter", "def": "Dire en plus de ce qui a déjà été dit.", "ex": "Il tint à ajouter quelques mots.", "alt": [] },
+        { "mot": "objecter", "def": "Opposer un argument à ce qui est dit.", "ex": "Elle voulut objecter que le prix était trop élevé.", "alt": [] },
+        { "mot": "rapporter", "def": "Répéter ce que l'on a entendu ; ou ramener.", "ex": "Il ne faut pas rapporter les secrets des autres.", "alt": [] },
+        { "mot": "assurer", "def": "Affirmer avec certitude ; ou garantir.", "ex": "Je peux vous assurer qu'il viendra.", "alt": [] },
+        { "mot": "insinuer", "def": "Laisser entendre quelque chose sans le dire clairement.", "ex": "Que veux-tu insinuer par là ?", "alt": [] },
+        { "mot": "suggérer", "def": "Proposer une idée de façon discrète.", "ex": "Puis-je suggérer une autre solution ?", "alt": [] },
+        { "mot": "jurer", "def": "Affirmer solennellement ; ou dire des jurons.", "ex": "Je te jure que c'est vrai.", "alt": [] },
+        { "mot": "rappeler", "def": "Faire revenir à la mémoire de quelqu'un ; ou téléphoner de nouveau.", "ex": "Je tiens à rappeler les règles du jeu.", "alt": [] },
+        { "mot": "souligner", "def": "Mettre en évidence, insister sur un point.", "ex": "Le rapport souligne les progrès accomplis.", "alt": [] },
+        { "mot": "alléguer", "def": "Avancer une raison pour se justifier.", "ex": "Il a allégué une panne de réveil.", "alt": [] },
+        { "mot": "démentir", "def": "Affirmer qu'une information est fausse.", "ex": "Le ministre a démenti la rumeur.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Il m'a demandé si je venais à la fête.", "indice": "Une invitation rapportée", "trap": ["est-ce"], "alt": [] },
+        { "phrase": "Elle a dit qu'elle viendrait le lendemain.", "indice": "Une promesse rapportée", "trap": ["viendra", "demain"], "alt": [] },
+        { "phrase": "Le professeur nous a demandé de nous taire.", "indice": "Un ordre rapporté", "trap": ["taisez"], "alt": [] },
+        { "phrase": "Je me demande où il a caché la clé.", "indice": "Une question qu'on se pose", "trap": ["a-t-il"], "alt": [] },
+        { "phrase": "Il a annoncé qu'il avait gagné le concours.", "indice": "Une bonne nouvelle rapportée", "trap": ["gagnait"], "alt": [] },
+        { "phrase": "Elle m'a demandé ce que je faisais.", "indice": "Une curiosité rapportée", "trap": ["qu'est-ce"], "alt": [] },
+        { "phrase": "Ils ont affirmé qu'ils étaient innocents.", "indice": "Une défense", "trap": ["sont"], "alt": [] },
+        { "phrase": "Tom a promis qu'il rangerait sa chambre.", "indice": "Une promesse à tenir", "trap": ["rangera"], "alt": [] },
+        { "phrase": "Elle voulait savoir quand nous partirions.", "indice": "Une question sur le départ", "trap": ["partirons"], "alt": [] },
+        { "phrase": "Il a expliqué qu'il était arrivé la veille.", "indice": "Une arrivée racontée", "trap": ["hier"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Il m'a demandé ___ j'avais faim.", "choices": ["si", "est-ce que", "que"], "answer": 0, "explain": "Une question fermée rapportée commence par si." },
+        { "type": "mcq", "q": "Elle a dit qu'elle ___ le lendemain.", "choices": ["partirait", "partira", "part"], "answer": 0, "explain": "Après un verbe au passé, le futur devient conditionnel." },
+        { "type": "mcq", "q": "Il a affirmé qu'il ___ la veille.", "choices": ["était venu", "est venu", "viendra"], "answer": 0, "explain": "Une action antérieure, rapportée au passé : plus-que-parfait." },
+        { "type": "mcq", "q": "Je voudrais savoir ___ tu penses.", "choices": ["ce que", "qu'est-ce que", "que"], "answer": 0, "explain": "Qu'est-ce que devient ce que dans une question indirecte." },
+        { "type": "mcq", "q": "Le médecin m'a conseillé ___ me reposer.", "choices": ["de", "que", "à"], "answer": 0, "explain": "Un ordre ou un conseil rapporté : de + infinitif." },
+        { "type": "fill", "q": "« Je suis prêt. » → Il a dit qu'il ___ prêt.", "hint": "être, à l'imparfait", "answer": ["était"], "explain": "Présent → imparfait après un verbe au passé." },
+        { "type": "fill", "q": "« J'ai perdu mes clés. » → Elle a expliqué qu'elle ___ perdu ses clés.", "hint": "avoir, à l'imparfait", "answer": ["avait"], "explain": "Passé composé → plus-que-parfait." },
+        { "type": "fill", "q": "« Je reviendrai. » → Il a promis qu'il ___.", "hint": "revenir, au conditionnel présent", "answer": ["reviendrait"], "explain": "Futur → conditionnel." },
+        { "type": "fill", "q": "« Range ta chambre ! » → Maman m'a dit ___ ranger ma chambre.", "hint": "un mot", "answer": ["de"], "explain": "Impératif → de + infinitif." },
+        { "type": "fill", "q": "« Où vas-tu ? » → Il m'a demandé ___ j'allais.", "hint": "un mot", "answer": ["où"], "explain": "Le mot interrogatif se conserve : où." },
+        { "type": "fill", "q": "« Viens-tu ? » → Elle m'a demandé ___ je venais.", "hint": "un mot", "answer": ["si"], "explain": "Une question fermée rapportée commence par si." },
+        { "type": "fill", "q": "« Je partirai demain. » → Il a dit qu'il partirait le ___.", "hint": "demain, dans un récit au passé", "answer": ["lendemain"], "explain": "Demain devient le lendemain." },
+        { "type": "error", "q": "Il a dit qu'il viendra le lendemain.", "wrong": 4, "fix": ["viendrait"], "explain": "Après un verbe au passé, le futur devient conditionnel." },
+        { "type": "error", "q": "Elle m'a demandé si je suis prête.", "wrong": 5, "fix": ["étais"], "explain": "Après un verbe au passé, le présent devient imparfait." },
+        { "type": "error", "q": "Il a expliqué qu'il a raté le bus la veille.", "wrong": 4, "fix": ["avait"], "explain": "Une action antérieure, rapportée au passé : plus-que-parfait." },
+        { "type": "error", "q": "Le guide nous a dit que nous partirons le lendemain.", "wrong": 7, "fix": ["partirions"], "explain": "Après un verbe au passé, le futur devient conditionnel." }
+      ],
+      "reading": {
+        "title": "Le coup de téléphone de tante Agathe",
+        "text": "Ce matin-là, le téléphone sonna très tôt. C'était tante Agathe. Elle annonça qu'elle arriverait le lendemain, par le train de dix heures, et qu'elle resterait une semaine. Ma mère lui demanda si elle avait besoin qu'on vienne la chercher à la gare. Ma tante répondit qu'elle n'était pas encore impotente et qu'elle prendrait un taxi, comme tout le monde. Puis elle voulut savoir ce que nous avions prévu pour son séjour. Elle précisa qu'elle détestait la campagne et les surprises. Ma mère, prise de court, expliqua que nous avions pensé à une promenade en forêt. Une promenade ? Avec ses genoux ? Ma tante éclata de rire et déclara qu'elle préférait de loin le cinéma, les salons de thé et les boutiques. Quand ma mère raccrocha, elle resta un long moment silencieuse. Une semaine. Une semaine entière de salons de thé. Elle se tourna vers moi et me pria de ranger ma chambre avant midi, car tante Agathe dormirait dans mon lit. Je lui demandai où je dormirais, moi. Elle me répondit, sans la moindre trace d'humour, que le canapé du salon était très confortable.",
+        "questions": [
+          { "q": "Quand tante Agathe arrivera-t-elle ?", "choices": ["Le lendemain, par le train de dix heures", "Le soir même", "La semaine suivante", "Elle ne le dit pas"], "answer": 0, "explain": "Elle annonça qu'elle arriverait le lendemain, par le train de dix heures." },
+          { "q": "Pourquoi refuse-t-elle qu'on vienne la chercher ?", "choices": ["Elle se sent capable de prendre un taxi seule", "Elle n'aime pas sa famille", "Elle arrive en voiture", "Elle veut faire une surprise"], "answer": 0, "explain": "Elle n'était « pas encore impotente » et prendrait un taxi." },
+          { "q": "« Une promenade ? Avec ses genoux ? » : de quel discours s'agit-il ?", "choices": ["Du discours indirect libre", "Du discours direct", "Du discours indirect", "D'un dialogue de théâtre"], "answer": 0, "explain": "Ce sont les pensées de la tante, sans guillemets ni verbe introducteur." },
+          { "q": "Que révèle le silence de la mère après l'appel ?", "choices": ["Elle appréhende cette semaine", "Elle est ravie", "Elle a oublié l'appel", "Elle s'est endormie"], "answer": 0, "explain": "« Une semaine entière de salons de thé » : elle mesure l'épreuve qui l'attend." },
+          { "q": "Quelle conséquence cette visite a-t-elle pour la personne qui raconte ?", "choices": ["Elle devra dormir sur le canapé", "Elle partira en vacances", "Elle ira au cinéma seule", "Elle devra aller à la gare"], "answer": 0, "explain": "La tante dormira dans son lit ; il lui reste le canapé du salon." },
+          { "q": "« Elle annonça qu'elle arriverait » : pourquoi le conditionnel ?", "choices": ["Le futur devient conditionnel quand le verbe introducteur est au passé", "C'est une hypothèse", "C'est une marque de politesse", "C'est une faute"], "answer": 0, "explain": "Concordance des temps : « J'arriverai » → elle annonça qu'elle arriverait." }
+        ]
+      }
+    },
+    {
+      "id": "8.4",
+      "name": "Subir l'action",
+      "title": "La voix passive : tous les temps, accord, complément d'agent",
+      "goal": "Transformer une phrase active en phrase passive à tous les temps et accorder le participe.",
+      "lesson": [
+        { "type": "p", "text": "À la voix passive, le sujet **subit** l'action : [[Le chat a été adopté par Léa.]] Le complément d'agent (par Léa) indique qui fait l'action." },
+        { "type": "rule", "title": "La transformation", "text": "Le COD de la phrase active devient sujet ; le sujet devient complément d'agent ; le verbe devient **être + participe passé**, au même temps que le verbe actif : [[Léa adopte le chat]] → [[Le chat est adopté par Léa]]." },
+        { "type": "table", "head": ["Temps", "Actif", "Passif"], "rows": [["présent", "On construit le pont.", "Le pont est construit."], ["imparfait", "On construisait le pont.", "Le pont était construit."], ["passé composé", "On a construit le pont.", "Le pont a été construit."], ["futur", "On construira le pont.", "Le pont sera construit."], ["plus-que-parfait", "On avait construit le pont.", "Le pont avait été construit."], ["conditionnel", "On construirait le pont.", "Le pont serait construit."], ["subjonctif", "qu'on construise le pont", "que le pont soit construit"]] },
+        { "type": "rule", "title": "L'accord", "text": "Le participe passé s'accorde toujours avec le sujet : [[Les lettres ont été envoyées.]] Le participe **été** reste invariable." },
+        { "type": "rule", "title": "Par ou de ?", "text": "Le complément d'agent est introduit par **par**, ou par **de** avec les verbes de sentiment ou de description : [[Il est aimé de tous.]] [[La table est couverte de livres.]] Seuls les verbes qui ont un COD peuvent se mettre au passif ; un passif lourd se remplace souvent par **on** : [[On a volé ma voiture.]]" },
+        { "type": "examples", "items": [
+          { "ex": "Le pont **a été construit** en deux ans.", "note": "passé composé passif" },
+          { "ex": "Cette chanson **est connue de** tous.", "note": "de avec un verbe d'état" },
+          { "ex": "Les invitations **avaient été envoyées** la veille.", "note": "plus-que-parfait passif, accord avec invitations" },
+          { "ex": "Il faut que la porte **soit réparée**.", "note": "subjonctif passif" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "Les maisons ont été ~~détruit~~.", "ok": "Les maisons ont été **détruites**.", "why": "Accord avec le sujet, les maisons." },
+          { "ko": "Ces livres ont ~~étés~~ lus.", "ok": "Ces livres ont **été** lus.", "why": "Été reste invariable." },
+          { "ko": "Elle est ~~aimé~~ de tous.", "ok": "Elle est **aimée** de tous.", "why": "Accord avec le sujet féminin." },
+          { "ko": "Hier, le gâteau ~~est mangé~~ par le chat.", "ok": "Hier, le gâteau **a été mangé** par le chat.", "why": "Une action passée : passé composé passif." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Ne confonds pas le passif et le passé composé avec être : [[Elle est partie]] (passé composé : elle part) et [[Elle est invitée]] (passif : on l'invite). Au passif, on peut ajouter « par quelqu'un »." },
+        { "type": "fun", "text": "Le sais-tu ? Les journalistes aiment le passif quand ils ignorent l'auteur d'une action : « Un tableau a été volé au musée. » Par qui ? Justement, on ne le sait pas encore !" }
+      ],
+      "vocab": [
+        { "mot": "inaugurer", "def": "Ouvrir officiellement un lieu ou un événement.", "ex": "Le maire va inaugurer la médiathèque.", "alt": [] },
+        { "mot": "rénover", "def": "Remettre à neuf.", "ex": "Ils veulent rénover la vieille ferme.", "alt": [] },
+        { "mot": "restaurer", "def": "Remettre en état un objet ou un bâtiment ancien ; ou nourrir.", "ex": "On va restaurer les fresques de la chapelle.", "alt": [] },
+        { "mot": "démolir", "def": "Détruire une construction.", "ex": "Il faudra démolir l'ancien hangar.", "alt": [] },
+        { "mot": "ériger", "def": "Élever, construire un monument.", "ex": "La ville a décidé d'ériger une statue.", "alt": [] },
+        { "mot": "édifier", "def": "Construire un grand bâtiment ; ou instruire par l'exemple.", "ex": "Il fallut des siècles pour édifier cette cathédrale.", "alt": [] },
+        { "mot": "bâtir", "def": "Construire.", "ex": "Ils ont pu bâtir leur maison eux-mêmes.", "alt": ["batir"] },
+        { "mot": "consolider", "def": "Rendre plus solide.", "ex": "Il faut consolider ce mur avant l'hiver.", "alt": [] },
+        { "mot": "agrandir", "def": "Rendre plus grand.", "ex": "Nous allons agrandir la cuisine.", "alt": [] },
+        { "mot": "aménager", "def": "Organiser un lieu pour un usage précis.", "ex": "Ils vont aménager le grenier en chambre.", "alt": [] },
+        { "mot": "réhabiliter", "def": "Remettre en état un quartier ou un bâtiment ; ou rendre son honneur à quelqu'un.", "ex": "La ville veut réhabiliter les vieux quartiers.", "alt": [] },
+        { "mot": "raser", "def": "Détruire entièrement un bâtiment ; ou couper la barbe.", "ex": "On a dû raser l'immeuble insalubre.", "alt": [] },
+        { "mot": "classer", "def": "Ranger par catégories ; protéger officiellement un monument.", "ex": "Il est question de classer ce moulin monument historique.", "alt": [] },
+        { "mot": "achever", "def": "Terminer complètement.", "ex": "Il faut achever les travaux avant l'été.", "alt": [] },
+        { "mot": "concevoir", "def": "Imaginer et élaborer un projet ; ou comprendre.", "ex": "L'architecte a su concevoir un bâtiment original.", "alt": [] },
+        { "mot": "financer", "def": "Fournir l'argent nécessaire.", "ex": "La région va financer une partie du projet.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Le pont a été construit en deux ans.", "indice": "Un chantier rapide", "trap": ["construite", "étais"], "alt": [] },
+        { "phrase": "Les voleurs ont été arrêtés par la police.", "indice": "Une enquête résolue", "trap": ["arrêté", "étés"], "alt": [] },
+        { "phrase": "Cette chanson est connue de tous.", "indice": "Un tube", "trap": ["connu"], "alt": [] },
+        { "phrase": "La décision sera prise demain matin.", "indice": "Une attente", "trap": ["pris"], "alt": [] },
+        { "phrase": "Les invitations avaient été envoyées la veille.", "indice": "Une fête bien préparée", "trap": ["envoyés"], "alt": [] },
+        { "phrase": "Le musée sera inauguré par le maire.", "indice": "Une cérémonie officielle", "trap": ["inaugurée"], "alt": [] },
+        { "phrase": "Le jardin est entouré de grands arbres.", "indice": "Un jardin à l'abri des regards", "trap": ["entourée"], "alt": [] },
+        { "phrase": "Ces tableaux ont été peints au Moyen Âge.", "indice": "Des œuvres anciennes", "trap": ["peint"], "alt": [] },
+        { "phrase": "Il faut que la porte soit réparée avant ce soir.", "indice": "Une réparation urgente", "trap": ["réparé", "est"], "alt": [] },
+        { "phrase": "L'élève a été félicitée par toute la classe.", "indice": "Des applaudissements pour une élève", "trap": ["félicité"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "La ville a été ___ par les eaux.", "choices": ["inondée", "inondé", "inondés"], "answer": 0, "explain": "Accord avec le sujet, la ville." },
+        { "type": "mcq", "q": "Ces romans sont ___ dans le monde entier.", "choices": ["lus", "lu", "lues"], "answer": 0, "explain": "Accord avec le sujet, ces romans." },
+        { "type": "mcq", "q": "Demain, le vainqueur ___.", "choices": ["sera récompensé", "a récompensé", "récompensera"], "answer": 0, "explain": "Futur passif : sera + participe passé." },
+        { "type": "mcq", "q": "Elle est respectée ___ ses collègues.", "choices": ["de", "à", "pour"], "answer": 0, "explain": "Avec un verbe de sentiment, le complément d'agent est souvent introduit par de." },
+        { "type": "mcq", "q": "Quelle phrase est à la voix passive ?", "choices": ["Le vase a été cassé par le chat.", "Le chat a cassé le vase.", "Le chat est parti."], "answer": 0, "explain": "Le sujet (le vase) subit l'action ; le chat est le complément d'agent." },
+        { "type": "fill", "q": "« Le maire inaugure la salle. » → La salle est ___ par le maire.", "hint": "inaugurer", "answer": ["inaugurée"], "explain": "Accord avec la salle." },
+        { "type": "fill", "q": "« On a réparé les vélos. » → Les vélos ont été ___.", "hint": "réparer", "answer": ["réparés"], "explain": "Accord avec les vélos." },
+        { "type": "fill", "q": "« Le jury choisira le gagnant. » → Le gagnant ___ choisi par le jury.", "hint": "être, au futur", "answer": ["sera"], "explain": "Futur actif → futur de être + participe." },
+        { "type": "fill", "q": "« La tempête avait détruit la grange. » → La grange avait ___ détruite par la tempête.", "hint": "participe passé d'être", "answer": ["été"], "explain": "Plus-que-parfait passif : avait été + participe." },
+        { "type": "fill", "q": "Les candidates ont été ___.", "hint": "sélectionner", "answer": ["sélectionnées"], "explain": "Accord avec les candidates." },
+        { "type": "fill", "q": "Il faut que ce dossier soit ___ avant lundi.", "hint": "terminer", "answer": ["terminé"], "explain": "Subjonctif passif ; accord avec ce dossier." },
+        { "type": "fill", "q": "La montagne est couverte ___ neige.", "hint": "un mot", "answer": ["de"], "explain": "Avec un verbe de description : de." },
+        { "type": "error", "q": "Les fenêtres ont été cassé par le vent.", "wrong": 4, "fix": ["cassées"], "explain": "Accord avec les fenêtres." },
+        { "type": "error", "q": "Ces lettres ont étés écrites à la main.", "wrong": 3, "fix": ["été"], "explain": "Été reste invariable." },
+        { "type": "error", "q": "La gagnante sera récompensé ce soir.", "wrong": 3, "fix": ["récompensée"], "explain": "Accord avec la gagnante." },
+        { "type": "error", "q": "Les travaux seront terminé en juin.", "wrong": 3, "fix": ["terminés"], "explain": "Accord avec les travaux." }
+      ],
+      "reading": {
+        "title": "Le vol de la Joconde",
+        "text": "Un matin d'août mille neuf cent onze, les gardiens du Louvre firent une découverte stupéfiante : la Joconde avait été volée. Le cadre vide fut retrouvé dans un escalier de service. Le musée fut aussitôt fermé et des dizaines d'enquêteurs furent mobilisés. Des centaines de personnes furent interrogées ; le poète Guillaume Apollinaire fut même soupçonné et brièvement emprisonné, avant d'être mis hors de cause. Pendant plus de deux ans, le tableau resta introuvable. La France entière fut bouleversée, et des foules vinrent contempler l'emplacement vide sur le mur. Le mystère ne fut résolu qu'en décembre mille neuf cent treize, à Florence : un vitrier italien, qui avait travaillé au Louvre, proposa le tableau à un marchand d'art. Il fut arrêté peu après. Pendant tout ce temps, le chef-d'œuvre avait été caché dans une malle, sous son lit. Il affirma qu'il avait voulu rendre à l'Italie une œuvre peinte par un Italien. Le tableau fut exposé quelques jours en Italie, puis il fut rendu à la France. Ironie de l'histoire : ce vol a sans doute contribué à rendre la Joconde célèbre dans le monde entier.",
+        "questions": [
+          { "q": "Où le cadre de la Joconde fut-il retrouvé ?", "choices": ["Dans un escalier de service", "À Florence", "Chez un marchand d'art", "Dans le bureau du directeur"], "answer": 0, "explain": "« Le cadre vide fut retrouvé dans un escalier de service. »" },
+          { "q": "Qui fut soupçonné à tort ?", "choices": ["Le poète Guillaume Apollinaire", "Le directeur du Louvre", "Un gardien", "Un marchand d'art"], "answer": 0, "explain": "Apollinaire fut soupçonné et brièvement emprisonné, puis mis hors de cause." },
+          { "q": "Comment le voleur fut-il démasqué ?", "choices": ["Il proposa le tableau à un marchand d'art", "Un gardien le reconnut", "Il se dénonça", "Il fut photographié"], "answer": 0, "explain": "À Florence, il proposa le tableau à un marchand d'art." },
+          { "q": "Quelle raison le voleur donna-t-il ?", "choices": ["Rendre à l'Italie l'œuvre d'un peintre italien", "Devenir riche", "Se venger du musée", "Offrir le tableau à sa famille"], "answer": 0, "explain": "Il affirma avoir voulu rendre à l'Italie une œuvre peinte par un Italien." },
+          { "q": "Quelle « ironie de l'histoire » l'auteur souligne-t-il ?", "choices": ["Le vol a rendu le tableau encore plus célèbre", "Le voleur est devenu gardien", "Le tableau était un faux", "Apollinaire a écrit sur le vol"], "answer": 0, "explain": "Le vol a « contribué à rendre la Joconde célèbre dans le monde entier »." },
+          { "q": "« La Joconde avait été volée » : à quel temps est ce verbe passif ?", "choices": ["Au plus-que-parfait", "Au passé simple", "Au passé composé", "À l'imparfait"], "answer": 0, "explain": "Avait été + participe : plus-que-parfait passif." }
+        ]
+      }
+    },
+    {
+      "id": "8.5",
+      "name": "Ne… pas, viens-tu ?",
+      "title": "La négation et l'interrogation à l'écrit : ne… pas, ne… que, ne explétif, inversion et -t-",
+      "goal": "Écrire une négation complète et une interrogation soutenue avec inversion.",
+      "lesson": [
+        { "type": "p", "text": "À l'écrit soigné, la négation et l'interrogation obéissent à des règles que l'oral néglige souvent." },
+        { "type": "rule", "title": "La négation complète", "text": "À l'écrit, la négation a deux éléments : **ne… pas, ne… plus, ne… jamais, ne… rien, ne… personne, ne… guère, ne… point**. Le ne oublié à l'oral (« je sais pas ») revient à l'écrit : [[je ne sais pas]]. Devant une voyelle, il s'élide : attention au **n'** qu'on n'entend pas après on : [[on n'a rien vu]]." },
+        { "type": "rule", "title": "Ne… que", "text": "**ne… que** signifie « seulement » : ce n'est pas vraiment une négation. [[Il ne mange que des fruits.]] On n'y ajoute donc pas « pas »." },
+        { "type": "rule", "title": "Le ne explétif", "text": "Après avant que, à moins que, craindre que, avoir peur que, et dans les comparaisons d'inégalité, le ne n'a pas de valeur négative : [[Il est plus grand que je ne pensais.]] [[Je crains qu'il ne pleuve.]] Il est facultatif, mais élégant." },
+        { "type": "table", "head": ["Registre", "Question"], "rows": [["familier", "Tu viens ?"], ["courant", "Est-ce que tu viens ?"], ["soutenu", "Viens-tu ?"], ["soutenu, avec un nom sujet", "Ton frère vient-il ?"], ["soutenu, avec -t-", "Viendra-t-il ? A-t-elle fini ?"]] },
+        { "type": "rule", "title": "L'inversion", "text": "Le pronom sujet se place après le verbe, avec un trait d'union. Entre deux voyelles, on ajoute **-t-** : [[A-t-il fini ?]], [[Parle-t-elle anglais ?]] Avec un nom sujet, on le reprend par un pronom : [[Ta sœur est-elle là ?]]" },
+        { "type": "examples", "items": [
+          { "ex": "On **n'**a rien entendu cette nuit.", "note": "il n'a rien entendu → on n'a" },
+          { "ex": "Il **ne** mange **que** des légumes.", "note": "ne… que = seulement" },
+          { "ex": "**A-t-il** terminé son travail ?", "note": "-t- entre deux voyelles" },
+          { "ex": "Pourquoi ton frère **est-il** parti ?", "note": "le nom sujet repris par il" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "~~On a~~ rien vu.", "ok": "On **n'a** rien vu.", "why": "La négation a deux éléments : n'… rien." },
+          { "ko": "~~A-il~~ fini ?", "ok": "**A-t-il** fini ?", "why": "Entre deux voyelles, -t-." },
+          { "ko": "~~Où tu vas ?~~ (dans une lettre)", "ok": "**Où vas-tu ?**", "why": "À l'écrit soigné, on fait l'inversion." },
+          { "ko": "Il ne mange ~~pas~~ que des pâtes.", "ok": "Il ne mange que des pâtes.", "why": "Ne… que suffit à dire « seulement »." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "**On n'** : si tu hésites, remplace on par il. [[Il n'a rien vu]] → [[on n'a rien vu]]. Si « il » demande un n', « on » aussi." },
+        { "type": "fun", "text": "Le sais-tu ? « Pas » vient d'un vrai pas : on disait « je ne marche pas » (pas même un pas), comme « je ne bois goutte » ou « je ne mange mie » (pas même une miette). Seul « pas » s'est imposé… ou presque : « point » résiste encore dans la langue soutenue." }
+      ],
+      "vocab": [
+        { "mot": "guère", "def": "Pas beaucoup, presque pas (avec ne).", "ex": "Il ne sort guère depuis l'hiver.", "alt": [] },
+        { "mot": "nullement", "def": "Pas du tout, en aucune façon.", "ex": "Je ne suis nullement fâché.", "alt": [] },
+        { "mot": "aucunement", "def": "En aucune manière.", "ex": "Cela ne me dérange aucunement.", "alt": [] },
+        { "mot": "nul", "def": "Aucun, pas un (langue soutenue) ; ou sans valeur.", "ex": "Nul ne peut entrer sans badge.", "alt": [] },
+        { "mot": "questionnement", "def": "Ensemble de questions que l'on se pose sur un sujet.", "ex": "Ce film suscite un questionnement sur la liberté.", "alt": [] },
+        { "mot": "énigme", "def": "Question difficile à résoudre, mystère.", "ex": "Le détective a enfin résolu l'énigme.", "alt": [] },
+        { "mot": "mystère", "def": "Chose cachée, inexpliquée.", "ex": "Sa disparition reste un mystère.", "alt": [] },
+        { "mot": "devinette", "def": "Question amusante dont il faut trouver la réponse.", "ex": "Je connais une devinette très drôle.", "alt": [] },
+        { "mot": "interrogatoire", "def": "Série de questions posées à un suspect ou à un témoin.", "ex": "L'interrogatoire a duré toute la nuit.", "alt": [] },
+        { "mot": "sondage", "def": "Enquête qui interroge un groupe de personnes pour connaître une opinion.", "ex": "Selon un sondage, les Français lisent davantage.", "alt": [] },
+        { "mot": "réplique", "def": "Réponse vive ; ou phrase d'un acteur au théâtre.", "ex": "Sa réplique a fait rire toute la salle.", "alt": [] },
+        { "mot": "riposte", "def": "Réponse vive et immédiate à une attaque.", "ex": "La riposte ne se fit pas attendre.", "alt": [] },
+        { "mot": "démenti", "def": "Déclaration qui affirme qu'une information est fausse.", "ex": "Le ministère a publié un démenti.", "alt": [] },
+        { "mot": "aveu", "def": "Fait de reconnaître une faute ou un sentiment.", "ex": "Son aveu a soulagé tout le monde.", "alt": [] },
+        { "mot": "refus", "def": "Fait de dire non.", "ex": "Il a essuyé un refus poli.", "alt": [] },
+        { "mot": "dénégation", "def": "Action de nier, de contester une accusation.", "ex": "Malgré ses dénégations, les preuves l'accablent.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "On n'a rien entendu cette nuit.", "indice": "Une nuit calme", "trap": ["a"], "alt": [] },
+        { "phrase": "Je ne sais pas où il est parti.", "indice": "Une disparition", "trap": ["sait"], "alt": [] },
+        { "phrase": "A-t-il terminé son travail avant le dîner ?", "indice": "Une question sur un devoir", "trap": ["A-il"], "alt": [] },
+        { "phrase": "Ta sœur viendra-t-elle demain avec ses enfants ?", "indice": "Une visite attendue", "trap": ["viendra-elle"], "alt": [] },
+        { "phrase": "Il ne mange que des légumes.", "indice": "Un régime végétarien", "trap": ["pas"], "alt": [] },
+        { "phrase": "Nous ne l'avons jamais revu.", "indice": "Une disparition définitive", "trap": ["pas"], "alt": [] },
+        { "phrase": "Où vas-tu si tôt ce matin ?", "indice": "Un départ matinal", "trap": ["va-tu"], "alt": [] },
+        { "phrase": "Il est plus tard que je ne pensais.", "indice": "Le temps a filé", "trap": ["pas"], "alt": [] },
+        { "phrase": "Personne n'est venu à la réunion.", "indice": "Une salle vide", "trap": ["pas"], "alt": [] },
+        { "phrase": "Pourquoi ton frère est-il parti ?", "indice": "Un départ mystérieux", "trap": ["est-t-il"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "On ___ pas encore mangé.", "choices": ["n'a", "a", "n'as"], "answer": 0, "explain": "La négation a deux éléments : on n'a pas (il n'a pas)." },
+        { "type": "mcq", "q": "___ fini tes devoirs ?", "choices": ["As-tu", "A-tu", "As-t-tu"], "answer": 0, "explain": "Inversion avec tu : as-tu ; le -t- n'est utile qu'entre deux voyelles." },
+        { "type": "mcq", "q": "Votre fils ___ bien ?", "choices": ["va-t-il", "va-il", "va t'il"], "answer": 0, "explain": "Nom sujet repris par il ; -t- entre deux voyelles, avec deux traits d'union." },
+        { "type": "mcq", "q": "Il ___ boit que de l'eau.", "choices": ["ne", "n'", "pas"], "answer": 0, "explain": "Ne… que = seulement ; devant une consonne, ne." },
+        { "type": "mcq", "q": "Quelle question appartient au registre soutenu ?", "choices": ["Où habitez-vous ?", "Vous habitez où ?", "Où est-ce que vous habitez ?"], "answer": 0, "explain": "L'inversion du sujet marque le registre soutenu." },
+        { "type": "fill", "q": "On ___ entend rien d'ici.", "hint": "ne ou n' ?", "answer": ["n'"], "explain": "Devant une voyelle : n'. On n'entend rien." },
+        { "type": "fill", "q": "___-t-elle répondu à ta lettre ?", "hint": "avoir, au présent", "answer": ["A"], "explain": "A-t-elle : -t- entre deux voyelles." },
+        { "type": "fill", "q": "Je ___ ai vu personne.", "hint": "ne ou n' ?", "answer": ["n'"], "explain": "Devant une voyelle : n'. Je n'ai vu personne." },
+        { "type": "fill", "q": "Il est plus fort qu'on ___ le croit.", "hint": "ne explétif", "answer": ["ne"], "explain": "Dans une comparaison d'inégalité, ne explétif." },
+        { "type": "fill", "q": "Ce film ? Je ne l'ai ___ vu.", "hint": "à aucun moment", "answer": ["jamais"], "explain": "Ne… jamais." },
+        { "type": "fill", "q": "Dis-lui merci avant qu'il ___ parte.", "hint": "ne explétif", "answer": ["ne"], "explain": "Après avant que, ne explétif facultatif." },
+        { "type": "fill", "q": "Je ne vois ___ dans le noir.", "hint": "aucune chose", "answer": ["rien"], "explain": "Ne… rien." },
+        { "type": "error", "q": "On a pas compris la consigne.", "wrong": 1, "fix": ["n'a"], "explain": "À l'écrit, la négation a deux éléments : on n'a pas." },
+        { "type": "error", "q": "A-il fini son repas ?", "wrong": 0, "fix": ["A-t-il"], "explain": "Entre deux voyelles, -t- : a-t-il." },
+        { "type": "error", "q": "Je sais pas pourquoi il pleure.", "wrong": 1, "fix": ["ne sais"], "explain": "À l'écrit, la négation a deux éléments : je ne sais pas." },
+        { "type": "error", "q": "Ta sœur vient-t-elle ce soir ?", "wrong": 2, "fix": ["vient-elle"], "explain": "Le verbe se termine déjà par un t : pas de -t- ajouté." }
+      ],
+      "reading": {
+        "title": "Rencontre avec un chef",
+        "text": "Lors de notre rencontre, le chef Karim Benali ne cachait pas son émotion. Sa première étoile, il ne l'attendait plus. « Je n'ai jamais cuisiné pour les guides, confie-t-il. Je ne cuisine que pour ceux qui viennent s'asseoir à mes tables. » Comment est née sa vocation ? « Ma grand-mère ne me laissait entrer dans sa cuisine qu'à une condition : ne rien goûter avant la fin. Évidemment, je n'ai jamais respecté cette règle. » A-t-il connu des échecs ? « Mon premier restaurant n'a pas tenu deux ans. Personne ne venait. Les rares clients ne revenaient jamais, et les critiques ne daignaient même pas se déplacer. Je n'avais ni clients ni argent, mais je n'ai pas renoncé. » Que conseillerait-il aux jeunes cuisiniers ? Il réfléchit longuement avant de répondre : « Ne cherchez pas à plaire à tout le monde. On ne fait rien de bon sans un peu d'audace. » Ne craint-il pas de perdre son étoile ? « Je n'y pense guère : on ne cuisine bien que si l'on oublie la peur. » Le succès l'a-t-il changé ? Il éclate de rire. « Je me lève plus tôt que je ne le voudrais, je dors moins qu'avant… et ma grand-mère ne me laisse toujours pas goûter avant la fin. »",
+        "questions": [
+          { "q": "Pour qui le chef dit-il cuisiner ?", "choices": ["Pour ses clients", "Pour les guides", "Pour sa grand-mère", "Pour les journalistes"], "answer": 0, "explain": "« Je ne cuisine que pour ceux qui viennent s'asseoir à mes tables. »" },
+          { "q": "Quelle règle sa grand-mère imposait-elle ?", "choices": ["Ne rien goûter avant la fin", "Ne jamais entrer dans la cuisine", "Toujours laver la vaisselle", "Cuisiner en silence"], "answer": 0, "explain": "Il pouvait entrer à condition de ne rien goûter avant la fin." },
+          { "q": "Que s'est-il passé avec son premier restaurant ?", "choices": ["Il a fermé en moins de deux ans", "Il a reçu une étoile", "Il a été vendu", "Il a déménagé"], "answer": 0, "explain": "« Mon premier restaurant n'a pas tenu deux ans. »" },
+          { "q": "Quel conseil donne-t-il aux jeunes cuisiniers ?", "choices": ["Oser, sans chercher à plaire à tout le monde", "Suivre les recettes à la lettre", "Travailler pour les guides", "Ouvrir un restaurant tout de suite"], "answer": 0, "explain": "« Ne cherchez pas à plaire à tout le monde… un peu d'audace. »" },
+          { "q": "Que révèle la dernière phrase ?", "choices": ["Il garde son humour, et sa grand-mère est toujours là", "Il ne voit plus sa grand-mère", "Il regrette son succès", "Il va fermer son restaurant"], "answer": 0, "explain": "Il plaisante : sa grand-mère ne le laisse toujours pas goûter." },
+          { "q": "« Je ne cuisine que pour ceux qui viennent » : que signifie « ne… que » ?", "choices": ["Seulement", "Jamais", "Plus", "Rien"], "answer": 0, "explain": "Ne… que exprime la restriction : seulement." }
+        ]
+      }
+    }
+  ]
+}
