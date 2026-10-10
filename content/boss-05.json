@@ -1,0 +1,86 @@
+{
+  "level": 5,
+  "taunts": {
+    "phase2": [
+      "Hou hou… Je hantai, tu hantas, il hanta… Tu tremblas ?",
+      "Mes chaînes cliquettent au passé simple, et toi tu écris « il prena » !",
+      "À présent, écris ! Et que tes verbes se perdent dans la brume…"
+    ],
+    "phase3": [
+      "Dernière apparition : imparfait ou passé simple ? Hou hou, je ne te le dirai pas !",
+      "Je fus, tu fus, il fut… et toi, tu fus perdu !",
+      "Les tirets, les guillemets, les incises… je les fais tous disparaître !"
+    ],
+    "lose": [
+      "Hou hou ! Tu disparus dans les oubliettes. Reviens quand tu sauras tes verbes !",
+      "Le Fantôme garde son château. Révise ton passé simple, mortel !",
+      "Tu perdis… Avoue que cette phrase est jolie, au moins."
+    ]
+  },
+  "questions": [
+    { "unit": "5.1", "type": "mcq", "q": "Cette nuit-là, le vent ___ sans s'arrêter.", "choices": ["souffla", "soufflat", "soufflai"], "answer": 0, "explain": "1er groupe avec il : -a, sans t." },
+    { "unit": "5.1", "type": "mcq", "q": "Les chevaliers ___ le pont-levis.", "choices": ["franchirent", "franchèrent", "franchissèrent"], "answer": 0, "explain": "Franchir est du 2e groupe : ils franchirent." },
+    { "unit": "5.1", "type": "mcq", "q": "Nous ___ jusqu'au port.", "choices": ["ramâmes", "ramames", "ramèrent"], "answer": 0, "explain": "Avec nous : -âmes, avec un accent circonflexe." },
+    { "unit": "5.1", "type": "mcq", "q": "Elle ___ la porte avec douceur.", "choices": ["referma", "refermat", "refermit"], "answer": 0, "explain": "1er groupe avec elle : -a." },
+    { "unit": "5.1", "type": "fill", "q": "Le roi ___ ses ministres.", "hint": "réunir, au passé simple", "answer": ["réunit"], "explain": "Réunir est du 2e groupe : il réunit." },
+    { "unit": "5.1", "type": "fill", "q": "Les enfants ___ dans la rivière.", "hint": "plonger, au passé simple", "answer": ["plongèrent"], "explain": "1er groupe avec ils : -èrent (pas de e ajouté devant è)." },
+    { "unit": "5.1", "type": "fill", "q": "Je ___ mes amis à dîner.", "hint": "inviter, au passé simple", "answer": ["invitai"], "explain": "1er groupe avec je : -ai (il invita)." },
+    { "unit": "5.1", "type": "fill", "q": "Vous ___ le pays en une semaine.", "hint": "traverser, au passé simple", "answer": ["traversâtes"], "explain": "Avec vous : -âtes, avec un accent circonflexe." },
+    { "unit": "5.1", "type": "fill", "q": "Elle ___ le panier de fruits.", "hint": "remplir, au passé simple", "answer": ["remplit"], "explain": "Remplir est du 2e groupe : elle remplit." },
+    { "unit": "5.1", "type": "error", "q": "Le loup avança et dévorat le gâteau.", "wrong": 4, "fix": ["dévora"], "explain": "1er groupe avec il : -a, sans t." },
+    { "unit": "5.1", "type": "error", "q": "Les cloches sonnairent à midi.", "wrong": 2, "fix": ["sonnèrent"], "explain": "1er groupe avec ils : -èrent." },
+    { "unit": "5.1", "type": "error", "q": "Nous partageames le butin.", "wrong": 1, "fix": ["partageâmes"], "explain": "Avec nous : -âmes, accent circonflexe, et un e après le g devant a." },
+
+    { "unit": "5.2", "type": "mcq", "q": "Le roi ___ une lettre à la reine.", "choices": ["écrivit", "écriva", "écrivut"], "answer": 0, "explain": "Écrire est en -is au passé simple : il écrivit." },
+    { "unit": "5.2", "type": "mcq", "q": "Ils ___ la nouvelle avec joie.", "choices": ["reçurent", "recevèrent", "reçirent"], "answer": 0, "explain": "Recevoir est en -us : ils reçurent, avec une cédille devant u." },
+    { "unit": "5.2", "type": "mcq", "q": "La sorcière ___ un rire terrible.", "choices": ["eut", "eût", "avit"], "answer": 0, "explain": "Avoir au passé simple : elle eut, sans accent." },
+    { "unit": "5.2", "type": "mcq", "q": "Ce jour-là, nous ___ le loup.", "choices": ["vîmes", "voyâmes", "vûmes"], "answer": 0, "explain": "Voir est en -is : nous vîmes." },
+    { "unit": "5.2", "type": "fill", "q": "Le géant ___ un seau d'eau.", "hint": "boire, au passé simple", "answer": ["but"], "explain": "Boire : participe bu, passé simple il but." },
+    { "unit": "5.2", "type": "fill", "q": "Les hirondelles ___ au printemps.", "hint": "revenir, au passé simple", "answer": ["revinrent"], "explain": "Revenir est en -ins : elles revinrent." },
+    { "unit": "5.2", "type": "fill", "q": "Elle ___ la vérité à son père.", "hint": "dire, au passé simple", "answer": ["dit"], "explain": "Dire : elle dit (même forme qu'au présent)." },
+    { "unit": "5.2", "type": "fill", "q": "Le pêcheur ___ un énorme poisson.", "hint": "prendre, au passé simple", "answer": ["prit"], "explain": "Prendre : il prit." },
+    { "unit": "5.2", "type": "fill", "q": "Nous ___ enfin la réponse.", "hint": "connaître, au passé simple", "answer": ["connûmes"], "explain": "Connaître est en -us : nous connûmes." },
+    { "unit": "5.2", "type": "error", "q": "Le magicien disparaissa dans un nuage.", "wrong": 2, "fix": ["disparut"], "explain": "Disparaître est en -us : il disparut." },
+    { "unit": "5.2", "type": "error", "q": "Ils mettèrent leurs bottes.", "wrong": 1, "fix": ["mirent"], "explain": "Mettre : ils mirent." },
+    { "unit": "5.2", "type": "error", "q": "Elle courrut jusqu'à la gare.", "wrong": 1, "fix": ["courut"], "explain": "Courir au passé simple n'a qu'un r : elle courut (deux r seulement au futur et au conditionnel)." },
+
+    { "unit": "5.3", "type": "mcq", "q": "Le soleil ___ quand nous partîmes.", "choices": ["brillait", "brilla", "brillera"], "answer": 0, "explain": "Le décor du départ : imparfait." },
+    { "unit": "5.3", "type": "mcq", "q": "Un jour, un étranger ___ au village.", "choices": ["arriva", "arrivait", "arrivera"], "answer": 0, "explain": "« Un jour » : un événement, au passé simple." },
+    { "unit": "5.3", "type": "mcq", "q": "Tous les soirs, mon grand-père ___ sa pipe.", "choices": ["fumait", "fuma", "fumera"], "answer": 0, "explain": "« Tous les soirs » : une habitude, à l'imparfait." },
+    { "unit": "5.3", "type": "mcq", "q": "Elle ___ ses devoirs quand la lumière s'éteignit.", "choices": ["faisait", "fit", "fera"], "answer": 0, "explain": "Une action en cours, interrompue par un événement : imparfait." },
+    { "unit": "5.3", "type": "fill", "q": "La mer ___ calme ce matin-là.", "hint": "être : imparfait ou passé simple ?", "answer": ["était"], "explain": "Une description : imparfait." },
+    { "unit": "5.3", "type": "fill", "q": "Brusquement, il ___ la tête.", "hint": "tourner : imparfait ou passé simple ?", "answer": ["tourna"], "explain": "« Brusquement » : un événement, au passé simple." },
+    { "unit": "5.3", "type": "fill", "q": "Le vieux chien ___ près du feu quand le loup hurla.", "hint": "dormir : imparfait ou passé simple ?", "answer": ["dormait"], "explain": "Une action en cours, interrompue : imparfait." },
+    { "unit": "5.3", "type": "fill", "q": "Alors, elle ___ sa décision.", "hint": "prendre : imparfait ou passé simple ?", "answer": ["prit"], "explain": "Un événement qui fait avancer l'histoire : passé simple." },
+    { "unit": "5.3", "type": "fill", "q": "Autrefois, on ___ l'eau au puits.", "hint": "puiser : imparfait ou passé simple ?", "answer": ["puisait"], "explain": "« Autrefois » : une habitude, à l'imparfait." },
+    { "unit": "5.3", "type": "error", "q": "Il lisait tranquillement quand on frappait à la porte.", "wrong": 5, "fix": ["frappa"], "explain": "On frappe : c'est l'événement qui interrompt la lecture, au passé simple." },
+    { "unit": "5.3", "type": "error", "q": "La maison fut grande et lumineuse.", "wrong": 2, "fix": ["était"], "explain": "C'est une description : imparfait." },
+    { "unit": "5.3", "type": "error", "q": "Soudain, l'enfant criait et s'enfuit.", "wrong": 2, "fix": ["cria"], "explain": "« Soudain », et deux actions qui se suivent : passé simple." },
+
+    { "unit": "5.4", "type": "mcq", "q": "Quand je me réveillai, la neige ___ tout le jardin.", "choices": ["avait recouvert", "recouvrit", "recouvre"], "answer": 0, "explain": "La neige est tombée avant le réveil : plus-que-parfait." },
+    { "unit": "5.4", "type": "mcq", "q": "Aussitôt qu'il ___ le signal, il partit.", "choices": ["eut reçu", "eût reçu", "a reçu"], "answer": 0, "explain": "Après aussitôt que, avec un passé simple : passé antérieur, sans accent." },
+    { "unit": "5.4", "type": "mcq", "q": "Elle comprit qu'elle ___ son train.", "choices": ["avait raté", "rata", "rate"], "answer": 0, "explain": "Le train est parti avant qu'elle ne comprenne : plus-que-parfait." },
+    { "unit": "5.4", "type": "mcq", "q": "Lorsque les invités ___ partis, on rangea la salle.", "choices": ["furent", "fûrent", "avaient"], "answer": 0, "explain": "Passé antérieur avec être : ils furent partis, sans accent." },
+    { "unit": "5.4", "type": "fill", "q": "Il était triste : son chien ___ disparu.", "hint": "avoir, au plus-que-parfait", "answer": ["avait"], "explain": "Disparaître se conjugue avec avoir : son chien avait disparu." },
+    { "unit": "5.4", "type": "fill", "q": "Nous ___ arrivés la veille.", "hint": "être, au plus-que-parfait", "answer": ["étions"], "explain": "Arriver se conjugue avec être : nous étions arrivés." },
+    { "unit": "5.4", "type": "fill", "q": "Dès qu'ils ___ dîné, ils sortirent.", "hint": "avoir, au passé antérieur", "answer": ["eurent"], "explain": "Avoir au passé simple : ils eurent dîné." },
+    { "unit": "5.4", "type": "fill", "q": "Elle avait ___ toute la nuit.", "hint": "pleurer", "answer": ["pleuré"], "explain": "Participe en -é ; avec avoir, pas d'accord avec le sujet." },
+    { "unit": "5.4", "type": "fill", "q": "Quand il ___ parti, nous fermâmes la porte.", "hint": "être, au passé antérieur", "answer": ["fut"], "explain": "Être au passé simple : il fut parti." },
+    { "unit": "5.4", "type": "error", "q": "Quand il eût mangé, il s'endormit.", "wrong": 2, "fix": ["eut"], "explain": "Passé antérieur : il eut, sans accent circonflexe." },
+    { "unit": "5.4", "type": "error", "q": "Ils avaient partis avant l'aube.", "wrong": 1, "fix": ["étaient"], "explain": "Partir se conjugue avec être : ils étaient partis." },
+    { "unit": "5.4", "type": "error", "q": "Elle me raconta qu'elle a vu un loup.", "wrong": 4, "fix": ["avait"], "explain": "L'action précède le récit : plus-que-parfait, elle avait vu." },
+
+    { "unit": "5.5", "type": "mcq", "q": "« Merci », ___ la petite fille.", "choices": ["murmura", "murmura-t-elle", "elle murmura"], "answer": 0, "explain": "Le sujet est un nom : il suit simplement le verbe, sans trait d'union." },
+    { "unit": "5.5", "type": "mcq", "q": "« Qui est là ? » ___.", "choices": ["chuchota-t-il", "chuchota-il", "chuchota t-il"], "answer": 0, "explain": "Entre deux voyelles, -t-, avec deux traits d'union." },
+    { "unit": "5.5", "type": "mcq", "q": "Quelle phrase est bien ponctuée ?", "choices": ["« Viens », dit-elle.", "« Viens » dit-elle.", "« Viens », Dit-elle."], "answer": 0, "explain": "Sans ponctuation forte, on met une virgule avant l'incise ; pas de majuscule à l'incise." },
+    { "unit": "5.5", "type": "mcq", "q": "Quel verbe de parole convient à un rire moqueur ?", "choices": ["ricaner", "acquiescer", "s'enquérir"], "answer": 0, "explain": "Ricaner, c'est rire de façon moqueuse." },
+    { "unit": "5.5", "type": "fill", "q": "« Je suis désolé », ___ le garçon en rougissant.", "hint": "bredouiller, au passé simple", "answer": ["bredouilla"], "explain": "Bredouiller : il bredouilla." },
+    { "unit": "5.5", "type": "fill", "q": "« Encore la pluie ! » ___ mon grand-père.", "hint": "maugréer, au passé simple", "answer": ["maugréa"], "explain": "Maugréer : il maugréa." },
+    { "unit": "5.5", "type": "fill", "q": "« Avez-vous bien dormi ? » ___ l'hôtelier.", "hint": "s'enquérir, au passé simple", "answer": ["s'enquit"], "explain": "S'enquérir est en -is : il s'enquit." },
+    { "unit": "5.5", "type": "fill", "q": "« Au secours ! » ___ le naufragé.", "hint": "hurler, au passé simple", "answer": ["hurla"], "explain": "Hurler : il hurla." },
+    { "unit": "5.5", "type": "fill", "q": "« Tu as gagné », ___ son adversaire, beau joueur.", "hint": "reconnaître, au passé simple", "answer": ["reconnut"], "explain": "Reconnaître est en -us : il reconnut." },
+    { "unit": "5.5", "type": "error", "q": "Bonjour, répondit-t-il.", "wrong": 1, "fix": ["répondit-il"], "explain": "Le verbe se termine déjà par un t : pas de -t- ajouté." },
+    { "unit": "5.5", "type": "error", "q": "Tu viens ? demanda-t'elle.", "wrong": 2, "fix": ["demanda-t-elle"], "explain": "Le -t- s'écrit avec deux traits d'union, jamais avec une apostrophe." },
+    { "unit": "5.5", "type": "error", "q": "C'est fini, annonça-il.", "wrong": 2, "fix": ["annonça-t-il"], "explain": "Entre deux voyelles, on ajoute -t- : annonça-t-il." }
+  ]
+}

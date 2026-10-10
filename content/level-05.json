@@ -1,0 +1,445 @@
+{
+  "id": 5,
+  "cefr": "B1",
+  "title": "Le récit",
+  "sub": "Passé simple, temps composés et dialogue",
+  "intro": "Le passé simple sous toutes ses formes, l'art de le marier avec l'imparfait, le plus-que-parfait et le passé antérieur, et les règles du dialogue. Tu écriras bientôt comme dans les livres.",
+  "boss": {
+    "name": "Le Fantôme du Passé Simple",
+    "taunt": "Jadis, je hantai ce château… ou je hantais ? Je ne sais plus moi-même, et toi non plus, hou hou !",
+    "defeat": "Je disparus dans un dernier soupir… Tu vois, ça, c'est un passé simple réussi."
+  },
+  "units": [
+    {
+      "id": "5.1",
+      "name": "Il était une fois",
+      "title": "Le passé simple des verbes du 1er et du 2e groupe (et d'aller)",
+      "goal": "Conjuguer au passé simple les verbes en -er, aller et les verbes du 2e groupe.",
+      "lesson": [
+        { "type": "p", "text": "Le passé simple est le temps du **récit écrit** : contes, romans, livres d'histoire. On l'entend peu à l'oral, mais il faut savoir l'écrire. Il raconte les actions principales, terminées, qui font avancer l'histoire : [[Le loup frappa à la porte.]]" },
+        { "type": "table", "head": ["chanter (1er groupe)", "finir (2e groupe)", "aller"], "rows": [["je chantai", "je finis", "j'allai"], ["tu chantas", "tu finis", "tu allas"], ["il chanta", "il finit", "il alla"], ["nous chantâmes", "nous finîmes", "nous allâmes"], ["vous chantâtes", "vous finîtes", "vous allâtes"], ["ils chantèrent", "ils finirent", "ils allèrent"]] },
+        { "type": "rule", "title": "Le 1er groupe (et aller)", "text": "Terminaisons **-ai, -as, -a, -âmes, -âtes, -èrent**. Attention : [[il chanta]] n'a pas de t, et [[ils chantèrent]] prend un accent grave." },
+        { "type": "rule", "title": "Le 2e groupe", "text": "Terminaisons **-is, -is, -it, -îmes, -îtes, -irent**. Au singulier, les formes sont les mêmes qu'au présent ([[il finit]]) : seul le contexte permet de savoir de quel temps il s'agit." },
+        { "type": "rule", "title": "Accents, ç et ge", "text": "Avec **nous** et **vous**, toujours un accent circonflexe : [[nous chantâmes]], [[vous finîtes]]. Les verbes en -cer et -ger gardent leur son devant a : [[il commença]], [[il mangea]], [[nous plongeâmes]]." },
+        { "type": "examples", "items": [
+          { "ex": "Le prince **entra** dans la forêt.", "note": "1er groupe, il : -a sans t" },
+          { "ex": "Les loups **hurlèrent** toute la nuit.", "note": "ils : -èrent" },
+          { "ex": "La reine **choisit** une robe de soie.", "note": "2e groupe, il : -it" },
+          { "ex": "Nous **marchâmes** jusqu'au village.", "note": "nous : accent circonflexe" },
+          { "ex": "Elle **mangea** la pomme empoisonnée.", "note": "ge devant a" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "il ~~chantat~~", "ok": "il **chanta**", "why": "Au passé simple, le 1er groupe n'a pas de t avec il." },
+          { "ko": "ils ~~chantairent~~", "ok": "ils **chantèrent**", "why": "La terminaison est -èrent." },
+          { "ko": "nous ~~chantames~~", "ok": "nous **chantâmes**", "why": "Accent circonflexe avec nous et vous." },
+          { "ko": "il ~~mangat~~", "ok": "il **mangea**", "why": "Il faut un e après le g devant a, et pas de t." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "**je chantai** (passé simple) ou **je chantais** (imparfait) ? À l'oral, on les confond. Remplace je par il : [[il chanta]] (passé simple) → je chantai ; [[il chantait]] (imparfait) → je chantais." },
+        { "type": "fun", "text": "Le sais-tu ? Le passé simple a presque disparu de la conversation, mais il vit toujours dans les livres. Dans les contes, « Il était une fois… » (imparfait) est presque toujours suivi d'un passé simple : « Un jour, la reine tomba malade »." }
+      ],
+      "vocab": [
+        { "mot": "souverain", "def": "Roi ou reine qui gouverne un pays.", "ex": "Le souverain accorda sa grâce au prisonnier.", "alt": [] },
+        { "mot": "sortilège", "def": "Action magique d'un sorcier, souvent pour nuire.", "ex": "Un sortilège plongea le château dans le sommeil.", "alt": [] },
+        { "mot": "enchanteur", "def": "Magicien qui jette des sorts ; ou adjectif : qui charme.", "ex": "L'enchanteur Merlin vivait dans la forêt.", "alt": [] },
+        { "mot": "malédiction", "def": "Sort funeste lancé contre quelqu'un.", "ex": "La malédiction ne cesserait qu'au centième printemps.", "alt": [] },
+        { "mot": "prophétie", "def": "Annonce de l'avenir faite par un devin.", "ex": "La prophétie annonçait la chute du roi.", "alt": [] },
+        { "mot": "chaumière", "def": "Petite maison de campagne au toit de paille.", "ex": "Une fumée s'échappait de la chaumière.", "alt": [] },
+        { "mot": "bûcheron", "def": "Personne qui abat les arbres dans la forêt.", "ex": "Le bûcheron rentra chez lui à la nuit tombée.", "alt": ["bucheron"] },
+        { "mot": "marâtre", "def": "Belle-mère cruelle, dans les contes.", "ex": "La marâtre jalousait la beauté de l'enfant.", "alt": [] },
+        { "mot": "ogre", "def": "Géant des contes qui mange les enfants.", "ex": "L'ogre flaira la chair fraîche.", "alt": [] },
+        { "mot": "festin", "def": "Repas de fête, très abondant.", "ex": "Le roi offrit un festin à tout le royaume.", "alt": [] },
+        { "mot": "carrosse", "def": "Grande voiture de luxe tirée par des chevaux.", "ex": "Le carrosse redevint citrouille à minuit.", "alt": [] },
+        { "mot": "donjon", "def": "Tour principale d'un château fort.", "ex": "La princesse était enfermée dans le donjon.", "alt": [] },
+        { "mot": "trône", "def": "Siège d'apparat réservé au roi.", "ex": "Le jeune roi monta sur le trône.", "alt": ["trone"] },
+        { "mot": "sceptre", "def": "Bâton orné, symbole du pouvoir royal.", "ex": "Le roi tenait son sceptre d'or.", "alt": [] },
+        { "mot": "courtisan", "def": "Personne de l'entourage du roi qui cherche à lui plaire.", "ex": "Les courtisans flattaient le souverain.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Le prince entra dans la forêt.", "indice": "Le début d'une aventure", "trap": ["entrat", "entrait"], "alt": [] },
+        { "phrase": "Les loups hurlèrent toute la nuit.", "indice": "Une nuit effrayante", "trap": ["hurlairent", "hurlaient"], "alt": [] },
+        { "phrase": "La reine choisit une robe de soie.", "indice": "Une tenue de bal", "trap": ["choisi", "choisissa"], "alt": [] },
+        { "phrase": "Nous marchâmes longtemps jusqu'au village voisin.", "indice": "Une longue marche", "trap": ["marchames"], "alt": [] },
+        { "phrase": "Il commença à pleuvoir sur la forêt.", "indice": "Le temps change", "trap": ["commenca"], "alt": [] },
+        { "phrase": "Les enfants finirent leur repas en silence.", "indice": "Un dîner sans un mot", "trap": ["finèrent"], "alt": [] },
+        { "phrase": "Le chevalier saisit son épée.", "indice": "Le combat va commencer", "trap": ["saisissa", "saisi"], "alt": [] },
+        { "phrase": "Elle mangea la pomme empoisonnée.", "indice": "Un conte célèbre", "trap": ["mangeat", "manga"], "alt": [] },
+        { "phrase": "Vous arrivâtes trop tard au château.", "indice": "Un retard fâcheux", "trap": ["arrivates"], "alt": [] },
+        { "phrase": "Ils allèrent chercher du bois.", "indice": "Une corvée en forêt", "trap": ["allairent"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Le roi ___ son fils.", "choices": ["appela", "appella", "appelat"], "answer": 0, "explain": "Au passé simple, appeler garde un seul l devant a : il appela." },
+        { "type": "mcq", "q": "Les oiseaux ___ vers le sud.", "choices": ["s'envolèrent", "s'envolairent", "s'envolirent"], "answer": 0, "explain": "1er groupe avec ils : -èrent." },
+        { "type": "mcq", "q": "La princesse ___ le dragon.", "choices": ["réveilla", "réveillat", "réveilli"], "answer": 0, "explain": "1er groupe avec elle : -a, sans t." },
+        { "type": "mcq", "q": "Nous ___ la rivière à la nage.", "choices": ["traversâmes", "traversames", "traversâtes"], "answer": 0, "explain": "Avec nous : -âmes, avec un accent circonflexe." },
+        { "type": "mcq", "q": "Le géant ___ de colère.", "choices": ["rougit", "rougissa", "rougut"], "answer": 0, "explain": "2e groupe avec il : -it." },
+        { "type": "fill", "q": "Soudain, le loup ___ la porte.", "hint": "pousser, au passé simple", "answer": ["poussa"], "explain": "1er groupe avec il : il poussa." },
+        { "type": "fill", "q": "Les invités ___ vers minuit.", "hint": "arriver, au passé simple", "answer": ["arrivèrent"], "explain": "1er groupe avec ils : -èrent." },
+        { "type": "fill", "q": "Je ___ la lettre en tremblant.", "hint": "déchirer, au passé simple", "answer": ["déchirai"], "explain": "1er groupe avec je : -ai (il déchira)." },
+        { "type": "fill", "q": "Elle ___ son travail en dix minutes.", "hint": "finir, au passé simple", "answer": ["finit"], "explain": "2e groupe avec elle : -it." },
+        { "type": "fill", "q": "Ils ___ la bataille.", "hint": "gagner, au passé simple", "answer": ["gagnèrent"], "explain": "1er groupe avec ils : -èrent." },
+        { "type": "fill", "q": "Le chat ___ sur la table.", "hint": "bondir, au passé simple", "answer": ["bondit"], "explain": "2e groupe avec il : -it." },
+        { "type": "fill", "q": "La foule ___ le héros.", "hint": "applaudir, au passé simple", "answer": ["applaudit"], "explain": "2e groupe : la foule applaudit." },
+        { "type": "error", "q": "La fée agitat sa baguette.", "wrong": 2, "fix": ["agita"], "explain": "1er groupe avec elle : -a, sans t." },
+        { "type": "error", "q": "Les soldats marchairent toute la nuit.", "wrong": 2, "fix": ["marchèrent"], "explain": "1er groupe avec ils : -èrent." },
+        { "type": "error", "q": "Il mangat une pomme.", "wrong": 1, "fix": ["mangea"], "explain": "Il faut un e après le g devant a, et pas de t : il mangea." },
+        { "type": "error", "q": "Les élèves choisissèrent un livre.", "wrong": 2, "fix": ["choisirent"], "explain": "2e groupe avec ils : -irent." }
+      ],
+      "reading": {
+        "title": "Le meunier et la lune",
+        "text": "Il était une fois un meunier si avare qu'il comptait même les grains de farine tombés par terre. Un soir d'hiver, une vieille femme frappa à sa porte et lui demanda un morceau de pain. Le meunier refusa sèchement et claqua la porte. La vieille femme leva alors les yeux vers la lune et murmura quelques mots. Le lendemain, le meunier trouva son moulin arrêté : les ailes ne tournaient plus, même par grand vent. Il appela des charpentiers, consulta des savants, pria tous les saints. Rien n'y fit. Pendant un mois, aucun grain ne passa sous sa meule. Un soir, affamé, il partagea son dernier quignon avec un mendiant qui passait. À l'instant même, les ailes se remirent à tourner. Le meunier comprit la leçon, et l'on raconte qu'il donna désormais un sac de farine à chaque voyageur.",
+        "questions": [
+          { "q": "Quel est le principal défaut du meunier au début ?", "choices": ["Il est avare", "Il est paresseux", "Il est menteur", "Il est peureux"], "answer": 0, "explain": "Il compte même les grains tombés par terre et refuse un morceau de pain." },
+          { "q": "Que se passe-t-il après la visite de la vieille femme ?", "choices": ["Le moulin s'arrête de tourner", "Le moulin brûle", "Le meunier tombe malade", "La lune disparaît"], "answer": 0, "explain": "Le lendemain, les ailes ne tournaient plus." },
+          { "q": "Que fait le meunier pour réparer son moulin ?", "choices": ["Il appelle des charpentiers et consulte des savants", "Il construit un nouveau moulin", "Il quitte le village", "Il attend le printemps"], "answer": 0, "explain": "Il appela des charpentiers, consulta des savants, pria tous les saints." },
+          { "q": "Qu'est-ce qui fait repartir le moulin ?", "choices": ["Le meunier partage son pain avec un mendiant", "Le vent se lève", "La vieille femme revient", "Les charpentiers trouvent la panne"], "answer": 0, "explain": "Les ailes repartent à l'instant où il partage son dernier quignon." },
+          { "q": "Quelle est la morale de ce conte ?", "choices": ["La générosité est récompensée", "Il faut se méfier des inconnus", "Le travail rend riche", "La lune porte malheur"], "answer": 0, "explain": "L'avarice est punie, la générosité récompensée." },
+          { "q": "Pourquoi « frappa », « refusa », « claqua » sont-ils au passé simple ?", "choices": ["Ce sont les actions principales du récit", "Ce sont des descriptions", "Ce sont des habitudes", "Ce sont des actions futures"], "answer": 0, "explain": "Le passé simple raconte les événements qui font avancer l'histoire." }
+        ]
+      }
+    },
+    {
+      "id": "5.2",
+      "name": "Prit, vit, vint",
+      "title": "Le passé simple du 3e groupe : -is, -us, -ins",
+      "goal": "Conjuguer au passé simple les verbes irréguliers les plus courants.",
+      "lesson": [
+        { "type": "p", "text": "Au 3e groupe, le passé simple a trois familles de terminaisons : en **-is**, en **-us** et en **-ins**. Il faut les connaître verbe par verbe, mais le participe passé aide souvent." },
+        { "type": "table", "head": ["en -is", "en -us", "en -ins"], "rows": [["prendre → il prit", "être → il fut", "venir → il vint"], ["mettre → il mit", "avoir → il eut", "tenir → il tint"], ["faire → il fit", "pouvoir → il put", "devenir → il devint"], ["dire → il dit", "vouloir → il voulut", "revenir → il revint"], ["voir → il vit", "savoir → il sut", "obtenir → il obtint"], ["écrire → il écrivit", "lire → il lut", "retenir → il retint"], ["naître → il naquit", "vivre → il vécut", "appartenir → il appartint"]] },
+        { "type": "rule", "title": "Les terminaisons", "text": "**-is** : -is, -is, -it, -îmes, -îtes, -irent ([[ils prirent]]). **-us** : -us, -us, -ut, -ûmes, -ûtes, -urent ([[nous fûmes]], [[ils eurent]]). **-ins** : -ins, -ins, -int, -înmes, -întes, -inrent ([[ils vinrent]])." },
+        { "type": "rule", "title": "L'astuce du participe", "text": "Souvent, le passé simple ressemble au participe passé : [[pris → il prit]], [[mis → il mit]], [[lu → il lut]], [[bu → il but]], [[voulu → il voulut]]. Mais attention aux exceptions : [[vu → il vit]], [[fait → il fit]], [[né → il naquit]], [[été → il fut]]." },
+        { "type": "examples", "items": [
+          { "ex": "Le chevalier **prit** son épée et **partit**.", "note": "prendre et partir : -is" },
+          { "ex": "Ils **virent** une lumière dans la forêt.", "note": "voir : -is, et non « voyèrent »" },
+          { "ex": "Nous **eûmes** peur de l'orage.", "note": "avoir : -us, accent circonflexe avec nous" },
+          { "ex": "Le messager **vint** à l'aube.", "note": "venir : -ins" },
+          { "ex": "Ils **vécurent** heureux.", "note": "vivre : -us" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "il ~~prena~~", "ok": "il **prit**", "why": "Prendre est en -is au passé simple." },
+          { "ko": "ils ~~voyèrent~~", "ok": "ils **virent**", "why": "Voir est en -is : ils virent." },
+          { "ko": "il ~~venit~~", "ok": "il **vint**", "why": "Venir et tenir sont en -ins." },
+          { "ko": "elle ~~naissa~~", "ok": "elle **naquit**", "why": "Naître a un passé simple très irrégulier." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "**il fut** (passé simple, sans accent) et **qu'il fût** (subjonctif imparfait, avec un accent). Au passé simple, seuls nous et vous prennent un accent circonflexe : [[nous fûmes]], [[vous fûtes]]. Même chose pour il eut / qu'il eût." },
+        { "type": "fun", "text": "Le sais-tu ? Certains passés simples sont si rares que même les écrivains hésitent : « nous moulûmes » (moudre), « ils résolurent » (résoudre), « vous vêtîtes » (vêtir). Les tableaux de conjugaison existent pour ça !" }
+      ],
+      "vocab": [
+        { "mot": "destrier", "def": "Cheval de bataille des chevaliers.", "ex": "Le chevalier sella son destrier.", "alt": [] },
+        { "mot": "armure", "def": "Ensemble des pièces de métal qui protégeaient le corps du chevalier.", "ex": "Son armure brillait au soleil.", "alt": [] },
+        { "mot": "écuyer", "def": "Jeune homme au service d'un chevalier.", "ex": "L'écuyer porta le bouclier de son maître.", "alt": [] },
+        { "mot": "conquête", "def": "Action de prendre un territoire par la force.", "ex": "Le duc partit à la conquête de l'Angleterre.", "alt": [] },
+        { "mot": "embuscade", "def": "Piège tendu à un ennemi en se cachant pour l'attaquer.", "ex": "Les brigands tendirent une embuscade dans le défilé.", "alt": [] },
+        { "mot": "rempart", "def": "Grosse muraille qui entoure et protège une ville ou un château.", "ex": "Les soldats montèrent sur le rempart.", "alt": [] },
+        { "mot": "assaut", "def": "Attaque violente pour prendre une position.", "ex": "Les troupes donnèrent l'assaut à l'aube.", "alt": [] },
+        { "mot": "fugitif", "def": "Personne qui s'est enfuie et qui se cache.", "ex": "Le fugitif se cacha dans une grange.", "alt": [] },
+        { "mot": "exil", "def": "Obligation de vivre loin de son pays.", "ex": "Victor Hugo écrivit plusieurs livres en exil.", "alt": [] },
+        { "mot": "trahison", "def": "Action de celui qui abandonne ou livre ceux qui lui faisaient confiance.", "ex": "Sa trahison coûta la bataille.", "alt": [] },
+        { "mot": "défaite", "def": "Le fait d'être vaincu.", "ex": "L'armée rentra après une lourde défaite.", "alt": [] },
+        { "mot": "héritier", "def": "Personne qui reçoit les biens ou le pouvoir de quelqu'un après sa mort.", "ex": "L'héritier du trône n'avait que dix ans.", "alt": [] },
+        { "mot": "bannière", "def": "Étendard d'un seigneur, porté en tête des troupes.", "ex": "La bannière flottait au sommet de la tour.", "alt": [] },
+        { "mot": "vassal", "def": "Au Moyen Âge, noble qui devait fidélité à un seigneur plus puissant.", "ex": "Le vassal jura fidélité à son seigneur.", "alt": [] },
+        { "mot": "tournoi", "def": "Combat d'adresse entre chevaliers, organisé comme une fête.", "ex": "Il remporta le tournoi de Pâques.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Le chevalier prit son épée et partit.", "indice": "Un départ au combat", "trap": ["prena", "partut"], "alt": [] },
+        { "phrase": "Ils virent une lumière dans la forêt.", "indice": "Un mystère nocturne", "trap": ["voyèrent", "vurent"], "alt": [] },
+        { "phrase": "La reine fut très surprise.", "indice": "Une réaction royale", "trap": ["fût", "fus"], "alt": [] },
+        { "phrase": "Nous eûmes peur de l'orage.", "indice": "Une nuit agitée", "trap": ["eumes", "avâmes"], "alt": [] },
+        { "phrase": "Le messager vint à l'aube.", "indice": "Une arrivée matinale", "trap": ["venit", "venut"], "alt": [] },
+        { "phrase": "Elle lut la lettre en silence.", "indice": "Une lecture muette", "trap": ["lisa", "lit"], "alt": [] },
+        { "phrase": "Ils firent la paix après la bataille.", "indice": "La fin de la guerre", "trap": ["fairent", "faisèrent"], "alt": [] },
+        { "phrase": "Le roi mourut au printemps.", "indice": "La fin d'un règne", "trap": ["mourit", "mourra"], "alt": [] },
+        { "phrase": "Je sus tout de suite qu'il mentait.", "indice": "Un mensonge démasqué", "trap": ["savai", "sut"], "alt": [] },
+        { "phrase": "Les soldats tinrent bon jusqu'au soir.", "indice": "Une résistance courageuse", "trap": ["tenirent", "tenurent"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Le magicien ___ un lapin de son chapeau.", "choices": ["sortit", "sorta", "sortut"], "answer": 0, "explain": "Sortir est en -is au passé simple : il sortit." },
+        { "type": "mcq", "q": "Les enfants ___ la vérité.", "choices": ["dirent", "disèrent", "durent"], "answer": 0, "explain": "Dire : ils dirent. Durent vient de devoir." },
+        { "type": "mcq", "q": "Elle ___ ses gants et sortit.", "choices": ["mit", "metta", "mettit"], "answer": 0, "explain": "Mettre : participe mis, passé simple il mit." },
+        { "type": "mcq", "q": "Nous ___ un long voyage.", "choices": ["fîmes", "faisâmes", "fûmes"], "answer": 0, "explain": "Faire : nous fîmes. Fûmes vient d'être." },
+        { "type": "mcq", "q": "Ils ___ de la colline au coucher du soleil.", "choices": ["revinrent", "revenirent", "revenurent"], "answer": 0, "explain": "Revenir se conjugue comme venir : ils revinrent." },
+        { "type": "fill", "q": "Le prince ___ la princesse au bal.", "hint": "voir, au passé simple", "answer": ["vit"], "explain": "Voir : il vit (et non « voya »)." },
+        { "type": "fill", "q": "Les voleurs ___ s'enfuir.", "hint": "pouvoir, au passé simple", "answer": ["purent"], "explain": "Pouvoir : participe pu, passé simple ils purent." },
+        { "type": "fill", "q": "Je ___ partir sur-le-champ.", "hint": "vouloir, au passé simple", "answer": ["voulus"], "explain": "Vouloir : participe voulu, passé simple je voulus." },
+        { "type": "fill", "q": "Victor Hugo ___ à Besançon.", "hint": "naître, au passé simple", "answer": ["naquit"], "explain": "Naître : il naquit, une forme très irrégulière." },
+        { "type": "fill", "q": "Ils ___ longtemps heureux.", "hint": "vivre, au passé simple", "answer": ["vécurent"], "explain": "Vivre : ils vécurent." },
+        { "type": "fill", "q": "Le chevalier ___ sa promesse.", "hint": "tenir, au passé simple", "answer": ["tint"], "explain": "Tenir est en -ins : il tint." },
+        { "type": "fill", "q": "Nous ___ une lettre au roi.", "hint": "écrire, au passé simple", "answer": ["écrivîmes"], "explain": "Écrire : nous écrivîmes, avec un accent circonflexe." },
+        { "type": "error", "q": "Le loup prena la fuite.", "wrong": 2, "fix": ["prit"], "explain": "Prendre : il prit." },
+        { "type": "error", "q": "Ils voyèrent un château.", "wrong": 1, "fix": ["virent"], "explain": "Voir : ils virent." },
+        { "type": "error", "q": "La sorcière venit à minuit.", "wrong": 2, "fix": ["vint"], "explain": "Venir est en -ins : elle vint." },
+        { "type": "error", "q": "Nous fumes surpris par la nuit.", "wrong": 1, "fix": ["fûmes"], "explain": "Avec nous, accent circonflexe : nous fûmes." }
+      ],
+      "reading": {
+        "title": "La dernière bataille d'Aymeric",
+        "text": "Le chevalier Aymeric avait combattu dans cent tournois sans jamais perdre. Un matin de brume, un inconnu en armure noire se présenta aux portes du château et le défia. Aymeric prit sa lance, monta sur son destrier et sortit à sa rencontre. Le combat dura jusqu'au soir. Les paysans, accourus des villages voisins, retenaient leur souffle à chaque assaut. Les deux adversaires tombèrent de cheval, se relevèrent, croisèrent l'épée cent fois. Enfin, épuisés, ils s'assirent sur la même pierre. L'inconnu ôta son casque : c'était une femme aux cheveux gris. « Je suis ta sœur, dit-elle. Tu partis à la guerre quand j'avais six ans. Je voulais savoir si tu étais toujours le plus fort. » Aymeric resta muet, puis il éclata de rire et serra sa sœur dans ses bras. Ce soir-là, il connut sa première défaite… et la plus belle.",
+        "questions": [
+          { "q": "Qui défie Aymeric ?", "choices": ["Un inconnu en armure noire", "Le roi", "Un dragon", "Son écuyer"], "answer": 0, "explain": "Un inconnu en armure noire se présente aux portes du château." },
+          { "q": "Combien de temps dure le combat ?", "choices": ["Jusqu'au soir", "Quelques minutes", "Trois jours", "Une heure"], "answer": 0, "explain": "« Le combat dura jusqu'au soir. »" },
+          { "q": "Qui est l'inconnu ?", "choices": ["La sœur d'Aymeric", "Un ancien ennemi", "Le fils du roi", "Un fantôme"], "answer": 0, "explain": "« Je suis ta sœur », dit-elle." },
+          { "q": "Pourquoi l'inconnue a-t-elle défié Aymeric ?", "choices": ["Pour savoir s'il était toujours le plus fort", "Pour prendre son château", "Pour venger son père", "Pour gagner de l'argent"], "answer": 0, "explain": "Elle voulait savoir s'il était toujours le plus fort." },
+          { "q": "Pourquoi cette défaite est-elle « la plus belle » ?", "choices": ["Il a retrouvé sa sœur", "Il a gagné beaucoup d'argent", "Le combat était facile", "Il a battu son adversaire"], "answer": 0, "explain": "En perdant, il retrouve sa sœur, partie de sa vie depuis longtemps." },
+          { "q": "« Tu partis à la guerre » : quel est l'infinitif de « partis » ?", "choices": ["partir", "partager", "parer", "paraître"], "answer": 0, "explain": "Partir est en -is au passé simple : tu partis." }
+        ]
+      }
+    },
+    {
+      "id": "5.3",
+      "name": "Le décor et l'action",
+      "title": "Passé simple ou imparfait ? Premier plan et arrière-plan ; je -ai / je -ais",
+      "goal": "Choisir entre l'imparfait (le décor) et le passé simple (l'action) dans un récit.",
+      "lesson": [
+        { "type": "p", "text": "Dans un récit au passé, les deux temps travaillent ensemble : l'**imparfait** peint le décor, le **passé simple** fait avancer l'action." },
+        { "type": "rule", "title": "L'imparfait : l'arrière-plan", "text": "Descriptions, habitudes, actions qui durent sans limite précise : [[Il faisait nuit. La pluie tombait.]] [[Chaque soir, il lisait.]]" },
+        { "type": "rule", "title": "Le passé simple : le premier plan", "text": "Actions principales, ponctuelles, qui se succèdent : [[Soudain, la porte s'ouvrit. Un homme entra.]] Les mots **soudain**, **tout à coup**, **un jour**, **alors** annoncent souvent un passé simple." },
+        { "type": "table", "head": ["Imparfait (le décor)", "Passé simple (l'événement)"], "rows": [["Le soleil brillait.", "Un nuage cacha le soleil."], ["Il dormait profondément.", "Le réveil sonna."], ["Chaque été, nous allions à la mer.", "Cet été-là, nous allâmes en Écosse."]] },
+        { "type": "rule", "title": "je -ai ou je -ais ?", "text": "Avec je, la différence ne s'entend presque plus : [[je mangeai]] (passé simple) / [[je mangeais]] (imparfait). Remplace je par il : [[il mangea]] / [[il mangeait]]." },
+        { "type": "examples", "items": [
+          { "ex": "Il **faisait** nuit quand le train **arriva**.", "note": "le décor, puis l'événement" },
+          { "ex": "Je **dormais** lorsque le téléphone **sonna**.", "note": "une action en cours interrompue" },
+          { "ex": "**Tout à coup**, un loup **surgit** du bois.", "note": "« tout à coup » appelle le passé simple" },
+          { "ex": "Il **ouvrit** la lettre et **pâlit**.", "note": "deux actions qui se suivent" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "Il pleuvait quand soudain le tonnerre ~~grondait~~.", "ok": "Il pleuvait quand soudain le tonnerre **gronda**.", "why": "« Soudain » annonce un événement : passé simple." },
+          { "ko": "Chaque matin, il ~~se leva~~ à six heures.", "ok": "Chaque matin, il **se levait** à six heures.", "why": "Une habitude : imparfait." },
+          { "ko": "Je ~~marchais~~ vers la porte et l'ouvris.", "ok": "Je **marchai** vers la porte et l'ouvris.", "why": "Deux actions qui se suivent : passé simple." },
+          { "ko": "La maison ~~fut~~ grande et les volets étaient bleus.", "ok": "La maison **était** grande et les volets étaient bleus.", "why": "Une description : imparfait." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Demande-toi : est-ce un **décor** (imparfait) ou un **événement** qui fait avancer l'histoire (passé simple) ? Si l'on peut ajouter « tout à coup » devant le verbe, c'est souvent le passé simple." },
+        { "type": "fun", "text": "Le sais-tu ? Les écrivains jouent avec ces deux temps comme un cinéaste avec sa caméra : l'imparfait est un plan large et lent, le passé simple un gros plan sur l'action." }
+      ],
+      "vocab": [
+        { "mot": "crépuscule", "def": "Lumière faible qui suit le coucher du soleil.", "ex": "Au crépuscule, les chauves-souris sortirent.", "alt": [] },
+        { "mot": "aube", "def": "Première lueur du jour, avant le lever du soleil.", "ex": "Ils partirent à l'aube.", "alt": [] },
+        { "mot": "pénombre", "def": "Lumière très faible, presque l'obscurité.", "ex": "Une silhouette avançait dans la pénombre.", "alt": [] },
+        { "mot": "brume", "def": "Brouillard léger, souvent au-dessus de la mer.", "ex": "La brume enveloppait le port.", "alt": [] },
+        { "mot": "silhouette", "def": "Forme sombre d'une personne ou d'un objet qui se détache sur un fond clair.", "ex": "Une silhouette se découpa sur la colline.", "alt": [] },
+        { "mot": "murmure", "def": "Bruit de voix très léger et confus.", "ex": "Un murmure parcourut la foule.", "alt": [] },
+        { "mot": "lueur", "def": "Lumière faible ou passagère.", "ex": "Une lueur brillait à la fenêtre.", "alt": [] },
+        { "mot": "frisson", "def": "Tremblement causé par le froid ou la peur.", "ex": "Un frisson lui parcourut le dos.", "alt": [] },
+        { "mot": "sentier", "def": "Petit chemin étroit à travers la campagne ou la forêt.", "ex": "Le sentier grimpait entre les rochers.", "alt": [] },
+        { "mot": "lisière", "def": "Bord d'une forêt.", "ex": "Une biche apparut à la lisière du bois.", "alt": [] },
+        { "mot": "clairière", "def": "Endroit sans arbres au milieu d'une forêt.", "ex": "Ils dressèrent leur tente dans la clairière.", "alt": [] },
+        { "mot": "masure", "def": "Petite maison pauvre et délabrée.", "ex": "La sorcière vivait dans une masure.", "alt": [] },
+        { "mot": "grincement", "def": "Bruit aigu et désagréable, comme celui d'une porte mal huilée.", "ex": "Un grincement la fit sursauter.", "alt": [] },
+        { "mot": "orée", "def": "Bord, lisière d'un bois (mot littéraire).", "ex": "Le loup attendait à l'orée du bois.", "alt": [] },
+        { "mot": "écho", "def": "Son qui revient après avoir rebondi sur un obstacle.", "ex": "L'écho répéta son nom dans la vallée.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Il faisait nuit quand le train arriva.", "indice": "Une arrivée nocturne", "trap": ["arrivait", "faisa"], "alt": [] },
+        { "phrase": "Le vent soufflait, soudain la porte claqua.", "indice": "Une maison dans la tempête", "trap": ["claquait"], "alt": [] },
+        { "phrase": "Chaque soir, la vieille dame nourrissait les pigeons.", "indice": "Une habitude au parc", "trap": ["nourrit"], "alt": [] },
+        { "phrase": "Je dormais lorsque le téléphone sonna.", "indice": "Un réveil brutal", "trap": ["dormis", "sonnait"], "alt": [] },
+        { "phrase": "Un matin, Léa trouva un chaton devant sa porte.", "indice": "Une découverte inattendue", "trap": ["trouvait"], "alt": [] },
+        { "phrase": "La forêt était sombre et silencieuse.", "indice": "Un décor inquiétant", "trap": ["fut"], "alt": [] },
+        { "phrase": "Tout à coup, un loup surgit du bois.", "indice": "Une apparition brutale", "trap": ["surgissait"], "alt": [] },
+        { "phrase": "Nous marchions depuis une heure quand la pluie commença.", "indice": "Une randonnée mouillée", "trap": ["marchâmes", "commençait"], "alt": [] },
+        { "phrase": "Il ouvrit la lettre et pâlit.", "indice": "Une mauvaise nouvelle", "trap": ["ouvrait", "pâlissait"], "alt": [] },
+        { "phrase": "Autrefois, ce château appartenait à un comte.", "indice": "Un ancien propriétaire", "trap": ["appartint"], "alt": ["Ce château appartenait autrefois à un comte."] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Le ciel ___ gris et une pluie fine tombait.", "choices": ["était", "fut", "serait"], "answer": 0, "explain": "Une description, en parallèle avec « tombait » : imparfait." },
+        { "type": "mcq", "q": "Soudain, un cri ___ le silence.", "choices": ["déchira", "déchirait", "déchirera"], "answer": 0, "explain": "« Soudain » annonce un événement : passé simple." },
+        { "type": "mcq", "q": "Chaque été, nous ___ chez nos cousins.", "choices": ["allions", "allâmes", "irons"], "answer": 0, "explain": "« Chaque été » : une habitude, donc l'imparfait." },
+        { "type": "mcq", "q": "Je lisais quand on ___ à la porte.", "choices": ["frappa", "frappait", "frappera"], "answer": 0, "explain": "Une action en cours (je lisais) est interrompue par un événement : passé simple." },
+        { "type": "mcq", "q": "Le vieil homme ___ toujours la même histoire.", "choices": ["racontait", "raconta", "racontera"], "answer": 0, "explain": "« Toujours » : une habitude, donc l'imparfait." },
+        { "type": "fill", "q": "La neige ___ depuis le matin.", "hint": "tomber : imparfait ou passé simple ?", "answer": ["tombait"], "explain": "Une action qui dure, sans limite : imparfait." },
+        { "type": "fill", "q": "Tout à coup, le chien ___.", "hint": "aboyer : imparfait ou passé simple ?", "answer": ["aboya"], "explain": "« Tout à coup » : passé simple." },
+        { "type": "fill", "q": "Ce jour-là, je ___ enfin la vérité.", "hint": "comprendre : imparfait ou passé simple ?", "answer": ["compris"], "explain": "Un événement précis (ce jour-là) : passé simple, je compris." },
+        { "type": "fill", "q": "Les enfants ___ dans le jardin quand l'orage éclata.", "hint": "jouer : imparfait ou passé simple ?", "answer": ["jouaient"], "explain": "Une action en cours, interrompue par l'orage : imparfait." },
+        { "type": "fill", "q": "Il ___ la porte, entra et s'assit.", "hint": "pousser : imparfait ou passé simple ?", "answer": ["poussa"], "explain": "Trois actions qui se suivent : passé simple." },
+        { "type": "fill", "q": "Elle ___ de longs cheveux noirs.", "hint": "avoir : imparfait ou passé simple ?", "answer": ["avait"], "explain": "Une description : imparfait." },
+        { "type": "fill", "q": "Un jour, le roi ___ son conseiller.", "hint": "convoquer : imparfait ou passé simple ?", "answer": ["convoqua"], "explain": "« Un jour » : un événement, donc le passé simple." },
+        { "type": "error", "q": "Il dormait profondément quand le réveil sonnait.", "wrong": 6, "fix": ["sonna"], "explain": "Le réveil interrompt le sommeil : c'est un événement, au passé simple." },
+        { "type": "error", "q": "Chaque dimanche, il alla au marché.", "wrong": 3, "fix": ["allait"], "explain": "« Chaque dimanche » : une habitude, à l'imparfait." },
+        { "type": "error", "q": "Soudain, le vase tombait et se brisa.", "wrong": 3, "fix": ["tomba"], "explain": "« Soudain », et deux actions qui se suivent : passé simple." },
+        { "type": "error", "q": "La maison était vide et les volets furent clos.", "wrong": 7, "fix": ["étaient"], "explain": "C'est une description : imparfait, comme « était vide »." }
+      ],
+      "reading": {
+        "title": "La nuit du phare",
+        "text": "Le phare se dressait au bout de la jetée, et la mer battait ses rochers depuis des siècles. Ce soir-là, le gardien Yves préparait sa soupe en écoutant la radio. Dehors, le vent hurlait et la pluie fouettait les vitres. Soudain, la lumière du phare s'éteignit. Yves sentit son cœur se serrer : par une nuit pareille, aucun bateau ne pouvait se passer du phare. Il lâcha sa cuillère, saisit sa lampe et grimpa les cent marches en courant. Là-haut, il découvrit la cause de la panne : un goéland, effrayé par la tempête, avait brisé la vitre et s'était réfugié contre la lampe. Yves enveloppa l'oiseau dans sa veste, changea le fusible et relança le mécanisme. Au loin, un chalutier qui cherchait le port vit la lumière revenir. Le lendemain, les pêcheurs offrirent à Yves une caisse de sardines… dont le goéland eut sa part.",
+        "questions": [
+          { "q": "Que faisait Yves au début du récit ?", "choices": ["Il préparait sa soupe", "Il réparait la lampe", "Il dormait", "Il pêchait"], "answer": 0, "explain": "« Le gardien Yves préparait sa soupe en écoutant la radio. »" },
+          { "q": "Quel événement déclenche l'action ?", "choices": ["La lumière du phare s'éteint", "Un bateau fait naufrage", "Le gardien tombe malade", "La radio annonce la tempête"], "answer": 0, "explain": "« Soudain, la lumière du phare s'éteignit. »" },
+          { "q": "Quelle était la cause de la panne ?", "choices": ["Un goéland avait brisé la vitre", "La foudre avait frappé", "Il n'y avait plus d'électricité", "Yves avait oublié d'allumer"], "answer": 0, "explain": "Un goéland effrayé avait brisé la vitre." },
+          { "q": "Pourquoi le retour de la lumière était-il important ?", "choices": ["Un chalutier cherchait le port dans la nuit", "Des touristes voulaient visiter le phare", "Le goéland avait froid", "Yves voulait lire"], "answer": 0, "explain": "Le phare guide les bateaux : un chalutier cherchait le port." },
+          { "q": "Dans « le vent hurlait », pourquoi l'imparfait ?", "choices": ["C'est le décor, l'arrière-plan", "C'est l'action principale", "C'est une action future", "C'est un ordre"], "answer": 0, "explain": "La tempête est le décor de la scène : imparfait." },
+          { "q": "Que montre la fin du texte ?", "choices": ["Les pêcheurs sont reconnaissants envers Yves", "Les pêcheurs se moquent d'Yves", "Yves part en mer", "Le goéland s'envole pour toujours"], "answer": 0, "explain": "Ils lui offrent une caisse de sardines pour le remercier." }
+        ]
+      }
+    },
+    {
+      "id": "5.4",
+      "name": "Avant l'avant",
+      "title": "Le plus-que-parfait et le passé antérieur : l'antériorité dans le récit",
+      "goal": "Exprimer qu'une action passée a eu lieu avant une autre, avec le bon temps composé.",
+      "lesson": [
+        { "type": "p", "text": "Pour raconter une action qui s'est passée **avant** une autre action passée, on utilise un temps composé : le plus-que-parfait ou le passé antérieur." },
+        { "type": "rule", "title": "Le plus-que-parfait", "text": "Auxiliaire avoir ou être à l'**imparfait** + participe passé : [[j'avais fini]], [[elle était partie]]. Il marque une action antérieure à une autre action passée : [[Quand je suis arrivé, le film avait commencé.]]" },
+        { "type": "rule", "title": "Le passé antérieur", "text": "Auxiliaire au **passé simple** + participe passé : [[j'eus fini]], [[elle fut partie]]. Il s'emploie surtout après **quand, lorsque, dès que, aussitôt que, après que**, quand le verbe principal est au passé simple : [[Dès qu'il eut fini, il sortit.]]" },
+        { "type": "table", "head": ["Temps simple", "Temps composé qui marque l'antériorité"], "rows": [["présent : il mange", "passé composé : il a mangé"], ["imparfait : il mangeait", "plus-que-parfait : il avait mangé"], ["passé simple : il mangea", "passé antérieur : il eut mangé"], ["futur : il mangera", "futur antérieur : il aura mangé"]] },
+        { "type": "rule", "title": "Les accords", "text": "Mêmes règles qu'au passé composé : avec être, le participe s'accorde avec le sujet ([[elles étaient parties]], [[elle fut sortie]]) ; avec avoir, pas d'accord avec le sujet." },
+        { "type": "examples", "items": [
+          { "ex": "Elle **était** déjà **partie** quand il appela.", "note": "le départ a eu lieu avant l'appel" },
+          { "ex": "Dès qu'il **eut fini**, il sortit.", "note": "passé antérieur après dès que" },
+          { "ex": "Lorsqu'ils **furent arrivés**, la fête commença.", "note": "être au passé simple + participe accordé" },
+          { "ex": "Il m'a dit qu'il **avait perdu** son portefeuille.", "note": "la perte précède la parole" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "Quand il arriva, nous ~~mangions~~ tout le gâteau.", "ok": "Quand il arriva, nous **avions mangé** tout le gâteau.", "why": "Le gâteau a été mangé avant son arrivée : plus-que-parfait." },
+          { "ko": "Dès qu'il ~~eût~~ fini, il partit.", "ok": "Dès qu'il **eut** fini, il partit.", "why": "Passé antérieur : pas d'accent circonflexe." },
+          { "ko": "Elle ~~avait~~ partie.", "ok": "Elle **était** partie.", "why": "Partir se conjugue avec être." },
+          { "ko": "Il m'a dit qu'il ~~a perdu~~ ses clés la veille.", "ok": "Il m'a dit qu'il **avait perdu** ses clés la veille.", "why": "Dans un récit au passé, l'action antérieure se met au plus-que-parfait." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "**eut** (passé antérieur, sans accent) ou **eût** (subjonctif plus-que-parfait, avec un accent) ? Après quand, lorsque, dès que et **après que**, on emploie l'indicatif : pas d'accent. [[Après qu'il eut terminé, il partit.]]" },
+        { "type": "fun", "text": "Le sais-tu ? Le passé antérieur est le temps le plus rare de l'indicatif : on ne l'entend jamais en conversation. Mais il donne aux récits une élégance que les correcteurs remarquent tout de suite !" }
+      ],
+      "vocab": [
+        { "mot": "veille", "def": "Le jour qui précède celui dont on parle.", "ex": "La veille du départ, il fit ses bagages.", "alt": [] },
+        { "mot": "lendemain", "def": "Le jour qui suit celui dont on parle.", "ex": "Le lendemain, tout était oublié.", "alt": [] },
+        { "mot": "antérieur", "def": "Qui se situe avant, dans le temps ou dans l'espace.", "ex": "Ce tableau est antérieur à la Révolution.", "alt": [] },
+        { "mot": "postérieur", "def": "Qui se situe après, dans le temps.", "ex": "Ce document est postérieur à sa mort.", "alt": [] },
+        { "mot": "préalable", "def": "Qui doit être fait avant autre chose.", "ex": "Une inscription préalable est obligatoire.", "alt": [] },
+        { "mot": "naguère", "def": "Il y a peu de temps (mot littéraire).", "ex": "Ce village, naguère si animé, est désert.", "alt": [] },
+        { "mot": "dorénavant", "def": "À partir de maintenant, à l'avenir.", "ex": "Dorénavant, la porte restera fermée.", "alt": [] },
+        { "mot": "simultanément", "def": "En même temps.", "ex": "Les deux coureurs franchirent la ligne simultanément.", "alt": [] },
+        { "mot": "entre-temps", "def": "Pendant ce temps-là, dans l'intervalle.", "ex": "Entre-temps, la nuit était tombée.", "alt": [] },
+        { "mot": "chronologie", "def": "Ordre dans lequel les événements se sont produits.", "ex": "Respecte la chronologie de ton récit.", "alt": [] },
+        { "mot": "péripétie", "def": "Événement imprévu qui change le cours d'une histoire.", "ex": "Le voyage fut riche en péripéties.", "alt": [] },
+        { "mot": "dénouement", "def": "Manière dont se termine une histoire.", "ex": "Le dénouement de ce roman est surprenant.", "alt": [] },
+        { "mot": "prologue", "def": "Partie qui introduit un récit ou une pièce.", "ex": "Le prologue présente le héros.", "alt": [] },
+        { "mot": "épilogue", "def": "Partie qui conclut un récit et raconte ce qui se passe ensuite.", "ex": "Dans l'épilogue, on retrouve les héros vingt ans plus tard.", "alt": [] },
+        { "mot": "rebondissement", "def": "Événement nouveau qui relance une histoire.", "ex": "Ce feuilleton est plein de rebondissements.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Quand je suis arrivé, le film avait commencé.", "indice": "Un retard au cinéma", "trap": ["avais", "commencer"], "alt": ["Le film avait commencé quand je suis arrivé."] },
+        { "phrase": "Elle était déjà partie quand il appela.", "indice": "Un appel trop tardif", "trap": ["avait", "partit"], "alt": [] },
+        { "phrase": "Dès qu'il eut fini, il sortit.", "indice": "Un travail vite terminé", "trap": ["eût", "fut"], "alt": [] },
+        { "phrase": "Nous avions oublié nos clés.", "indice": "Une porte qui reste fermée", "trap": ["avons", "oublier"], "alt": [] },
+        { "phrase": "Lorsqu'ils furent arrivés, la fête commença.", "indice": "Les invités sont là", "trap": ["fûrent", "avaient"], "alt": [] },
+        { "phrase": "Il m'a dit qu'il avait perdu son portefeuille.", "indice": "Une mauvaise nouvelle rapportée", "trap": ["perdre"], "alt": [] },
+        { "phrase": "Après qu'elle eut chanté, on l'applaudit.", "indice": "La fin d'un concert", "trap": ["eût"], "alt": [] },
+        { "phrase": "Les invités étaient repartis avant minuit.", "indice": "Une soirée finie tôt", "trap": ["avaient"], "alt": [] },
+        { "phrase": "Aussitôt qu'il eut compris, il rougit.", "indice": "Une erreur découverte", "trap": ["eût", "compri"], "alt": [] },
+        { "phrase": "J'avais toujours rêvé de voir la mer.", "indice": "Un vieux rêve", "trap": ["rêver"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Quand nous arrivâmes à la gare, le train ___.", "choices": ["était parti", "partit", "part"], "answer": 0, "explain": "Le départ du train précède l'arrivée : plus-que-parfait." },
+        { "type": "mcq", "q": "Dès qu'elle ___ son repas, elle se coucha.", "choices": ["eut terminé", "eût terminé", "terminera"], "answer": 0, "explain": "Après dès que, avec un verbe principal au passé simple : passé antérieur, sans accent." },
+        { "type": "mcq", "q": "Hier, Léa m'a raconté qu'elle ___ un renard la veille.", "choices": ["avait vu", "a vu", "voit"], "answer": 0, "explain": "La rencontre précède le récit qu'elle en fait : plus-que-parfait." },
+        { "type": "mcq", "q": "Elles ___ sorties quand l'orage éclata.", "choices": ["étaient", "avaient", "sont"], "answer": 0, "explain": "Sortir se conjugue avec être : elles étaient sorties." },
+        { "type": "mcq", "q": "Après qu'il ___ parti, nous éclatâmes de rire.", "choices": ["fut", "fût", "soit"], "answer": 0, "explain": "Après que est suivi de l'indicatif : il fut parti, sans accent." },
+        { "type": "fill", "q": "Quand je suis rentré, mes parents ___ déjà dîné.", "hint": "avoir, au plus-que-parfait", "answer": ["avaient"], "explain": "Auxiliaire avoir à l'imparfait : ils avaient dîné." },
+        { "type": "fill", "q": "Il savait que nous ___ partis.", "hint": "être, au plus-que-parfait", "answer": ["étions"], "explain": "Auxiliaire être à l'imparfait : nous étions partis." },
+        { "type": "fill", "q": "Lorsqu'il ___ fini, il rangea ses outils.", "hint": "avoir, au passé antérieur", "answer": ["eut"], "explain": "Auxiliaire avoir au passé simple : il eut fini." },
+        { "type": "fill", "q": "Elle ___ oublié son parapluie dans le train.", "hint": "avoir, au plus-que-parfait", "answer": ["avait"], "explain": "Auxiliaire avoir à l'imparfait : elle avait oublié." },
+        { "type": "fill", "q": "Dès que les invités furent ___, la fête commença.", "hint": "arriver", "answer": ["arrivés"], "explain": "Avec être, accord avec les invités : arrivés." },
+        { "type": "fill", "q": "Nous avions ___ ce livre deux fois.", "hint": "lire", "answer": ["lu"], "explain": "Participe de lire : lu." },
+        { "type": "fill", "q": "Quand nous ___ mangé, nous partîmes.", "hint": "avoir, au passé antérieur", "answer": ["eûmes"], "explain": "Auxiliaire avoir au passé simple : nous eûmes mangé." },
+        { "type": "error", "q": "Dès qu'il eût fini, il partit.", "wrong": 2, "fix": ["eut"], "explain": "Passé antérieur : il eut, sans accent circonflexe." },
+        { "type": "error", "q": "Quand je suis arrivé, il a déjà fini.", "wrong": 5, "fix": ["avait"], "explain": "Son travail précède mon arrivée : plus-que-parfait, il avait fini." },
+        { "type": "error", "q": "Elle avait arrivée la veille.", "wrong": 1, "fix": ["était"], "explain": "Arriver se conjugue avec être : elle était arrivée." },
+        { "type": "error", "q": "Il me dit qu'il a vu un fantôme la veille.", "wrong": 4, "fix": ["avait"], "explain": "Dans un récit au passé, l'action antérieure se met au plus-que-parfait : il avait vu." }
+      ],
+      "reading": {
+        "title": "Le carnet retrouvé",
+        "text": "En vidant le grenier de sa grand-tante, Lucas découvrit un petit carnet de cuir. Quelqu'un l'avait caché derrière une poutre, des années auparavant. Sur la première page, une écriture fine annonçait : « Journal de Marthe, été mille neuf cent cinquante-deux. » Lucas s'assit sur une malle et commença à lire. Il y avait des dessins, des fleurs séchées et des listes de mots inventés. Marthe racontait qu'elle avait trouvé, au fond du jardin, une boîte enterrée par un inconnu. Elle ne l'avait jamais ouverte, car elle avait promis à sa mère de la rendre à son propriétaire. Le carnet s'arrêtait brusquement, au milieu d'une phrase. Lucas releva la tête. Dès qu'il eut refermé le carnet, il descendit au jardin avec une pelle. Sous le vieux pommier, après qu'il eut creusé une heure, sa pelle heurta quelque chose de dur…",
+        "questions": [
+          { "q": "Où Lucas a-t-il trouvé le carnet ?", "choices": ["Derrière une poutre du grenier", "Dans une malle", "Sous le pommier", "Dans la cave"], "answer": 0, "explain": "Quelqu'un l'avait caché derrière une poutre du grenier." },
+          { "q": "Qui avait écrit le carnet ?", "choices": ["Marthe, sans doute la grand-tante de Lucas", "Lucas", "Un inconnu", "La mère de Lucas"], "answer": 0, "explain": "C'est le « Journal de Marthe », trouvé dans le grenier de la grand-tante." },
+          { "q": "Pourquoi Marthe n'avait-elle jamais ouvert la boîte ?", "choices": ["Elle avait promis de la rendre à son propriétaire", "Elle avait peur", "Elle l'avait perdue", "Elle était fermée à clé"], "answer": 0, "explain": "Elle avait promis à sa mère de la rendre à son propriétaire." },
+          { "q": "Que fait Lucas après avoir lu le carnet ?", "choices": ["Il va creuser sous le pommier", "Il appelle sa grand-tante", "Il range le carnet", "Il cherche le propriétaire"], "answer": 0, "explain": "Il descend au jardin avec une pelle." },
+          { "q": "« Quelqu'un l'avait caché » : pourquoi le plus-que-parfait ?", "choices": ["L'action a eu lieu avant la découverte de Lucas", "L'action se passe en même temps", "C'est une habitude", "C'est une action future"], "answer": 0, "explain": "Le carnet a été caché bien avant que Lucas le trouve." },
+          { "q": "Comment se termine le texte ?", "choices": ["Sur un suspense", "Sur une morale", "Sur un dialogue", "Sur une dispute"], "answer": 0, "explain": "La pelle heurte « quelque chose de dur »… et le texte s'arrête." }
+        ]
+      }
+    },
+    {
+      "id": "5.5",
+      "name": "Dit-il, répondit-elle",
+      "title": "Le dialogue dans le récit : guillemets, tirets, incises, verbes de parole",
+      "goal": "Présenter un dialogue correctement et varier les verbes de parole.",
+      "lesson": [
+        { "type": "p", "text": "Dans un récit, on peut rapporter les paroles des personnages telles qu'ils les ont prononcées : c'est le **discours direct**. Sa présentation obéit à des règles précises." },
+        { "type": "rule", "title": "Guillemets et tirets", "text": "On ouvre les guillemets au début du dialogue et on les ferme à la fin. À chaque changement de personnage, on va à la ligne et on met un **tiret**. [[« Tu viens ? demanda Léa.]] [[— J'arrive ! » répondit Hugo.]]" },
+        { "type": "rule", "title": "L'incise", "text": "La petite proposition qui dit qui parle (**dit-il**, **répondit-elle**) s'appelle une **incise**. Le sujet y est inversé et relié au verbe par un trait d'union : [[dit-il]], [[s'écria-t-elle]]. Entre deux voyelles, on ajoute **-t-** : [[demanda-t-il]], [[répliqua-t-elle]]." },
+        { "type": "rule", "title": "La ponctuation", "text": "Le point d'exclamation ou d'interrogation de la réplique reste à l'intérieur, sans virgule ni majuscule après : [[« Où vas-tu ? » demanda-t-elle.]] Si la réplique finit sans ponctuation forte, on met une virgule : [[« Je pars », dit-il.]]" },
+        { "type": "table", "head": ["Pour…", "Verbes de parole"], "rows": [["une question", "demander, s'enquérir, interroger"], ["une réponse", "répondre, répliquer, rétorquer"], ["crier", "s'écrier, s'exclamer, hurler"], ["parler bas", "murmurer, chuchoter, souffler"], ["un sentiment", "soupirer, ricaner, bougonner, sangloter"]] },
+        { "type": "examples", "items": [
+          { "ex": "« Viens vite », **dit-elle** en souriant.", "note": "virgule après la réplique sans ponctuation forte" },
+          { "ex": "« Où vas-tu ? » **demanda-t-il**.", "note": "-t- entre deux voyelles" },
+          { "ex": "« Je ne sais pas », **répondit** Hugo.", "note": "le sujet nom se place après le verbe, sans trait d'union" },
+          { "ex": "« Attention ! » **s'écria** la maîtresse.", "note": "pas de virgule après le point d'exclamation" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "« Viens », ~~dit il~~.", "ok": "« Viens », **dit-il**.", "why": "Trait d'union entre le verbe et le pronom inversé." },
+          { "ko": "« Où es-tu ? » ~~demanda-il~~.", "ok": "« Où es-tu ? » **demanda-t-il**.", "why": "Entre deux voyelles, on ajoute -t-." },
+          { "ko": "« Attention ! »~~,~~ cria-t-elle.", "ok": "« Attention ! » cria-t-elle.", "why": "Pas de virgule après un point d'exclamation." },
+          { "ko": "« Bonjour », ~~Dit~~ Paul.", "ok": "« Bonjour », **dit** Paul.", "why": "Pas de majuscule à l'incise." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Le **-t-** ne s'ajoute qu'entre deux voyelles : [[demanda-t-il]], mais [[dit-il]], [[répondit-elle]], où le t est déjà là. Et on l'écrit avec deux traits d'union, jamais avec une apostrophe (« t'il »)." },
+        { "type": "fun", "text": "Le sais-tu ? En typographie française, le tiret de dialogue est un tiret long (—), différent du petit trait d'union (-). Les éditeurs y tiennent : c'est le genre de détail qui distingue un texte soigné !" }
+      ],
+      "vocab": [
+        { "mot": "murmurer", "def": "Parler à voix très basse.", "ex": "Il se pencha pour murmurer un secret.", "alt": [] },
+        { "mot": "chuchoter", "def": "Parler bas, en remuant à peine les lèvres, pour ne pas être entendu.", "ex": "Les élèves se mirent à chuchoter.", "alt": [] },
+        { "mot": "s'exclamer", "def": "Dire quelque chose avec force, sous le coup d'une émotion.", "ex": "Elle ne put s'empêcher de s'exclamer de joie.", "alt": [] },
+        { "mot": "répliquer", "def": "Répondre vivement, souvent pour contredire.", "ex": "Il osa répliquer à son professeur.", "alt": [] },
+        { "mot": "rétorquer", "def": "Répondre du tac au tac en retournant l'argument.", "ex": "Elle sut rétorquer avec esprit.", "alt": [] },
+        { "mot": "bredouiller", "def": "Parler de façon confuse et précipitée, sous l'effet de la gêne.", "ex": "Pris en faute, il se mit à bredouiller.", "alt": [] },
+        { "mot": "balbutier", "def": "Parler avec hésitation, en articulant mal.", "ex": "Le timide garçon ne fit que balbutier.", "alt": [] },
+        { "mot": "ricaner", "def": "Rire de façon méchante ou moqueuse.", "ex": "La sorcière se mit à ricaner.", "alt": [] },
+        { "mot": "soupirer", "def": "Pousser un long souffle de tristesse, de lassitude ou de soulagement.", "ex": "Il ne put que soupirer devant la tâche.", "alt": [] },
+        { "mot": "bougonner", "def": "Exprimer sa mauvaise humeur à mi-voix.", "ex": "Grand-père aime bougonner le matin.", "alt": [] },
+        { "mot": "sangloter", "def": "Pleurer avec des hoquets.", "ex": "L'enfant perdu se mit à sangloter.", "alt": [] },
+        { "mot": "s'enquérir", "def": "Demander des nouvelles ou des renseignements (langue soutenue).", "ex": "Il vint s'enquérir de ta santé.", "alt": [] },
+        { "mot": "acquiescer", "def": "Dire oui, donner son accord, souvent d'un signe de tête.", "ex": "Le directeur se contenta d'acquiescer.", "alt": [] },
+        { "mot": "maugréer", "def": "Protester entre ses dents, sans éclat.", "ex": "Il partit en continuant à maugréer.", "alt": [] },
+        { "mot": "s'écrier", "def": "Dire en criant, sous l'effet de la surprise ou de l'émotion.", "ex": "Elle se leva pour s'écrier : « Victoire ! »", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Viens vite, dit-elle en souriant.", "indice": "Un appel joyeux", "trap": ["dite"], "alt": [] },
+        { "phrase": "Où vas-tu si tard ? demanda-t-il.", "indice": "Une question au départ", "trap": ["demanda-il"], "alt": [] },
+        { "phrase": "Je ne sais pas, répondit Hugo.", "indice": "Une réponse hésitante", "trap": ["répondu"], "alt": [] },
+        { "phrase": "Attention au virage ! s'écria la maîtresse.", "indice": "Un danger signalé", "trap": ["écria"], "alt": [] },
+        { "phrase": "Tu as sans doute raison, soupira-t-elle.", "indice": "Un accord sans enthousiasme", "trap": ["soupira-elle"], "alt": [] },
+        { "phrase": "Qui est là ? murmura l'enfant.", "indice": "Une voix dans le noir", "trap": ["murmurra"], "alt": [] },
+        { "phrase": "C'est injuste, bougonna mon frère.", "indice": "Une protestation grognonne", "trap": ["bougona"], "alt": [] },
+        { "phrase": "Bonne nuit, mon trésor, chuchota maman.", "indice": "Un au revoir avant de dormir", "trap": ["chuchotta"], "alt": [] },
+        { "phrase": "Jamais de la vie ! rétorqua le roi.", "indice": "Un refus royal", "trap": ["rétorqua-t"], "alt": [] },
+        { "phrase": "As-tu fini ? s'enquit le professeur.", "indice": "Une question du maître", "trap": ["s'enquérit"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "« Où est mon chapeau ? » ___ le vieil homme.", "choices": ["demanda", "demanda-t-il", "il demanda"], "answer": 0, "explain": "Le sujet est un nom (le vieil homme) : il se place simplement après le verbe, sans trait d'union." },
+        { "type": "mcq", "q": "« Je pars », ___.", "choices": ["dit-il", "dit il", "il dit"], "answer": 0, "explain": "Dans l'incise, le pronom est inversé et relié au verbe par un trait d'union." },
+        { "type": "mcq", "q": "« Tu viens ? » ___.", "choices": ["demanda-t-elle", "demanda-elle", "demanda t'elle"], "answer": 0, "explain": "Entre deux voyelles, on ajoute -t-, avec deux traits d'union." },
+        { "type": "mcq", "q": "Quelle phrase est correctement ponctuée ?", "choices": ["« Silence ! » cria le maître.", "« Silence ! », cria le maître.", "« Silence ! » Cria le maître."], "answer": 0, "explain": "Pas de virgule après le point d'exclamation, et pas de majuscule à l'incise." },
+        { "type": "mcq", "q": "Quel verbe introduit une réponse sèche, qui retourne l'argument ?", "choices": ["rétorquer", "chuchoter", "soupirer"], "answer": 0, "explain": "Rétorquer, c'est répondre du tac au tac." },
+        { "type": "fill", "q": "« Bonjour ! » ___ le facteur.", "hint": "lancer, au passé simple", "answer": ["lança"], "explain": "Lancer : il lança, avec une cédille devant a." },
+        { "type": "fill", "q": "« C'est l'heure », ___ maman.", "hint": "annoncer, au passé simple", "answer": ["annonça"], "explain": "Annoncer : elle annonça, avec une cédille devant a." },
+        { "type": "fill", "q": "« Je suis épuisé », ___ Malik en bâillant.", "hint": "soupirer, au passé simple", "answer": ["soupira"], "explain": "Soupirer : il soupira." },
+        { "type": "fill", "q": "« Ne fais pas de bruit », ___ ma sœur à voix basse.", "hint": "chuchoter, au passé simple", "answer": ["chuchota"], "explain": "Chuchoter : elle chuchota." },
+        { "type": "fill", "q": "« Qui a mangé mon gâteau ? » ___ le géant.", "hint": "rugir, au passé simple", "answer": ["rugit"], "explain": "Rugir est du 2e groupe : il rugit." },
+        { "type": "fill", "q": "« Bien sûr », ___ le directeur d'un signe de tête.", "hint": "acquiescer, au passé simple", "answer": ["acquiesça"], "explain": "Acquiescer : il acquiesça, avec une cédille devant a." },
+        { "type": "fill", "q": "« C'est trop injuste ! » ___ l'enfant.", "hint": "sangloter, au passé simple", "answer": ["sanglota"], "explain": "Sangloter : il sanglota." },
+        { "type": "error", "q": "Je reviens, réponda-t-il.", "wrong": 2, "fix": ["répondit-il"], "explain": "Répondre est en -is au passé simple : il répondit. Et pas de -t- : le t est déjà là." },
+        { "type": "error", "q": "Où vas-tu ? demanda-il.", "wrong": 2, "fix": ["demanda-t-il"], "explain": "Entre deux voyelles, on ajoute -t- : demanda-t-il." },
+        { "type": "error", "q": "Assieds-toi, dit-t-elle.", "wrong": 1, "fix": ["dit-elle"], "explain": "Le verbe se termine déjà par un t : pas de -t- ajouté." },
+        { "type": "error", "q": "Quelle chance ! s'écria-t'elle.", "wrong": 2, "fix": ["s'écria-t-elle"], "explain": "Le -t- s'écrit avec deux traits d'union, jamais avec une apostrophe." }
+      ],
+      "reading": {
+        "title": "Le marchand de secrets",
+        "text": "Au marché de Valfleuri, un vieux marchand vendait des secrets. « Combien coûte celui-ci ? demanda Chloé en montrant une petite boîte bleue. — Un sourire, répondit le marchand. Mais seulement s'il est sincère. — Et celui-là, le rouge ? — Celui-là coûte une promesse, murmura-t-il. Et tu devras la tenir. » Chloé hésita longtemps. Elle sourit enfin, de toutes ses dents, et le marchand lui tendit la boîte bleue. Elle l'ouvrit aussitôt : il n'y avait qu'un minuscule papier plié. « C'est tout ? s'étonna-t-elle. — Lis donc », ricana le vieil homme. Sur le papier, on avait écrit : « Le meilleur secret est celui qu'on partage. » Chloé leva les yeux. Le marchand avait disparu. Elle chercha partout, interrogea les autres marchands, mais personne ne se souvenait de lui. À sa place, il ne restait qu'une petite boîte rouge, et un billet : « Promets-moi de revenir. »",
+        "questions": [
+          { "q": "Que vend le vieux marchand ?", "choices": ["Des secrets", "Des boîtes vides", "Des promesses", "Des bijoux"], "answer": 0, "explain": "« Un vieux marchand vendait des secrets. »" },
+          { "q": "Quel est le prix de la boîte bleue ?", "choices": ["Un sourire sincère", "Une promesse", "Une pièce d'or", "Un secret"], "answer": 0, "explain": "« Un sourire. Mais seulement s'il est sincère. »" },
+          { "q": "Que contient la boîte bleue ?", "choices": ["Un petit papier plié", "Un bijou", "Rien du tout", "Une clé"], "answer": 0, "explain": "Il n'y avait qu'un minuscule papier plié." },
+          { "q": "Que veut dire « ricana » ?", "choices": ["Rit de façon moqueuse", "Pleura", "Chuchota", "Cria de colère"], "answer": 0, "explain": "Ricaner, c'est rire de façon moqueuse." },
+          { "q": "Quel est le message du papier ?", "choices": ["Un secret partagé vaut mieux qu'un secret gardé", "Il ne faut jamais faire de promesses", "Les marchands sont malhonnêtes", "Il faut toujours sourire"], "answer": 0, "explain": "« Le meilleur secret est celui qu'on partage. »" },
+          { "q": "Dans « murmura-t-il », pourquoi ajoute-t-on -t- ?", "choices": ["Pour éviter la rencontre de deux voyelles", "Parce que le verbe est au passé simple", "Parce que c'est une question", "Pour marquer le pluriel"], "answer": 0, "explain": "Murmura se termine par une voyelle, il commence par une voyelle : on intercale -t-." }
+        ]
+      }
+    }
+  ]
+}

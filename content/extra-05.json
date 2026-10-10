@@ -1,0 +1,120 @@
+{
+  "level": 5,
+  "units": [
+    {
+      "unit": "5.1",
+      "dictee": {
+        "titre": "La fée du lac",
+        "texte": "Un matin d'automne, la jeune bergère quitta la ferme et marcha jusqu'au lac. Elle s'installa sur une pierre et commença à chanter. Aussitôt, l'eau frémit, puis une fée surgit des vagues. Les moutons reculèrent en bêlant. La bergère rougit, s'avança et tendit la main. Elles restèrent là jusqu'au soir, et personne au village ne connut jamais leur secret.",
+        "points": [
+          "**quitta**, **marcha**, **s'installa** : 1er groupe au passé simple, -a sans t avec il ou elle.",
+          "**commença**, **s'avança** : une cédille devant a.",
+          "**frémit**, **surgit**, **rougit** : 2e groupe, -it.",
+          "**reculèrent**, **restèrent** : -èrent avec un sujet pluriel."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Écris le début d'un conte en six phrases au passé simple : un personnage, un lieu, un événement inattendu. Utilise au moins cinq verbes du 1er ou du 2e groupe.",
+        "model": "Il était une fois un vieux pêcheur qui vivait seul au bord de la mer. Un soir, il lança son filet et attendit longtemps. Soudain, le filet trembla. Le pêcheur tira de toutes ses forces et remonta un coffre couvert d'algues. Il hésita, puis souleva le couvercle. Une lumière dorée envahit la plage.",
+        "checklist": [
+          "Mes actions principales sont au passé simple.",
+          "Je n'ai pas mis de t aux verbes du 1er groupe avec il (il lança, il tira).",
+          "J'ai écrit -èrent avec ils et un accent circonflexe avec nous et vous."
+        ]
+      }
+    },
+    {
+      "unit": "5.2",
+      "dictee": {
+        "titre": "Le retour du chevalier",
+        "texte": "Au printemps, le chevalier revint enfin au château. Il descendit de cheval, prit son casque sous le bras et entra dans la grande salle. Les serviteurs le reconnurent à peine. Sa fille courut vers lui ; il la souleva dans ses bras et rit aux éclats. Le soir, ils firent un grand festin. Le chevalier but un peu trop de cidre et dut aller se coucher avant le dessert.",
+        "points": [
+          "**revint** : venir et ses composés sont en -ins.",
+          "**descendit**, **prit**, **rit**, **firent** : passé simple en -is.",
+          "**reconnurent**, **courut**, **but**, **dut** : passé simple en -us.",
+          "**dut** : pas d'accent au passé simple (seul le participe dû en prend un)."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Raconte à voix haute, au passé simple, la fin d'un conte que tu connais bien, en six phrases. Puis écris trois phrases qui contiennent un verbe du 3e groupe.",
+        "model": "Le loup courut jusqu'à la maison de la grand-mère. Il frappa à la porte et prit une petite voix. La grand-mère ouvrit sans méfiance. Mais le chasseur, qui passait par là, vit la scène et entra aussitôt. Le loup s'enfuit dans la forêt. On ne le revit jamais.",
+        "checklist": [
+          "J'ai utilisé au moins trois verbes du 3e groupe (prit, vit, vint, fit…).",
+          "J'ai vérifié les terminaisons : -it, -ut ou -int avec il.",
+          "Pas de « prena » ni de « voyèrent » !"
+        ]
+      }
+    },
+    {
+      "unit": "5.3",
+      "dictee": {
+        "titre": "L'orage",
+        "texte": "Il faisait chaud ce jour-là. Les cigales chantaient dans les pins et l'air sentait la résine. Nous marchions lentement sur le sentier quand un grondement sourd retentit derrière la colline. Le ciel devint noir en quelques minutes. Soudain, un éclair déchira les nuages et la pluie se mit à tomber. Nous courûmes jusqu'à une vieille grange où nous attendîmes, trempés et ravis, la fin de l'orage.",
+        "points": [
+          "**faisait**, **chantaient**, **sentait**, **marchions** : le décor, à l'imparfait.",
+          "**retentit**, **devint**, **déchira**, **se mit** : les événements, au passé simple.",
+          "**Soudain** annonce un passé simple.",
+          "**courûmes**, **attendîmes** : accent circonflexe avec nous."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Raconte en six à huit phrases un moment où quelque chose d'inattendu s'est produit. Décris d'abord le décor à l'imparfait, puis raconte les événements au passé simple.",
+        "model": "C'était un dimanche paisible. Le soleil brillait et mon père lisait sur la terrasse. Le chat dormait sur le muret. Tout à coup, un ballon passa par-dessus la haie et atterrit dans la soupe. Mon père bondit de sa chaise. Le chat s'enfuit en crachant. Une petite voix demanda alors : « Pardon, est-ce qu'on peut récupérer notre ballon ? »",
+        "checklist": [
+          "Le décor et les descriptions sont à l'imparfait.",
+          "Les actions qui font avancer l'histoire sont au passé simple.",
+          "J'ai utilisé un mot comme soudain ou tout à coup."
+        ]
+      }
+    },
+    {
+      "unit": "5.4",
+      "dictee": {
+        "titre": "La lettre du grand-père",
+        "texte": "Quand Clara rentra de voyage, elle trouva une enveloppe glissée sous sa porte. Un voisin était passé pendant son absence. Dès qu'elle eut ouvert l'enveloppe, elle reconnut l'écriture de son grand-père, qui était mort l'hiver précédent. Il avait écrit cette lettre des années plus tôt et avait demandé à un ami de la lui remettre. Lorsqu'elle eut fini sa lecture, Clara resta longtemps immobile, le cœur battant.",
+        "points": [
+          "**était passé**, **était mort** : plus-que-parfait avec l'auxiliaire être.",
+          "**avait écrit**, **avait demandé** : plus-que-parfait avec avoir, pour une action antérieure.",
+          "**eut ouvert**, **eut fini** : passé antérieur après dès que et lorsque. Pas d'accent sur eut.",
+          "**la lui remettre** : la (la lettre) avant lui (à Clara)."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Raconte à voix haute une découverte (un objet, une lettre, un secret) en expliquant ce qui s'était passé avant. Utilise au moins deux verbes au plus-que-parfait. Puis écris trois de tes phrases.",
+        "model": "Hier, j'ai retrouvé une vieille photo dans un livre. Ma mère l'avait cachée là quand elle était petite. Elle avait oublié qu'elle existait. Sur la photo, on voyait ma grand-mère qui avait gagné un concours de danse.",
+        "checklist": [
+          "J'ai utilisé au moins deux verbes au plus-que-parfait.",
+          "J'ai choisi le bon auxiliaire (avoir ou être à l'imparfait).",
+          "Les actions au plus-que-parfait se sont passées avant les autres."
+        ]
+      }
+    },
+    {
+      "unit": "5.5",
+      "dictee": {
+        "titre": "Le chat du mardi",
+        "texte": "« Bonjour, dit le chat en sautant sur la table. — Tu parles ? s'écria Léo, stupéfait. — Seulement le mardi, répondit le chat. Et seulement aux enfants polis. — Mais nous sommes jeudi ! remarqua Léo. — Ah ? soupira l'animal. Alors je me suis trompé de jour. » Léo se frotta les yeux. Pendant ce temps, le chat se roula en boule sur le journal, comme si de rien n'était.",
+        "points": [
+          "Les guillemets s'ouvrent au début du dialogue et se ferment à la fin ; un **tiret** à chaque changement de personnage.",
+          "**dit le chat**, **répondit le chat** : avec un nom, le sujet suit le verbe sans trait d'union.",
+          "**s'écria Léo**, **soupira l'animal** : pas de virgule après un point d'exclamation ou d'interrogation.",
+          "**remarqua Léo** : pas de majuscule à l'incise."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Écris un court dialogue de cinq répliques entre deux personnages (un enfant et un animal, deux amis, un client et un vendeur…). Utilise au moins quatre verbes de parole différents.",
+        "model": "« Tu as vu l'heure ? demanda Inès. — Je sais, je sais, bougonna son frère. — Le bus part dans deux minutes ! s'exclama-t-elle. — Pars sans moi, soupira-t-il. — Hors de question », rétorqua Inès en lui lançant son manteau.",
+        "checklist": [
+          "J'ai ouvert et fermé les guillemets, et mis un tiret à chaque nouvelle réplique.",
+          "J'ai utilisé au moins quatre verbes de parole différents.",
+          "J'ai écrit -t- entre deux voyelles (s'exclama-t-elle)."
+        ]
+      }
+    }
+  ]
+}

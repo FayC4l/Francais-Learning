@@ -374,7 +374,7 @@
         { "type": "error", "q": "Je mange pas de soupe.", "wrong": 1, "fix": ["ne mange"], "explain": "À l'écrit, il faut les deux parties de la négation : je ne mange pas." },
         { "type": "error", "q": "Mon frère s'appelle nathan.", "wrong": 3, "fix": ["Nathan"], "case": true, "explain": "Un prénom prend une majuscule." },
         { "type": "error", "q": "Ou est mon cartable ?", "wrong": 0, "fix": ["Où"], "explain": "Pour demander un lieu : où, avec un accent." },
-        { "type": "error", "q": "Tu n'a pas compris la question.", "wrong": 2, "fix": ["as"], "explain": "Avec tu, le verbe avoir s'écrit as : tu n'as pas compris." }
+        { "type": "error", "q": "Tu n'a pas compris la question.", "wrong": 1, "fix": ["n'as"], "explain": "Avec tu, le verbe avoir s'écrit as : tu n'as pas compris." }
       ]
     }
   ]

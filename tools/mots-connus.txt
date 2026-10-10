@@ -128,3 +128,9 @@ suffixes
 préfixe
 préfixes
 tandis
+aymeric
+yves
+marthe
+antériorité
+improviste
+catimini

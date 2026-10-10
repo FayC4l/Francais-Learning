@@ -121,7 +121,7 @@ export function stopSpeaking() {
 
 // ---------- Dictation ----------
 
-const SAY_PUNCT = { ",": "virgule", ".": "point", ";": "point-virgule", ":": "deux points", "?": "point d'interrogation", "!": "point d'exclamation", "…": "points de suspension", "«": "ouvrez les guillemets", "»": "fermez les guillemets", "(": "ouvrez la parenthèse", ")": "fermez la parenthèse" };
+const SAY_PUNCT = { ",": "virgule", ".": "point", ";": "point-virgule", ":": "deux points", "?": "point d'interrogation", "!": "point d'exclamation", "…": "points de suspension", "«": "ouvrez les guillemets", "»": "fermez les guillemets", "(": "ouvrez la parenthèse", ")": "fermez la parenthèse", "—": "à la ligne, tiret" };
 
 /**
  * A text cut into dictation groups (a few words each, up to a punctuation mark), each with the punctuation said
@@ -136,7 +136,7 @@ export function dictationGroups(text, maxWords = 6) {
     const raw = cur.join(" ");
     const said = raw
       .replace(/\.\.\./g, "…")
-      .replace(/([,.;:?!…«»()])/g, (m) => ` ${SAY_PUNCT[m]} `)
+      .replace(/([,.;:?!…«»()—])/g, (m) => ` ${SAY_PUNCT[m]} `)
       .replace(/\s+/g, " ")
       .trim();
     groups.push({ text: raw, said });
