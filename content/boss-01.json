@@ -1,0 +1,86 @@
+{
+  "level": 1,
+  "taunts": {
+    "phase2": [
+      "Pas mal… Mais j'ai caché des doubles s partout. Bonne chance pour les retrouver !",
+      "Tu crois qu'une cédille va te sauver ? Elle est minuscule !",
+      "Fini de cocher des cases : maintenant, tu vas devoir écrire. Sans accents, si possible."
+    ],
+    "phase3": [
+      "Dernière manche ! Mes fautes deviennent invisibles…",
+      "Majuscules, points, négations : je vais tout effacer !",
+      "Même ton correcteur automatique a peur de moi."
+    ],
+    "lose": [
+      "Ha ! Tu vois bien que les accents ne servent à rien… Reviens quand tu les auras apprivoisés.",
+      "Encore une forêt devenue « foret ». Révise, et reviens me voir !",
+      "Je garde mes fautes pour moi. Pour l'instant…"
+    ]
+  },
+  "questions": [
+    { "unit": "1.1", "type": "mcq", "q": "Quel mot est bien écrit ?", "choices": ["un reçu", "un recu", "un ressu"], "answer": 0, "explain": "Devant u, le c fait le son [k] : il faut une cédille pour entendre [s]. On écrit un reçu." },
+    { "unit": "1.1", "type": "mcq", "q": "J'ai bu une ___ de chocolat chaud.", "choices": ["tasse", "tase", "tace"], "answer": 0, "explain": "Entre deux voyelles, un seul s fait [z] : on double le s pour entendre [s]. Une tasse." },
+    { "unit": "1.1", "type": "mcq", "q": "Nous ___ dans la piscine.", "choices": ["plongons", "plongeons", "plonjons"], "answer": 1, "explain": "Pour garder le son [ʒ] devant o, on ajoute un e après le g : nous plongeons." },
+    { "unit": "1.1", "type": "mcq", "q": "Le ___ éteint l'incendie.", "choices": ["ponpier", "pompier", "pompié"], "answer": 1, "explain": "Devant p, on écrit m : pompier, comme pompe." },
+    { "unit": "1.1", "type": "fill", "q": "Nous ___ le gâteau en parts égales.", "hint": "partager, avec nous", "answer": ["partageons"], "explain": "Devant o, on ajoute un e après le g pour garder le son [ʒ] : nous partageons." },
+    { "unit": "1.1", "type": "fill", "q": "Nous ___ la classe à huit heures.", "hint": "commencer, avec nous", "answer": ["commençons"], "explain": "Devant o, il faut une cédille pour garder le son [s] : nous commençons." },
+    { "unit": "1.1", "type": "fill", "q": "Pour Noël, toute la famille fait la ___.", "hint": "une grande célébration, avec un accent", "answer": ["fête"], "explain": "Fête prend un accent circonflexe, trace d'un ancien s que l'on retrouve dans festin et festival." },
+    { "unit": "1.1", "type": "fill", "q": "Je pose ma tête sur un ___ moelleux.", "hint": "petit oreiller du canapé", "answer": ["coussin"], "explain": "Entre deux voyelles, on double le s pour entendre [s] : un coussin. Avec un seul s, c'est un cousin, un membre de la famille !" },
+    { "unit": "1.1", "type": "fill", "q": "Nous visitons le musée avec un ___.", "hint": "la personne qui fait visiter", "answer": ["guide"], "explain": "Devant i, on ajoute un u pour garder le son [g] : un guide. Sans u, on lirait « jide »." },
+    { "unit": "1.1", "type": "error", "q": "Ma voisine parle francais et anglais.", "wrong": 3, "fix": ["français"], "explain": "Devant a, le c fait [k] : il faut une cédille pour entendre [s]. On écrit français." },
+    { "unit": "1.1", "type": "error", "q": "Le chanpion lève sa coupe.", "wrong": 1, "fix": ["champion"], "explain": "Devant p, on écrit m : champion." },
+    { "unit": "1.1", "type": "error", "q": "Mon pere répare la porte du garage.", "wrong": 1, "fix": ["père"], "explain": "Le e de père fait un son ouvert : il prend un accent grave." },
+
+    { "unit": "1.2", "type": "mcq", "q": "___ hôpital est tout près d'ici.", "choices": ["L'", "La", "Le"], "answer": 0, "explain": "Devant un h muet, le ou la perdent leur voyelle : l'hôpital." },
+    { "unit": "1.2", "type": "mcq", "q": "Dans le pré, il y a trois ___.", "choices": ["cheval", "chevals", "chevaux"], "answer": 2, "explain": "Les noms en -al font en général leur pluriel en -aux : un cheval, des chevaux." },
+    { "unit": "1.2", "type": "mcq", "q": "Le ciel est zébré par ___ éclair.", "choices": ["un", "une"], "answer": 0, "explain": "Éclair est un nom masculin : un éclair, un éclair brillant." },
+    { "unit": "1.2", "type": "mcq", "q": "Les ___ de ma grand-mère sont bleus.", "choices": ["yeux", "œils", "oeils"], "answer": 0, "explain": "Un œil, des yeux : un pluriel tout à fait irrégulier." },
+    { "unit": "1.2", "type": "fill", "q": "Un bateau, des ___.", "hint": "au pluriel", "answer": ["bateaux"], "explain": "Les noms en -eau prennent un x au pluriel : des bateaux." },
+    { "unit": "1.2", "type": "fill", "q": "Un prix, des ___.", "hint": "au pluriel", "answer": ["prix"], "explain": "Les noms terminés par s, x ou z ne changent pas au pluriel : des prix." },
+    { "unit": "1.2", "type": "fill", "q": "___ amie Chloé vient dîner ce soir.", "hint": "mon ou ma ?", "answer": ["Mon"], "explain": "Devant un nom féminin qui commence par une voyelle, on dit mon et non ma : mon amie." },
+    { "unit": "1.2", "type": "fill", "q": "Un genou, des ___.", "hint": "au pluriel", "answer": ["genoux"], "explain": "Sept noms en -ou prennent un x au pluriel : bijou, caillou, chou, genou, hibou, joujou, pou." },
+    { "unit": "1.2", "type": "fill", "q": "Un journal, des ___.", "hint": "au pluriel", "answer": ["journaux"], "explain": "Les noms en -al font leur pluriel en -aux : des journaux." },
+    { "unit": "1.2", "type": "error", "q": "Les bateau glissent sur le lac.", "wrong": 1, "fix": ["bateaux"], "explain": "Après les, le nom est au pluriel, et les noms en -eau prennent un x : les bateaux." },
+    { "unit": "1.2", "type": "error", "q": "Mon tante habite à Lyon.", "wrong": 0, "fix": ["Ma"], "explain": "Tante est féminin et commence par une consonne : ma tante." },
+    { "unit": "1.2", "type": "error", "q": "Il a trois cailloux et deux bijous.", "wrong": 6, "fix": ["bijoux"], "explain": "Bijou fait partie des sept noms en -ou qui prennent un x : des bijoux." },
+
+    { "unit": "1.3", "type": "mcq", "q": "Mon chien et mon chat ___ ensemble.", "choices": ["joue", "jouent", "jouons"], "answer": 1, "explain": "Deux sujets, mon chien et mon chat, c'est comme ils : ils jouent." },
+    { "unit": "1.3", "type": "mcq", "q": "Tu ___ un frère ?", "choices": ["as", "a", "ai"], "answer": 0, "explain": "Avec tu, le verbe avoir s'écrit as : tu as." },
+    { "unit": "1.3", "type": "mcq", "q": "Je ___ content de te voir.", "choices": ["suis", "sui", "es"], "answer": 0, "explain": "Être au présent : je suis, avec un s final." },
+    { "unit": "1.3", "type": "mcq", "q": "Vous ___ très souvent.", "choices": ["chantez", "chanter", "chanté"], "answer": 0, "explain": "Avec vous, le verbe conjugué se termine par -ez : vous chantez." },
+    { "unit": "1.3", "type": "fill", "q": "Elles ___ leur chambre.", "hint": "ranger, au présent", "answer": ["rangent"], "explain": "Avec elles, la terminaison est -ent, qui ne se prononce pas : elles rangent." },
+    { "unit": "1.3", "type": "fill", "q": "Nous ___ en vacances.", "hint": "être, au présent", "answer": ["sommes"], "explain": "Être au présent : nous sommes." },
+    { "unit": "1.3", "type": "fill", "q": "Tu ___ ton goûter.", "hint": "manger, au présent", "answer": ["manges"], "explain": "Avec tu, le verbe prend un s : tu manges." },
+    { "unit": "1.3", "type": "fill", "q": "Les enfants ___ peur du noir.", "hint": "avoir, au présent", "answer": ["ont"], "explain": "Avoir au présent : ils ont, donc les enfants ont." },
+    { "unit": "1.3", "type": "fill", "q": "Mon frère ___ la vaisselle.", "hint": "laver, au présent", "answer": ["lave"], "explain": "Mon frère, c'est il : il lave, avec un e final." },
+    { "unit": "1.3", "type": "error", "q": "Les fleurs pousse vite au printemps.", "wrong": 2, "fix": ["poussent"], "explain": "Le sujet est les fleurs, c'est-à-dire elles : elles poussent." },
+    { "unit": "1.3", "type": "error", "q": "Vous êtez en avance.", "wrong": 1, "fix": ["êtes"], "explain": "Être est irrégulier : vous êtes, jamais « êtez »." },
+    { "unit": "1.3", "type": "error", "q": "Tu regarde les nuages.", "wrong": 1, "fix": ["regardes"], "explain": "Avec tu, le verbe prend un s : tu regardes." },
+
+    { "unit": "1.4", "type": "mcq", "q": "Mon père ___ une moto.", "choices": ["a", "à"], "answer": 0, "explain": "On peut dire « mon père avait une moto » : c'est le verbe avoir, sans accent." },
+    { "unit": "1.4", "type": "mcq", "q": "On va chez mamie ___ vélo.", "choices": ["a", "à"], "answer": 1, "explain": "On ne peut pas dire « avait vélo » : c'est la préposition à." },
+    { "unit": "1.4", "type": "mcq", "q": "Ils ___ peur de l'orage.", "choices": ["on", "ont"], "answer": 1, "explain": "On peut dire « ils avaient peur » : c'est le verbe avoir, ont." },
+    { "unit": "1.4", "type": "mcq", "q": "___ entend la mer d'ici.", "choices": ["On", "Ont"], "answer": 0, "explain": "On peut dire « il entend la mer » : c'est le pronom on." },
+    { "unit": "1.4", "type": "fill", "q": "Les fraises ___ mûres.", "hint": "son ou sont ?", "answer": ["sont"], "explain": "On peut dire « les fraises étaient mûres » : c'est le verbe être, sont." },
+    { "unit": "1.4", "type": "fill", "q": "Lina range ___ cartable.", "hint": "son ou sont ?", "answer": ["son"], "explain": "On peut dire « mon cartable » : c'est le déterminant son." },
+    { "unit": "1.4", "type": "fill", "q": "Mon chat ___ mon chien dorment ensemble.", "hint": "et ou est ?", "answer": ["et"], "explain": "On peut dire « et puis » : c'est le mot et, qui relie deux mots." },
+    { "unit": "1.4", "type": "fill", "q": "Ma tante ___ partie hier.", "hint": "et ou est ?", "answer": ["est"], "explain": "On peut dire « ma tante était partie » : c'est le verbe être, est." },
+    { "unit": "1.4", "type": "fill", "q": "Il porte un pull ___ rayures.", "hint": "a ou à ?", "answer": ["à"], "explain": "On ne peut pas dire « un pull avait rayures » : c'est la préposition à." },
+    { "unit": "1.4", "type": "error", "q": "Mes cousins son en vacances.", "wrong": 2, "fix": ["sont"], "explain": "On peut dire « mes cousins étaient en vacances » : c'est le verbe être, sont." },
+    { "unit": "1.4", "type": "error", "q": "La soupe et chaude.", "wrong": 2, "fix": ["est"], "explain": "On peut dire « la soupe était chaude » : c'est le verbe être, est." },
+    { "unit": "1.4", "type": "error", "q": "Ont mange à midi.", "wrong": 0, "fix": ["On"], "explain": "On peut dire « il mange » : c'est le pronom on, sans t." },
+
+    { "unit": "1.5", "type": "mcq", "q": "Quelle phrase est une question ?", "choices": ["Tu viens ce soir ?", "Viens ce soir.", "Comme tu viens tard !"], "answer": 0, "explain": "Une phrase interrogative pose une question et se termine par un point d'interrogation." },
+    { "unit": "1.5", "type": "mcq", "q": "Quelle phrase est à la forme négative ?", "choices": ["Je ne sais pas.", "Je sais tout.", "Sais-tu nager ?"], "answer": 0, "explain": "La forme négative encadre le verbe avec ne… pas : je ne sais pas." },
+    { "unit": "1.5", "type": "mcq", "q": "Quelle phrase est bien écrite ?", "choices": ["Nous partons à Paris lundi.", "nous partons à paris lundi.", "Nous partons à paris Lundi."], "answer": 0, "explain": "Majuscule au début de la phrase et aux noms de villes, mais pas aux jours de la semaine." },
+    { "unit": "1.5", "type": "mcq", "q": "La phrase « Quelle chance ! » est…", "choices": ["exclamative", "interrogative", "impérative"], "answer": 0, "explain": "Elle exprime une émotion et se termine par un point d'exclamation : c'est une phrase exclamative." },
+    { "unit": "1.5", "type": "fill", "q": "Je ___ entends rien.", "hint": "ne ou n' ?", "answer": ["n'"], "explain": "Devant une voyelle, ne devient n' : je n'entends rien." },
+    { "unit": "1.5", "type": "fill", "q": "Nous ___ allons pas à la piscine.", "hint": "ne ou n' ?", "answer": ["n'"], "explain": "Devant une voyelle, ne devient n' : nous n'allons pas." },
+    { "unit": "1.5", "type": "fill", "q": "J'habite en ___.", "hint": "le pays des baguettes et des croissants", "answer": ["France"], "case": true, "explain": "Les noms de pays prennent une majuscule : la France." },
+    { "unit": "1.5", "type": "fill", "q": "Le chat ___ veut plus sortir.", "hint": "ne ou n' ?", "answer": ["ne"], "explain": "Devant une consonne, on garde ne : il ne veut plus." },
+    { "unit": "1.5", "type": "fill", "q": "La tour Eiffel se trouve à ___.", "hint": "la capitale de la France", "answer": ["Paris"], "case": true, "explain": "Les noms de villes prennent une majuscule : Paris." },
+    { "unit": "1.5", "type": "error", "q": "Hier, mon frère est allé à lyon.", "wrong": 6, "fix": ["Lyon"], "case": true, "explain": "Lyon est un nom de ville : il prend une majuscule." },
+    { "unit": "1.5", "type": "error", "q": "Tu na pas faim.", "wrong": 1, "fix": ["n'as"], "explain": "Ne devient n' devant une voyelle, et avoir s'écrit as avec tu : tu n'as pas faim." },
+    { "unit": "1.5", "type": "error", "q": "le soleil brille ce matin.", "wrong": 0, "fix": ["Le"], "case": true, "explain": "Une phrase commence toujours par une majuscule." }
+  ]
+}

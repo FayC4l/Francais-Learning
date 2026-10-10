@@ -1,0 +1,86 @@
+{
+  "level": 2,
+  "taunts": {
+    "phase2": [
+      "Tu as compté mes chevaux ? Ce sont des chevals, voyons !",
+      "Mes bijous brillent plus que tes réponses !",
+      "Maintenant, tu vas écrire. Et j'ajoute des x où je veux !"
+    ],
+    "phase3": [
+      "Dernière manche : mes adjectifs refusent de s'accorder !",
+      "Vous faisez, vous disez… dans mon royaume, c'est la loi !",
+      "Ou, où, ses, ces… je mélange tout, et toi aussi bientôt !"
+    ],
+    "lose": [
+      "Ha ! Dans mon royaume, les chevals ont gagné. Reviens avec tes pluriels !",
+      "Des bijous partout, et toi nulle part. Révise et reviens !",
+      "La Reine a parlé : tu repasseras quand tes adjectifs seront d'accord."
+    ]
+  },
+  "questions": [
+    { "unit": "2.1", "type": "mcq", "q": "Les ___ de la mer sont menacés.", "choices": ["coraux", "corails"], "answer": 0, "explain": "Corail fait partie des sept noms en -ail qui font -aux : des coraux." },
+    { "unit": "2.1", "type": "mcq", "q": "Nous avons cassé deux ___ en jouant au ballon.", "choices": ["carreaux", "carreaus"], "answer": 0, "explain": "Les noms en -eau prennent un x : des carreaux." },
+    { "unit": "2.1", "type": "mcq", "q": "Il a deux ___ au front.", "choices": ["bleus", "bleux"], "answer": 0, "explain": "Bleu est une exception des noms en -eu : il prend un s." },
+    { "unit": "2.1", "type": "mcq", "q": "Les ___ sautent dans le désert australien.", "choices": ["kangourous", "kangouroux"], "answer": 0, "explain": "Kangourou ne fait pas partie des sept noms en -ou : des kangourous." },
+    { "unit": "2.1", "type": "fill", "q": "Un émail, des ___.", "hint": "au pluriel", "answer": ["émaux"], "explain": "Émail fait partie des sept noms en -ail qui font -aux." },
+    { "unit": "2.1", "type": "fill", "q": "Un récital, des ___.", "hint": "au pluriel", "answer": ["récitals"], "explain": "Récital est une exception des noms en -al : des récitals." },
+    { "unit": "2.1", "type": "fill", "q": "Un neveu, des ___.", "hint": "au pluriel", "answer": ["neveux"], "explain": "Les noms en -eu prennent un x : des neveux." },
+    { "unit": "2.1", "type": "fill", "q": "Un tuyau, des ___.", "hint": "au pluriel", "answer": ["tuyaux"], "explain": "Les noms en -au prennent un x : des tuyaux (sauf landau et sarrau)." },
+    { "unit": "2.1", "type": "fill", "q": "Un sou, des ___.", "hint": "au pluriel", "answer": ["sous"], "explain": "Sou ne fait pas partie des sept noms en -ou : des sous." },
+    { "unit": "2.1", "type": "error", "q": "Les hôpitals de la ville sont neufs.", "wrong": 1, "fix": ["hôpitaux"], "explain": "Hôpital se termine par -al : des hôpitaux." },
+    { "unit": "2.1", "type": "error", "q": "Les noyaus de cerise sont durs.", "wrong": 1, "fix": ["noyaux"], "explain": "Les noms en -au prennent un x : des noyaux." },
+    { "unit": "2.1", "type": "error", "q": "Mes genous me font mal.", "wrong": 1, "fix": ["genoux"], "explain": "Genou fait partie des sept noms en -ou qui prennent un x." },
+
+    { "unit": "2.2", "type": "mcq", "q": "Ma petite sœur est ___ dans le noir.", "choices": ["peureuse", "peureuze", "peureux"], "answer": 0, "explain": "-eux devient -euse au féminin : peureuse." },
+    { "unit": "2.2", "type": "mcq", "q": "La chatte reste ___ quand on l'appelle.", "choices": ["muette", "muète", "muet"], "answer": 0, "explain": "-et devient -ette au féminin : muette." },
+    { "unit": "2.2", "type": "mcq", "q": "C'est une ___ journée.", "choices": ["belle", "bel", "beau"], "answer": 0, "explain": "Le féminin de beau est belle. Bel s'emploie devant un nom masculin qui commence par une voyelle." },
+    { "unit": "2.2", "type": "mcq", "q": "Ta réponse est ___.", "choices": ["fausse", "fause", "faux"], "answer": 0, "explain": "Le féminin de faux est fausse, avec deux s." },
+    { "unit": "2.2", "type": "fill", "q": "Un lion, une ___.", "hint": "au féminin", "answer": ["lionne"], "explain": "-on double le n au féminin : une lionne." },
+    { "unit": "2.2", "type": "fill", "q": "Un directeur, une ___.", "hint": "au féminin", "answer": ["directrice"], "explain": "-teur devient -trice : une directrice." },
+    { "unit": "2.2", "type": "fill", "q": "Un chanteur, une ___.", "hint": "au féminin", "answer": ["chanteuse"], "explain": "-eur devient -euse : une chanteuse." },
+    { "unit": "2.2", "type": "fill", "q": "Un geste vif, une réponse ___.", "hint": "vif, au féminin", "answer": ["vive"], "explain": "-f devient -ve : vive." },
+    { "unit": "2.2", "type": "fill", "q": "Un pain frais, une brioche ___.", "hint": "frais, au féminin", "answer": ["fraîche"], "explain": "Frais devient fraîche, avec un accent circonflexe (fraiche en orthographe rectifiée)." },
+    { "unit": "2.2", "type": "error", "q": "Mon amie est très heureux.", "wrong": 4, "fix": ["heureuse"], "explain": "Mon amie est féminin : heureuse." },
+    { "unit": "2.2", "type": "error", "q": "Elle porte une jupe court.", "wrong": 4, "fix": ["courte"], "explain": "Jupe est féminin : courte." },
+    { "unit": "2.2", "type": "error", "q": "Ma grand-mère est une ancien couturière.", "wrong": 4, "fix": ["ancienne"], "explain": "-en devient -enne au féminin : une ancienne couturière." },
+
+    { "unit": "2.3", "type": "mcq", "q": "Les poires sont ___.", "choices": ["mûres", "mûrs", "mûre"], "answer": 0, "explain": "L'attribut s'accorde avec le sujet, les poires : féminin pluriel." },
+    { "unit": "2.3", "type": "mcq", "q": "Ces garçons sont ___.", "choices": ["sérieux", "sérieuxs", "sérieuse"], "answer": 0, "explain": "Un adjectif en -x ne change pas au masculin pluriel : sérieux." },
+    { "unit": "2.3", "type": "mcq", "q": "Le lion et la lionne sont ___.", "choices": ["endormis", "endormies", "endormi"], "answer": 0, "explain": "Un masculin et un féminin donnent un masculin pluriel : endormis." },
+    { "unit": "2.3", "type": "mcq", "q": "J'ai acheté de ___ bottes.", "choices": ["nouvelles", "nouveaux", "nouvelle"], "answer": 0, "explain": "Bottes est féminin pluriel : nouvelles." },
+    { "unit": "2.3", "type": "fill", "q": "Mes sœurs sont ___.", "hint": "grand", "answer": ["grandes"], "explain": "L'attribut s'accorde avec le sujet, mes sœurs : grandes." },
+    { "unit": "2.3", "type": "fill", "q": "Le dimanche, les rues sont ___.", "hint": "désert", "answer": ["désertes"], "explain": "Rues est féminin pluriel : désertes." },
+    { "unit": "2.3", "type": "fill", "q": "Ce sont des chiens très ___.", "hint": "affectueux", "answer": ["affectueux"], "explain": "Les adjectifs en -x ne changent pas au masculin pluriel." },
+    { "unit": "2.3", "type": "fill", "q": "Les bougies restent ___.", "hint": "allumé", "answer": ["allumées"], "explain": "Après rester, l'adjectif s'accorde avec le sujet, les bougies : allumées." },
+    { "unit": "2.3", "type": "fill", "q": "Ma tante et mon oncle sont ___.", "hint": "généreux", "answer": ["généreux"], "explain": "Un féminin et un masculin : masculin pluriel, généreux." },
+    { "unit": "2.3", "type": "error", "q": "Les pommes sont rouge.", "wrong": 3, "fix": ["rouges"], "explain": "L'attribut s'accorde avec le sujet, les pommes : rouges." },
+    { "unit": "2.3", "type": "error", "q": "Mes cousines semblent fatigué.", "wrong": 3, "fix": ["fatiguées"], "explain": "Après sembler, l'adjectif s'accorde avec le sujet, mes cousines : fatiguées." },
+    { "unit": "2.3", "type": "error", "q": "Elle a de longs cheveux frisées.", "wrong": 5, "fix": ["frisés"], "explain": "Cheveux est masculin pluriel : frisés." },
+
+    { "unit": "2.4", "type": "mcq", "q": "Nous ___ la vaisselle.", "choices": ["faisons", "fesons", "faison"], "answer": 0, "explain": "On prononce « fesons », mais on écrit nous faisons." },
+    { "unit": "2.4", "type": "mcq", "q": "Tu ___ avec nous ?", "choices": ["viens", "vient", "viend"], "answer": 0, "explain": "Venir au présent : tu viens." },
+    { "unit": "2.4", "type": "mcq", "q": "Elle ___ au téléphone.", "choices": ["répond", "répont", "répons"], "answer": 0, "explain": "Répondre est en -dre : il garde le d, elle répond." },
+    { "unit": "2.4", "type": "mcq", "q": "Vous ___ la mer d'ici ?", "choices": ["voyez", "voiez", "voyer"], "answer": 0, "explain": "Voir : vous voyez, avec un y." },
+    { "unit": "2.4", "type": "fill", "q": "Je ___ au parc.", "hint": "aller, au présent", "answer": ["vais"], "explain": "Aller au présent : je vais." },
+    { "unit": "2.4", "type": "fill", "q": "Vous ___ le bus ?", "hint": "prendre, au présent", "answer": ["prenez"], "explain": "Prendre au présent : vous prenez." },
+    { "unit": "2.4", "type": "fill", "q": "Ils ___ jouer dehors.", "hint": "vouloir, au présent", "answer": ["veulent"], "explain": "Vouloir au présent : ils veulent." },
+    { "unit": "2.4", "type": "fill", "q": "Les fleurs ___ au printemps.", "hint": "fleurir, au présent", "answer": ["fleurissent"], "explain": "Fleurir est du 2e groupe : ils fleurissent." },
+    { "unit": "2.4", "type": "fill", "q": "Nous ___ des cerises.", "hint": "cueillir, au présent", "answer": ["cueillons"], "explain": "Cueillir se conjugue au présent comme un verbe en -er : nous cueillons." },
+    { "unit": "2.4", "type": "error", "q": "Vous faisez trop de bruit.", "wrong": 1, "fix": ["faites"], "explain": "Faire est irrégulier : vous faites." },
+    { "unit": "2.4", "type": "error", "q": "Ils prenent le métro.", "wrong": 1, "fix": ["prennent"], "explain": "Prendre : ils prennent, avec deux n." },
+    { "unit": "2.4", "type": "error", "q": "Mon père conduis la voiture.", "wrong": 2, "fix": ["conduit"], "explain": "Avec il, conduire se termine par -t : il conduit." },
+
+    { "unit": "2.5", "type": "mcq", "q": "Tu viens ___ tu restes ?", "choices": ["ou", "où"], "answer": 0, "explain": "On peut dire « ou bien » : ou, sans accent." },
+    { "unit": "2.5", "type": "mcq", "q": "___ chaussures-là sont trop chères.", "choices": ["Ces", "Ses", "C'est"], "answer": 0, "explain": "On montre des chaussures, avec -là : ces." },
+    { "unit": "2.5", "type": "mcq", "q": "Elle ___ brossé les cheveux.", "choices": ["s'est", "c'est", "ces"], "answer": 0, "explain": "Verbe se brosser : je me suis brossé, elle s'est brossé." },
+    { "unit": "2.5", "type": "mcq", "q": "Il ___ son pyjama.", "choices": ["met", "mets", "mais"], "answer": 0, "explain": "Mettre avec il : il met, avec un t." },
+    { "unit": "2.5", "type": "fill", "q": "Je ne sais pas ___ j'ai mis mes clés.", "hint": "ou ou où ?", "answer": ["où"], "explain": "Il s'agit d'un lieu : où." },
+    { "unit": "2.5", "type": "fill", "q": "___ que tu dis est vrai.", "hint": "ce ou se ?", "answer": ["Ce"], "explain": "Devant que, on écrit ce : ce que tu dis." },
+    { "unit": "2.5", "type": "fill", "q": "Inès a perdu ___ gants.", "hint": "ces ou ses ?", "answer": ["ses"], "explain": "Les gants d'Inès, les siens : ses." },
+    { "unit": "2.5", "type": "fill", "q": "Je suis fatigué, ___ content.", "hint": "mais ou mes ?", "answer": ["mais"], "explain": "On marque une opposition : mais." },
+    { "unit": "2.5", "type": "fill", "q": "___ génial, ce manège !", "hint": "c'est ou s'est ?", "answer": ["C'est"], "explain": "On peut dire cela est génial : c'est." },
+    { "unit": "2.5", "type": "error", "q": "Le soleil ce couche à l'horizon.", "wrong": 2, "fix": ["se"], "explain": "Verbe se coucher : je me couche, il se couche." },
+    { "unit": "2.5", "type": "error", "q": "Mais parents arrivent ce soir.", "wrong": 0, "fix": ["Mes"], "explain": "Les parents sont les miens : mes." },
+    { "unit": "2.5", "type": "error", "q": "Il c'est blessé au genou.", "wrong": 1, "fix": ["s'est"], "explain": "Verbe se blesser : je me suis blessé, il s'est blessé." }
+  ]
+}

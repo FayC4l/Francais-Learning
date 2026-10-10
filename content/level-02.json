@@ -1,0 +1,383 @@
+{
+  "id": 2,
+  "cefr": "A1",
+  "title": "Accorder",
+  "sub": "Pluriels, féminin et accords",
+  "intro": "Les pluriels capricieux (chevaux, bijoux, pneus), le féminin des noms et des adjectifs, l'accord dans le groupe nominal et les présents irréguliers. Sans oublier quatre nouvelles paires de jumeaux !",
+  "boss": {
+    "name": "La Reine des Pluriels",
+    "taunt": "Des chevals, des bijous, des pneux : dans mon royaume, tout prend un x… ou un s… selon mon humeur !",
+    "defeat": "Des chevaux, des bijoux, des pneus… Bon, d'accord, il y a des règles. Je abdique. Pardon : j'abdique."
+  },
+  "units": [
+    {
+      "id": "2.1",
+      "name": "Pluriels rebelles",
+      "title": "-al / -aux, -ail, -eau / -eu / -au, les sept noms en -ou, -s / -x / -z",
+      "goal": "Écrire sans faute le pluriel des noms qui ne prennent pas un simple s.",
+      "lesson": [
+        { "type": "p", "text": "La règle générale est simple : au pluriel, on ajoute un **s** au nom ([[un chat]], [[des chats]]). Mais plusieurs familles de noms suivent leur propre règle. Bonne nouvelle : elles sont peu nombreuses, et on peut les apprendre." },
+        { "type": "rule", "title": "Les noms en -al", "text": "Ils font leur pluriel en **-aux** : [[un cheval, des chevaux]], [[un journal, des journaux]], [[un animal, des animaux]]. Quelques exceptions prennent un s : **bal, carnaval, chacal, festival, récital, régal** : [[des bals]], [[des festivals]]." },
+        { "type": "rule", "title": "Les noms en -ail", "text": "La plupart prennent un **s** : [[des détails]], [[des éventails]], [[des rails]]. Sept font **-aux** : **bail, corail, émail, soupirail, travail, vantail, vitrail** : [[des travaux]], [[des coraux]], [[des vitraux]]." },
+        { "type": "rule", "title": "Les noms en -eau, -au, -eu", "text": "Ils prennent un **x** : [[des bateaux]], [[des tuyaux]], [[des cheveux]], [[des jeux]]. Exceptions avec un s : [[des landaus]], [[des pneus]], [[des bleus]], [[des émeus]]." },
+        { "type": "table", "head": ["Les sept noms en -ou qui prennent un x", "Tous les autres prennent un s"], "rows": [["[[des bijoux]], [[des cailloux]], [[des choux]], [[des genoux]]", "[[des clous]], [[des trous]], [[des sous]]"], ["[[des hiboux]], [[des joujoux]], [[des poux]]", "[[des fous]], [[des kangourous]], [[des bisous]]"]] },
+        { "type": "rule", "title": "Les noms en -s, -x, -z", "text": "Ils ne changent pas : [[un bras, des bras]], [[une croix, des croix]], [[un nez, des nez]]. Le déterminant suffit à montrer le pluriel." },
+        { "type": "examples", "items": [
+          { "ex": "Les **chevaux** du centre équestre mangent du foin.", "note": "cheval : -al devient -aux" },
+          { "ex": "Les **vitraux** de l'église brillent au soleil.", "note": "vitrail fait partie des sept noms en -ail qui font -aux" },
+          { "ex": "J'ai deux **pneus** crevés.", "note": "pneu : une exception, avec un s" },
+          { "ex": "Ma grand-mère range ses **bijoux** dans un coffret.", "note": "bijou : un des sept noms en -ou avec un x" },
+          { "ex": "Les **festivals** de musique ont lieu en été.", "note": "festival : une exception en -als" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "des ~~chevals~~", "ok": "des **chevaux**", "why": "Les noms en -al font -aux." },
+          { "ko": "des ~~bijous~~", "ok": "des **bijoux**", "why": "Bijou est l'un des sept noms en -ou qui prennent un x." },
+          { "ko": "des ~~pneux~~", "ok": "des **pneus**", "why": "Pneu est une exception : il prend un s." },
+          { "ko": "des ~~festivaux~~", "ok": "des **festivals**", "why": "Festival fait partie des exceptions en -als." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Trois pluriels à savoir par cœur : [[un œil, des yeux]], [[le ciel, les cieux]], [[un aïeul, des aïeux]]. Et attention à l'oreille : dans [[des œufs]] et [[des bœufs]], on n'entend plus le f, mais on l'écrit toujours." },
+        { "type": "fun", "text": "Le sais-tu ? On raconte que le x des pluriels vient des copistes du Moyen Âge : ils abrégeaient la fin « -us » par un petit signe qui ressemblait à un x. « Chevaus » est devenu « chevax »… puis on a remis le u, et le x est resté !" }
+      ],
+      "vocab": [
+        { "mot": "vitrail", "def": "Fenêtre faite de morceaux de verre colorés, souvent dans une église.", "ex": "Le soleil traverse le vitrail.", "alt": [] },
+        { "mot": "corail", "def": "Petit animal marin qui forme des récifs colorés.", "ex": "Les poissons nagent autour du corail.", "alt": [] },
+        { "mot": "éventail", "def": "Objet que l'on agite devant son visage pour se rafraîchir.", "ex": "Ma tante s'évente avec un éventail.", "alt": [] },
+        { "mot": "festival", "def": "Grande fête de musique, de cinéma ou de théâtre qui dure plusieurs jours.", "ex": "Nous allons au festival de musique.", "alt": [] },
+        { "mot": "carnaval", "def": "Fête où l'on défile déguisé dans les rues.", "ex": "Au carnaval, je serai déguisé en pirate.", "alt": [] },
+        { "mot": "landau", "def": "Voiture d'enfant dans laquelle le bébé est couché.", "ex": "Le bébé dort dans son landau.", "alt": [] },
+        { "mot": "pneu", "def": "Bandage de caoutchouc gonflé d'air qui entoure une roue.", "ex": "Mon vélo a un pneu crevé.", "alt": [] },
+        { "mot": "chou", "def": "Gros légume rond aux feuilles serrées.", "ex": "Le lapin grignote une feuille de chou.", "alt": [] },
+        { "mot": "joujou", "def": "Mot affectueux pour dire « jouet », dans la langue des petits enfants.", "ex": "Le bébé tend son joujou.", "alt": [] },
+        { "mot": "tuyau", "def": "Tube dans lequel circule de l'eau ou du gaz.", "ex": "Le tuyau d'arrosage est percé.", "alt": [] },
+        { "mot": "noyau", "def": "Partie dure au centre de certains fruits, comme la cerise.", "ex": "Attention au noyau de la prune !", "alt": [] },
+        { "mot": "chacal", "def": "Animal sauvage d'Afrique et d'Asie qui ressemble à un petit loup.", "ex": "Le chacal rôde dans la savane.", "alt": [] },
+        { "mot": "bocal", "def": "Récipient en verre à large ouverture.", "ex": "Les cornichons sont dans un bocal.", "alt": [] },
+        { "mot": "épouvantail", "def": "Mannequin installé dans un champ pour faire peur aux oiseaux.", "ex": "Les corbeaux se moquent de l'épouvantail.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Les chevaux galopent dans le pré.", "indice": "Des animaux qui courent dehors", "trap": ["chevals"], "alt": [] },
+        { "phrase": "Ma tante collectionne les vieux bijoux.", "indice": "Une collection de famille", "trap": ["bijous", "vieus"], "alt": [] },
+        { "phrase": "Les pneus du vélo sont crevés.", "indice": "Une balade en vélo qui tourne mal", "trap": ["pneux"], "alt": [] },
+        { "phrase": "Les vitraux de l'église brillent au soleil.", "indice": "Des fenêtres colorées", "trap": ["vitrails"], "alt": [] },
+        { "phrase": "Nous avons vu trois festivals cet été.", "indice": "Des vacances en musique", "trap": ["festivaux"], "alt": ["Cet été, nous avons vu trois festivals."] },
+        { "phrase": "Les choux du potager sont énormes.", "indice": "Des légumes géants", "trap": ["chous"], "alt": [] },
+        { "phrase": "Les enfants jouent avec leurs nouveaux jeux.", "indice": "Des cadeaux tout neufs", "trap": ["jeus", "nouveaus"], "alt": [] },
+        { "phrase": "Les travaux dans la rue font du bruit.", "indice": "Un chantier bruyant", "trap": ["travails"], "alt": [] },
+        { "phrase": "Les tuyaux de la cuisine fuient.", "indice": "Une fuite d'eau", "trap": ["tuyaus"], "alt": [] },
+        { "phrase": "Il a des cheveux bouclés.", "indice": "Une coiffure", "trap": ["cheveus"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Les ___ de la cathédrale sont magnifiques.", "choices": ["vitrails", "vitraux"], "answer": 1, "explain": "Vitrail fait partie des sept noms en -ail qui font leur pluriel en -aux : des vitraux." },
+        { "type": "mcq", "q": "En été, il y a beaucoup de ___ de musique.", "choices": ["festivals", "festivaux"], "answer": 0, "explain": "Festival est une exception : il fait son pluriel en -als." },
+        { "type": "mcq", "q": "Les ___ de ma voiture sont neufs.", "choices": ["pneus", "pneux"], "answer": 0, "explain": "Pneu est une exception : il prend un s au pluriel." },
+        { "type": "mcq", "q": "Maman achète deux ___ au marché.", "choices": ["choux", "chous"], "answer": 0, "explain": "Chou fait partie des sept noms en -ou qui prennent un x." },
+        { "type": "mcq", "q": "Il y a des ___ dans mon pull.", "choices": ["trous", "troux"], "answer": 0, "explain": "Trou ne fait pas partie des sept noms en -ou : il prend un s, des trous." },
+        { "type": "fill", "q": "Un détail, des ___.", "hint": "au pluriel", "answer": ["détails"], "explain": "La plupart des noms en -ail prennent un s : des détails." },
+        { "type": "fill", "q": "Un travail, des ___.", "hint": "au pluriel", "answer": ["travaux"], "explain": "Travail fait partie des sept noms en -ail qui font -aux." },
+        { "type": "fill", "q": "Un bal, des ___.", "hint": "au pluriel", "answer": ["bals"], "explain": "Bal est une exception des noms en -al : des bals." },
+        { "type": "fill", "q": "Un feu, des ___.", "hint": "au pluriel", "answer": ["feux"], "explain": "Les noms en -eu prennent un x : des feux." },
+        { "type": "fill", "q": "Un landau, des ___.", "hint": "au pluriel", "answer": ["landaus"], "explain": "Landau est une exception des noms en -au : il prend un s." },
+        { "type": "fill", "q": "Un clou, des ___.", "hint": "au pluriel", "answer": ["clous"], "explain": "Clou ne fait pas partie des sept noms en -ou : des clous." },
+        { "type": "fill", "q": "Une voix, des ___.", "hint": "au pluriel", "answer": ["voix"], "explain": "Les noms terminés par x ne changent pas au pluriel." },
+        { "type": "error", "q": "Les animals de la ferme dorment.", "wrong": 1, "fix": ["animaux"], "explain": "Animal se termine par -al : son pluriel est animaux." },
+        { "type": "error", "q": "J'ai deux poux dans les cheveus.", "wrong": 5, "fix": ["cheveux"], "explain": "Les noms en -eu prennent un x : des cheveux." },
+        { "type": "error", "q": "Les carnavaux de Nice et de Dunkerque sont célèbres.", "wrong": 1, "fix": ["carnavals"], "explain": "Carnaval est une exception des noms en -al : des carnavals." },
+        { "type": "error", "q": "Ce magasin vend des éventaux.", "wrong": 4, "fix": ["éventails"], "explain": "Éventail ne fait pas partie des sept noms en -ail qui font -aux : des éventails." }
+      ]
+    },
+    {
+      "id": "2.2",
+      "name": "Au féminin",
+      "title": "Le féminin des noms et des adjectifs : -er / -ère, -eux / -euse, -f / -ve, doublement de la consonne, irréguliers",
+      "goal": "Former sans faute le féminin des noms et des adjectifs.",
+      "lesson": [
+        { "type": "p", "text": "En général, on forme le féminin en ajoutant un **e** au masculin : [[un ami, une amie]], [[grand, grande]]. Si le masculin finit déjà par un e, rien ne change : [[un élève, une élève]], [[calme]]. Mais certaines terminaisons se transforment." },
+        { "type": "rule", "title": "Les terminaisons qui changent", "text": "**-er → -ère** : [[boulanger, boulangère]], [[léger, légère]]. **-eux → -euse** : [[heureux, heureuse]]. **-f → -ve** : [[sportif, sportive]], [[neuf, neuve]]. **-eur → -euse** ou **-trice** : [[danseur, danseuse]], [[acteur, actrice]]." },
+        { "type": "rule", "title": "La consonne qui double", "text": "**-el → -elle** ([[cruel, cruelle]]), **-en → -enne** ([[ancien, ancienne]]), **-on → -onne** ([[bon, bonne]]), **-et → -ette** ([[muet, muette]]). Mais quatre adjectifs en -et prennent un accent grave : [[complète]], [[incomplète]], [[inquiète]], [[secrète]]. Et [[gentil]] devient [[gentille]]." },
+        { "type": "table", "head": ["Masculin", "Féminin", "Masculin", "Féminin"], "rows": [["beau", "belle", "blanc", "blanche"], ["nouveau", "nouvelle", "frais", "fraîche"], ["vieux", "vieille", "long", "longue"], ["fou", "folle", "doux", "douce"], ["roux", "rousse", "faux", "fausse"]] },
+        { "type": "rule", "title": "Des noms qui changent complètement", "text": "[[un homme, une femme]], [[un roi, une reine]], [[un oncle, une tante]], [[un héros, une héroïne]], [[un loup, une louve]], [[un prince, une princesse]]." },
+        { "type": "examples", "items": [
+          { "ex": "La **boulangère** est **matinale**.", "note": "-er devient -ère ; matinal + e" },
+          { "ex": "Ma cousine est très **sportive**.", "note": "-f devient -ve" },
+          { "ex": "Une **ancienne** maison **bretonne**.", "note": "-en → -enne, -on → -onne" },
+          { "ex": "Une veste **neuve** et une écharpe **blanche**.", "note": "neuf → neuve ; blanc → blanche" },
+          { "ex": "La **louve** veille sur ses petits.", "note": "le féminin de loup" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "une fille ~~sportif~~", "ok": "une fille **sportive**", "why": "-f devient -ve au féminin." },
+          { "ko": "une voiture ~~neuf~~", "ok": "une voiture **neuve**", "why": "Neuf devient neuve." },
+          { "ko": "une robe ~~blanc~~", "ok": "une robe **blanche**", "why": "Blanc devient blanche, avec un h." },
+          { "ko": "une ~~vieil~~ dame", "ok": "une **vieille** dame", "why": "Vieil s'emploie seulement devant un nom masculin qui commence par une voyelle." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "**beau**, **nouveau**, **vieux**, **fou** et **mou** deviennent **bel**, **nouvel**, **vieil**, **fol** et **mol** devant un nom **masculin** qui commence par une voyelle ou un h muet : [[un bel arbre]], [[un vieil homme]], [[un nouvel ami]]. Ce n'est pas le féminin !" },
+        { "type": "fun", "text": "Le sais-tu ? « Grand-mère » s'écrivait autrefois « grand'mère », avec une apostrophe : en ancien français, l'adjectif grand avait la même forme au masculin et au féminin. On a cru qu'il manquait un e… et on a mis une apostrophe à sa place !" }
+      ],
+      "vocab": [
+        { "mot": "actrice", "def": "Femme qui joue un rôle au théâtre ou au cinéma.", "ex": "Cette actrice a reçu un prix.", "alt": [] },
+        { "mot": "boulangère", "def": "Femme qui fabrique et vend le pain.", "ex": "La boulangère me rend la monnaie.", "alt": [] },
+        { "mot": "héroïne", "def": "Femme qui accomplit un exploit, ou personnage principal d'une histoire.", "ex": "L'héroïne du roman sauve son village.", "alt": [] },
+        { "mot": "louve", "def": "La femelle du loup.", "ex": "La louve nourrit ses louveteaux.", "alt": [] },
+        { "mot": "jumelle", "def": "Chacune des deux sœurs nées le même jour de la même mère.", "ex": "Ma jumelle me ressemble comme deux gouttes d'eau.", "alt": [] },
+        { "mot": "princesse", "def": "Fille d'un roi ou d'une reine.", "ex": "La princesse s'échappe du donjon.", "alt": [] },
+        { "mot": "coiffeuse", "def": "Femme dont le métier est de couper et de coiffer les cheveux.", "ex": "La coiffeuse me coupe la frange.", "alt": [] },
+        { "mot": "heureuse", "def": "Au féminin : qui ressent de la joie.", "ex": "Ma mère est heureuse de son cadeau.", "alt": [] },
+        { "mot": "sportive", "def": "Au féminin : qui aime faire du sport.", "ex": "Ma grand-mère est très sportive.", "alt": [] },
+        { "mot": "gentille", "def": "Au féminin : aimable, qui fait plaisir aux autres.", "ex": "Ta voisine est vraiment gentille.", "alt": [] },
+        { "mot": "ancienne", "def": "Au féminin : qui existe depuis très longtemps.", "ex": "Nous visitons une ancienne abbaye.", "alt": [] },
+        { "mot": "inquiète", "def": "Au féminin : qui se fait du souci.", "ex": "Maman est inquiète quand je rentre tard.", "alt": [] },
+        { "mot": "fraîche", "def": "Au féminin : un peu froide, ou cueillie depuis peu.", "ex": "Cette salade est bien fraîche.", "alt": ["fraiche"] },
+        { "mot": "rousse", "def": "Au féminin : qui a les cheveux d'un roux orangé.", "ex": "Jade est rousse comme un renard.", "alt": [] },
+        { "mot": "muette", "def": "Au féminin : qui ne peut pas parler, ou qui ne dit rien.", "ex": "La lettre h est souvent muette.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Ma voisine est une excellente boulangère.", "indice": "Un métier du pain", "trap": ["boulangére", "excelente"], "alt": [] },
+        { "phrase": "Cette chienne est très gentille.", "indice": "Un animal aimable", "trap": ["gentile"], "alt": [] },
+        { "phrase": "Ma grand-mère est une femme sportive.", "indice": "Une mamie qui bouge", "trap": ["sportif"], "alt": [] },
+        { "phrase": "La princesse porte une longue robe blanche.", "indice": "Une tenue de conte", "trap": ["blanc", "long"], "alt": [] },
+        { "phrase": "Une louve protège ses petits.", "indice": "Une maman de la forêt", "trap": ["loupe", "ces"], "alt": [] },
+        { "phrase": "Cette vieille maison est hantée.", "indice": "Une maison qui fait peur", "trap": ["vieil"], "alt": [] },
+        { "phrase": "Ma sœur est inquiète avant son examen.", "indice": "Une sœur stressée", "trap": ["inquiéte", "inquiette"], "alt": [] },
+        { "phrase": "L'eau de la rivière est fraîche.", "indice": "Une baignade qui saisit", "trap": ["frais"], "alt": [] },
+        { "phrase": "Elle est rousse comme sa mère.", "indice": "Une ressemblance de couleur", "trap": ["rouse"], "alt": [] },
+        { "phrase": "Cette actrice est très célèbre.", "indice": "Une star du cinéma", "trap": ["actrise"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Ma cousine est très ___.", "choices": ["sportif", "sportive", "sportife"], "answer": 1, "explain": "Les adjectifs en -f font leur féminin en -ve : sportive." },
+        { "type": "mcq", "q": "C'est une ___ idée !", "choices": ["bon", "bonne", "bone"], "answer": 1, "explain": "Les adjectifs en -on doublent le n au féminin : bonne." },
+        { "type": "mcq", "q": "Il habite dans un ___ appartement.", "choices": ["beau", "bel", "belle"], "answer": 1, "explain": "Devant un nom masculin qui commence par une voyelle, beau devient bel : un bel appartement." },
+        { "type": "mcq", "q": "Cette information est ___.", "choices": ["secrète", "secrette", "secret"], "answer": 0, "explain": "Secret fait partie des quatre adjectifs en -et qui prennent un accent grave au féminin : secrète." },
+        { "type": "mcq", "q": "Le roi et la ___ saluent la foule.", "choices": ["reine", "roine", "royale"], "answer": 0, "explain": "Le féminin de roi est un tout autre mot : la reine." },
+        { "type": "fill", "q": "Un danseur, une ___.", "hint": "au féminin", "answer": ["danseuse"], "explain": "-eur devient souvent -euse : une danseuse." },
+        { "type": "fill", "q": "Un acteur, une ___.", "hint": "au féminin", "answer": ["actrice"], "explain": "-teur devient parfois -trice : une actrice." },
+        { "type": "fill", "q": "Un chat noir, une chatte ___.", "hint": "noir, au féminin", "answer": ["noire"], "explain": "On ajoute simplement un e : noire." },
+        { "type": "fill", "q": "Un garçon heureux, une fille ___.", "hint": "heureux, au féminin", "answer": ["heureuse"], "explain": "-eux devient -euse : heureuse." },
+        { "type": "fill", "q": "Un pull neuf, une veste ___.", "hint": "neuf, au féminin", "answer": ["neuve"], "explain": "-f devient -ve : neuve." },
+        { "type": "fill", "q": "Un ogre cruel, une sorcière ___.", "hint": "cruel, au féminin", "answer": ["cruelle"], "explain": "-el double le l au féminin : cruelle." },
+        { "type": "fill", "q": "Un pantalon long, une jupe ___.", "hint": "long, au féminin", "answer": ["longue"], "explain": "Long devient longue, avec un u pour garder le son [g]." },
+        { "type": "error", "q": "Ma grand-mère est une femme gentil.", "wrong": 5, "fix": ["gentille"], "explain": "Le féminin de gentil est gentille, avec deux l." },
+        { "type": "error", "q": "Cette tarte est délicieux.", "wrong": 3, "fix": ["délicieuse"], "explain": "La tarte est féminin : -eux devient -euse, délicieuse." },
+        { "type": "error", "q": "Ma tante a une voiture blanc.", "wrong": 5, "fix": ["blanche"], "explain": "Le féminin de blanc est blanche." },
+        { "type": "error", "q": "Une vieil dame traverse la rue.", "wrong": 1, "fix": ["vieille"], "explain": "Devant un nom féminin, on écrit vieille. Vieil ne s'emploie que devant un nom masculin commençant par une voyelle." }
+      ]
+    },
+    {
+      "id": "2.3",
+      "name": "Tous d'accord !",
+      "title": "L'accord dans le groupe nominal ; l'adjectif attribut du sujet",
+      "goal": "Accorder le déterminant, le nom et l'adjectif, même quand l'adjectif est loin du nom.",
+      "lesson": [
+        { "type": "p", "text": "Dans un groupe nominal, c'est le **nom** qui commande : le déterminant et les adjectifs prennent son **genre** (masculin ou féminin) et son **nombre** (singulier ou pluriel)." },
+        { "type": "rule", "title": "L'adjectif s'accorde avec le nom", "text": "[[un chat noir]], [[une robe noire]], [[des chats noirs]], [[des robes noires]]. Si l'adjectif qualifie un nom masculin et un nom féminin, il se met au **masculin pluriel** : [[un pantalon et une veste noirs]]." },
+        { "type": "rule", "title": "L'adjectif attribut", "text": "Après **être**, **sembler**, **paraître**, **devenir**, **rester**, l'adjectif s'accorde avec le **sujet**, même s'il est loin : [[Mes sœurs sont contentes]]. [[Cette histoire semble vraie]]." },
+        { "type": "table", "head": ["Masculin singulier", "Féminin singulier", "Masculin pluriel", "Féminin pluriel"], "rows": [["petit", "petite", "petits", "petites"], ["beau", "belle", "beaux", "belles"], ["heureux", "heureuse", "heureux", "heureuses"], ["gris", "grise", "gris", "grises"], ["original", "originale", "originaux", "originales"]] },
+        { "type": "examples", "items": [
+          { "ex": "Des fleurs **parfumées** décorent la table.", "note": "fleurs : féminin pluriel" },
+          { "ex": "Les fenêtres restent **ouvertes**.", "note": "attribut après rester : il s'accorde avec fenêtres" },
+          { "ex": "Mon père et ma mère sont **courageux**.", "note": "un masculin et un féminin : masculin pluriel" },
+          { "ex": "Ces gâteaux sont **délicieux**.", "note": "-eux ne change pas au masculin pluriel" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "des fleurs ~~parfumé~~", "ok": "des fleurs **parfumées**", "why": "Fleurs est féminin pluriel : -ées." },
+          { "ko": "Les filles sont ~~content~~.", "ok": "Les filles sont **contentes**.", "why": "L'attribut s'accorde avec le sujet, les filles." },
+          { "ko": "des ~~belle~~ histoires", "ok": "de **belles** histoires", "why": "L'adjectif prend le pluriel du nom. Et devant un adjectif au pluriel, on écrit souvent de au lieu de des." },
+          { "ko": "un pull et une écharpe ~~neuves~~", "ok": "un pull et une écharpe **neufs**", "why": "Un masculin et un féminin donnent un masculin pluriel." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Pour trouver l'accord d'un adjectif éloigné, pose la question **qu'est-ce qui est… ?** « Les fenêtres de la classe sont ouvertes » : qu'est-ce qui est ouvert ? Les fenêtres (et non la classe) : féminin pluriel." },
+        { "type": "fun", "text": "Le sais-tu ? Au XVIIe siècle, beaucoup d'écrivains accordaient l'adjectif avec le nom le plus proche : « des bras et des jambes nues ». La règle du masculin l'a emporté ensuite, et c'est elle que l'on suit aujourd'hui à l'école et aux examens." }
+      ],
+      "vocab": [
+        { "mot": "délicieux", "def": "Qui a très bon goût.", "ex": "Ce gâteau est délicieux.", "alt": [] },
+        { "mot": "merveilleux", "def": "Qui émerveille, extraordinaire et magnifique.", "ex": "Nous avons passé un séjour merveilleux.", "alt": [] },
+        { "mot": "épais", "def": "Le contraire de mince : large d'une face à l'autre.", "ex": "Ce livre est très épais.", "alt": [] },
+        { "mot": "joyeux", "def": "Qui est plein de joie, gai.", "ex": "Joyeux anniversaire, Karim !", "alt": [] },
+        { "mot": "paresseux", "def": "Qui n'aime pas faire d'efforts.", "ex": "Mon chat est un grand paresseux.", "alt": [] },
+        { "mot": "curieux", "def": "Qui veut tout savoir, tout découvrir.", "ex": "Ce petit singe est curieux de tout.", "alt": [] },
+        { "mot": "courageux", "def": "Qui n'a pas peur du danger.", "ex": "Le chevalier courageux affronte le dragon.", "alt": [] },
+        { "mot": "nerveux", "def": "Qui s'agite facilement, qui a du mal à rester calme.", "ex": "Il est nerveux avant le match.", "alt": [] },
+        { "mot": "mouillé", "def": "Couvert ou imprégné d'eau.", "ex": "Mon manteau est tout mouillé.", "alt": [] },
+        { "mot": "pointu", "def": "Qui se termine en pointe.", "ex": "Le crayon est bien pointu.", "alt": [] },
+        { "mot": "aigu", "def": "Se dit d'un son très haut, ou d'une pointe très fine.", "ex": "Le sifflet pousse un cri aigu.", "alt": [] },
+        { "mot": "gris", "def": "De la couleur de la cendre ou de la souris.", "ex": "Le ciel est gris ce matin.", "alt": [] },
+        { "mot": "rugueux", "def": "Qui est rude au toucher, pas lisse.", "ex": "L'écorce du chêne est rugueuse.", "alt": [] },
+        { "mot": "immense", "def": "Extrêmement grand.", "ex": "La plage est immense à marée basse.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Ces gâteaux sont délicieux.", "indice": "Un dessert réussi", "trap": ["délicieus", "ses"], "alt": [] },
+        { "phrase": "Mes petites sœurs sont très curieuses.", "indice": "Des sœurs qui posent des questions", "trap": ["curieuse", "petite"], "alt": [] },
+        { "phrase": "Les murs du château sont épais.", "indice": "Une forteresse solide", "trap": ["épaix"], "alt": [] },
+        { "phrase": "Nous avons cueilli des fleurs parfumées.", "indice": "Un bouquet qui sent bon", "trap": ["parfumé"], "alt": [] },
+        { "phrase": "Les chaussettes mouillées sèchent au soleil.", "indice": "Le linge dehors", "trap": ["mouillé"], "alt": [] },
+        { "phrase": "Ses chats gris dorment toute la journée.", "indice": "Des animaux paresseux", "trap": ["ces"], "alt": [] },
+        { "phrase": "Ces histoires sont merveilleuses.", "indice": "Des contes magnifiques", "trap": ["merveilleuse"], "alt": [] },
+        { "phrase": "La route est longue et étroite.", "indice": "Un chemin difficile", "trap": ["étroit"], "alt": [] },
+        { "phrase": "Mon père et ma mère sont courageux.", "indice": "Des parents qui n'ont pas peur", "trap": ["courageuses"], "alt": [] },
+        { "phrase": "Les élèves semblent fatigués ce matin.", "indice": "Une classe endormie", "trap": ["fatigué", "sembles"], "alt": ["Ce matin, les élèves semblent fatigués."] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Il a acheté des chemises ___.", "choices": ["blanches", "blancs", "blanche"], "answer": 0, "explain": "Chemises est féminin pluriel : blanches." },
+        { "type": "mcq", "q": "Les rideaux sont ___.", "choices": ["déchirés", "déchirées", "déchiré"], "answer": 0, "explain": "Rideaux est masculin pluriel : déchirés." },
+        { "type": "mcq", "q": "Ma sœur et ma cousine sont ___.", "choices": ["gentils", "gentilles", "gentille"], "answer": 1, "explain": "Deux noms féminins : féminin pluriel, gentilles." },
+        { "type": "mcq", "q": "Il porte un pull et une écharpe ___.", "choices": ["neufs", "neuves", "neuf"], "answer": 0, "explain": "Un nom masculin et un nom féminin : l'adjectif se met au masculin pluriel." },
+        { "type": "mcq", "q": "Les nuits d'hiver sont ___.", "choices": ["froides", "froids", "froide"], "answer": 0, "explain": "L'attribut s'accorde avec le sujet, les nuits : féminin pluriel." },
+        { "type": "fill", "q": "Les tartes de Mamie sont ___.", "hint": "délicieux", "answer": ["délicieuses"], "explain": "Tartes est féminin pluriel : délicieuses." },
+        { "type": "fill", "q": "Mes amies semblent ___.", "hint": "heureux", "answer": ["heureuses"], "explain": "Après sembler, l'adjectif s'accorde avec le sujet, mes amies : heureuses." },
+        { "type": "fill", "q": "Il lit des livres très ___.", "hint": "épais", "answer": ["épais"], "explain": "Un adjectif en -s ne change pas au masculin pluriel : épais." },
+        { "type": "fill", "q": "Elle chante d'une voix ___.", "hint": "aigu", "answer": ["aiguë", "aigüe"], "explain": "Aigu fait aiguë au féminin : le tréma montre qu'on prononce le u (on accepte aussi aigüe, l'orthographe rectifiée)." },
+        { "type": "fill", "q": "Les portes restent ___.", "hint": "ouvert", "answer": ["ouvertes"], "explain": "Après rester, l'adjectif s'accorde avec le sujet, les portes : ouvertes." },
+        { "type": "fill", "q": "Le chat et la chatte sont ___.", "hint": "affamé", "answer": ["affamés"], "explain": "Un masculin et un féminin : masculin pluriel, affamés." },
+        { "type": "fill", "q": "Ces romans sont ___.", "hint": "passionnant", "answer": ["passionnants"], "explain": "Romans est masculin pluriel : passionnants." },
+        { "type": "error", "q": "Les fleurs du jardin sont fané.", "wrong": 5, "fix": ["fanées"], "explain": "Qu'est-ce qui est fané ? Les fleurs : féminin pluriel, fanées." },
+        { "type": "error", "q": "Mes chaussures neuves sont mouillés.", "wrong": 4, "fix": ["mouillées"], "explain": "Mes chaussures est féminin pluriel : mouillées." },
+        { "type": "error", "q": "Elle porte des lunettes noir.", "wrong": 4, "fix": ["noires"], "explain": "Lunettes est féminin pluriel : noires." },
+        { "type": "error", "q": "Ces exercices sont facile.", "wrong": 3, "fix": ["faciles"], "explain": "L'attribut s'accorde avec le sujet, ces exercices : faciles." }
+      ]
+    },
+    {
+      "id": "2.4",
+      "name": "Les verbes rebelles",
+      "title": "Le présent du 2e groupe et des verbes irréguliers : aller, faire, dire, prendre, venir, pouvoir, vouloir, voir…",
+      "goal": "Conjuguer au présent les verbes les plus utilisés, même les plus irréguliers.",
+      "lesson": [
+        { "type": "p", "text": "Les verbes en -ir qui font **-issons** avec nous ([[finir, nous finissons]]) forment le **2e groupe** : ils sont réguliers. Tous les autres verbes (sauf ceux en -er) sont dans le **3e groupe** : il faut connaître leurs formes." },
+        { "type": "table", "head": ["finir", "prendre", "faire", "aller"], "rows": [["je finis", "je prends", "je fais", "je vais"], ["tu finis", "tu prends", "tu fais", "tu vas"], ["il finit", "il prend", "il fait", "il va"], ["nous finissons", "nous prenons", "nous faisons", "nous allons"], ["vous finissez", "vous prenez", "vous faites", "vous allez"], ["ils finissent", "ils prennent", "ils font", "ils vont"]] },
+        { "type": "rule", "title": "Les terminaisons du 3e groupe", "text": "Le plus souvent **-s, -s, -t** : [[je dors, tu dors, il dort]]. Les verbes en **-dre** gardent leur d : [[je prends, il prend]], [[il répond]]. **Pouvoir**, **vouloir** et **valoir** prennent un **x** : [[je peux, tu veux]]." },
+        { "type": "table", "head": ["venir", "pouvoir", "vouloir", "voir", "dire"], "rows": [["je viens", "je peux", "je veux", "je vois", "je dis"], ["il vient", "il peut", "il veut", "il voit", "il dit"], ["nous venons", "nous pouvons", "nous voulons", "nous voyons", "nous disons"], ["vous venez", "vous pouvez", "vous voulez", "vous voyez", "vous dites"], ["ils viennent", "ils peuvent", "ils veulent", "ils voient", "ils disent"]] },
+        { "type": "examples", "items": [
+          { "ex": "Vous **faites** du bruit et vous **dites** des bêtises !", "note": "jamais « faisez », « disez »" },
+          { "ex": "Les élèves **finissent** leur dessin.", "note": "2e groupe : -issent" },
+          { "ex": "Mes parents **prennent** le train.", "note": "deux n avec ils" },
+          { "ex": "Le pompier **éteint** le feu.", "note": "-indre perd le d : il éteint" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "vous ~~faisez~~", "ok": "vous **faites**", "why": "Faire est irrégulier avec vous." },
+          { "ko": "ils ~~voyent~~", "ok": "ils **voient**", "why": "Le y n'apparaît qu'avec nous et vous : nous voyons, vous voyez." },
+          { "ko": "je ~~peut~~", "ok": "je **peux**", "why": "Avec je et tu, pouvoir prend un x." },
+          { "ko": "nous ~~finisons~~", "ok": "nous **finissons**", "why": "Deux s : -issons." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "Les verbes en **-indre** et en **-soudre** perdent leur d au singulier : [[je peins, il peint]], [[il éteint]], [[il résout]]. Mais tous les autres verbes en -dre le gardent : [[il prend]], [[il coud]], [[il répond]]." },
+        { "type": "fun", "text": "Le sais-tu ? Le verbe aller emprunte ses formes à trois verbes latins : vadere (je vais), ambulare (nous allons) et ire (j'irai). Voilà pourquoi il est si bizarre !" }
+      ],
+      "vocab": [
+        { "mot": "obéir", "def": "Faire ce qu'on nous demande, suivre un ordre.", "ex": "Le chien obéit à son maître.", "alt": [] },
+        { "mot": "réussir", "def": "Arriver au résultat que l'on voulait.", "ex": "Tu vas réussir ton examen.", "alt": [] },
+        { "mot": "atterrir", "def": "Se poser sur le sol, pour un avion.", "ex": "L'avion va atterrir dans dix minutes.", "alt": [] },
+        { "mot": "rougir", "def": "Devenir rouge, souvent de honte ou de timidité.", "ex": "Il rougit quand on le complimente.", "alt": [] },
+        { "mot": "éteindre", "def": "Faire cesser un feu ou une lumière.", "ex": "N'oublie pas d'éteindre la lumière.", "alt": [] },
+        { "mot": "peindre", "def": "Couvrir de peinture, ou représenter avec de la peinture.", "ex": "Nous allons peindre la barrière en vert.", "alt": [] },
+        { "mot": "résoudre", "def": "Trouver la solution d'un problème.", "ex": "Le détective va résoudre l'énigme.", "alt": [] },
+        { "mot": "coudre", "def": "Assembler du tissu avec du fil et une aiguille.", "ex": "Mamie m'apprend à coudre un bouton.", "alt": [] },
+        { "mot": "apercevoir", "def": "Voir tout à coup, ou de loin.", "ex": "D'ici, on peut apercevoir le clocher du village.", "alt": [] },
+        { "mot": "conduire", "def": "Diriger une voiture ou un autre véhicule.", "ex": "Ma sœur apprend à conduire.", "alt": [] },
+        { "mot": "cueillir", "def": "Détacher des fleurs ou des fruits de la plante.", "ex": "Nous allons cueillir des cerises.", "alt": [] },
+        { "mot": "courir", "def": "Avancer très vite en faisant de grandes enjambées.", "ex": "Il faut courir pour attraper le bus.", "alt": [] },
+        { "mot": "mentir", "def": "Dire volontairement quelque chose de faux.", "ex": "Pinocchio ne peut pas mentir sans que son nez s'allonge.", "alt": [] },
+        { "mot": "prévenir", "def": "Avertir quelqu'un à l'avance.", "ex": "Pense à prévenir tes parents si tu es en retard.", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Vous faites beaucoup de bruit.", "indice": "Une remarque à des enfants agités", "trap": ["faisez", "beaucoups"], "alt": [] },
+        { "phrase": "Mes parents prennent le train ce soir.", "indice": "Un voyage en famille", "trap": ["prenent"], "alt": ["Ce soir, mes parents prennent le train."] },
+        { "phrase": "Je peux t'aider à ranger.", "indice": "Une proposition gentille", "trap": ["peut"], "alt": [] },
+        { "phrase": "Les élèves finissent leurs exercices.", "indice": "La fin du travail en classe", "trap": ["finisent"], "alt": [] },
+        { "phrase": "Nous allons au cinéma dimanche.", "indice": "Une sortie de week-end", "trap": ["allont"], "alt": ["Dimanche, nous allons au cinéma."] },
+        { "phrase": "Ils voient la mer depuis leur chambre.", "indice": "Une chambre avec vue", "trap": ["voyent"], "alt": [] },
+        { "phrase": "Tu dis toujours la vérité.", "indice": "Une personne honnête", "trap": ["dit"], "alt": [] },
+        { "phrase": "Le pompier éteint le feu.", "indice": "Un incendie maîtrisé", "trap": ["éteind"], "alt": [] },
+        { "phrase": "Elle veut un chiot pour son anniversaire.", "indice": "Un cadeau qui aboie", "trap": ["veux"], "alt": [] },
+        { "phrase": "Vous dites des bêtises !", "indice": "Une réponse agacée", "trap": ["disez"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "Vous ___ vos devoirs.", "choices": ["faites", "faisez", "faitent"], "answer": 0, "explain": "Faire est irrégulier : vous faites." },
+        { "type": "mcq", "q": "Ils ___ au marché.", "choices": ["vont", "allent", "vonts"], "answer": 0, "explain": "Aller au présent : ils vont." },
+        { "type": "mcq", "q": "Je ___ venir demain.", "choices": ["peux", "peut", "peus"], "answer": 0, "explain": "Avec je, pouvoir s'écrit avec un x : je peux." },
+        { "type": "mcq", "q": "La neige ___ au soleil.", "choices": ["fond", "font", "fon"], "answer": 0, "explain": "Fondre se termine par -dre : il garde le d, elle fond. Font, c'est le verbe faire." },
+        { "type": "mcq", "q": "Nous ___ nos légumes au marché.", "choices": ["choisissons", "choisisons", "choisons"], "answer": 0, "explain": "Choisir est du 2e groupe : nous choisissons, avec deux s." },
+        { "type": "fill", "q": "Tu ___ ta veste.", "hint": "prendre, au présent", "answer": ["prends"], "explain": "Prendre garde son d : tu prends." },
+        { "type": "fill", "q": "Ils ___ des gâteaux.", "hint": "faire, au présent", "answer": ["font"], "explain": "Faire au présent : ils font." },
+        { "type": "fill", "q": "Elle ___ ses chaussures.", "hint": "mettre, au présent", "answer": ["met"], "explain": "Mettre au présent : elle met, avec un seul t." },
+        { "type": "fill", "q": "Vous ___ toujours oui.", "hint": "dire, au présent", "answer": ["dites"], "explain": "Dire est irrégulier avec vous : vous dites." },
+        { "type": "fill", "q": "Mes amis ___ ce soir.", "hint": "venir, au présent", "answer": ["viennent"], "explain": "Venir au présent : ils viennent, avec deux n." },
+        { "type": "fill", "q": "Nous ___ un film.", "hint": "voir, au présent", "answer": ["voyons"], "explain": "Voir : nous voyons, avec un y." },
+        { "type": "fill", "q": "Les chiens ___ à leur maître.", "hint": "obéir, au présent", "answer": ["obéissent"], "explain": "Obéir est du 2e groupe : ils obéissent." },
+        { "type": "error", "q": "Nous prennons le bus.", "wrong": 1, "fix": ["prenons"], "explain": "Prendre : nous prenons (un seul n), mais ils prennent (deux n)." },
+        { "type": "error", "q": "Il peind un paysage.", "wrong": 1, "fix": ["peint"], "explain": "Les verbes en -indre perdent le d : il peint." },
+        { "type": "error", "q": "Ils croivent au père Noël.", "wrong": 1, "fix": ["croient"], "explain": "Croire au présent : ils croient." },
+        { "type": "error", "q": "Tu veut une pomme ?", "wrong": 1, "fix": ["veux"], "explain": "Avec tu, vouloir prend un x : tu veux." }
+      ]
+    },
+    {
+      "id": "2.5",
+      "name": "Les jumeaux reviennent",
+      "title": "ou / où, ce / se, ces / ses / c'est / s'est, mes / mais / met / mets",
+      "goal": "Choisir le bon homophone grâce aux astuces de remplacement.",
+      "lesson": [
+        { "type": "p", "text": "Ces mots se prononcent de la même façon mais ne s'écrivent pas pareil. Une astuce de remplacement permet presque toujours de choisir." },
+        { "type": "rule", "title": "ou / où", "text": "**ou** marque un choix, on peut dire **ou bien** : [[du thé ou du café]]. **où** indique un lieu ou un moment : [[Où vas-tu ?]], [[le jour où il a neigé]]." },
+        { "type": "rule", "title": "ce / se", "text": "**se** est devant un verbe : on peut le remplacer par **me** ou **te** ([[il se lave]] → [[je me lave]]). **ce** est devant un nom ([[ce chien]]) ou devant qui, que, dont ([[ce que je veux]])." },
+        { "type": "table", "head": ["Mot", "Astuce", "Exemple"], "rows": [["ces", "on peut ajouter -là après le nom", "[[ces chiens-là]]"], ["ses", "on peut dire les siens, les siennes", "[[Léa range ses jouets]]"], ["c'est", "on peut dire cela est", "[[C'est l'heure !]]"], ["s'est", "devant un participe, avec je me suis", "[[Il s'est levé]] → [[je me suis levé]]"]] },
+        { "type": "rule", "title": "mes / mais / met / mets", "text": "**mes** = les miens ([[mes crayons]]). **mais** marque une opposition ([[petit mais costaud]]). **met** = mettre avec il ou elle ([[il met]]). **mets** = mettre avec je ou tu ([[je mets]], [[tu mets]]), ou un plat cuisiné ([[un mets délicieux]])." },
+        { "type": "examples", "items": [
+          { "ex": "**Où** as-tu rangé tes chaussures ?", "note": "une question de lieu" },
+          { "ex": "Tu préfères la plage **ou** la montagne ?", "note": "on peut dire « ou bien »" },
+          { "ex": "Mon frère **se** brosse les dents.", "note": "je me brosse : se" },
+          { "ex": "**C'est** l'heure du goûter.", "note": "cela est l'heure : c'est" },
+          { "ex": "Je **mets** **mes** bottes, **mais** il ne pleut pas.", "note": "trois jumeaux dans une seule phrase" }
+        ] },
+        { "type": "compare", "title": "Les fautes les plus fréquentes", "items": [
+          { "ko": "~~Ou~~ est ton manteau ?", "ok": "**Où** est ton manteau ?", "why": "Une question de lieu : où." },
+          { "ko": "Il ~~ce~~ lave.", "ok": "Il **se** lave.", "why": "On peut dire je me lave : se." },
+          { "ko": "~~Sait~~ génial !", "ok": "**C'est** génial !", "why": "Cela est génial : c'est." },
+          { "ko": "Je ~~met~~ mon manteau.", "ok": "Je **mets** mon manteau.", "why": "Avec je, mettre se termine par -s." }
+        ] },
+        { "type": "tip", "title": "Piège à éviter", "text": "**ces** ou **ses** ? Si tu peux ajouter « -là » après le nom ([[ces chaussures-là]]), écris ces. Si tu peux dire « les siennes », écris ses. Parfois les deux ont un sens : c'est alors le contexte qui décide." },
+        { "type": "fun", "text": "Le sais-tu ? Où est le seul mot de la langue française qui s'écrit avec un u accent grave. Une touche entière du clavier français lui est presque réservée !" }
+      ],
+      "vocab": [
+        { "mot": "verre", "def": "Récipient dans lequel on boit.", "ex": "Je bois un verre d'eau.", "alt": [] },
+        { "mot": "ver", "def": "Petit animal mou, sans pattes, qui vit dans la terre.", "ex": "Le merle attrape un ver de terre.", "alt": [] },
+        { "mot": "vers", "def": "Ligne d'un poème.", "ex": "Ce poème compte douze vers.", "alt": [] },
+        { "mot": "mer", "def": "Grande étendue d'eau salée.", "ex": "Nous nous baignons dans la mer.", "alt": [] },
+        { "mot": "maire", "def": "Personne élue qui dirige une commune.", "ex": "Le maire inaugure la nouvelle école.", "alt": [] },
+        { "mot": "pin", "def": "Arbre aux longues aiguilles qui donne des pommes de pin.", "ex": "Le pin parfume la forêt des Landes.", "alt": [] },
+        { "mot": "poing", "def": "Main fermée.", "ex": "Il tape du poing sur la table.", "alt": [] },
+        { "mot": "selle", "def": "Siège que l'on pose sur le dos d'un cheval ou sur un vélo.", "ex": "Règle la selle de ton vélo.", "alt": [] },
+        { "mot": "champ", "def": "Terrain cultivé à la campagne.", "ex": "Le tracteur laboure le champ.", "alt": [] },
+        { "mot": "coup", "def": "Choc donné à quelqu'un ou à quelque chose.", "ex": "Il a reçu un coup de ballon.", "alt": [] },
+        { "mot": "cou", "def": "Partie du corps qui relie la tête aux épaules.", "ex": "La girafe a un très long cou.", "alt": [] },
+        { "mot": "sang", "def": "Liquide rouge qui circule dans le corps.", "ex": "Il a du sang sur le genou.", "alt": [] },
+        { "mot": "mets", "def": "Plat préparé pour un repas, dans la langue soignée.", "ex": "Ce mets raffiné vient de Provence.", "alt": [] },
+        { "mot": "conte", "def": "Histoire imaginaire, souvent avec des fées ou des ogres.", "ex": "Grand-père nous lit un conte.", "alt": [] },
+        { "mot": "compte", "def": "Calcul d'une quantité, ou argent déposé à la banque.", "ex": "Le compte est bon !", "alt": [] }
+      ],
+      "sentences": [
+        { "phrase": "Où as-tu rangé tes chaussures ?", "indice": "Une question de maman", "trap": ["Ou"], "alt": [] },
+        { "phrase": "Tu préfères le chocolat ou la vanille ?", "indice": "Un choix de parfum", "trap": ["où"], "alt": [] },
+        { "phrase": "Mon frère se lave les dents.", "indice": "Avant d'aller au lit", "trap": ["ce"], "alt": [] },
+        { "phrase": "Ce livre est passionnant.", "indice": "Une lecture captivante", "trap": ["Se"], "alt": [] },
+        { "phrase": "C'est l'heure du goûter.", "indice": "Seize heures trente", "trap": ["S'est", "Ses"], "alt": [] },
+        { "phrase": "Il s'est endormi devant la télévision.", "indice": "Une soirée qui finit tôt", "trap": ["c'est"], "alt": [] },
+        { "phrase": "Léa range ses jouets dans ce coffre.", "indice": "Une chambre rangée", "trap": ["ces", "se"], "alt": [] },
+        { "phrase": "Je mets mes bottes, mais il ne pleut pas.", "indice": "Une précaution inutile", "trap": ["met"], "alt": [] },
+        { "phrase": "Ces nuages annoncent la pluie.", "indice": "Une météo menaçante", "trap": ["Ses", "C'est"], "alt": [] },
+        { "phrase": "Papa met la table pour le dîner.", "indice": "Avant le repas du soir", "trap": ["mets", "mais"], "alt": [] }
+      ],
+      "grammar": [
+        { "type": "mcq", "q": "___ habite ta cousine ?", "choices": ["Où", "Ou"], "answer": 0, "explain": "La question porte sur un lieu : où." },
+        { "type": "mcq", "q": "Il ___ réveille à sept heures.", "choices": ["se", "ce"], "answer": 0, "explain": "On peut dire je me réveille : se." },
+        { "type": "mcq", "q": "Malik a oublié ___ lunettes chez lui.", "choices": ["ses", "ces", "c'est"], "answer": 0, "explain": "Les lunettes de Malik, les siennes : ses." },
+        { "type": "mcq", "q": "___ vraiment gentil de ta part.", "choices": ["C'est", "S'est", "Ses"], "answer": 0, "explain": "On peut dire cela est gentil : c'est." },
+        { "type": "mcq", "q": "J'ai froid, ___ je n'ai pas de manteau.", "choices": ["mais", "mes", "met"], "answer": 0, "explain": "On exprime une opposition : mais." },
+        { "type": "fill", "q": "Veux-tu de l'eau ___ du jus ?", "hint": "ou ou où ?", "answer": ["ou"], "explain": "On peut dire « ou bien » : ou, sans accent." },
+        { "type": "fill", "q": "La maison ___ j'ai grandi est en Bretagne.", "hint": "ou ou où ?", "answer": ["où"], "explain": "Il s'agit d'un lieu : où, avec un accent." },
+        { "type": "fill", "q": "Le chat ___ cache sous le lit.", "hint": "ce ou se ?", "answer": ["se"], "explain": "On peut dire je me cache : se." },
+        { "type": "fill", "q": "Ma sœur ___ trompée de chemin.", "hint": "c'est ou s'est ?", "answer": ["s'est"], "explain": "C'est le verbe se tromper : je me suis trompée, elle s'est trompée." },
+        { "type": "fill", "q": "Tu ___ ton bonnet.", "hint": "mettre, au présent", "answer": ["mets"], "explain": "Avec tu, mettre se termine par -s : tu mets." },
+        { "type": "fill", "q": "J'ai prêté ___ crayons à Théo.", "hint": "mes, mais, met ou mets ?", "answer": ["mes"], "explain": "Les crayons sont à moi, ce sont les miens : mes." },
+        { "type": "fill", "q": "Regarde ___ étoiles là-haut !", "hint": "ces ou ses ?", "answer": ["ces"], "explain": "On peut dire ces étoiles-là : ces." },
+        { "type": "error", "q": "Ou est passé le chat ?", "wrong": 0, "fix": ["Où"], "explain": "La question porte sur un lieu : où." },
+        { "type": "error", "q": "Mon oncle ce rase tous les matins.", "wrong": 2, "fix": ["se"], "explain": "On peut dire je me rase : se." },
+        { "type": "error", "q": "Sait la fin des vacances.", "wrong": 0, "fix": ["C'est"], "explain": "On peut dire cela est la fin : c'est." },
+        { "type": "error", "q": "Je met la table.", "wrong": 1, "fix": ["mets"], "explain": "Avec je, mettre se termine par -s : je mets." }
+      ]
+    }
+  ]
+}

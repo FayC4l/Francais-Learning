@@ -1,0 +1,124 @@
+{
+  "level": 2,
+  "units": [
+    {
+      "unit": "2.1",
+      "dictee": {
+        "titre": "Le carnaval du village",
+        "texte": "Samedi, c'est le carnaval du village. Les chevaux défilent avec des rubans, les enfants portent des bijoux en papier et des chapeaux à plumes. Sous les vitraux de l'église, deux hiboux ouvrent un œil. Quels drôles de jeux !",
+        "points": [
+          "**chevaux** : les noms en -al font -aux. Mais **carnaval** est une exception : des carnavals.",
+          "**bijoux**, **hiboux** : deux des sept noms en -ou qui prennent un x.",
+          "**chapeaux**, **jeux** : les noms en -eau et en -eu prennent un x.",
+          "**vitraux** : vitrail fait partie des sept noms en -ail qui font -aux.",
+          "**un œil** : avec le e dans l'o. Au pluriel, on dirait des yeux !"
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Raconte à voix haute une visite au zoo ou à la ferme en citant au moins cinq animaux au pluriel (chevaux, hiboux, chacals…). Puis écris la liste de ces pluriels.",
+        "model": "Au zoo, j'ai vu des chevaux sauvages, des chacals endormis, deux hiboux perchés sur une branche, des kangourous et des chameaux. Liste : chevaux, chacals, hiboux, kangourous, chameaux.",
+        "checklist": [
+          "J'ai cité au moins cinq animaux au pluriel.",
+          "J'ai vérifié les noms en -al : des chevaux, mais des chacals.",
+          "J'ai écrit hiboux avec un x et kangourous avec un s."
+        ]
+      }
+    },
+    {
+      "unit": "2.2",
+      "dictee": {
+        "titre": "La nouvelle voisine",
+        "texte": "Notre nouvelle voisine est une ancienne danseuse. Elle est rousse, sportive et toujours joyeuse. Chaque matin, elle promène sa vieille chienne, une petite bête douce et gentille. Ma mère la trouve très originale.",
+        "points": [
+          "**nouvelle**, **vieille** : nouveau et vieux changent complètement au féminin.",
+          "**ancienne**, **chienne** : -en devient -enne, avec deux n.",
+          "**rousse**, **douce** : roux donne rousse, doux donne douce.",
+          "**sportive** : -f devient -ve. **joyeuse**, **danseuse** : -eux et -eur deviennent -euse.",
+          "**gentille** : deux l au féminin."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Fais en quatre phrases le portrait d'une femme que tu admires (une sportive, une artiste, une grand-mère…). Utilise au moins quatre adjectifs au féminin.",
+        "model": "Ma grand-mère Yasmine est une femme joyeuse et courageuse. Elle est sportive : elle nage chaque matin dans la mer, même quand l'eau est fraîche. Elle est aussi très gentille avec ses voisins. C'est une ancienne institutrice, curieuse de tout.",
+        "checklist": [
+          "J'ai utilisé au moins quatre adjectifs au féminin.",
+          "J'ai vérifié les terminaisons -euse, -ve, -enne et -elle.",
+          "Chaque adjectif s'accorde avec le nom qu'il décrit."
+        ]
+      }
+    },
+    {
+      "unit": "2.3",
+      "dictee": {
+        "titre": "Le goûter des cousines",
+        "texte": "Sur la table, il y a des tartes dorées, des fraises sucrées et des biscuits croustillants. Mes cousines sont gourmandes : elles semblent ravies. Une heure plus tard, la nappe et les serviettes sont couvertes de miettes !",
+        "points": [
+          "**dorées**, **sucrées** : tartes et fraises sont au féminin pluriel.",
+          "**croustillants** : biscuits est au masculin pluriel.",
+          "**gourmandes**, **ravies** : après être et sembler, l'adjectif s'accorde avec le sujet (mes cousines, elles).",
+          "**couvertes** : deux noms féminins, la nappe et les serviettes, donnent un féminin pluriel."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Décris à voix haute ta chambre ou ta pièce préférée : couleurs, meubles, objets. Puis écris trois phrases de ta description en accordant tous les adjectifs.",
+        "model": "Ma chambre est petite mais lumineuse. Les murs sont bleus et les rideaux sont jaunes. Sur mes étagères blanches, je range des livres épais et des boîtes colorées.",
+        "checklist": [
+          "Chaque adjectif a le genre et le nombre de son nom.",
+          "Après être, j'ai accordé l'adjectif avec le sujet.",
+          "J'ai relu les pluriels : -s, ou rien pour les adjectifs en -s et en -x."
+        ]
+      }
+    },
+    {
+      "unit": "2.4",
+      "dictee": {
+        "titre": "Le mercredi de Nathan",
+        "texte": "Le mercredi, Nathan prend son vélo et va chez son ami Karim. Ils font des crêpes, puis ils finissent leurs devoirs. Quand la nuit vient, Nathan dit : « Vous voyez, je peux rentrer seul ! »",
+        "points": [
+          "**prend** : les verbes en -dre gardent le d avec il.",
+          "**va**, **font** : aller et faire sont très irréguliers.",
+          "**finissent** : finir est du 2e groupe, -issent avec ils.",
+          "**voyez** : le y de voir apparaît avec nous et vous.",
+          "**peux** : avec je et tu, pouvoir prend un x."
+        ]
+      },
+      "mission": {
+        "type": "ecrit",
+        "prompt": "Écris en cinq phrases au présent le programme d'un mercredi idéal, avec au moins quatre de ces verbes : aller, faire, prendre, venir, pouvoir, vouloir, voir, finir.",
+        "model": "Le matin, je vais à la piscine avec mon père. Nous prenons le bus, car c'est loin. L'après-midi, mes amis viennent à la maison et nous faisons un gâteau. Le soir, nous voyons un film. Nous finissons par une partie de cartes.",
+        "checklist": [
+          "J'ai utilisé au moins quatre verbes de la liste.",
+          "J'ai vérifié les terminaisons : -s avec je et tu, -t ou -d avec il.",
+          "Pas de « faisez » ni de « disez » !"
+        ]
+      }
+    },
+    {
+      "unit": "2.5",
+      "dictee": {
+        "titre": "Où est passé Gribouille ?",
+        "texte": "Où est passé Gribouille, le chat de ma voisine ? Il se cache souvent dans ce grenier ou sous ses couvertures. Ce matin, c'est moi qui le cherche, mais il s'est sauvé. Je mets mes bottes et je pars.",
+        "points": [
+          "**Où** (une question de lieu) et **ou** (on peut dire « ou bien »).",
+          "**se cache** : je me cache. **ce grenier**, **ce matin** : devant un nom.",
+          "**ses couvertures** : les siennes. **c'est moi** : cela est moi. **s'est sauvé** : je me suis sauvé.",
+          "**je mets** (verbe mettre), **mes bottes** (les miennes), **mais** (une opposition)."
+        ]
+      },
+      "mission": {
+        "type": "oral",
+        "prompt": "Lis à voix haute ce petit défi, puis écris-le en choisissant le bon mot : « (Ou / Où) vas-tu ? Je (mets / mais) (mes / mais) baskets, (mais / mes) il pleut. (C'est / S'est) dommage ! »",
+        "model": "Où vas-tu ? Je mets mes baskets, mais il pleut. C'est dommage !",
+        "checklist": [
+          "Où, avec un accent, pour une question de lieu.",
+          "Je mets, avec un s à la fin.",
+          "Mes pour les miennes, mais pour une opposition.",
+          "C'est, parce qu'on peut dire « cela est »."
+        ]
+      }
+    }
+  ]
+}

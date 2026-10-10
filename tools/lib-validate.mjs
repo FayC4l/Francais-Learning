@@ -36,6 +36,7 @@ export function unknownWords(text) {
     if (/[-…]$/.test(before) || FRAGMENTS.has(w.toLowerCase())) continue; // an ending quoted in a lesson
     const parts = w.split("'");
     const core = parts.length > 1 && /^(c|d|j|l|m|n|s|t|qu|jusqu|lorsqu|puisqu|quoiqu|presqu|quelqu)$/i.test(parts[0]) ? parts.slice(1).join("'") : w;
+    if (parts.length > 1 && /^\p{Lu}/u.test(core)) continue; // d'Afrique, l'Élysée
     if (KNOWN.has(core.toLowerCase()) || KNOWN.has(w.toLowerCase())) continue;
     if (core.length > 1 && tierOf(core) === 0 && tierOf(w) === 0) out.push(w);
   }

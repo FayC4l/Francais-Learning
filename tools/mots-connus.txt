@@ -117,3 +117,4 @@ impératif
 gérondif
 COD
 COI
+france
