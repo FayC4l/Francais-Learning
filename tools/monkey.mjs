@@ -25,7 +25,8 @@ async function run(label, viewport) {
     window.print = () => {};
   });
   const screens = new Set();
-  page.on("pageerror", async (e) => errors.push(`[${label}] pageerror on "${await page.locator("#view").getAttribute("data-screen").catch(() => "?")}": ${e.message}`));
+  page.on("pageerror", async (e) => errors.push(`[${label}] pageerror on "${await page.locator("#view").getAttribute("data-screen").catch(() => "?")}": ${e.message}${process.env.MONKEY_STACK ? `
+${e.stack}` : ""}`));
   page.on("console", (m) => m.type() === "error" && !/fonts\.g|ERR_|net::|Failed to load resource/.test(m.text()) && errors.push(`[${label}] console: ${m.text()}`));
   await page.goto(`file:///${file.replace(/\\/g, "/").replace(/^\//, "")}`, { waitUntil: "domcontentloaded", timeout: 30000 });
   await page.fill("#player-name", "Monkey");

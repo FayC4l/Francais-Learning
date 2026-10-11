@@ -118,3 +118,13 @@ test("analyse : temps, connecteurs, registre ; note sur 20", () => {
   assert.ok(sb.total <= 9, `texte fautif : ${sb.total}`);
   assert.ok(analyze(bad, p).familiar >= 2);
 });
+
+test("le premier appel du correcteur charge le dictionnaire de la page (sans plantage)", async () => {
+  // A fresh process: nothing loaded yet, the dictionary comes from window.__DICT__ as in the built page.
+  const { execFileSync } = await import("node:child_process");
+  const code = `globalThis.window = { __DICT__: "0chat~0,1hien~0" };
+const { tierOf } = await import(${JSON.stringify(new URL("../src/writing/spell.js", import.meta.url).href)});
+console.log(tierOf("chat"), tierOf("zzz"));`;
+  const out = execFileSync(process.execPath, ["--input-type=module", "-e", code], { encoding: "utf8" }).trim();
+  assert.equal(out, "1 0");
+});

@@ -36,7 +36,11 @@ export function loadDictionary(encoded = globalThis.window?.__DICT__ || "") {
   return TIER.size;
 }
 
-const ensure = () => TIER || loadDictionary();
+// (loadDictionary returns the number of words: the dictionary itself is TIER.)
+const ensure = () => {
+  if (!TIER) loadDictionary();
+  return TIER;
+};
 export const dictionaryReady = () => ensure().size > 0;
 
 // Inverted pronouns and particles found after a hyphen (dit-il, va-t'en, celui-ci, peut-être…).
