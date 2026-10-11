@@ -31,7 +31,7 @@ await page.goto(`file:///${file.replace(/\\/g, "/").replace(/^\//, "")}`, { wait
 await page.fill("#player-name", "Lynda");
 await page.click(".age-opt[data-age=ado]");
 await page.click("text=Monter à bord");
-await page.click("text=Je débute de zéro");
+await page.click("text=Je commence au début");
 await page.waitForSelector(".map");
 await patch((s) => {
   for (let L = 1; L <= 11; L++) s.bosses[L] = { defeated: true, at: new Date().toISOString() };

@@ -90,7 +90,7 @@ async function run({ name, viewport, scheme, tts, placement = false }) {
     });
   } else {
     await step("start from zero", async () => {
-      await page.click("text=Je débute de zéro");
+      await page.click("text=Je commence au début");
       await page.waitForSelector(".map");
     });
   }
@@ -101,35 +101,28 @@ async function run({ name, viewport, scheme, tts, placement = false }) {
   });
   await shot("03-lesson");
   await step("lesson narration", async () => {
-    const btn = page.locator(".coach-btn");
+    const btn = page.locator(".coach-btn").first();
     if (await btn.isVisible()) {
       await btn.click();
       await page.waitForTimeout(400);
       await btn.click();
     }
   });
-  await step("lesson -> pron", async () => {
+  await step("lesson -> dictée", async () => {
     await page.click("text=J'ai compris, étape suivante");
-    await page.waitForSelector(".body-pron");
+    await page.waitForSelector(".body-dictee");
   });
-  await shot("04-pron");
-  await step("coach + ear training", async () => {
+  await shot("04-dictee");
+  await step("dictée", async () => {
     if (tts) {
-      await page.click(".pron-card .coach-btn");
+      await page.click("text=2. Dicter");
       await page.waitForTimeout(300);
-      await page.click(".pron-card .coach-btn");
-      await page.click("text=Commencer l'entraînement");
-      for (let i = 0; i < 8; i++) {
-        await page.waitForSelector(".ear-round .choice:not([disabled])", { timeout: 4000 });
-        await page.locator(".ear-round .choice").first().click();
-        await page.waitForTimeout(1000);
-      }
-      await page.waitForSelector(".ear-end");
-      await shot("05-ear-end");
-      await page.click(".ear-end >> text=Étape suivante");
-    } else {
-      await page.click("text=Oui, étape suivante");
-    }
+      await page.fill(".dictee-area", "Le chat dort sur le canapé, près de la fenêtre.");
+      await page.click("text=Corriger ma dictée");
+      await page.waitForSelector(".dictee-mark");
+      await shot("05-dictee-mark");
+      await page.click(".body-dictee >> text=Étape suivante");
+    } else await page.click("text=Passer la dictée pour l'instant");
     await page.waitForSelector(".body-words");
   });
   await step("flashcards", async () => {
@@ -162,10 +155,10 @@ async function run({ name, viewport, scheme, tts, placement = false }) {
       await shot(`08-game-${g.replace(/\W+/g, "_")}`);
       // Interact a little
       if (g === "Paires express") for (const c of (await page.locator(".mem-card").all()).slice(0, 4)) await c.click().catch(() => {});
-      if (g === "Pluie de mots") await page.fill("#rain-input", "hello");
+      if (g === "Pluie de mots") await page.fill("#rain-input", "bonjour");
       if (g === "Éclair") for (let i = 0; i < 4; i++) await page.keyboard.press("ArrowRight");
       if (g === "Bulles sonores") await page.waitForTimeout(800);
-      if (g === "Épelle-le") for (const k of "hello") await page.keyboard.press(k);
+      if (g === "Épelle-le") for (const k of "chat") await page.keyboard.press(k);
       if (g === "Le Constructeur") {
         for (let k = 0; k < 3; k++) if (await page.locator(".build-bank .tile").count()) await page.locator(".build-bank .tile").first().click();
         await page.click(".btn-validate");
@@ -173,7 +166,7 @@ async function run({ name, viewport, scheme, tts, placement = false }) {
       }
       if (g === "Chasse aux fautes") await page.locator(".hunt-words .word-chip").nth(1).click();
       if (g === "Dictée flash") {
-        await page.fill("#answer-input", "My name is Lucas.");
+        await page.fill("#answer-input", "Le chat dort.");
         await page.keyboard.press("Enter");
       }
       if (g === "Défi grammaire") await page.waitForTimeout(300);
@@ -201,8 +194,8 @@ async function run({ name, viewport, scheme, tts, placement = false }) {
       const card = page.locator(".q-card");
       await card.waitFor({ timeout: 5000 });
       const kind = (await card.getAttribute("class")).match(/kind-(\w+)/)[1];
-      if (["type_en", "listen_type", "dictation", "fill"].includes(kind)) {
-        await page.fill("#answer-input", "hello");
+      if (["type_mot", "listen_type", "dictation", "fill"].includes(kind)) {
+        await page.fill("#answer-input", "bonjour");
         await page.keyboard.press("Enter");
       } else if (kind === "build") {
         await page.locator(".build-bank .tile").first().click();
@@ -210,7 +203,7 @@ async function run({ name, viewport, scheme, tts, placement = false }) {
       } else if (kind === "error") {
         await page.locator(".error-words .word-chip").nth(1).click();
         if (await page.locator("#answer-input").count()) {
-          await page.fill("#answer-input", "is");
+          await page.fill("#answer-input", "est");
           await page.keyboard.press("Enter");
         }
       } else {
@@ -234,21 +227,22 @@ async function run({ name, viewport, scheme, tts, placement = false }) {
     await page.waitForSelector(".review");
   });
   await shot("13-review");
-  await step("profile + big brother", async () => {
+  await step("profile", async () => {
     await page.click(".topbar .icon-btn");
+    await page.waitForSelector(".map");
     await page.click(".player-chip");
     await page.waitForSelector(".profile");
     await shot("14-profile");
-    await page.click("text=Ouvrir la zone gestion");
-    await page.fill("#pin", "1234");
-    await page.click(".dialog >> text=Valider");
-    await page.waitForSelector(".zone");
-    await page.check("#unlock-all");
-    await shot("15-zone");
   });
   await step("boss", async () => {
-    await page.click(".topbar .icon-btn");
-    await page.click(".topbar .icon-btn");
+    await page.evaluate(() => {
+      const g = JSON.parse(localStorage.getItem("mission-francais:global"));
+      const key = `mission-francais:p:${g.activeId}`;
+      const st = JSON.parse(localStorage.getItem(key));
+      for (let k = 1; k <= 5; k++) st.units[`1.${k}`] = { passed: true, stars: 2 };
+      localStorage.setItem(key, JSON.stringify(st));
+    });
+    await page.reload({ waitUntil: "domcontentloaded" });
     await page.waitForSelector(".map");
     await page.locator(".station.boss .station-btn").first().click();
     await page.waitForTimeout(400);
@@ -265,7 +259,7 @@ async function run({ name, viewport, scheme, tts, placement = false }) {
       const card = page.locator(".q-card");
       await card.waitFor({ timeout: 5000 });
       const kind = (await card.getAttribute("class")).match(/kind-(\w+)/)[1];
-      if (["type_en", "listen_type", "dictation", "fill"].includes(kind)) {
+      if (["type_mot", "listen_type", "dictation", "fill"].includes(kind)) {
         await page.fill("#answer-input", "zzz");
         await page.keyboard.press("Enter");
       } else if (kind === "build") {

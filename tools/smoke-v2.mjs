@@ -40,8 +40,11 @@ const answerCurrent = async (text = "zzz") => {
   const card = page.locator(".q-card");
   await card.waitFor({ timeout: 5000 });
   const kind = (await card.getAttribute("class")).match(/kind-(\w+)/)[1];
-  if (["type_en", "listen_type", "dictation", "fill"].includes(kind)) {
-    await page.fill("#answer-input", text);
+  if (["type_mot", "listen_type", "dictation", "fill"].includes(kind)) {
+    // A gap of several words has one box per word: fill them all, then validate.
+    const boxes = await page.locator(".q-card .gap-box").all();
+    if (boxes.length > 1) for (const b of boxes) await b.fill(text);
+    else await page.fill("#answer-input", text);
     await page.keyboard.press("Enter");
   } else if (kind === "build") {
     await page.locator(".build-bank .tile").first().click();
@@ -59,7 +62,7 @@ await step("create two profiles", async () => {
   await page.fill("#player-name", "Lina");
   await page.click(".age-opt[data-age=enfant]");
   await page.click("text=Monter à bord");
-  await page.click("text=Je débute de zéro");
+  await page.click("text=Je commence au début");
   await page.waitForSelector(".map");
   await page.click(".player-chip");
   await page.click("text=Ajouter un membre de la famille");
@@ -67,7 +70,7 @@ await step("create two profiles", async () => {
   await page.click(".age-opt[data-age=adulte]");
   await page.click("text=Créer le profil");
   await page.waitForSelector(".welcome");
-  await page.click("text=Je débute de zéro");
+  await page.click("text=Je commence au début");
   await page.waitForSelector(".map");
   await page.reload({ waitUntil: "domcontentloaded" });
   await page.waitForSelector(".who");
@@ -98,12 +101,12 @@ await step("daily training", async () => {
 await step("conjugator", async () => {
   await page.click(".tool-card:has-text('Conjugueur')");
   await page.waitForSelector(".conjugator");
-  await page.fill("#verb-search", "swim");
+  await page.fill("#verb-search", "nager");
   await page.keyboard.press("Enter");
-  await page.waitForSelector(".conj-verb:has-text('to swim')");
+  await page.waitForSelector(".conj-verb:has-text('nager')");
   await page.click(".chip:has-text('Négatif')");
   const txt = await page.locator(".conj-tables").innerText();
-  if (!/didn't swim/.test(txt) || !/hasn't swum/.test(txt)) throw new Error("negative tables look wrong");
+  if (!/ne nage pas/.test(txt) || !/n'a pas nagé/.test(txt)) throw new Error("negative tables look wrong");
   await shot("04-conjugator");
   await page.click("text=M'entraîner sur ce verbe");
   await page.waitForSelector(".quiz");
@@ -120,7 +123,7 @@ await step("writing workshop", async () => {
   await page.waitForSelector(".writing");
   await page.locator(".w-card").first().click();
   await page.waitForSelector("#w-text");
-  await page.fill("#w-text", "Hi Emma!\nMy name is Lina and i have twelve years. I live in Ottawa since two years. My brother play hockey every day and he go to school by bus. I like very much pizza. See you soon!\nLina");
+  await page.fill("#w-text", "Salut Emma !\nJe m'apelle Lina et j'ai douze ans. J'habite a Lyon depuis deux ans. Mon frère joue au foot tout les jour et il vont à l'école en bus. J'aime beaucoup les pizza. A bientôt !\nLina");
   await page.click("text=Faire corriger");
   await page.waitForSelector(".w-report");
   const marks = await page.locator(".w-annotated .w-err").count();
@@ -137,10 +140,10 @@ await step("writing workshop", async () => {
 });
 
 await step("C2 parts", async () => {
-  await page.click(".tool-card:has-text('Prépa C2')");
+  await page.click(".tool-card:has-text('Prépa DALF')");
   await page.waitForSelector(".c2");
   await shot("07-c2");
-  await page.click(".c2-part:has-text('Part 1')");
+  await page.click(".c2-part:has-text('texte à trous')");
   await page.waitForSelector(".c2-select");
   for (const s of await page.locator(".c2-select").all()) await s.selectOption({ index: 1 });
   await page.click("text=Corriger");
@@ -148,23 +151,23 @@ await step("C2 parts", async () => {
   await shot("08-c2-part1");
   await page.click("text=Continuer");
   await page.waitForSelector(".results");
-  await page.click("text=Retour à la prépa C2");
-  await page.click(".c2-part:has-text('Part 4')");
+  await page.click("text=Retour à la prépa DALF");
+  await page.click(".c2-part:has-text('transformations')");
   await page.waitForSelector(".q-lead");
   await shot("09-c2-part4");
   await page.locator(".quiz-top .icon-btn").click();
   await page.click(".dialog >> text=Quitter");
   await page.waitForSelector(".c2");
-  await page.click(".c2-part:has-text('Listening')");
-  await page.click("text=Écouter l'enregistrement");
+  await page.click(".c2-part:has-text('Compréhension de l')");
+  await page.click("text=Écouter le document");
   await page.waitForTimeout(300);
   for (const q of await page.locator(".c2-q").all()) await q.locator("input").first().check();
   await page.click("text=Corriger");
   await page.waitForSelector(".c2-score");
   await page.click("text=Continuer");
-  await page.click("text=Retour à la prépa C2");
-  await page.click(".c2-part:has-text('Part 6')");
-  await page.waitForSelector(".c2-options");
+  await page.click("text=Retour à la prépa DALF");
+  await page.click(".c2-part:has-text('Production orale')");
+  await page.waitForSelector(".c2-timer");
   await shot("10-c2-part6");
   await page.click(".topbar .icon-btn");
   await page.waitForSelector(".c2");

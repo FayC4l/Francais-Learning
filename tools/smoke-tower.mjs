@@ -54,7 +54,7 @@ const answerWrong = async () => {
   const card = page.locator(".q-card");
   await card.waitFor();
   const kind = (await card.getAttribute("class")).match(/kind-(\w+)/)[1];
-  if (["type_en", "listen_type", "dictation", "fill"].includes(kind)) {
+  if (["type_mot", "listen_type", "dictation", "fill"].includes(kind)) {
     await page.fill("#answer-input", "zzz");
     await page.keyboard.press("Enter");
   } else if (kind === "error") {
@@ -74,7 +74,7 @@ await step("setup a player at level 12", async () => {
   await page.fill("#player-name", "Hamza");
   await page.click(".age-opt[data-age=ado]");
   await page.click("text=Monter à bord");
-  await page.click("text=Je débute de zéro");
+  await page.click("text=Je commence au début");
   await page.waitForSelector(".map");
   await patch((s) => {
     for (let L = 1; L <= 11; L++) s.bosses[L] = { defeated: true, at: new Date().toISOString() };
@@ -188,7 +188,7 @@ await step("writing boss: a weak essay fails", async () => {
   await page.click(".next-card.tower-hero");
   await page.click(".tower-go");
   await page.waitForSelector(".tower-banner");
-  await page.fill("#w-text", "i like school. it is good. my teacher is nice and i like english very much because it is good.");
+  await page.fill("#w-text", "j'aime l'école. c'est bien. ma maitresse est gentil et j'aime le français beaucoup parce que c'est bien.");
   await page.click("text=Faire corriger");
   await page.waitForSelector(".tower-banner.ko");
   await page.waitForSelector(".drama.life");
@@ -199,12 +199,12 @@ await step("writing boss: a weak essay fails", async () => {
 });
 
 await step("the lessons of the block can be revised, level 12 included", async () => {
-  await patch((s) => Object.assign(s.tower, { floor: 42, shown: 42, lives: 150 }));
+  await patch((s) => Object.assign(s.tower, { floor: 47, shown: 47, lives: 150 }));
   await page.click(".next-card.tower-hero");
   await page.click(".tower-go");
   await page.waitForSelector(".tower-intro .tower-revise");
   const intro = await page.locator(".tower-intro").innerText();
-  if (!/20 secondes de bonus/.test(intro)) throw new Error("the 20 s bonus is not announced on floor 42");
+  if (!/20 secondes de bonus/.test(intro)) throw new Error("the 20 s bonus is not announced on floor 47");
   await page.click(".tower-revise >> text=12.1");
   await page.waitForSelector('#view[data-screen="unit"]');
   await shot("08-revise-12-1");

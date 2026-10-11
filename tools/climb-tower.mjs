@@ -48,7 +48,7 @@ await page.goto(`file:///${file.replace(/\\/g, "/").replace(/^\//, "")}`, { wait
 await page.fill("#player-name", "Hamza");
 await page.click(".age-opt[data-age=ado]");
 await page.click("text=Monter à bord");
-await page.click("text=Je débute de zéro");
+await page.click("text=Je commence au début");
 await page.waitForSelector(".map");
 await page.evaluate(({ from, prompts, visibleFloors, lives }) => {
   const g = JSON.parse(localStorage.getItem("mission-francais:global"));

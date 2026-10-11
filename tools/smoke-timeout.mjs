@@ -36,12 +36,12 @@ await page.goto(`file:///${file.replace(/\\/g, "/").replace(/^\//, "")}`, { wait
 await page.fill("#player-name", "Chrono");
 await page.click(".age-opt[data-age=ado]");
 await page.click("text=Monter à bord");
-await page.click("text=Je débute de zéro");
+await page.click("text=Je commence au début");
 await page.waitForSelector(".map");
 
 // Part 4 of the C2 preparation: six fill-in transformations in the normal quiz runner.
-await page.click("text=Prépa C2");
-await page.click(".c2-part >> text=Part 4");
+await page.click("text=Prépa DALF");
+await page.click(".c2-part >> text=transformations");
 await page.waitForSelector(".quiz .gap-box");
 
 /** Types into the boxes of the current question (without pressing Enter). */

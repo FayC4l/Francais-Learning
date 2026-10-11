@@ -31,7 +31,7 @@ async function run(label, viewport) {
   await page.fill("#player-name", "Monkey");
   await page.click(".age-opt[data-age=ado]");
   await page.click("text=Monter à bord");
-  await page.click("text=Je débute de zéro");
+  await page.click("text=Je commence au début");
   await page.waitForSelector(".map");
   // Open every level (the Tower included), with some progress around.
   await page.evaluate(() => {
