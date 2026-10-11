@@ -23,6 +23,8 @@ const file = resolve("dist/test-standalone.html");
 const essays = JSON.parse(readFileSync("tests/fixtures/tower-essays.json", "utf8")).essays;
 const essayOf = (n) => essays.find((e) => e.floors.includes(n));
 const prompts = Object.fromEntries(essays.flatMap((e) => e.floors.map((n) => [n, e.prompt])));
+const mock = JSON.parse(readFileSync("tests/fixtures/tower-essays.json", "utf8")).mock;
+let writingPapers = 0;
 
 const CANDIDATES = [process.env.PW_CHROME, "/opt/pw-browsers/chromium-1194/chrome-linux/chrome", "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe", "C:/Program Files/Google/Chrome/Application/chrome.exe"].filter(Boolean);
 const browser = await chromium.launch({ executablePath: CANDIDATES.find((p) => existsSync(p)) });
@@ -30,7 +32,7 @@ const ctx = await browser.newContext({ viewport: { width: 1100, height: 860 }, r
 const page = await ctx.newPage();
 page.setDefaultTimeout(10000);
 await page.addInitScript(() => {
-  const voices = [{ name: "Mock", lang: "en-CA", voiceURI: "m", default: true, localService: true }];
+  const voices = [{ name: "Mock", lang: "fr-FR", voiceURI: "m", default: true, localService: true }];
   Object.defineProperty(window, "speechSynthesis", { value: { getVoices: () => voices, speak(u) { setTimeout(() => u.onend && u.onend(), 10); }, cancel() {}, addEventListener() {} }, configurable: true });
   window.SpeechSynthesisUtterance = function (t) { this.text = t; };
 });
@@ -74,7 +76,7 @@ async function answerQuestion() {
     if ((await boxes.count()) !== words.length) throw new Error(`fill: ${await boxes.count()} boxes for "${q.expected}"`);
     for (let i = 0; i < words.length; i++) await boxes.nth(i).fill(words[i]);
     await boxes.last().press("Enter");
-  } else if (["mcq", "choose_fr", "listen_choose", "reading", "listening"].includes(q.kind)) {
+  } else if (["mcq", "choose_def", "spell_choose", "reading", "listening"].includes(q.kind)) {
     await mount.locator(".choices .choice").nth(q.answer).click();
   } else if (q.kind === "error") {
     await mount.locator(".error-words .word-chip").nth(q.wrong).click();
@@ -97,19 +99,15 @@ async function answerQuestion() {
 
 async function answerC2Part() {
   const { partId, item } = await page.evaluate(() => window.__mbItem);
-  if (["part1", "part2", "part3"].includes(partId)) {
+  if (["langue1", "langue2", "langue3"].includes(partId)) {
     for (let i = 0; i < item.gaps.length; i++) {
       const g = item.gaps[i];
-      if (partId === "part1") await page.selectOption(`select[aria-label="Trou ${i + 1}"]`, String(g.answer));
+      if (partId === "langue1") await page.selectOption(`select[aria-label="Trou ${i + 1}"]`, String(g.answer));
       else await page.fill(`input[aria-label="Trou ${i + 1}"]`, g.answer[0]);
     }
-  } else if (partId === "reading5" || partId === "listening") {
+  } else if (partId === "ecrits" || partId === "oral") {
     for (let i = 0; i < item.questions.length; i++) await page.locator(".c2-q").nth(i).locator(`input[value="${item.questions[i].answer}"]`).check();
-  } else if (partId === "reading6") {
-    for (let i = 0; i < item.answer.length; i++) await page.selectOption(`select[aria-label="Paragraphe manquant ${i + 1}"]`, String(item.answer[i]));
-  } else if (partId === "reading7") {
-    for (let i = 0; i < item.statements.length; i++) await page.selectOption(`select[aria-label="Affirmation ${i + 1}"]`, item.statements[i].answer);
-  } else throw new Error(`unknown C2 part ${partId}`);
+  } else throw new Error(`unknown DALF part ${partId}`);
   await page.click(".c2-ex >> text=Corriger");
   const score = await page.locator(".c2-score").innerText();
   const [good, all] = score.split("/").map((x) => Number(x.trim()));
@@ -174,6 +172,15 @@ for (let guard = 0; guard < 6000; guard++) {
       idle = 0;
       continue;
     }
+    if (await visible(".w-area:not(#w-text)")) {
+      // The writing papers of the DALF mock exam: original texts written for the test.
+      const title = await page.locator(".topbar-title").innerText();
+      await page.fill(".w-area:not(#w-text)", /Synthèse/.test(title) ? mock.synthese : mock.essai);
+      await page.click("text=Rendre ma copie");
+      writingPapers++;
+      idle = 0;
+      continue;
+    }
     if (await visible("#w-text")) {
       const t = await towerState();
       const e = essayOf(t.floor);
@@ -230,7 +237,8 @@ if (await visible(".tower-victory")) {
 } else errors.push(`no victory (stopped on floor ${floor})`);
 const wantReveals = Array.from({ length: FLOORS - 1 }, (_, i) => i + 1).filter((n) => n > Math.max(VISIBLE, from));
 if (reveals.join() !== wantReveals.join()) errors.push(`reveals ${reveals.join(",")} (expected ${wantReveals.join(",")})`);
-if (c2Parts.length !== 8) errors.push(`C2 parts played outside the quiz: ${c2Parts.join(",")}`);
+if (c2Parts.length !== 5) errors.push(`DALF parts played outside the quiz: ${c2Parts.join(",")}`);
+if (writingPapers !== 2) errors.push(`${writingPapers} writing papers in the DALF mock exam (2 expected)`);
 console.log(`${answered} questions answered, ${reveals.length} surprise floors, C2 parts: ${c2Parts.join(" ")}, ${Math.round((Date.now() - started) / 1000)} s`);
 await browser.close();
 console.log(errors.length ? errors.join("\n") : "NO ERRORS");
