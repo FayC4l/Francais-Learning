@@ -46,7 +46,7 @@ export const dictionaryReady = () => ensure().size > 0;
 // Inverted pronouns and particles found after a hyphen (dit-il, va-t'en, celui-ci, peut-être…).
 const HYPHEN_PARTS = new Set(["je", "tu", "il", "elle", "on", "nous", "vous", "ils", "elles", "ce", "t", "là", "ci", "même", "moi", "toi", "lui", "leur", "le", "la", "les", "y", "en", "m", "t'en", "m'en"]);
 // Common words of modern life missing from the 2004-2019 corpus.
-const MODERN = new Set(["smartphone", "smartphones", "internet", "wifi", "email", "emails", "mail", "mails", "texto", "textos", "appli", "applis", "podcast", "podcasts", "youtubeur", "youtubeuse", "youtubeurs", "influenceur", "influenceuse", "influenceurs", "influenceuses", "tutoriel", "tutoriels", "streaming", "hashtag", "hashtags", "selfie", "selfies", "emoji", "emojis", "covid", "télétravail", "visioconférence", "visioconférences", "cyberharcèlement", "écoresponsable", "écoresponsables", "covoiturage", "trottinette", "trottinettes", "fayçal", "chikh"]);
+const MODERN = new Set(["smartphone", "smartphones", "internet", "wifi", "email", "emails", "mail", "mails", "texto", "textos", "appli", "applis", "podcast", "podcasts", "youtubeur", "youtubeuse", "youtubeurs", "influenceur", "influenceuse", "influenceurs", "influenceuses", "tutoriel", "tutoriels", "streaming", "hashtag", "hashtags", "selfie", "selfies", "emoji", "emojis", "covid", "télétravail", "visioconférence", "visioconférences", "cyberharcèlement", "écoresponsable", "écoresponsables", "covoiturage", "trottinette", "trottinettes", "faycal", "chikh"]);
 
 /** Tier of a known word (1-3), 0 when unknown. Handles elisions, hyphens and the 1990 spelling. */
 export function tierOf(word) {

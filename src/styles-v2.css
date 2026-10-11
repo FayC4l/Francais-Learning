@@ -1,4 +1,4 @@
-/* ===== V2: profiles, placement, gaps, Chikh Fayçal, boss phases, workshops ===== */
+/* ===== V2: profiles, placement, gaps, Chikh Faycal, boss phases, workshops ===== */
 
 /* Avatars */
 .avatar.emoji { background: color-mix(in srgb, var(--av, var(--l6)) 22%, var(--card)); border: 2px solid var(--av, var(--l6)); font-size: 1.2rem; line-height: 1; }
@@ -61,7 +61,7 @@
 .gap + .gap { margin-left: 4px; }
 @keyframes nudge { 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
 
-/* Chikh Fayçal, the teacher */
+/* Chikh Faycal, the teacher */
 .mentor { display: flex; gap: 10px; align-items: flex-end; margin: 6px 0; }
 .mentor-face { flex: none; width: 64px; height: 64px; color: inherit; }
 .mentor-face svg, .mentor-face .mentor-img { width: 100%; height: 100%; object-fit: contain; display: block; }

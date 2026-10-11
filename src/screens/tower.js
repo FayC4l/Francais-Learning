@@ -1,4 +1,4 @@
-// The Tower of Chikh Fayçal (level 12): 50 floors, a boss on each, 200 hearts, dramatic losses, the DALF C2 at the top.
+// The Tower of Chikh Faycal (level 12): 50 floors, a boss on each, 200 hearts, dramatic losses, the DALF C2 at the top.
 // The player only ever sees 5 floors and the final boss: every floor won past the 5th makes a new one appear.
 import { h, icon, sleep, reducedMotion, dialog } from "../ui.js";
 import { EXTRA, unitById, levelById } from "../content.js";
@@ -44,7 +44,7 @@ export function towerScreen(view) {
       { class: "tower" },
       h("div", { class: "topbar" }, h("button", { type: "button", class: "icon-btn", "aria-label": "Retour au réseau", html: icon("back"), onClick: () => go("map") }), h("span", { class: "topbar-title" }, "Ligne 12 · La Tour")),
       h("p", { class: "eyebrow" }, "Niveau 12 · C2"),
-      h("h1", { class: "tower-name" }, "La Tour de Chikh Fayçal"),
+      h("h1", { class: "tower-name" }, "La Tour de Chikh Faycal"),
       h("div", { class: "tower-lives", "aria-label": `${t.lives} cœurs sur ${TOWER_LIVES}` }, h("span", { html: heartsHtml(t.lives) }), h("strong", null, `${t.lives} / ${TOWER_LIVES} cœurs`)),
       h(
         "div",
@@ -103,7 +103,7 @@ const SURPRISE_LINES = [
 ];
 const SURPRISE_BUTTONS = ["Sérieux ?!", "Mais… pourquoi ?", "J'aurais dû m'en douter", "OK. Je monte.", "Tu n'as pas honte ?", "Encore ?!"];
 
-/** A new floor pushes the final boss up, Chikh Fayçal laughs. */
+/** A new floor pushes the final boss up, Chikh Faycal laughs. */
 async function reveal(view, t) {
   const n = t.floor;
   const calm = reducedMotion();
@@ -311,7 +311,7 @@ function writingFloor(n, s) {
 async function finalFloor(view) {
   const ok = await dialog({
     title: "Le boss final",
-    body: "<p>Un DALF C2 blanc <strong>complet</strong> : compréhension de l'oral (avec la voix), compréhension des écrits et maîtrise de la langue, puis production écrite (synthèse de documents et essai argumenté). Environ 3 h.</p><p>Il faut <strong>60 sur 100</strong> (le vrai DALF demande 50 : Chikh Fayçal est plus exigeant) et au moins 10 sur 25 dans chaque épreuve. Sinon, tu perds un cœur.</p><p><strong>Une fois commencé, abandonner ou fermer la page = un cœur perdu.</strong> Prévois trois heures au calme.</p>",
+    body: "<p>Un DALF C2 blanc <strong>complet</strong> : compréhension de l'oral (avec la voix), compréhension des écrits et maîtrise de la langue, puis production écrite (synthèse de documents et essai argumenté). Environ 3 h.</p><p>Il faut <strong>60 sur 100</strong> (le vrai DALF demande 50 : Chikh Faycal est plus exigeant) et au moins 10 sur 25 dans chaque épreuve. Sinon, tu perds un cœur.</p><p><strong>Une fois commencé, abandonner ou fermer la page = un cœur perdu.</strong> Prévois trois heures au calme.</p>",
     actions: [{ label: "Plus tard", value: false }, { label: "Je suis prêt(e)", value: true, primary: true }],
   });
   if (!ok) return;
@@ -342,11 +342,11 @@ function victory(view, scale) {
     h(
       "div",
       { class: "results tower-victory" },
-      h("p", { class: "eyebrow" }, "La Tour de Chikh Fayçal"),
+      h("p", { class: "eyebrow" }, "La Tour de Chikh Faycal"),
       h("div", { class: "victory-trophy", html: icon("trophy") }),
       h("h1", { class: "results-title" }, "DALF C2 ATTEINT !"),
       scale ? h("p", { class: "results-line" }, `${String(scale).replace(".", ",")}/100 au DALF C2 blanc.`) : null,
-      h("div", { class: "victory-reward" }, h("span", { class: "victory-pad" }, "🎮 💵"), h("p", null, h("strong", null, "Ta récompense : "), `${REWARD}.`), h("p", { class: "set-help" }, `Montre cet écran à Fayçal. Gagné le ${new Date(t.wonAt || Date.now()).toLocaleDateString("fr-CA")}${t.resets ? `, après ${t.resets} effondrement${t.resets > 1 ? "s" : ""} de la tour` : ", sans jamais faire tomber la tour"}.`)),
+      h("div", { class: "victory-reward" }, h("span", { class: "victory-pad" }, "🎮 💵"), h("p", null, h("strong", null, "Ta récompense : "), `${REWARD}.`), h("p", { class: "set-help" }, `Montre cet écran à Faycal. Gagné le ${new Date(t.wonAt || Date.now()).toLocaleDateString("fr-CA")}${t.resets ? `, après ${t.resets} effondrement${t.resets > 1 ? "s" : ""} de la tour` : ", sans jamais faire tomber la tour"}.`)),
       mentorSays(`Cinquante étages. Oui, ${FLOORS} : je t'ai menti dès le cinquième, et tu as tout grimpé quand même. Le DALF C2. Je n'ai plus rien à t'apprendre… Enfin si, mais je vais faire semblant. Je suis fier de toi.`, "", "love"),
       h("div", { class: "result-actions" }, h("button", { type: "button", class: "btn btn-primary btn-xl", onClick: () => printCertificate("C2") }, "Imprimer mon certificat C2"), h("button", { type: "button", class: "btn btn-ghost", onClick: () => go("map") }, "Retour au réseau")),
     ),
@@ -362,7 +362,7 @@ const DRAMA_LINES = [
   "Le gardien de l'étage range ta copie dans un tiroir. Le tiroir des regrets.",
   "Un participe passé s'est échappé. Personne ne l'a revu.",
   "La tour tremble. Elle a senti ta faiblesse.",
-  "Chikh Fayçal pose son thé. Mauvais signe.",
+  "Chikh Faycal pose son thé. Mauvais signe.",
   "Dans les couloirs, on murmure ton nom… et ta faute d'accord.",
 ];
 

@@ -469,7 +469,7 @@ async function mockResult(view, kind, papers) {
       h("div", { class: `c2-scale ${passed ? "a" : "no"}` }, h("strong", null, fmt(total)), h("small", null, `sur ${max}`)),
       h("h1", { class: "results-title" }, passed ? "Réussi !" : "Pas encore"),
       h("ul", { class: "history" }, papers.map((p) => h("li", null, h("strong", null, `${fmt(p.points)}/25`), ` · ${p.name} (${Math.round(p.pct * 100)} %)`))),
-      h("p", { class: "set-help" }, kind === "full" ? "Au vrai DALF, il faut 50/100 et un minimum dans chaque épreuve. Chikh Fayçal, lui, exige 60 au sommet de sa tour." : "Le DALF blanc complet ajoute la synthèse et l'essai."),
+      h("p", { class: "set-help" }, kind === "full" ? "Au vrai DALF, il faut 50/100 et un minimum dans chaque épreuve. Chikh Faycal, lui, exige 60 au sommet de sa tour." : "Le DALF blanc complet ajoute la synthèse et l'essai."),
       mentorSays(passed ? "Chapeau bas, et barbe aussi. Inscris-toi à la vraie session, tu es prêt(e)." : total >= max * 0.4 ? "Solide. Encore un effort sur l'épreuve la plus faible et c'est dans la poche." : "La montagne est haute, mais tu grimpes. Reprends les épreuves une par une."),
       badges.length ? h("div", { class: "new-badges" }, badges.map((b) => h("div", { class: "badge-pop" }, h("span", { html: icon("trophy") }), h("strong", null, b.name), h("small", null, b.desc)))) : null,
       h("div", { class: "result-actions" }, h("button", { type: "button", class: "btn btn-primary btn-xl", onClick: () => go("dalf") }, "Retour à la prépa DALF")),

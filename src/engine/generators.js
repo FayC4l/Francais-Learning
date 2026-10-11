@@ -13,7 +13,7 @@ const S = (t, p, g, who = t) => ({ t, p, g, who });
 const SUBJECTS = [
   S("je", 0, null), S("tu", 1, null), S("il", 2, "m"), S("elle", 2, "f"), S("nous", 3, null), S("vous", 4, null), S("ils", 5, "m"), S("elles", 5, "f"),
   S("Léa", 2, "f", "elle"), S("Hugo", 2, "m", "il"), S("mon frère", 2, "m", "il"), S("ma sœur", 2, "f", "elle"), S("les enfants", 5, "m", "ils"), S("mes cousines", 5, "f", "elles"),
-  S("Chikh Fayçal", 2, "m", "il"), S("nos voisins", 5, "m", "ils"), S("la directrice", 2, "f", "elle"), S("Inès et Sarah", 5, "f", "elles"),
+  S("Chikh Faycal", 2, "m", "il"), S("nos voisins", 5, "m", "ils"), S("la directrice", 2, "f", "elle"), S("Inès et Sarah", 5, "f", "elles"),
 ];
 const PRONOUN_SUBJECTS = SUBJECTS.slice(0, 8);
 

@@ -80,7 +80,7 @@ n'apparaît ni dans les stations (tous niveaux) ni dans un autre lexique ; pas d
   Les sujets des niveaux 9 à 12 servent aux boss d'écriture de la Tour : leurs modèles doivent dépasser la barre de
   l'étage (`npm test`). `node tools/score-models.mjs 9 10 --issues` note chaque modèle avec le vrai correcteur.
 
-## `humor.json` — Chikh Fayçal
+## `humor.json` — Chikh Faycal
 
 ```json
 { "quips": { "welcome": [ { "text": "…", "ages": ["enfant"] } ], "correct": [], "wrong": [], "streak": [], "timeout": [],

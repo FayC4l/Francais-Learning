@@ -80,7 +80,7 @@ export const SI = [
   ["S'ils avaient pris le train, ils ___ à l'heure.", "arriver", ["seraient arrivés"], "Si + plus-que-parfait → conditionnel passé."],
   ["Si je ___ riche, j'achèterais une île.", "être", ["étais"], "Si + imparfait (jamais « si je serais »)."],
   ["Si tu ___ tes devoirs, tu pourras sortir.", "finir", ["finis"], "Si + présent → futur."],
-  ["Si Chikh Fayçal ___ moins de thé, il dormirait mieux.", "boire", ["buvait"], "Si + imparfait → conditionnel présent."],
+  ["Si Chikh Faycal ___ moins de thé, il dormirait mieux.", "boire", ["buvait"], "Si + imparfait → conditionnel présent."],
   ["Si tu avais écouté, tu ___ la réponse.", "savoir", ["aurais su"], "Si + plus-que-parfait → conditionnel passé."],
   ["Si les enfants ___ sages, ils auront un dessert.", "être", ["sont"], "Si + présent → futur."],
   ["Je viendrai si tu ___.", "vouloir", ["veux"], "La proposition en si ne prend jamais le futur : si tu veux."],
@@ -151,7 +151,7 @@ export const PASSIFS = [
   ["Les résultats", "m", true, "publier", "sur le site du lycée."], ["La décision", "f", false, "prendre", "par le conseil municipal."], ["Les invités", "m", true, "accueillir", "par le maire en personne."],
   ["La porte", "f", false, "ouvrir", "par un majordome très digne."], ["Ces chansons", "f", true, "chanter", "par toute la classe."], ["Le voleur", "m", false, "arrêter", "par deux policiers."],
   ["Les arbres", "m", true, "abattre", "par la tempête."], ["La ville", "f", false, "détruire", "par un incendie."], ["Les élèves", "m", true, "récompenser", "par la directrice."],
-  ["La tarte", "f", false, "manger", "par le chien de Chikh Fayçal."], ["Les fenêtres", "f", true, "nettoyer", "par une entreprise spécialisée."],
+  ["La tarte", "f", false, "manger", "par le chien de Chikh Faycal."], ["Les fenêtres", "f", true, "nettoyer", "par une entreprise spécialisée."],
 ];
 
 // Missing "ne" (written French): [sentence with the mistake, index of the wrong word, fixes, explanation].

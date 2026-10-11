@@ -16,7 +16,7 @@ rectifications orthographiques de 1990 sont acceptées partout.
 - **11 lignes, 55 stations, 11 boss** : leçon narrée, **dictée** lue par la voix française (groupes de mots, ponctuation
   dite à voix haute, relecture, correction mot à mot et note sur 20), mots, 9 mini-jeux, mission orale ou écrite,
   test de 15 questions.
-- **Niveau 12 : la Tour de Chikh Fayçal** : 50 étages, un boss à chaque étage (conjugaison de plus en plus dure,
+- **Niveau 12 : la Tour de Chikh Faycal** : 50 étages, un boss à chaque étage (conjugaison de plus en plus dure,
   accords experts, temps rares, mot juste, et un boss d'expression écrite tous les 5 étages), 200 cœurs pour toute la
   montée, les leçons de révision du niveau 12 ouvertes depuis la Tour, et au sommet un **DALF C2 blanc complet**
   (60 points sur 100 pour gagner).
@@ -37,7 +37,7 @@ rectifications orthographiques de 1990 sont acceptées partout.
   compréhension des écrits, compréhension de l'oral, synthèse de documents, essai argumenté, production orale, et DALF
   blancs notés sur 100. Tous les textes sont originaux.
 - **Tableau de bord** : radar des compétences, niveau estimé, certificats imprimables.
-- **Chikh Fayçal**, le prof de français de l'appli, pince-sans-rire et bienveillant : 220 répliques et une blague de
+- **Chikh Faycal**, le prof de français de l'appli, pince-sans-rire et bienveillant : 220 répliques et une blague de
   langue par jour (78 jeux de mots expliqués).
 
 ## Jouer
@@ -79,10 +79,10 @@ par un fichier (`git commit -F`). Les sources sont en fins de ligne LF (`.gitatt
 | `content/lexicon-XX.json` | 150 mots de plus par niveau (entraînement du jour) | idem |
 | `content/placement.json` | 150 questions du test de placement | idem |
 | `content/writing.json` | 96 sujets de rédaction avec copie modèle | idem |
-| `content/humor.json` | répliques de Chikh Fayçal et blagues | idem |
+| `content/humor.json` | répliques de Chikh Faycal et blagues | idem |
 | `content/wordform.json` | formation des mots (niveaux 9 à 12) | idem |
 | `content/dalf-langue.json`, `content/dalf-papers.json` | épreuves du DALF | idem |
-| `content/mentor.json` | images de Chikh Fayçal | — |
+| `content/mentor.json` | images de Chikh Faycal | — |
 
 Code : `src/` (moteur en JavaScript sans framework, un seul fichier HTML produit par esbuild). Le code pur
 (conjugueur, générateurs, anti-répétition, placement, SRS, correcteur) est dans `src/engine/`, `src/placement.js`,

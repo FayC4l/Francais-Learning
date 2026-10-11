@@ -12,7 +12,7 @@ style du **DALF C2**. Projet et site séparés : l'appli anglaise n'est jamais m
 - Objectif final : DALF jusqu'au C2. Le sommet de la Tour = un DALF C2 blanc complet.
 - Niveaux calqués sur le CECRL comme l'appli anglaise, mais pour des natifs : A1 = orthographe du primaire,
   C2 = style et argumentation du supérieur.
-- On garde : Chikh Fayçal et son humour pince-sans-rire, la Tour (étages surprises, 200 cœurs), l'écran de
+- On garde : Chikh Faycal et son humour pince-sans-rire, la Tour (étages surprises, 200 cœurs), l'écran de
   récompense (un jeu PlayStation de ton choix + 25 $), la dictée comme exercice central avec la voix française,
   les règles du chrono (+10 s par question, réponse tapée envoyée à la fin du temps, +20 s dès l'étage 12).
 - Nouveau nom : **Mission Français**. Espace de stockage séparé : `mission-francais:*` (les deux applis
@@ -50,7 +50,7 @@ style du **DALF C2**. Projet et site séparés : l'appli anglaise n'est jamais m
 | 9 | C1 | Le mot juste | Le Pléonasme Masqué |
 | 10 | C1 | Argumenter | Le Sophiste |
 | 11 | C2 | Le style | Le Marquis de Registre |
-| 12 | C2 | La Tour de Chikh Fayçal | (50 étages, DALF C2 au sommet) |
+| 12 | C2 | La Tour de Chikh Faycal | (50 étages, DALF C2 au sommet) |
 
 Le détail des 60 stations est dans `CONTENT_GUIDE.md` (programme). Chaque station : leçon, dictée, mots,
 pratique (mission + mini-jeux), test de 15 questions (85 %). Chaque ligne : un boss à 3 phases, 3 vies.

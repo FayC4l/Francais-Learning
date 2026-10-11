@@ -14,11 +14,11 @@ par un (coquille, ou mot rare à vérifier).
 2. **Juste et sans ambiguïté.** Une seule bonne réponse possible avec les indices donnés, ou toutes les bonnes
    réponses listées. Les rectifications de 1990 sont acceptées automatiquement (paraître / paraitre,
    événement / évènement, numéraux avec traits d'union) : inutile de les lister.
-3. **Français de France**, registre courant dans les explications, tutoiement, une pointe d'humour (Chikh Fayçal,
+3. **Français de France**, registre courant dans les explications, tutoiement, une pointe d'humour (Chikh Faycal,
    le prof, est pince-sans-rire et bienveillant). Repas : petit-déjeuner, déjeuner, dîner. Prénoms et lieux variés
    (Léa, Hugo, Inès, Malik, Chloé, Nathan, Yasmine, Lucas, Sarah, Théo, Jade, Karim… ; Lyon, Marseille, Lille,
    la Bretagne, les Alpes, Bordeaux…).
-4. **Familial.** Pas de sujet choquant ; on se moque de la langue, de la situation ou de Chikh Fayçal, jamais du
+4. **Familial.** Pas de sujet choquant ; on se moque de la langue, de la situation ou de Chikh Faycal, jamais du
    joueur.
 5. **Pas de chiffres dans ce qui est lu à voix haute** (dictées, phrases, textes d'écoute) : les nombres en lettres.
 6. La typographie française (espace insécable avant `; : ! ?`, dans les guillemets « ») est ajoutée à la
@@ -94,7 +94,7 @@ STATION :
 
 `boss-XX.json` (60 questions réservées au boss), `lexicon-XX.json` (150 mots par niveau pour l'entraînement du
 jour), `placement.json` (150 questions, 25 par bande CECRL), `writing.json` (8 sujets de rédaction par niveau avec
-copie modèle), `humor.json` (répliques de Chikh Fayçal et blagues), `wordform.json` (formation des mots),
+copie modèle), `humor.json` (répliques de Chikh Faycal et blagues), `wordform.json` (formation des mots),
 `dalf-langue.json` et `dalf-papers.json` (prépa DALF et DALF blancs).
 
 ## Programme
@@ -167,7 +167,7 @@ copie modèle), `humor.json` (répliques de Chikh Fayçal et blagues), `wordform
 | 11.3 Nombres et mots composés | vingt, cent, mille ; pluriel des noms composés |
 | 11.4 Les temps rares | subjonctif imparfait et plus-que-parfait, passé antérieur |
 | 11.5 Ponctuation et typographie | virgule, point-virgule, deux-points, majuscules, abréviations |
-| **Ligne 12 · C2 · La Tour de Chikh Fayçal** (stations de révision ouvertes pour la Tour) | |
+| **Ligne 12 · C2 · La Tour de Chikh Faycal** (stations de révision ouvertes pour la Tour) | |
 | 12.1 Conjugaison de haut vol | verbes rares et défectifs |
 | 12.2 L'orthographe d'usage | doubles consonnes, accents, mots difficiles |
 | 12.3 Les accords experts | participes, accords à sens, sujets inversés |

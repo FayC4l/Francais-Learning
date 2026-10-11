@@ -1,11 +1,11 @@
 {
   "id": 12,
   "cefr": "C2",
-  "title": "La Tour de Chikh Fayçal",
+  "title": "La Tour de Chikh Faycal",
   "sub": "Révisions C2 : conjugaison, orthographe, accords, synthèse, style",
   "intro": "Le sommet approche. Ces cinq stations rassemblent ce qu'un candidat au DALF C2 doit maîtriser : les verbes les plus rares, l'orthographe d'usage, les accords experts, la méthode de la synthèse et de l'essai, et l'élégance du style. Révise-les avant chaque assaut de la Tour.",
   "boss": {
-    "name": "Chikh Fayçal, maître de la Tour",
+    "name": "Chikh Faycal, maître de la Tour",
     "taunt": "Cinquante étages, et au sommet, moi. Je ne mords pas. Je corrige, ce qui est pire.",
     "defeat": "Bien. Très bien, même. Je n'ai plus rien à t'apprendre… sauf l'humilité, mais tu l'apprendras seul."
   },

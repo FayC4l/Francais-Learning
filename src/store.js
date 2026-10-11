@@ -358,7 +358,7 @@ export const BADGES = [
   { id: "fixer", name: "Rien ne m'échappe", desc: "Corriger 25 erreurs dans ton carnet.", test: (s) => s.fixed >= 25 },
   { id: "gamer", name: "Touche-à-tout", desc: "Jouer aux 9 mini-jeux.", test: (s) => new Set(Object.keys(s.games).map((k) => k.split(":")[1])).size >= 9 },
   { id: "halfway", name: "Mi-parcours", desc: "Terminer le niveau 6.", test: (s) => !!s.bosses[6]?.defeated && !s.bosses[6]?.placed },
-  { id: "immortal", name: "Immortel", desc: "Vaincre la Tour de Chikh Fayçal (niveau 12).", test: (s) => !!s.bosses[12]?.defeated },
+  { id: "immortal", name: "Immortel", desc: "Vaincre la Tour de Chikh Faycal (niveau 12).", test: (s) => !!s.bosses[12]?.defeated },
   { id: "dictee-20", name: "Zéro faute", desc: "Obtenir 20/20 à une dictée.", test: (s) => Object.values(s.dictees || {}).some((n) => n >= 20) },
   { id: "placed", name: "Radiographié", desc: "Passer le test de placement.", test: (s) => !!s.placement },
   { id: "writer", name: "Plume en herbe", desc: "Faire corriger ta première rédaction.", test: (s) => s.writing.length >= 1 },
