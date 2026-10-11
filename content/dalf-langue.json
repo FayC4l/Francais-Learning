@@ -1,0 +1,310 @@
+{
+  "part1": [
+    {
+      "id": "l1-train", "title": "Le retour du train de nuit",
+      "text": "Longtemps considéré comme une relique du passé, le train de nuit {1} un retour remarqué. Plusieurs lignes, supprimées il y a une dizaine d'années, ont été {2} en service. Ce regain d'intérêt n'est pas le {3} du hasard : de plus en plus de voyageurs cherchent à réduire leur empreinte carbone et à {4} l'avion pour les trajets européens. Les compagnies ferroviaires ont donc {5} l'occasion, en modernisant leurs voitures-couchettes.\n\nToutefois, les obstacles restent nombreux. Les billets demeurent souvent plus chers que ceux des vols à bas prix, et la vétusté de certaines infrastructures {6} la ponctualité. Les défenseurs du train de nuit {7} néanmoins valoir qu'un voyage sans avion permet de gagner une journée : on s'endort à Paris, on se réveille à Vienne. Reste à savoir si cet engouement {8} dans la durée.",
+      "gaps": [
+        { "choices": ["fait", "prend", "donne", "tient"], "answer": 0, "explain": "On fait un retour (remarqué, triomphal…)." },
+        { "choices": ["remises", "reprises", "replacées", "rendues"], "answer": 0, "explain": "Remettre en service ; accord avec lignes." },
+        { "choices": ["fruit", "produit", "germe", "effet"], "answer": 0, "explain": "Expression figée : être le fruit du hasard." },
+        { "choices": ["délaisser", "quitter", "lâcher", "partir"], "answer": 0, "explain": "Délaisser l'avion : l'abandonner au profit d'un autre moyen de transport." },
+        { "choices": ["saisi", "attrapé", "tenu", "capté"], "answer": 0, "explain": "On saisit l'occasion." },
+        { "choices": ["compromet", "promet", "commet", "soumet"], "answer": 0, "explain": "Compromettre : mettre en danger, nuire à." },
+        { "choices": ["font", "mettent", "donnent", "laissent"], "answer": 0, "explain": "Faire valoir que : avancer un argument." },
+        { "choices": ["s'inscrira", "s'écrira", "se décrira", "se prescrira"], "answer": 0, "explain": "S'inscrire dans la durée : durer, se maintenir." }
+      ]
+    },
+    {
+      "id": "l1-silence", "title": "La mode du silence",
+      "text": "Dans un monde saturé de bruit, le silence est en passe de {1} un produit de luxe. Des hôtels proposent désormais des séjours « sans écran ni conversation », tandis que les retraites méditatives ne {2} pas de candidats. Ce phénomène {3} un besoin profond : celui de {4} une pause dans un quotidien où les sollicitations se succèdent sans répit. Les neurologues {5} d'ailleurs l'accent sur les bienfaits du calme pour la concentration et la mémoire.\n\nCertains observateurs {6} cependant cette quête du silence payant, qui serait réservée à une élite. Selon eux, il serait plus judicieux d'{7} des espaces calmes accessibles à tous, comme les bibliothèques ou les parcs. Le débat {8} ainsi une question plus large : le droit au repos est-il un privilège ou un bien commun ?",
+      "gaps": [
+        { "choices": ["devenir", "venir", "rendre", "tourner"], "answer": 0, "explain": "Être en passe de devenir : être sur le point de devenir." },
+        { "choices": ["manquent", "ratent", "perdent", "privent"], "answer": 0, "explain": "Ne pas manquer de : en avoir beaucoup." },
+        { "choices": ["traduit", "conduit", "réduit", "produit"], "answer": 0, "explain": "Traduire un besoin : l'exprimer, le révéler." },
+        { "choices": ["marquer", "noter", "signer", "frapper"], "answer": 0, "explain": "On marque une pause." },
+        { "choices": ["mettent", "posent", "tiennent", "portent"], "answer": 0, "explain": "Mettre l'accent sur : insister sur." },
+        { "choices": ["dénoncent", "annoncent", "prononcent", "renoncent"], "answer": 0, "explain": "Dénoncer : critiquer publiquement. Les autres sont des paronymes." },
+        { "choices": ["aménager", "déménager", "emménager", "démanger"], "answer": 0, "explain": "Aménager un espace : l'organiser, l'équiper." },
+        { "choices": ["soulève", "élève", "relève", "enlève"], "answer": 0, "explain": "Soulever une question : la faire apparaître." }
+      ]
+    },
+    {
+      "id": "l1-jeux", "title": "Les jeux vidéo au musée",
+      "text": "Il y a encore vingt ans, l'idée qu'un jeu vidéo puisse {1} sa place dans un musée aurait fait sourire. Aujourd'hui, plusieurs institutions prestigieuses lui consacrent des expositions qui {2} un public considérable. Les commissaires {3} que ces œuvres interactives méritent d'être étudiées au même titre que le cinéma ou la bande dessinée. Ils {4} en avant la richesse de leurs univers graphiques, la complexité de leurs récits et l'inventivité de leurs créateurs.\n\nCette reconnaissance ne fait cependant pas l'{5}. Pour certains critiques, l'art suppose une contemplation que le jeu, fondé sur l'action, ne {6} pas. D'autres {7} au contraire que la participation du joueur constitue précisément l'originalité de ce nouvel art. Quoi qu'il en soit, l'entrée du jeu vidéo au musée {8} une évolution profonde de notre regard sur la culture populaire.",
+      "gaps": [
+        { "choices": ["trouver", "chercher", "garder", "poser"], "answer": 0, "explain": "Trouver sa place : être accepté, intégré." },
+        { "choices": ["attirent", "retirent", "étirent", "tirent"], "answer": 0, "explain": "Attirer un public." },
+        { "choices": ["soutiennent", "retiennent", "obtiennent", "entretiennent"], "answer": 0, "explain": "Soutenir que : affirmer, défendre une idée." },
+        { "choices": ["mettent", "passent", "portent", "font"], "answer": 0, "explain": "Mettre en avant : souligner, valoriser." },
+        { "choices": ["unanimité", "unité", "union", "unicité"], "answer": 0, "explain": "Ne pas faire l'unanimité : ne pas être approuvé par tous." },
+        { "choices": ["permettrait", "promettrait", "commettrait", "soumettrait"], "answer": 0, "explain": "Permettre : rendre possible ; le conditionnel rapporte l'opinion des critiques." },
+        { "choices": ["rétorquent", "rapportent", "reportent", "retournent"], "answer": 0, "explain": "Rétorquer : répondre en opposant un argument." },
+        { "choices": ["illustre", "illumine", "éclipse", "efface"], "answer": 0, "explain": "Illustrer une évolution : en être un exemple." }
+      ]
+    },
+    {
+      "id": "l1-campagne", "title": "Des citadins à la campagne",
+      "text": "Depuis quelques années, de nombreux citadins ont {1} le choix de quitter les grandes villes pour s'installer à la campagne, tout en conservant leur emploi grâce au télétravail. Ce mouvement, que l'on {2} parfois d'« exode urbain », reste toutefois difficile à mesurer. Les maires des petites communes s'en {3}, car ces nouveaux habitants font revivre les écoles et les commerces.\n\nNéanmoins, leur arrivée n'est pas {4} conséquences. Dans certaines régions, les prix de l'immobilier ont flambé, au point que les jeunes du village peinent à se {5}. Par ailleurs, la qualité de la connexion à Internet laisse parfois à {6}, ce qui complique le quotidien des télétravailleurs. Pour que ce rééquilibrage territorial soit durable, il faudrait que l'État {7} dans les infrastructures et que les collectivités {8} en œuvre une politique du logement adaptée.",
+      "gaps": [
+        { "choices": ["fait", "pris", "donné", "mis"], "answer": 0, "explain": "On fait un choix (on ne le « prend » pas)." },
+        { "choices": ["qualifie", "nomme", "appelle", "dit"], "answer": 0, "explain": "Qualifier de : désigner par un terme (qualifier d'exode urbain)." },
+        { "choices": ["réjouissent", "affligent", "désintéressent", "lassent"], "answer": 0, "explain": "Se réjouir de quelque chose : en être content, comme le confirme la suite de la phrase." },
+        { "choices": ["sans", "dans", "sous", "hors"], "answer": 0, "explain": "Ne pas être sans conséquences : avoir des conséquences (litote)." },
+        { "choices": ["loger", "logent", "logé", "logis"], "answer": 0, "explain": "Peiner à + infinitif : peinent à se loger." },
+        { "choices": ["désirer", "souhaiter", "vouloir", "espérer"], "answer": 0, "explain": "Expression figée : laisser à désirer (être insuffisant)." },
+        { "choices": ["investisse", "investit", "investira", "investirait"], "answer": 0, "explain": "Il faudrait que + subjonctif : que l'État investisse." },
+        { "choices": ["mettent", "portent", "tiennent", "donnent"], "answer": 0, "explain": "Mettre en œuvre : appliquer, réaliser." }
+      ]
+    },
+    {
+      "id": "l1-francophonie", "title": "Le français dans le monde",
+      "text": "Avec plus de trois cents millions de locuteurs répartis sur les cinq continents, le français {1} parmi les langues les plus parlées au monde. Contrairement à une idée {2}, son avenir ne se joue pas seulement en France, mais surtout en Afrique, où la population connaît une croissance rapide. Cette situation {3} de nouvelles responsabilités aux pays francophones. Il leur {4} en effet de garantir l'accès à un enseignement de qualité, faute de quoi la langue pourrait {5} en déclin.\n\nLe français n'est d'ailleurs pas une langue figée : il s'{6} sans cesse de mots venus d'ailleurs, et les variétés parlées à Dakar, à Montréal ou à Bruxelles {7} sa diversité. Loin de menacer son unité, cette pluralité {8} sans doute sa meilleure chance de rester une grande langue internationale.",
+      "gaps": [
+        { "choices": ["figure", "fige", "feint", "fixe"], "answer": 0, "explain": "Figurer parmi : faire partie de." },
+        { "choices": ["reçue", "reçu", "perçue", "conçue"], "answer": 0, "explain": "Une idée reçue : un préjugé répandu ; accord au féminin." },
+        { "choices": ["impose", "expose", "suppose", "dépose"], "answer": 0, "explain": "Imposer des responsabilités à quelqu'un." },
+        { "choices": ["incombe", "succombe", "retombe", "tombe"], "answer": 0, "explain": "Il incombe à quelqu'un de : c'est son devoir." },
+        { "choices": ["entrer", "rentrer", "aller", "venir"], "answer": 0, "explain": "Entrer en déclin : commencer à décliner." },
+        { "choices": ["enrichit", "enrichissent", "enrichi", "enrichir"], "answer": 0, "explain": "Sujet il (le français) : il s'enrichit." },
+        { "choices": ["reflètent", "réfléchissent", "refusent", "reflétaient"], "answer": 0, "explain": "Refléter : montrer, être l'image de ; au présent comme le reste de la phrase." },
+        { "choices": ["constitue", "institue", "restitue", "substitue"], "answer": 0, "explain": "Constituer : être, représenter." }
+      ]
+    },
+    {
+      "id": "l1-abeilles", "title": "Des ruches sur les toits",
+      "text": "Les ruches urbaines se sont multipliées sur les toits des grandes villes. Cette tendance, {1} par de nombreuses entreprises soucieuses de leur image, part d'une bonne intention : voler au {2} des abeilles, dont les populations déclinent. Pourtant, les scientifiques {3} la sonnette d'alarme. Selon eux, l'installation massive de ruches domestiques pourrait {4} aux abeilles sauvages, qui se nourrissent des mêmes fleurs. Or, ce sont souvent ces espèces sauvages, moins connues du grand public, qui sont les plus {5}.\n\nDès lors, plutôt que de multiplier les ruches, il {6} d'augmenter les ressources florales : planter des haies, laisser pousser les herbes folles, bannir les pesticides. Cette mise au point ne {7} pas en cause la sincérité des apiculteurs amateurs. Elle rappelle simplement qu'en matière d'écologie, les solutions les plus visibles ne sont pas toujours les plus {8}.",
+      "gaps": [
+        { "choices": ["encouragée", "encourageant", "encouragé", "encouragées"], "answer": 0, "explain": "Accord avec tendance (féminin singulier)." },
+        { "choices": ["secours", "aide", "soutien", "renfort"], "answer": 0, "explain": "Expression figée : voler au secours de quelqu'un." },
+        { "choices": ["tirent", "sonnent", "tapent", "frappent"], "answer": 0, "explain": "Tirer la sonnette d'alarme : alerter." },
+        { "choices": ["nuire", "nuisent", "nuit", "nui"], "answer": 0, "explain": "Après pourrait, l'infinitif : nuire à." },
+        { "choices": ["menacées", "menaçantes", "menacés", "menaçant"], "answer": 0, "explain": "Accord avec espèces (féminin pluriel) ; menacé = en danger." },
+        { "choices": ["importerait", "emporterait", "apporterait", "rapporterait"], "answer": 0, "explain": "Il importe de : il est important de." },
+        { "choices": ["remet", "permet", "soumet", "commet"], "answer": 0, "explain": "Remettre en cause : contester." },
+        { "choices": ["efficaces", "efficacement", "efficacité", "effectif"], "answer": 0, "explain": "Après les plus, un adjectif accordé : les plus efficaces." }
+      ]
+    }
+  ],
+  "part2": [
+    {
+      "id": "l2-pontevedra", "title": "Une ville rendue aux piétons",
+      "text": "Imaginez une ville {1} laquelle les rues appartiendraient aux piétons. C'est le pari {2} Pontevedra, en Espagne, a fait il y a plus de vingt ans. Le maire de l'époque a décidé d'interdire la circulation automobile dans le centre, {3} pour les livraisons et les véhicules d'urgence. {4} premier abord, les commerçants ont protesté, craignant de perdre leurs clients. Pourtant, c'est l'inverse qui s'est produit : les habitants, {5} n'avaient plus peur de traverser, ont réinvesti les rues.\n\nLes enfants vont désormais à l'école à pied, et la pollution a considérablement diminué. Bien {6} ce modèle ne soit pas transposable partout, il inspire aujourd'hui de nombreuses municipalités. {7} effet, il montre qu'une ville pensée pour l'humain n'est pas une utopie, mais un choix politique, {8} nécessite du courage et de la patience.",
+      "gaps": [
+        { "answer": ["dans"], "explain": "Dans laquelle : pronom relatif après une préposition." },
+        { "answer": ["que"], "explain": "Que : COD du verbe faire (le pari que Pontevedra a fait)." },
+        { "answer": ["sauf", "excepté", "hormis"], "explain": "Sauf pour : à l'exception de." },
+        { "answer": ["Au"], "explain": "Au premier abord : à première vue." },
+        { "answer": ["qui"], "explain": "Qui : sujet du verbe avaient." },
+        { "answer": ["que"], "explain": "Bien que + subjonctif." },
+        { "answer": ["En"], "explain": "En effet : connecteur d'explication." },
+        { "answer": ["qui"], "explain": "Qui : sujet du verbe nécessite, il reprend un choix politique." }
+      ]
+    },
+    {
+      "id": "l2-lettre", "title": "La lettre manuscrite",
+      "text": "À l'heure du courriel et des messages instantanés, la lettre manuscrite semble appartenir au passé. Pourtant, nombreux {1} ceux qui continuent d'en écrire, notamment pour les grandes occasions. {2} quoi tient ce charme persistant ? D'abord, une lettre exige du temps : on choisit le papier, on soigne son écriture, on réfléchit {3} chaque mot. Ensuite, elle constitue un objet que l'on peut conserver, relire, et même transmettre {4} génération en génération. Les historiens le savent bien, eux {5} reconstituent la vie des siècles passés grâce aux correspondances privées.\n\nCertes, il serait illusoire de vouloir revenir en arrière : personne ne renoncera à la rapidité des échanges numériques. {6} n'empêche que la lettre manuscrite garde une valeur affective à {7} aucun message électronique ne peut prétendre. C'est peut-être pour cette raison qu'on la réserve aux mots {8} plus importants.",
+      "gaps": [
+        { "answer": ["sont"], "explain": "Nombreux sont ceux qui : inversion de l'attribut, verbe être au pluriel." },
+        { "answer": ["À"], "explain": "Tenir à quelque chose : en dépendre ; à quoi tient… ?" },
+        { "answer": ["à"], "explain": "Réfléchir à quelque chose." },
+        { "answer": ["de"], "explain": "De génération en génération." },
+        { "answer": ["qui"], "explain": "Eux qui : le relatif sujet reprend eux." },
+        { "answer": ["Il"], "explain": "Il n'empêche que : tournure impersonnelle (cela n'empêche pas que)." },
+        { "answer": ["laquelle"], "explain": "Prétendre à quelque chose : à laquelle, accordé avec valeur." },
+        { "answer": ["les"], "explain": "Superlatif : les plus importants." }
+      ]
+    },
+    {
+      "id": "l2-apprendre", "title": "Apprendre à tout âge",
+      "text": "On a longtemps cru que le cerveau adulte ne pouvait plus changer. Les recherches récentes ont montré {1} contraire qu'il conserve, tout au long de la vie, une étonnante capacité d'adaptation. {2} n'est donc jamais trop tard pour apprendre une langue, un instrument ou un nouveau métier. Certes, un enfant apprend souvent plus vite, {3} il dispose de davantage de temps et de moins d'appréhension. Mais l'adulte possède d'autres atouts : il sait organiser son travail, il comprend {4} il apprend, et il peut s'appuyer sur ses connaissances antérieures.\n\nLe principal obstacle n'est {5} biologique, mais psychologique : beaucoup renoncent {6} peur d'échouer ou du regard des autres. Or, l'erreur fait partie intégrante de l'apprentissage. C'est {7} se trompant, puis en corrigeant ses erreurs, que l'on progresse. Il suffit, en somme, de s'accorder le droit d'être débutant, {8} que soit son âge.",
+      "gaps": [
+        { "answer": ["au"], "explain": "Au contraire : connecteur d'opposition." },
+        { "answer": ["Il"], "explain": "Il n'est jamais trop tard : tournure impersonnelle." },
+        { "answer": ["car"], "explain": "Car introduit une explication." },
+        { "answer": ["pourquoi"], "explain": "Il comprend pourquoi il apprend : interrogation indirecte." },
+        { "answer": ["pas"], "explain": "Ne… pas… mais : la négation complète." },
+        { "answer": ["par"], "explain": "Par peur de : à cause de la peur de." },
+        { "answer": ["en"], "explain": "C'est en se trompant : gérondif mis en relief." },
+        { "answer": ["quel"], "explain": "Quel que soit son âge : quel s'accorde avec âge (masculin singulier)." }
+      ]
+    },
+    {
+      "id": "l2-gaspillage", "title": "Le gaspillage alimentaire",
+      "text": "Chaque année, une part considérable de la nourriture produite dans le monde finit à la poubelle. Ce gaspillage concerne {1} les étapes de la chaîne : la récolte, le transport, la distribution et, bien sûr, nos réfrigérateurs. Les consommateurs en sont {2} grande partie responsables, souvent sans {3} rendre compte. Nous achetons trop, nous confondons les dates de péremption, ou nous jetons des produits parfaitement consommables {4} prétexte qu'ils sont abîmés.\n\nFace à {5} constat, plusieurs pays ont adopté des lois obligeant les supermarchés à donner leurs invendus aux associations. D'autres initiatives, plus modestes, n'en sont pas {6} efficaces : des applications permettent d'acheter à prix réduit les produits proches de leur date limite, {7} que des épiceries solidaires redistribuent les surplus. Lutter contre le gaspillage, c'est à la fois préserver la planète et faire des économies : on aurait tort de s'en {8}.",
+      "gaps": [
+        { "answer": ["toutes"], "explain": "Toutes les étapes : tout s'accorde avec étapes." },
+        { "answer": ["en"], "explain": "En grande partie : expression figée." },
+        { "answer": ["s'en"], "explain": "Se rendre compte de quelque chose : sans s'en rendre compte." },
+        { "answer": ["sous"], "explain": "Sous prétexte que : en donnant pour raison que." },
+        { "answer": ["ce"], "explain": "Ce constat : déterminant démonstratif." },
+        { "answer": ["moins"], "explain": "N'en être pas moins : être tout de même." },
+        { "answer": ["tandis", "alors"], "explain": "Tandis que (ou alors que) : en même temps que." },
+        { "answer": ["priver"], "explain": "Se priver de quelque chose : y renoncer." }
+      ]
+    },
+    {
+      "id": "l2-metiers", "title": "Les métiers de demain",
+      "text": "Selon de nombreux experts, une grande partie des métiers {1} les enfants d'aujourd'hui exerceront n'existent pas encore. Cette affirmation, souvent répétée, mérite {2} être nuancée. Certes, l'intelligence artificielle et la transition écologique vont transformer {3} profondeur le monde du travail. {4} autant, la plupart des métiers ne disparaîtront pas : ils évolueront. Un infirmier utilisera de nouveaux outils, mais son métier restera fondé {5} le soin et la relation humaine.\n\nDès {6}, que faut-il apprendre aux jeunes générations ? Plutôt que de parier sur des compétences techniques {7} risquent de devenir vite obsolètes, mieux vaut développer la capacité à apprendre, l'esprit critique et le sens de la coopération. Ces qualités, {8} lesquelles aucune machine ne peut remplacer l'humain, seront précieuses quel que soit l'avenir.",
+      "gaps": [
+        { "answer": ["que"], "explain": "Que : COD du verbe exerceront." },
+        { "answer": ["d'"], "explain": "Mériter d'être : mériter de + infinitif, avec élision." },
+        { "answer": ["en"], "explain": "En profondeur : profondément." },
+        { "answer": ["Pour"], "explain": "Pour autant : cependant, malgré cela." },
+        { "answer": ["sur"], "explain": "Être fondé sur quelque chose." },
+        { "answer": ["lors"], "explain": "Dès lors : par conséquent." },
+        { "answer": ["qui"], "explain": "Qui : sujet du verbe risquent." },
+        { "answer": ["pour"], "explain": "Pour lesquelles : remplacer quelqu'un pour une tâche." }
+      ]
+    },
+    {
+      "id": "l2-ennui", "title": "Éloge de l'ennui",
+      "text": "Nous vivons {1} une époque qui a horreur du vide. Le moindre temps mort, dans une file d'attente ou un transport, est aussitôt comblé par un écran. Pourtant, de nombreux psychologues estiment que l'ennui n'est pas {2} ennemi, mais un allié. C'est {3} effet dans ces moments d'inaction que l'esprit vagabonde, fait des liens inattendus et produit des idées nouvelles. Plusieurs artistes racontent d'ailleurs {4} leurs meilleures œuvres sont nées d'un après-midi désœuvré.\n\n{5} serait-il de même pour les enfants ? Beaucoup de parents remplissent l'emploi du temps de {6} progéniture d'activités, de peur qu'elle ne s'ennuie. Or, un enfant {7} l'on laisse parfois sans occupation apprend à inventer ses propres jeux. Il ne s'agit pas de faire l'éloge de la paresse, mais de redonner sa place à un temps libre, {8} objectif ni écran.",
+      "gaps": [
+        { "answer": ["à", "dans"], "explain": "Vivre à une époque (ou dans une époque)." },
+        { "answer": ["un", "notre"], "explain": "Un ennemi : déterminant ; on oppose un ennemi et un allié." },
+        { "answer": ["en"], "explain": "En effet : connecteur d'explication." },
+        { "answer": ["que"], "explain": "Raconter que : conjonction qui introduit une complétive." },
+        { "answer": ["En"], "explain": "En être de même : en aller de même, se passer de la même façon." },
+        { "answer": ["leur"], "explain": "Leur progéniture : les enfants des parents (un seul ensemble, singulier)." },
+        { "answer": ["que"], "explain": "Que : COD du verbe laisser (un enfant que l'on laisse)." },
+        { "answer": ["sans"], "explain": "Sans… ni : sans objectif ni écran." }
+      ]
+    }
+  ],
+  "part3": [
+    {
+      "id": "l3-biodiversite", "title": "La nature en ville",
+      "text": "Longtemps, la ville a été perçue comme l'{1} de la nature : un monde de béton, de bruit et de lumière, où les animaux sauvages n'avaient pas leur place. Pourtant, les parcs, les friches et même les toits abritent une {2} étonnante d'espèces. Les scientifiques ont ainsi recensé, dans certaines capitales européennes, plusieurs centaines de plantes {3}. Cette richesse reste toutefois {4} : la pollution, l'{5} des sols et l'éclairage nocturne perturbent les animaux.\n\nC'est pourquoi de nombreuses municipalités mènent désormais une politique de gestion {6} des espaces verts. Elles renoncent aux pesticides, laissent pousser l'herbe et installent des nichoirs. Ces mesures, {7} peu coûteuses, donnent des résultats {8} : en quelques années, les oiseaux et les insectes reviennent. Les habitants, d'abord surpris par ces pelouses moins tondues, apprennent peu à peu à les apprécier.",
+      "gaps": [
+        { "stem": "OPPOSER", "answer": ["opposé", "opposée", "opposition"], "explain": "L'opposé : le contraire." },
+        { "stem": "DIVERS", "answer": ["diversité"], "explain": "Divers → la diversité." },
+        { "stem": "DIFFÉRER", "answer": ["différentes"], "explain": "Différer → différent ; accord avec plantes." },
+        { "stem": "MENACE", "answer": ["menacée"], "explain": "Menace → menacé ; accord avec richesse." },
+        { "stem": "IMPERMÉABLE", "answer": ["imperméabilisation"], "explain": "Imperméable → l'imperméabilisation (le béton et le bitume empêchent l'eau de pénétrer)." },
+        { "stem": "DIFFÉRENCE", "answer": ["différenciée"], "explain": "Une gestion différenciée adapte l'entretien à chaque espace ; accord avec gestion." },
+        { "stem": "RELATIF", "answer": ["relativement"], "explain": "Relatif → relativement." },
+        { "stem": "SPECTACLE", "answer": ["spectaculaires"], "explain": "Spectacle → spectaculaire ; accord avec résultats." }
+      ]
+    },
+    {
+      "id": "l3-benevolat", "title": "Donner de son temps",
+      "text": "En France, plus d'une personne sur cinq exerce une activité non {1} dans une association. Cet {2} prend des formes très variées : aide aux devoirs, distribution de repas, {3} d'événements culturels ou sportifs. Les bénévoles ne touchent aucun salaire ; leur {4} est ailleurs. Beaucoup évoquent le plaisir de se rendre utiles, d'autres la volonté de rompre leur {5}.\n\nPour les associations, ces volontaires sont {6} : sans eux, nombre d'actions seraient tout simplement impossibles. Toutefois, le profil des bénévoles évolue. Les jeunes s'engagent de façon plus {7}, pour des missions courtes. Les associations doivent donc faire preuve d'{8} pour les fidéliser : proposer des engagements souples, valoriser les compétences de chacun et, surtout, savoir dire merci. Car un bénévole qui se sent reconnu revient toujours.",
+      "gaps": [
+        { "stem": "RÉMUNÉRER", "answer": ["rémunérée", "payée"], "explain": "Rémunérer → rémunéré ; accord avec activité." },
+        { "stem": "ENGAGER", "answer": ["engagement"], "explain": "Engager → l'engagement." },
+        { "stem": "ORGANISER", "answer": ["organisation"], "explain": "Organiser → l'organisation." },
+        { "stem": "MOTIVER", "answer": ["motivation"], "explain": "Motiver → la motivation." },
+        { "stem": "ISOLER", "answer": ["isolement"], "explain": "Isoler → l'isolement." },
+        { "stem": "DISPENSER", "answer": ["indispensables"], "explain": "In- + dispensable : indispensables, accordé avec volontaires." },
+        { "stem": "OCCASION", "answer": ["occasionnelle"], "explain": "Occasion → occasionnel ; accord avec façon." },
+        { "stem": "IMAGINER", "answer": ["imagination"], "explain": "Faire preuve d'imagination." }
+      ]
+    },
+    {
+      "id": "l3-sieste", "title": "La sieste au bureau",
+      "text": "Longtemps considérée comme un signe de {1}, la sieste fait aujourd'hui l'objet d'une véritable {2}. Plusieurs études ont démontré qu'un court repos en début d'après-midi améliore la {3} et réduit le risque d'accidents. Certaines entreprises ont donc aménagé des salles de repos, {4} équipées de fauteuils inclinables. Les salariés qui en bénéficient se disent plus {5} et moins stressés.\n\nCependant, cette pratique reste {6} en France, où l'on associe encore le travail à la présence continue au bureau. Pour les spécialistes, il ne s'agit pas d'un caprice, mais d'une {7} physiologique : notre vigilance connaît naturellement une baisse après le déjeuner. Reconnaître ce besoin serait une preuve de {8} de la part des employeurs. Encore faut-il que les salariés osent fermer les yeux vingt minutes sans craindre le regard de leurs collègues.",
+      "gaps": [
+        { "stem": "PARESSEUX", "answer": ["paresse"], "explain": "Paresseux → la paresse." },
+        { "stem": "RÉHABILITER", "answer": ["réhabilitation"], "explain": "Réhabiliter → la réhabilitation (retrouver une bonne réputation)." },
+        { "stem": "CONCENTRER", "answer": ["concentration"], "explain": "Concentrer → la concentration." },
+        { "stem": "GÉNÉRAL", "answer": ["généralement"], "explain": "Général → généralement." },
+        { "stem": "PRODUIRE", "answer": ["productifs"], "explain": "Produire → productif ; accord avec salariés." },
+        { "stem": "MARGE", "answer": ["marginale"], "explain": "Marge → marginal ; accord avec pratique." },
+        { "stem": "NÉCESSAIRE", "answer": ["nécessité"], "explain": "Nécessaire → la nécessité." },
+        { "stem": "SAGE", "answer": ["sagesse"], "explain": "Sage → la sagesse." }
+      ]
+    },
+    {
+      "id": "l3-langues", "title": "Les langues régionales",
+      "text": "Breton, basque, occitan, alsacien : la France compte de nombreuses langues régionales, longtemps {1} au profit du français. À l'école, les enfants qui les parlaient étaient parfois punis, ce qui a provoqué une {2} rapide de leur usage. Aujourd'hui, la situation a changé. Des écoles {3} enseignent ces langues dès la maternelle, et de jeunes artistes chantent dans la langue de leurs grands-parents.\n\nCette {4} n'est pas seulement culturelle : elle exprime un attachement à une identité locale. Les {5} de ces langues rappellent qu'elles font partie de l'{6} national. Leurs adversaires craignent en revanche un affaiblissement de l'{7} du pays. Le débat reste vif, mais une chose est sûre : sans {8} volontaire, plusieurs de ces langues pourraient disparaître d'ici la fin du siècle, emportant avec elles des chansons, des proverbes et toute une manière de voir le monde.",
+      "gaps": [
+        { "stem": "MÉPRIS", "answer": ["méprisées", "délaissées"], "explain": "Mépris → mépriser → méprisé ; accord avec langues." },
+        { "stem": "DIMINUER", "answer": ["diminution"], "explain": "Diminuer → la diminution." },
+        { "stem": "ASSOCIER", "answer": ["associatives"], "explain": "Associer → associatif ; accord avec écoles." },
+        { "stem": "RENAÎTRE", "answer": ["renaissance"], "explain": "Renaître → la renaissance." },
+        { "stem": "DÉFENDRE", "answer": ["défenseurs"], "explain": "Défendre → le défenseur ; au pluriel." },
+        { "stem": "HÉRITER", "answer": ["héritage"], "explain": "Hériter → l'héritage." },
+        { "stem": "UNIR", "answer": ["unité"], "explain": "Unir → l'unité." },
+        { "stem": "TRANSMETTRE", "answer": ["transmission"], "explain": "Transmettre → la transmission." }
+      ]
+    },
+    {
+      "id": "l3-liseuses", "title": "Papier ou écran ?",
+      "text": "Les liseuses électroniques, apparues il y a une quinzaine d'années, devaient {1} remplacer le livre papier. Cette prédiction ne s'est pas {2} : les ventes de livres imprimés restent largement {3}. Les lecteurs apprécient la {4} des liseuses, qui permettent d'emporter des centaines d'ouvrages en voyage. Mais ils restent attachés à l'objet livre, à son odeur, à sa {5} en main.\n\nPar ailleurs, plusieurs études suggèrent que la {6} d'un texte long serait meilleure sur papier. Loin de s'exclure, les deux supports semblent donc {7}. L'avenir appartient probablement à une {8} entre l'imprimé et le numérique. Chacun choisira son support selon les circonstances : une liseuse pour le train, un beau livre pour le salon, et peut-être un livre audio pour les longues promenades.",
+      "gaps": [
+        { "stem": "RAPIDE", "answer": ["rapidement"], "explain": "Rapide → rapidement." },
+        { "stem": "RÉALISER", "answer": ["réalisée"], "explain": "Se réaliser : devenir réalité ; accord avec prédiction." },
+        { "stem": "MAJORITÉ", "answer": ["majoritaires"], "explain": "Majorité → majoritaire ; accord avec ventes." },
+        { "stem": "LÉGER", "answer": ["légèreté"], "explain": "Léger → la légèreté." },
+        { "stem": "PRENDRE", "answer": ["prise"], "explain": "Prendre → la prise (en main)." },
+        { "stem": "COMPRENDRE", "answer": ["compréhension"], "explain": "Comprendre → la compréhension." },
+        { "stem": "COMPLÉTER", "answer": ["complémentaires"], "explain": "Compléter → complémentaire ; accord avec supports." },
+        { "stem": "COHABITER", "answer": ["cohabitation"], "explain": "Cohabiter → la cohabitation." }
+      ]
+    },
+    {
+      "id": "l3-influence", "title": "Les influenceurs",
+      "text": "Ils comptent parfois des millions d'abonnés et {1} les goûts de toute une génération. Les influenceurs sont devenus des acteurs {2} de l'économie numérique. Leur pouvoir de {3} attire les marques, qui les rémunèrent pour présenter leurs produits. Cette pratique soulève toutefois des questions de {4} : les abonnés savent-ils toujours qu'une publication est sponsorisée ?\n\nFace à certains abus, une loi a renforcé l'{5} des influenceurs, désormais tenus de signaler clairement les partenariats commerciaux. Les défenseurs de cette profession soulignent sa {6} : certains créateurs de contenus font un travail de {7} remarquable dans les domaines scientifique ou culturel. Il appartient donc à chacun de développer son esprit critique, seule véritable {8} contre la manipulation. L'école a ici un rôle essentiel à jouer : apprendre aux élèves à identifier une source, à repérer une publicité déguisée et à croiser les informations.",
+      "gaps": [
+        { "stem": "FAÇON", "answer": ["façonnent"], "explain": "Façon → façonner (former, modeler) ; accord avec ils." },
+        { "stem": "CONTOURNER", "answer": ["incontournables"], "explain": "In- + contournable : incontournables, accordé avec acteurs." },
+        { "stem": "PERSUADER", "answer": ["persuasion"], "explain": "Persuader → la persuasion." },
+        { "stem": "TRANSPARENT", "answer": ["transparence"], "explain": "Transparent → la transparence." },
+        { "stem": "ENCADRER", "answer": ["encadrement"], "explain": "Encadrer → l'encadrement (les règles qui limitent une activité)." },
+        { "stem": "RICHE", "answer": ["richesse"], "explain": "Riche → la richesse." },
+        { "stem": "VULGARISER", "answer": ["vulgarisation"], "explain": "Vulgariser → la vulgarisation (rendre un savoir accessible)." },
+        { "stem": "PROTÉGER", "answer": ["protection"], "explain": "Protéger → la protection." }
+      ]
+    }
+  ],
+  "part4": [
+    { "id": "t01", "lead": "Il est possible qu'il pleuve demain.", "key": "RISQUE", "q": "Il ___ demain.", "answer": ["risque de pleuvoir"], "explain": "Risquer de + infinitif exprime une éventualité, souvent fâcheuse." },
+    { "id": "t02", "lead": "Bien qu'il soit fatigué, il continue à travailler.", "key": "BEAU", "q": "Il ___ fatigué, il continue à travailler.", "answer": ["a beau être"], "explain": "Avoir beau + infinitif équivaut à bien que." },
+    { "id": "t03", "lead": "Elle a réussi grâce à son travail acharné.", "key": "DOIT", "q": "Elle ___ à son travail acharné.", "answer": ["doit sa réussite", "doit son succès"], "explain": "Devoir quelque chose à quelque chose : en être redevable." },
+    { "id": "t04", "lead": "On a annulé le concert à cause de la pluie.", "key": "ANNULÉ", "q": "Le concert ___ à cause de la pluie.", "answer": ["a été annulé"], "explain": "Voix passive : on a annulé → a été annulé." },
+    { "id": "t05", "lead": "Je regrette de ne pas être venu.", "key": "DÛ", "q": "J'___ venir.", "answer": ["aurais dû"], "explain": "Le conditionnel passé de devoir exprime le regret." },
+    { "id": "t06", "lead": "Il ne viendra pas, à moins qu'on ne l'invite.", "key": "SAUF", "q": "Il ne viendra pas, ___ invité.", "answer": ["sauf s'il est"], "explain": "Sauf si + indicatif équivaut à à moins que + subjonctif." },
+    { "id": "t07", "lead": "Dès son arrivée, il a ouvert les fenêtres.", "key": "ARRIVÉ", "q": "___, il a ouvert les fenêtres.", "answer": ["Dès qu'il est arrivé", "Dès qu'il fut arrivé"], "explain": "Du nom à la proposition : dès son arrivée = dès qu'il est arrivé." },
+    { "id": "t08", "lead": "Il est trop jeune pour conduire.", "key": "ASSEZ", "q": "Il n'est ___ pour conduire.", "answer": ["pas assez âgé", "pas assez vieux", "pas assez grand"], "explain": "Trop jeune = pas assez âgé." },
+    { "id": "t09", "lead": "Je n'ai jamais lu un livre aussi passionnant.", "key": "PLUS", "q": "C'est ___ que j'aie jamais lu.", "answer": ["le livre le plus passionnant"], "explain": "Superlatif suivi du subjonctif : le plus… que j'aie jamais lu." },
+    { "id": "t10", "lead": "Il a refusé ma proposition, ce qui m'a surpris.", "key": "REFUS", "q": "Son ___ m'a surpris.", "answer": ["refus de ma proposition"], "explain": "Nominalisation : refuser → le refus." },
+    { "id": "t11", "lead": "Si tu ne te dépêches pas, tu vas rater ton train.", "key": "SINON", "q": "Dépêche-toi, ___ ton train.", "answer": ["sinon tu rateras", "sinon tu manqueras"], "explain": "Sinon : dans le cas contraire." },
+    { "id": "t12", "lead": "Malgré la pluie, la fête a eu lieu.", "key": "BIEN", "q": "La fête a eu lieu, ___.", "answer": ["bien qu'il ait plu"], "explain": "Malgré + nom → bien que + subjonctif." },
+    { "id": "t13", "lead": "On dit que le ministre va démissionner.", "key": "SERAIT", "q": "Le ministre ___ démissionner.", "answer": ["serait sur le point de"], "explain": "Le conditionnel rapporte une information non confirmée." },
+    { "id": "t14", "lead": "Ce n'est pas la peine que tu viennes.", "key": "INUTILE", "q": "Il ___ viennes.", "answer": ["est inutile que tu"], "explain": "Il est inutile que + subjonctif." },
+    { "id": "t15", "lead": "Je ne m'attendais pas à ce qu'il réussisse.", "key": "SURPRIS", "q": "Sa réussite ___.", "answer": ["m'a surpris", "m'a surprise"], "explain": "Ce qui était inattendu m'a surpris." },
+    { "id": "t16", "lead": "Il faut absolument que vous terminiez ce dossier.", "key": "IMPÉRATIF", "q": "Il est ___ ce dossier.", "answer": ["impératif que vous terminiez"], "explain": "Il est impératif que + subjonctif." },
+    { "id": "t17", "lead": "Elle parle si vite que personne ne la comprend.", "key": "TELLEMENT", "q": "Elle parle ___ personne ne la comprend.", "answer": ["tellement vite que"], "explain": "Si… que = tellement… que : la conséquence." },
+    { "id": "t18", "lead": "Il n'a pas pu venir parce qu'il était malade.", "key": "RAISON", "q": "Il n'a pas pu venir ___ maladie.", "answer": ["en raison de sa"], "explain": "En raison de + nom : la cause." },
+    { "id": "t19", "lead": "Nous partirons dès que le soleil se lèvera.", "key": "LEVER", "q": "Nous partirons ___ soleil.", "answer": ["dès le lever du"], "explain": "Nominalisation : dès que le soleil se lèvera → dès le lever du soleil." },
+    { "id": "t20", "lead": "Je vous conseille de réserver à l'avance.", "key": "SERAIT", "q": "Il ___ réserver à l'avance.", "answer": ["serait préférable de", "serait judicieux de", "serait prudent de", "serait sage de"], "explain": "Le conseil au conditionnel : il serait préférable de." },
+    { "id": "t21", "lead": "Il est probable que la réunion soit reportée.", "key": "SANS", "q": "La réunion ___ reportée.", "answer": ["sera sans doute"], "explain": "Sans doute = probablement." },
+    { "id": "t22", "lead": "Personne n'a pu résoudre ce problème.", "key": "RÉSOLU", "q": "Ce problème n'a pu ___ personne.", "answer": ["être résolu par"], "explain": "Voix passive : personne n'a pu le résoudre → il n'a pu être résolu par personne." },
+    { "id": "t23", "lead": "Il a menti ; c'est pourquoi je ne lui fais plus confiance.", "key": "MENTI", "q": "Je ne lui fais plus confiance ___.", "answer": ["parce qu'il a menti", "car il a menti"], "explain": "La conséquence devient une cause : parce que (ou car)." },
+    { "id": "t24", "lead": "Je n'ai aucune idée de l'heure de son arrivée.", "key": "QUELLE", "q": "J'ignore ___ arrivera.", "answer": ["à quelle heure il", "à quelle heure elle"], "explain": "Interrogation indirecte : à quelle heure il arrivera." },
+    { "id": "t25", "lead": "Elle a quitté la salle sans dire un mot.", "key": "MOT", "q": "Elle a quitté la salle ___.", "answer": ["sans mot dire"], "explain": "Sans mot dire : expression figée et soutenue, sans rien dire." },
+    { "id": "t26", "lead": "Il est impossible de prévoir l'avenir.", "key": "PRÉVISIBLE", "q": "L'avenir ___.", "answer": ["est imprévisible"], "explain": "Impossible à prévoir = imprévisible." },
+    { "id": "t27", "lead": "On m'a volé mon vélo.", "key": "FAIT", "q": "Je ___ mon vélo.", "answer": ["me suis fait voler"], "explain": "Se faire + infinitif : subir une action." },
+    { "id": "t28", "lead": "Il a fait cela sans que personne le lui demande.", "key": "PROPRE", "q": "Il a fait cela ___.", "answer": ["de son propre chef", "de sa propre initiative"], "explain": "De son propre chef : de sa propre initiative." },
+    { "id": "t29", "lead": "Je suis sûr qu'il viendra.", "key": "DOUTE", "q": "Je ne ___ viendra.", "answer": ["doute pas qu'il"], "explain": "Ne pas douter que : être sûr que." },
+    { "id": "t30", "lead": "Elle a tellement changé qu'on ne la reconnaît plus.", "key": "MÉCONNAISSABLE", "q": "Elle a tellement changé qu'___.", "answer": ["elle est méconnaissable"], "explain": "Qu'on ne reconnaît plus = méconnaissable." },
+    { "id": "t31", "lead": "Je t'informe que la réunion est annulée.", "key": "SAVOIR", "q": "Je te fais ___ la réunion est annulée.", "answer": ["savoir que"], "explain": "Faire savoir : informer." },
+    { "id": "t32", "lead": "Plus on lit, plus on enrichit son vocabulaire.", "key": "MESURE", "q": "On enrichit son vocabulaire ___ lit.", "answer": ["à mesure qu'on"], "explain": "À mesure que : en même temps et dans la même proportion." },
+    { "id": "t33", "lead": "Il ne fait aucun doute que ce projet réussira.", "key": "VOUÉ", "q": "Ce projet est ___.", "answer": ["voué au succès", "voué à réussir"], "explain": "Être voué à : être destiné à." },
+    { "id": "t34", "lead": "Elle n'a pas hésité une seconde à accepter.", "key": "HÉSITATION", "q": "Elle a accepté ___.", "answer": ["sans la moindre hésitation"], "explain": "Nominalisation : sans hésiter → sans la moindre hésitation." },
+    { "id": "t35", "lead": "Cette décision a provoqué la colère des habitants.", "key": "SUSCITÉ", "q": "Cette décision ___ habitants.", "answer": ["a suscité la colère des"], "explain": "Susciter : faire naître (un sentiment, une réaction)." },
+    { "id": "t36", "lead": "Il est inutile d'insister, il ne changera pas d'avis.", "key": "BEAU", "q": "Tu ___, il ne changera pas d'avis.", "answer": ["auras beau insister", "as beau insister"], "explain": "Avoir beau + infinitif : l'effort reste vain." },
+    { "id": "t37", "lead": "Si j'avais su cela, je ne serais pas venu.", "key": "SACHANT", "q": "___, je ne serais pas venu.", "answer": ["Sachant cela"], "explain": "Le participe présent peut exprimer la condition : sachant cela = si j'avais su cela." },
+    { "id": "t38", "lead": "Il est parti avant la fin du film.", "key": "AVANT", "q": "Il est parti ___ fini.", "answer": ["avant que le film soit", "avant que le film fût"], "explain": "Avant que + subjonctif." },
+    { "id": "t39", "lead": "On ne peut pas le joindre en ce moment.", "key": "INJOIGNABLE", "q": "Il ___ en ce moment.", "answer": ["est injoignable"], "explain": "Qu'on ne peut pas joindre = injoignable." },
+    { "id": "t40", "lead": "Ce film ne m'a pas du tout plu.", "key": "NULLEMENT", "q": "Ce film ___.", "answer": ["ne m'a nullement plu"], "explain": "Ne… nullement : pas du tout (registre soutenu)." },
+    { "id": "t41", "lead": "J'ai pris un parapluie au cas où il pleuvrait.", "key": "CRAINTE", "q": "J'ai pris un parapluie ___ pleuve.", "answer": ["de crainte qu'il ne"], "explain": "De crainte que + subjonctif, souvent avec un ne explétif." },
+    { "id": "t42", "lead": "Il a très peu travaillé ; pourtant, il a réussi l'examen.", "key": "MALGRÉ", "q": "Il a réussi l'examen ___ travail.", "answer": ["malgré le peu de", "malgré son peu de"], "explain": "Malgré + nom : la concession." },
+    { "id": "t43", "lead": "Il paraît qu'elle déménage.", "key": "RUMEUR", "q": "___, elle déménage.", "answer": ["Selon la rumeur", "D'après la rumeur"], "explain": "Il paraît que : selon ce qu'on dit, selon la rumeur." },
+    { "id": "t44", "lead": "Je ne savais pas qu'il était malade.", "key": "IGNORAIS", "q": "J'___ malade.", "answer": ["ignorais qu'il était", "ignorais qu'il fût"], "explain": "Ignorer : ne pas savoir." },
+    { "id": "t45", "lead": "Elle a été très touchée par votre lettre.", "key": "ÉMUE", "q": "Votre lettre ___.", "answer": ["l'a beaucoup émue", "l'a profondément émue", "l'a vivement émue"], "explain": "Voix active : votre lettre l'a émue ; accord avec l' (elle), placé avant." },
+    { "id": "t46", "lead": "Je n'ai pas le temps de t'aider aujourd'hui.", "key": "DISPOSE", "q": "Je ne ___ t'aider aujourd'hui.", "answer": ["dispose pas du temps nécessaire pour", "dispose pas d'assez de temps pour"], "explain": "Disposer de : avoir à sa disposition." },
+    { "id": "t47", "lead": "Ce n'est qu'en partant qu'il a compris son erreur.", "key": "FALLU", "q": "Il ___ comprenne son erreur.", "answer": ["a fallu qu'il parte pour qu'il"], "explain": "Il a fallu que + subjonctif ; pour que + subjonctif." },
+    { "id": "t48", "lead": "Il ne travaille pas assez, c'est évident.", "key": "ÉVIDENCE", "q": "___, il ne travaille pas assez.", "answer": ["De toute évidence"], "explain": "De toute évidence : manifestement." }
+  ]
+}
