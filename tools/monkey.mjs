@@ -35,8 +35,8 @@ async function run(label, viewport) {
   await page.waitForSelector(".map");
   // Open every level (the Tower included), with some progress around.
   await page.evaluate(() => {
-    const g = JSON.parse(localStorage.getItem("mission-bilingue:global"));
-    const key = `mission-bilingue:p:${g.activeId}`;
+    const g = JSON.parse(localStorage.getItem("mission-francais:global"));
+    const key = `mission-francais:p:${g.activeId}`;
     const s = JSON.parse(localStorage.getItem(key));
     for (let L = 1; L <= 11; L++) s.bosses[L] = { defeated: true, at: new Date().toISOString() };
     s.units["3.1"] = { passed: true, best: 0.9, stars: 1 };

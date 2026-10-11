@@ -39,8 +39,8 @@ page.on("pageerror", (e) => errors.push(`pageerror: ${e.message}`));
 page.on("console", (m) => m.type() === "error" && !/fonts\.g|ERR_|net::/.test(m.text()) && errors.push(`console: ${m.text()}`));
 const visible = async (sel) => (await page.locator(sel).count()) > 0 && (await page.locator(sel).first().isVisible());
 const towerState = () => page.evaluate(() => {
-  const g = JSON.parse(localStorage.getItem("mission-bilingue:global"));
-  return JSON.parse(localStorage.getItem(`mission-bilingue:p:${g.activeId}`)).tower;
+  const g = JSON.parse(localStorage.getItem("mission-francais:global"));
+  return JSON.parse(localStorage.getItem(`mission-francais:p:${g.activeId}`)).tower;
 });
 
 // ---------- Setup: a teenager who reached level 12 ----------
@@ -51,8 +51,8 @@ await page.click("text=Monter à bord");
 await page.click("text=Je débute de zéro");
 await page.waitForSelector(".map");
 await page.evaluate(({ from, prompts, visibleFloors, lives }) => {
-  const g = JSON.parse(localStorage.getItem("mission-bilingue:global"));
-  const key = `mission-bilingue:p:${g.activeId}`;
+  const g = JSON.parse(localStorage.getItem("mission-francais:global"));
+  const key = `mission-francais:p:${g.activeId}`;
   const s = JSON.parse(localStorage.getItem(key));
   for (let L = 1; L <= 11; L++) s.bosses[L] = { defeated: true, at: new Date().toISOString() };
   s.tower = { floor: from, lives: lives, maxLives: lives, best: from, resets: 0, won: false, wonAt: "", shown: Math.max(visibleFloors, from), pending: 0, prompts };

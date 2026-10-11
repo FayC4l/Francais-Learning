@@ -38,12 +38,18 @@ export function errorDensity(a) {
 /** Rough CEFR level of the text itself (independent of the prompt), calibrated on the model answers. */
 export function textBand(a) {
   if (a.words < 15) return "A1";
+  const idx = textIndex(a);
+  return BANDS[BAND_CUTS.filter((c) => idx >= c).length];
+}
+
+/** Maturity index of a text: sentence length, long words, advanced connectors, rare words, minus the errors. */
+export function textIndex(a) {
   const e = errorDensity(a);
   const long = a.tk.tokens.filter((t) => t.word && t.text.length >= 9).length / Math.max(1, a.words);
-  const idx = ((a.avgSentence - 7) / 3 + (long - 0.05) / 0.03) / 2 + a.advancedConnectors.length * 0.3 + a.sophistication * 2 - e * 0.2;
-  const cuts = [0.35, 0.9, 1.6, 2.5, 3.6];
-  return BANDS[cuts.filter((c) => idx >= c).length];
+  return ((a.avgSentence - 7) / 3 + (long - 0.05) / 0.03) / 2 + a.advancedConnectors.length * 0.3 + a.sophistication * 2 - e * 0.2;
 }
+// Calibrated on the French model answers (tools/calibrate-bands.mjs): the median text of each band sits in its band.
+const BAND_CUTS = [0.9, 1.6, 2.2, 2.9, 3.9];
 
 /**
  * score(analysis, prompt) → { total, criteria: {content, communicative, organisation, language}, band, textBand,

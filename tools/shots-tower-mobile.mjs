@@ -14,8 +14,8 @@ const errors = [];
 page.on("pageerror", (e) => errors.push(e.message));
 const patch = async (fn) => {
   await page.evaluate((src) => {
-    const g = JSON.parse(localStorage.getItem("mission-bilingue:global"));
-    const key = `mission-bilingue:p:${g.activeId}`;
+    const g = JSON.parse(localStorage.getItem("mission-francais:global"));
+    const key = `mission-francais:p:${g.activeId}`;
     const s = JSON.parse(localStorage.getItem(key));
     new Function("s", src)(s);
     localStorage.setItem(key, JSON.stringify(s));

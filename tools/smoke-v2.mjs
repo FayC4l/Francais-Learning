@@ -194,17 +194,17 @@ await step("boss phases", async () => {
 await step("daily backup reminder", async () => {
   // Pretend the family was created two days ago and never backed up.
   await page.evaluate(() => {
-    const g = JSON.parse(localStorage.getItem("mission-bilingue:global"));
+    const g = JSON.parse(localStorage.getItem("mission-francais:global"));
     g.profiles.forEach((p) => (p.createdAt = new Date(Date.now() - 2 * 86400000).toISOString()));
     delete g.lastBackup;
-    localStorage.setItem("mission-bilingue:global", JSON.stringify(g));
+    localStorage.setItem("mission-francais:global", JSON.stringify(g));
   });
   await page.reload({ waitUntil: "domcontentloaded" });
   await page.locator(".who-card", { hasText: "Lina" }).click();
   await page.waitForSelector(".backup-card.late");
   await shot("13-backup-reminder");
   const [download] = await Promise.all([page.waitForEvent("download"), page.click(".backup-card >> text=Télécharger la sauvegarde")]);
-  if (!/mission-bilingue-famille-.*\.json$/.test(download.suggestedFilename())) throw new Error(`bad file name ${download.suggestedFilename()}`);
+  if (!/mission-francais-famille-.*\.json$/.test(download.suggestedFilename())) throw new Error(`bad file name ${download.suggestedFilename()}`);
   await page.waitForSelector(".backup-card.ok");
   await page.reload({ waitUntil: "domcontentloaded" });
   await page.locator(".who-card", { hasText: "Lina" }).click();
@@ -214,8 +214,8 @@ await step("daily backup reminder", async () => {
 
 await step("boss lives: losing the last life sends the stations back", async () => {
   await page.evaluate(() => {
-    const g = JSON.parse(localStorage.getItem("mission-bilingue:global"));
-    const key = `mission-bilingue:p:${g.activeId}`;
+    const g = JSON.parse(localStorage.getItem("mission-francais:global"));
+    const key = `mission-francais:p:${g.activeId}`;
     const s = JSON.parse(localStorage.getItem(key));
     for (const u of ["1.1", "1.2", "1.3", "1.4", "1.5"]) s.units[u] = { passed: true, stars: 1, best: 0.8, attempts: 1 };
     s.bosses = { 1: { lives: 1, attempts: 2 } };

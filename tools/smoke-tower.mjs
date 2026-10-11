@@ -34,12 +34,12 @@ const step = async (label, fn) => {
 /** Edits the active profile's progress, then reloads. */
 const patch = async (fn) => {
   await page.evaluate((src) => {
-    const g = JSON.parse(localStorage.getItem("mission-bilingue:global"));
-    const key = `mission-bilingue:p:${g.activeId}`;
+    const g = JSON.parse(localStorage.getItem("mission-francais:global"));
+    const key = `mission-francais:p:${g.activeId}`;
     const s = JSON.parse(localStorage.getItem(key));
     new Function("s", src)(s);
     localStorage.setItem(key, JSON.stringify(s));
-    localStorage.removeItem("mission-bilingue:towers"); // the test edits the tower on purpose
+    localStorage.removeItem("mission-francais:towers"); // the test edits the tower on purpose
   }, `(${fn})(s)`);
   await page.reload({ waitUntil: "domcontentloaded" });
   await page.waitForSelector(".map");
@@ -47,8 +47,8 @@ const patch = async (fn) => {
 /** The Tower saved in the browser for the active profile. */
 const towerState = () =>
   page.evaluate(() => {
-    const g = JSON.parse(localStorage.getItem("mission-bilingue:global"));
-    return JSON.parse(localStorage.getItem(`mission-bilingue:p:${g.activeId}`)).tower;
+    const g = JSON.parse(localStorage.getItem("mission-francais:global"));
+    return JSON.parse(localStorage.getItem(`mission-francais:p:${g.activeId}`)).tower;
   });
 const answerWrong = async () => {
   const card = page.locator(".q-card");
@@ -158,8 +158,8 @@ await step("losing the last heart collapses the tower", async () => {
   await page.click(".drama-btn");
   await page.waitForSelector(".tower");
   const t = await page.evaluate(() => {
-    const g = JSON.parse(localStorage.getItem("mission-bilingue:global"));
-    return JSON.parse(localStorage.getItem(`mission-bilingue:p:${g.activeId}`)).tower;
+    const g = JSON.parse(localStorage.getItem("mission-francais:global"));
+    return JSON.parse(localStorage.getItem(`mission-francais:p:${g.activeId}`)).tower;
   });
   if (t.floor !== 1 || t.lives !== TOWER_LIVES || t.resets !== 1) throw new Error(`after collapse: ${JSON.stringify(t)}`);
 });
