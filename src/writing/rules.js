@@ -14,6 +14,8 @@ const m = (w) => maskOf(w);
 
 const SUBJECT = { je: 0, "j'": 0, tu: 1, il: 2, elle: 2, on: 2, ils: 5, elles: 5 };
 const PERSON_NAME = ["je", "tu", "il / elle / on", "nous", "vous", "ils / elles"];
+// Verbs followed by an infinitive (je souhaite vous écrire).
+const INF_VERBS = new Set(["souhaiter", "vouloir", "pouvoir", "devoir", "aller", "venir", "aimer", "préférer", "espérer", "permettre", "falloir", "savoir", "oser", "compter", "désirer", "tenir", "chercher", "essayer", "tenter", "pouvoir", "laisser", "faire"]);
 const SKIP_AFTER_SUBJECT = new Set(["ne", "n'", "me", "m'", "te", "t'", "se", "s'", "le", "la", "l'", "les", "lui", "leur", "y", "en", "nous", "vous"]);
 const PREPOSITIONS = new Set(["à", "avec", "pour", "sans", "chez", "de", "d'", "contre", "entre", "vers", "par", "sur", "sous", "devant", "derrière", "après", "avant", "comme", "selon", "envers", "malgré", "parmi", "et", "ou", "ni", "que", "qu'"]);
 const PREP_ONLY = new Set(["à", "avec", "pour", "sans", "chez", "contre", "entre", "vers", "par", "sur", "sous", "devant", "derrière", "après", "avant", "selon", "envers", "malgré"]);
@@ -228,7 +230,10 @@ function tokenRules(tk) {
             if (inf && (isInf || !(m(v.lower) & (T.NS | T.NP))) && !skipped.some((x) => /^(le|la|l'|les|lui|leur|y|en)$/.test(x) && isInf)) {
               const pres = conjugations(inf, "present", person)[0];
               const pc = conjugations(inf, "passe_compose", person)[0];
-              if (pres && pres !== v.lower && !(isInf && skipped.length)) add(v.i, v.i, "grammar", "subject-verb-form", `Après le sujet, il faut un verbe conjugué : **${pres}** (présent) ou **${pc}** (passé composé).`, [pres, pc].filter(Boolean).map((f) => keepCase(v.text, f)));
+              // « Je souhaite, par cette lettre, vous faire part… » : nous / vous after a comma is an object when a
+              // verb taking an infinitive comes earlier in the sentence.
+              const objectPronoun = isInf && /^(nous|vous)$/.test(lw) && W.slice(0, k).some((x) => readings(low(x)).some((rd) => INF_VERBS.has(rd.inf)));
+              if (pres && pres !== v.lower && !(isInf && skipped.length) && !objectPronoun) add(v.i, v.i, "grammar", "subject-verb-form", `Après le sujet, il faut un verbe conjugué : **${pres}** (présent) ou **${pc}** (passé composé).`, [pres, pc].filter(Boolean).map((f) => keepCase(v.text, f)));
             }
           }
         }
