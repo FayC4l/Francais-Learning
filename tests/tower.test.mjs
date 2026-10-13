@@ -137,3 +137,9 @@ test("between two copies of a Tower, the one with more events wins", () => {
   assert.equal(newestTower(a, { ...a, id: "other", seq: 99 }), a);
   assert.equal(newestTower(a, undefined), a);
 });
+test("chaque étage de conjugaison laisse 4 erreurs jusqu'à l'étage 20, puis 3", () => {
+  for (let n = 1; n < 50; n++) {
+    const s = floorSpec(n);
+    if (s.kind === "conj") assert.equal(s.hearts, n < 21 ? 4 : 3, `étage ${n}`);
+  }
+});
